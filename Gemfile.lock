@@ -246,8 +246,8 @@ GEM
     redis-store (1.9.0)
       redis (>= 4, < 5)
     regexp_parser (2.1.1)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
+    rexml (3.3.5)
+      strscan
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -265,7 +265,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
-    rss (0.2.9)
+    rss (0.3.1)
       rexml
     rubocop (1.36.0)
       json (~> 2.3)
@@ -371,7 +371,7 @@ DEPENDENCIES
   rails_12factor
   redis-rails
   rspec-rails
-  rss
+  rss (>= 0.3.0)
   rubocop
   rubocop-discourse
   rubocop-performance
@@ -389,4 +389,4 @@ RUBY VERSION
    ruby 3.1.3p185
 
 BUNDLED WITH
-   2.3.22
+   2.3.26
