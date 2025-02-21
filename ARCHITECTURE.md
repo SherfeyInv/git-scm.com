@@ -34,6 +34,16 @@ With this change, the site can be tested in the fork by pushing to the
 `gh-pages` branch (which will trigger the `deploy.yml` workflow) and then
 navigating to https://git-scm.<user>.github.io/.
 
+If the site will be deployed to a custom domain that supports HTTPS,
+but the "[Enforce HTTPS]" option cannot be enabled in the GitHub Pages settings
+(this can happen if the domain points to a third-party gateway),
+the [GitHub Actions variable] `EXTERNAL_HTTPS` should be set to `true`,
+so that the site can be built with a proper HTTPS base URL.
+The official `git-scm.com` domain is an example of such a setup.
+
+[Enforce HTTPS]: https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https#enforcing-https-for-your-github-pages-site
+[GitHub Actions variable]: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables#defining-configuration-variables-for-multiple-workflows
+
 ## Non-static parts
 
 While the site consists mostly of static content, there are a couple of
