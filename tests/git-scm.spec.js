@@ -3,7 +3,6 @@ const { test, expect, selectors, devices } = require('@playwright/test')
 const url = process.env.PLAYWRIGHT_TEST_URL
   ? process.env.PLAYWRIGHT_TEST_URL.replace(/[^/]$/, '$&/')
   : 'https://git-scm.com/'
-const isRailsApp = process.env.PLAYWRIGHT_ASSUME_RAILS_APP === 'true'
 
 // Whenever a test fails, attach a screenshot to diagnose failures better
 test.afterEach(async ({ page }, testInfo) => {
@@ -24,11 +23,7 @@ test.afterEach(async ({ page }, testInfo) => {
 
 test('generator is Hugo', async ({page}) => {
   await page.goto(url)
-  if (isRailsApp) {
-    await expect(page.locator('meta[name="generator"]')).toHaveCount(0)
-  } else {
-    await expect(page.locator('meta[name="generator"]')).toHaveAttribute('content', /^Hugo /)
-  }
+  await expect(page.locator('meta[name="generator"]')).toHaveAttribute('content', /^Hugo /)
 })
 
 async function pretendPlatform(page, browserName, userAgent, platform) {
@@ -126,19 +121,11 @@ test('search', async ({ page }) => {
   await page.goto(`${url}docs/git-commit/fr`)
   await searchBox.fill('add')
   await searchBox.press('Shift')
-  if (isRailsApp) {
-    await expect(searchResults.getByRole("link").nth(0)).toHaveAttribute('href', /\/docs\/git-add$/)
-  } else {
-    await expect(searchResults.getByRole("link").nth(0)).toHaveAttribute('href', /\/docs\/git-add\/fr(\.html)?$/)
-  }
+  await expect(searchResults.getByRole("link").nth(0)).toHaveAttribute('href', /\/docs\/git-add\/fr(\.html)?$/)
 
   // pressing the Enter key should navigate to the full search results page
   await searchBox.press('Enter')
-  if (isRailsApp) {
-    await expect(page).toHaveURL(/\/search/)
-  } else {
-    await expect(page).toHaveURL(/\/search.*language=fr/)
-  }
+  await expect(page).toHaveURL(/\/search.*language=fr/)
 })
 
 test('manual pages', async ({ page }) => {
@@ -152,11 +139,7 @@ test('manual pages', async ({ page }) => {
   // Verify that the drop-downs are shown when clicked
   const previousVersionDropdown = page.locator('#previous-versions-dropdown')
   await expect(previousVersionDropdown).toBeHidden()
-  if (isRailsApp) {
-    await page.getByRole('link', { name: /Version \d+\.\d+\.\d+/ }).click()
-  } else {
-    await page.getByRole('link', { name: 'Latest version' }).click()
-  }
+  await page.getByRole('link', { name: 'Latest version' }).click()
   await expect(previousVersionDropdown).toBeVisible()
 
   const topicsDropdown = page.locator('#topics-dropdown')
@@ -188,14 +171,8 @@ test('manual pages', async ({ page }) => {
   // Ensure that the French mis-translation of `git remote renom` is not present
   await page.goto(`${url}docs/git-remote/fr`)
   const synopsis = page.locator('xpath=//h2[contains(text(), "SYNOPSIS")]/following-sibling::*[1]').first()
-  if (isRailsApp) {
-    // This is a bug in the Rails app, and it is unclear what the root cause is
-    await expect(synopsis).not.toHaveText(/git remote rename.*<ancien> <nouveau>/)
-    await expect(synopsis).toHaveText(/git remote renom.*<ancien> <nouveau>/)
-  } else {
-    await expect(synopsis).toHaveText(/git remote rename.*<ancien> <nouveau>/)
-    await expect(synopsis).not.toHaveText(/git remote renom.*<ancien> <nouveau>/)
-  }
+  await expect(synopsis).toHaveText(/git remote rename.*<ancien> <nouveau>/)
+  await expect(synopsis).not.toHaveText(/git remote renom.*<ancien> <nouveau>/)
 })
 
 test('book', async ({ page }) => {
@@ -245,12 +222,7 @@ test('book', async ({ page }) => {
 
   // Navigate to a page whose URL contains a question mark
   await page.goto(`${url}book/az/v2/Başlanğıc-Git-Nədir?`)
-  if (isRailsApp) {
-    await expect(page).toHaveURL(/book\/az\/v2$/)
-    await page.goto(`${url}book/az/v2/Başlanğıc-Git-Nədir%3F`)
-  } else {
-    await expect(page).toHaveURL(/Ba%C5%9Flan%C4%9F%C4%B1c-Git-N%C9%99dir%3F/)
-  }
+  await expect(page).toHaveURL(/Ba%C5%9Flan%C4%9F%C4%B1c-Git-N%C9%99dir%3F/)
   await expect(page.getByRole('document')).toHaveText(/Snapshot’lar, Fərqlər Yox/)
 
   // the repository URL now points to the Azerbaijani translation
