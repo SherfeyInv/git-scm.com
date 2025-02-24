@@ -117,6 +117,22 @@ test('search', async ({ page }) => {
   await expect(searchResults.getByRole("link")).not.toHaveCount(0)
   await expect(searchResults.getByRole("link").nth(0)).toHaveText('git-commit')
 
+  // Expect the search page to show up
+  await searchBox.press('Enter')
+  await expect(page).toHaveURL(/\/search/)
+  const filters = await page.getByRole('group', { name: 'Filters' })
+  await expect(filters).toBeVisible()
+  await expect(filters.filter({ hasText: 'Category' })).toBeVisible()
+
+  await expect(page.getByText(/results for commit/)).toContainText(/^\d+ results for commit$/)
+
+  const searchLinks = await page
+    .getByRole('listItem')
+    .filter({ has: page.getByRole('link', { name: 'commit' }) })
+  await expect(searchLinks).not.toHaveCount(0)
+
+  await expect(page.getByRole('button', { name: 'Load more results' })).toBeVisible()
+
   // On localized pages, the search results should be localized as well
   await page.goto(`${url}docs/git-commit/fr`)
   await searchBox.fill('add')
