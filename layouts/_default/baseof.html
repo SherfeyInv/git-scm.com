@@ -66,6 +66,7 @@
 
   {{ $style := resources.Get "sass/application.scss" | resources.ExecuteAsTemplate "application.scss" . | css.Sass | resources.Minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}"{{ if (hasPrefix .Site.BaseURL "https://") }} integrity="{{ $style.Data.Integrity }}"{{ end }}>
+  <script src="{{ relURL "js/modernizr.js" }}"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="{{ relURL "js/selectivizr-min.js" }}"></script>
   <![endif]-->
@@ -181,7 +182,8 @@
           {{ end }}
         </div>
       </div>
-      {{ partialCached "footer.html" . .Params "section" }}
+      {{ if eq (.Scratch.Get "section") "search" }}<script src="{{ relURL "pagefind/pagefind-ui.js" }}"></script>{{ end }}
+      {{ partialCached "footer.html" . }}
     </div>
   {{ end }}
 
