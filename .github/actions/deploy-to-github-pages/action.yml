@@ -74,6 +74,13 @@ runs:
       shell: bash
       run: hugo config && hugo --baseURL "${{ env.base_url }}/"
 
+    - name: enforce HTTPS in links to git-scm.com from external sources (book, docs, ...)
+      if: startsWith(env.base_url, 'https://')
+      shell: bash
+      run: |
+        find public/book public/docs -name \*.html -print0 |
+        xargs -0r sed -i 's,http://git-scm\.com,https://git-scm.com,g'
+
     - name: run Pagefind ${{ env.PAGEFIND_VERSION }} to build the search index
       shell: bash
       run: npx -y pagefind@${{ env.PAGEFIND_VERSION }} --site public
@@ -141,7 +148,10 @@ runs:
       # A simple `grep` should work without any false positives,
       # unless git-scm.com mentions the base URL of one of its forks,
       # which is unlikely.
-      run: '! grep -FInr "http:${base_url#https:}" public'
+      #
+      # To catch bugs early, let's always look for non-HTTPS links
+      # to git-scm.com.
+      run: '! grep -FInre "http://git-scm.com" -e "http:${base_url#https:}" public'
 
     - name: check for broken links
       id: lychee
