@@ -138,6 +138,9 @@ runs:
         echo "remap-dotdot=$(echo "$base_url" |
           sed -n 's|^\(https\?:\/\/.*\)\(/git-scm\.com\)$|--remap '\''^(\1.*) file://../$1'\''|p')" \
           >>$GITHUB_OUTPUT
+        # When running in forks, do treat https://git-scm.com links as if they were relative
+        test https://git-scm.com = "$base_url" ||
+        echo "remap-git-scm=--remap '^https?://git-scm.com(.*) file://$PWD/public\$1'" >>$GITHUB_OUTPUT
 
     - name: check for downgrades to unencrypted HTTP
       if: startsWith(env.base_url, 'https://')
@@ -163,6 +166,7 @@ runs:
           --base '${{ env.base_url }}'
           --remap '${{ steps.remap.outputs.result }}'
           ${{ steps.remap.outputs.remap-dotdot }}
+          ${{ steps.remap.outputs.remap-git-scm }}
           --exclude file:///path/to/repo.git/
           --exclude file:///caminho/para/o/reposit%C3%B3rio.git/
           --exclude file:///ruta/a/repositorio.git/
