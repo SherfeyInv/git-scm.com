@@ -141,7 +141,10 @@ runs:
       # A simple `grep` should work without any false positives,
       # unless git-scm.com mentions the base URL of one of its forks,
       # which is unlikely.
-      run: '! grep -FInr "http:${base_url#https:}" public'
+      #
+      # To catch bugs early, let's always look for non-HTTPS links
+      # to git-scm.com.
+      run: '! grep -FInre "http://git-scm.com" -e "http:${base_url#https:}" public'
 
     - name: check for broken links
       id: lychee
