@@ -305,7 +305,11 @@ def local_genbook2(language_code, worktree_path)
       raise e
     end
     book.sha = `git -C "#{worktree_path}" rev-parse HEAD`.chomp
-    if language_code == 'en'
+    access_token = ENV.fetch("GITHUB_API_TOKEN", nil)
+    if access_token && Book.all_books[language_code]
+      @octokit = Octokit::Client.new(access_token:)
+      update_downloads(book, Book.all_books[language_code], @octokit)
+    elsif language_code == 'en'
       latest_tag = `git -C "#{worktree_path}" for-each-ref --format '%(refname:short)' --sort=-committerdate --count=1 refs/tags/`.chomp
       if latest_tag.empty?
         puts "No tag found in #{worktree_path}, trying to fetch tags"
