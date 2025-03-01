@@ -239,6 +239,24 @@ def genbook(language_code, &get_content)
   book
 end
 
+# Update just the download data, based on the latest tag in the repository
+def update_downloads(book, repo, octokit)
+  begin
+    rel = octokit.latest_release(repo)
+    get_url = lambda do |name_re|
+      asset = rel.assets.find { |asset| name_re.match(asset.name) }
+      asset&.browser_download_url
+    end
+    book.ebook_pdf  = get_url.call(/\.pdf$/)
+    book.ebook_epub = get_url.call(/\.epub$/)
+    book.ebook_mobi = get_url.call(/\.mobi$/)
+  rescue Octokit::NotFound
+    book.ebook_pdf  = nil
+    book.ebook_epub = nil
+    book.ebook_mobi = nil
+  end
+end
+
 # Generate book html directly from remote git repo
 def remote_genbook2(language_code)
   @octokit = Octokit::Client.new(access_token: ENV.fetch("GITHUB_API_TOKEN", nil))
@@ -269,20 +287,7 @@ def remote_genbook2(language_code)
 
     book.sha = repo_head.sha
 
-    begin
-      rel = @octokit.latest_release(repo)
-      get_url = lambda do |name_re|
-        asset = rel.assets.find { |asset| name_re.match(asset.name) }
-        asset&.browser_download_url
-      end
-      book.ebook_pdf  = get_url.call(/\.pdf$/)
-      book.ebook_epub = get_url.call(/\.epub$/)
-      book.ebook_mobi = get_url.call(/\.mobi$/)
-    rescue Octokit::NotFound
-      book.ebook_pdf  = nil
-      book.ebook_epub = nil
-      book.ebook_mobi = nil
-    end
+    update_downloads(book, repo, @octokit)
 
     book.save
   rescue StandardError => e
