@@ -138,7 +138,7 @@ def genbook(language_code, &get_content)
       xlink = html.scan(/href="1-.*?\.html\#(.*?)"/)
       xlink&.each do |link|
         xref = link.first
-	book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
+        book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
         begin
           html.gsub!(/href="1-.*?\.html\##{xref}"/, "href=\"{{< relurl \"#{book_prefix}ch00/#{xref}\" >}}\"")
         rescue StandardError
@@ -155,7 +155,7 @@ def genbook(language_code, &get_content)
           footnotes.add(xref)
           next
         end
-	book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
+        book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
         begin
           html.gsub!(/href="\##{xref}"/, "href=\"{{< relurl \"#{book_prefix}ch00/#{xref}\" >}}\"")
         rescue StandardError
@@ -222,7 +222,7 @@ def genbook(language_code, &get_content)
       # record all the xrefs
       sec.search(".//*[@id]").each do |id|
         id_xref = id.attribute("id").to_s
-	book.xrefs[id_xref] = csection if !id_xref.start_with?('_footnoteref_')
+        book.xrefs[id_xref] = csection if !id_xref.start_with?('_footnoteref_')
       end
 
       section += 1
@@ -305,7 +305,7 @@ def local_genbook2(language_code, worktree_path)
       if latest_tag.empty?
         puts "No tag found in #{worktree_path}, trying to fetch tags"
         latest_tag = `git -C "#{worktree_path}" fetch --tags origin && git -C "#{worktree_path}" for-each-ref --format '%(refname:short)' --sort=-committerdate --count=1 refs/tags/`.chomp
-	raise "Still no tags in #{worktree_path}?" if latest_tag.empty?
+        raise "Still no tags in #{worktree_path}?" if latest_tag.empty?
       end
       book.ebook_pdf = "https://github.com/progit/progit2/releases/download/#{latest_tag}/progit.pdf"
       book.ebook_epub = "https://github.com/progit/progit2/releases/download/#{latest_tag}/progit.epub"
