@@ -131,13 +131,16 @@ runs:
       shell: bash
       run: |
         echo "result=$(echo "$base_url" |
-          sed 's|^\(.*\)\(/git-scm\.com\)$|(\1)?\2(.*)|') file://$PWD/public\$2" \
+          sed 's|^\(.*\)\(/git-scm\.com\)$|^(\1)?\2(.*)|') file://$PWD/public\$2" \
           >>$GITHUB_OUTPUT
         # When running in forks, do detect when links try to break out of the
         # `/git-scm.com/` subdirectory
         echo "remap-dotdot=$(echo "$base_url" |
-          sed -n 's|^\(https\?:\/\/.*\)\(/git-scm\.com\)$|--remap '\''(\1.*) file://../$1'\''|p')" \
+          sed -n 's|^\(https\?:\/\/.*\)\(/git-scm\.com\)$|--remap '\''^(\1.*) file://../$1'\''|p')" \
           >>$GITHUB_OUTPUT
+        # When running in forks, do treat https://git-scm.com links as if they were relative
+        test https://git-scm.com = "$base_url" ||
+        echo "remap-git-scm=--remap '^https?://git-scm.com(.*) file://$PWD/public\$1'" >>$GITHUB_OUTPUT
 
     - name: check for downgrades to unencrypted HTTP
       if: startsWith(env.base_url, 'https://')
@@ -163,6 +166,7 @@ runs:
           --base '${{ env.base_url }}'
           --remap '${{ steps.remap.outputs.result }}'
           ${{ steps.remap.outputs.remap-dotdot }}
+          ${{ steps.remap.outputs.remap-git-scm }}
           --exclude file:///path/to/repo.git/
           --exclude file:///caminho/para/o/reposit%C3%B3rio.git/
           --exclude file:///ruta/a/repositorio.git/
@@ -176,8 +180,7 @@ runs:
         fail: false
         failIfEmpty: false # needed because its default overrides `fail = false`
 
-    - name: ${{ env.lychee_exit_code != '0' && 'open or update' || 'maybe close' }} link checker issue
-      if: env.lychee_exit_code != ''
+    - name: ${{ steps.lychee.outputs.exit_code != '0' && 'open or update' || 'maybe close' }} link checker issue
       uses: actions/github-script@v7
       with:
         github-token: ${{ inputs.github-token }}
@@ -211,13 +214,13 @@ runs:
           })()
 
           if (issues.data.items.length === 0) {
-            if (process.env.lychee_exit_code !== '0') {
+            if ('${{ steps.lychee.outputs.exit_code }}' !== '0') {
               await github.rest.issues.create({ ...req, title: 'Link Checker Report', body, labels: ['linkchecker'] })
             }
           } else {
             req.issue_number = issues.data.items[0].number
             await github.rest.issues.createComment({ ...req, body })
-            if (process.env.lychee_exit_code === '0') {
+            if ('${{ steps.lychee.outputs.exit_code }}' === '0') {
               await github.rest.issues.update({ ...req, state: 'closed' })
             }
           }
