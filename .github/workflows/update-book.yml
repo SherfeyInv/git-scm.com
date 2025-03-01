@@ -87,6 +87,13 @@ jobs:
 
           # commit it all
           git add -A external/book &&
+          if ${{ inputs.force-rebuild == true && 'git diff-index --exit-code HEAD --' || 'false' }}
+          then
+            # Force the bundle to be non-empty
+            git fetch --depth 2 origin ${{ github.ref_name }} &&
+            git update-ref refs/remotes/origin/${{ github.ref_name }} HEAD^ &&
+            exit 0
+          fi &&
           git -c user.name=${{ github.actor }} \
             -c user.email=${{ github.actor }}@noreply.github.com \
             commit -m 'book: update ${{ matrix.language.lang }}' \
