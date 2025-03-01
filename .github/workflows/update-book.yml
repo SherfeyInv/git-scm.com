@@ -71,6 +71,8 @@ jobs:
         with:
           bundler-cache: true
       - name: update book/${{ matrix.language.lang }}
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # this seems to be needed to let `bundle exec` see `vendor/bundle/`
           { bundle check || bundle install --frozen; } &&
