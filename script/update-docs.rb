@@ -13,6 +13,7 @@ require_relative "version"
 SITE_ROOT = File.join(File.expand_path(File.dirname(__FILE__)), '../')
 DOCS_INDEX_FILE = "#{SITE_ROOT}external/docs/content/docs/_index.html"
 DATA_FILE = "#{SITE_ROOT}external/docs/data/docs.yml"
+DOCS_EXTRA_FILE = "#{SITE_ROOT}data/docs_extra.yml"
 
 def read_data
   if File.exist?(DATA_FILE)
@@ -28,6 +29,20 @@ def read_data
 
   data
 end
+
+def read_docs_extra
+  if File.exist?(DOCS_EXTRA_FILE)
+    # `permitted_classes` required to allow running with Ruby v3.1
+    docs_extra = YAML.load_file(DOCS_EXTRA_FILE)
+  else
+    docs_extra = {}
+  end
+
+  docs_extra["git_project_specific"] = [] unless docs_extra["git_project_specific"]
+
+  docs_extra
+end
+
 
 def make_asciidoc(content)
   Asciidoctor::Document.new(content,
@@ -286,6 +301,7 @@ def index_doc(filter_tags, doc_list, get_content)
   rebuild = ENV.fetch("REBUILD_DOC", nil)
   rerun = ENV["RERUN"] || rebuild || false
 
+  docs_extra = read_docs_extra
   data = read_data
 
   tags = filter_tags.call(rebuild).sort_by { |tag| Version.version_to_num(tag.first[1..]) }
@@ -307,9 +323,6 @@ def index_doc(filter_tags, doc_list, get_content)
     doc_files = tag_files.select do |ent|
       ent.first =~
         /^Documentation\/(
-          SubmittingPatches |
-          MyFirstContribution.txt |
-          MyFirstObjectWalk.txt |
           (
             git.* |
             everyday |
@@ -323,7 +336,8 @@ def index_doc(filter_tags, doc_list, get_content)
             pull.* |
             scalar |
             technical\/.*
-        )\.txt)$/x
+        )\.txt)$/x or
+        docs_extra["git_project_specific"].include?(ent.first.sub(/^Documentation\/(.*?)(\.txt|\.adoc)?$/, '\1'))
     end
 
     puts "Found #{doc_files.size} entries"
