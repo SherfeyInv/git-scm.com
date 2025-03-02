@@ -34,7 +34,7 @@ class Book
     "uz" => "progit/progit2-uz",
     "zh" => "progit/progit2-zh",
     "zh-tw" => "progit/progit2-zh-tw",
-    "fa" => "progit2-fa/progit2"
+    "fa" => "progit/progit2-fa"
   }
 
   def self.all_books
