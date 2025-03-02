@@ -138,7 +138,7 @@ def genbook(language_code, &get_content)
       xlink = html.scan(/href="1-.*?\.html\#(.*?)"/)
       xlink&.each do |link|
         xref = link.first
-	book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
+        book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
         begin
           html.gsub!(/href="1-.*?\.html\##{xref}"/, "href=\"{{< relurl \"#{book_prefix}ch00/#{xref}\" >}}\"")
         rescue StandardError
@@ -155,7 +155,7 @@ def genbook(language_code, &get_content)
           footnotes.add(xref)
           next
         end
-	book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
+        book.xrefs[xref] = 'redirect-to-en' if !book.xrefs[xref]
         begin
           html.gsub!(/href="\##{xref}"/, "href=\"{{< relurl \"#{book_prefix}ch00/#{xref}\" >}}\"")
         rescue StandardError
@@ -222,7 +222,7 @@ def genbook(language_code, &get_content)
       # record all the xrefs
       sec.search(".//*[@id]").each do |id|
         id_xref = id.attribute("id").to_s
-	book.xrefs[id_xref] = csection if !id_xref.start_with?('_footnoteref_')
+        book.xrefs[id_xref] = csection if !id_xref.start_with?('_footnoteref_')
       end
 
       section += 1
@@ -237,6 +237,24 @@ def genbook(language_code, &get_content)
     end
   end
   book
+end
+
+# Update just the download data, based on the latest tag in the repository
+def update_downloads(book, repo, octokit)
+  begin
+    rel = octokit.latest_release(repo)
+    get_url = lambda do |name_re|
+      asset = rel.assets.find { |asset| name_re.match(asset.name) }
+      asset&.browser_download_url
+    end
+    book.ebook_pdf  = get_url.call(/\.pdf$/)
+    book.ebook_epub = get_url.call(/\.epub$/)
+    book.ebook_mobi = get_url.call(/\.mobi$/)
+  rescue Octokit::NotFound
+    book.ebook_pdf  = nil
+    book.ebook_epub = nil
+    book.ebook_mobi = nil
+  end
 end
 
 # Generate book html directly from remote git repo
@@ -269,20 +287,7 @@ def remote_genbook2(language_code)
 
     book.sha = repo_head.sha
 
-    begin
-      rel = @octokit.latest_release(repo)
-      get_url = lambda do |name_re|
-        asset = rel.assets.find { |asset| name_re.match(asset.name) }
-        asset&.browser_download_url
-      end
-      book.ebook_pdf  = get_url.call(/\.pdf$/)
-      book.ebook_epub = get_url.call(/\.epub$/)
-      book.ebook_mobi = get_url.call(/\.mobi$/)
-    rescue Octokit::NotFound
-      book.ebook_pdf  = nil
-      book.ebook_epub = nil
-      book.ebook_mobi = nil
-    end
+    update_downloads(book, repo, @octokit)
 
     book.save
   rescue StandardError => e
@@ -300,12 +305,16 @@ def local_genbook2(language_code, worktree_path)
       raise e
     end
     book.sha = `git -C "#{worktree_path}" rev-parse HEAD`.chomp
-    if language_code == 'en'
+    access_token = ENV.fetch("GITHUB_API_TOKEN", nil)
+    if access_token && Book.all_books[language_code]
+      @octokit = Octokit::Client.new(access_token:)
+      update_downloads(book, Book.all_books[language_code], @octokit)
+    elsif language_code == 'en'
       latest_tag = `git -C "#{worktree_path}" for-each-ref --format '%(refname:short)' --sort=-committerdate --count=1 refs/tags/`.chomp
       if latest_tag.empty?
         puts "No tag found in #{worktree_path}, trying to fetch tags"
         latest_tag = `git -C "#{worktree_path}" fetch --tags origin && git -C "#{worktree_path}" for-each-ref --format '%(refname:short)' --sort=-committerdate --count=1 refs/tags/`.chomp
-	raise "Still no tags in #{worktree_path}?" if latest_tag.empty?
+        raise "Still no tags in #{worktree_path}?" if latest_tag.empty?
       end
       book.ebook_pdf = "https://github.com/progit/progit2/releases/download/#{latest_tag}/progit.pdf"
       book.ebook_epub = "https://github.com/progit/progit2/releases/download/#{latest_tag}/progit.epub"
