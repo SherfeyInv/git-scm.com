@@ -1,0 +1,11 @@
+---
+name: "Tempo"
+project_url: "https://github.com/maoyama/Tempo"
+image_tag: "images/guis/tempo@2x.png"
+platforms:
+  - "Mac"
+price: "Free"
+license: "MIT"
+trend_name: "tempo"
+order: 60
+---
