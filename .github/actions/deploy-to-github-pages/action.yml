@@ -222,6 +222,45 @@ runs:
             await github.rest.issues.createComment({ ...req, body })
             if ('${{ steps.lychee.outputs.exit_code }}' === '0') {
               await github.rest.issues.update({ ...req, state: 'closed' })
+            } else {
+              // minimize outdated comments, if any
+              const query = `query ($owner: String!, $repo: String!, $issue_number: Int!) {
+                repository(owner: $owner, name: $repo) {
+                  issue(number: $issue_number) {
+                    comments(first: 100) {
+                      nodes {
+                        id
+                        isMinimized
+                        minimizedReason
+                        body
+                        author {
+                          login
+                        }
+                      }
+                    }
+                  }
+                }
+              }`
+              const commentIds = (await github.graphql(query, req)).repository.issue.comments.nodes
+              commentIds.pop() // leave the just-created comment alone
+              const markOutdatedCommentMutation = `mutation ($id: ID!, $classifier: ReportedContentClassifiers!) {
+                minimizeComment(input: { subjectId: $id, classifier: $classifier }) {
+                  clientMutationId
+                  minimizedComment {
+                    isMinimized
+                    minimizedReason
+                    viewerCanMinimize
+                  }
+                }
+              }`
+              for (const outdatedComment of commentIds.filter(
+                comment => comment.author.login === 'github-actions' && comment.isMinimized === false
+              )) {
+                await github.graphql(markOutdatedCommentMutation, {
+                  id: outdatedComment.id,
+                  classifier: 'OUTDATED',
+                })
+              }
             }
           }
 
