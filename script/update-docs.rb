@@ -62,8 +62,8 @@ def wrap_front_matter(front_matter)
   "#{front_matter.to_yaml.sub("---\n", "---\n#{content_note}\n")}---\n"
 end
 
-def expand_l10n(path, content, get_f_content, categories)
-  content.gsub!(/include::({build_dir}\/)?(\S+)\.txt/) do |line|
+def expand_l10n(path, content, get_f_content, categories, ext)
+  content.gsub!(/include::({build_dir}\/)?(\S+)\.#{ext}/) do |line|
     line.gsub!("include::", "")
     if categories[line]
       new_content = categories[line]
@@ -71,7 +71,7 @@ def expand_l10n(path, content, get_f_content, categories)
       new_content, new_path = get_f_content.call(path, line)
     end
     if new_content
-      expand_l10n(new_path, new_content, get_f_content, categories)
+      expand_l10n(new_path, new_content, get_f_content, categories, ext)
     else
       "\n\n[WARNING]\n====\nMissing `#{new_path}`\n\nSee original version for this content.\n====\n\n"
     end
@@ -89,13 +89,15 @@ def index_l10n_doc(filter_tags, doc_list, get_content)
 
   filter_tags.call(rebuild, false).sort_by { |tag| Version.version_to_num(tag.first[1..]) }.each do |tag|
     name, commit_sha, tree_sha, ts = tag
-    puts "#{name}: #{ts}, #{commit_sha[0, 8]}, #{tree_sha[0, 8]}"
+    puts "#{name}: #{ts}, #{commit_sha[0, 8]}, #{tree_sha[0, 8]}", ts
 
     next if !rerun && l10n["committed"] and l10n["committed"] >= ts
 
     l10n["commit_sha"] = commit_sha
     l10n["tree_sha"] = tree_sha
     l10n["committed"] = ts
+
+    ext = ts < Time.parse('2025-03-03 18:00:56 +0100') ? 'txt' : 'adoc'
 
     tag_files = doc_list.call(tree_sha)
     doc_files = tag_files.select do |ent|
@@ -104,7 +106,7 @@ def index_l10n_doc(filter_tags, doc_list, get_content)
           (
             git.* |
             scalar
-        )\.txt)/x
+        )\.#{ext})/x
     end
 
     puts "Found #{doc_files.size} entries"
@@ -126,7 +128,8 @@ def index_l10n_doc(filter_tags, doc_list, get_content)
       full_path, sha = entry
       ids = Set.new([])
       lang = File.dirname(full_path)
-      path = File.basename(full_path, ".txt")
+      path = File.basename(full_path, ".#{ext}")
+      txt_path = path.sub(/\.adoc$/, '.txt')
 
       doc_path = "#{SITE_ROOT}external/docs/content/docs/#{path}"
 
@@ -141,7 +144,7 @@ def index_l10n_doc(filter_tags, doc_list, get_content)
 
       content = get_content.call sha
       categories = {}
-      expand_l10n(full_path, content, get_content_f, categories)
+      expand_l10n(full_path, content, get_content_f, categories, ext)
       content.gsub!(/link:(?:technical\/)?(\S*?)\.html(\#\S*?)?\[(.*?)\]/m) do |match|
         check_paths.add("docs/#{$1}/#{lang}")
         "link:/docs/#{$1}/#{lang}#{$2}[#{$3}]"
@@ -172,7 +175,9 @@ def index_l10n_doc(filter_tags, doc_list, get_content)
       # HTML anchor on hdlist1 (i.e. command options)
       html.gsub!(/<dt class="hdlist1">(.*?)<\/dt>/) do |_m|
         text = $1.tr("^A-Za-z0-9-", "")
-        anchor = "#{path}-#{text}"
+        # use txt_path for backward compatibility of already-existing
+	# deep links shared across the interwebs.
+	anchor = "#{txt_path}-#{text}"
         # handle anchor collisions by appending -1
         anchor += "-1" while ids.include?(anchor)
         ids.add(anchor)
