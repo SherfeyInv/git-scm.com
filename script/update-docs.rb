@@ -254,12 +254,12 @@ def drop_uninteresting_tags(tags)
   ret
 end
 
-def expand_content(content, path, get_f_content, generated)
-  content.gsub(/include::(?:{build_dir}\/)?(\S+)\.txt\[\]/) do |_line|
+def expand_content(content, path, get_f_content, generated, ext)
+  content.gsub(/include::(?:{build_dir}\/)?(\S+)\.#{ext}\[\]/) do |_line|
     if File.dirname(path) == "."
-      new_fname = "#{$1}.txt"
+      new_fname = "#{$1}.#{ext}"
     else
-      new_fname = (Pathname.new(path).dirname + Pathname.new("#{$1}.txt")).cleanpath.to_s
+      new_fname = (Pathname.new(path).dirname + Pathname.new("#{$1}.#{ext}")).cleanpath.to_s
     end
     if generated[new_fname]
       new_content = generated[new_fname]
@@ -267,7 +267,7 @@ def expand_content(content, path, get_f_content, generated)
       new_content = get_f_content.call(new_fname)
       if new_content
         new_content = expand_content(new_content.force_encoding("UTF-8"),
-                                     new_fname, get_f_content, generated)
+                                     new_fname, get_f_content, generated, ext)
       else
         puts "#{new_fname} could not be resolved for expansion"
       end
@@ -319,6 +319,7 @@ def index_doc(filter_tags, doc_list, get_content)
     version_data["committed"] = ts
     version_data["date"] = ts.strftime("%m/%d/%y")
 
+    ext = Version.version_to_num(version) < 2_490_000 ? 'txt' : 'adoc'
     tag_files = doc_list.call(tree_sha)
     doc_files = tag_files.select do |ent|
       ent.first =~
@@ -336,8 +337,8 @@ def index_doc(filter_tags, doc_list, get_content)
             pull.* |
             scalar |
             technical\/.*
-        )\.txt)$/x or
-        docs_extra["git_project_specific"].include?(ent.first.sub(/^Documentation\/(.*?)(\.txt|\.adoc)?$/, '\1'))
+        )\.#{ext})$/x or
+      docs_extra["git_project_specific"].include?(ent.first.sub(/^Documentation\/(.*?)(\.#{ext})?$/, '\1'))
     end
 
     puts "Found #{doc_files.size} entries"
@@ -398,10 +399,11 @@ def index_doc(filter_tags, doc_list, get_content)
 
       doc_files.each do |entry|
         path, sha = entry
+        txt_path = path.sub(/\.adoc$/, '.txt')
         ids = Set.new([])
-        docname = File.basename(path, ".txt")
+        docname = File.basename(txt_path, ".txt")
         # TEMPORARY: skip the scalar technical doc until it has a non-overlapping name
-        next if path == "Documentation/technical/scalar.txt"
+        next if txt_path == "Documentation/technical/scalar.txt"
         next if doc_limit && path !~ /#{doc_limit}/
 
         doc_path = "#{SITE_ROOT}external/docs/content/docs/#{docname}"
@@ -413,19 +415,19 @@ def index_doc(filter_tags, doc_list, get_content)
         } unless data["pages"][docname]
         page_data = data["pages"][docname]
 
-        content = expand_content((get_content.call sha).force_encoding("UTF-8"), path, get_content_f, generated)
+        content = expand_content((get_content.call sha).force_encoding("UTF-8"), path, get_content_f, generated, ext)
         # Handle `link:../howto/maintain-git.txt`, which should point to
         # a `.html` target instead
-        content.gsub!(/link:\.\.\/howto\/maintain-git\.txt/, 'link:../howto/maintain-git.html')
+        content.gsub!(/link:\.\.\/howto\/maintain-git\.#{ext}/, 'link:../howto/maintain-git.html')
         # Handle `gitlink:` mistakes (the last of which was fixed in
         # dbf47215e32b (rebase docs: fix "gitlink" typo, 2019-02-27))
         content.gsub!(/gitlink:/, "linkgit:")
         # Handle erroneous `link:api-trace2.txt`, see 4945f046c7f5 (api docs:
         # link to html version of api-trace2, 2022-09-16)
-        content.gsub!(/link:api-trace2.txt/, 'link:api-trace2.html')
+        content.gsub!(/link:api-trace2.#{ext}/, 'link:api-trace2.html')
         # Handle `linkgit:git-config.txt` mistake, fixed in ad52148a7d0
         # (Documentation: fix broken linkgit to git-config, 2016-03-21)
-        content.gsub!(/linkgit:git-config.txt/, 'linkgit:git-config')
+        content.gsub!(/linkgit:git-config.#{ext}/, 'linkgit:git-config')
         content.gsub!(/link:(?:technical\/)?(\S*?)\.html(\#\S*?)?\[(.*?)\]/m, "link:/docs/\\1\\2[\\3]")
 
         asciidoc = make_asciidoc(content)
@@ -457,7 +459,9 @@ def index_doc(filter_tags, doc_list, get_content)
         # HTML anchor on hdlist1 (i.e. command options)
         html.gsub!(/<dt class="hdlist1">(.*?)<\/dt>/) do |_m|
           text = $1.tr("^A-Za-z0-9-", "")
-          anchor = "#{path}-#{text}"
+          # use txt_path for backward compatibility of already-existing
+          # deep links shared across the interwebs.
+          anchor = "#{txt_path}-#{text}"
           # handle anchor collisions by appending -1
           anchor += "-1" while ids.include?(anchor)
           ids.add(anchor)
