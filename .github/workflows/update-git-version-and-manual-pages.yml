@@ -9,7 +9,7 @@ on:
         default: false
   schedule:
     # check daily for updates
-    - cron: '37 17 * * *'
+    - cron: '37 19 * * *'
 
 jobs:
   update-git-version-and-manual-pages:
