@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-show Documentation
 docname: git-show
-version: 2.48.0
-latest-changes: 2.48.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-show/index.html"
 ---
@@ -894,10 +894,10 @@ line.
 </table>
 </div>
 <div class="paragraph">
-<p>The boolean options accept an optional value <code>[=&lt;bool-value&gt;]</code>. The values
-<code>true</code>, <code>false</code>, <code>on</code>, <code>off</code> etc. are all accepted. See the "boolean"
-sub-section in "EXAMPLES" in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>. If a boolean
-option is given with no value, it&#8217;s enabled.</p>
+<p>The boolean options accept an optional value <code>[=&lt;bool-value&gt;]</code>. The
+values taken by <code>--type=bool</code> git-config[1], like <code>yes</code> and <code>off</code>,
+are all accepted.  Giving a boolean option without <code>=&lt;value&gt;</code> is
+equivalent to giving it with <code>=true</code>.</p>
 </div>
 <div class="paragraph">
 <p>If you add a <code>+</code> (plus sign) after <em>%</em> of a placeholder, a line-feed
@@ -2328,7 +2328,7 @@ mind.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><em>git commit</em> and <em>git commit-tree</em> issue
+<p><code>git commit</code> and <code>git commit-tree</code> issue
 a warning if the commit log message given to it does not look
 like a valid UTF-8 string, unless you explicitly say your
 project uses a legacy encoding.  The way to say this is to
@@ -2347,7 +2347,7 @@ implies that the commit log message is encoded in UTF-8.</p>
 </div>
 </li>
 <li>
-<p><em>git log</em>, <em>git show</em>, <em>git blame</em> and friends look at the
+<p><code>git log</code>, <code>git show</code>, <code>git blame</code> and friends look at the
 <code>encoding</code> header of a commit object, and try to re-code the
 log message into UTF-8 unless otherwise specified.  You can
 specify the desired output encoding with

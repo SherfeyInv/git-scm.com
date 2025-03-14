@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - gitcli Documentation
 docname: gitcli
-version: 2.48.0
-latest-changes: 2.48.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/gitcli/index.html"
 ---
@@ -215,6 +215,24 @@ option gives the full list of options.</p>
 example, <code>git branch</code> has the option <code>--track</code> which is <em>on</em> by default. You
 can use <code>--no-track</code> to override that behaviour. The same goes for <code>--color</code>
 and <code>--no-color</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_options_trump_configuration_and_environment"><a class="anchor" href="#_options_trump_configuration_and_environment"></a>Options trump configuration and environment</h3>
+<div class="paragraph">
+<p>When there is a configuration variable or an environment variable
+that tweak the behaviour of an aspect of a Git command, and also a
+command line option that tweaks the same, the command line option
+overrides what the configuration and/or environment variable say.</p>
+</div>
+<div class="paragraph">
+<p>For example, the <code>user.name</code> configuration variable is used to
+specify the human-readable name used by the <code>git commit</code> command to
+record the author and the committer name in a newly created commit.
+The <code>GIT_AUTHOR_NAME</code> environment variable, if set, takes precedence
+when deciding what author name to record.  The <code>--author=&lt;author&gt;</code>
+command line option of the <code>git commit</code> command, when given, takes
+precedence over these two sources of information.</p>
 </div>
 </div>
 <div class="sect2">

@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-http-backend Documentation
 docname: git-http-backend
-version: 2.43.0
-latest-changes: 2.43.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-http-backend/index.html"
 ---
@@ -85,6 +85,11 @@ disabled by default for anonymous users, and enabled by
 default for users authenticated by the web server.  It can be
 disabled by setting this item to <code>false</code>, or enabled for all
 users, including anonymous users, by setting it to <code>true</code>.</p>
+</dd>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadarchive"> <a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadarchive"></a>http.uploadarchive </dt>
+<dd>
+<p>This serves <em>git archive</em> clients for remote archive over HTTP/HTTPS
+protocols. It is disabled by default. It only works in protocol v2.</p>
 </dd>
 </dl>
 </div>

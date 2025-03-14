@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-merge Documentation
 docname: git-merge
-version: 2.48.0
-latest-changes: 2.48.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-merge/index.html"
 ---
@@ -183,8 +183,8 @@ merged. See also <a href='{{< relurl "docs/git-fmt-merge-msg" >}}'>git-fmt-merge
 actual commits being merged.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge.txt---signoff"> <a class="anchor" href="#Documentation/git-merge.txt---signoff"></a>--signoff </dt>
-<dt class="hdlist1" id="Documentation/git-merge.txt---no-signoff"> <a class="anchor" href="#Documentation/git-merge.txt---no-signoff"></a>--no-signoff </dt>
+<dt class="hdlist1" id="Documentation/git-merge.txt-code--signoffcode"> <a class="anchor" href="#Documentation/git-merge.txt-code--signoffcode"></a><code>--signoff</code> </dt>
+<dt class="hdlist1" id="Documentation/git-merge.txt-code--no-signoffcode"> <a class="anchor" href="#Documentation/git-merge.txt-code--no-signoffcode"></a><code>--no-signoff</code> </dt>
 <dd>
 <p>Add a <code>Signed-off-by</code> trailer by the committer at the end of the commit
 log message.  The meaning of a signoff depends on the project
@@ -197,7 +197,7 @@ Linux kernel and Git projects.)  Consult the documentation or
 leadership of the project to which you&#8217;re contributing to
 understand how the signoffs are used in that project.</p>
 <div class="paragraph">
-<p>The --no-signoff option can be used to countermand an earlier --signoff
+<p>The <code>--no-signoff</code> option can be used to countermand an earlier <code>--signoff</code>
 option on the command line.</p>
 </div>
 </dd>
@@ -752,6 +752,14 @@ detected copies.  The name for this algorithm is an acronym
 was written as a replacement for the previous default
 algorithm, <code>recursive</code>.</p>
 <div class="paragraph">
+<p>In the case where the path is a submodule, if the submodule commit used on
+one side of the merge is a descendant of the submodule commit used on the
+other side of the merge, Git attempts to fast-forward to the
+descendant. Otherwise, Git will treat this case as a conflict, suggesting
+as a resolution a submodule commit that is descendant of the conflicting
+ones, if one exists.</p>
+</div>
+<div class="paragraph">
 <p>The <em>ort</em> strategy can take the following options:</p>
 </div>
 <div class="dlist">
@@ -802,7 +810,7 @@ version includes a substantial change, <em>their</em> version is used;</p>
 <dt class="hdlist1" id="Documentation/git-merge.txt-renormalize"> <a class="anchor" href="#Documentation/git-merge.txt-renormalize"></a>renormalize </dt>
 <dd>
 <p>This runs a virtual check-out and check-in of all three stages
-of a file when resolving a three-way merge.  This option is
+of any file which needs a three-way merge.  This option is
 meant to be used when merging branches with different clean
 filters or end-of-line normalization rules.  See "Merging
 branches with differing checkin/checkout attributes" in
@@ -849,6 +857,10 @@ Additionally this can detect and handle merges involving
 renames.  It does not make use of detected copies.  This was
 the default strategy for resolving two heads from Git v0.99.9k
 until v2.33.0.</p>
+<div class="paragraph">
+<p>For a path that is a submodule, the same caution as <em>ort</em> applies to this
+strategy.</p>
+</div>
 <div class="paragraph">
 <p>The <em>recursive</em> strategy takes the same options as <em>ort</em>.  However,
 there are three additional options that <em>ort</em> ignores (not documented
@@ -1047,7 +1059,8 @@ to "conflict".</p>
 <p>Tell Git that canonical representation of files in the
 repository has changed over time (e.g. earlier commits record
 text files with CRLF line endings, but recent ones use LF line
-endings).  In such a repository, Git can convert the data
+endings).  In such a repository, for each file where a
+three-way content merge is needed, Git can convert the data
 recorded in commits to a canonical form before performing a
 merge to reduce unnecessary conflicts.  For more information,
 see section "Merging branches with differing checkin/checkout

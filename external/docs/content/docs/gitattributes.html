@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - gitattributes Documentation
 docname: gitattributes
-version: 2.46.0
-latest-changes: 2.46.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/gitattributes/index.html"
 ---
@@ -641,7 +641,7 @@ content provided to them on standard input.</p>
 <code>filter.&lt;driver&gt;.process</code> then Git can process all blobs with a
 single filter invocation for the entire life of a single Git
 command. This is achieved by using the long-running process protocol
-(described in technical/long-running-process-protocol.txt).</p>
+(described in Documentation/technical/long-running-process-protocol.adoc).</p>
 </div>
 <div class="paragraph">
 <p>When Git encounters the first file that needs to be cleaned or smudged,
@@ -861,8 +861,8 @@ conflicts.</p>
 </div>
 <div class="paragraph">
 <p>To prevent these unnecessary merge conflicts, Git can be told to run a
-virtual check-out and check-in of all three stages of a file when
-resolving a three-way merge by setting the <code>merge.renormalize</code>
+virtual check-out and check-in of all three stages of each file that
+needs a three-way content merge, by setting the <code>merge.renormalize</code>
 configuration variable.  This prevents changes caused by check-in
 conversion from causing spurious merge conflicts when a converted file
 is merged with an unconverted file.</p>
@@ -1440,7 +1440,7 @@ internal merge and the final merge.</p>
 <p>The merge driver can learn the pathname in which the merged result
 will be stored via placeholder <code>%P</code>. The conflict labels to be used
 for the common ancestor, local head and other head can be passed by
-using <em>%S</em>, <em>%X</em> and '%Y` respectively.</p>
+using <code>%S</code>, <code>%X</code> and <code>%Y</code> respectively.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1453,12 +1453,12 @@ integer has a meaningful effect.</p>
 <div class="paragraph">
 <p>For example, this line in <code>.gitattributes</code> can be used to tell the merge
 machinery to leave much longer (instead of the usual 7-character-long)
-conflict markers when merging the file <code>Documentation/git-merge.txt</code>
+conflict markers when merging the file <code>Documentation/git-merge.adoc</code>
 results in a conflict.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Documentation/git-merge.txt	conflict-marker-size=32</pre>
+<pre>Documentation/git-merge.adoc	conflict-marker-size=32</pre>
 </div>
 </div>
 </div>

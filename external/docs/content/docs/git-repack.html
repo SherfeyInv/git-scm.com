@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-repack Documentation
 docname: git-repack
-version: 2.43.0
-latest-changes: 2.43.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-repack/index.html"
 ---
@@ -23,7 +23,9 @@ aliases:
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>SYNOPSIS</h2>
 <div class="sectionbody">
 <div class="verseblock">
-<pre class="content"><em>git repack</em> [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m] [--window=&lt;n&gt;] [--depth=&lt;n&gt;] [--threads=&lt;n&gt;] [--keep-pack=&lt;pack-name&gt;] [--write-midx]</pre>
+<pre class="content"><em>git repack</em> [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [-m]
+	[--window=&lt;n&gt;] [--depth=&lt;n&gt;] [--threads=&lt;n&gt;] [--keep-pack=&lt;pack-name&gt;]
+	[--write-midx] [--name-hash-version=&lt;n&gt;]</pre>
 </div>
 </div>
 </div>
@@ -304,6 +306,11 @@ pack as the preferred pack for object selection by the MIDX (see
 <dd>
 <p>Write a multi-pack index (see <a href='{{< relurl "docs/git-multi-pack-index" >}}'>git-multi-pack-index[1]</a>)
 containing the non-redundant packs.</p>
+</dd>
+<dt class="hdlist1" id="Documentation/git-repack.txt---name-hash-versionltngt"> <a class="anchor" href="#Documentation/git-repack.txt---name-hash-versionltngt"></a>--name-hash-version=&lt;n&gt; </dt>
+<dd>
+<p>Provide this argument to the underlying <code>git pack-objects</code> process.
+See <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a> for full details.</p>
 </dd>
 </dl>
 </div>

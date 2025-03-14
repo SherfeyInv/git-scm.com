@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - gitrepository-layout Documentation
 docname: gitrepository-layout
-version: 2.48.0
-latest-changes: 2.48.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/gitrepository-layout/index.html"
 ---
@@ -208,7 +208,7 @@ working directory in multiple working directory setup (see
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-branches"> <a class="anchor" href="#Documentation/gitrepository-layout.txt-branches"></a>branches </dt>
 <dd>
-<p>A slightly deprecated way to store shorthands to be used
+<p>A deprecated way to store shorthands to be used
 to specify a URL to <em>git fetch</em>, <em>git pull</em> and <em>git push</em>.
 A file can be stored as <code>branches/&lt;name&gt;</code> and then
 <em>name</em> can be given to these commands in place of
@@ -217,6 +217,9 @@ A file can be stored as <code>branches/&lt;name&gt;</code> and then
 and not likely to be found in modern repositories. This
 directory is ignored if $GIT_COMMON_DIR is set and
 "$GIT_COMMON_DIR/branches" will be used instead.</p>
+<div class="paragraph">
+<p>Git will stop reading remotes from this directory in Git 3.0.</p>
+</div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-hooks"> <a class="anchor" href="#Documentation/gitrepository-layout.txt-hooks"></a>hooks </dt>
 <dd>
@@ -304,6 +307,9 @@ in <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a> for details.  This
 and not likely to be found in modern repositories. This
 directory is ignored if $GIT_COMMON_DIR is set and
 "$GIT_COMMON_DIR/remotes" will be used instead.</p>
+<div class="paragraph">
+<p>Git will stop reading remotes from this directory in Git 3.0.</p>
+</div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logs"> <a class="anchor" href="#Documentation/gitrepository-layout.txt-logs"></a>logs </dt>
 <dd>

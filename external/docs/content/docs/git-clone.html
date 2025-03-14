@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-clone Documentation
 docname: git-clone
-version: 2.48.0
-latest-changes: 2.48.0
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-clone/index.html"
 ---
@@ -27,7 +27,7 @@ aliases:
 	  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
 	  [-o &lt;name&gt;] [-b &lt;name&gt;] [-u &lt;upload-pack&gt;] [--reference &lt;repository&gt;]
 	  [--dissociate] [--separate-git-dir &lt;git-dir&gt;]
-	  [--depth &lt;depth&gt;] [--[no-]single-branch] [--no-tags]
+	  [--depth &lt;depth&gt;] [--[no-]single-branch] [--[no-]tags]
 	  [--recurse-submodules[=&lt;pathspec&gt;]] [--[no-]shallow-submodules]
 	  [--[no-]remote-submodules] [--jobs &lt;n&gt;] [--sparse] [--[no-]reject-shallow]
 	  [--filter=&lt;filter-spec&gt;] [--also-filter-submodules]] [--] &lt;repository&gt;
@@ -270,6 +270,16 @@ be checked out.
 <code>--branch</code> can also take tags and detaches the <code>HEAD</code> at that commit
 in the resulting repository.</p>
 </dd>
+<dt class="hdlist1" id="Documentation/git-clone.txt-code--revisionltrevgtcode"> <a class="anchor" href="#Documentation/git-clone.txt-code--revisionltrevgtcode"></a><code>--revision=&lt;rev&gt;</code> </dt>
+<dd>
+<p>Create a new repository, and fetch the history leading to the given
+revision <em>&lt;rev&gt;</em> (and nothing else), without making any remote-tracking
+branch, and without making any local branch, and detach <code>HEAD</code> to
+<em>&lt;rev&gt;</em>. The argument can be a ref name (e.g. <code>refs/heads/main</code> or
+<code>refs/tags/v1.0</code>) that peels down to a commit, or a hexadecimal object
+name.
+This option is incompatible with <code>--branch</code> and <code>--mirror</code>.</p>
+</dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt-code-ucodeemltupload-packgtem"> <a class="anchor" href="#Documentation/git-clone.txt-code-ucodeemltupload-packgtem"></a><code>-u</code> <em>&lt;upload-pack&gt;</em> </dt>
 <dt class="hdlist1" id="Documentation/git-clone.txt-code--upload-packcodeemltupload-packgtem"> <a class="anchor" href="#Documentation/git-clone.txt-code--upload-packcodeemltupload-packgtem"></a><code>--upload-pack</code> <em>&lt;upload-pack&gt;</em> </dt>
 <dd>
@@ -330,13 +340,17 @@ initial cloning.  If the <code>HEAD</code> at the remote did not point at any
 branch when <code>--single-branch</code> clone was made, no remote-tracking
 branch is created.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt-code--no-tagscode"> <a class="anchor" href="#Documentation/git-clone.txt-code--no-tagscode"></a><code>--no-tags</code> </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt-code--no-tagscode"> <a class="anchor" href="#Documentation/git-clone.txt-code--no-tagscode"></a><code>--[no-]tags</code> </dt>
 <dd>
-<p>Don&#8217;t clone any tags, and set
-<code>remote.&lt;remote&gt;.tagOpt=--no-tags</code> in the config, ensuring
-that future <code>git pull</code> and <code>git fetch</code> operations won&#8217;t follow
-any tags. Subsequent explicit tag fetches will still work,
-(see <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a>).</p>
+<p>Control whether or not tags will be cloned. When <code>--no-tags</code> is
+given, the option will be become permanent by setting the
+<code>remote.&lt;remote&gt;.tagOpt=--no-tags</code> configuration. This ensures that
+future <code>git pull</code> and <code>git fetch</code> won&#8217;t follow any tags. Subsequent
+explicit tag fetches will still work (see <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a>).</p>
+<div class="paragraph">
+<p>By default, tags are cloned and passing <code>--tags</code> is thus typically a
+no-op, unless it cancels out a previous <code>--no-tags</code>.</p>
+</div>
 <div class="paragraph">
 <p>Can be used in conjunction with <code>--single-branch</code> to clone and
 maintain a branch with no references other than a single cloned

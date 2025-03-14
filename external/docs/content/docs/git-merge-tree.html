@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-merge-tree Documentation
 docname: git-merge-tree
-version: 2.47.1
-latest-changes: 2.47.1
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-merge-tree/index.html"
 ---
@@ -76,12 +76,19 @@ merge base, creating a virtual merge base by merging the merge bases)</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---stdin"> <a class="anchor" href="#Documentation/git-merge-tree.txt---stdin"></a>--stdin </dt>
+<dd>
+<p>Read the commits to merge from the standard input rather than
+the command-line. See <a href="#INPUT">INPUT FORMAT</a> below for more
+information.  Implies <code>-z</code>.</p>
+</dd>
 <dt class="hdlist1" id="Documentation/git-merge-tree.txt--z"> <a class="anchor" href="#Documentation/git-merge-tree.txt--z"></a>-z </dt>
 <dd>
 <p>Do not quote filenames in the &lt;Conflicted file info&gt; section,
 and end each filename with a NUL character rather than
 newline.  Also begin the messages section with a NUL character
-instead of a newline.  See <a href="#OUTPUT">OUTPUT</a> below for more information.</p>
+instead of a newline.  See <a href="#OUTPUT">OUTPUT</a> below for more
+information.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge-tree.txt---name-only"> <a class="anchor" href="#Documentation/git-merge-tree.txt---name-only"></a>--name-only </dt>
 <dd>
@@ -174,10 +181,8 @@ NUL</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>   0: merge had conflicts
-   1: merge was clean
-   &lt;0: something prevented the merge from running (e.g. access to repository
-objects denied by filesystem)</pre>
+<pre>0: merge had conflicts
+1: merge was clean</pre>
 </div>
 </div>
 </div>
@@ -359,7 +364,7 @@ with <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a>:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_input_format"><a class="anchor" href="#_input_format"></a>INPUT FORMAT</h2>
+<h2 id="INPUT"><a class="anchor" href="#INPUT"></a>INPUT FORMAT</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>git merge-tree --stdin</em> input format is fully text based. Each line

@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-rebase Documentation
 docname: git-rebase
-version: 2.46.1
-latest-changes: 2.46.1
+version: 2.49.0
+latest-changes: 2.49.0
 aliases:
 - "/docs/git-rebase/index.html"
 ---
@@ -798,11 +798,11 @@ the root commit(s) on a branch.</p>
 <dd>
 <p>Automatically squash commits with specially formatted messages into
 previous commits being rebased.  If a commit message starts with
-"squash! ", "fixup! " or "amend! ", the remainder of the subject line
+"squash! ", "fixup! " or "amend! ", the remainder of the title
 is taken as a commit specifier, which matches a previous commit if it
-matches the subject line or the hash of that commit.  If no commit
+matches the title or the hash of that commit.  If no commit
 matches fully, matches of the specifier with the start of commit
-subjects are considered.</p>
+titles are considered.</p>
 <div class="paragraph">
 <p>In the rebase todo list, the actions of squash, fixup and amend commits are
 changed from <code>pick</code> to <code>squash</code>, <code>fixup</code> or <code>fixup -C</code>, respectively, and they
@@ -813,7 +813,7 @@ be used to review and edit the todo list before proceeding.</p>
 <p>The recommended way to create commits with squash markers is by using the
 <code>--squash</code>, <code>--fixup</code>, <code>--fixup=amend:</code> or <code>--fixup=reword:</code> options of
 <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a>, which take the target commit as an argument and
-automatically fill in the subject line of the new commit from that.</p>
+automatically fill in the title of the new commit from that.</p>
 </div>
 <div class="paragraph">
 <p>Setting configuration variable <code>rebase.autoSquash</code> to true enables
@@ -1140,6 +1140,14 @@ detected copies.  The name for this algorithm is an acronym
 was written as a replacement for the previous default
 algorithm, <code>recursive</code>.</p>
 <div class="paragraph">
+<p>In the case where the path is a submodule, if the submodule commit used on
+one side of the merge is a descendant of the submodule commit used on the
+other side of the merge, Git attempts to fast-forward to the
+descendant. Otherwise, Git will treat this case as a conflict, suggesting
+as a resolution a submodule commit that is descendant of the conflicting
+ones, if one exists.</p>
+</div>
+<div class="paragraph">
 <p>The <em>ort</em> strategy can take the following options:</p>
 </div>
 <div class="dlist">
@@ -1190,7 +1198,7 @@ version includes a substantial change, <em>their</em> version is used;</p>
 <dt class="hdlist1" id="Documentation/git-rebase.txt-renormalize"> <a class="anchor" href="#Documentation/git-rebase.txt-renormalize"></a>renormalize </dt>
 <dd>
 <p>This runs a virtual check-out and check-in of all three stages
-of a file when resolving a three-way merge.  This option is
+of any file which needs a three-way merge.  This option is
 meant to be used when merging branches with different clean
 filters or end-of-line normalization rules.  See "Merging
 branches with differing checkin/checkout attributes" in
@@ -1237,6 +1245,10 @@ Additionally this can detect and handle merges involving
 renames.  It does not make use of detected copies.  This was
 the default strategy for resolving two heads from Git v0.99.9k
 until v2.33.0.</p>
+<div class="paragraph">
+<p>For a path that is a submodule, the same caution as <em>ort</em> applies to this
+strategy.</p>
+</div>
 <div class="paragraph">
 <p>The <em>recursive</em> strategy takes the same options as <em>ort</em>.  However,
 there are three additional options that <em>ort</em> ignores (not documented
