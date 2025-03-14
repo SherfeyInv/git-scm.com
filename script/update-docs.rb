@@ -322,7 +322,7 @@ def index_doc(filter_tags, doc_list, get_content)
     version_data["commit_sha"] = commit_sha
     version_data["tree_sha"] = tree_sha
     version_data["committed"] = ts
-    version_data["date"] = ts.strftime("%m/%d/%y")
+    version_data["date"] = ts.strftime("%Y-%m-%d")
 
     ext = Version.version_to_num(version) < 2_490_000 ? 'txt' : 'adoc'
     tag_files = doc_list.call(tree_sha)
