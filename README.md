@@ -11,7 +11,7 @@ This site is built with [Hugo](https://gohugo.io/) and served via GitHub Pages.
 > [!NOTE]
 > It is highly recommended to clone this repository using [`scalar`](https://git-scm.com/docs/scalar); This allows to work only on the parts of the repository relevant to your interests. You can select which directories are checked out using the [`git sparse-checkout add <directory>...`](https://git-scm.com/docs/git-sparse-checkout) command. Typically, you will want to start like this:
 
-```ShellSession
+```console
 $ scalar clone https://github.com/git/git-scm.com
 $ cd git-scm.com/src
 $ git sparse-checkout set layouts content static assets hugo.yml data script
@@ -19,7 +19,7 @@ $ git sparse-checkout set layouts content static assets hugo.yml data script
 
 If your Git installation comes without `scalar`, you can create a sparse, partial clone manually, like this:
 
-```ShellSession
+```console
 $ git clone --filter=blob:none --no-checkout https://github.com/git/git-scm.com
 $ cd git-scm.com
 $ git sparse-checkout set layouts content static assets hugo.yml data script
