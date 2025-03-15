@@ -55,18 +55,24 @@ To render the site locally, you'll need [Hugo](https://gohugo.io/)'s **extended*
 
 You can verify the Hugo version like this:
 
-    $ hugo version
-    hugo v0.128.0+extended linux/amd64 BuildDate=unknown
+```console
+$ hugo version
+hugo v0.128.0+extended linux/amd64 BuildDate=unknown
+```
 
 You can serve the site locally via:
 
-    $ node script/serve-public.js
+```console
+$ node script/serve-public.js
+```
 
 The site should be running on http://127.0.0.1:5000.
 
 If you want to serve the site via Hugo's built-in mechanism, you will need to turn off ["ugly URLs"](https://gohugo.io/content-management/urls/#appearance), by running this command, which will serve the site via http://127.0.0.1:1313:
 
-    $ HUGO_UGLYURLS=false hugo serve -w
+```console
+$ HUGO_UGLYURLS=false hugo serve -w
+```
 
 Side note: What _are_ "ugly URLs"? Hugo, by default, generates "pretty" URLs like https://git-scm.com/about/ (note the trailing slash) instead of what it calls "ugly" URLs like https://git-scm.com/about.html. However, since GitHub Pages auto-resolves "even prettier" URLs like https://git-scm.com/about by appending `.html` first, we _want_ the "ugly" URLs to be used here. The `serve-public.js` script emulates GitHub Pages' behavior, while `hugo serve` does not.
 
@@ -74,14 +80,18 @@ Pro-Tip: Do this in a sparse checkout that excludes large parts of `content/`, t
 
 To test the site locally _with_ the search enabled, run this instead:
 
-    $ hugo
-    $ npx -y pagefind --site public
-    $ node script/serve-public.js
+```console
+$ hugo
+$ npx -y pagefind --site public
+$ node script/serve-public.js
+```
 
 You can also use Pagefind's built-in server (which will be running on http://127.0.0.1:1414), but again, you have to turn off "ugly URLs":
 
-    $ HUGO_UGLYURLS=false hugo
-    $ npx -y pagefind --site public --serve
+```console
+$ HUGO_UGLYURLS=false hugo
+$ npx -y pagefind --site public --serve
+```
 
 Note that running Pagefind will make the process about 7 times slower, and the site will not be re-rendered and live-reloaded in the browser when you change files in `content/` (unlike with `hugo serve -w`).
 
@@ -89,63 +99,85 @@ Note that running Pagefind will make the process about 7 times slower, and the s
 
 First, install the Ruby prerequisites:
 
-	$ bundler install
+```console
+$ bundler install
+```
 
 Then, you can build the manual pages using a local Git source clone like this:
 
-    $ ruby ./script/update-docs.rb /path/to/git/.git en
+```console
+$ ruby ./script/update-docs.rb /path/to/git/.git en
+```
 
 This will populate the manual pages for all Git versions. You can also populate them only for a specific Git version (faster):
 
-    $ version=v2.23.0
-    $ REBUILD_DOC=$version ruby ./script/update-docs.rb /path/to/git/.git en
+```console
+$ version=v2.23.0
+$ REBUILD_DOC=$version ruby ./script/update-docs.rb /path/to/git/.git en
+```
 
 Or you can populate the man pages from GitHub (much slower) like this:
 
-    $ export GITHUB_API_TOKEN=github_personal_auth_token
-    $ REBUILD_DOC=$version ruby ./script/update-docs.rb remote en  # specific version
+```console
+$ export GITHUB_API_TOKEN=github_personal_auth_token
+$ REBUILD_DOC=$version ruby ./script/update-docs.rb remote en  # specific version
+```
 
 Similarly, you can also populate the localized man pages. From a local clone of https://github.com/jnavila/git-html-l10n :
 
-    $ ruby ./script/update-docs.rb /path/to/git-html-l10n/.git l10n  # all versions
-    $ REBUILD_DOC=$version ruby ./script/update-docs.rb /path/to/git-html-l10n/.git l10n  # specific version
+```console
+$ ruby ./script/update-docs.rb /path/to/git-html-l10n/.git l10n  # all versions
+$ REBUILD_DOC=$version ruby ./script/update-docs.rb /path/to/git-html-l10n/.git l10n  # specific version
+```
 
 Or you can do it from GitHub (much slower) like this:
 
-    $ export GITHUB_API_TOKEN=github_personal_auth_token
-    $ REBUILD_DOC=$version ruby ./script/update-docs.rb remote l10n  # specific version
+```console
+$ export GITHUB_API_TOKEN=github_personal_auth_token
+$ REBUILD_DOC=$version ruby ./script/update-docs.rb remote l10n  # specific version
+```
 
 ## Update the `Downloads` pages
 
 Now you need to get the latest downloads for the downloads pages:
 
-    $ ruby ./script/update-download-data.rb
+```console
+$ ruby ./script/update-download-data.rb
+```
 
 ## Update the ProGit book
 
 First, you will have to get the necessary prerequisites:
 
-    $ bundler install
+```console
+$ bundler install
+```
 
 Now you'll probably want some book data.
 
 You'll have to get the book content from a repository on your computer by specifying the path:
 
-    $ git clone https://github.com/progit/progit2-fr ../progit2-fr
-    $ ruby ./script/update-book2.rb fr ../progit2-fr
+```console
+$ git clone https://github.com/progit/progit2-fr ../progit2-fr
+$ ruby ./script/update-book2.rb fr ../progit2-fr
+```
 
 That will generate the book content from the Asciidoc files and write the files to the local tree, ready to be committed and served via Hugo.
 
 Alternatively, you need to have access to the [Pro Git project on GitHub](https://github.com/progit/progit2) through the API.
 
-    $ export GITHUB_API_TOKEN=github_personal_auth_token
-    $ ruby ./script/update-book2.rb en
+```console
+$ export GITHUB_API_TOKEN=github_personal_auth_token
+$ ruby ./script/update-book2.rb en
+```
 
 If you have 2FA enabled, you'll need to create a [Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/).
 
 If you want to build the book for all available languages, just omit the language code parameter:
 
-    $ ruby ./script/update-book2.rb
+```console
+$ ruby ./script/update-book2.rb
+```
 
 ## Contributing
 
