@@ -95,6 +95,32 @@ $ npx -y pagefind --site public --serve
 
 Note that running Pagefind will make the process about 7 times slower, and the site will not be re-rendered and live-reloaded in the browser when you change files in `content/` (unlike with `hugo serve -w`).
 
+## Running the test suite
+
+Believe it or not, https://git-scm.com/ has its own test suite. It uses [Playwright](https://playwright.dev/) to perform a couple of tests that verify that the site "looks right". These tests live in `tests/` and are configured via `playwright.config.js`.
+
+To run these tests in your local setup, you need a working node.js installation. After that, you need to install Playwright:
+
+```console
+$ npm install @playwright/test
+```
+
+Since Playwright uses headless versions of popular web browsers, you most likely need to install at least one of them, e.g. via:
+
+```console
+$ npx playwright install firefox
+```
+
+Supported browsers include `firefox`, `chromium`, `webkit`, `chrome`. You can also simply download all of 'em using `npx playwright install` but please first note that they all weigh >100MB, so you might want to refrain from doing that. Side note: In GitHub Actions' hosted runners, Chrome comes pre-installed, and you might be able to use your own Chrome installation, too, if you have one.
+
+By default, the Playwright tests target https://git-scm.com/, which is unlikely what you want: You probably want to run the tests to validate your local changes. To do so, the configuration has a special provision to start a tiny local web server to serve the files written to `public/` by Hugo and Pagefind:
+
+```console
+$ PLAYWRIGHT_TEST_URL='http://localhost:5000/' npx playwright test --project=firefox
+```
+
+For more fine-grained testing, you can pass `-g <regex>` to run only the matching test cases.
+
 ## Update manual pages
 
 First, install the Ruby prerequisites:
