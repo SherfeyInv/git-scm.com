@@ -111,7 +111,7 @@ Since Playwright uses headless versions of popular web browsers, you most likely
 $ npx playwright install firefox
 ```
 
-Supported browsers include `firefox`, `chromium`, `webkit`, `chrome`. You can also simply download all of 'em using `npx playwright install` but please first note that they all weigh >100MB, so you might want to refrain from doing that. Side note: In GitHub Actions' hosted runners, Chrome comes pre-installed, and you might be able to use your own Chrome installation, too, if you have one.
+Supported browsers include `firefox`, `chromium`, `webkit`, `chrome`. You can also simply download all of them using `npx playwright install` but please first note that they all weigh >100MB, so you might want to refrain from doing that. Side note: In GitHub Actions' hosted runners, Chrome comes pre-installed, and you might be able to use your own Chrome installation, too, if you have one.
 
 By default, the Playwright tests target https://git-scm.com/, which is unlikely what you want: You probably want to run the tests to validate your local changes. To do so, the configuration has a special provision to start a tiny local web server to serve the files written to `public/` by Hugo and Pagefind:
 
