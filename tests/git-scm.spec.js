@@ -290,3 +290,32 @@ test('small-and-fast', async ({ page }) => {
   const lastGraph = page.locator('.bar-chart').last();
   await expect(lastGraph).toBeInViewport();
 });
+
+test('dark mode', async({ page }) => {
+  await page.setViewportSize(devices['iPhone X'].viewport);
+
+  await page.goto(`${url}`);
+  await page.evaluate(() => {
+    document.querySelector('#tagline').innerHTML = '--dark-mode-for-dark-times';
+  });
+  const darkModeButton = page.locator('#dark-mode-button');
+
+  const o = { maxDiffPixels: 30 };
+  await expect(page).toHaveScreenshot({ name: 'light-mode.png', ...o });
+  await darkModeButton.click();
+  await expect(page).toHaveScreenshot({ name: 'dark-mode.png', ...o });
+
+  // Now, try again, but this time with system's preference being dark mode
+
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.evaluate(() => window.localStorage.clear());
+  await page.evaluate(() => window.sessionStorage.clear());
+  await page.reload();
+  await page.evaluate(() => {
+    document.querySelector('#tagline').innerHTML = '--dark-mode-for-dark-times';
+  });
+
+  await expect(page).toHaveScreenshot({ name: 'dark-mode.png', ...o });
+  await darkModeButton.click();
+  await expect(page).toHaveScreenshot({ name: 'light-mode.png', ...o });
+})
