@@ -129,6 +129,10 @@
                 background: var(--main-bg);
             }
 
+            #search-results table td.matches :is(a:hover, a.highlight) {
+                text-shadow:unset;
+            }
+
             #reference-version {
                 background-color: #6f6e6954;
             }
