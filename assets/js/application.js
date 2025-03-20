@@ -31,6 +31,7 @@ const baseURLPrefix = (() => {
 
 $(document).ready(function() {
   BrowserFallbacks.init();
+  DarkMode.init();
   Search.init();
   Dropdowns.init();
   Forms.init();
@@ -222,7 +223,12 @@ var Search = {
             $("#show-results-label").text("No matching pages found.");
             return;
           }
-          $("#show-results-label").text("Show all results...");
+
+          const language = document.querySelector("html")?.getAttribute("lang");
+          $("#show-results-label")
+            .text("Show all results...")
+            .attr('href', `${baseURLPrefix}search/results?search=${term}${language && `&language=${language}`}`);
+
           const loadButton = $("#load-more-results");
           loadButton.text(`Loading ${
             results.results.length < 2
@@ -299,11 +305,6 @@ var Search = {
   selectResultOption: function() {
     var link = $('#search-results a')[Search.selectedIndex];
     var url = $(link).attr('href');
-    if(!url) {
-      const term = $('#search-text').val();
-      const language = document.querySelector("html")?.getAttribute("lang");
-      url = `${baseURLPrefix}search/results?search=${term}${language && `&language=${language}`}`;
-    }
     window.location.href = url;
     selectedIndex = 0;
   },
@@ -548,6 +549,38 @@ var Downloads = {
   postProcessDownloadPage: function() {
     Downloads.adjustFor32BitWindows();
     $('#relative-release-date').html(Downloads.postProcessReleaseDate);
+  },
+}
+
+var DarkMode = {
+  init: function() {
+    const button = $('#dark-mode-button');
+    if (!button.length) return;
+
+    // Check for dark mode preference at the OS level
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // Get the user's theme preference from local storage, if it's available
+    const currentTheme = localStorage.getItem("theme");
+
+    if ((prefersDarkScheme && currentTheme !== "light")
+        || (!prefersDarkScheme && currentTheme === "dark")) {
+      button.attr("src", `${baseURLPrefix}images/light-mode.svg`);
+    }
+    button.css("display", "block");
+
+    button.click(function(e) {
+      e.preventDefault();
+      let theme
+      if (prefersDarkScheme) {
+        theme = document.documentElement.dataset.theme === "light" ? "dark" : "light"
+      } else {
+        theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark"
+      }
+      document.documentElement.dataset.theme = theme
+      localStorage.setItem("theme", theme);
+      button.attr("src", `${baseURLPrefix}images/${theme === "dark" ? "light" : "dark"}-mode.svg`);
+    });
   },
 }
 

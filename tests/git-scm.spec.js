@@ -115,7 +115,8 @@ test('search', async ({ page }) => {
   // Expect the first search result to be "git-commit"
   const searchResults = page.locator('#search-results')
   await expect(searchResults.getByRole("link")).not.toHaveCount(0)
-  await expect(searchResults.getByRole("link").nth(0)).toHaveText('git-commit')
+  await expect(searchResults.getByRole("link").nth(0)).toHaveText('Show all results...')
+  await expect(searchResults.getByRole("link").nth(1)).toHaveText('git-commit')
 
   // Expect the search page to show up
   await searchBox.press('Enter')
@@ -137,7 +138,8 @@ test('search', async ({ page }) => {
   await page.goto(`${url}docs/git-commit/fr`)
   await searchBox.fill('add')
   await searchBox.press('Shift')
-  await expect(searchResults.getByRole("link").nth(0)).toHaveAttribute('href', /\/docs\/git-add\/fr(\.html)?$/)
+  await expect(searchResults.getByRole("link").nth(0)).toHaveAttribute('href', /\/search\/results\?search=add&language=fr$/)
+  await expect(searchResults.getByRole("link").nth(1)).toHaveAttribute('href', /\/docs\/git-add\/fr(\.html)?$/)
 
   // pressing the Enter key should navigate to the full search results page
   await searchBox.press('Enter')
@@ -288,3 +290,32 @@ test('small-and-fast', async ({ page }) => {
   const lastGraph = page.locator('.bar-chart').last();
   await expect(lastGraph).toBeInViewport();
 });
+
+test('dark mode', async({ page }) => {
+  await page.setViewportSize(devices['iPhone X'].viewport);
+
+  await page.goto(`${url}`);
+  await page.evaluate(() => {
+    document.querySelector('#tagline').innerHTML = '--dark-mode-for-dark-times';
+  });
+  const darkModeButton = page.locator('#dark-mode-button');
+
+  const o = { maxDiffPixels: 30 };
+  await expect(page).toHaveScreenshot({ name: 'light-mode.png', ...o });
+  await darkModeButton.click();
+  await expect(page).toHaveScreenshot({ name: 'dark-mode.png', ...o });
+
+  // Now, try again, but this time with system's preference being dark mode
+
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.evaluate(() => window.localStorage.clear());
+  await page.evaluate(() => window.sessionStorage.clear());
+  await page.reload();
+  await page.evaluate(() => {
+    document.querySelector('#tagline').innerHTML = '--dark-mode-for-dark-times';
+  });
+
+  await expect(page).toHaveScreenshot({ name: 'dark-mode.png', ...o });
+  await darkModeButton.click();
+  await expect(page).toHaveScreenshot({ name: 'light-mode.png', ...o });
+})
