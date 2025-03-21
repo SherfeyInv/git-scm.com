@@ -28,6 +28,11 @@
     $search-border:           #ceccc5;
     $search-focus-border:     #007175;
 
+    $logos-1: #a6a7a1;
+    $logos-2: #90908b;
+    $logos-3: #767675;
+    $logos-4: #696c69;
+
     @if $mode == dark {
         $orange:                  #d7834f;
         $blue:                    #007a7e;
@@ -55,6 +60,11 @@
         $versions-footer-bg-color: #1f1f1e;
         $search-border:           #5e5e5a;
         $search-focus-border:     #ceccc5;
+
+        $logos-1: #696c69;
+        $logos-2: #767675;
+        $logos-3: #90908b;
+        $logos-4: #a6a7a1;
 
         :root#{$theme} {
             div#masthead {
@@ -181,6 +191,11 @@
         --versions-footer-bg-color:     #{$versions-footer-bg-color};
         --search-border:                #{$search-border};
         --search-focus-border:          #{$search-focus-border};
+
+        --logos-1: #{$logos-1};
+        --logos-2: #{$logos-2};
+        --logos-3: #{$logos-3};
+        --logos-4: #{$logos-4};
     }
 }
 
