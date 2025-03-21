@@ -234,10 +234,6 @@ $monitor-height: 271px;
         @include background-image-2x($baseurl + "images/company-project-logos/google", 108px, 65px);
       }
 
-      &.twitter {
-        @include background-image-2x($baseurl + "images/company-project-logos/twitter", 108px, 65px);
-      }
-
       &.microsoft {
         @include background-image-2x($baseurl + "images/company-project-logos/microsoft", 108px, 65px);
       }
