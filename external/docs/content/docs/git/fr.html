@@ -215,7 +215,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-mainporcelain.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-mainporcelain.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -238,7 +238,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-ancillarymanipulators.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-ancillarymanipulators.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -258,7 +258,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-ancillaryinterrogators.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-ancillaryinterrogators.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -281,7 +281,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-foreignscminterface.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-foreignscminterface.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -337,7 +337,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-plumbingmanipulators.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-plumbingmanipulators.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -357,7 +357,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-plumbinginterrogators.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-plumbinginterrogators.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -380,7 +380,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-synchingrepositories.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-synchingrepositories.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -400,7 +400,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-synchelpers.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-synchelpers.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -423,7 +423,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-purehelpers.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-purehelpers.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -449,7 +449,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-guide.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-guide.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -474,7 +474,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-userinterfaces.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-userinterfaces.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -499,7 +499,7 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/{build_dir}/cmds-developerinterfaces.txt</code></p>
+<p>Missing <code>fr/{build_dir}/cmds-developerinterfaces.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -632,10 +632,21 @@ git --git-dir=c/a.git --work-tree=c/b status</pre>
 <h2 id="_variables_denvironnement"><a class="anchor" href="#_variables_denvironnement"></a>Variables d&#8217;environnement</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Diverses commandes Git sont sensibles aux variables d&#8217;environnement et modifient leur comportement. Les variables d&#8217;environnement marquées comme "Booléenne" prennent leurs valeurs de la même manière que les variables de configuration évaluées comme Booléenne, p.ex. "true", "yes", "on" et les chiffres positifs sont pris comme "yes".</p>
+<p>Diverses commandes Git sont sensibles aux variables d&#8217;environnement et modifient leur comportement. Les variables d&#8217;environnement marquées comme "Booléenne" prennent leurs valeurs de la même manière que les variables de configuration évaluées comme Booléenne, p.ex. <code>true</code>, <code>yes</code>, <code>on</code> et les chiffres positifs sont pris comme <code>yes</code>, tandis que <code>false</code>, <code>no</code>, <code>off</code>, and <code>0</code> sont pris comme <code>no</code>.</p>
 </div>
 <div class="paragraph">
 <p>Voici les variables :</p>
+</div>
+<div class="sect2">
+<h3 id="_système"><a class="anchor" href="#_système"></a>Système</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1" id="git-codeHOMEcode"> <a class="anchor" href="#git-codeHOMEcode"></a><code>HOME</code> </dt>
+<dd>
+<p>Specifies the path to the user&#8217;s home directory. On Windows, if unset, Git will set a process environment variable equal to: <code>$HOMEDRIVE$HOMEPATH</code> if both <code>$HOMEDRIVE</code> and <code>$HOMEPATH</code> exist; otherwise <code>$USERPROFILE</code> if <code>$USERPROFILE</code> exists.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_le_dépôt_git"><a class="anchor" href="#_le_dépôt_git"></a>Le dépôt Git</h3>

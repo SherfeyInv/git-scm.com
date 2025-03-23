@@ -170,7 +170,7 @@ De plus, la partie date est acceptée dans les formats suivants : <code>AAAA.MM
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>git commit</code> et <code>git commit-tree</code> affichent un avertissement si le message de validation fourni ne semble pas être une chaîne de caractères UTF-8 valide, à moins que vous n&#8217;indiquiez explicitement que votre projet utilise un encodage ancien. La manière de l&#8217;indiquer est d&#8217;avoir <code>i18n.commitEncoding</code> dans <code>.git/config</code>, comme ceci :</p>
+<p><code>git commit</code> et <code>git commit-tree</code> affichent un avertissement si le message de validation fourni ne semble pas être une chaîne de caractères UTF-8 valide, à moins que vous n&#8217;indiquiez explicitement que votre projet utilise un encodage ancien. La manière de l&#8217;indiquer est d&#8217;avoir <code>i18n.commitEncoding</code> dans <code>.git/config</code>, comme ceci :</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]
@@ -182,7 +182,7 @@ De plus, la partie date est acceptée dans les formats suivants : <code>AAAA.MM
 </div>
 </li>
 <li>
-<p>Sauf indication contraire, <em>git log</em>, <em>git show</em>, <em>git blame</em> et consort lisent l&#8217;entête <code>encoding</code> d&#8217;un objet commit et essaient de ré-encoder le message de validation en UTF-8. Vous pouvez spécifier l&#8217;encodage de sortie que vous souhaitez avec <code>i18n.logOutputEncoding</code> dans le fichier <code>.git/config</code>, comme ceci :</p>
+<p>Sauf indication contraire, <code>git log</code>, <code>git show</code>, <code>git blame</code> et consort lisent l&#8217;entête <code>encoding</code> d&#8217;un objet commit et essaient de ré-encoder le message de validation en UTF-8. Vous pouvez spécifier l&#8217;encodage de sortie que vous souhaitez avec <code>i18n.logOutputEncoding</code> dans le fichier <code>.git/config</code>, comme ceci :</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]

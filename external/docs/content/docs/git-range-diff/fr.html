@@ -24,7 +24,8 @@ aliases:
 <div class="verseblock">
 <pre class="content"><em>git range-diff</em> [--color=[&lt;quand&gt;]] [--no-color] [&lt;options-de-diff&gt;]
 	[--no-dual-color] [--creation-factor=&lt;facteur&gt;]
-	[--left-only | --right-only]
+	[--left-only | --right-only] [--diff-merges=&lt;format&gt;]
+	[--remerge-diff]
 	( &lt;plage1&gt; &lt;plage2&gt; | &lt;rev1&gt;&#8230;&#8203;&lt;rev2&gt; | &lt;base&gt; &lt;rev1&gt; &lt;rev2&gt; )
 	[[--] &lt;chemin&gt;&#8230;&#8203;]</pre>
 </div>
@@ -90,13 +91,24 @@ aliases:
 <dd>
 <p>Supprimer les commits qui manquent dans la deuxième plage spécifiée (ou dans la « plage de droite » lors de l&#8217;utilisation du format <code>&lt;rév1&gt;...&lt;rév2&gt;</code>).</p>
 </dd>
+<dt class="hdlist1" id="git-range-diff---diff-mergesltformatgt"> <a class="anchor" href="#git-range-diff---diff-mergesltformatgt"></a>--diff-merges=&lt;format&gt; </dt>
+<dd>
+<p>Au lieu d&#8217;ignorer les commits de fusion, générer des diffs pour eux à l&#8217;aide de l&#8217;option correspondante <code>--diff-merges=&lt;format&gt;</code> de <a href='{{< relurl "docs/git-log/fr" >}}'>git-log[1]</a> et les inclure dans la comparaison.</p>
+<div class="paragraph">
+<p>Note: In the common case, the <code>remerge</code> mode will be the most natural one to use, as it shows only the diff on top of what Git&#8217;s merge machinery would have produced. In other words, if a merge commit is the result of a non-conflicting <code>git merge</code>, the <code>remerge</code> mode will represent it with an empty diff.</p>
+</div>
+</dd>
+<dt class="hdlist1" id="git-range-diff---remerge-diff"> <a class="anchor" href="#git-range-diff---remerge-diff"></a>--remerge-diff </dt>
+<dd>
+<p>Option de comfort, équivalente à <code>--diff-merges=remerge</code>.</p>
+</dd>
 <dt class="hdlist1" id="git-range-diff---no-notesltrefgt"> <a class="anchor" href="#git-range-diff---no-notesltrefgt"></a>--[no-]notes[=&lt;ref&gt;] </dt>
 <dd>
 <p>Ce drapeau est passé au programme <code>git log</code> (voir <a href='{{< relurl "docs/git-log/fr" >}}'>git-log[1]</a>) qui génère les rustines.</p>
 </dd>
-<dt class="hdlist1" id="git-range-diff-ltplage1gtltplage2gt"> <a class="anchor" href="#git-range-diff-ltplage1gtltplage2gt"></a>&lt;plage1&gt;&lt;plage2&gt; </dt>
+<dt class="hdlist1" id="git-range-diff-ltplage1gtltplage2gt"> <a class="anchor" href="#git-range-diff-ltplage1gtltplage2gt"></a>&lt;plage1&gt; &lt;plage2&gt; </dt>
 <dd>
-<p>Comparer les commits spécifiés par les deux plages, où <code>&lt;plage1 &gt;</code> est considéré comme une version ancienne de <code>&lt;plage2&gt;</code> .</p>
+<p>Comparer les commits spécifiés par les deux plages, où <code>&lt;plage1&gt;</code> est considéré comme une version ancienne de <code>&lt;plage2&gt;</code> .</p>
 </dd>
 <dt class="hdlist1" id="git-range-diff-ltrv1gt82308203ltrv2gt"> <a class="anchor" href="#git-range-diff-ltrv1gt82308203ltrv2gt"></a>&lt;rév1&gt;&#8230;&#8203;&lt;rév2&gt; </dt>
 <dd>
@@ -171,7 +183,7 @@ aliases:
 <p>Dans cet exemple, il y a 3 commits anciens et 3 nouveaux, où le développeur a supprimé le 3<sup>ème</sup>, en ajouté un nouveau avant les deux premiers, et a modifié le message de validation du 2<sup>ème</sup> commit ainsi que son diff.</p>
 </div>
 <div class="paragraph">
-<p>Lorsque la sortie va à un terminal, elle est codée en couleur par défaut, tout comme la sortie <code>git diff' normale. En outre, la première ligne (ajout d'un commit) est verte, la dernière ligne (suppression d'un commit) est rouge, la deuxième ligne (avec une correspondance parfaite) est jaune comme l'en-tête de commit de la sortie de `git show</code>, et la troisième ligne colore l&#8217;ancien commit en rouge, le nouveau en vert et le reste comme l&#8217;en-tête de commit <code>git show</code>.</p>
+<p>Lorsque la sortie va à un terminal, elle est codée en couleur par défaut, tout comme la sortie <code>git diff</code> normale. En outre, la première ligne (ajout d&#8217;un commit) est verte, la dernière ligne (suppression d&#8217;un commit) est rouge, la deuxième ligne (avec une correspondance parfaite) est jaune comme l&#8217;en-tête de commit de la sortie de <code>git show</code>, et la troisième ligne colore l&#8217;ancien commit en rouge, le nouveau en vert et le reste comme l&#8217;en-tête de commit <code>git show</code>.</p>
 </div>
 <div class="paragraph">
 <p>Une diff naïve de diffs codée en couleur est en fait un peu difficile à lire, cependant, car elle colorie l&#8217;ensemble des lignes rouges ou vertes. La ligne qui a ajouté "Ce qui est inattendu" dans l&#8217;ancien commit, par exemple, est complètement rouge, même si l&#8217;intention de l&#8217;ancien commit était d&#8217;ajouter quelque chose.</p>

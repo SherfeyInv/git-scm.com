@@ -593,12 +593,12 @@ git rebase master sujet</pre>
 <dt class="hdlist1" id="git-rebase---autosquash"> <a class="anchor" href="#git-rebase---autosquash"></a>--autosquash </dt>
 <dt class="hdlist1" id="git-rebase---no-autosquash"> <a class="anchor" href="#git-rebase---no-autosquash"></a>--no-autosquash </dt>
 <dd>
-<p>Écrase automatiquement les commits avec des messages spécialement formatés dans les commits précédents en cours de rebasage. Si un message de commit commence par "squash!", "fixup!" ou "amend!", le reste de la ligne de sujet est pris comme spécificateur de commit, qui correspond à un commit précédent si il correspond à la ligne de sujet ou l&#8217;empreinte de ce commit. Si aucun commit ne correspond exactement, les correspondances du spécificateur avec le début des sujets de commit sont envisagées.</p>
+<p>Écrase automatiquement les commits avec des messages spécialement formatés dans les commits précédents en cours de rebasage. Si un message de commit commence par "squash!", "fixup!" ou "amend!", le reste du titre est pris comme spécificateur de commit, qui correspond à un commit précédent si il correspond au titre ou à l&#8217;empreinte de ce commit. Si aucun commit ne correspond exactement, les correspondances du spécificateur avec le début des titres de commit sont envisagées.</p>
 <div class="paragraph">
 <p>Dans la liste des à faire de rebase, les actions d&#8217;écrasement, de correction et de modification des commits sont changées de <code>pick</code> à <code>squash</code>, <code>fixup</code> ou <code>fixup -C</code>, respectivement, et elles sont déplacés juste après le commit ils modifient. L&#8217;option <code>--interactive</code> peut être utilisée pour examiner et modifier la liste à faire avant de procéder.</p>
 </div>
 <div class="paragraph">
-<p>La façon recommandée de créer des commits avec des marqueurs d&#8217;écrasement est d&#8217;utiliser les options <code>--squash</code>, <code>--fixup</code>, <code>--fixup=amend:</code> ou <code>--fixup=reword:</code> de <a href='{{< relurl "docs/git-commit/fr" >}}'>git-commit[1]</a>, qui prennent le commit cible comme argument et remplissent automatiquement la ligne de sujet du nouveau commit à partir de cela.</p>
+<p>La façon recommandée de créer des commits avec des marqueurs d&#8217;écrasement est d&#8217;utiliser les options <code>--squash</code>, <code>--fixup</code>, <code>--fixup=amend:</code> ou <code>--fixup=reword:</code> de <a href='{{< relurl "docs/git-commit/fr" >}}'>git-commit[1]</a>, qui prennent le commit cible comme argument et remplissent automatiquement le titre du nouveau commit à partir de cela.</p>
 </div>
 <div class="paragraph">
 <p>Définir la variable de configuration <code>rebase.autoSquash</code> à true permet l&#8217;application d&#8217;autosquash par défaut pour le rebasage interactif. L&#8217;option <code>--no-autosquash</code> peut être utilisée pour remplacer ce réglage.</p>
@@ -748,7 +748,7 @@ git rebase master sujet</pre>
 <div class="sect2">
 <h3 id="_contexte"><a class="anchor" href="#_contexte"></a>Contexte</h3>
 <div class="paragraph">
-<p>Le backend <em>apply</em> fonctionne en créant une séquence de rustines (en appelant <code>format-patch</code> en interne), puis en appliquant les rustines en séquence (en appelant <code>am`en interne). Les rustines sont composées de plusieurs sections, chacune avec des numéros de ligne, une région de contexte et les changements réels. Les numéros de ligne doivent être pris avec un certain décalage, puisque l'autre côté aura probablement inséré ou supprimé des lignes plus haut dans le fichier. La région de contexte est destinée à aider à trouver comment ajuster les numéros de ligne afin d'appliquer les changements aux bonnes lignes. Cependant, si plusieurs zones du code ont les mêmes lignes de contexte, le mauvais peut être choisi. Il y a des cas réels où cela a causé la réapplication incorrecte de commits sans conflit signalé. Régler`diff.context</code> à une valeur plus grande peut éliminer ce type de problèmes, mais augmente les probabilités de conflits (puisque plus de lignes de contexte en correspondance seront nécessaires pour valider l&#8217;application de la rustine).</p>
+<p>Le backend <em>apply</em> fonctionne en créant une séquence de rustines (en appelant <code>format-patch</code> en interne), puis en appliquant les rustines en séquence (en appelant <code>am</code> en interne). Les rustines sont composées de plusieurs sections, chacune avec des numéros de ligne, une région de contexte et les changements réels. Les numéros de ligne doivent être pris avec un certain décalage, puisque l&#8217;autre côté aura probablement inséré ou supprimé des lignes plus haut dans le fichier. La région de contexte est destinée à aider à trouver comment ajuster les numéros de ligne afin d&#8217;appliquer les changements aux bonnes lignes. Cependant, si plusieurs zones du code ont les mêmes lignes de contexte, le mauvais peut être choisi. Il y a des cas réels où cela a causé la réapplication incorrecte de commits sans conflit signalé. Régler <code>diff.context</code> à une valeur plus grande peut éliminer ce type de problèmes, mais augmente les probabilités de conflits (puisque plus de lignes de contexte en correspondance seront nécessaires pour valider l&#8217;application de la rustine).</p>
 </div>
 <div class="paragraph">
 <p>Le backend <em>merge</em> fonctionne avec une copie complète de chaque fichier pertinent, l&#8217;isolant de ces types de problèmes.</p>
@@ -851,7 +851,7 @@ git rebase master sujet</pre>
 </dd>
 <dt class="hdlist1" id="git-rebase-renormalize"> <a class="anchor" href="#git-rebase-renormalize"></a>renormalize </dt>
 <dd>
-<p>Il s&#8217;agit d&#8217;une extraction et d&#8217;un validation virtuelle des trois étapes d&#8217;un fichier lors de la résolution d&#8217;une fusion à trois points. Cette option est destinée à être utilisée lors de la fusion de branches avec différents filtres clean ou règles de normalisation de fin de ligne. Voir "Fusion de branches avec différents attributs de validation/extraction" dans <a href='{{< relurl "docs/gitattributes/fr" >}}'>gitattributes[5]</a> pour plus de détails.</p>
+<p>Il s&#8217;agit d&#8217;une extraction et d&#8217;un validation virtuelle des trois étapes de tout fichier qui nécessite une fusion à trois points. Cette option est destinée à être utilisée lors de la fusion de branches avec différents filtres clean ou règles de normalisation de fin de ligne. Voir "Fusion de branches avec différents attributs de validation/extraction" dans <a href='{{< relurl "docs/gitattributes/fr" >}}'>gitattributes[5]</a> pour plus de détails.</p>
 </dd>
 <dt class="hdlist1" id="git-rebase-no-renormalize"> <a class="anchor" href="#git-rebase-no-renormalize"></a>no-renormalize </dt>
 <dd>
@@ -1394,7 +1394,7 @@ merge cmake</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/rebase.txt</code></p>
+<p>Missing <code>fr/config/rebase.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -1411,7 +1411,7 @@ merge cmake</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/sequencer.txt</code></p>
+<p>Missing <code>fr/config/sequencer.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

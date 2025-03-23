@@ -356,7 +356,7 @@ aliases:
 <p>Git 支持 ssh，git，http 和 https 协议（此外，可以使用 ftp 和 ftps 进行抓取，但这效率低下且不建议使用；请勿使用）。</p>
 </div>
 <div class="paragraph">
-<p>本地传输（即 git:// URL）不进行身份验证，在不安全的网络上应谨慎使用。</p>
+<p>本地传输（即 <code>git://</code> 地址）不进行身份验证，在不安全的网络上应谨慎使用。</p>
 </div>
 <div class="paragraph">
 <p>以下是上述几个传输协议的格式：</p>
@@ -364,16 +364,16 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p>ssh://[user@]host.xz[:port]/path/to/repo.git/</p>
+<p><code>ssh://[&lt;user&gt;@]&lt;host&gt;[:&lt;port&gt;]/&lt;path-to-git-repo&gt;</code></p>
 </li>
 <li>
-<p>git://host.xz[:port]/path/to/repo.git/</p>
+<p><code>git://&lt;主机地址&gt;[:&lt;端口&gt;]/&lt;Git 仓库路径&gt;</code></p>
 </li>
 <li>
-<p>http[s]://host.xz[:port]/path/to/repo.git/</p>
+<p><code>http[s]://&lt;主机地址&gt;[:&lt;端口&gt;]/&lt;Git 仓库路径&gt;</code></p>
 </li>
 <li>
-<p>ftp[s]://host.xz[:port]/path/to/repo.git/</p>
+<p><code>ftp[s]://&lt;主机地址&gt;[:&lt;端口&gt;]/&lt;Git 仓库路径&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -383,7 +383,7 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p>[user@]host.xz:path/to/repo.git/</p>
+<p><code>[&lt;用户名&gt;@]&lt;主机地址&gt;:/&lt;Git 仓库路径&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -391,18 +391,18 @@ aliases:
 <p>仅当第一个冒号之前没有斜杠时才能识别此语法。这有助于区分包含冒号的本地路径。例如，可以将本地路径 <code>foo:bar</code> 指定为绝对路径，或者将 <code>./foo:bar</code> 指定为绝对路径，以避免被误识别为 ssh url。</p>
 </div>
 <div class="paragraph">
-<p>ssh 和 git 协议还支持 ~username 扩展：</p>
+<p>ssh 和 git 协议还支持 <code>~&lt;用户名&gt;</code> 扩展：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ssh://[user@]host.xz[:port]/~[user]/path/to/repo.git/</p>
+<p><code>ssh://[&lt;user&gt;@]&lt;host&gt;[:&lt;port&gt;]/~&lt;user&gt;/&lt;path-to-git-repo&gt;</code></p>
 </li>
 <li>
-<p>git://host.xz[:port]/~[user]/path/to/repo.git/</p>
+<p><code>git://&lt;主机地址&gt;[:&lt;端口&gt;]/~&lt;用户名&gt;/&lt;Git 仓库路径&gt;</code></p>
 </li>
 <li>
-<p>[user@]host.xz:/~[user]/path/to/repo.git/</p>
+<p><code>[&lt;用户名&gt;@]&lt;主机地址&gt;:~&lt;用户名&gt;/&lt;Git 仓库路径&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -412,40 +412,38 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p>/path/to/repo.git/</p>
+<p><code>/path/to/repo.git/</code></p>
 </li>
 <li>
-<p>file:///path/to/repo.git/</p>
+<p><code>file:///path/to/repo.git/</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>这两种语法几乎是等效的，除了在克隆时，前者暗含 --local 选项。有关详细信息，请参阅 <a href='{{< relurl "docs/git-clone/zh_HANS-CN" >}}'>git-clone[1]</a>。</p>
+<p>这两种语法几乎是等效的，除了在克隆时，前者隐含使用了 <code>--local</code> 选项。有关详细信息，请参阅 <a href='{{< relurl "docs/git-clone/zh_HANS-CN" >}}'>git-clone[1]</a>。</p>
 </div>
 <div class="paragraph">
-<p><em>git clone</em>、<em>git fetch</em> 和 <em>git pull</em>（但不包括 <em>git push</em>）也会接受合适的捆绑包文件。参见 <a href='{{< relurl "docs/git-bundle/zh_HANS-CN" >}}'>git-bundle[1]</a>。</p>
+<p><code>git clone</code>、<code>git fetch</code> 和 <code>git pull</code>（但不包括 <code>git push</code>）也会接受合适的捆绑包文件。参见 <a href='{{< relurl "docs/git-bundle/zh_HANS-CN" >}}'>git-bundle[1]</a>。</p>
 </div>
 <div class="paragraph">
-<p>当 Git 不知道如何处理某种传输协议时，它会尝试使用 <em>remote-&lt;传输方式&gt;</em> 远程帮助程序（如果存在）。要显式请求远程帮助程序，可以使用以下语法：</p>
+<p>当 Git 不知道如何处理某种传输协议时，它会尝试使用 <code>remote-&lt;传输方式&gt;</code> 远程帮助程序（如果存在）。要显式请求远程帮助程序，可以使用以下语法：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>&lt;传送&gt;::&lt;地址&gt;</p>
+<p><code>&lt;传送&gt;::&lt;地址&gt;</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>其中，&lt;地址&gt; 可以是路径，服务器与路径，也可以是可被调用的特定远程帮助程序识别的类似于网页地址的任意字符串。有关详细信息，请参阅 <a href='{{< relurl "docs/gitremote-helpers/zh_HANS-CN" >}}'>gitremote-helpers[7]</a>。</p>
+<p>其中，<em>&lt;地址&gt;</em> 可以是路径，服务器与路径，也可以是可被调用的特定远程帮助程序识别的类似于网页地址的任意字符串。有关详细信息，请参阅 <a href='{{< relurl "docs/gitremote-helpers/zh_HANS-CN" >}}'>gitremote-helpers[7]</a>。</p>
 </div>
 <div class="paragraph">
 <p>如果存在大量类似名称的远程仓库，并且您要为其使用不同的格式（这样，您使用的地址将被重写为有效的地址），则可以创建以下形式的配置：</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>	[url "&lt;实际基础网址&gt;"]
-		insteadOf = &lt;其他基础网址&gt;</pre>
-</div>
+<div class="verseblock">
+<pre class="content">	[url "<em>&lt;实际基础网址&gt;</em>"]
+		insteadOf = <em>&lt;其他基础网址&gt;</em></pre>
 </div>
 <div class="paragraph">
 <p>例如，有如下：</p>
@@ -463,11 +461,9 @@ aliases:
 <div class="paragraph">
 <p>如果要重写仅用于推送的地址，可以创建表单的配置部分：</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>	[url "&lt;实际基础网址&gt;"]
-		pushInsteadOf = &lt;其他基础网址&gt;</pre>
-</div>
+<div class="verseblock">
+<pre class="content">	[url <em>&lt;实际基础网址&gt;</em>"]
+		pushInsteadOf = <em>&lt;其他基础网址&gt;</em></pre>
 </div>
 <div class="paragraph">
 <p>例如，有如下：</p>
@@ -842,7 +838,7 @@ $ git log FETCH_HEAD</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>zh_HANS-CN/config/fetch.txt</code></p>
+<p>Missing <code>zh_HANS-CN/config/fetch.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

@@ -121,17 +121,17 @@ Signed-off-by: Bob &lt;bob@exemple.com&gt;</pre>
 <dt class="hdlist1" id="git-interpret-trailers---whereltplacementgt"> <a class="anchor" href="#git-interpret-trailers---whereltplacementgt"></a>--where &lt;placement&gt; </dt>
 <dt class="hdlist1" id="git-interpret-trailers---no-where"> <a class="anchor" href="#git-interpret-trailers---no-where"></a>--no-where </dt>
 <dd>
-<p>Préciser où toutes les nouvelles lignes terminales seront ajoutées. Un paramètre fourni avec <em>--where</em> a précédence sur la variable de configuration <code>trailer.where</code> et toute autre <code>trailer.&lt;alias-de-clé&gt;.where`et s'applique à toutes les options '--trailer' jusqu'à la prochaine occurrence de '--where' ou '--no-where'. La présence du `--no-where`réinitialise l'effet de toute utilisation antérieure de `--where</code>, de sorte que les variables de configuration pertinentes ne sont plus outrepassées. Les placements possibles sont <code>after</code>, <code>before</code>, <code>end</code> ou <code>start</code>.</p>
+<p>Préciser où toutes les nouvelles lignes terminales seront ajoutées. Un paramètre fourni avec <em>--where</em> a précédence sur la variable de configuration <code>trailer.where</code> et toute autre <code>trailer.&lt;alias-de-clé&gt;.where</code> et s&#8217;applique à toutes les options <em>--trailer</em> jusqu&#8217;à la prochaine occurrence de <em>--where</em> ou <em>--no-where</em>. La présence du <code>--no-where`réinitialise l'effet de toute utilisation antérieure de `--where</code>, de sorte que les variables de configuration pertinentes ne sont plus outrepassées. Les placements possibles sont <code>after</code>, <code>before</code>, <code>end</code> ou <code>start</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-interpret-trailers---if-existsltactiongt"> <a class="anchor" href="#git-interpret-trailers---if-existsltactiongt"></a>--if-exists &lt;action&gt; </dt>
 <dt class="hdlist1" id="git-interpret-trailers---no-if-exists"> <a class="anchor" href="#git-interpret-trailers---no-if-exists"></a>--no-if-exists </dt>
 <dd>
-<p>Spécifier l&#8217;action qui sera exécutée lorsqu&#8217;il y a déjà au moins une ligne terminale avec la même &lt;clé&gt; dans l&#8217;entrée. Un paramètre fourni avec "--if-exists" surcharge les variables de configuration <code>trailer.ifExists`et toute autre `trailer.&lt;alias-de-clé&gt;.ifExists`et s'applique à toutes les options '---trailer' jusqu'à la prochaine occurrence de '--if-exists' ou '-no-if-exists'. L'occurrence de `--no-if-exists</code> réinitialise l&#8217;effet de toute utilisation antérieure <code>--if-exist</code>, de sorte que les variables de configurations pertinentes ne sont plus surchargées. Les actions possibles sont <code>addIfDifferent</code>, <code>addIfDifferentNeighbor</code>, <code>add</code>, <code>replace</code> et <code>doNothing</code>.</p>
+<p>Spécifier l&#8217;action qui sera exécutée lorsqu&#8217;il y a déjà au moins une ligne terminale avec la même &lt;clé&gt; dans l&#8217;entrée. Un paramètre fourni avec "--if-exists" surcharge les variables de configuration <code>trailer.ifExists`et toute autre `trailer.&lt;alias-de-clé&gt;.ifExists</code> et s&#8217;applique à toutes les options <em>--trailer</em> jusqu&#8217;à la prochaine occurrence de <em>--if-exists</em> ou <em>-no-if-exists</em>. L&#8217;occurrence de <code>--no-if-exists</code> réinitialise l&#8217;effet de toute utilisation antérieure <code>--if-exist</code>, de sorte que les variables de configurations pertinentes ne sont plus surchargées. Les actions possibles sont <code>addIfDifferent</code>, <code>addIfDifferentNeighbor</code>, <code>add</code>, <code>replace</code> et <code>doNothing</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-interpret-trailers---if-missingltactiongt"> <a class="anchor" href="#git-interpret-trailers---if-missingltactiongt"></a>--if-missing &lt;action&gt; </dt>
 <dt class="hdlist1" id="git-interpret-trailers---no-if-missing"> <a class="anchor" href="#git-interpret-trailers---no-if-missing"></a>--no-if-missing </dt>
 <dd>
-<p>Spécifier l&#8217;action qui sera exécutée lorsqu&#8217;il n&#8217;y a pas d&#8217;autre ligne-terminale avec le même &lt;clé&gt; dans l&#8217;entrée. Un paramètre fourni avec "--if-missing" surcharge les variables de configuration <code>trailer.ifMissing`et toute autre `trailer.&lt;alias-de-clé&gt;.ifMissing`et s'applique à toutes les options '---trailer' jusqu'à la prochaine occurrence de '--if-missing' ou '-no-if-missing'. L'occurrence de `--no-if-missing</code> réinitialise l&#8217;effet de toute utilisation antérieure <code>--if-missing</code>, de sorte que les variables de configurations pertinentes ne sont plus surchargées. Les actions possibles sont <code>doNothing</code> ou <code>add</code>.</p>
+<p>Spécifier l&#8217;action qui sera exécutée lorsqu&#8217;il n&#8217;y a pas d&#8217;autre ligne-terminale avec le même &lt;clé&gt; dans l&#8217;entrée. Un paramètre fourni avec <code>--if-missing</code> surcharge les variables de configuration <code>trailer.ifMissing</code> et toute autre <code>trailer.&lt;alias-de-clé&gt;.ifMissing</code> et s&#8217;applique à toutes les options <code>--trailer</code> jusqu&#8217;à la prochaine occurrence de <code>--if-missing</code> ou <code>--no-if-missing</code>. L&#8217;occurrence de <code>--no-if-missing</code> réinitialise l&#8217;effet de toute utilisation antérieure de <code>--if-missing</code>, de sorte que les variables de configurations pertinentes ne sont plus surchargées. Les actions possibles sont <code>doNothing</code> ou <code>add</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-interpret-trailers---only-trailers"> <a class="anchor" href="#git-interpret-trailers---only-trailers"></a>--only-trailers </dt>
 <dd>
@@ -160,115 +160,25 @@ Signed-off-by: Bob &lt;bob@exemple.com&gt;</pre>
 <div class="sect1">
 <h2 id="_variables_de_configuration"><a class="anchor" href="#_variables_de_configuration"></a>VARIABLES DE CONFIGURATION</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1" id="git-interpret-trailers-trailerseparators"> <a class="anchor" href="#git-interpret-trailers-trailerseparators"></a>trailer.separators </dt>
-<dd>
-<p>Cette option indique quels caractères sont reconnus comme séparateurs de ligne terminale. Par défaut seul <em>:</em> est reconnu comme un séparateur de ligne terminale, à part <em>=</em> qui est toujours accepté sur la ligne de commande pour compatibilité avec les autres commandes git.</p>
 <div class="paragraph">
-<p>Le premier caractère donné par cette option sera le caractère par défaut utilisé lorsqu&#8217;un autre séparateur n&#8217;est pas spécifié dans la configuration de cette ligne terminale.</p>
+<p>Tout ce qui se trouve en dessous de cette ligne dans cette section est inclus de manière sélective à partir de la documentation <a href='{{< relurl "docs/git-config/fr" >}}'>git-config[1]</a>. Le contenu est le même que celui qui s&#8217;y trouve :</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Missing <code>fr/config/trailer.adoc</code></p>
 </div>
 <div class="paragraph">
-<p>Par exemple, si la valeur de cette option est "%=$", alors seulement les lignes utilisant le format <em>&lt;clé&gt;&lt;sep&gt;&lt;valeur&gt;</em> contenant <em>%</em>, <em>=</em> ou <em>$</em> suivis d&#8217;espaces seront considérées comme des lignes terminales. Et <em>%</em> sera le séparateur par défaut utilisé, donc par les lignes terminales par défaut ressembleront à : <em>&lt;clé&gt;% &lt;valeur&gt;</em> (un signe pourcent et un espace apparaîtront entre la clé et la valeur).</p>
+<p>See original version for this content.</p>
 </div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerwhere"> <a class="anchor" href="#git-interpret-trailers-trailerwhere"></a>trailer.where </dt>
-<dd>
-<p>Cette option indique où une nouvelle ligne terminale sera ajoutée.</p>
-<div class="paragraph">
-<p>Les choix sont <code>end</code>(fin), par défaut, ou <code>start</code>(début), <code>after</code>(après) ou <code>before</code> (avant).</p>
-</div>
-<div class="paragraph">
-<p>S&#8217;il s&#8217;agit de <code>end</code> , chaque nouvelle ligne terminale apparaîtra à la fin des lignes terminales existantes.</p>
-</div>
-<div class="paragraph">
-<p>S&#8217;il s&#8217;agit de <code>start</code> , chaque nouvelle ligne terminale apparaîtra au début, au lieu de la fin, des lignes terminales.</p>
-</div>
-<div class="paragraph">
-<p>Si c&#8217;est <code>after</code>, chaque nouvelle ligne terminale apparaîtra juste après la dernière ligne terminale avec la même &lt;clé&gt;.</p>
-</div>
-<div class="paragraph">
-<p>Si c&#8217;est <code>before</code>, chaque nouvelle ligne terminale apparaîtra juste avant la première ligne terminale avec la même &lt;clé&gt;.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerifexists"> <a class="anchor" href="#git-interpret-trailers-trailerifexists"></a>trailer.ifexists </dt>
-<dd>
-<p>Cette option permet de choisir l&#8217;action qui sera exécutée lorsqu&#8217;il y a déjà au moins une ligne terminale avec la même &lt;clé&gt; dans l&#8217;entrée.</p>
-<div class="paragraph">
-<p>Les valeurs valables pour cette option sont : <code>addIfDifferentNeighbor</code> (par défaut), <code>addIfDifferent</code>, <code>add</code>, <code>replace</code> ou <code>doNothing</code>.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>addIfDifferentNeighbor</code>, une nouvelle ligne terminale ne sera ajoutée que si aucune ligne terminale avec la même paire (&lt;clé&gt;, &lt;valeur&gt;) n&#8217;est au-dessus ou en dessous de la ligne où la nouvelle ligne terminale sera ajoutée.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>addIfDifferent</code>, une nouvelle ligne terminale ne sera ajoutée que si aucune ligne terminale avec la même paire (&lt;clé&gt;, &lt;valeur&gt;) n&#8217;est déjà dans l&#8217;entrée.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>add</code>, une nouvelle ligne terminale sera ajoutée, même si certaines lignes terminales avec la même paire (&lt;clé&gt;, &lt;valeur&gt;) sont déjà présentes dans l&#8217;entrée.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>replace</code>, une ligne terminale existante avec la même &lt;clé&gt; sera supprimée et la nouvelle ligne terminale sera ajoutée. La ligne terminale supprimée sera la plus proche (avec la même &lt;clé&gt;) de l&#8217;endroit où la nouvelle sera ajoutée.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>doNothing</code>, rien ne sera fait ; c&#8217;est-à-dire qu&#8217;aucune nouvelle ligne terminale ne sera ajoutée s&#8217;il y en a déjà une avec la même &lt;clé&gt; dans l&#8217;entrée.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerifmissing"> <a class="anchor" href="#git-interpret-trailers-trailerifmissing"></a>trailer.ifmissing </dt>
-<dd>
-<p>Cette option permet de choisir l&#8217;action qui sera exécutée lorsqu&#8217;il n&#8217;y a pas encore de ligne terminale avec la même &lt;clé&gt; dans l&#8217;entrée.</p>
-<div class="paragraph">
-<p>Les valeurs valides pour cette option sont : <code>add</code> (par défaut) et <code>doNothing</code>.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>add</code>, une nouvelle ligne terminale sera ajoutée.</p>
-</div>
-<div class="paragraph">
-<p>Avec <code>doNothing</code>, rien ne sera fait.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltalias-de-clgtkey"> <a class="anchor" href="#git-interpret-trailers-trailerltalias-de-clgtkey"></a>trailer.&lt;alias-de-clé&gt;.key </dt>
-<dd>
-<p>Définit un &lt;alias-de-clé&gt; pour la &lt;clé&gt;. L'&lt;alias-de-clé&gt; doit être une chaîne commençant (la casse n&#8217;a pas d&#8217;importance) la &lt;clé&gt;. Par exemple, dans <code>git config trailer.ack.key "Acked-by"', "Acked-by" est la clé et "ack" est l'&lt;alias-de-clé&gt;. Cette configuration permet l'invocation raccourcie `--trailer "ack:..."</code> sur la ligne de commande en utilisant l'&lt;alias-de-clé&gt; "ack" au lieu du plus long <code>--trailer "Acked-by:..."</code>.</p>
-<div class="paragraph">
-<p>A la fin de la &lt;clé&gt;, un séparateur peut apparaître et puis quelques caractères d&#8217;espace. Par défaut, le seul séparateur valide est <em>:</em>, mais cela peut être changé en utilisant la variable de configuration <code>trailer.separators</code>.</p>
-</div>
-<div class="paragraph">
-<p>S&#8217;il y a un séparateur dans la clé alors il surchargera le séparateur par défaut lors de l&#8217;ajout de la ligne terminale.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltalias-de-clgtwhere"> <a class="anchor" href="#git-interpret-trailers-trailerltalias-de-clgtwhere"></a>trailer.&lt;alias-de-clé&gt;.where </dt>
-<dd>
-<p>Cette option prend les mêmes valeurs que la variable de configuration <em>trailer.where</em> et elle annule ce qui est spécifié par cette option pour les lignes terminales avec la &lt;clé&gt; spécifiée.</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltalias-de-clgtifexists"> <a class="anchor" href="#git-interpret-trailers-trailerltalias-de-clgtifexists"></a>trailer.&lt;alias-de-clé&gt;.ifexists </dt>
-<dd>
-<p>Cette option prend les mêmes valeurs que la variable de configuration <em>trailer.ifexists</em> et elle annule ce qui est spécifié par cette option pour les lignes terminales avec la &lt;clé&gt; spécifiée.</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltalias-de-clgtifmissing"> <a class="anchor" href="#git-interpret-trailers-trailerltalias-de-clgtifmissing"></a>trailer.&lt;alias-de-clé&gt;.ifmissing </dt>
-<dd>
-<p>Cette option prend les mêmes valeurs que la variable de configuration <em>trailer.ifmissing</em> et elle annule ce qui est spécifié par cette option pour les lignes terminales avec la &lt;clé&gt; spécifiée.</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltalias-de-clgtcommand"> <a class="anchor" href="#git-interpret-trailers-trailerltalias-de-clgtcommand"></a>trailer.&lt;alias-de-clé&gt;.command </dt>
-<dd>
-<p>Option obsolète en faveur de <em>trailer.&lt;alias-de-clé&gt;.cmd</em>. Cette option se comporte de la même manière que <em>trailer.&lt;alias-de-clé&gt;.cmd</em>, sauf qu&#8217;elle ne passe rien comme argument à la commande spécifiée. Au lieu de cela, la première occurrence de sous-chaîne $ARG est remplacée par la &lt;valeur&gt; qui serait transmise comme argument.</p>
-<div class="paragraph">
-<p>Notez que $ARG dans la commande de l&#8217;utilisateur n&#8217;est remplacé qu&#8217;une fois et que la façon originale de remplacer $ARG n&#8217;est pas sûre.</p>
-</div>
-<div class="paragraph">
-<p>Quand à la fois <em>trailer.&lt;alias-de-clé&gt;.cmd</em> et <em>trailer.&lt;alias-de-clé&gt;.command</em> sont donnés pour la même &lt;clé&gt;, <em>trailer.&lt;alias-de-clé&gt;.cmd</em> est utilisée et <em>trailer.&lt;alias-de-clé&gt;.command</em> est ignorée.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltalias-de-clgtcmd"> <a class="anchor" href="#git-interpret-trailers-trailerltalias-de-clgtcmd"></a>trailer.&lt;alias-de-clé&gt;.cmd </dt>
-<dd>
-<p>Cette option peut être utilisée pour spécifier une commande shell qui sera appelée : une fois pour ajouter automatiquement une ligne terminale avec l'&lt;alias-de-clé&gt; spécifié, puis appelée pour chaque fois qu&#8217;un argument <em>--trailer &lt;alias-de-clé&gt;=&lt;valeur&gt;</em> apparaît pour modifier la valeur de la ligne terminale que cette option produirait.</p>
-<div class="paragraph">
-<p>Lorsque la commande spécifiée est d&#8217;abord appelée pour ajouter une ligne terminale avec l'&lt;alias-de-clé&gt; spécifié, le comportement est comme si un argument spécial <em>--trailer &lt;alias-de-clé&gt;=&lt;valeur&gt;</em> avait été ajouté au début de la commande "git interpret-trailers", où la &lt;valeur&gt; obtenue sera la sortie standard de la commande nettoyée des espaces blancs de début et de fin.</p>
-</div>
-<div class="paragraph">
-<p>Si certains arguments <em>---trailer &lt;alias-de-clé&gt;=&lt;valeur&gt;</em> sont également passés sur la ligne de commande, la commande est de nouveau appelée pour chacun de ces arguments avec le même &lt;alias-de-clé&gt;. Et la partie &lt;valeur&gt; de ces arguments, le cas échéant, sera transmise à la commande comme son premier argument. De cette façon, la commande peut produire une &lt;valeur&gt; calculée à partir de l&#8217;argument <em>--trailer &lt;alias-de-clé&gt;=&lt;valeur&gt;</em>.</p>
-</div>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

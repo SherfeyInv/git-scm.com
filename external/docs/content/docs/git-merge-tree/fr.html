@@ -68,6 +68,10 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1" id="git-merge-tree---stdin"> <a class="anchor" href="#git-merge-tree---stdin"></a>--stdin </dt>
+<dd>
+<p>Lire les commits à fusionner à partir de l&#8217;entrée standard plutôt que sur la ligne de commande. Voir <a href="#INPUT">FORMAT D&#8217;ENTRÉE</a> ci-dessous pour plus d&#8217;informations. Implique <code>-z</code>.</p>
+</dd>
 <dt class="hdlist1" id="git-merge-tree--z"> <a class="anchor" href="#git-merge-tree--z"></a>-z </dt>
 <dd>
 <p>Ne pas citer les noms de fichiers dans la section &lt;information de fichiers en conflit&gt;, et terminer chaque nom de fichier avec un caractère NUL plutôt qu&#8217;un retour à la ligne. Commencer également la section des messages avec un caractère NUL au lieu d&#8217;une nouvelle ligne. Voir <a href="#OUTPUT">SORTIE</a> ci-dessous pour plus d&#8217;informations.</p>
@@ -146,10 +150,8 @@ NUL</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>    0 : la fusion avait des conflits
-    1 : la fusion était propre
-    &lt;0 : quelque chose a empêché la fusion de fonctionner (p. ex. accès au dépôt
-objets empêché par le système de fichiers)</pre>
+<pre>0 : la fusion avait des conflits
+1 : la fusion était propre</pre>
 </div>
 </div>
 </div>
@@ -294,7 +296,7 @@ git update-ref $BRANCH1 $NEWCOMMIT</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_format_dentrée"><a class="anchor" href="#_format_dentrée"></a>FORMAT D&#8217;ENTRÉE</h2>
+<h2 id="INPUT"><a class="anchor" href="#INPUT"></a>FORMAT D&#8217;ENTRÉE</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Le format d&#8217;entrée de <em>git merge-tree --stdin</em> est entièrement textuel. Chaque ligne a ce format :</p>

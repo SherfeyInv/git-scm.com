@@ -369,7 +369,7 @@ $ git log A...B</pre>
 </dd>
 <dt class="hdlist1" id="git-log---cherry"> <a class="anchor" href="#git-log---cherry"></a>--cherry </dt>
 <dd>
-<p>Un synonyme pour <code>--right-only --cherry-mark --no-merges</code> ; utile pour limiter la sortie aux commits de notre côté et marquer ceux qui ont été appliqués de l&#8217;autre côté d&#8217;un historique en fourche avec <code>git log --cherry amont...mabranche', similaire à `git cherry upstream mabranche</code>.</p>
+<p>Un synonyme pour <code>--right-only --cherry-mark --no-merges</code> ; utile pour limiter la sortie aux commits de notre côté et marquer ceux qui ont été appliqués de l&#8217;autre côté d&#8217;un historique en fourche avec <code>git log --cherry amont...mabranche</code>, similaire à <code>git cherry upstream mabranche</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-log--g"> <a class="anchor" href="#git-log--g"></a>-g </dt>
 <dt class="hdlist1" id="git-log---walk-reflogs"> <a class="anchor" href="#git-log---walk-reflogs"></a>--walk-reflogs </dt>
@@ -389,7 +389,7 @@ $ git log A...B</pre>
 <p>Si le point de départ a été spécifié comme <code>ref@{now}</code>, afficher le format de l&#8217;horodatage.</p>
 </li>
 <li>
-<p>Si ni l&#8217;un ni l&#8217;autre n&#8217;a été utilisé, mais que <code>--date' a été donné sur la ligne de commande, afficher l'horodatage dans le format demandé par `--date</code>.</p>
+<p>Si ni l&#8217;un ni l&#8217;autre n&#8217;a été utilisé, mais que <code>--date</code> a été donné sur la ligne de commande, afficher l&#8217;horodatage dans le format demandé par <code>--date</code>.</p>
 </li>
 <li>
 <p>Sinon, afficher le format de l&#8217;index.</p>
@@ -1007,7 +1007,7 @@ $ git log A...B</pre>
 <p><code>--date=unix</code> affiche la date sous forme d&#8217;un horodatage d&#8217;époque Unix (secondes depuis 1970). Comme dans le cas de <code>--raw</code>, c&#8217;est toujours en UTC et donc <code>-local</code> n&#8217;a aucun effet.</p>
 </div>
 <div class="paragraph">
-<p><code>--date=format :...</code> alimente le format <code>...</code> vers <code>strftime</code> de votre système , sauf pour %s, %z et %Z, qui sont gérés en interne. Utilisez <code>--date=format:%c</code> pour afficher la date dans le format préféré de la locale de votre système. Voir le manuel de <code>strftime</code> pour une liste complète des espaces réservés de format. Quand on utilise <code>-local</code>, la syntaxe correcte est <code>--date=format-local :...</code>.</p>
+<p><code>--date=format:...</code> alimente le format <code>...</code> vers <code>strftime</code> de votre système , sauf pour %s, %z et %Z, qui sont gérés en interne. Utilisez <code>--date=format:%c</code> pour afficher la date dans le format préféré de la locale de votre système. Voir le manuel de <code>strftime</code> pour une liste complète des espaces réservés de format. Quand on utilise <code>-local</code>, la syntaxe correcte est <code>--date=format-local:...</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>--date=default</code> est le format par défaut, et est basé sur la sortie de ctime(3). Il affiche une seule ligne avec le jour de la semaine à trois lettres, le mois à trois lettres, le jour du mois, l&#8217;heure, la minute et la seconde au format "HH:MM:SS", suivi de l&#8217;année à 4 chiffres, plus les informations du fuseau horaire, à moins que le fuseau horaire local ne soit utilisé, par exemple <code>Thu Jan 1 00:00:00 1970 +0000</code>.</p>
@@ -1501,10 +1501,10 @@ Par défaut "&#160;<code>-&gt;</code>&#160;".</p>
 <p><em>abbrev=&lt;nombre&gt;</em> : Au lieu d&#8217;utiliser le nombre de chiffres hexadécimaux par défaut (qui varie en fonction du nombre d&#8217;objets dans le dépôt avec une valeur par défaut de 7) du nom d&#8217;objet abrégé, utiliser &lt;nombre&gt; chiffres, ou autant de chiffres que nécessaire pour former un nom unique.</p>
 </li>
 <li>
-<p><em>match=&lt;motif&gt;</em> : Ne considère que les étiquettes correspondant au motif <code>glob(7)</code> donné, à l&#8217;exclusion du préfixe "refs/tags/".</p>
+<p><em>match=&lt;motif&gt;</em> : Ne considère que les étiquettes correspondant au motif <code>glob(7)</code> donné, à l&#8217;exclusion du préfixe "refs/tags/".</p>
 </li>
 <li>
-<p>exclude=&lt;motif&gt;' : Ne pas prendre en compte les étiquettes correspondant au motif <code>glob(7)</code> donné, en excluant le préfixe "refs/tags/".</p>
+<p>exclude=&lt;motif&gt;' : Ne pas prendre en compte les étiquettes correspondant au motif <code>glob(7)</code> donné, en excluant le préfixe "refs/tags/".</p>
 </li>
 </ul>
 </div>
@@ -1640,7 +1640,7 @@ Certains espaces réservés peuvent dépendre d&#8217;autres options données au
 </table>
 </div>
 <div class="paragraph">
-<p>Les options booléennes acceptent une valeur optionnelle <code>[=&lt;booléen&gt;]</code>. Les valeurs <code>true</code>, <code>false</code>, <code>on</code>, <code>off</code> etc. sont toutes acceptées. Voir la sous-section "booléen" dans "EXEMPLES" dans <a href='{{< relurl "docs/git-config/fr" >}}'>git-config[1]</a>. Si une option booléenne est donnée sans valeur, elle est activée.</p>
+<p>Les options booléennes acceptent une valeur optionnelle <code>[=&lt;booléen&gt;]</code>. Les valeurs acceptées par l&#8217;option`--type=bool` de <a href='{{< relurl "docs/git-config/fr" >}}'>git-config[1]</a>, comme <code>yes</code> et`off` sont toutes acceptées. Fournir une option booléenne sans <code>=&lt;valeur&gt;</code> est équivalent à fournir <code>=&lt;true&gt;</code>.</p>
 </div>
 <div class="paragraph">
 <p>Si vous ajoutez un <code>+</code> (signe plus) après'%' d&#8217;un espace réservé, un saut de ligne est inséré immédiatement avant l&#8217;expansion si et seulement si l&#8217;espace réservé se développe en une chaîne non vide.</p>
@@ -2649,7 +2649,7 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>git commit</code> et <code>git commit-tree</code> affichent un avertissement si le message de validation fourni ne semble pas être une chaîne de caractères UTF-8 valide, à moins que vous n&#8217;indiquiez explicitement que votre projet utilise un encodage ancien. La manière de l&#8217;indiquer est d&#8217;avoir <code>i18n.commitEncoding</code> dans <code>.git/config</code>, comme ceci :</p>
+<p><code>git commit</code> et <code>git commit-tree</code> affichent un avertissement si le message de validation fourni ne semble pas être une chaîne de caractères UTF-8 valide, à moins que vous n&#8217;indiquiez explicitement que votre projet utilise un encodage ancien. La manière de l&#8217;indiquer est d&#8217;avoir <code>i18n.commitEncoding</code> dans <code>.git/config</code>, comme ceci :</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]
@@ -2661,7 +2661,7 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
 </div>
 </li>
 <li>
-<p>Sauf indication contraire, <em>git log</em>, <em>git show</em>, <em>git blame</em> et consort lisent l&#8217;entête <code>encoding</code> d&#8217;un objet commit et essaient de ré-encoder le message de validation en UTF-8. Vous pouvez spécifier l&#8217;encodage de sortie que vous souhaitez avec <code>i18n.logOutputEncoding</code> dans le fichier <code>.git/config</code>, comme ceci :</p>
+<p>Sauf indication contraire, <code>git log</code>, <code>git show</code>, <code>git blame</code> et consort lisent l&#8217;entête <code>encoding</code> d&#8217;un objet commit et essaient de ré-encoder le message de validation en UTF-8. Vous pouvez spécifier l&#8217;encodage de sortie que vous souhaitez avec <code>i18n.logOutputEncoding</code> dans le fichier <code>.git/config</code>, comme ceci :</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]
@@ -2708,7 +2708,7 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/log.txt</code></p>
+<p>Missing <code>fr/config/log.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -2725,7 +2725,7 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/notes.txt</code></p>
+<p>Missing <code>fr/config/notes.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

@@ -127,12 +127,12 @@ L&#8217;option <code>--edit</code> (ou <code>-e</code>) est toujours utile si vo
 <p>Avec --no-log, ne pas indiquer les descriptions d&#8217;une ligne des commits réels qui sont fusionnés.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-merge---signoff"> <a class="anchor" href="#git-merge---signoff"></a>--signoff </dt>
-<dt class="hdlist1" id="git-merge---no-signoff"> <a class="anchor" href="#git-merge---no-signoff"></a>--no-signoff </dt>
+<dt class="hdlist1" id="git-merge-code--signoffcode"> <a class="anchor" href="#git-merge-code--signoffcode"></a><code>--signoff</code> </dt>
+<dt class="hdlist1" id="git-merge-code--no-signoffcode"> <a class="anchor" href="#git-merge-code--no-signoffcode"></a><code>--no-signoff</code> </dt>
 <dd>
 <p>Ajouter une ligne finale <code>Signed-off-by</code> du validateur à la fin du message de validation. La signification de signoff dépend du projet sur lequel vous validez. Par exemple, cela peut certifier que le validateur a le droit de soumettre son travail sous la licence du projet ou accepte une certaine représentation du contributeur, tel qu&#8217;un Certificat d&#8217;Origine de Développeur. (Voir <a href="https://developercertificate.org/" class="bare">https://developercertificate.org/</a> pour celui utilisé par les projet du noyau Linux ou de Git). Consultez la documentation ou la direction du projet auquel vous contribuez pour comprendre comment les signatures sont utilisées dans ce projet.</p>
 <div class="paragraph">
-<p>L&#8217;option --no-signoff peut être utilisée pour contrecarrer une option --signoff précédente sur la ligne de commande.</p>
+<p>L&#8217;option <code>--no-signoff</code> peut être utilisée pour contrecarrer une option <code>--signoff</code> précédente sur la ligne de commande.</p>
 </div>
 </dd>
 </dl>
@@ -435,7 +435,7 @@ Et voici une autre ligne qui est proprement résolue ou non modifiée.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>En plus des marqueurs <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, et <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;, il utilise un autre marqueur `||||||||</code> qui est suivi par le texte original. Vous pouvez voir que l&#8217;original ne faisait qu&#8217;énoncer un fait, et que votre camp a simplement cédé à cette déclaration et a abandonné, tandis que l&#8217;autre camp a essayé d&#8217;avoir une attitude plus positive. Vous pouvez parfois aboutir à une meilleure résolution en regardant l&#8217;original.</p>
+<p>En plus des marqueurs <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, et <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, il utilise un autre marqueur <code>||||||||</code> qui est suivi par le texte original. Vous pouvez voir que l&#8217;original ne faisait qu&#8217;énoncer un fait, et que votre camp a simplement cédé à cette déclaration et a abandonné, tandis que l&#8217;autre camp a essayé d&#8217;avoir une attitude plus positive. Vous pouvez parfois aboutir à une meilleure résolution en regardant l&#8217;original.</p>
 </div>
 </div>
 </div>
@@ -564,7 +564,7 @@ Et voici une autre ligne qui est proprement résolue ou non modifiée.</pre>
 </dd>
 <dt class="hdlist1" id="git-merge-renormalize"> <a class="anchor" href="#git-merge-renormalize"></a>renormalize </dt>
 <dd>
-<p>Il s&#8217;agit d&#8217;une extraction et d&#8217;un validation virtuelle des trois étapes d&#8217;un fichier lors de la résolution d&#8217;une fusion à trois points. Cette option est destinée à être utilisée lors de la fusion de branches avec différents filtres clean ou règles de normalisation de fin de ligne. Voir "Fusion de branches avec différents attributs de validation/extraction" dans <a href='{{< relurl "docs/gitattributes/fr" >}}'>gitattributes[5]</a> pour plus de détails.</p>
+<p>Il s&#8217;agit d&#8217;une extraction et d&#8217;un validation virtuelle des trois étapes de tout fichier qui nécessite une fusion à trois points. Cette option est destinée à être utilisée lors de la fusion de branches avec différents filtres clean ou règles de normalisation de fin de ligne. Voir "Fusion de branches avec différents attributs de validation/extraction" dans <a href='{{< relurl "docs/gitattributes/fr" >}}'>gitattributes[5]</a> pour plus de détails.</p>
 </dd>
 <dt class="hdlist1" id="git-merge-no-renormalize"> <a class="anchor" href="#git-merge-no-renormalize"></a>no-renormalize </dt>
 <dd>
@@ -653,7 +653,7 @@ Et voici une autre ligne qui est proprement résolue ou non modifiée.</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/merge.txt</code></p>
+<p>Missing <code>fr/config/merge.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

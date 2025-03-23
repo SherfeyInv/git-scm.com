@@ -918,6 +918,23 @@ $ git rev-list A...B</pre>
 <p>'--missing=print&#8217;的形式与&#8217;allow-any&#8217;相似，但也会打印出遗失对象的列表。 对象ID的前缀是"？"。</p>
 </div>
 <div class="paragraph">
+<p>The form <em>--missing=print-info</em> is like <em>print</em>, but will also print additional information about the missing object inferred from its containing object. The information is all printed on the same line with the missing object ID in the form: <code>?&lt;oid&gt; [&lt;token&gt;=&lt;value&gt;]...</code>. The <code>&lt;token&gt;=&lt;value&gt;</code> pairs containing additional information are separated from each other by a SP. The value is encoded in a token specific fashion, but SP or LF contained in value are always expected to be represented in such a way that the resulting encoded value does not have either of these two problematic bytes. Each <code>&lt;token&gt;=&lt;value&gt;</code> may be one of the following:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>path=&lt;path&gt;</code> shows the path of the missing object inferred from a containing object. A path containing SP or special characters is enclosed in double-quotes in the C style as needed.</p>
+</li>
+<li>
+<p>The <code>type=&lt;type&gt;</code> shows the type of the missing object inferred from a containing object.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
 <p>如果传递给遍历的一些提示丢失了，它们也将被视为丢失，并且遍历将忽略它们。但是，如果我们无法获取它们的对象 ID，将引发一个错误。</p>
 </div>
 </dd>
@@ -1689,7 +1706,7 @@ Subject: [PATCH] &lt;标题行&gt;</pre>
 </table>
 </div>
 <div class="paragraph">
-<p>布尔选项接受一个可选的值`[=&lt;布尔值&gt;]<code>。`true</code>, <code>false</code>, <code>on</code>, `off`等值都可以接受。参见<a href='{{< relurl "docs/git-config/zh_HANS-CN" >}}'>git-config[1]</a>中 “示例” 的 “布尔” 子章节。如果一个布尔选项没有给出值，它就被启用。</p>
+<p>The boolean options accept an optional value <code>[=&lt;bool-value&gt;]</code>. The values taken by <code>--type=bool</code> git-config[1], like <code>yes</code> and <code>off</code>, are all accepted. Giving a boolean option without <code>=&lt;value&gt;</code> is equivalent to giving it with <code>=true</code>.</p>
 </div>
 <div class="paragraph">
 <p>如果你在占位符的'%<em>后面加了一个`+</em>（加号），当且仅当占位符扩展为一个非空字符串时，在扩展前会立即插入换行符。</p>

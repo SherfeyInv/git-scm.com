@@ -22,11 +22,12 @@ aliases:
 <h2 id="_resumo"><a class="anchor" href="#_resumo"></a>RESUMO</h2>
 <div class="sectionbody">
 <div class="verseblock">
-<pre class="content"><em>git range-diff</em> [--color=[&lt;quando&gt;]] [--no-color] [&lt;diff-options&gt;]
-	[--no-dual-color] [--creation-factor=&lt;fator&gt;]
-	[--left-only | --right-only]
-	( &lt;intervalo1&gt; &lt;intervalo2&gt; | &lt;rev1&gt;&#8230;&#8203;&lt;rev2&gt; | &lt;base&gt; &lt;rev1&gt; &lt;rev2&gt; )
-	[[--] &lt;caminho&gt;&#8230;&#8203;]</pre>
+<pre class="content"><em>git range-diff</em> [--color=[&lt;when&gt;]] [--no-color] [&lt;diff-options&gt;]
+	[--no-dual-color] [--creation-factor=&lt;factor&gt;]
+	[--left-only | --right-only] [--diff-merges=&lt;format&gt;]
+	[--remerge-diff]
+	( &lt;range1&gt; &lt;range2&gt; | &lt;rev1&gt;&#8230;&#8203;&lt;rev2&gt; | &lt;base&gt; &lt;rev1&gt; &lt;rev2&gt; )
+	[[--] &lt;path&gt;&#8230;&#8203;]</pre>
 </div>
 </div>
 </div>
@@ -92,6 +93,17 @@ uma alteração nas linhas exatas que foram adicionadas por exemplo.</p>
 <dt class="hdlist1" id="git-range-diff---right-only"> <a class="anchor" href="#git-range-diff---right-only"></a>--right-only </dt>
 <dd>
 <p>Suprime os commits que estão faltando no segundo intervalo informado (ou o "intervalo direito" ao usar o formato <code>&lt;rev1&gt;...&lt;rev2&gt;</code>).</p>
+</dd>
+<dt class="hdlist1" id="git-range-diff---diff-mergesltformatogt"> <a class="anchor" href="#git-range-diff---diff-mergesltformatogt"></a>--diff-merges=&lt;formato&gt; </dt>
+<dd>
+<p>Instead of ignoring merge commits, generate diffs for them using the corresponding <code>--diff-merges=&lt;format&gt;</code> option of <a href='{{< relurl "docs/git-log/pt_BR" >}}'>git-log[1]</a>, and include them in the comparison.</p>
+<div class="paragraph">
+<p>Note: In the common case, the <code>remerge</code> mode will be the most natural one to use, as it shows only the diff on top of what Git&#8217;s merge machinery would have produced. In other words, if a merge commit is the result of a non-conflicting <code>git merge</code>, the <code>remerge</code> mode will represent it with an empty diff.</p>
+</div>
+</dd>
+<dt class="hdlist1" id="git-range-diff---remerge-diff"> <a class="anchor" href="#git-range-diff---remerge-diff"></a>--remerge-diff </dt>
+<dd>
+<p>Convenience option, equivalent to <code>--diff-merges=remerge</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-range-diff---no-notesltrefgt"> <a class="anchor" href="#git-range-diff---no-notesltrefgt"></a>--[no-]notes[=&lt;ref&gt;] </dt>
 <dd>

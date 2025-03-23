@@ -160,12 +160,12 @@ Seulement utile lors de la fusion.</p>
 <p>Avec --no-log, ne pas indiquer les descriptions d&#8217;une ligne des commits réels qui sont fusionnés.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-pull---signoff"> <a class="anchor" href="#git-pull---signoff"></a>--signoff </dt>
-<dt class="hdlist1" id="git-pull---no-signoff"> <a class="anchor" href="#git-pull---no-signoff"></a>--no-signoff </dt>
+<dt class="hdlist1" id="git-pull-code--signoffcode"> <a class="anchor" href="#git-pull-code--signoffcode"></a><code>--signoff</code> </dt>
+<dt class="hdlist1" id="git-pull-code--no-signoffcode"> <a class="anchor" href="#git-pull-code--no-signoffcode"></a><code>--no-signoff</code> </dt>
 <dd>
 <p>Ajouter une ligne finale <code>Signed-off-by</code> du validateur à la fin du message de validation. La signification de signoff dépend du projet sur lequel vous validez. Par exemple, cela peut certifier que le validateur a le droit de soumettre son travail sous la licence du projet ou accepte une certaine représentation du contributeur, tel qu&#8217;un Certificat d&#8217;Origine de Développeur. (Voir <a href="https://developercertificate.org/" class="bare">https://developercertificate.org/</a> pour celui utilisé par les projet du noyau Linux ou de Git). Consultez la documentation ou la direction du projet auquel vous contribuez pour comprendre comment les signatures sont utilisées dans ce projet.</p>
 <div class="paragraph">
-<p>L&#8217;option --no-signoff peut être utilisée pour contrecarrer une option --signoff précédente sur la ligne de commande.</p>
+<p>L&#8217;option <code>--no-signoff</code> peut être utilisée pour contrecarrer une option <code>--signoff</code> précédente sur la ligne de commande.</p>
 </div>
 </dd>
 </dl>
@@ -347,7 +347,7 @@ C&#8217;est un mode de fonctionnement potentiellement <em>dangereux</em>. Il ré
 <dd>
 <p>Afficher la sortie sur la sortie standard dans un format facile à décrypter pour les scripts. Voir la section SORTIE dans <a href='{{< relurl "docs/git-fetch/fr" >}}'>git-fetch[1]</a> pour plus de détails.</p>
 <div class="paragraph">
-<p>C&#8217;est incompatible avec <code>--recurse-submodules=[yes|on-demand]`et a la priorité sur l'option de configuration `fetch.output</code>.</p>
+<p>C&#8217;est incompatible avec <code>--recurse-submodules=[yes|on-demand]</code> et a la priorité sur l&#8217;option de configuration <code>fetch.output</code>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="git-pull--f"> <a class="anchor" href="#git-pull--f"></a>-f </dt>
@@ -777,7 +777,7 @@ Il y a une différence entre le fait de lister plusieurs &lt;spéc-de-réf&gt; d
 </dd>
 <dt class="hdlist1" id="git-pull-renormalize"> <a class="anchor" href="#git-pull-renormalize"></a>renormalize </dt>
 <dd>
-<p>Il s&#8217;agit d&#8217;une extraction et d&#8217;un validation virtuelle des trois étapes d&#8217;un fichier lors de la résolution d&#8217;une fusion à trois points. Cette option est destinée à être utilisée lors de la fusion de branches avec différents filtres clean ou règles de normalisation de fin de ligne. Voir "Fusion de branches avec différents attributs de validation/extraction" dans <a href='{{< relurl "docs/gitattributes/fr" >}}'>gitattributes[5]</a> pour plus de détails.</p>
+<p>Il s&#8217;agit d&#8217;une extraction et d&#8217;un validation virtuelle des trois étapes de tout fichier qui nécessite une fusion à trois points. Cette option est destinée à être utilisée lors de la fusion de branches avec différents filtres clean ou règles de normalisation de fin de ligne. Voir "Fusion de branches avec différents attributs de validation/extraction" dans <a href='{{< relurl "docs/gitattributes/fr" >}}'>gitattributes[5]</a> pour plus de détails.</p>
 </dd>
 <dt class="hdlist1" id="git-pull-no-renormalize"> <a class="anchor" href="#git-pull-no-renormalize"></a>no-renormalize </dt>
 <dd>
@@ -871,7 +871,7 @@ Il y a une différence entre le fait de lister plusieurs &lt;spéc-de-réf&gt; d
 <p>Si des spécificateurs de référence explicites ont été donnés sur la ligne de commande de <code>git pull</code>, elles sont toutes fusionnées.</p>
 </div>
 <div class="paragraph">
-<p>Lorsqu&#8217;aucun spécificateur de référence n&#8217;a été donné sur la ligne de commande, alors <code>git pull</code> utilise le spécificateur de référence de la configuration ou <code>$GIT_DIR/remotes/&lt;origine&gt;</code>. Dans de tels cas, les règles suivantes s&#8217;appliquent :</p>
+<p>Lorsqu&#8217;aucun spécificateur de référence n&#8217;a été donné sur la ligne de commande, alors <code>git pull</code> utilise le spécificateur de référence de la configuration ou <code>$GIT_DIR/remotes/&lt;origine&gt;</code>. Dans de tels cas, les règles suivantes s&#8217;appliquent :</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">

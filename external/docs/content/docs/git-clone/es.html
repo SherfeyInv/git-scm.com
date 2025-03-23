@@ -21,16 +21,16 @@ aliases:
 <div class="sect1">
 <h2 id="_sinopsis"><a class="anchor" href="#_sinopsis"></a>SINOPSIS</h2>
 <div class="sectionbody">
-<div class="verseblock">
-<pre class="content"><code>git clone</code> [<code>--template=</code><em>&lt;template-directory&gt;</em>]
-	  [<code>-l</code>] [<code>-s</code>] [<code>--no-hardlinks</code>] [<code>-q</code>] [<code>-n</code>] [<code>--bare</code>] [<code>--mirror</code>]
-	  [<code>-o</code> <em>&lt;name&gt;</em>] [<code>-b</code> <em>&lt;name&gt;</em>] [<code>-u</code> <em>&lt;upload-pack&gt;</em>] [<code>--reference</code> <em>&lt;repository&gt;</em>]
-	  [<code>--dissociate</code>] [<code>--separate-git-dir</code> <em>&lt;git-dir&gt;</em>]
-	  [<code>--depth</code> <em>&lt;depth&gt;</em>] [<code>--</code>[<code>no-</code>]<code>single-branch</code>] [<code>--no-tags</code>]
-	  [<code>--recurse-submodules</code>[<code>=</code><em>&lt;pathspec&gt;</em>]] [<code>--</code>[<code>no-</code>]<code>shallow-submodules</code>]
-	  [<code>--</code>[<code>no-</code>]<code>remote-submodules</code>] [<code>--jobs</code> <em>&lt;n&gt;</em>] [<code>--sparse</code>] [<code>--</code>[<code>no-</code>]<code>reject-shallow</code>]
-	  [<code>--filter=</code><em>&lt;filter-spec&gt;</em>] [<code>--also-filter-submodules</code>]] [<code>--</code>] <em>&lt;repository&gt;</em>
-	  [<em>&lt;directory&gt;</em>]</pre>
+<div class="paragraph">
+<p>git clone [--template=&lt;directorio-de-plantilla&gt;]
+	  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
+	  [-o &lt;nombre&gt;] [-b &lt;nombre&gt;] [-u &lt;paquete-de-carga&gt;] [--reference &lt;repositorio&gt;]
+	  [--dissociate] [--separate-git-dir &lt;directorio-git&gt;]
+	  [--depth &lt;profundidad&gt;] [--[no-]single-branch] [--[no-]tags]
+	  [--recurse-submodules[=&lt;especificación-de-ruta&gt;]] [--[no-]shallow-submodules]
+	  [--[no-]remote-submodules] [--jobs &lt;n&gt;] [--sparse] [--[no-]reject-shallow]
+	  [--filter=&lt;especificación-de-filtro&gt;] [--also-filter-submodules]] [--] &lt;repositorio&gt;
+	  [&lt;directorio&gt;]</p>
 </div>
 </div>
 </div>
@@ -58,13 +58,16 @@ aliases:
 <dd>
 <p>Cuando el repositorio a clonar de, esta en un equipo local, esta bandera sobrepasa el mecanismo de transporte normal "consciente de Git" y clona el repositorio haciendo una copia de <code>HEAD</code> y todo bajo los directorios de objetos y referencias. Los ficheros bajo el directorio <code>.git/objects/</code> son vinculados para ahorrar espacio cuando es posible.</p>
 <div class="paragraph">
-<p>Si el repositorio es especificado como una ruta local (ej. <code>/ruta/a/repositorio</code>), este es el predeterminado, y --local es esencialmente una no-operación. Si el repositorio es especificado como una URL, entonces esta bandera es ignorada (y nunca usamos las optimizaciones locales). Especificando <code>--no-local</code> ignorará el predeterminado cuando se proporcione <code>/ruta/a/repositorio</code>, usando en su lugar el transporte regular de Git.</p>
+<p>Si el repositorio es especificado como una ruta local (ej. <code>/ruta/a/repositorio</code>), este es el predeterminado, y <code>--local</code> es esencialmente una no-operación. Si el repositorio es especificado como una URL, entonces esta bandera es ignorada (y nunca usamos las optimizaciones locales). Especificando <code>--no-local</code> ignorará el predeterminado cuando se proporcione <code>/ruta/a/repositorio</code>, usando en su lugar el transporte regular de Git.</p>
 </div>
 <div class="paragraph">
 <p>Si los objetos en el directorio <code>$GIT_DIR/objects</code> del repositorio tienen ligas simbólicas o son ligas simbólicas la clonación fallará. Esta es una medida de seguridad para prevenir el copia inintencional de ficheros al dereferenciar ligas simbólicas.</p>
 </div>
 <div class="paragraph">
-<p><strong>NOTA</strong>: esta operación puede competir con modificación concurrente a la fuente del repositorio, similar a correr <code>cp -r src dst</code> mientras se modifica <code>src</code>.</p>
+<p>Por razones de seguridad, esta opción no funciona con repositorios pertenecientes a otros usuarios, y debe especificarse <code>--no-local</code> para que la clonación tenga éxito.</p>
+</div>
+<div class="paragraph">
+<p><strong>NOTA</strong>: esta operación puede competir con modificación concurrente a la fuente del repositorio, similar a correr <code>cp -r &lt;orígen&gt; &lt;destino&gt;</code> mientras se modifica <em>&lt;orígen&gt;</em>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="git-clone-code--no-hardlinkscode"> <a class="anchor" href="#git-clone-code--no-hardlinkscode"></a><code>--no-hardlinks</code> </dt>
@@ -85,7 +88,7 @@ aliases:
 <p>Si quieres romper la dependencia de un repositorio clonado con <code>--shared</code> de su repositorio origen, puedes simplemente ejecutar <code>git repack -a</code> para copiar todos los objetos del repositorio origen en un paquete en el repositorio clonado.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-clone-code--referencecodecode-if-ablecodeemltrepositoriogtem"> <a class="anchor" href="#git-clone-code--referencecodecode-if-ablecodeemltrepositoriogtem"></a><code>--reference</code>[<code>-if-able</code>] <em>&lt;repositorio&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--reference-if-ableltrepositoriogtcode"> <a class="anchor" href="#git-clone-code--reference-if-ableltrepositoriogtcode"></a><code>--reference[-if-able] &lt;repositorio&gt;</code> </dt>
 <dd>
 <p>Si el <em>&lt;repositorio&gt;</em> referencia esta en el equipo local, automáticamente se configura <code>.git/objects/info/alternates</code> para obtener los objetos del <em>&lt;repositorio&gt;</em> referencia. Usando un repositorio ya existente como un alterno requerirá que menos objetos sean copiados del repositorio siendo clonado, reduciendo costos de red y almacenamiento local. Cuando se usa <code>--reference-if-able</code>, un directorio inexistente es saltado con una advertencia en lugar de abortar la clonación.</p>
 <div class="paragraph">
@@ -110,14 +113,14 @@ aliases:
 <dd>
 <p>El estado de avance se indica en la salida de error estándar por defecto cuando esta está asociada a un terminal, a menos que se especifique <code>--quiet</code>. Esta bandera forza el estado de avance incluso cuando la salida de error estándar no es por terminal.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--server-optioncodeemltopcingtem"> <a class="anchor" href="#git-clone-code--server-optioncodeemltopcingtem"></a><code>--server-option=</code><em>&lt;opción&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--server-optionltopcingtcode"> <a class="anchor" href="#git-clone-code--server-optionltopcingtcode"></a><code>--server-option=&lt;opción&gt;</code> </dt>
 <dd>
-<p>Transmite la cadena de caracteres dada al servidor cuando haya comunicación utilizando la versión 2 del protocolo. La cadena de caracteres dada no debe contener ningún carácter NUL ni LF. La gestión que el servidor hace de sus opciones, incluyendo las desconocidas, es específica de cada servidor. Cuando se dan múltiples <code>--server-option=</code><em>&lt;opción&gt;</em>, todas ellas se envían al otro lado en el orden listado en la línea de comandos.</p>
+<p>Transmite la cadena de caracteres dada al servidor cuando haya comunicación utilizando la versión 2 del protocolo. La cadena de caracteres dada no debe contener ningún carácter NUL ni LF. La gestión que el servidor hace de sus opciones, incluyendo las desconocidas, es específica de cada servidor. Cuando se dan múltiples <code>--server-option=&lt;opción&gt;</code>, todas ellas se envían al otro lado en el orden listado en la línea de comandos. Cuando no se da <code>--server-option=</code><em>&lt;opción&gt;</em> desde la línea de comandos, se usarán en su lugar los valores de la variable de configuración <code>remote.&lt;nombre&gt;.serverOption</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code-ncode"> <a class="anchor" href="#git-clone-code-ncode"></a><code>-n</code> </dt>
 <dt class="hdlist1" id="git-clone-code--no-checkoutcode"> <a class="anchor" href="#git-clone-code--no-checkoutcode"></a><code>--no-checkout</code> </dt>
 <dd>
-<p>No hace checkout de HEAD después de completar la clonación.</p>
+<p>No hace checkout de <code>HEAD</code> después de completar la clonación.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code--codecodeno-codecodereject-shallowcode"> <a class="anchor" href="#git-clone-code--codecodeno-codecodereject-shallowcode"></a><code>--</code>[<code>no-</code>]<code>reject-shallow</code> </dt>
 <dd>
@@ -125,15 +128,15 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-clone-code--barecode"> <a class="anchor" href="#git-clone-code--barecode"></a><code>--bare</code> </dt>
 <dd>
-<p>Hace un repositorio Git <em>básico</em>. Esto es, en lugar de crear <em>&lt;directorio&gt;</em> y colocar los ficheros administrativos en <em>&lt;directorio&gt;</em>`/.git`, hace al <em>&lt;directorio&gt;</em> mismo el <code>$GIT_DIR</code>. Esto implica obviamente el <code>--no-checkout</code> porque no hay dónde hacer checkout al árbol de trabajo. Además las heads de las ramas en el remoto son copiadas directamente a las heads de rama local correspondientes, sin mapearlas a <code>refs/remotes/origin/</code>. Cuando se usa esta opción, no se crean ni las ramas de seguimiento remoto ni las variables de configuración relacionadas.</p>
+<p>Hace un repositorio Git <em>básico</em>. Esto es, en lugar de crear <em>&lt;directorio&gt;</em> y colocar los ficheros administrativos en <code>&lt;directorio&gt;/.git</code>, hace al <em>&lt;directorio&gt;</em> mismo el <code>$GIT_DIR</code>. Esto implica obviamente el <code>--no-checkout</code> porque no hay dónde hacer checkout al árbol de trabajo. Además las heads de las ramas en el remoto son copiadas directamente a las heads de rama local correspondientes, sin mapearlas a <code>refs/remotes/origin/</code>. Cuando se usa esta opción, no se crean ni las ramas de seguimiento remoto ni las variables de configuración relacionadas.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code--sparsecode"> <a class="anchor" href="#git-clone-code--sparsecode"></a><code>--sparse</code> </dt>
 <dd>
 <p>Emplea un checkout -escaso, sólo con los ficheros en el nivel superior del directorio que esten presentes inicialmente. Se puede usar el comando <a href='{{< relurl "docs/git-sparse-checkout/es" >}}'>git-sparse-checkout[1]</a> para crecer el directorio de trabajo cuando se necesite.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--filtercodeemltespecificacin-de-filtrogtem"> <a class="anchor" href="#git-clone-code--filtercodeemltespecificacin-de-filtrogtem"></a><code>--filter=</code><em>&lt;especificación-de-filtro&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--filterltespecificacin-de-filtrogtcode"> <a class="anchor" href="#git-clone-code--filterltespecificacin-de-filtrogtcode"></a><code>--filter=&lt;especificación-de-filtro&gt;</code> </dt>
 <dd>
-<p>Usa la característica de clonado parcial y solicita que el servidor envíe un subconjunto de objetos alcanzables conforme a un filtro de objetos dado. Cuando se usa <code>--filter</code> la <em>&lt;especificación-de-filtro&gt;</em> dada se usa para el filtro de clonado parcial. Por ejemplo, <code>--filter=blob:none</code> filtrará todos los blobs (contenido del fichero) hasta que lo necesite Git. También <code>--filter=blob:limit=</code><em>&lt;tamaño&gt;</em> filtrará todos los blobs cuyo tamaño sea por lo menos <em>&lt;tamaño&gt;</em>. Para mas detalles sobre especificaciones de filtros ver la opción <code>--filter</code> en <a href='{{< relurl "docs/git-rev-list/es" >}}'>git-rev-list[1]</a>.</p>
+<p>Usa la característica de clonado parcial y solicita que el servidor envíe un subconjunto de objetos alcanzables conforme a un filtro de objetos dado. Cuando se usa <code>--filter</code> la <em>&lt;especificación-de-filtro&gt;</em> dada se usa para el filtro de clonado parcial. Por ejemplo, <code>--filter=blob:none</code> filtrará todos los blobs (contenido del fichero) hasta que lo necesite Git. También <code>--filter=blob:limit=&lt;tamaño&gt;</code> filtrará todos los blobs cuyo tamaño sea por lo menos <em>&lt;tamaño&gt;</em>. Para mas detalles sobre especificaciones de filtros ver la opción <code>--filter</code> en <a href='{{< relurl "docs/git-rev-list/es" >}}'>git-rev-list[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code--also-filter-submodulescode"> <a class="anchor" href="#git-clone-code--also-filter-submodulescode"></a><code>--also-filter-submodules</code> </dt>
 <dd>
@@ -151,68 +154,77 @@ aliases:
 <dt class="hdlist1" id="git-clone-code-bcodeemltnombregtem"> <a class="anchor" href="#git-clone-code-bcodeemltnombregtem"></a><code>-b</code> <em>&lt;nombre&gt;</em> </dt>
 <dt class="hdlist1" id="git-clone-code--branchcodeemltnombregtem"> <a class="anchor" href="#git-clone-code--branchcodeemltnombregtem"></a><code>--branch</code> <em>&lt;nombre&gt;</em> </dt>
 <dd>
-<p>En lugar de apuntar la HEAD recientemente creada a la rama a la que apunta HEAD del repositorio clonado, apunta a la rama <em>&lt;nombre&gt;</em>. En un repositorio no-básico, a esta rama se le hará checkout. <code>--branch</code> también puede tomar etiquetas y soltar la HEAD en ese commit en el repositorio resultante.</p>
+<p>En lugar de apuntar la <code>HEAD</code> recientemente creada a la rama a la que apunta <code>HEAD</code> del repositorio clonado, apunta a la rama <em>&lt;nombre&gt;</em>. En un repositorio no-básico, a esta rama se le hará checkout. <code>--branch</code> también puede tomar etiquetas y soltar la <code>HEAD</code> en esa confirmación en el repositorio resultante.</p>
+</dd>
+<dt class="hdlist1" id="git-clone-code--revisionltrevisingtcode"> <a class="anchor" href="#git-clone-code--revisionltrevisingtcode"></a><code>--revision=&lt;revisión&gt;</code> </dt>
+<dd>
+<p>Create a new repository, and fetch the history leading to the given revision <em>&lt;rev&gt;</em> (and nothing else), without making any remote-tracking branch, and without making any local branch, and detach <code>HEAD</code> to <em>&lt;rev&gt;</em>. The argument can be a ref name (e.g. <code>refs/heads/main</code> or <code>refs/tags/v1.0</code>) that peels down to a commit, or a hexadecimal object name. This option is incompatible with <code>--branch</code> and <code>--mirror</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code-ucodeemltpaquete-a-subirgtem"> <a class="anchor" href="#git-clone-code-ucodeemltpaquete-a-subirgtem"></a><code>-u</code> <em>&lt;paquete-a-subir&gt;</em> </dt>
 <dt class="hdlist1" id="git-clone-code--upload-packcodeemltpaquete-a-subirgtem"> <a class="anchor" href="#git-clone-code--upload-packcodeemltpaquete-a-subirgtem"></a><code>--upload-pack</code> <em>&lt;paquete-a-subir&gt;</em> </dt>
 <dd>
 <p>Cuando se proporciona, y el repositorio a clonar se accesa por ssh, este especifica una ruta no predeterminada para la ejecución del comando en el otro extremo.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--templatecodeemltdirectorio-de-plantillagtem"> <a class="anchor" href="#git-clone-code--templatecodeemltdirectorio-de-plantillagtem"></a><code>--template=</code><em>&lt;directorio-de-plantilla&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--templateltdirectorio-de-plantillagtcode"> <a class="anchor" href="#git-clone-code--templateltdirectorio-de-plantillagtcode"></a><code>--template=&lt;directorio-de-plantilla&gt;</code> </dt>
 <dd>
 <p>Especifica el directorio de donde se usarán las plantillas; (Ver la sección "DIRECTORIO DE PLANTILLAS" de <a href='{{< relurl "docs/git-init/es" >}}'>git-init[1]</a>.)</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code-ccodeemltclavegtemcodecodeemltvalorgtem"> <a class="anchor" href="#git-clone-code-ccodeemltclavegtemcodecodeemltvalorgtem"></a><code>-c</code> <em>&lt;clave&gt;</em><code>=</code><em>&lt;valor&gt;</em> </dt>
-<dt class="hdlist1" id="git-clone-code--configcodeemltclavegtemcodecodeemltvalorgtem"> <a class="anchor" href="#git-clone-code--configcodeemltclavegtemcodecodeemltvalorgtem"></a><code>--config</code> <em>&lt;clave&gt;</em><code>=</code><em>&lt;valor&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code-ccodecodeltclavegtltvalorgtcode"> <a class="anchor" href="#git-clone-code-ccodecodeltclavegtltvalorgtcode"></a><code>-c</code> <code>&lt;clave&gt;=&lt;valor&gt;</code> </dt>
+<dt class="hdlist1" id="git-clone-code--configcodecodeltclavegtltvalorgtcode"> <a class="anchor" href="#git-clone-code--configcodecodeltclavegtltvalorgtcode"></a><code>--config</code> <code>&lt;clave&gt;=&lt;valor&gt;</code> </dt>
 <dd>
 <p>Asigna una variable de configuración en el repositorio recientemente creado; este surte efecto inmediatamente después de que el repositorio es inicializado, pero antes de que el historial remoto sea traído o de que se les haga checkout a los ficheros. La -&lt;clave&gt;_ es en el mismo formato que espera <a href='{{< relurl "docs/git-config/es" >}}'>git-config[1]</a> (ej. <code>core.eol=true</code>). Si se proporcionan múltiples valores para la misma clave, cada valor se escribirá en el fichero de configuración. Esto hace seguro, por ejemplo, agregar especificaciones de referencia de fetch adicionales al origen remoto.</p>
 <div class="paragraph">
-<p>Debido a limitaciones de la implementación actual, algunas variables de configuración no surten efecto hasta después del fetch y checkout inicial. Variables de configuración conocidas por no surtir efecto son: <code>remote.</code><em>&lt;nombre&gt;</em><code>.mirror</code> y <code>remote.</code><em>&lt;nombre&gt;</em><code>.tagOpt</code>. En cambio, use las opciones correspondientes <code>--mirror</code> y <code>--no-tags</code>.</p>
+<p>Debido a limitaciones de la implementación actual, algunas variables de configuración no surten efecto hasta después del fetch y checkout inicial. Variables de configuración conocidas por no surtir efecto son: <code>remote.&lt;nombre&gt;.mirror</code> y <code>remote.&lt;nombre&gt;.tagOpt</code>. En cambio, use las opciones correspondientes <code>--mirror</code> y <code>--no-tags</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-clone-code--depthcodeemltprofundidadgtem"> <a class="anchor" href="#git-clone-code--depthcodeemltprofundidadgtem"></a><code>--depth</code> <em>&lt;profundidad&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--depthltprofundidadgtcode"> <a class="anchor" href="#git-clone-code--depthltprofundidadgtcode"></a><code>--depth &lt;profundidad&gt;</code> </dt>
 <dd>
 <p>Crea un clon <em>superficial</em> con un historial truncado al número especificado de commits. Implica <code>--single-branch</code> a menos que se ponga <code>--no-single-branch</code> para traer historias cercanas a las puntas de todas las ramas. Si quieres clonar sub-módulos superficialmente, también pon <code>--shallow-submodules</code>.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--shallow-sincecodeemltfechagtem"> <a class="anchor" href="#git-clone-code--shallow-sincecodeemltfechagtem"></a><code>--shallow-since=</code><em>&lt;fecha&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--shallow-sinceltfechagtcode"> <a class="anchor" href="#git-clone-code--shallow-sinceltfechagtcode"></a><code>--shallow-since=&lt;fecha&gt;</code> </dt>
 <dd>
 <p>Crear un clon superficial con historial posterior al tiempo especificado.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--shallow-excludecodeemltrevisingtem"> <a class="anchor" href="#git-clone-code--shallow-excludecodeemltrevisingtem"></a><code>--shallow-exclude=</code><em>&lt;revisión&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--shallow-excludeltreferenciagtcode"> <a class="anchor" href="#git-clone-code--shallow-excludeltreferenciagtcode"></a><code>--shallow-exclude=&lt;referencia&gt;</code> </dt>
 <dd>
 <p>Crear un clon superficial con historial excluyendo commits alcanzables desde una rama remota o etiqueta especificada. Esta opción puede ser especificada múltiples veces.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--codecodeno-codecodesingle-branchcode"> <a class="anchor" href="#git-clone-code--codecodeno-codecodesingle-branchcode"></a><code>--</code>[<code>no-</code>]<code>single-branch</code> </dt>
+<dt class="hdlist1" id="git-clone-code--no-single-branchcode"> <a class="anchor" href="#git-clone-code--no-single-branchcode"></a><code>--[no-]single-branch</code> </dt>
 <dd>
 <p>Clona únicamente el historial hacia la punta de una sola rama, ya sea especificada por la opción <code>--branch</code> o por hacia donde apunte <code>HEAD</code> de la rama remota. Fetchs posteriores en el repositorio resultante sólo actualizarán la rama de seguimiento remoto para la rama en la que se usó ésta opción en la clonación inicial. Si la <code>HEAD</code> en el remoto no apuntó a alguna rama cuando se hizo la clonación <code>--single-branch</code>, no se crea rama de seguimiento remoto.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--no-tags</code> </dt>
+<dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--[no-]tags</code> </dt>
 <dd>
-<p>No clona ninguna etiqueta y define <code>remote.&lt;remote&gt;.tagOpt=--no-tags</code> en la configuración, lo que garantiza que futuras ejecuciones de <code>git pull</code> y <code>git fetch</code> no seguirán ninguna etiqueta. Aún funcionarán las capturas de etiquetas explícitas que se realicen en el futuro (consulte <a href='{{< relurl "docs/git-fetch/es" >}}'>git-fetch[1]</a>).</p>
+<p>Controla si se clonaran o no las etiquetas. Cuando no se da la opción <code>--no-tags</code>, la opción será permanente al establecer la configuración <code>remote.&lt;remoto&gt;.tagOpt=--no-tags</code>. Esto garantiza que futuros <code>git pull</code> y <code>git fetch</code> no seguirán ninguna etiqueta. Las capturas explícitas subsecuentes de etiquetas seguirán funcionando (ver <a href='{{< relurl "docs/git-fetch/es" >}}'>git-fetch[1]</a>).</p>
+<div class="literalblock">
+<div class="content">
+<pre>By default, tags are cloned and passing `--tags` is thus typically a no-op, unless it cancels out a previous `--no-tags`.</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Puede ser usada en conjunto con <code>--single-branch</code> para clonar y mantener una rama sin otras referencias mas que una sola rama clonada. Esto es útil, por ejemplo, para mantener clones mínimos de la rama predeterminada de algún repositorio para indexado de búsqueda.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-clone-code--recurse-submodulescodecodecodeemltespecificacin-de-rutagtem"> <a class="anchor" href="#git-clone-code--recurse-submodulescodecodecodeemltespecificacin-de-rutagtem"></a><code>--recurse-submodules</code>[<code>=</code><em>&lt;especificación-de-ruta&gt;</em>] </dt>
+<dt class="hdlist1" id="git-clone-code--recurse-submodulesltespecificacin-de-rutagtcode"> <a class="anchor" href="#git-clone-code--recurse-submodulesltespecificacin-de-rutagtcode"></a><code>--recurse-submodules[=&lt;especificación-de-ruta&gt;]</code> </dt>
 <dd>
-<p>Después de crear el clon, inicializa y clona sub-módulos con base en la <em>&lt;especificación-de-ruta&gt;</em> proporcionada. Si no se da una <em>&lt;especificación-de-ruta&gt;</em>, todos los sub-módulos son inicializados y clonados. Esta opción se puede dar múltiples veces para especificaciones de ruta consistentes en múltiples entradas. El clon resultante tendrá <code>submodule.active</code> configurado con la especificación de ruta proporcionada, o con "." (que significa todos los sub-módulos) si no se proporciona.</p>
+<p>Después de crear el clon, inicializa y clona sub-módulos con base en la <em>&lt;especificación-de-ruta&gt;</em> proporcionada. Si no se da una <code>=&lt;especificación-de-ruta&gt;</code>, todos los sub-módulos son inicializados y clonados. Esta opción se puede dar múltiples veces para especificaciones de ruta consistentes en múltiples entradas. El clon resultante tendrá <code>submodule.active</code> configurado con la especificación de ruta proporcionada, o con "<code>.</code>" (que significa todos los sub-módulos) si no se proporciona.</p>
 <div class="paragraph">
 <p>Sub-módulos son inicializados y clonados usando sus configuraciones predeterminadas. Es equivalente a ejecutar <code>git submodule update --init --recursive &lt;especificacion-de-ruta&gt;</code> inmediatamente después de terminada la clonación. Esta opción es ignorada si el repositorio clonado no tiene un árbol de trabajo/checkout (ej. si cualquiera de <code>--no-checkout</code>/<code>-n</code>, <code>--bare</code>, o <code>--mirror</code> es dado)</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-clone-code--codecodeno-codecodeshallow-submodulescode"> <a class="anchor" href="#git-clone-code--codecodeno-codecodeshallow-submodulescode"></a><code>--</code>[<code>no-</code>]<code>shallow-submodules</code> </dt>
+<dt class="hdlist1" id="git-clone-code--no-shallow-submodulescode"> <a class="anchor" href="#git-clone-code--no-shallow-submodulescode"></a><code>--[no-]shallow-submodules</code> </dt>
 <dd>
 <p>Todos los sub-módulos clonados serán superficiales con profundidad 1.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--codecodeno-codecoderemote-submodulescode"> <a class="anchor" href="#git-clone-code--codecodeno-codecoderemote-submodulescode"></a><code>--</code>[<code>no-</code>]<code>remote-submodules</code> </dt>
+<dt class="hdlist1" id="git-clone-code--no-remote-submodulescode"> <a class="anchor" href="#git-clone-code--no-remote-submodulescode"></a><code>--[no-]remote-submodules</code> </dt>
 <dd>
 <p>Todos los sub-módulos clonados usarán el estatus de la rama de seguimiento-remoto del sub-módulo para actualizar el sub-módulo, en lugar del SHA-1 registrado en el super-proyecto. Equivalente a pasar <code>--remote</code> en <code>git submodule update</code>.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--separate-git-dircodeemltdirectorio-gitgtem"> <a class="anchor" href="#git-clone-code--separate-git-dircodeemltdirectorio-gitgtem"></a><code>--separate-git-dir=</code><em>&lt;directorio-git&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--separate-git-dirltdirectorio-gitgtcode"> <a class="anchor" href="#git-clone-code--separate-git-dirltdirectorio-gitgtcode"></a><code>--separate-git-dir=&lt;directorio-git&gt;</code> </dt>
 <dd>
 <p>En lugar de colocar el repositorio clonado donde se supone, se coloca en el directorio especificado, y luego se hace hacia él una liga simbólica Git agnóstica de sistema de ficheros. El resultado es que el repositorio Git puede ser separado del árbol de trabajo.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--ref-formatcodeemltformato-de-referenciagtem"> <a class="anchor" href="#git-clone-code--ref-formatcodeemltformato-de-referenciagtem"></a><code>--ref-format=</code><em>&lt;formato-de-referencia&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--ref-formatltformato-de-referenciagtcode"> <a class="anchor" href="#git-clone-code--ref-formatltformato-de-referenciagtcode"></a><code>--ref-format=&lt;formato-de-referencia&gt;</code> </dt>
 <dd>
 <p>Especifica el formato de almacenamiento de referencia dado para el repositorio. Los valores válidos son:</p>
 </dd>
@@ -226,7 +238,7 @@ aliases:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>es/ref-storage-format.txt</code></p>
+<p>Missing <code>es/ref-storage-format.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -250,7 +262,7 @@ aliases:
 <dd>
 <p>El nombre de un nuevo directorio para clonar hacia. Se usa la parte "humanizada" del repositorio fuente si no se da explícitamente un <em>&lt;directorio&gt;</em> (<code>repo</code> para <code>/ruta/a/repo.git</code> y <code>foo</code> para <code>host.xz:foo/.git</code>). Sólo se permite clonar a un directorio existente si el directorio está vacío.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--bundle-uricodeemlturigtem"> <a class="anchor" href="#git-clone-code--bundle-uricodeemlturigtem"></a><code>--bundle-uri=</code><em>&lt;uri&gt;</em> </dt>
+<dt class="hdlist1" id="git-clone-code--bundle-urilturigtcode"> <a class="anchor" href="#git-clone-code--bundle-urilturigtcode"></a><code>--bundle-uri=&lt;uri&gt;</code> </dt>
 <dd>
 <p>Antes de hacer fetch de un remoto, trae un empaquetado de una <em>&lt;uri&gt;</em> dada y desempaqueta los datos en el repositorio local. Las referencias en el empaquetado se almacenarán bajo el espacio de nombres oculto <code>refs/bundle/*</code>. Esta opción es incompatible con <code>--depth</code>, <code>--shallow-since</code> y <code>--shallow-exclude</code>.</p>
 </dd>
@@ -268,7 +280,7 @@ aliases:
 <p>Git soporta los protocolos ssh, git, http y https (además, se puede usar ftp y ftps para fetch, pero es ineficiente y obsoleto; no los use).</p>
 </div>
 <div class="paragraph">
-<p>El transporte nativo (ej. git:// URL) no hace autenticación y debería ser usado con precaución en redes inseguras.</p>
+<p>El transporte nativo (ej. la URL <code>git://</code>) no hace autenticación y debería ser usado con precaución en redes inseguras.</p>
 </div>
 <div class="paragraph">
 <p>Se pueden usar las siguientes sintaxis con ellas:</p>
@@ -276,16 +288,16 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p><code>ssh://</code>[<em>&lt;usuario&gt;</em><code>@</code>]<em>&lt;servidor&gt;</em>[<code>:</code><em>&lt;puerto&gt;</em>]<code>/</code><em>&lt;ruta-al-repositorio-git&gt;</em></p>
+<p><code>ssh://[&lt;usuario&gt;@]&lt;servidor&gt;[:&lt;puerto&gt;]/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 <li>
-<p><code>git://</code><em>&lt;servidor&gt;</em>[:<em>&lt;puerto&gt;</em>]<code>/</code><em>&lt;ruta-al-repositorio&gt;</em></p>
+<p><code>git://&lt;servidor&gt;[:&lt;puerto&gt;]/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 <li>
-<p><code>http</code>[<code>s</code>]<code>://</code><em>&lt;servidor&gt;</em>[<code>:</code><em>&lt;puerto&gt;</em>]<code>/</code><em>&lt;ruta-al-repositorio&gt;</em></p>
+<p><code>http[s]://&lt;servidor&gt;[:&lt;puerto&gt;]/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 <li>
-<p><code>ftp</code>[<code>s</code>]<code>://</code><em>&lt;servidor&gt;</em>[<code>:</code><em>&lt;puerto&gt;</em>]<code>/</code><em>&lt;ruta-al-repositorio&gt;</em></p>
+<p><code>ftp[s]://&lt;servidor&gt;[:&lt;puerto&gt;]/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -295,7 +307,7 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p>[<em>&lt;usuario&gt;</em><code>@</code>]<em>&lt;servidor&gt;</em><code>:/</code><em>&lt;ruta-al-repositorio&gt;</em></p>
+<p><code>[&lt;usuario&gt;@]&lt;servidor&gt;:/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -303,18 +315,18 @@ aliases:
 <p>Esta sintaxis sólo se reconoce si no hay diagonales antes del primer dos puntos. Esto ayuda a diferenciar una ruta local que contiene dos puntos. Por ejemplo la ruta local <code>foo:bar</code> puede ser especificada como una ruta absoluta o <code>./foo:bar</code> para evitar ser malinterpretada como una url ssh.</p>
 </div>
 <div class="paragraph">
-<p>Los protocolos ssh y git soportan adicionalmente expansión de <code>~</code><em>&lt;nombre-de-usuario&gt;</em>:</p>
+<p>Los protocolos ssh y git soportan adicionalmente expansión de <code>~&lt;nombre-de-usuario&gt;</code>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ssh://</code>[<em>&lt;usuario&gt;</em><code>@</code>]<em>&lt;servidor&gt;</em>[<code>:</code><em>&lt;puerto&gt;</em>]<code>/~</code><em>&lt;usuario&gt;</em><code>/</code><em>&lt;ruta-al-repositorio&gt;</em></p>
+<p><code>ssh://[&lt;usuario&gt;@]&lt;servidor&gt;[:&lt;puerto&gt;]/~&lt;usuario&gt;/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 <li>
-<p><code>git://</code><em>&lt;servidor&gt;</em>[<code>:</code><em>&lt;puerto&gt;</em>]<code>/~</code><em>&lt;usuario&gt;</em><code>/</code><em>&lt;ruta-al-repositorio-git&gt;</em></p>
+<p><code>git://&lt;servidor&gt;[:&lt;puerto&gt;]/~&lt;usuario&gt;/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 <li>
-<p>[<em>&lt;usuario&gt;</em><code>@</code>]<em>&lt;servidor&gt;</em><code>:~</code><em>&lt;usuario&gt;</em><code>/</code><em>&lt;ruta-al-repositorio-git&gt;</em></p>
+<p><code>[&lt;usuario&gt;@]&lt;servidor&gt;:~&lt;usuario&gt;/&lt;ruta-al-repositorio&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -327,7 +339,7 @@ aliases:
 <p><code>/ruta/al/repositorio.git/</code></p>
 </li>
 <li>
-<p><code><a href="file:///ruta/al/repositorio.git/" class="bare">file:///ruta/al/repositorio.git/</a></code></p>
+<p><code>file:///ruta/al/repositorio.git/</code></p>
 </li>
 </ul>
 </div>
@@ -338,12 +350,12 @@ aliases:
 <p><code>git clone</code>, <code>git fetch</code> y <code>git pull</code>, pero no <code>git push</code>, también aceptarán un fichero bundle adecuado. Ver <a href='{{< relurl "docs/git-bundle/es" >}}'>git-bundle[1]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Cuando Git no sepa como manejar cierto protocolo de transporte, intentará usar el auxiliar remoto <code>remote-</code><em>&lt;transporte&gt;</em>, si existe alguno. Para solicitar explícitamente un auxiliar remoto, se puede usar la sintaxis siguiente:</p>
+<p>Cuando Git no sepa como manejar cierto protocolo de transporte, intentará usar el auxiliar remoto <code>remote-&lt;transporte&gt;</code>, si existe alguno. Para solicitar explícitamente un auxiliar remoto, se puede usar la sintaxis siguiente:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><em>&lt;transporte&gt;</em>::<em>&lt;dirección&gt;</em></p>
+<p><code>&lt;transporte&gt;::&lt;dirección&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -435,6 +447,14 @@ $ cd mi-linux</pre>
 </div>
 </div>
 </li>
+<li>
+<p>Clona un repositorio local de un usuario diferente:</p>
+<div class="listingblock">
+<div class="content">
+<pre>$ git clone --no-local /home/otrousuario/proj.git /pub/scm/proj.git</pre>
+</div>
+</div>
+</li>
 </ul>
 </div>
 </div>
@@ -453,7 +473,7 @@ $ cd mi-linux</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>es/config/init.txt</code></p>
+<p>Missing <code>es/config/init.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -470,7 +490,7 @@ $ cd mi-linux</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>es/config/clone.txt</code></p>
+<p>Missing <code>es/config/clone.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

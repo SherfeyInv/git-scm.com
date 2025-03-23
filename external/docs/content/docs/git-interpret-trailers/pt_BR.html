@@ -160,115 +160,25 @@ Assinado-por: Bob &lt;bob@example.com&gt;</pre>
 <div class="sect1">
 <h2 id="_variáveis_de_configuração"><a class="anchor" href="#_variáveis_de_configuração"></a>VARIÁVEIS DE CONFIGURAÇÃO</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1" id="git-interpret-trailers-trailerseparators"> <a class="anchor" href="#git-interpret-trailers-trailerseparators"></a>trailer.separators </dt>
-<dd>
-<p>Esta opção informa quais os caracteres são reconhecidos como separadores dos caracteres de resposta. É predefinido que apenas o <code>:</code> seja reconhecido como um, a menos que <code>=</code> seja sempre aceito na linha de comando por questões de compatibilidade com os outros comandos git.</p>
 <div class="paragraph">
-<p>O primeiro caractere informado por esta opção será o caractere predefinido que será utilizado quando um outro separador não seja utilizado na configuração deste <code>caractere de resposta</code>.</p>
+<p>Tudo abaixo desta linha nesta seção, está seletivamente incluído na documentação <a href='{{< relurl "docs/git-config/pt_BR" >}}'>git-config[1]</a>. O conteúdo é o mesmo que é encontrado ali:</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Missing <code>pt_BR/config/trailer.adoc</code></p>
 </div>
 <div class="paragraph">
-<p>Como por exemplo, caso o valor desta opção seja "%=$", apenas as linhas que usam o formato <em>&lt;key&gt;&lt;sep&gt;&lt;valor&gt;</em> com &lt;sep&gt; contendo <em>%</em>, <em>=</em> ou <em>$</em> e os espaços, serão considerados <code>caracteres de resposta</code>. É predefinido que o sinal <em>%</em> será utilizado como um separador; portanto, os caracteres de resposta aparecerão como: <em>&lt;key&gt;% &lt;valor&gt;</em> (um sinal de porcentagem e um espaço aparecerão entre key e o valor).</p>
+<p>See original version for this content.</p>
 </div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerwhere"> <a class="anchor" href="#git-interpret-trailers-trailerwhere"></a>trailer.where </dt>
-<dd>
-<p>Esta opção informa onde um novo caractere de resposta será adicionado.</p>
-<div class="paragraph">
-<p>Pode ser <code>end</code> (pré definido),` start`, <code>after</code> ou` before`.</p>
-</div>
-<div class="paragraph">
-<p>Caso seja <code>end</code>, então cada novo caractere de resposta aparecerá no final dos caracteres de resposta já existentes.</p>
-</div>
-<div class="paragraph">
-<p>Caso seja <code>start</code>, cada novo caractere de resposta aparecerá no início, e não no final, dos caracteres de resposta já existentes.</p>
-</div>
-<div class="paragraph">
-<p>Caso seja <code>after</code> , cada novo caractere de resposta aparecerá logo após o último caractere de resposta com o mesmo &lt;key&gt;.</p>
-</div>
-<div class="paragraph">
-<p>Caso seja <code>before</code>, então cada novo caractere de resposta aparecerá logo no começo do primeiro caractere de resposta com o mesmo &lt;key&gt;.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerifexists"> <a class="anchor" href="#git-interpret-trailers-trailerifexists"></a>trailer.ifexists </dt>
-<dd>
-<p>Essa opção permite escolher a ação a ser executada quando já houver pelo menos um caractere de resposta com a mesma &lt;key&gt; na entrada.</p>
-<div class="paragraph">
-<p>Os valores válidos para esta opção são: <code>addIfDifferentNeighbor</code> (predefinido), <code>addIfDifferent</code>, <code>add</code>, <code>replace</code> ou <code>doNothing</code>.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>addIfDifferentNeighbor</code>, um novo caractere de resposta será adicionado apenas caso nenhum com o mesmo par (&lt;key&gt;,&lt;valor&gt;) esteja acima ou abaixo da linha onde o novo caractere de resposta será adicionado.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>addIfDifferent</code>, um novo caractere de resposta será adicionado somente se nenhum caractere de resposta com o mesmo par (&lt;key&gt;, &lt;valor&gt;) já estiver na entrada.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>add</code>, um novo caractere de resposta será adicionado, mesmo que alguns caracteres de resposta com o mesmo par (&lt;token&gt;, &lt;valor&gt;) já estejam na entrada.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>replace</code>, um caractere de resposta existente com a mesmo &lt;key&gt; será excluído e um novo será adicionado. O caractere de resposta excluído será o mais próximo (com o mesmo &lt;key&gt;) do local onde o novo será adicionado.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>doNothing</code>, nada será feito, ou seja, nenhum novo caractere de resposta será adicionado se já houver um com o mesmo &lt;key&gt; na entrada.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerifmissing"> <a class="anchor" href="#git-interpret-trailers-trailerifmissing"></a>trailer.ifmissing </dt>
-<dd>
-<p>Essa opção permite escolher a ação a ser executada quando ainda não houver nenhum atrelado com o mesmo &lt;key&gt; na entrada.</p>
-<div class="paragraph">
-<p>Os valores válidos para esta opção são: <code>add</code> (o valor predefinido) e <code>doNothing</code>.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>add</code>, um novo caractere de resposta será adicionado.</p>
-</div>
-<div class="paragraph">
-<p>Com <code>doNothing</code>, nada será feito.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltkeyAliasgtkey"> <a class="anchor" href="#git-interpret-trailers-trailerltkeyAliasgtkey"></a>trailer.&lt;keyAlias&gt;.key </dt>
-<dd>
-<p>Define um &lt;keyAlias&gt; para a &lt;key&gt;. O &lt;keyAlias&gt; deve ser um prefixo (as maiúsculas e minúsculas não importam) da &lt;key&gt;. Por exemplo, em <code>git config trailer.ack.key "Acked-by"</code>, "Acked-by" é a &lt;key&gt; e "ack" é o &lt;keyAlias&gt;. Essa configuração permite a invocação mais curta do <code>--trailer "ack:..."</code> na linha de comando usando o &lt;keyAlias&gt; "ack" em vez do <code>--trailer "Acked-by:..."</code> mais longo.</p>
-<div class="paragraph">
-<p>No final da &lt;key&gt;, pode aparecer um separador e, em seguida, alguns caracteres de espaço. Por padrão, o único separador válido é <em>:</em>, mas isso pode ser alterado usando a variável de configuração <code>trailer.separators</code>.</p>
-</div>
-<div class="paragraph">
-<p>Se houver um separador na chave, ele substituirá o separador padrão ao adicionar o trailer.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltkeyAliasgtwhere"> <a class="anchor" href="#git-interpret-trailers-trailerltkeyAliasgtwhere"></a>trailer.&lt;keyAlias&gt;.where </dt>
-<dd>
-<p>Esta opção utiliza os mesmos valores da variável de configuração <em>trailer.where</em> e substitui o que for especificado por essa opção para os caracteres de resposta com o <code>&lt;keyAlias&gt;</code> determinado.</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltkeyAliasgtifexists"> <a class="anchor" href="#git-interpret-trailers-trailerltkeyAliasgtifexists"></a>trailer.&lt;keyAlias&gt;.ifexists </dt>
-<dd>
-<p>Essa opção utiliza os mesmos valores que a variável de configuração <em>trailer.ifexists</em> e substitui o que for definido por esta opção para os caracteres de resposta com o &lt;keyAlias&gt; informado.</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltkeyAliasgtifmissing"> <a class="anchor" href="#git-interpret-trailers-trailerltkeyAliasgtifmissing"></a>trailer.&lt;keyAlias&gt;.ifmissing </dt>
-<dd>
-<p>Esta opção utiliza os mesmos valores que a variável de configuração <em>trailer.ifmissing</em> e substitui o que for definido por esta opção para os caracteres de resposta com o &lt;keyAlias&gt; informado.</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltkeyAliasgtcommand"> <a class="anchor" href="#git-interpret-trailers-trailerltkeyAliasgtcommand"></a>trailer.&lt;keyAlias&gt;.command </dt>
-<dd>
-<p>Preterido em favor de <em>trailer.&lt;keyAlias&gt;.cmd</em>. Esta opção se comporta da mesma forma que <em>trailer.&lt;keyAlias&gt;.cmd</em>, exceto pelo fato de não passar nada como argumento para o comando especificado. Em vez disso, a primeira ocorrência da substring $ARG é substituída pelo &lt;valor&gt; que seria passado como argumento.</p>
-<div class="paragraph">
-<p>Observe que $ARG no comando do usuário é substituído apenas uma vez e que a maneira original de substituir o $ARG não é segura.</p>
-</div>
-<div class="paragraph">
-<p>Quando ambos <em>trailer.&lt;keyAlias&gt;.cmd</em> e <em>trailer.&lt;keyAlias&gt;.command</em> são oferecidos para o mesmo &lt;keyAlias&gt;, o <em>trailer.&lt;keyAlias&gt;.cmd</em> é usado e o <em>trailer.&lt;keyAlias&gt;.command</em> é ignorado.</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltkeyAliasgtcmd"> <a class="anchor" href="#git-interpret-trailers-trailerltkeyAliasgtcmd"></a>trailer.&lt;keyAlias&gt;.cmd </dt>
-<dd>
-<p>Essa opção pode ser usada para especificar um comando do shell que será chamado uma vez para adicionar automaticamente um caractere de resposta com o &lt;keyAlias&gt; especificado e, em seguida, chamado toda vez que o argumento <em>--trailer &lt;keyAlias&gt;=&lt;valor&gt;</em> for usado para alterar o &lt;valor&gt; do trailer que essa opção produziria.</p>
-<div class="paragraph">
-<p>Quando o comando informado é chamado pela primeira vez para adicionar um atrelado com o &lt;keyAlias&gt; definido, o comportamento é como se um argumento especial <em>--trailer &lt;keyAlias&gt;=&lt;valor&gt;</em> fosse adicionado no início do comando "git interpret-trailers", onde o &lt;valor&gt; é considerado a saída padrão do comando com qualquer espaço em branco eliminado à esquerda e à direita.</p>
-</div>
-<div class="paragraph">
-<p>Caso algumas opção <em>--trailer &lt;keyAlias&gt;=&lt;valor&gt;</em> também sejam passados na linha de comando, o comando é invocado novamente uma vez para cada um destes argumentos que tenham o mesmo &lt;keyAlias&gt;. E a parte &lt;valor&gt; desses argumentos, caso hajam, será passada ao comando como sendo o seu primeiro argumento. Desta forma, o comando pode produzir um &lt;valor&gt; calculado a partir do &lt;valor&gt; informado na opção <em>--trailer &lt;keyAlias&gt;=&lt;valor&gt;</em>.</p>
-</div>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

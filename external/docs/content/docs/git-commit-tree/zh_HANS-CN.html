@@ -170,7 +170,7 @@ aliases:
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><em>git commit</em> 和 <em>git commit-tree</em> 如果收到的提交日志信息不像是有效的 UTF-8 字符串，就会发出警告，除非你明确表示你的项目使用的是传统编码。 说这个的方法是在 <code>.git/config</code> 文件中设置 <code>i18n.commitEncoding</code>，像这样：</p>
+<p><code>git commit</code> and <code>git commit-tree</code> issue a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have <code>i18n.commitEncoding</code> in <code>.git/config</code> file, like this:</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]
@@ -182,7 +182,7 @@ aliases:
 </div>
 </li>
 <li>
-<p><em>git log</em> 、<em>git show</em> 、<em>git blame</em> 和它们的朋友们会查看提交对象的 <code>encoding</code> 头，并尝试将日志信息重新编码为 UTF-8，除非另有指定。 您可以在`.git/config` 文件中使用 <code>i18n.logOutputEncoding</code> 指定所需的输出编码，像这样：</p>
+<p><code>git log</code>, <code>git show</code>, <code>git blame</code> and friends look at the <code>encoding</code> header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with <code>i18n.logOutputEncoding</code> in <code>.git/config</code> file, like this:</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]

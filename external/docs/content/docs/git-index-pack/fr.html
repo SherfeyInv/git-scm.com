@@ -75,7 +75,7 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-index-pack---strictltid-msggtltsvritgt82308203"> <a class="anchor" href="#git-index-pack---strictltid-msggtltsvritgt82308203"></a>--strict[=&lt;id-msg&gt;=&lt;sévérité&gt;&#8230;&#8203;] </dt>
 <dd>
-<p>Se terminer, si le paquet contient des objets ou des liens rompus. Une liste optionnelle d&#8217;éléments séparés par des virgule de <code>&lt;id-msg&gt;=&lt;sévérité&gt;</code> peut être transmise pour modifier la gravité de certains problèmes possibles, par exemple <code>--strict="missingEmail=ignore,badTagName=error"</code>. Voir l&#8217;entrée pour les options de configuration <code>fsck.&lt;id-msg&gt;' dans <a href='{{< relurl "docs/git-fsck/fr" >}}'>git-fsck[1]</a> pour plus d'informations sur les valeurs possibles de `&lt;id-msg&gt;</code> et <code>&lt;sévérité&gt;</code>.</p>
+<p>Se terminer, si le paquet contient des objets ou des liens rompus. Une liste optionnelle d&#8217;éléments séparés par des virgule de <code>&lt;id-msg&gt;=&lt;sévérité&gt;</code> peut être transmise pour modifier la gravité de certains problèmes possibles, par exemple <code>--strict="missingEmail=ignore,badTagName=error"</code>. Voir l&#8217;entrée pour les options de configuration <code>fsck.&lt;id-msg&gt;</code> dans <a href='{{< relurl "docs/git-fsck/fr" >}}'>git-fsck[1]</a> pour plus d&#8217;informations sur les valeurs possibles de <code>&lt;id-msg&gt;</code> et <code>&lt;sévérité&gt;</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-index-pack---progress-title"> <a class="anchor" href="#git-index-pack---progress-title"></a>--progress-title </dt>
 <dd>
@@ -92,7 +92,7 @@ aliases:
 <dd>
 <p>Mourir si le paquet contient des objets cassés, mais contrairement à <code>--strict</code>, ne pas s&#8217;étouffer sur les liens cassés. Si le paquet contient un arbre pointant vers un blob .gitmodules qui n&#8217;existe pas, afficher l&#8217;empreinte de ce blob (pour que l&#8217;appelant puisse le vérifier) après l&#8217;empreinte qui entre dans le nom du fichier pack/idx (voir "Notes").</p>
 <div class="paragraph">
-<p>Une liste optionnelle d&#8217;éléments séparés par des virgules, de <code>&lt;id-msg&gt;=&lt;sévérité&gt;</code> peut être transmise pour modifier la gravité de certains problèmes possibles, p.ex. <code>--fsck-objects="missingEmail=ignore,badTagName=ignore". Voir l'entrée pour les options de configuration `fsck.&lt;id-msg&gt;</code> dans <a href='{{< relurl "docs/git-fsck/fr" >}}'>git-fsck[1]</a> pour plus d&#8217;informations sur les valeurs possibles de <code>&lt;id-msg&gt;</code> et <code>&lt;sévérité&gt;</code>.</p>
+<p>Une liste optionnelle d&#8217;éléments séparés par des virgules, de <code>&lt;id-msg&gt;=&lt;sévérité&gt;</code> peut être transmise pour modifier la gravité de certains problèmes possibles, p.ex. <code>--fsck-objects="missingEmail=ignore,badTagName=ignore"</code>. Voir l&#8217;entrée pour les options de configuration <code>fsck.&lt;id-msg&gt;</code> dans <a href='{{< relurl "docs/git-fsck/fr" >}}'>git-fsck[1]</a> pour plus d&#8217;informations sur les valeurs possibles de <code>&lt;id-msg&gt;</code> et <code>&lt;sévérité&gt;</code>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="git-index-pack---threadsltngt"> <a class="anchor" href="#git-index-pack---threadsltngt"></a>--threads=&lt;n&gt; </dt>

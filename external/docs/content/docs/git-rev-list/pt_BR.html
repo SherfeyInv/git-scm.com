@@ -918,6 +918,23 @@ $ git rev-list A...B</pre>
 <p>A opção <em>--missing=print</em> é como <em>allow-any</em>, mas também mostrará uma lista dos objetos que estão ausentes. As IDs dos objetos são prefixadas com um caractere &#8220;?&#8221;.</p>
 </div>
 <div class="paragraph">
+<p>The form <em>--missing=print-info</em> is like <em>print</em>, but will also print additional information about the missing object inferred from its containing object. The information is all printed on the same line with the missing object ID in the form: <code>?&lt;oid&gt; [&lt;token&gt;=&lt;value&gt;]...</code>. The <code>&lt;token&gt;=&lt;value&gt;</code> pairs containing additional information are separated from each other by a SP. The value is encoded in a token specific fashion, but SP or LF contained in value are always expected to be represented in such a way that the resulting encoded value does not have either of these two problematic bytes. Each <code>&lt;token&gt;=&lt;value&gt;</code> may be one of the following:</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>path=&lt;path&gt;</code> shows the path of the missing object inferred from a containing object. A path containing SP or special characters is enclosed in double-quotes in the C style as needed.</p>
+</li>
+<li>
+<p>The <code>type=&lt;type&gt;</code> shows the type of the missing object inferred from a containing object.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
 <p>If some tips passed to the traversal are missing, they will be considered as missing too, and the traversal will ignore them. In case we cannot get their Object ID though, an error will be raised.</p>
 </div>
 </dd>
@@ -1689,7 +1706,7 @@ Alguns espaços reservados podem depender das outras opções passadas para o mo
 </table>
 </div>
 <div class="paragraph">
-<p>As opções booleanas aceitam um valor opcional <code>[=&lt;bool&gt;]</code>. Todos os valores <code>true</code>, <code>false</code>, <code>on</code>, <code>off</code> etc. são aceitos. Consulte a subseção "booleana" em "EXEMPLOS" em <a href='{{< relurl "docs/git-config/pt_BR" >}}'>git-config[1]</a>. Caso uma opção booleana seja fornecida sem valor, ela será ativada.</p>
+<p>The boolean options accept an optional value <code>[=&lt;bool-value&gt;]</code>. The values taken by <code>--type=bool</code> git-config[1], like <code>yes</code> and <code>off</code>, are all accepted. Giving a boolean option without <code>=&lt;value&gt;</code> is equivalent to giving it with <code>=true</code>.</p>
 </div>
 <div class="paragraph">
 <p>Caso adicionemos um <code>+</code> (sinal de adição) após o <em>%</em> de um espaço reservado, um feed de linha será inserido imediatamente antes da expansão, se e somente se o espaço reservado se expandir para uma sequência de caracteres não vazio.</p>

@@ -170,7 +170,7 @@ Além disso, a parte da data é aceita nos seguintes formatos: <code>YYYY.MM.DD<
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>O comando <em>git commit</em> e o <em>git commit-tree</em> emitem um aviso se a mensagem de registro do commit fornecida a ele não se parecer com uma string UTF-8 válida, a menos que você diga explicitamente que o seu projeto usa uma codificação antiga. A maneira de definir isso é ter <code>i18n.commitEncoding</code> no arquivo <code>.git/config</code>, assim:</p>
+<p><code>git commit</code> and <code>git commit-tree</code> issue a warning if the commit log message given to it does not look like a valid UTF-8 string, unless you explicitly say your project uses a legacy encoding. The way to say this is to have <code>i18n.commitEncoding</code> in <code>.git/config</code> file, like this:</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]
@@ -182,7 +182,7 @@ Além disso, a parte da data é aceita nos seguintes formatos: <code>YYYY.MM.DD<
 </div>
 </li>
 <li>
-<p>Os comandos <em>git log</em>, <em>git show</em>, <em>git blame</em> e outros, analisam o cabeçalho <code>encoding</code> de um objeto commit e tentam recodificar a mensagem de registro em UTF-8, a menos que outro seja especificado. Você pode especificar a codificação de saída desejada com <code>i18n.logOutputEncoding</code> no arquivo <code>.git/config</code>, da seguinte maneira:</p>
+<p><code>git log</code>, <code>git show</code>, <code>git blame</code> and friends look at the <code>encoding</code> header of a commit object, and try to re-code the log message into UTF-8 unless otherwise specified. You can specify the desired output encoding with <code>i18n.logOutputEncoding</code> in <code>.git/config</code> file, like this:</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]

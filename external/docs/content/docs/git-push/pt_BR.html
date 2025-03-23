@@ -319,142 +319,22 @@ git push --force-with-lease=master:base master:master</pre>
 </dd>
 </dl>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_git_urls"><a class="anchor" href="#_git_urls"></a>GIT URLS<a id="URLS"></a></h2>
-<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
 <div class="paragraph">
-<p>Em geral as URLs contêm informações sobre o protocolo de transporte, o endereço do servidor remoto e o caminho para o repositório. Dependendo do protocolo de transporte, algumas dessas informações podem estar ausentes.</p>
-</div>
-<div class="paragraph">
-<p>O Git suporta os protocolos ssh, git, http e https (além do ftp e ftps podem ser utilizados para captura (feching), porém é ineficiente e obsoleto; não os utilize).</p>
-</div>
-<div class="paragraph">
-<p>O transporte nativo (ou seja, git:// URL) não faz a autenticação e deve ser utilizado com cuidado em redes sem segurança.</p>
+<p>Missing <code>pt_BR/urls.adoc</code></p>
 </div>
 <div class="paragraph">
-<p>As seguintes sintaxes podem ser utilizadas com eles:</p>
+<p>See original version for this content.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>ssh://[user@]host.xz[:port]/caminho/para/o/repositório.git/</p>
-</li>
-<li>
-<p>git://host.xz[:port]/caminho/para/o/repositório.git/</p>
-</li>
-<li>
-<p>http[s]://host.xz[:port]/caminho/para/o/repositório.git/</p>
-</li>
-<li>
-<p>ftp[s]://host.xz[:port]/caminho/para/o/repositório.git/</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Uma sintaxe alternativa como scp também pode ser utilizada com o protocolo ssh:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>[user@]host.xz:caminho/para/o/repositório.git/</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Essa sintaxe apenas é reconhecida caso não haja barras antes dos primeiros dois pontos. Isso ajuda a diferenciar um caminho local que contém dois pontos. Por exemplo, o caminho local <code>foo:bar</code> pode ser utilizado como um caminho absoluto ou <code>./foo:bar</code> para evitar ser mal interpretado como uma url ssh.</p>
-</div>
-<div class="paragraph">
-<p>Os protocolos ssh e git também oferecem suporte à expansão do ~nome do usuário:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>ssh://[user@]host.xz[:port]/~[user]/caminho/para/o/repositório.git/</p>
-</li>
-<li>
-<p>git://host.xz[:port]/~[user]/caminho/para/o/repositório.git/</p>
-</li>
-<li>
-<p>[user@]host.xz:/~[user]/caminho/para/o/repositório.git/</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Para os repositórios locais, as seguintes sintaxes podem ser utilizadas que também são compatíveis de forma nativa pelo Git:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>/caminho/para/o/repositório.git/</p>
-</li>
-<li>
-<p>file:///caminho/para/o/repositório.git/</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Estas duas sintaxes são basicamente equivalentes, exceto durante a clonagem, quando a primeira implica no uso da opção <code>--local</code>. Para mais detalhes, consulte <a href='{{< relurl "docs/git-clone/pt_BR" >}}'>git-clone[1]</a>.</p>
-</div>
-<div class="paragraph">
-<p>O <em>git clone</em>, <em>git fetch</em> e <em>git pull</em>, mas não o <em>git push</em>, também aceitarão um arquivo do pacote adequado. Consulte <a href='{{< relurl "docs/git-bundle/pt_BR" >}}'>git-bundle[1]</a>.</p>
-</div>
-<div class="paragraph">
-<p>Quando o Git não sabe como lidar com um determinado protocolo de transporte, quando existe, ele tenta usar o auxiliar <code>remote-&lt;transporte&gt;</code>. Para os repositórios locais, as seguintes sintaxes podem ser utilizadas:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&lt;transporte&gt;::&lt;endereço&gt;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>onde &lt;endereço&gt; pode ser um caminho, um servidor e um caminho ou uma sequência arbitrária semelhante a uma URL reconhecida por um auxiliar remoto em específico que está sendo chamado. Para mais detalhes, consulte <a href='{{< relurl "docs/gitremote-helpers/pt_BR" >}}'>gitremote-helpers[7]</a>.</p>
-</div>
-<div class="paragraph">
-<p>Se houver um grande número de repositórios remotos com nomes semelhantes e caso queira usar um formato diferente para eles (de modo que as URLs utilizadas sejam reescritas nas URLs que funcionam), você poderá criar uma seção de configuração da opção:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>	[url "&lt;url-da-base-atual&gt;"]
-		insteadOf = &lt;url-da-outra-base&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Por exemplo, com isso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>	[url "git://git.host.xz/"]
-		insteadOf = host.xz:/path/to/
-		insteadOf = work:</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>uma URL como "work:repo.git" ou como "host.xz:/caminho/para/o/repositório.git" será reescrito em qualquer contexto onde a URL seja "git://git.host.xz/repo.git".</p>
-</div>
-<div class="paragraph">
-<p>Caso queira reescrever apenas as URLs para envio por "push" (impulsionamento), é possível criar uma seção de configuração da opção:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>	[url "&lt;url da base atual&gt;"]
-		pushInsteadOf = &lt;a url da outra base&gt;</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Por exemplo, com isso:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>	[url "ssh://exemplo.org/"]
-		pushInsteadOf = git://exemplo.org/</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>uma URL como "git://exemplo.org/caminho/para/o/repositório.git" será reescrito para "ssh://exemplo.org/caminho/para/o/repositório.git" para os "pushes" (impulsionamentos), porém os "pulls" (obtenções) ainda usarão a URL original.</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -835,7 +715,7 @@ git push --force-with-lease=master:base master:master</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>pt_BR/config/push.txt</code></p>
+<p>Missing <code>pt_BR/config/push.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

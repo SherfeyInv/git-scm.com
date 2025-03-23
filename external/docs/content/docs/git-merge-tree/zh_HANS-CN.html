@@ -68,9 +68,13 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1" id="git-merge-tree---stdin"> <a class="anchor" href="#git-merge-tree---stdin"></a>--stdin </dt>
+<dd>
+<p>Read the commits to merge from the standard input rather than the command-line. See <a href="#INPUT">INPUT FORMAT</a> below for more information. Implies <code>-z</code>.</p>
+</dd>
 <dt class="hdlist1" id="git-merge-tree--z"> <a class="anchor" href="#git-merge-tree--z"></a>-z </dt>
 <dd>
-<p>在 &lt;冲突文件信息&gt; 部分不要引用文件名，每个文件名用 NUL 字符而不是换行来结束。 在信息部分也要用 NUL 字符而不是换行来开始。 更多信息见下面的 <a href="#OUTPUT">输出</a>。</p>
+<p>Do not quote filenames in the &lt;Conflicted file info&gt; section, and end each filename with a NUL character rather than newline. Also begin the messages section with a NUL character instead of a newline. See <a href="#OUTPUT">OUTPUT</a> below for more information.</p>
 </dd>
 <dt class="hdlist1" id="git-merge-tree---name-only"> <a class="anchor" href="#git-merge-tree---name-only"></a>--name-only </dt>
 <dd>
@@ -146,10 +150,8 @@ NUL</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>   0：合并后有冲突
-   1： 合并是干净的
-   &lt;0：有什么东西阻止了合并的运行（例如，文件系统拒绝对仓库对象的访问
-对象的访问被文件系统拒绝)</pre>
+<pre>0: merge had conflicts
+1: merge was clean</pre>
 </div>
 </div>
 </div>
@@ -294,7 +296,7 @@ git update-ref $BRANCH1 $NEWCOMMIT</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_输入格式"><a class="anchor" href="#_输入格式"></a>输入格式</h2>
+<h2 id="INPUT"><a class="anchor" href="#INPUT"></a>输入格式</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>git merge-tree --stdin</em> 的输入格式是完全基于文本的。每一行都有这样的格式：</p>

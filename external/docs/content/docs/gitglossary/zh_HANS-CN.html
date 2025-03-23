@@ -388,15 +388,15 @@ aliases:
 <dd>
 <p>语义不同于普通引用的引用。这些引用可以通过正常的 Git 命令访问，但在某些情况下可能与正常引用的行为不同，例如<a href='{{< relurl "docs/git-update-ref/zh_HANS-CN" >}}'>git-update-ref[1]</a>。</p>
 <div class="paragraph">
-<p>The following pseudorefs are known to Git:</p>
+<p>Git 已知的伪引用如下：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>FETCH_HEAD</code> is written by <a href='{{< relurl "docs/git-fetch/zh_HANS-CN" >}}'>git-fetch[1]</a> or <a href='{{< relurl "docs/git-pull/zh_HANS-CN" >}}'>git-pull[1]</a>. It may refer to multiple object IDs. Each object ID is annotated with metadata indicating where it was fetched from and its fetch status.</p>
+<p><code>FETCH_HEAD</code> 由 <a href='{{< relurl "docs/git-fetch/zh_HANS-CN" >}}'>git-fetch[1]</a> 或 <a href='{{< relurl "docs/git-pull/zh_HANS-CN" >}}'>git-pull[1]</a> 写入。它可以指向多个对象 ID。每个对象 ID 都有元数据注释，说明其取自何处以及取回状态。</p>
 </li>
 <li>
-<p><code>MERGE_HEAD</code> is written by <a href='{{< relurl "docs/git-merge/zh_HANS-CN" >}}'>git-merge[1]</a> when resolving merge conflicts. It contains all commit IDs which are being merged.</p>
+<p><a href='{{< relurl "docs/git-merge/zh_HANS-CN" >}}'>git-merge[1]</a> 在解决合并冲突时会写入 <code>MERGE_HEAD</code>。它包含所有正在合并的提交 ID。</p>
 </li>
 </ul>
 </div>
@@ -423,7 +423,7 @@ aliases:
 </dd>
 <dt class="hdlist1" id="gitglossary-aiddefrefaref"> <a class="anchor" href="#gitglossary-aiddefrefaref"></a><a id="def_ref"></a>引用 (ref) </dt>
 <dd>
-<p>A name that points to an <a href="#def_object_name">object name</a> or another ref (the latter is called a <a href="#def_symref">symbolic ref</a>). For convenience, a ref can sometimes be abbreviated when used as an argument to a Git command; see <a href='{{< relurl "docs/gitrevisions/zh_HANS-CN" >}}'>gitrevisions[7]</a> for details. Refs are stored in the <a href="#def_repository">repository</a>.</p>
+<p>一个指向<a href="#def_object_name">对象名称</a>或另一个引用（后者被称为<a href="#def_symref">符号引用</a>）的名称。 为方便起见，当作为 Git 命令的参数时，引用可以使用缩写；参见 <a href='{{< relurl "docs/gitrevisions/zh_HANS-CN" >}}'>gitrevisions[7]</a> 。 引用保存在<a href="#def_repository">仓库</a>中。</p>
 <div class="paragraph">
 <p>引用名称空间是分层的。引用名称必须以 <code>refs/</code> 开头，或者位于层次结构的根目录中。对于后者，它们的名称必须遵循以下规则：</p>
 </div>
@@ -453,7 +453,7 @@ aliases:
 <li>
 <p><code>MERGE_AUTOSTASH</code></p>
 <div class="paragraph">
-<p>Different subhierarchies are used for different purposes. For example, the <code>refs/heads/</code> hierarchy is used to represent local branches whereas the <code>refs/tags/</code> hierarchy is used to represent local tags..</p>
+<p>不同的子层次结构用于不同的目的。如 <code>refs/heads/</code> 层次用于代表本地分支，而 <code>refs/tags/</code> 层次结构用于表示本地标签。</p>
 </div>
 </li>
 </ul>
@@ -465,7 +465,7 @@ aliases:
 </dd>
 <dt class="hdlist1" id="gitglossary-aiddefrefspecarefspec"> <a class="anchor" href="#gitglossary-aiddefrefspecarefspec"></a><a id="def_refspec"></a>引用规范 (refspec) </dt>
 <dd>
-<p>A "refspec" is used by <a href="#def_fetch">fetch</a> and <a href="#def_push">push</a> to describe the mapping between remote <a href="#def_ref">ref</a> and local ref. See <a href='{{< relurl "docs/git-fetch/zh_HANS-CN" >}}'>git-fetch[1]</a> or <a href='{{< relurl "docs/git-push/zh_HANS-CN" >}}'>git-push[1]</a> for details.</p>
+<p>“引用规范” 是<a href="#def_fetch">获取</a>和<a href="#def_push">推送</a>用以描述远程<a href="#def_ref">引用</a>和本地引用之间的映射关系。详细说明参见 <a href='{{< relurl "docs/git-fetch/zh_HANS-CN" >}}'>git-fetch[1]</a> 或 <a href='{{< relurl "docs/git-push/zh_HANS-CN" >}}'>git-push[1]</a>。</p>
 </dd>
 <dt class="hdlist1" id="gitglossary-aiddefremotearemoterepository"> <a class="anchor" href="#gitglossary-aiddefremotearemoterepository"></a><a id="def_remote"></a>远程仓库 (remote repository) </dt>
 <dd>
@@ -535,9 +535,9 @@ aliases:
 <dd>
 <p>一个常规的 Git <a href="#def_branch">分支</a>，被开发者用来确定一个概念性的开发路线。由于新建一个分支通常需要很小的代价，所以通常开发中会包含几个小的分支，每个分支都有着非常明确的概念或小的增量但相关的变化。</p>
 </dd>
-<dt class="hdlist1" id="gitglossary-aiddeftraileratrailer"> <a class="anchor" href="#gitglossary-aiddeftraileratrailer"></a><a id="def_trailer"></a>trailer </dt>
+<dt class="hdlist1" id="gitglossary-aiddeftrailera"> <a class="anchor" href="#gitglossary-aiddeftrailera"></a><a id="def_trailer"></a>尾注 </dt>
 <dd>
-<p>Key-value metadata. Trailers are optionally found at the end of a commit message. Might be called "footers" or "tags" in other communities. See <a href='{{< relurl "docs/git-interpret-trailers/zh_HANS-CN" >}}'>git-interpret-trailers[1]</a>.</p>
+<p>键值元数据。尾注可选地位于提交消息的末尾。在其他社区中可能被称为 “页脚” 或 “标签”。参见 <a href='{{< relurl "docs/git-interpret-trailers/zh_HANS-CN" >}}'>git-interpret-trailers[1]</a>。</p>
 </dd>
 <dt class="hdlist1" id="gitglossary-aiddeftreeatree"> <a class="anchor" href="#gitglossary-aiddeftreeatree"></a><a id="def_tree"></a>树/目录树 (tree) </dt>
 <dd>

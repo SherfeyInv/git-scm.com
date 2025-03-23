@@ -148,7 +148,7 @@ aliases:
 <dt class="hdlist1" id="git-status---columnltgt"> <a class="anchor" href="#git-status---columnltgt"></a>--column[=&lt;选项&gt;] </dt>
 <dt class="hdlist1" id="git-status---no-column"> <a class="anchor" href="#git-status---no-column"></a>--no-column </dt>
 <dd>
-<p>在列中显示未跟踪的文件。选项语法见配置变量`column.status`。<code>--column`和</code>--no-column`没有选项，分别相当于&#8217;always&#8217;和&#8217;never'。</p>
+<p>在列中显示未跟踪的文件。选项语法见配置变量`column.status`。<code>--column</code> 和 <code>--no-column</code> 没有选项，分别相当于&#8217;always&#8217;和&#8217;never'。</p>
 </dd>
 <dt class="hdlist1" id="git-status---ahead-behind"> <a class="anchor" href="#git-status---ahead-behind"></a>--ahead-behind </dt>
 <dt class="hdlist1" id="git-status---no-ahead-behind"> <a class="anchor" href="#git-status---no-ahead-behind"></a>--no-ahead-behind </dt>
@@ -506,7 +506,7 @@ U U未合并，都被修改
 <h2 id="_背景刷新"><a class="anchor" href="#_背景刷新"></a>背景刷新</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>默认情况下，<code>git status`会自动刷新索引，更新工作树上缓存的状态信息，并将结果写出来。写出更新的索引是一种优化，严格来说并无必要（`status`为自己计算数值，但写出它们只是为了避免后续程序重复我们的计算）。当`status`在后台运行时，在写入过程中持有的锁可能与其他同时进行的进程发生冲突，导致它们失败。在后台运行`status`的脚本应该考虑使用`git --no-optional-locks status</code>（详见<a href='{{< relurl "docs/git/zh_HANS-CN" >}}'>git[1]</a>）。</p>
+<p>默认情况下，<code>git status</code> 会自动刷新索引，更新工作树上缓存的状态信息，并将结果写出来。写出更新的索引是一种优化，严格来说并无必要（<code>status</code> 为自己计算数值，但写出它们只是为了避免后续程序重复我们的计算）。当 <code>status</code> 在后台运行时，在写入过程中持有的锁可能与其他同时进行的进程发生冲突，导致它们失败。在后台运行 <code>status</code> 的脚本应该考虑使用 <code>git --no-optional-locks status</code> （详见<a href='{{< relurl "docs/git/zh_HANS-CN" >}}'>git[1]</a>）。</p>
 </div>
 </div>
 </div>

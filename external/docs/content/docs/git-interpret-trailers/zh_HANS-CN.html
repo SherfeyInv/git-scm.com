@@ -160,115 +160,25 @@ Signed-off-by: Bob &lt;bob@example.com&gt;</pre>
 <div class="sect1">
 <h2 id="_配置变量"><a class="anchor" href="#_配置变量"></a>配置变量</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1" id="git-interpret-trailers-trailerseparators"> <a class="anchor" href="#git-interpret-trailers-trailerseparators"></a>trailer.separators </dt>
-<dd>
-<p>这个选项告诉我们哪些字符可以被识别为尾注分隔符。默认情况下，只有 <em>:</em> 被识别为尾注分隔符，但为了与其他 git 命令兼容，命令行上总是接受 <em>=</em>。</p>
 <div class="paragraph">
-<p>当这个尾注的配置中没有指定其他分隔符时，这个选项给出的第一个字符将是默认使用的字符。</p>
+<p>本节中这一行以下的内容都是从 <a href='{{< relurl "docs/git-config/zh_HANS-CN" >}}'>git-config[1]</a> 文档中摘录的。其内容与那里的内容相同：</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Missing <code>zh_HANS-CN/config/trailer.adoc</code></p>
 </div>
 <div class="paragraph">
-<p>例如，如果该选项的值为 "%=$"，那么只有使用 "&lt;键&gt;&lt;分隔符&gt;&lt;值&gt;" 格式（&lt;分隔符&gt; 包含 <em>%</em>、<em>=</em> 或 <em>$</em>，然后是空格）的行才会被视为尾注。而 <em>%</em> 将是默认使用的分隔符，因此默认情况下，预告片将显示如下：&lt;键&gt;% &lt;值&gt;'（在键和值之间会出现一个百分号和一个空格）。</p>
+<p>See original version for this content.</p>
 </div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerwhere"> <a class="anchor" href="#git-interpret-trailers-trailerwhere"></a>trailer.where </dt>
-<dd>
-<p>这个选项告诉人们新的尾注将被添加到哪里。</p>
-<div class="paragraph">
-<p>默认是 <code>end</code>，也可以是 <code>start</code>，<code>after</code> 或 <code>before</code>。</p>
-</div>
-<div class="paragraph">
-<p>如果它是 <code>end</code>，那么每个新的拖车将出现在现有拖车的末尾。</p>
-</div>
-<div class="paragraph">
-<p>如果是 <code>start</code>，那么每个新尾注将出现在现有尾注的开端，而不是结尾。</p>
-</div>
-<div class="paragraph">
-<p>如果是 <code>after</code>，那么每个新的尾注将出现在具有相同 &lt;键&gt; 的最后一个尾注之后。</p>
-</div>
-<div class="paragraph">
-<p>如果是 <code>before</code>，那么每个新的尾注将出现在具有相同 &lt;键&gt; 的第一个尾注之前。</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerifexists"> <a class="anchor" href="#git-interpret-trailers-trailerifexists"></a>trailer.ifexists </dt>
-<dd>
-<p>通过该选项，可以选择在输入中至少有一个相同 &lt;键&gt; 的尾注时将执行的操作。</p>
-<div class="paragraph">
-<p>这个选项的有效值是： <code>addIfDifferentNeighbor</code>（这是默认值），<code>addIfDifferent</code>，<code>add</code>，<code>replace</code> 或 <code>doNothing</code>。</p>
-</div>
-<div class="paragraph">
-<p>使用 <code>addIfDifferentNeighbor</code>，只有在没有相同（&lt;键&gt;, &lt;值&gt;）的尾注对在新尾注的上方或下方，才会添加新的尾注。</p>
-</div>
-<div class="paragraph">
-<p>使用 <code>addIfDifferent</code>，只有当信息中没有相同的（&lt;键&gt;, &lt;值&gt;）尾注时，才会添加新的尾注。</p>
-</div>
-<div class="paragraph">
-<p>使用 <code>add</code>，一个新的尾注将被添加，即使一些具有相同（&lt;键&gt;, &lt;值&gt;）对的尾注已经在信息中。</p>
-</div>
-<div class="paragraph">
-<p>使用 <code>replace</code>，一个具有相同 &lt;键&gt; 的现有尾注将被删除，新的尾注将被添加。被删除的尾注将是离新尾注位置最近的一个（具有相同的&lt;键&gt;）。</p>
-</div>
-<div class="paragraph">
-<p>使用 <code>doNothing</code>，将不做任何事情；也就是说，如果消息中已经有一个相同的 &lt;键&gt;，将不会再添加新的尾注。</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerifmissing"> <a class="anchor" href="#git-interpret-trailers-trailerifmissing"></a>trailer.ifmissing </dt>
-<dd>
-<p>这个选项使我们有可能选择当信息中还没有任何具有相同 &lt;键&gt; 的尾注时，将执行什么行为。</p>
-<div class="paragraph">
-<p>这个选项的有效值是： <code>add</code>（这是默认值）和 <code>doNothing</code>。</p>
-</div>
-<div class="paragraph">
-<p>使用 <code>add</code>，一个新的尾注将被添加。</p>
-</div>
-<div class="paragraph">
-<p>有了 <code>doNothing</code>，就不会有任何事情发生。</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltgtkey"> <a class="anchor" href="#git-interpret-trailers-trailerltgtkey"></a>trailer.&lt;键别名&gt;.key </dt>
-<dd>
-<p>为 &lt;键&gt; 定义 &lt;键别名&gt; 。&lt;键别名&gt; 必须是 &lt;键&gt; 的前缀（大小写并不重要）。例如，在 <code>git config trailer.ack.key "Acked-by"</code> 中，"Acked-by" 是 &lt;键&gt;，"ack" 是 &lt;键别名&gt;。这种配置允许在命令行上使用 "ack" &lt;键别名&gt; 调用较短的 <code>--trailer "ack:..."</code>，而不是较长的 <code>--trailer "Acked-by:..."</code>。</p>
-<div class="paragraph">
-<p>这个 <code>key</code> 将被用来代替尾注中的 &lt;键&gt;。在这个键的末端，可以出现一个分隔符，然后是一些空格字符。默认情况下，唯一有效的分隔符是 <em>:</em>，但这可以通过 <code>trailer.separators</code> 配置变量来改变。</p>
-</div>
-<div class="paragraph">
-<p>如果密钥中有分隔符，则在添加尾注时会覆盖默认分隔符。</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltgtwhere"> <a class="anchor" href="#git-interpret-trailers-trailerltgtwhere"></a>trailer.&lt;键别名&gt;.where </dt>
-<dd>
-<p>这个选项与 <em>trailer.where</em> 配置变量的取值相同，对于指定 &lt;键别名&gt; 的尾注，它覆盖了该选项所指定的内容。</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltgtifexists"> <a class="anchor" href="#git-interpret-trailers-trailerltgtifexists"></a>trailer.&lt;键别名&gt;.ifexists </dt>
-<dd>
-<p>这个选项与 <em>trailer.ifexists</em> 配置变量的取值相同，对于具有指定 &lt;键别名&gt; 的尾注，它覆盖了该选项所指定的内容。</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltgtifmissing"> <a class="anchor" href="#git-interpret-trailers-trailerltgtifmissing"></a>trailer.&lt;键别名&gt;.ifmissing </dt>
-<dd>
-<p>这个选项与 <em>trailer.ifmissing</em> 配置变量的取值相同，对于指定 &lt;键别名&gt; 的尾注，它覆盖该选项所指定的内容。</p>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltgtcommand"> <a class="anchor" href="#git-interpret-trailers-trailerltgtcommand"></a>trailer.&lt;键别名&gt;.command </dt>
-<dd>
-<p>已弃用，改用 <em>trailer.&lt;键别名&gt;.cmd</em>。 该选项的作用与 <em>trailer.&lt;键别名&gt;.cmd</em> 相同，但它不会将任何内容作为参数传递给指定的命令。 相反，子串 $ARG 的第一次出现会被作为参数传递的 &lt;值&gt; 所替代。</p>
-<div class="paragraph">
-<p>请注意，用户命令中的 $ARG 只被替换一次，而原来替换 $ARG 的方法并不安全。</p>
-</div>
-<div class="paragraph">
-<p>当 <em>trailer.&lt;键别名&gt;.cmd</em> 和 <em>trailer.&lt;键别名&gt;.command</em> 都是针对同一个 &lt;键别名&gt; 给出的时候，使用 <em>trailer.&lt;键别名&gt;.cmd</em>，<em>trailer.&lt;键别名&gt;.command</em> 被忽略。</p>
-</div>
-</dd>
-<dt class="hdlist1" id="git-interpret-trailers-trailerltgtcmd"> <a class="anchor" href="#git-interpret-trailers-trailerltgtcmd"></a>trailer.&lt;键别名&gt;.cmd </dt>
-<dd>
-<p>这个选项可以用来指定一个将被调用的shell 命令：一次自动添加一个指定的 &lt;键别名&gt; 的尾注，然后每次用 <em>--trailer &lt;键别名&gt;=&lt;值&gt;</em> 参数来修改这个选项将产生的尾注的 &lt;值&gt;。</p>
-<div class="paragraph">
-<p>当第一次调用指定的命令来添加带有指定 &lt;token&gt; 的尾注时，其行为就像在 "git interpret-trailers" 命令的开头添加了一个特殊的 <em>--trailer &lt;键别名&gt;=&lt;值&gt;</em> 参数，其中 &lt;值&gt; 被认为是该命令的标准输出，其前面和后面的空白被修剪掉。</p>
-</div>
-<div class="paragraph">
-<p>如果在命令行中还传递了一些 <em>--trailer &lt;键别名&gt;=&lt;值&gt;</em> 参数，那么对于这些参数中的每一个，都会以相同的 &lt;键别名&gt; 再次调用该命令。而这些参数的 &lt;值&gt; 部分，如果有的话，将作为第一个参数传递给命令。这样，命令可以产生一个从 <em>--trailer &lt;键别名&gt;=&lt;值&gt;</em> 参数中传递的 &lt;值&gt; 计算出来的 &lt;值&gt;。</p>
-</div>
-</dd>
-</dl>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>

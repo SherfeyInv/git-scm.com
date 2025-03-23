@@ -25,10 +25,11 @@ aliases:
 <pre class="content"><em>git pack-objects</em> [-q | --progress | --all-progress] [--all-progress-implied]
 	[--no-reuse-delta] [--delta-base-offset] [--non-empty]
 	[--local] [--incremental] [--window=&lt;n&gt;] [--depth=&lt;n&gt;]
-	[--revs [--unpacked | --all]] [--keep-pack=&lt;包名&gt;]
-	[--cruft] [--cruft-expiration=&lt;时间&gt;]
-	[--stdout [--filter=&lt;过滤选项&gt;] | &lt;基础名&gt;]
-	[--shallow] [--keep-true-parents] [--[no-]sparse] &lt; &lt;对象列表&gt;</pre>
+	[--revs [--unpacked | --all]] [--keep-pack=&lt;pack-name&gt;]
+	[--cruft] [--cruft-expiration=&lt;time&gt;]
+	[--stdout [--filter=&lt;filter-spec&gt;] | &lt;base-name&gt;]
+	[--shallow] [--keep-true-parents] [--[no-]sparse]
+	[--name-hash-version=&lt;n&gt;] &lt; &lt;object-list&gt;</pre>
 </div>
 </div>
 </div>
@@ -240,6 +241,16 @@ aliases:
 <dt class="hdlist1" id="git-pack-objects---delta-islands"> <a class="anchor" href="#git-pack-objects---delta-islands"></a>--delta-islands </dt>
 <dd>
 <p>根据 “岛屿” 限制增量匹配。请参阅下文的增量匹配。</p>
+</dd>
+<dt class="hdlist1" id="git-pack-objects---name-hash-versionltngt"> <a class="anchor" href="#git-pack-objects---name-hash-versionltngt"></a>--name-hash-version=&lt;n&gt; </dt>
+<dd>
+<p>While performing delta compression, Git groups objects that may be similar based on heuristics using the path to that object. While grouping objects by an exact path match is good for paths with many versions, there are benefits for finding delta pairs across different full paths. Git collects objects by type and then by a "name hash" of the path and then by size, hoping to group objects that will compress well together.</p>
+<div class="paragraph">
+<p>The default name hash version is <code>1</code>, which prioritizes hash locality by considering the final bytes of the path as providing the maximum magnitude to the hash function. This version excels at distinguishing short paths and finding renames across directories. However, the hash function depends primarily on the final 16 bytes of the path. If there are many paths in the repo that have the same final 16 bytes and differ only by parent directory, then this name-hash may lead to too many collisions and cause poor results. At the moment, this version is required when writing reachability bitmap files with <code>--write-bitmap-index</code>.</p>
+</div>
+<div class="paragraph">
+<p>The name hash version <code>2</code> has similar locality features as version <code>1</code>, except it considers each path component separately and overlays the hashes with a shift. This still prioritizes the final bytes of the path, but also "salts" the lower bits of the hash using the parent directory names. This method allows for some of the locality benefits of version <code>1</code> while breaking most of the collisions from a similarly-named file appearing in many different directories. At the moment, this version is not allowed when writing reachability bitmap files with <code>--write-bitmap-index</code> and it will be automatically changed to version <code>1</code>.</p>
+</div>
 </dd>
 </dl>
 </div>

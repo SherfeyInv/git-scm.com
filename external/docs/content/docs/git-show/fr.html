@@ -562,10 +562,10 @@ Par défaut "&#160;<code>-&gt;</code>&#160;".</p>
 <p><em>abbrev=&lt;nombre&gt;</em> : Au lieu d&#8217;utiliser le nombre de chiffres hexadécimaux par défaut (qui varie en fonction du nombre d&#8217;objets dans le dépôt avec une valeur par défaut de 7) du nom d&#8217;objet abrégé, utiliser &lt;nombre&gt; chiffres, ou autant de chiffres que nécessaire pour former un nom unique.</p>
 </li>
 <li>
-<p><em>match=&lt;motif&gt;</em> : Ne considère que les étiquettes correspondant au motif <code>glob(7)</code> donné, à l&#8217;exclusion du préfixe "refs/tags/".</p>
+<p><em>match=&lt;motif&gt;</em> : Ne considère que les étiquettes correspondant au motif <code>glob(7)</code> donné, à l&#8217;exclusion du préfixe "refs/tags/".</p>
 </li>
 <li>
-<p>exclude=&lt;motif&gt;' : Ne pas prendre en compte les étiquettes correspondant au motif <code>glob(7)</code> donné, en excluant le préfixe "refs/tags/".</p>
+<p>exclude=&lt;motif&gt;' : Ne pas prendre en compte les étiquettes correspondant au motif <code>glob(7)</code> donné, en excluant le préfixe "refs/tags/".</p>
 </li>
 </ul>
 </div>
@@ -701,7 +701,7 @@ Certains espaces réservés peuvent dépendre d&#8217;autres options données au
 </table>
 </div>
 <div class="paragraph">
-<p>Les options booléennes acceptent une valeur optionnelle <code>[=&lt;booléen&gt;]</code>. Les valeurs <code>true</code>, <code>false</code>, <code>on</code>, <code>off</code> etc. sont toutes acceptées. Voir la sous-section "booléen" dans "EXEMPLES" dans <a href='{{< relurl "docs/git-config/fr" >}}'>git-config[1]</a>. Si une option booléenne est donnée sans valeur, elle est activée.</p>
+<p>Les options booléennes acceptent une valeur optionnelle <code>[=&lt;booléen&gt;]</code>. Les valeurs acceptées par l&#8217;option`--type=bool` de <a href='{{< relurl "docs/git-config/fr" >}}'>git-config[1]</a>, comme <code>yes</code> et`off` sont toutes acceptées. Fournir une option booléenne sans <code>=&lt;valeur&gt;</code> est équivalent à fournir <code>=&lt;true&gt;</code>.</p>
 </div>
 <div class="paragraph">
 <p>Si vous ajoutez un <code>+</code> (signe plus) après'%' d&#8217;un espace réservé, un saut de ligne est inséré immédiatement avant l&#8217;expansion si et seulement si l&#8217;espace réservé se développe en une chaîne non vide.</p>
@@ -1687,7 +1687,7 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>git commit</code> et <code>git commit-tree</code> affichent un avertissement si le message de validation fourni ne semble pas être une chaîne de caractères UTF-8 valide, à moins que vous n&#8217;indiquiez explicitement que votre projet utilise un encodage ancien. La manière de l&#8217;indiquer est d&#8217;avoir <code>i18n.commitEncoding</code> dans <code>.git/config</code>, comme ceci :</p>
+<p><code>git commit</code> et <code>git commit-tree</code> affichent un avertissement si le message de validation fourni ne semble pas être une chaîne de caractères UTF-8 valide, à moins que vous n&#8217;indiquiez explicitement que votre projet utilise un encodage ancien. La manière de l&#8217;indiquer est d&#8217;avoir <code>i18n.commitEncoding</code> dans <code>.git/config</code>, comme ceci :</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]
@@ -1699,7 +1699,7 @@ deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
 </div>
 </li>
 <li>
-<p>Sauf indication contraire, <em>git log</em>, <em>git show</em>, <em>git blame</em> et consort lisent l&#8217;entête <code>encoding</code> d&#8217;un objet commit et essaient de ré-encoder le message de validation en UTF-8. Vous pouvez spécifier l&#8217;encodage de sortie que vous souhaitez avec <code>i18n.logOutputEncoding</code> dans le fichier <code>.git/config</code>, comme ceci :</p>
+<p>Sauf indication contraire, <code>git log</code>, <code>git show</code>, <code>git blame</code> et consort lisent l&#8217;entête <code>encoding</code> d&#8217;un objet commit et essaient de ré-encoder le message de validation en UTF-8. Vous pouvez spécifier l&#8217;encodage de sortie que vous souhaitez avec <code>i18n.logOutputEncoding</code> dans le fichier <code>.git/config</code>, comme ceci :</p>
 <div class="listingblock">
 <div class="content">
 <pre>[i18n]

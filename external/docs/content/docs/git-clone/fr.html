@@ -26,7 +26,7 @@ aliases:
 	[-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
 	[-o &lt;nom&gt;] [-b &lt;nom&gt;] [-u &lt;upload-pack&gt;] [--reference &lt;dépôt&gt;]
 	[--dissociate] [--separate-git-dir &lt;répertoire-git&gt;]
-	[--depth &lt;profondeur&gt;] [--[no-]single-branch] [--no-tags]
+	[--depth &lt;profondeur&gt;] [--[no-]single-branch] [--[no-]tags]
 	[--recurse-submodules[=&lt;spéc-de-chemin&gt;]] [--[no-]shallow-submodules]
 	[--[no-]remote-submodules] [--jobs &lt;n&gt;] [--sparse] [--[no-]reject-shallow]
 	[--filter=&lt;filtre&gt;] [--also-filter-submodules]] [--] &lt;dépôt&gt;
@@ -115,7 +115,7 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-clone-code--server-optionltoptiongtcode"> <a class="anchor" href="#git-clone-code--server-optionltoptiongtcode"></a><code>--server-option=&lt;option&gt;</code> </dt>
 <dd>
-<p>Transmettre la chaîne donnée au serveur lors d&#8217;une communication utilisant la version 2 du protocole. La chaîne donnée ne doit pas contenir de caractère NUL ou LF. La gestion par le serveur des options du serveur, y compris les options inconnues, est spécifique au serveur. Lorsque plusieurs <code>--server-option=&lt;option&gt;</code> sont donnés, ils sont tous envoyés à l&#8217;autre côté dans l&#8217;ordre indiqué sur la ligne de commande. Quand <code>--server-option=&lt;option&gt;</code> est fourni sur la ligne de commande, les valeurs de la variable de configuration <code>remote.&lt;nom&gt;.serverOption</code> sont utilisées à la place.</p>
+<p>Transmit the given string to the server when communicating using protocol version 2. The given string must not contain a NUL or LF character. The server&#8217;s handling of server options, including unknown ones, is server-specific. When multiple <code>--server-option=&lt;option&gt;</code> are given, they are all sent to the other side in the order listed on the command line. When no <code>--server-option=</code><em>&lt;option&gt;</em> is given from the command line, the values of configuration variable <code>remote.&lt;name&gt;.serverOption</code> are used instead.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code-ncode"> <a class="anchor" href="#git-clone-code-ncode"></a><code>-n</code> </dt>
 <dt class="hdlist1" id="git-clone-code--no-checkoutcode"> <a class="anchor" href="#git-clone-code--no-checkoutcode"></a><code>--no-checkout</code> </dt>
@@ -156,6 +156,10 @@ aliases:
 <dd>
 <p>Au lieu de pointer la <code>HEAD</code> nouvellement créée sur la branche pointée par la <code>HEAD</code> du dépôt cloné, pointer plutôt sur la branche <em>&lt;nom&gt;</em>. Dans un dépôt non-nu, c&#8217;est la branche qui sera extraite. <code>--branch</code> accepte aussi des étiquettes et détache alors la <code>HEAD</code> à ce commit dans le dépôt résultant.</p>
 </dd>
+<dt class="hdlist1" id="git-clone-code--revisionltrvgtcode"> <a class="anchor" href="#git-clone-code--revisionltrvgtcode"></a><code>--revision=&lt;rév&gt;</code> </dt>
+<dd>
+<p>Créer un nouveau dépôt, et récupérer l&#8217;historique menant à la révision donnée <em>&lt;rév&gt;</em> (et rien d&#8217;autre), sans faire de branche de suivi à distance, et sans faire de branche locale, et détacher <code>HEAD</code> à <em>&lt;rév&gt;</em>. L&#8217;argument peut être un nom de référence (par exemple <code>refs/heads/main</code> ou <code>refs/tags/v1.0</code>) qui se pèle vers un commit, ou un nom d&#8217;objet hexadécimal. Cette option est incompatible avec <code>--branch</code> et <code>--mirror</code>.</p>
+</dd>
 <dt class="hdlist1" id="git-clone-code-ucodeemltupload-packgtem"> <a class="anchor" href="#git-clone-code-ucodeemltupload-packgtem"></a><code>-u</code> <em>&lt;upload-pack&gt;</em> </dt>
 <dt class="hdlist1" id="git-clone-code--upload-packcodeemltupload-packgtem"> <a class="anchor" href="#git-clone-code--upload-packcodeemltupload-packgtem"></a><code>--upload-pack</code> <em>&lt;upload-pack&gt;</em> </dt>
 <dd>
@@ -165,8 +169,8 @@ aliases:
 <dd>
 <p>Spécifier le répertoire depuis lequel les modèles vont être tirés ; (voir la section « RÉPERTOIRE DE MODÈLES » de <a href='{{< relurl "docs/git-init/fr" >}}'>git-init[1]</a>.)</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code-cltnomgtltvaleurgtcode"> <a class="anchor" href="#git-clone-code-cltnomgtltvaleurgtcode"></a><code>-c &lt;nom&gt;=&lt;valeur&gt;</code> </dt>
-<dt class="hdlist1" id="git-clone-code--configltclgtltvaleurgtcode"> <a class="anchor" href="#git-clone-code--configltclgtltvaleurgtcode"></a><code>--config &lt;clé&gt;=&lt;valeur&gt;</code> </dt>
+<dt class="hdlist1" id="git-clone-code-ccodecodeltkeygtltvaluegtcode"> <a class="anchor" href="#git-clone-code-ccodecodeltkeygtltvaluegtcode"></a><code>-c</code> <code>&lt;key&gt;=&lt;value&gt;</code> </dt>
+<dt class="hdlist1" id="git-clone-code--configcodecodeltkeygtltvaluegtcode"> <a class="anchor" href="#git-clone-code--configcodecodeltkeygtltvaluegtcode"></a><code>--config</code> <code>&lt;key&gt;=&lt;value&gt;</code> </dt>
 <dd>
 <p>Définir une variable de configuration dans le dépôt nouvellement créé ; ceci prend effet immédiatement après que le dépôt est initialisé, mais avant que l&#8217;historique distant ne soit récupéré ou qu&#8217;un fichier soit extrait. La <em>&lt;clé&gt;</em> est dans le même format qu&#8217;attendu par <a href='{{< relurl "docs/git-config/fr" >}}'>git-config[1]</a> (par exemple, <code>core.eol=true</code>). Si des valeurs multiples sont fournies pour la même clé, chaque valeur sera écrite dans le fichier de configuration. Ceci sécurise, par exemple, l&#8217;ajout de spécificateurs de référence de récupération supplémentaires pour le dépôt distant d&#8217;origine.</p>
 <div class="paragraph">
@@ -189,9 +193,14 @@ aliases:
 <dd>
 <p>Cloner uniquement l&#8217;historique menant au sommet d&#8217;une seule branche, soit spécifiée par l&#8217;option <code>--branch</code>, soit la branche primaire sur laquelle la <code>HEAD</code> du distant pointe. Des récupérations subséquentes dans le dépôt résultant ne mettront à jour que la branche de suivi à distance de la branche pour laquelle cette option a été utilisée lors du clonage initial. Si la <code>HEAD</code> du dépôt distant ne pointait sur aucune branche quand le clonage <code>--single-branch</code> a été fait, aucune branche de suivi à distance n&#8217;est créée.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--no-tags</code> </dt>
+<dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--[no-]tags</code> </dt>
 <dd>
-<p>Ne cloner aucune étiquette et positionner <code>remote.&lt;distant&gt;.tagOpt=--no-tags</code> en configuration, de sorte que les futures opérations <code>git pull</code> et <code>git fetch</code> ne tireront aucune étiquette. Les récupérations explicites d&#8217;étiquette fonctionneront toujours (voir <a href='{{< relurl "docs/git-fetch/fr" >}}'>git-fetch[1]</a>).</p>
+<p>Contrôler si les étiquettes seront clonées ou non. Quand <code>--no-tags</code> est fourni, l&#8217;option devient permanente en réglant le paramètre de configuration <code>remote.&lt;distant&gt;.tagOpt=--no-tags</code>, de sorte que les futurs <code>git pull</code> et <code>git fetch</code> ne tireront aucune étiquette. Les récupérations explicites d&#8217;étiquette fonctionneront toujours (voir <a href='{{< relurl "docs/git-fetch/fr" >}}'>git-fetch[1]</a>).</p>
+<div class="literalblock">
+<div class="content">
+<pre>Par défaut, les étiquettes sont clonées et le passage de `--tags` est donc généralement une opération nulle, à moins qu'il annule un précédent `--no-tags`.</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Peut être utilisé en conjonction avec <code>--single-branch</code> pour cloner et maintenir une branche sans autre référence qu&#8217;une unique branche clonée. C&#8217;est utile pour, par exemple, maintenir un minimum de clones de la branche par défaut d&#8217;un dépôt pour l&#8217;indexation de la recherche.</p>
 </div>
@@ -457,7 +466,7 @@ $ cd mon-linux</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/init.txt</code></p>
+<p>Missing <code>fr/config/init.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -474,7 +483,7 @@ $ cd mon-linux</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>fr/config/clone.txt</code></p>
+<p>Missing <code>fr/config/clone.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

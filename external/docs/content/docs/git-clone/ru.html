@@ -26,7 +26,7 @@ aliases:
 	  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
 	  [-o &lt;имя&gt;] [-b &lt;ветка&gt;] [-u &lt;путь-загрузки&gt;] [--reference &lt;репозиторий&gt;]
 	  [--dissociate] [--separate-git-dir &lt;каталог-git&gt;]
-	  [--depth &lt;глубина&gt;] [--[no-]single-branch] [--no-tags]
+	  [--depth &lt;глубина&gt;] [--[no-]single-branch] [--[no-]tags]
 	  [--recurse-submodules[=&lt;спецификатор-пути&gt;]] [--[no-]shallow-submodules]
 	  [--[no-]remote-submodules] [--jobs &lt;n&gt;] [--sparse] [--[no-]reject-shallow]
 	  [--filter=&lt;спецификатор-фильтра&gt;] [--also-filter-submodules]]
@@ -156,6 +156,10 @@ aliases:
 <dd>
 <p>Вместо того, чтобы вновь созданный <code>HEAD</code> указывал, на ту же ветку, на которую указывает <code>HEAD</code> клонировуемого репозитория, направить его на ветку с указанным <em>&lt;именем&gt;</em>. Репозиторий (не являющийся голым) будет также переключен на эту ветку. Параметр <code>--branch</code> также принимает <em>&lt;имена&gt;</em> меток; в таком случае после клонирования полученный репозиторий будет находится в состоянии с отсоединённым указателем <code>HEAD</code>.</p>
 </dd>
+<dt class="hdlist1" id="git-clone-code--revisionltgtcode"> <a class="anchor" href="#git-clone-code--revisionltgtcode"></a><code>--revision=&lt;редакция&gt;</code> </dt>
+<dd>
+<p>Создать новый репозиторий и извлечь (fetch) историю, ведущую к указанной <em>&lt;редакции&gt;</em> (и ничего кроме этого), не создавая отслеживаемую внешнюю ветку и не создавая локальную ветку, и перевести репозиторий в состояние отсоединённого <code>HEAD</code>, указывающего на <em>&lt;редакцию&gt;</em>. Аргумент может быть именем ссылки (например, <code>refs/heads/main</code> или <code>refs/tags/v1.0</code>), которая рекурсивно разыменовывается до коммита, или шестнадцатеричного имени объекта. Этот параметр несовместим с <code>--branch</code> и <code>--mirror</code>.</p>
+</dd>
 <dt class="hdlist1" id="git-clone-code-ucodeemltupload-packgtem"> <a class="anchor" href="#git-clone-code-ucodeemltupload-packgtem"></a><code>-u</code> <em>&lt;upload-pack&gt;</em> </dt>
 <dt class="hdlist1" id="git-clone-code--upload-packcodeemltupload-packgtem"> <a class="anchor" href="#git-clone-code--upload-packcodeemltupload-packgtem"></a><code>--upload-pack</code> <em>&lt;upload-pack&gt;</em> </dt>
 <dd>
@@ -189,9 +193,14 @@ aliases:
 <dd>
 <p>Клонировать только историю, ведущую к верхушке одной конкретной ветки (либо заданной параметром <code>--branch</code>, либо той, на которую указывает <code>HEAD</code> внешнего репозитория). Дальнейшие вызовы <code>fetch</code> в полученном репозитории будут обновлять отслеживаемую внешнюю ветку только для этой самой ветки, которая была создана при изначальном клонировании репозитория с данным параметром. Если во время клонирования с <code>--single-branch</code> <code>HEAD</code> во внешнем репозитории не указывает ни на одну ветку, то ни одной отслеживаемой внешней ветки создано не будет.</p>
 </dd>
-<dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--no-tags</code> </dt>
+<dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--[no-]tags</code> </dt>
 <dd>
-<p>Не клонировать ни какие удалённые метки и установить переменную конфигурации <code>remote.&lt;имя&gt;.tagOpt=--no-tags</code>, что гарантирует, что будущие операции <code>git pull</code> и <code>git fetch</code> не будут отслеживать какие-либо метки. Однако в дальнейшем, будет возможна явная загрузка меток (см. <a href='{{< relurl "docs/git-fetch/ru" >}}'>git-fetch[1]</a>).</p>
+<p>Определяет, будут ли клонироваться теги. При использовании <code>--no-tags</code>, это поведение будет сохранено с помощью установки переменной конфигурации <code>remote.&lt;имя&gt;.tagOpt=--no-tags</code>, что гарантирует, что будущие операции <code>git pull</code> и <code>git fetch</code> не будут отслеживать какие-либо метки. Однако в дальнейшем, будет возможна явная загрузка меток (см. <a href='{{< relurl "docs/git-fetch/ru" >}}'>git-fetch[1]</a>).</p>
+<div class="literalblock">
+<div class="content">
+<pre>Теги клонируются по умолчанию, так что передача `--tags` обычно не делает ничего, кроме как переопределяет ранее указанный параметр `--no-tags`.</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Может использоваться совместно с <code>--single-branch</code> для клонирования и дальнейшей работы только с одной веткой, без каких-либо других ссылок. Это полезно, например, если есть потребность держать рядом минимальную копию ветки по умолчанию из некоторого репозитория для её индексации и поиска в ней.</p>
 </div>
@@ -457,7 +466,7 @@ $ cd my-linux</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>ru/config/init.txt</code></p>
+<p>Missing <code>ru/config/init.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>
@@ -474,7 +483,7 @@ $ cd my-linux</pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>ru/config/clone.txt</code></p>
+<p>Missing <code>ru/config/clone.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

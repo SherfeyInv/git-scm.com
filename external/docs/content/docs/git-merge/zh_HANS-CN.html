@@ -127,12 +127,12 @@ aliases:
 <p>如果使用 --no-log，则不列出被合并的实际提交内容的单行描述。</p>
 </div>
 </dd>
-<dt class="hdlist1" id="git-merge---signoff"> <a class="anchor" href="#git-merge---signoff"></a>--signoff </dt>
-<dt class="hdlist1" id="git-merge---no-signoff"> <a class="anchor" href="#git-merge---no-signoff"></a>--no-signoff </dt>
+<dt class="hdlist1" id="git-merge-code--signoffcode"> <a class="anchor" href="#git-merge-code--signoffcode"></a><code>--signoff</code> </dt>
+<dt class="hdlist1" id="git-merge-code--no-signoffcode"> <a class="anchor" href="#git-merge-code--no-signoffcode"></a><code>--no-signoff</code> </dt>
 <dd>
 <p>在提交日志信息的末尾添加提交者的 "Signed-off-by "预告片。 签名的意义取决于你所提交的项目。 例如，它可以证明提交者有权利在项目许可下提交作品，或者同意一些贡献者的陈述，如开发者的原产地证书。 关于Linux内核和Git项目使用的证书，请参见http://developercertificate.org）。 请查阅你要贡献的项目的文档或领导层，以了解该项目如何使用签名。</p>
 <div class="paragraph">
-<p>--no-signoff选项可以用来反驳先前在命令行上的&#8212;&#8203;signoff选项。</p>
+<p>The <code>--no-signoff</code> option can be used to countermand an earlier <code>--signoff</code> option on the command line.</p>
 </div>
 </dd>
 </dl>
@@ -564,7 +564,7 @@ Git 让冲突解决变得简单。
 </dd>
 <dt class="hdlist1" id="git-merge-renormalize"> <a class="anchor" href="#git-merge-renormalize"></a>renormalize </dt>
 <dd>
-<p>在解决三方合并时，这将对一个文件的所有三个阶段运行虚拟检出和检入。 这个选项是为了在合并具有不同清洁过滤器或行末规范化规则的分支时使用。 详情见 <a href='{{< relurl "docs/gitattributes/zh_HANS-CN" >}}'>gitattributes[5]</a> 中的 "合并具有不同检入/检出属性的分支"。</p>
+<p>This runs a virtual check-out and check-in of all three stages of any file which needs a three-way merge. This option is meant to be used when merging branches with different clean filters or end-of-line normalization rules. See "Merging branches with differing checkin/checkout attributes" in <a href='{{< relurl "docs/gitattributes/zh_HANS-CN" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
 <dt class="hdlist1" id="git-merge-no-renormalize"> <a class="anchor" href="#git-merge-no-renormalize"></a>no-renormalize </dt>
 <dd>
@@ -653,7 +653,7 @@ Git 让冲突解决变得简单。
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Missing <code>zh_HANS-CN/config/merge.txt</code></p>
+<p>Missing <code>zh_HANS-CN/config/merge.adoc</code></p>
 </div>
 <div class="paragraph">
 <p>See original version for this content.</p>

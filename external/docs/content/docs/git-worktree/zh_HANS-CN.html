@@ -252,7 +252,7 @@ aliases:
 <h2 id="_配置文件"><a class="anchor" href="#_配置文件"></a>配置文件</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>默认情况下，资源库的`config`文件在所有工作区上共享。 如果配置变量`core.bare`或`core.worktree`存在于公共配置文件中，并且`extensions.worktreeConfig`被禁用，那么它们将只应用于主工作区。</p>
+<p>默认情况下，资源库的 <code>config</code> 文件在所有工作区上共享。 如果配置变量 <code>core.bare</code> 或 <code>core.worktree</code> 存在于公共配置文件中，并且 <code>extensions.worktreeConfig</code> 被禁用，那么它们将只应用于主工作区。</p>
 </div>
 <div class="paragraph">
 <p>为了对工作区进行特定配置，你可以打开`worktreeConfig`扩展，例如：</p>
@@ -266,7 +266,7 @@ aliases:
 <p>在这种模式下，特定的配置保持在`git rev-parse --git-path config.worktree`所指向的路径中。你可以用`git config --worktree`添加或更新该文件中的配置。旧版本的Git会拒绝访问带有这个扩展的仓库。</p>
 </div>
 <div class="paragraph">
-<p>注意，在这个文件中，<code>core.bare`和`core.worktree`的例外情况已经消失。如果它们存在于</code>$GIT_DIR/config`中，你必须把它们移到主工作区的`config.worktree`中。你也可以借此机会审查和移动其他你不想共享到所有工作区的配置：</p>
+<p>注意，在这个文件中，<code>core.bare</code> 和 <code>core.worktree</code> 的例外情况已经消失。如果它们存在于 <code>$GIT_DIR/config</code> 中，你必须把它们移到主工作区的 <code>config.worktree</code> 中。你也可以借此机会审查和移动其他你不想共享到所有工作区的配置：</p>
 </div>
 <div class="ulist">
 <ul>
@@ -274,7 +274,7 @@ aliases:
 <p>`core.worktree`不应该被共享。</p>
 </li>
 <li>
-<p>如果`core.bare`的值为`core.bare=true`，则不应共享。</p>
+<p>如果 <code>core.bare</code> 的值为 `core.bare=true `，则不应共享。</p>
 </li>
 <li>
 <p>`core.sparseCheckout`不应该被共享，除非你确信你总是对所有工作区使用稀疏检出。</p>
