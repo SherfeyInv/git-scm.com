@@ -104,10 +104,23 @@ var BrowserFallbacks = {
 }
 
 var GitTurns20 = {
+  keySequence: '20',
+  keySequenceOffset: 0,
+
   init: function() {
     const today = new Date();
     if (today.getFullYear() === 2025 && today.getMonth() === 3 && today.getDate() === 7) {
       this.celebrate();
+    }
+  },
+
+  keydown: function(e) {
+    if (this.keySequenceOffset >= this.keySequence.length) return;
+    if (this.keySequence[this.keySequenceOffset] === e.key) {
+      if (++this.keySequenceOffset === this.keySequence.length) {
+        this.celebrate();
+        this.keySequenceOffset = 0;
+      }
     }
   },
 
@@ -180,6 +193,7 @@ var Search = {
         e.preventDefault();
         $('form#search input').focus();
       }
+      else if (e.target.tagName.toUpperCase() !== 'INPUT') GitTurns20.keydown(e);
     });
   },
 
