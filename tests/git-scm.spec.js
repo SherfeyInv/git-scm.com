@@ -254,7 +254,7 @@ test('404', async ({ page }) => {
   await expect(page.locator('.inner h1')).toHaveText(`That page doesn't exist.`)
 
   // the 404 page should be styled
-  await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute('href', /application(\.min)?\.css$/)
+  await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute('href', /application(\.min)?(\.[0-9a-f]+)?\.css$/)
 
   // the search box is shown
   await expect(page.locator('#search-text')).toBeVisible()
