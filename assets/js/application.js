@@ -138,6 +138,7 @@ var GitTurns20 = {
 
   celebrate: function() {
     document.documentElement.dataset.celebration = 'git-turns-20';
+    $("#tagline").html('<a href="https://discord.gg/UcjvsNQR">--20th-anniversary</a>');
     if ($("#masthead").length) { // only do this on the front page
       (async () => {
         await import('https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js');
