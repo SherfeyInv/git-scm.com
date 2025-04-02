@@ -111,6 +111,18 @@ var GitTurns20 = {
     const today = new Date();
     if (today.getFullYear() === 2025 && today.getMonth() === 3 && today.getDate() === 7) {
       this.celebrate();
+    } else {
+      let start = 0
+      let count = 0
+      $("#tagline").click(e => {
+        if (count === 0 || e.timeStamp > start + count * 1000) {
+          start = e.timeStamp;
+          count = 1;
+        } else if (++count === 6) {
+          this.celebrate();
+          count = 0;
+        }
+      })
     }
   },
 
