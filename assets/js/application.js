@@ -408,11 +408,11 @@ var Search = {
     (async () => {
       const pagefindURL =
         `${baseURLPrefix}pagefind/pagefind.js`
-	  // adjust the `baseURLPrefix` if it is relative: the `import`
-	  // is relative to the _script URL_ here, which is in /js/.
-	  // That is different from other uses of `baseURLPrefix`, which
-	  // replace `href` and `src` attributes which are relative to the
-	  // page itself that is outside of /js/.
+          // adjust the `baseURLPrefix` if it is relative: the `import`
+          // is relative to the _script URL_ here, which is in /js/.
+          // That is different from other uses of `baseURLPrefix`, which
+          // replace `href` and `src` attributes which are relative to the
+          // page itself that is outside of /js/.
           .replace(/^\.\//, '../')
       Search.pagefind = await import(pagefindURL);
       const options = {
