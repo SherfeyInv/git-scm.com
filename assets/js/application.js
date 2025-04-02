@@ -138,6 +138,30 @@ var GitTurns20 = {
 
   celebrate: function() {
     document.documentElement.dataset.celebration = 'git-turns-20';
+    if ($("#masthead").length) { // only do this on the front page
+      (async () => {
+        await import('https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js');
+        const count = 200;
+        const defaults = {
+          origin: { y: 0.7 },
+          disableForReducedMotion: true,
+        };
+
+        for (const [particleRatio, opts] of [
+          [0.25, { spread: 26, startVelocity: 55 }],
+          [0.2, { spread: 60 }],
+          [0.35, { spread: 100, decay: 0.91, scalar: 0.8 }],
+          [0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 }],
+          [0.1, { spread: 120, startVelocity: 45 }],
+        ]) {
+          window.confetti({
+            ...defaults,
+            ...opts,
+            particleCount: Math.floor(count * particleRatio)
+          });
+        }
+      })().catch(console.error);
+    }
   }
 };
 
