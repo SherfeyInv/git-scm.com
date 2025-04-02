@@ -32,6 +32,7 @@ const baseURLPrefix = (() => {
 $(document).ready(function() {
   BrowserFallbacks.init();
   DarkMode.init();
+  GitTurns20.init();
   Search.init();
   Dropdowns.init();
   Forms.init();
@@ -101,6 +102,19 @@ var BrowserFallbacks = {
   }
 
 }
+
+var GitTurns20 = {
+  init: function() {
+    const today = new Date();
+    if (today.getFullYear() === 2025 && today.getMonth() === 3 && today.getDate() === 7) {
+      this.celebrate();
+    }
+  },
+
+  celebrate: function() {
+    document.documentElement.dataset.celebration = 'git-turns-20';
+  }
+};
 
 var Search = {
   searching: false,

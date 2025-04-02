@@ -28,6 +28,7 @@ $baseurl: "{{ .Site.BaseURL }}{{ if (and (ne .Site.BaseURL "/") (ne .Site.BaseUR
 @import 'lists';
 @import 'about';
 @import 'dark-mode';
+@import 'git-turns-20';
 
 code {
   display: inline;
