@@ -32,6 +32,7 @@ const baseURLPrefix = (() => {
 $(document).ready(function() {
   BrowserFallbacks.init();
   DarkMode.init();
+  GitTurns20.init();
   Search.init();
   Dropdowns.init();
   Forms.init();
@@ -102,6 +103,69 @@ var BrowserFallbacks = {
 
 }
 
+var GitTurns20 = {
+  keySequence: '20',
+  keySequenceOffset: 0,
+
+  init: function() {
+    const today = new Date();
+    if (today.getFullYear() === 2025 && today.getMonth() === 3 && today.getDate() === 7) {
+      this.celebrate();
+    } else {
+      let start = 0
+      let count = 0
+      $("#tagline").click(e => {
+        if (count === 0 || e.timeStamp > start + count * 1000) {
+          start = e.timeStamp;
+          count = 1;
+        } else if (++count === 6) {
+          this.celebrate();
+          count = 0;
+        }
+      })
+    }
+  },
+
+  keydown: function(e) {
+    if (this.keySequenceOffset >= this.keySequence.length) return;
+    if (this.keySequence[this.keySequenceOffset] === e.key) {
+      if (++this.keySequenceOffset === this.keySequence.length) {
+        this.celebrate();
+        this.keySequenceOffset = 0;
+      }
+    }
+  },
+
+  celebrate: function() {
+    document.documentElement.dataset.celebration = 'git-turns-20';
+    $("#tagline").html('<a href="https://discord.gg/UcjvsNQR">--20th-anniversary</a>');
+    if ($("#masthead").length) { // only do this on the front page
+      (async () => {
+        await import('https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js');
+        const count = 200;
+        const defaults = {
+          origin: { y: 0.7 },
+          disableForReducedMotion: true,
+        };
+
+        for (const [particleRatio, opts] of [
+          [0.25, { spread: 26, startVelocity: 55 }],
+          [0.2, { spread: 60 }],
+          [0.35, { spread: 100, decay: 0.91, scalar: 0.8 }],
+          [0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 }],
+          [0.1, { spread: 120, startVelocity: 45 }],
+        ]) {
+          window.confetti({
+            ...defaults,
+            ...opts,
+            particleCount: Math.floor(count * particleRatio)
+          });
+        }
+      })().catch(console.error);
+    }
+  }
+};
+
 var Search = {
   searching: false,
   currentSearch: '',
@@ -166,6 +230,7 @@ var Search = {
         e.preventDefault();
         $('form#search input').focus();
       }
+      else if (e.target.tagName.toUpperCase() !== 'INPUT') GitTurns20.keydown(e);
     });
   },
 
