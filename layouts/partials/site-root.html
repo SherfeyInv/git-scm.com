@@ -43,7 +43,7 @@
     </div>
   </section>
   <section id="front-downloads">
-    {{ partial "monitor.html" . }}
+    {{ partialCached "monitor.html" . }}
     <table>
       <tr>
         <td nowrap="true"><a href="{{ relURL "downloads/guis" }}" class="icon gui" id="gui-link">Graphical UIs</a></td>

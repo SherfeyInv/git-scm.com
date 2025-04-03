@@ -66,6 +66,7 @@
 
   {{ $style := resources.Get "sass/application.scss" | resources.ExecuteAsTemplate "application.scss" . | css.Sass | resources.Minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}"{{ if (hasPrefix .Site.BaseURL "https://") }} integrity="{{ $style.Data.Integrity }}"{{ end }}>
+  <script src="{{ relURL "js/modernizr.js" }}"></script>
   <!--[if (gte IE 6)&(lte IE 8)]>
   <script src="{{ relURL "js/selectivizr-min.js" }}"></script>
   <![endif]-->
@@ -83,7 +84,7 @@
     <div id="content-wrapper">
       <div class="inner">
         {{ partial "site-root.html" . }}
-        {{ partial "footer.html" . }}
+        {{ partialCached "footer.html" . }}
       </div> <!-- .inner -->
     </div> <!-- #content-wrapper -->
   {{ else if (isset .Params "book") }}
@@ -111,7 +112,7 @@
           {{ end }}
         </div>
       </div>
-      {{ partial "footer.html" . }}
+      {{ partialCached "footer.html" . }}
     </div>
   {{ else if (isset .Params "docname") }}
     <div class="inner">
@@ -144,7 +145,7 @@
           </div>
         </div>
       </div>
-      {{ partial "footer.html" . }}
+      {{ partialCached "footer.html" . }}
     </div>
   {{ else }}
     <div class="inner">
@@ -181,7 +182,8 @@
           {{ end }}
         </div>
       </div>
-      {{ partial "footer.html" . }}
+      {{ if eq (.Scratch.Get "section") "search" }}<script src="{{ relURL "pagefind/pagefind-ui.js" }}"></script>{{ end }}
+      {{ partialCached "footer.html" . }}
     </div>
   {{ end }}
 
