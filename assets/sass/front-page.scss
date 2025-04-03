@@ -199,6 +199,18 @@ $monitor-height: 271px;
   }
 }
 
+@property --floor {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --seed {
+  syntax: '<integer>';
+  initial-value: #{random(1000)};
+  inherits: true;
+}
+
 #companies-projects {
   border-top: solid 1px var(--base-border-color);
 
@@ -212,6 +224,18 @@ $monitor-height: 271px;
 
     li {
       margin: 1em 2em;
+
+      $num: 11;
+      $prime: 97;
+
+      @for $i from 1 through $num {
+        &:nth-child(#{$i}) {
+          --prod: calc(var(--seed) * #{$i} * #{$prime});
+          --floor: calc((var(--prod) / #{$num}) - 0.5);
+
+          order: calc(var(--prod) - (#{$num} * var(--floor)));
+        }
+      }
     }
 
     a {
