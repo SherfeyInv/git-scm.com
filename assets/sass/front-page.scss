@@ -199,29 +199,46 @@ $monitor-height: 271px;
   }
 }
 
+@property --floor {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --seed {
+  syntax: '<integer>';
+  initial-value: #{random(1000)};
+  inherits: true;
+}
+
 #companies-projects {
-  padding-top: 20px;
-  clear: both;
   border-top: solid 1px var(--base-border-color);
 
   ul {
     @extend .unstyled !optional;
 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    align-items: center;
+    justify-items: center;
+
     li {
-      display: block;
-      float: left;
-      width: 108px;
-      height: 65px;
-      margin: 0 4px 25px 5px;
+      margin: 1em 2em;
+
+      $num: 11;
+      $prime: 97;
+
+      @for $i from 1 through $num {
+        &:nth-child(#{$i}) {
+          --prod: calc(var(--seed) * #{$i} * #{$prime});
+          --floor: calc((var(--prod) / #{$num}) - 0.5);
+
+          order: calc(var(--prod) - (#{$num} * var(--floor)));
+        }
+      }
     }
 
     a {
-      display: block;
-      width: 108px;
-      height: 65px;
-      text-indent: -9999px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
       opacity: 0.85;
       transition-duration: 0.3s;
       transition-property: opacity;
@@ -229,61 +246,11 @@ $monitor-height: 271px;
       &:hover {
         opacity: 1;
       }
+    }
 
-      &.google {
-        @include background-image-2x($baseurl + "images/company-project-logos/google", 108px, 65px);
-      }
-
-      &.microsoft {
-        @include background-image-2x($baseurl + "images/company-project-logos/microsoft", 108px, 65px);
-      }
-
-      &.netflix {
-        @include background-image-2x($baseurl + "images/company-project-logos/netflix", 108px, 65px);
-      }
-
-      &.linked-in {
-        @include background-image-2x($baseurl + "images/company-project-logos/linked-in", 108px, 65px);
-      }
-
-      &.linux {
-        @include background-image-2x($baseurl + "images/company-project-logos/linux", 108px, 65px);
-      }
-
-      &.perl {
-        @include background-image-2x($baseurl + "images/company-project-logos/perl", 108px, 65px);
-      }
-
-      &.postgresql {
-        @include background-image-2x($baseurl + "images/company-project-logos/postgresql", 108px, 65px);
-      }
-
-      &.android {
-        @include background-image-2x($baseurl + "images/company-project-logos/android", 108px, 65px);
-      }
-      &.rails {
-        @include background-image-2x($baseurl + "images/company-project-logos/rails", 108px, 65px);
-      }
-
-      &.qt {
-        @include background-image-2x($baseurl + "images/company-project-logos/qt", 108px, 65px);
-      }
-
-      &.gnome {
-        @include background-image-2x($baseurl + "images/company-project-logos/gnome", 108px, 65px);
-      }
-
-      &.eclipse {
-        @include background-image-2x($baseurl + "images/company-project-logos/eclipse", 108px, 65px);
-      }
-
-      &.kde {
-        @include background-image-2x($baseurl + "images/company-project-logos/kde", 108px, 65px);
-      }
-
-      &.x {
-        @include background-image-2x($baseurl + "images/company-project-logos/x", 108px, 65px);
-      }
+    svg {
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 }
@@ -360,12 +327,10 @@ a.icon {
   }
   #companies-projects {
     ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      // TODO
     }
     li {
-      margin: 0.7rem 0.4rem;
+      // TODO
     }
   }
 }

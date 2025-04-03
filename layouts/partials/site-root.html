@@ -58,22 +58,21 @@
 </div>
 
 <section id="companies-projects">
-  <h3 class="text-center"> Companies &amp; Projects Using Git </h3>
+  <h3 class="text-center">Products providing Git hosting</h3>
   <ul>
-    <li><a href="https://github.com/google" class="google">Google</a></li>
-    <li><a href="https://github.com/Microsoft" class="microsoft">Microsoft</a></li>
-    <li><a href="https://github.com/linkedin" class="linked-in">LinkedIn</a></li>
-    <li><a href="https://github.com/netflix" class="netflix">Netflix</a></li>
-    <li><a href="https://perl5.git.perl.org/perl.git" class="perl">Perl</a></li>
-    <li><a href="https://git.postgresql.org/gitweb/" class="postgresql">PostgreSQL</a></li>
-
-    <li><a href="https://android-review.googlesource.com/#/q/status:open,n,z" class="android">Android</a></li>
-    <li><a href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git" class="linux">Linux</a></li>
-    <li><a href="https://github.com/rails/rails" class="rails">Ruby on Rails</a></li>
-    <li><a href="https://code.qt.io/cgit/" class="qt">Qt</a></li>
-    <li><a href="https://gitlab.gnome.org/GNOME" class="gnome">Gnome</a></li>
-    <li><a href="https://git.eclipse.org/c/" class="eclipse">Eclipse</a></li>
-    <li><a href="https://invent.kde.org/explore/groups" class="kde">KDE</a></li>
-    <li><a href="https://cgit.freedesktop.org/xorg/xserver/" class="x">X</a></li>
-</ul>
+    {{ $m := slice
+    (dict "name" "gitlab" "url" "https://gitlab.com")
+    (dict "name" "github" "url" "https://github.com")
+    (dict "name" "forgejo" "url" "https://forgejo.org")
+    (dict "name" "codeberg" "url" "https://codeberg.org")
+    (dict "name" "sourcehut" "url" "https://sourcehut.org")
+    (dict "name" "gitea" "url" "https://gitea.com")
+    }}
+    {{ range shuffle $m }}
+    <li><a href="{{ .url }}">{{ partial "company-svg" (printf "company-project-logos/%s" .name) }}</a></li>
+    {{ end }}
+  </ul>
+  <script type="text/javascript">
+    document.getElementById("companies-projects").style.setProperty("--seed", Math.floor(Math.random() * 1000));
+  </script>
 </section>
