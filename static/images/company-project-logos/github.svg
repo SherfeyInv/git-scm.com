@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="204.87067"
-   height="45.458782"
-   viewBox="0 0 54.205363 12.027636"
+   width="235"
+   height="95"
+   viewBox="0 0 62.177082 25.135417"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -13,11 +13,17 @@
      id="defs1" />
   <g
      id="layer3"
-     style="display:inline"
-     transform="translate(-3.4722305,-6.5538904)">
+     style="display:inline">
+    <rect
+       style="display:inline;fill:none;fill-opacity:1;stroke-width:0.396875"
+       id="rect6-26"
+       width="62.177082"
+       height="25.135416"
+       x="6.357829e-07"
+       y="3.1789145e-07" />
     <g
        id="g10-9"
-       transform="matrix(0.08021097,0,0,0.08021097,-9.156575,-3.226899)"
+       transform="matrix(0.08021097,0,0,0.08021097,-9.1565751,-3.2268991)"
        style="display:inline">
       <path
          id="path10-3"
