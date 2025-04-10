@@ -253,6 +253,9 @@ chapters:
     title: Wartung und Datenwiederherstellung
     url: book/de/v2/Git-Interna-Wartung-und-Datenwiederherstellung
   - cs_number: '10.8'
+    title: Umgebungsvariablen
+    url: book/de/v2/Git-Interna-Umgebungsvariablen
+  - cs_number: '10.9'
     title: Zusammenfassung
     url: book/de/v2/Git-Interna-Zusammenfassung
 - cs_number: A1
