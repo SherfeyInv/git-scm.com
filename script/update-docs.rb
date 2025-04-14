@@ -260,11 +260,13 @@ def drop_uninteresting_tags(tags)
 end
 
 def expand_content(content, path, get_f_content, generated, ext)
-  content.gsub(/include::(?:{build_dir}\/)?(\S+)\.#{ext}\[\]/) do |_line|
+  content.gsub(/include::({build_dir}\/)?(\S+)\.#{ext}\[\]/) do |_line|
     if File.dirname(path) == "."
-      new_fname = "#{$1}.#{ext}"
+      new_fname = "#{$2}.#{ext}"
+    elsif $1
+      new_fname = File.join('Documentation', "#{$2}.#{ext}")
     else
-      new_fname = (Pathname.new(path).dirname + Pathname.new("#{$1}.#{ext}")).cleanpath.to_s
+      new_fname = (Pathname.new(path).dirname + Pathname.new("#{$2}.#{ext}")).cleanpath.to_s
     end
     if generated[new_fname]
       new_content = generated[new_fname]
