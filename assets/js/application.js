@@ -643,7 +643,8 @@ var DarkMode = {
         theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark"
       }
       document.documentElement.dataset.theme = theme
-      localStorage.setItem("theme", theme);
+      if (prefersDarkScheme === (theme === "dark")) localStorage.removeItem("theme");
+      else localStorage.setItem("theme", theme);
       button.attr("src", `${baseURLPrefix}images/${theme === "dark" ? "light" : "dark"}-mode.svg`);
     });
   },

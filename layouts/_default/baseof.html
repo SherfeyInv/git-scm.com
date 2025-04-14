@@ -49,7 +49,8 @@
     if (currentTheme) {
       // Check dark mode preference at the OS level
       const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-      if ((prefersDarkScheme && currentTheme === "light")
+      if (prefersDarkScheme === (currentTheme === "dark")) localStorage.removeItem("theme")
+      else if ((prefersDarkScheme && currentTheme === "light")
         || (!prefersDarkScheme && currentTheme === "dark")) {
 	document.documentElement.dataset.theme = currentTheme
       }
