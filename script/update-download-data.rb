@@ -15,7 +15,7 @@ class DownloadData
   # name, version, url & date with Feedzirra
   SOURCEFORGE_URL = "https://sourceforge.net/projects/git-osx-installer/rss?limit=20"
 
-  GIT_FOR_WINDOWS_REGEX           = /^(Portable|)Git-(\d+\.\d+\.\d+(?:\.\d+)?)-(?:.+-)*(32|64)-bit(?:\..*)?\.exe/
+  GIT_FOR_WINDOWS_REGEX           = /^(Portable|)Git-(\d+\.\d+\.\d+(?:\.\d+)?)-(?:.+-)*(64-bit|arm64)(?:\..*)?\.exe/
   GIT_FOR_WINDOWS_NAME_WITH_OWNER = "git-for-windows/git"
 
   class << self
@@ -26,13 +26,14 @@ class DownloadData
     def update_download_windows_versions(config)
       files_from_github(GIT_FOR_WINDOWS_NAME_WITH_OWNER).each do |name, date, url|
         # Git for Windows uses the following naming system
-        # [Portable]Git-#.#.#.#[-dev-preview]-32/64-bit[.7z].exe
+        # [Portable]Git-#.#.#.#[-dev-preview]-64-bit/arm64[.7z].exe
         match = GIT_FOR_WINDOWS_REGEX.match(name)
 
         next unless match
 
         portable = match[1]
-        bitness  = match[3]
+        architecture = match[3]
+        architecture = "x64" if architecture == "64-bit"
 
         # Git for windows sometimes creates extra releases all based off of the same upstream Git version
         # so we first want to crop versions like 2.16.1.4 to just 2.16.1
@@ -44,9 +45,9 @@ class DownloadData
           config["windows_installer"] = {} if config["windows_installer"].nil?
           win_config = config["windows_installer"]
           if portable.empty?
-            key = "installer#{bitness}"
+            key = "installer_#{architecture}"
           else
-            key = "portable#{bitness}"
+            key = "portable_#{architecture}"
           end
           win_config[key] = {} if win_config[key].nil?
           return if version_compare(version, win_config[key]["version"]) < 0
