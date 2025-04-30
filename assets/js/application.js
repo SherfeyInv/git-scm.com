@@ -593,26 +593,39 @@ var Downloads = {
     return `<strong>${ago}</strong>, `;
   },
 
-  adjustFor32BitWindows: function() {
-    // adjust the auto-link for Windows 32-bit setups
-    const is32BitWindows = window.session.browser.os === 'Windows'
-      && !navigator.userAgent.match(/WOW64|Win64|x64|x86_64/)
-    if (!is32BitWindows) return;
+  adjustForWindowsARM64: function() {
+    /*
+     * Windows/ARM64 cannot be reliably detected via the User-Agent string;
+     * Instead, we use the UAData, but that is not available in all browsers.
+     * For more details, see
+     * https://github.com/git-for-windows/git-for-windows.github.io/pull/61
+     */
+    if (!navigator.userAgentData) return;
 
-    const link = $('#auto-download-link');
-    const version = $('#auto-download-version');
-    const bitness = $('#auto-download-bitness');
-    const date = $('#auto-download-date');
-    if (link.length && version.length && bitness.length && date.length) {
-      bitness.html('32-bit');
-      link.attr('href', '{{ .Site.Params.windows_installer.installer32.url }}');
-      version.html('{{ .Site.Params.windows_installer.installer32.version }}');
-      date.html('{{ .Site.Params.windows_installer.installer32.release_date }}');
-    }
+    navigator.userAgentData.getHighEntropyValues(['architecture', 'platform', 'bitness'])
+		  .then(function(browser) {
+				if (
+          browser.platform !== 'Windows'
+          || browser.bitness !== '64'
+          || browser.architecture !== 'arm'
+        ) return;
+
+        // adjust the auto-link for Windows/ARM64 setups
+        const link = $('#auto-download-link');
+        const version = $('#auto-download-version');
+        const architecture = $('#auto-download-architecture');
+        const date = $('#auto-download-date');
+        if (link.length && version.length && architecture.length && date.length) {
+          architecture.html('ARM64');
+          link.attr('href', '{{ .Site.Params.windows_installer.installer_arm64.url }}');
+          version.html('{{ .Site.Params.windows_installer.installer_arm64.version }}');
+          date.html('{{ .Site.Params.windows_installer.installer_arm64.release_date }}');
+        }
+      })
   },
 
   postProcessDownloadPage: function() {
-    Downloads.adjustFor32BitWindows();
+    Downloads.adjustForWindowsARM64();
     $('#relative-release-date').html(Downloads.postProcessReleaseDate);
   },
 }
