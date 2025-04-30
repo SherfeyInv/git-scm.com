@@ -62,3 +62,23 @@ params:
       release_date: '2025-03-17'
       version: 2.49.0
       url: https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe
+    installer_x64:
+      filename: Git-2.49.0-64-bit.exe
+      release_date: '2025-03-17'
+      version: 2.49.0
+      url: https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-64-bit.exe
+    installer_arm64:
+      filename: Git-2.49.0-arm64.exe
+      release_date: '2025-03-17'
+      version: 2.49.0
+      url: https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/Git-2.49.0-arm64.exe
+    portable_x64:
+      filename: PortableGit-2.49.0-64-bit.7z.exe
+      release_date: '2025-03-17'
+      version: 2.49.0
+      url: https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/PortableGit-2.49.0-64-bit.7z.exe
+    portable_arm64:
+      filename: PortableGit-2.49.0-arm64.7z.exe
+      release_date: '2025-03-17'
+      version: 2.49.0
+      url: https://github.com/git-for-windows/git/releases/download/v2.49.0.windows.1/PortableGit-2.49.0-arm64.7z.exe
