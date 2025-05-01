@@ -65,7 +65,7 @@ S’il n’est pas spécifié, Git remonte l’arbre des répertoires jusqu’à
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_CEILING_DIRECTORIES</code></strong> contrôle le comportement de Git pendant la recherche d’un répertoire <code>.git</code>.
-Si vous êtes sur des répertoires qui se chargent lentement (par exemple sur une bande magnétique ou à travers une connexion réseau lente), vous pouvez souhaiter que Git s’arrête plus tôt qu’il ne le ferait habituellemnt, surtout si Git est appelé à la construction de votre appel shell (<em>prompt</em>).</p>
+Si vous êtes sur des répertoires qui se chargent lentement (par exemple sur une bande magnétique ou à travers une connexion réseau lente), vous pouvez souhaiter que Git s’arrête plus tôt qu’il ne le ferait habituellement, surtout si Git est appelé à la construction de votre appel shell (<em>prompt</em>).</p>
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_WORK_TREE</code></strong> est l’emplacement de la racine du répertoire de travail pour un dépôt non nu.
@@ -78,7 +78,7 @@ Si cette variable n’est pas spécifiée, c’est le répertoire parent de <cod
 <p><strong><code>GIT_OBJECT_DIRECTORY</code></strong> peut être utilisé pour spécifier l’emplacement du répertoire qui se trouve habituellement à <code>.git/objects</code>.</p>
 </div>
 <div class="paragraph">
-<p><strong><code>GIT_ALTERNATE_OBJECT_DIRECTORIES</code></strong> est une liste séparée par des « : » (formattée comme ceci : <code>/rep/un:/rep/deux:…</code>) qui dit à Git où trouver les objets s’ils ne sont pas dans <code>GIT_OBJECT_DIRECTORY</code>.
+<p><strong><code>GIT_ALTERNATE_OBJECT_DIRECTORIES</code></strong> est une liste séparée par des « : » (formatée comme ceci : <code>/rep/un:/rep/deux:…</code>) qui dit à Git où trouver les objets s’ils ne sont pas dans <code>GIT_OBJECT_DIRECTORY</code>.
 S’il vous arrive d’avoir beaucoup de projets avec des gros fichiers ayant exactement le même contenu, cette variable peut vous éviter d’en garder trop de copies.</p>
 </div>
 </div>
@@ -113,7 +113,7 @@ Vous pouvez surcharger ce comportement pour certains cas en faisant commencer la
 <p><strong><code>GIT_AUTHOR_EMAIL</code></strong> est l’adresse de courriel pour le champ « Auteur ».</p>
 </div>
 <div class="paragraph">
-<p><strong><code>GIT_AUTHOR_DATE</code></strong> est l’horodatage utilisé pourle champ « Auteur ».</p>
+<p><strong><code>GIT_AUTHOR_DATE</code></strong> est l’horodatage utilisé pour le champ « Auteur ».</p>
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_COMMITTER_NAME</code></strong> définit le nom humain pour le champ « Validateur » (<em>commiter</em>).</p>
@@ -160,7 +160,7 @@ Si elle est définie, Git invoquera ce programme quand <code>git diff</code> ser
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_DIFF_PATH_COUNTER</code></strong> et <strong><code>GIT_DIFF_PATH_TOTAL</code></strong> sont utiles à l’intérieur du programme spécifié par <code>GIT_EXTERNAL_DIFF</code> ou <code>diff.external</code>.
-Le premier represente le fichier de la série dont on est en train de visualiser les différences (en commençant par 1), et le dernier est le nombre total de fichiers dans le lot.</p>
+Le premier représente le fichier de la série dont on est en train de visualiser les différences (en commençant par 1), et le dernier est le nombre total de fichiers dans le lot.</p>
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_MERGE_VERBOSITY</code></strong> contrôle la sortie pour la stratégie de fusion récursive.
@@ -258,7 +258,7 @@ nothing to commit, working directory clean</code></pre>
 </div>
 <div class="paragraph">
 <p><strong><code>GIT_TRACE_PERFORMANCE</code></strong> contrôle la journalisation d’information de performance.
-La sortie montre combien de temps prend chaque invocation particulère de Git.</p>
+La sortie montre combien de temps prend chaque invocation particulière de Git.</p>
 </div>
 <div class="listingblock">
 <div class="content">

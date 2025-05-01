@@ -500,7 +500,7 @@ nothing to commit, working tree clean</code></pre>
 <p>Notez que pour rester en sécurité, vous devriez lancer <code>git submodule update</code> avec le drapeau <code>--init</code> au cas où les commits de ProjetPrincipal que vous venez de tirer ont ajouté des nouveaux sous-modules, et le drapeau <code>--recursive</code> si certains sous-module ont des sous-modules imbriqués.</p>
 </div>
 <div class="paragraph">
-<p>Si vous souhaitez automatiser ce processsus, vous pouvez ajouter le drapeau <code>--recurse-submodules</code> à la commande <code>git pull</code> (depuis Git 2.14).
+<p>Si vous souhaitez automatiser ce processus, vous pouvez ajouter le drapeau <code>--recurse-submodules</code> à la commande <code>git pull</code> (depuis Git 2.14).
 Cela forcera Git à lancer  <code>git submodule update</code> juste après le tirage, de manière à mettre à jour les sous-modules dans l’état correct.
 De plus, si vous voulez que Git tire toujours avec <code>--recurse-submodules</code>, vous pouvez régler l’option de configuration <code>submodule.recurse</code> à true (cela marche pour <code>git pull</code> depuis Git 2.15).
 Cette option forcera Git à utiliser le drapeau <code>--recurse-submodules</code> pour toutes les commandes qui le supportent (à part <code>clone</code>).</p>
@@ -1104,7 +1104,7 @@ Pour les versions anciennes de Git qui n’ont pas de drapeau <code>--recurse-su
 </div>
 <div class="paragraph">
 <p>Par chance, vous pouvez indiquer à Git (&gt;=2.14) de toujours utiliser le drapeau <code>--recurse-submodules</code> en paramétrant l’option de configuration <code>submodule.recurse</code> : <code>git config submodule.recurse true</code>.
-Comme noté ci-dessus, cela forcera auss Git à parcourir récursivement les sous-modules pour toute commande qui accepte l’option <code>--recurse-submodules</code> (excepté <code>git clone</code>).</p>
+Comme noté ci-dessus, cela forcera aussi Git à parcourir récursivement les sous-modules pour toute commande qui accepte l’option <code>--recurse-submodules</code> (excepté <code>git clone</code>).</p>
 </div>
 </div>
 <div class="sect4">

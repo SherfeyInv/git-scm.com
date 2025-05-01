@@ -209,7 +209,7 @@ La première ligne, ici, commence avec <code>00a5</code>, soit 165 en hexadécim
 La ligne d’après est <code>0000</code>, signifiant que le serveur a fini de lister ses références.</p>
 </div>
 <div class="paragraph">
-<p>Maintenant qu’il connait l’état du serveur, votre exécutable <code>send-pack</code> détermine quels <em>commits</em> il a de plus que le serveur.
+<p>Maintenant qu’il connaît l’état du serveur, votre exécutable <code>send-pack</code> détermine quels <em>commits</em> il a de plus que le serveur.
 L’exécutable <code>send-pack</code> envoie alors à l’exécutable <code>receive-pack</code> les informations concernant chaque référence que cette commande <code>push</code> va mettre à jour.
 Par exemple, si vous mettez à jour la branche <code>master</code> et ajoutez la branche <code>experiment</code>, la réponse de <code>send-pack</code> ressemblera à quelque chose comme :</p>
 </div>
@@ -359,7 +359,7 @@ La réponse à cette requête indique le succès ou l’échec, et contient le f
 <h3 id="_résumé_sur_les_protocoles">Résumé sur les protocoles</h3>
 <div class="paragraph">
 <p>Cette section contient un survol basique des protocoles de transfert.
-Les protocoles contiennent de nombreuses autres fonctionalités,
+Les protocoles contiennent de nombreuses autres fonctionnalités,
 comme les compétences <code>multi_ack</code> ou <code>side-band</code>,
 mais leur étude est hors du sujet de ce livre.
 Nous avons essayé de vous donner une idée générale des échanges entre client et serveur.
