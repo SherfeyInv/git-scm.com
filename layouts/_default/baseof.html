@@ -93,7 +93,7 @@
     <div class="inner">
       <div id="content-wrapper">
         {{ partial "sidebar.html" . }}
-        <div id="content">
+        <div id="content"{{ if eq "fa" .Params.book.language_code }} dir="rtl"{{ end }}>
           {{ if isset .Params.book "front_page" }}
             {{ partial "book-front-page.html" . }}
           {{ else }}
