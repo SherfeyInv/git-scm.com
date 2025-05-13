@@ -156,6 +156,10 @@ ol.book-toc {
   margin: -20px 40px 0 40px;
 }
 
+#content[dir="rtl"] .book-wrapper {
+  float: left;
+}
+
 @media (min-width: $mobile-m) {
   .book-toc {
     width: 60%
