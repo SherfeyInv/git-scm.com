@@ -130,26 +130,26 @@ chapters:
     title: خلاصه
     url: book/fa/v2/گیت-توزیع‌شده-خلاصه
 - cs_number: '6'
-  title: GitHub
+  title: GitHub (گیت هاب)
   sections:
   - cs_number: '6.1'
-    title: Account Setup and Configuration
-    url: book/fa/v2/GitHub-Account-Setup-and-Configuration
+    title: Account Setup and Configuration (ستاپ و کانفیگ کردن اکانت)
+    url: book/fa/v2/GitHub-گیت-هاب-Account-Setup-and-Configuration-ستاپ-و-کانفیگ-کردن-اکانت
   - cs_number: '6.2'
-    title: Contributing to a Project
-    url: book/fa/v2/GitHub-Contributing-to-a-Project
+    title: Contributing to a Project (مشارکت در یک پروژه)
+    url: book/fa/v2/GitHub-گیت-هاب-Contributing-to-a-Project-مشارکت-در-یک-پروژه
   - cs_number: '6.3'
-    title: Maintaining a Project
-    url: book/fa/v2/GitHub-Maintaining-a-Project
+    title: Maintaining a Project (نگهداری یک پروژه)
+    url: book/fa/v2/GitHub-گیت-هاب-Maintaining-a-Project-نگهداری-یک-پروژه
   - cs_number: '6.4'
-    title: Managing an organization
-    url: book/fa/v2/GitHub-Managing-an-organization
+    title: Managing an organization (مدیریت یک سازمان)
+    url: book/fa/v2/GitHub-گیت-هاب-Managing-an-organization-مدیریت-یک-سازمان
   - cs_number: '6.5'
-    title: Scripting GitHub
-    url: book/fa/v2/GitHub-Scripting-GitHub
+    title: Scripting GitHub (اسکریپتنویسی در گیتهاب)
+    url: book/fa/v2/GitHub-گیت-هاب-Scripting-GitHub-اسکریپتنویسی-در-گیتهاب
   - cs_number: '6.6'
-    title: Summary
-    url: book/fa/v2/GitHub-Summary
+    title: خلاصه
+    url: book/fa/v2/GitHub-گیت-هاب-خلاصه
 - cs_number: '7'
   title: Git Tools
   sections:
