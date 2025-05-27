@@ -614,7 +614,7 @@ Let’s say you started work on a topic branch, accidentally merged it into <cod
 <div class="content">
 <img src="{{< relurl "book/fa/v2/images/undomerge-start.png" >}}" alt="Accidental merge commit.">
 </div>
-<div class="title">نمودار 135. Accidental merge commit</div>
+<div class="title">نمودار 136. Accidental merge commit</div>
 </div>
 <div class="paragraph">
 <p>There are two ways to approach this problem, depending on what your desired outcome is.</p>
@@ -629,7 +629,7 @@ In most cases, if you follow the errant <code>git merge</code> with <code>git re
 <div class="content">
 <img src="{{< relurl "book/fa/v2/images/undomerge-reset.png" >}}" alt="History after `git reset --hard HEAD~`.">
 </div>
-<div class="title">نمودار 136. History after <code>git reset --hard HEAD~</code>
+<div class="title">نمودار 137. History after <code>git reset --hard HEAD~</code>
 </div>
 </div>
 <div class="paragraph">
@@ -680,7 +680,7 @@ In this case, we want to undo all the changes introduced by merging in parent #2
 <div class="content">
 <img src="{{< relurl "book/fa/v2/images/undomerge-revert.png" >}}" alt="History after `git revert -m 1`.">
 </div>
-<div class="title">نمودار 137. History after <code>git revert -m 1</code>
+<div class="title">نمودار 138. History after <code>git revert -m 1</code>
 </div>
 </div>
 <div class="paragraph">
@@ -701,7 +701,7 @@ What’s worse, if you add work to <code>topic</code> and merge again, Git will 
 <div class="content">
 <img src="{{< relurl "book/fa/v2/images/undomerge-revert2.png" >}}" alt="History with a bad merge.">
 </div>
-<div class="title">نمودار 138. History with a bad merge</div>
+<div class="title">نمودار 139. History with a bad merge</div>
 </div>
 <div class="paragraph">
 <p>The best way around this is to un-revert the original merge, since now you want to bring in the changes that were reverted out, <strong>then</strong> create a new merge commit:</p>
@@ -717,7 +717,7 @@ $ git merge topic</code></pre>
 <div class="content">
 <img src="{{< relurl "book/fa/v2/images/undomerge-revert3.png" >}}" alt="History after re-merging a reverted merge.">
 </div>
-<div class="title">نمودار 139. History after re-merging a reverted merge</div>
+<div class="title">نمودار 140. History after re-merging a reverted merge</div>
 </div>
 <div class="paragraph">
 <p>In this example, <code>M</code> and <code>^M</code> cancel out.
