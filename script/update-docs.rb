@@ -487,10 +487,10 @@ def index_doc(filter_tags, doc_list, get_content)
             clean_anchor = "#{txt_path}-#{clean_text}"
             clean_anchor += "-1" while ids.include?(clean_anchor)
             ids.add(clean_anchor)
-            clean_anchor = "<a class=\"anchor\" href=\"##{clean_anchor}\"></a> "
+            "<dt class=\"hdlist1\" id=\"#{anchor}\"><a id=\"#{clean_anchor}\" class=\"anchor\" href=\"##{clean_anchor}\"></a>#{$1} </dt>"
+          else
+            "<dt class=\"hdlist1\" id=\"#{anchor}\"><a class=\"anchor\" href=\"##{anchor}\"></a>#{$1} </dt>"
           end
-
-          "<dt class=\"hdlist1\" id=\"#{anchor}\"> #{clean_anchor}<a class=\"anchor\" href=\"##{anchor}\"></a>#{$1} </dt>"
         end
         # Make links relative
         html.gsub!(/(<a href=['"])\/([^'"]*)/) do |relurl|
