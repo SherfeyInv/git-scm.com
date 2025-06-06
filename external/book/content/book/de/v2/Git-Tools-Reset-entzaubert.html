@@ -303,10 +303,10 @@ Wenn du die Option <code>--hard</code> verwendest, wird es bis zu diesem Schritt
 </div>
 <div class="paragraph">
 <p>Denken wir also darüber nach, was gerade passiert ist.
-Du hast deinen letzten Commit rückgängig gemacht, die Befehle <code>git add</code> und <code>git commit</code> <strong>und dazu noch</strong> die gesamte Arbeit, die di in deinem Arbeitsverzeichnis geleistet hast.</p>
+Du hast deinen letzten Commit rückgängig gemacht, die Befehle <code>git add</code> und <code>git commit</code> <strong>und dazu noch</strong> die gesamte Arbeit, die du in deinem Arbeitsverzeichnis geleistet hast.</p>
 </div>
 <div class="paragraph">
-<p>Es ist sehr wichtig zu wissen, dass das Flag (<code>--hard</code>) die einzige Möglichkeit ist, den Befehl <code>reset</code> gefährlich zu machen und einer der wenigen Fälle, in denen Git tatsächlich Daten vernichtet.
+<p>Es ist sehr wichtig zu wissen, dass das Flag (<code>--hard</code>) die einzige Möglichkeit ist, den Befehl <code>reset</code> tatsächlich gefährlich werden zu lassen - einer der wenigen Fälle, in denen Git tatsächlich Daten vernichtet.
 Jeder andere Aufruf von <code>reset</code> kann ziemlich leicht rückgängig gemacht werden, aber nicht die Option <code>--hard</code>, da sie Dateien im Arbeitsverzeichnis zwingend überschreibt.
 In diesem speziellen Fall haben wir noch immer die <strong>v3</strong> Version unserer Datei in einem Commit in unserer Git-Datenbank. Wir könnten sie durch einen Blick auf unser <code>reflog</code> zurückholen. Hätten wir sie aber nicht committet, dann hätte Git die Datei überschrieben und sie wäre nicht wiederherstellbar.</p>
 </div>
