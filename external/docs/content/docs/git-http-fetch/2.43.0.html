@@ -33,6 +33,7 @@ aliases:
 - "/docs/git-http-fetch/2.48.0/index.html"
 - "/docs/git-http-fetch/2.48.1/index.html"
 - "/docs/git-http-fetch/2.49.0/index.html"
+- "/docs/git-http-fetch/2.50.0/index.html"
 ---
 <div class="sect1">
 <h2 id="_name"><a class="anchor" href="#_name"></a>NAME</h2>
@@ -68,25 +69,25 @@ silently ignored.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt-commit-id"> <a class="anchor" href="#Documentation/git-http-fetch.txt-commit-id"></a>commit-id </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt-commit-id"><a class="anchor" href="#Documentation/git-http-fetch.txt-commit-id"></a>commit-id </dt>
 <dd>
 <p>Either the hash or the filename under [URL]/refs/ to
 pull.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt--a-c-t"> <a class="anchor" href="#Documentation/git-http-fetch.txt--a-c-t"></a>-a, -c, -t </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt--a-c-t"><a class="anchor" href="#Documentation/git-http-fetch.txt--a-c-t"></a>-a, -c, -t </dt>
 <dd>
 <p>These options are ignored for historical reasons.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt--v"> <a class="anchor" href="#Documentation/git-http-fetch.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt--v"><a class="anchor" href="#Documentation/git-http-fetch.txt--v"></a>-v </dt>
 <dd>
 <p>Report what is downloaded.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt--wltfilenamegt"> <a class="anchor" href="#Documentation/git-http-fetch.txt--wfilename"></a> <a class="anchor" href="#Documentation/git-http-fetch.txt--wltfilenamegt"></a>-w &lt;filename&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt--wltfilenamegt"><a id="Documentation/git-http-fetch.txt--wfilename" class="anchor" href="#Documentation/git-http-fetch.txt--wfilename"></a>-w &lt;filename&gt; </dt>
 <dd>
 <p>Writes the commit-id into the specified filename under $GIT_DIR/refs/&lt;filename&gt; on
        the local end after the transfer is complete.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt---stdin"> <a class="anchor" href="#Documentation/git-http-fetch.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt---stdin"><a class="anchor" href="#Documentation/git-http-fetch.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>Instead of a commit id on the command line (which is not expected in this
 case), <em>git http-fetch</em> expects lines on stdin in the format</p>
@@ -96,7 +97,7 @@ case), <em>git http-fetch</em> expects lines on stdin in the format</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt---packfilelthashgt"> <a class="anchor" href="#Documentation/git-http-fetch.txt---packfilehash"></a> <a class="anchor" href="#Documentation/git-http-fetch.txt---packfilelthashgt"></a>--packfile=&lt;hash&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt---packfilelthashgt"><a id="Documentation/git-http-fetch.txt---packfilehash" class="anchor" href="#Documentation/git-http-fetch.txt---packfilehash"></a>--packfile=&lt;hash&gt; </dt>
 <dd>
 <p>For internal use only. Instead of a commit id on the command
 line (which is not expected in
@@ -106,12 +107,12 @@ The hash is used to determine the name of the temporary file and is
 arbitrary. The output of index-pack is printed to stdout. Requires
 --index-pack-args.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt---index-pack-argsltargsgt"> <a class="anchor" href="#Documentation/git-http-fetch.txt---index-pack-argsargs"></a> <a class="anchor" href="#Documentation/git-http-fetch.txt---index-pack-argsltargsgt"></a>--index-pack-args=&lt;args&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt---index-pack-argsltargsgt"><a id="Documentation/git-http-fetch.txt---index-pack-argsargs" class="anchor" href="#Documentation/git-http-fetch.txt---index-pack-argsargs"></a>--index-pack-args=&lt;args&gt; </dt>
 <dd>
 <p>For internal use only. The command to run on the contents of the
 downloaded pack. Arguments are URL-encoded separated by spaces.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-fetch.txt---recover"> <a class="anchor" href="#Documentation/git-http-fetch.txt---recover"></a>--recover </dt>
+<dt class="hdlist1" id="Documentation/git-http-fetch.txt---recover"><a class="anchor" href="#Documentation/git-http-fetch.txt---recover"></a>--recover </dt>
 <dd>
 <p>Verify that everything reachable from target is fetched.  Used after
 an earlier fetch is interrupted.</p>

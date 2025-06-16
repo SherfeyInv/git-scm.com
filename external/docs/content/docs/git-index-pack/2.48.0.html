@@ -11,6 +11,7 @@ aliases:
 - "/docs/git-index-pack/2.48.0/index.html"
 - "/docs/git-index-pack/2.48.1/index.html"
 - "/docs/git-index-pack/2.49.0/index.html"
+- "/docs/git-index-pack/2.50.0/index.html"
 ---
 <div class="sect1">
 <h2 id="_name"><a class="anchor" href="#_name"></a>NAME</h2>
@@ -47,11 +48,11 @@ the objects/pack/ directory of a Git repository.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt--v"> <a class="anchor" href="#Documentation/git-index-pack.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt--v"><a class="anchor" href="#Documentation/git-index-pack.txt--v"></a>-v </dt>
 <dd>
 <p>Be verbose about what is going on, including progress status.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt--oltindex-filegt"> <a class="anchor" href="#Documentation/git-index-pack.txt--oindex-file"></a> <a class="anchor" href="#Documentation/git-index-pack.txt--oltindex-filegt"></a>-o &lt;index-file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt--oltindex-filegt"><a id="Documentation/git-index-pack.txt--oindex-file" class="anchor" href="#Documentation/git-index-pack.txt--oindex-file"></a>-o &lt;index-file&gt; </dt>
 <dd>
 <p>Write the generated pack index into the specified
 file.  Without this option the name of pack index
@@ -60,7 +61,7 @@ file by replacing .pack with .idx (and the program
 fails if the name of packed archive does not end
 with .pack).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---no-rev-index"> <a class="anchor" href="#Documentation/git-index-pack.txt---no-rev-index"></a>--[no-]rev-index </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---no-rev-index"><a class="anchor" href="#Documentation/git-index-pack.txt---no-rev-index"></a>--[no-]rev-index </dt>
 <dd>
 <p>When this flag is provided, generate a reverse index
 (a <code>.rev</code> file) corresponding to the given pack. If
@@ -68,7 +69,7 @@ with .pack).</p>
 reverse index is correct. Takes precedence over
 <code>pack.writeReverseIndex</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---stdin"> <a class="anchor" href="#Documentation/git-index-pack.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---stdin"><a class="anchor" href="#Documentation/git-index-pack.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>When this flag is provided, the pack is read from stdin
 instead and a copy is then written to &lt;pack-file&gt;. If
@@ -79,14 +80,14 @@ a default name determined from the pack content.  If
 prevent a race condition between this process and
 <em>git repack</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---fix-thin"> <a class="anchor" href="#Documentation/git-index-pack.txt---fix-thin"></a>--fix-thin </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---fix-thin"><a class="anchor" href="#Documentation/git-index-pack.txt---fix-thin"></a>--fix-thin </dt>
 <dd>
 <p>Fix a "thin" pack produced by <code>git pack-objects --thin</code> (see
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a> for details) by adding the
 excluded objects the deltified objects are based on to the
 pack. This option only makes sense in conjunction with --stdin.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---keep"> <a class="anchor" href="#Documentation/git-index-pack.txt---keep"></a>--keep </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---keep"><a class="anchor" href="#Documentation/git-index-pack.txt---keep"></a>--keep </dt>
 <dd>
 <p>Before moving the index into its final destination
 create an empty .keep file for the associated pack file.
@@ -95,7 +96,7 @@ simultaneous <em>git repack</em> process from deleting
 the newly constructed pack and index before refs can be
 updated to use objects contained in the pack.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---keepltmsggt"> <a class="anchor" href="#Documentation/git-index-pack.txt---keepmsg"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---keepltmsggt"></a>--keep=&lt;msg&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---keepltmsggt"><a id="Documentation/git-index-pack.txt---keepmsg" class="anchor" href="#Documentation/git-index-pack.txt---keepmsg"></a>--keep=&lt;msg&gt; </dt>
 <dd>
 <p>Like --keep, create a .keep file before moving the index into
 its final destination.  However, instead of creating an empty file
@@ -103,13 +104,13 @@ place <em>&lt;msg&gt;</em> followed by an LF into the .keep file.  The <em>&lt;m
 message can later be searched for within all .keep files to
 locate any which have outlived their usefulness.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---index-versionltversiongtltoffsetgt"> <a class="anchor" href="#Documentation/git-index-pack.txt---index-versionversionoffset"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---index-versionltversiongtltoffsetgt"></a>--index-version=&lt;version&gt;[,&lt;offset&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---index-versionltversiongtltoffsetgt"><a id="Documentation/git-index-pack.txt---index-versionversionoffset" class="anchor" href="#Documentation/git-index-pack.txt---index-versionversionoffset"></a>--index-version=&lt;version&gt;[,&lt;offset&gt;] </dt>
 <dd>
 <p>This is intended to be used by the test suite only. It allows
 to force the version for the generated pack index, and to force
 64-bit index entries on objects located above the given offset.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---strictltmsg-idgtltseveritygt82308203"> <a class="anchor" href="#Documentation/git-index-pack.txt---strictmsg-idseverity"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---strictltmsg-idgtltseveritygt82308203"></a>--strict[=&lt;msg-id&gt;=&lt;severity&gt;&#8230;&#8203;] </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---strictltmsg-idgtltseveritygt82308203"><a id="Documentation/git-index-pack.txt---strictmsg-idseverity" class="anchor" href="#Documentation/git-index-pack.txt---strictmsg-idseverity"></a>--strict[=&lt;msg-id&gt;=&lt;severity&gt;&#8230;&#8203;] </dt>
 <dd>
 <p>Die, if the pack contains broken objects or links. An optional
 comma-separated list of <code>&lt;msg-id&gt;=&lt;severity&gt;</code> can be passed to change
@@ -118,7 +119,7 @@ the severity of some possible issues, e.g.,
 <code>fsck.&lt;msg-id&gt;</code> configuration options in <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> for more
 information on the possible values of <code>&lt;msg-id&gt;</code> and <code>&lt;severity&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---progress-title"> <a class="anchor" href="#Documentation/git-index-pack.txt---progress-title"></a>--progress-title </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---progress-title"><a class="anchor" href="#Documentation/git-index-pack.txt---progress-title"></a>--progress-title </dt>
 <dd>
 <p>For internal use only.</p>
 <div class="paragraph">
@@ -126,11 +127,11 @@ information on the possible values of <code>&lt;msg-id&gt;</code> and <code>&lt;
 default and "Indexing objects" when <code>--stdin</code> is specified.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---check-self-contained-and-connected"> <a class="anchor" href="#Documentation/git-index-pack.txt---check-self-contained-and-connected"></a>--check-self-contained-and-connected </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---check-self-contained-and-connected"><a class="anchor" href="#Documentation/git-index-pack.txt---check-self-contained-and-connected"></a>--check-self-contained-and-connected </dt>
 <dd>
 <p>Die if the pack contains broken links. For internal use only.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---fsck-objectsltmsg-idgtltseveritygt82308203"> <a class="anchor" href="#Documentation/git-index-pack.txt---fsck-objectsmsg-idseverity"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---fsck-objectsltmsg-idgtltseveritygt82308203"></a>--fsck-objects[=&lt;msg-id&gt;=&lt;severity&gt;&#8230;&#8203;] </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---fsck-objectsltmsg-idgtltseveritygt82308203"><a id="Documentation/git-index-pack.txt---fsck-objectsmsg-idseverity" class="anchor" href="#Documentation/git-index-pack.txt---fsck-objectsmsg-idseverity"></a>--fsck-objects[=&lt;msg-id&gt;=&lt;severity&gt;&#8230;&#8203;] </dt>
 <dd>
 <p>Die if the pack contains broken objects, but unlike <code>--strict</code>, don&#8217;t
 choke on broken links. If the pack contains a tree pointing to a
@@ -145,7 +146,7 @@ change the severity of some possible issues, e.g.,
 information on the possible values of <code>&lt;msg-id&gt;</code> and <code>&lt;severity&gt;</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---threadsltngt"> <a class="anchor" href="#Documentation/git-index-pack.txt---threadsn"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---threadsltngt"></a>--threads=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---threadsltngt"><a id="Documentation/git-index-pack.txt---threadsn" class="anchor" href="#Documentation/git-index-pack.txt---threadsn"></a>--threads=&lt;n&gt; </dt>
 <dd>
 <p>Specifies the number of threads to spawn when resolving
 deltas. This requires that index-pack be compiled with
@@ -156,11 +157,11 @@ window is however multiplied by the number of threads.
 Specifying 0 will cause Git to auto-detect the number of CPU&#8217;s
 and use maximum 3 threads.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---max-input-sizeltsizegt"> <a class="anchor" href="#Documentation/git-index-pack.txt---max-input-sizesize"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---max-input-sizeltsizegt"></a>--max-input-size=&lt;size&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---max-input-sizeltsizegt"><a id="Documentation/git-index-pack.txt---max-input-sizesize" class="anchor" href="#Documentation/git-index-pack.txt---max-input-sizesize"></a>--max-input-size=&lt;size&gt; </dt>
 <dd>
 <p>Die, if the pack is larger than &lt;size&gt;.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---object-formatlthash-algorithmgt"> <a class="anchor" href="#Documentation/git-index-pack.txt---object-formathash-algorithm"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---object-formatlthash-algorithmgt"></a>--object-format=&lt;hash-algorithm&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---object-formatlthash-algorithmgt"><a id="Documentation/git-index-pack.txt---object-formathash-algorithm" class="anchor" href="#Documentation/git-index-pack.txt---object-formathash-algorithm"></a>--object-format=&lt;hash-algorithm&gt; </dt>
 <dd>
 <p>Specify the given object format (hash algorithm) for the pack.  The valid
 values are <em>sha1</em> and (if enabled) <em>sha256</em>.  The default is the algorithm for
@@ -186,7 +187,7 @@ without data loss.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-index-pack.txt---promisorltmessagegt"> <a class="anchor" href="#Documentation/git-index-pack.txt---promisormessage"></a> <a class="anchor" href="#Documentation/git-index-pack.txt---promisorltmessagegt"></a>--promisor[=&lt;message&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-index-pack.txt---promisorltmessagegt"><a id="Documentation/git-index-pack.txt---promisormessage" class="anchor" href="#Documentation/git-index-pack.txt---promisormessage"></a>--promisor[=&lt;message&gt;] </dt>
 <dd>
 <p>Before committing the pack-index, create a .promisor file for this
 pack. Particularly helpful when writing a promisor pack with --fix-thin

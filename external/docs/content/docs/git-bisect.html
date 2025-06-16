@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-bisect Documentation
 docname: git-bisect
-version: 2.44.0
-latest-changes: 2.44.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/git-bisect/index.html"
 ---
@@ -455,7 +455,7 @@ determine the eventual outcome of the bisect session.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-bisect.txt---no-checkout"> <a class="anchor" href="#Documentation/git-bisect.txt---no-checkout"></a>--no-checkout </dt>
+<dt class="hdlist1" id="Documentation/git-bisect.txt---no-checkout"><a class="anchor" href="#Documentation/git-bisect.txt---no-checkout"></a>--no-checkout </dt>
 <dd>
 <div class="paragraph">
 <p>Do not checkout the new working tree at each iteration of the bisection
@@ -470,7 +470,7 @@ does not require a checked out tree.</p>
 <p>If the repository is bare, <code>--no-checkout</code> is assumed.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-bisect.txt---first-parent"> <a class="anchor" href="#Documentation/git-bisect.txt---first-parent"></a>--first-parent </dt>
+<dt class="hdlist1" id="Documentation/git-bisect.txt---first-parent"><a class="anchor" href="#Documentation/git-bisect.txt---first-parent"></a>--first-parent </dt>
 <dd>
 <div class="paragraph">
 <p>Follow only the first parent commit upon seeing a merge commit.</p>
@@ -623,15 +623,15 @@ $ git bisect old HEAD~10 # the tenth commit from now is marked as old</pre>
 <div class="paragraph">
 <p>or:</p>
 </div>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git bisect start --term-old broken --term-new fixed
 $ git bisect fixed
 $ git bisect broken HEAD~10</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 <div class="sect2">
 <h3 id="_getting_help"><a class="anchor" href="#_getting_help"></a>Getting help</h3>

@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-reflog Documentation
 docname: git-reflog
-version: 2.45.0
-latest-changes: 2.45.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/git-reflog/index.html"
 ---
@@ -30,6 +30,7 @@ aliases:
 	[--dry-run | -n] [--verbose] [--all [--single-worktree] | &lt;refs&gt;&#8230;&#8203;]
 <em>git reflog delete</em> [--rewrite] [--updateref]
 	[--dry-run | -n] [--verbose] &lt;ref&gt;@{&lt;specifier&gt;}&#8230;&#8203;
+<em>git reflog drop</em> [--all [--single-worktree] | &lt;refs&gt;&#8230;&#8203;]
 <em>git reflog exists</em> &lt;ref&gt;</pre>
 </div>
 </div>
@@ -72,10 +73,15 @@ This is typically not used directly by end users&#8201;&#8212;&#8201;instead, se
 <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>.</p>
 </div>
 <div class="paragraph">
-<p>The "delete" subcommand deletes single entries from the reflog. Its
-argument must be an <em>exact</em> entry (e.g. "<code>git reflog delete
-master@{2}</code>"). This subcommand is also typically not used directly by
-end users.</p>
+<p>The "delete" subcommand deletes single entries from the reflog, but
+not the reflog itself. Its argument must be an <em>exact</em> entry (e.g. "<code>git
+reflog delete master@{2}</code>"). This subcommand is also typically not used
+directly by end users.</p>
+</div>
+<div class="paragraph">
+<p>The "drop" subcommand completely removes the reflog for the specified
+references. This is in contrast to "expire" and "delete", both of which
+can be used to delete reflog entries, but not the reflog itself.</p>
 </div>
 <div class="paragraph">
 <p>The "exists" subcommand checks whether a ref has a reflog.  It exits
@@ -97,17 +103,17 @@ not.</p>
 <h3 id="_options_for_expire"><a class="anchor" href="#_options_for_expire"></a>Options for <code>expire</code></h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---all"> <a class="anchor" href="#Documentation/git-reflog.txt---all"></a>--all </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---all"><a class="anchor" href="#Documentation/git-reflog.txt---all"></a>--all </dt>
 <dd>
 <p>Process the reflogs of all references.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---single-worktree"> <a class="anchor" href="#Documentation/git-reflog.txt---single-worktree"></a>--single-worktree </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---single-worktree"><a class="anchor" href="#Documentation/git-reflog.txt---single-worktree"></a>--single-worktree </dt>
 <dd>
 <p>By default when <code>--all</code> is specified, reflogs from all working
 trees are processed. This option limits the processing to reflogs
 from the current working tree only.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---expirelttimegt"> <a class="anchor" href="#Documentation/git-reflog.txt---expiretime"></a> <a class="anchor" href="#Documentation/git-reflog.txt---expirelttimegt"></a>--expire=&lt;time&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---expirelttimegt"><a id="Documentation/git-reflog.txt---expiretime" class="anchor" href="#Documentation/git-reflog.txt---expiretime"></a>--expire=&lt;time&gt; </dt>
 <dd>
 <p>Prune entries older than the specified time. If this option is
 not specified, the expiration time is taken from the
@@ -116,7 +122,7 @@ defaults to 90 days. <code>--expire=all</code> prunes entries regardless
 of their age; <code>--expire=never</code> turns off pruning of reachable
 entries (but see <code>--expire-unreachable</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---expire-unreachablelttimegt"> <a class="anchor" href="#Documentation/git-reflog.txt---expire-unreachabletime"></a> <a class="anchor" href="#Documentation/git-reflog.txt---expire-unreachablelttimegt"></a>--expire-unreachable=&lt;time&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---expire-unreachablelttimegt"><a id="Documentation/git-reflog.txt---expire-unreachabletime" class="anchor" href="#Documentation/git-reflog.txt---expire-unreachabletime"></a>--expire-unreachable=&lt;time&gt; </dt>
 <dd>
 <p>Prune entries older than <code>&lt;time&gt;</code> that are not reachable from
 the current tip of the branch. If this option is not
@@ -127,19 +133,19 @@ entries regardless of their age; <code>--expire-unreachable=never</code>
 turns off early pruning of unreachable entries (but see
 <code>--expire</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---updateref"> <a class="anchor" href="#Documentation/git-reflog.txt---updateref"></a>--updateref </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---updateref"><a class="anchor" href="#Documentation/git-reflog.txt---updateref"></a>--updateref </dt>
 <dd>
 <p>Update the reference to the value of the top reflog entry (i.e.
 &lt;ref&gt;@{0}) if the previous top entry was pruned.  (This
 option is ignored for symbolic references.)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---rewrite"> <a class="anchor" href="#Documentation/git-reflog.txt---rewrite"></a>--rewrite </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---rewrite"><a class="anchor" href="#Documentation/git-reflog.txt---rewrite"></a>--rewrite </dt>
 <dd>
 <p>If a reflog entry&#8217;s predecessor is pruned, adjust its "old"
 SHA-1 to be equal to the "new" SHA-1 field of the entry that
 now precedes it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---stale-fix"> <a class="anchor" href="#Documentation/git-reflog.txt---stale-fix"></a>--stale-fix </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---stale-fix"><a class="anchor" href="#Documentation/git-reflog.txt---stale-fix"></a>--stale-fix </dt>
 <dd>
 <p>Prune any reflog entries that point to "broken commits". A
 broken commit is a commit that is not reachable from any of
@@ -152,13 +158,13 @@ corruption caused by garbage collecting using older versions of Git,
 which didn&#8217;t protect objects referred to by reflogs.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt--n"> <a class="anchor" href="#Documentation/git-reflog.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---dry-run"> <a class="anchor" href="#Documentation/git-reflog.txt---dry-run"></a>--dry-run </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt--n"><a class="anchor" href="#Documentation/git-reflog.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---dry-run"><a class="anchor" href="#Documentation/git-reflog.txt---dry-run"></a>--dry-run </dt>
 <dd>
 <p>Do not actually prune any entries; just show what would have
 been pruned.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-reflog.txt---verbose"> <a class="anchor" href="#Documentation/git-reflog.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---verbose"><a class="anchor" href="#Documentation/git-reflog.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>Print extra information on screen.</p>
 </dd>
@@ -171,6 +177,23 @@ been pruned.</p>
 <p><code>git reflog delete</code> accepts options <code>--updateref</code>, <code>--rewrite</code>, <code>-n</code>,
 <code>--dry-run</code>, and <code>--verbose</code>, with the same meanings as when they are
 used with <code>expire</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_options_for_drop"><a class="anchor" href="#_options_for_drop"></a>Options for <code>drop</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---all-1"><a class="anchor" href="#Documentation/git-reflog.txt---all-1"></a>--all </dt>
+<dd>
+<p>Drop the reflogs of all references from all worktrees.</p>
+</dd>
+<dt class="hdlist1" id="Documentation/git-reflog.txt---single-worktree-1"><a class="anchor" href="#Documentation/git-reflog.txt---single-worktree-1"></a>--single-worktree </dt>
+<dd>
+<p>By default when <code>--all</code> is specified, reflogs from all working
+trees are dropped. This option limits the processing to reflogs
+from the current working tree only.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>

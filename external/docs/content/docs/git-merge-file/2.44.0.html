@@ -26,6 +26,7 @@ aliases:
 - "/docs/git-merge-file/2.48.0/index.html"
 - "/docs/git-merge-file/2.48.1/index.html"
 - "/docs/git-merge-file/2.49.0/index.html"
+- "/docs/git-merge-file/2.50.0/index.html"
 ---
 <div class="sect1">
 <h2 id="_name"><a class="anchor" href="#_name"></a>NAME</h2>
@@ -101,7 +102,7 @@ implements all of RCS <em>merge</em>'s functionality which is needed by
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---object-id"> <a class="anchor" href="#Documentation/git-merge-file.txt---object-id"></a>--object-id </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---object-id"><a class="anchor" href="#Documentation/git-merge-file.txt---object-id"></a>--object-id </dt>
 <dd>
 <p>Specify the contents to merge as blobs in the current repository instead of
 files.  In this case, the operation must take place within a valid repository.</p>
@@ -111,7 +112,7 @@ goes to standard output as normal; otherwise, the merged file is written to the
 object store and the object ID of its blob is written to standard output.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt--Lltlabelgt"> <a class="anchor" href="#Documentation/git-merge-file.txt--Llabel"></a> <a class="anchor" href="#Documentation/git-merge-file.txt--Lltlabelgt"></a>-L &lt;label&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt--Lltlabelgt"><a id="Documentation/git-merge-file.txt--Llabel" class="anchor" href="#Documentation/git-merge-file.txt--Llabel"></a>-L &lt;label&gt; </dt>
 <dd>
 <p>This option may be given up to three times, and
 specifies labels to be used in place of the
@@ -120,31 +121,31 @@ corresponding file names in conflict reports. That is,
 looks like it came from files x, y and z instead of
 from files a, b and c.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt--p"> <a class="anchor" href="#Documentation/git-merge-file.txt--p"></a>-p </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt--p"><a class="anchor" href="#Documentation/git-merge-file.txt--p"></a>-p </dt>
 <dd>
 <p>Send results to standard output instead of overwriting
 <code>&lt;current&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt--q"> <a class="anchor" href="#Documentation/git-merge-file.txt--q"></a>-q </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt--q"><a class="anchor" href="#Documentation/git-merge-file.txt--q"></a>-q </dt>
 <dd>
 <p>Quiet; do not warn about conflicts.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---diff3"> <a class="anchor" href="#Documentation/git-merge-file.txt---diff3"></a>--diff3 </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---diff3"><a class="anchor" href="#Documentation/git-merge-file.txt---diff3"></a>--diff3 </dt>
 <dd>
 <p>Show conflicts in "diff3" style.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---zdiff3"> <a class="anchor" href="#Documentation/git-merge-file.txt---zdiff3"></a>--zdiff3 </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---zdiff3"><a class="anchor" href="#Documentation/git-merge-file.txt---zdiff3"></a>--zdiff3 </dt>
 <dd>
 <p>Show conflicts in "zdiff3" style.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---ours"> <a class="anchor" href="#Documentation/git-merge-file.txt---ours"></a>--ours </dt>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---theirs"> <a class="anchor" href="#Documentation/git-merge-file.txt---theirs"></a>--theirs </dt>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---union"> <a class="anchor" href="#Documentation/git-merge-file.txt---union"></a>--union </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---ours"><a class="anchor" href="#Documentation/git-merge-file.txt---ours"></a>--ours </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---theirs"><a class="anchor" href="#Documentation/git-merge-file.txt---theirs"></a>--theirs </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---union"><a class="anchor" href="#Documentation/git-merge-file.txt---union"></a>--union </dt>
 <dd>
 <p>Instead of leaving conflicts in the file, resolve conflicts
 favouring our (or their or both) side of the lines.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt---diff-algorithmpatienceminimalhistogrammyers"> <a class="anchor" href="#Documentation/git-merge-file.txt---diff-algorithmpatienceminimalhistogrammyers"></a>--diff-algorithm={patience|minimal|histogram|myers} </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt---diff-algorithmpatienceminimalhistogrammyers"><a class="anchor" href="#Documentation/git-merge-file.txt---diff-algorithmpatienceminimalhistogrammyers"></a>--diff-algorithm={patience|minimal|histogram|myers} </dt>
 <dd>
 <p>Use a different diff algorithm while merging. The current default is "myers",
 but selecting more recent algorithm such as "histogram" can help
@@ -161,17 +162,17 @@ avoid mismerges that occur due to unimportant matching lines
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-fileREADMEmyREADMEREADMEupstreamcode"> <a class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream"></a> <a class="anchor" href="#Documentation/git-merge-file.txt-codegitmerge-fileREADMEmyREADMEREADMEupstreamcode"></a><code>git merge-file README.my README README.upstream</code> </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-fileREADMEmyREADMEREADMEupstreamcode"><a id="Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream"></a><code>git merge-file README.my README README.upstream</code> </dt>
 <dd>
 <p>combines the changes of README.my and README.upstream since README,
 tries to merge them and writes the result into README.my.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345code"> <a class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345"></a> <a class="anchor" href="#Documentation/git-merge-file.txt-codegitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345code"></a><code>git merge-file -L a -L b -L c tmp/a123 tmp/b234 tmp/c345</code> </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345code"><a id="Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345"></a><code>git merge-file -L a -L b -L c tmp/a123 tmp/b234 tmp/c345</code> </dt>
 <dd>
 <p>merges tmp/a123 and tmp/c345 with the base tmp/b234, but uses labels
 <code>a</code> and <code>c</code> instead of <code>tmp/a123</code> and <code>tmp/c345</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-file-p--object-idabc1234def567890abcdcode"> <a class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-file-p--object-idabc1234def567890abcd"></a> <a class="anchor" href="#Documentation/git-merge-file.txt-codegitmerge-file-p--object-idabc1234def567890abcdcode"></a><code>git merge-file -p --object-id abc1234 def567 890abcd</code> </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-file-p--object-idabc1234def567890abcdcode"><a id="Documentation/git-merge-file.txt-gitmerge-file-p--object-idabc1234def567890abcd" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-file-p--object-idabc1234def567890abcd"></a><code>git merge-file -p --object-id abc1234 def567 890abcd</code> </dt>
 <dd>
 <p>combines the changes of the blob abc1234 and 890abcd since def567,
 tries to merge them and writes the result to standard output</p>

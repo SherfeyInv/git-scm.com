@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-version Documentation
 docname: git-version
-version: 2.33.1
-latest-changes: 2.33.1
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/git-version/index.html"
 ---
@@ -44,10 +44,19 @@ former is internally converted into the latter.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-version.txt---build-options"> <a class="anchor" href="#Documentation/git-version.txt---build-options"></a>--build-options </dt>
+<dt class="hdlist1" id="Documentation/git-version.txt---build-options"><a class="anchor" href="#Documentation/git-version.txt---build-options"></a>--build-options </dt>
 <dd>
 <p>Include additional information about how git was built for diagnostic
 purposes.</p>
+<div class="paragraph">
+<p>The libraries used to implement the SHA-1 and SHA-256 algorithms are displayed
+in the form <code>SHA-1: &lt;option&gt;</code> and <code>SHA-256: &lt;option&gt;</code>. Note that the SHA-1
+options <code>SHA1_APPLE</code>, <code>SHA1_OPENSSL</code>, and <code>SHA1_BLK</code> do not use a collision
+detection algorithm and thus may be vulnerable to known SHA-1 collision
+attacks. When a faster SHA-1 implementation without collision detection is used
+for only non-cryptographic purposes, the algorithm is displayed in the form
+<code>non-collision-detecting-SHA-1: &lt;option&gt;</code>.</p>
+</div>
 </dd>
 </dl>
 </div>

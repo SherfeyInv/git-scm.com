@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - vimdiff Documentation
 docname: vimdiff
-version: 2.45.0
-latest-changes: 2.45.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/vimdiff/index.html"
 ---
@@ -148,7 +148,7 @@ command.</p>
 <div class="content">
 <div class="paragraph">
 <p>When <code>MERGED</code> is not present in the layout, you must "mark" one of the
-buffers with an asterisk. That will become the buffer you need to edit and
+buffers with an arobase (<code>@</code>). That will become the buffer you need to edit and
 save after resolving the conflicts.</p>
 </div>
 <div class="literalblock">
@@ -280,25 +280,25 @@ latter will be used as fallback if the variant-specific one is not set).</p>
 <p>In addition, for backwards compatibility with previous Git versions, you can
 also append <code>1</code>, <code>2</code> or <code>3</code> to either <code>vimdiff</code> or any of the variants (ex:
 <code>vimdiff3</code>, <code>nvimdiff1</code>, etc&#8230;&#8203;) to use a predefined layout.
-In other words, using <code>--tool=[g,n,]vimdiffx</code> is the same as using
-<code>--tool=[g,n,]vimdiff</code> and setting configuration variable
-<code>mergetool.[g,n,]vimdiff.layout</code> to&#8230;&#8203;</p>
+In other words, using <code>--tool=[g|n]vimdiff&lt;x&gt;</code> is the same as using
+<code>--tool=[g|n]vimdiff</code> and setting configuration variable
+<code>mergetool.[g|n]vimdiff.layout</code> to&#8230;&#8203;</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>x=1</code>: <code>"@LOCAL, REMOTE"</code></p>
+<p><code>&lt;x&gt;=1</code>: <code>"@LOCAL, REMOTE"</code></p>
 </li>
 <li>
-<p><code>x=2</code>: <code>"LOCAL, MERGED, REMOTE"</code></p>
+<p><code>&lt;x&gt;=2</code>: <code>"LOCAL, MERGED, REMOTE"</code></p>
 </li>
 <li>
-<p><code>x=3</code>: <code>"MERGED"</code></p>
+<p><code>&lt;x&gt;=3</code>: <code>"MERGED"</code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Example: using <code>--tool=gvimdiff2</code> will open <code>gvim</code> with three columns (LOCAL,
-MERGED and REMOTE).</p>
+<p>Example: using <code>--tool=gvimdiff2</code> will open <code>gvim</code> with three columns (<code>LOCAL</code>,
+<code>MERGED</code> and <code>REMOTE</code>).</p>
 </div>
 </div>

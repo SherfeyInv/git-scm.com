@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - gitattributes Documentation
 docname: gitattributes
-version: 2.49.0
-latest-changes: 2.49.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/gitattributes/index.html"
 ---
@@ -55,26 +55,26 @@ listed on the line are given to the path.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Set"> <a class="anchor" href="#Documentation/gitattributes.txt-Set"></a>Set </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Set"><a class="anchor" href="#Documentation/gitattributes.txt-Set"></a>Set </dt>
 <dd>
 <p>The path has the attribute with special value "true";
 this is specified by listing only the name of the
 attribute in the attribute list.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset"> <a class="anchor" href="#Documentation/gitattributes.txt-Unset"></a>Unset </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset"><a class="anchor" href="#Documentation/gitattributes.txt-Unset"></a>Unset </dt>
 <dd>
 <p>The path has the attribute with special value "false";
 this is specified by listing the name of the attribute
 prefixed with a dash <code>-</code> in the attribute list.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Settoavalue"> <a class="anchor" href="#Documentation/gitattributes.txt-Settoavalue"></a>Set to a value </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Settoavalue"><a class="anchor" href="#Documentation/gitattributes.txt-Settoavalue"></a>Set to a value </dt>
 <dd>
 <p>The path has the attribute with specified string value;
 this is specified by listing the name of the attribute
 followed by an equal sign <code>=</code> and its value in the
 attribute list.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified"> <a class="anchor" href="#Documentation/gitattributes.txt-Unspecified"></a>Unspecified </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified"></a>Unspecified </dt>
 <dd>
 <p>No pattern matches the path, and nothing says if
 the path has or does not have the attribute, the
@@ -190,19 +190,19 @@ config, and the platform (see explanation of <code>eol</code> below).</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Set-1"></a>Set </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1"></a>Set </dt>
 <dd>
 <p>Setting the <code>text</code> attribute on a path enables end-of-line
 conversion on checkin and checkout as described above.  Line endings
 are normalized to LF in the index every time the file is checked in,
 even if the file was previously added to Git with CRLF line endings.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unset-1"></a>Unset </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1"></a>Unset </dt>
 <dd>
 <p>Unsetting the <code>text</code> attribute on a path tells Git not to
 attempt any end-of-line conversion upon checkin or checkout.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvalueauto"> <a class="anchor" href="#Documentation/gitattributes.txt-Settostringvalueauto"></a>Set to string value "auto" </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvalueauto"><a class="anchor" href="#Documentation/gitattributes.txt-Settostringvalueauto"></a>Set to string value "auto" </dt>
 <dd>
 <p>When <code>text</code> is set to "auto", Git decides by itself whether the file
 is text or binary.  If it is text and the file was not already in
@@ -210,7 +210,7 @@ Git with CRLF endings, line endings are converted on checkin and
 checkout as described above.  Otherwise, no conversion is done on
 checkin or checkout.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1"></a>Unspecified </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1"></a>Unspecified </dt>
 <dd>
 <p>If the <code>text</code> attribute is unspecified, Git uses the
 <code>core.autocrlf</code> configuration variable to determine if the
@@ -233,17 +233,17 @@ working tree when it is checked out.  It has effect only if <code>text</code> or
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvaluecrlf"> <a class="anchor" href="#Documentation/gitattributes.txt-Settostringvaluecrlf"></a>Set to string value "crlf" </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvaluecrlf"><a class="anchor" href="#Documentation/gitattributes.txt-Settostringvaluecrlf"></a>Set to string value "crlf" </dt>
 <dd>
 <p>This setting converts the file&#8217;s line endings in the working
 directory to CRLF when the file is checked out.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvaluelf"> <a class="anchor" href="#Documentation/gitattributes.txt-Settostringvaluelf"></a>Set to string value "lf" </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvaluelf"><a class="anchor" href="#Documentation/gitattributes.txt-Settostringvaluelf"></a>Set to string value "lf" </dt>
 <dd>
 <p>This setting uses the same line endings in the working directory as
 in the index when the file is checked out.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1"></a>Unspecified </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1"></a>Unspecified </dt>
 <dd>
 <p>If the <code>eol</code> attribute is unspecified for a file, its line endings
 in the working directory are determined by the <code>core.autocrlf</code> or
@@ -890,26 +890,26 @@ files to a text format before generating the diff.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1"></a>Set </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1"></a>Set </dt>
 <dd>
 <p>A path to which the <code>diff</code> attribute is set is treated
 as text, even when they contain byte values that
 normally never appear in text files, such as NUL.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1"></a>Unset </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1"></a>Unset </dt>
 <dd>
 <p>A path to which the <code>diff</code> attribute is unset will
 generate <code>Binary files differ</code> (or a binary patch, if
 binary patches are enabled).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1"></a>Unspecified </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1"></a>Unspecified </dt>
 <dd>
 <p>A path to which the <code>diff</code> attribute is unspecified
 first gets its contents inspected, and if it looks like
 text and is smaller than core.bigFileThreshold, it is treated
 as text. Otherwise it would generate <code>Binary files differ</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-String"> <a class="anchor" href="#Documentation/gitattributes.txt-String"></a>String </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-String"><a class="anchor" href="#Documentation/gitattributes.txt-String"></a>String </dt>
 <dd>
 <p>Diff is shown using the specified diff driver.  Each driver may
 specify one or more options, as described in the following
@@ -1321,20 +1321,20 @@ and other commands such as <code>git revert</code> and <code>git cherry-pick</co
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1-1"></a>Set </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1-1"></a>Set </dt>
 <dd>
 <p>Built-in 3-way merge driver is used to merge the
 contents in a way similar to <em>merge</em> command of <code>RCS</code>
 suite.  This is suitable for ordinary text files.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1-1"></a>Unset </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1-1"></a>Unset </dt>
 <dd>
 <p>Take the version from the current branch as the
 tentative merge result, and declare that the merge has
 conflicts.  This is suitable for binary files that do
 not have a well-defined merge semantics.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1-1"></a>Unspecified </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1-1"></a>Unspecified </dt>
 <dd>
 <p>By default, this uses the same built-in 3-way merge
 driver as is the case when the <code>merge</code> attribute is set.
@@ -1342,7 +1342,7 @@ However, the <code>merge.default</code> configuration variable can name
 different merge driver to be used with paths for which the
 <code>merge</code> attribute is unspecified.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-String-1"> <a class="anchor" href="#Documentation/gitattributes.txt-String-1"></a>String </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-String-1"><a class="anchor" href="#Documentation/gitattributes.txt-String-1"></a>String </dt>
 <dd>
 <p>3-way merge is performed using the specified custom
 merge driver.  The built-in 3-way merge driver can be
@@ -1361,7 +1361,7 @@ can be asked for via the <code>merge</code> attribute.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-text"> <a class="anchor" href="#Documentation/gitattributes.txt-text"></a>text </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-text"><a class="anchor" href="#Documentation/gitattributes.txt-text"></a>text </dt>
 <dd>
 <p>Usual 3-way file level merge for text files.  Conflicted
 regions are marked with conflict markers <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>,
@@ -1370,13 +1370,13 @@ appears before the <code>=======</code> marker, and the version
 from the merged branch appears after the <code>=======</code>
 marker.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-binary"> <a class="anchor" href="#Documentation/gitattributes.txt-binary"></a>binary </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-binary"><a class="anchor" href="#Documentation/gitattributes.txt-binary"></a>binary </dt>
 <dd>
 <p>Keep the version from your branch in the work tree, but
 leave the path in the conflicted state for the user to
 sort out.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-union"> <a class="anchor" href="#Documentation/gitattributes.txt-union"></a>union </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-union"><a class="anchor" href="#Documentation/gitattributes.txt-union"></a>union </dt>
 <dd>
 <p>Run 3-way file level merge for text files, but take
 lines from both versions, instead of leaving conflict
@@ -1475,22 +1475,22 @@ control per path.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1-1-1"></a>Set </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1-1-1"></a>Set </dt>
 <dd>
 <p>Notice all types of potential whitespace errors known to Git.
 The tab width is taken from the value of the <code>core.whitespace</code>
 configuration variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1-1-1"></a>Unset </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1-1-1"></a>Unset </dt>
 <dd>
 <p>Do not notice anything as error.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1-1-1"></a>Unspecified </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1-1-1"></a>Unspecified </dt>
 <dd>
 <p>Use the value of the <code>core.whitespace</code> configuration variable to
 decide what to notice as error.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitattributes.txt-String-1-1"> <a class="anchor" href="#Documentation/gitattributes.txt-String-1-1"></a>String </dt>
+<dt class="hdlist1" id="Documentation/gitattributes.txt-String-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-String-1-1"></a>String </dt>
 <dd>
 <p>Specify a comma separated list of common whitespace problems to
 notice in the same format as the <code>core.whitespace</code> configuration

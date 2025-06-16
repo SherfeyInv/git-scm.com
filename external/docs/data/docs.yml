@@ -1010,6 +1010,11 @@ versions:
     tree_sha: 36e1e0124ae1e88ff2337c8a5b6a2f4a46517200
     committed: 2025-03-14 16:19:41.000000000 +00:00
     date: '2025-03-14'
+  2.50.0:
+    commit_sha: 192a0a2c7625dea31b676c020a1a3db59ba86434
+    tree_sha: d2f9f1b9b9542d982494e68d1cb3ac30fe51a7ea
+    committed: 2025-06-16 04:17:21.000000000 +00:00
+    date: '2025-06-16'
 pages:
   SubmittingPatches:
     version-map:
@@ -1215,9 +1220,10 @@ pages:
       2.47.2: f09516d450bb56a72469e1cd9b3370b8e4f5c9ab
       2.48.1: 2cf294622ec8a3c61c32b3a68f75228657e2486d
       2.49.0: 2cf294622ec8a3c61c32b3a68f75228657e2486d
+      2.50.0: 2cf294622ec8a3c61c32b3a68f75228657e2486d
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -1801,9 +1807,10 @@ pages:
       2.47.2: 3346217c409501c7c231c4f350c80559241f058b
       2.48.1: fe13f41c3d8a5ece4c5e1ec69a4c0d248a5715b9
       2.49.0: fe13f41c3d8a5ece4c5e1ec69a4c0d248a5715b9
+      2.50.0: fe13f41c3d8a5ece4c5e1ec69a4c0d248a5715b9
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -2139,9 +2146,10 @@ pages:
       2.47.2: 41f8b63cb31e1061f2f4a37ce505a2d7fb93d275
       2.48.1: 51e9506f840a87708bdb02c58013b97f9e713c75
       2.49.0: 51e9506f840a87708bdb02c58013b97f9e713c75
+      2.50.0: 51e9506f840a87708bdb02c58013b97f9e713c75
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -2438,9 +2446,10 @@ pages:
       2.47.2: 38d392cee3b167bf1e930f344aeb26a735209e38
       2.48.1: bcb8c894bad235b59690e29235df3b793e0b7a71
       2.49.0: bcb8c894bad235b59690e29235df3b793e0b7a71
+      2.50.0: bcb8c894bad235b59690e29235df3b793e0b7a71
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -2924,9 +2933,10 @@ pages:
       2.47.2: 8ce83a5e94562ab0e73c88ef4afd41ae6d2296a7
       2.48.1: 7b803ee344ef0f314c2d88b2d1533ee1068bbd77
       2.49.0: 7b803ee344ef0f314c2d88b2d1533ee1068bbd77
+      2.50.0: 7b803ee344ef0f314c2d88b2d1533ee1068bbd77
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 1
@@ -3347,9 +3357,10 @@ pages:
       2.47.2: 740284a9d3d3278239208cbd7b9c5b3a36f894ff
       2.48.1: 0471ae87f288526c54295a8b9f04abfc3df180dc
       2.49.0: 0471ae87f288526c54295a8b9f04abfc3df180dc
+      2.50.0: 0471ae87f288526c54295a8b9f04abfc3df180dc
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -3711,8 +3722,12 @@ pages:
       2.47.2: 0634ae6310f864614968580e75326a614ec4206d
       2.48.1: 0634ae6310f864614968580e75326a614ec4206d
       2.49.0: 0634ae6310f864614968580e75326a614ec4206d
-    latest-changes: 2.46.0
+      2.50.0: 282b5da18f4ee3766f5297117a1bef7c54081ab5
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 2
     - name: 2.46.1 &rarr; 2.49.0
     - name: 2.46.0
       added: 7
@@ -3899,6 +3914,10 @@ pages:
       - 7
       - 1
       - 0
+      0634ae6310f864614968580e75326a614ec4206d..282b5da18f4ee3766f5297117a1bef7c54081ab5:
+      - 2
+      - 2
+      - 4
     languages:
       fr: e627cea0bfcf1a58811ec598b346774582c1ba6e
       pt_BR: 34c85738744736a41f557f45dce6a4da93b7be09
@@ -4107,8 +4126,12 @@ pages:
       2.47.2: 06c1030c37c0f4b565f172af219ef39418bdc64e
       2.48.1: 06c1030c37c0f4b565f172af219ef39418bdc64e
       2.49.0: 06c1030c37c0f4b565f172af219ef39418bdc64e
-    latest-changes: 2.41.0
+      2.50.0: 0c9c1cab0ea048817a473dbc7d4cd7e2a8f8d488
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 1
     - name: 2.41.1 &rarr; 2.49.0
     - name: 2.41.0
       added: 3
@@ -4231,6 +4254,10 @@ pages:
       - 3
       - 5
       - 0
+      06c1030c37c0f4b565f172af219ef39418bdc64e..0c9c1cab0ea048817a473dbc7d4cd7e2a8f8d488:
+      - 2
+      - 1
+      - 5
     languages:
       fr: 9dc1b9d6874175cb3dd5893f330f021865d4278d
       pt_BR: 87e3c944b33ab81cfd1abe6f1fb06e3939dc239c
@@ -4441,9 +4468,10 @@ pages:
       2.47.2: dca4cf20ea3c674f55bec36e6d49e65cbf8df0d1
       2.48.1: dca4cf20ea3c674f55bec36e6d49e65cbf8df0d1
       2.49.0: dca4cf20ea3c674f55bec36e6d49e65cbf8df0d1
+      2.50.0: dca4cf20ea3c674f55bec36e6d49e65cbf8df0d1
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 7
       removed: 1
@@ -4767,9 +4795,10 @@ pages:
       2.47.2: 1691563a6ff43e74816f3940095c12fd3e45b36a
       2.48.1: 1691563a6ff43e74816f3940095c12fd3e45b36a
       2.49.0: 1691563a6ff43e74816f3940095c12fd3e45b36a
+      2.50.0: 1691563a6ff43e74816f3940095c12fd3e45b36a
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 4
       removed: 4
@@ -5006,9 +5035,10 @@ pages:
       2.47.2: a0f5baab29d4b6b51ed00efe1358f0a2311de1b7
       2.48.1: a0f5baab29d4b6b51ed00efe1358f0a2311de1b7
       2.49.0: a0f5baab29d4b6b51ed00efe1358f0a2311de1b7
+      2.50.0: a0f5baab29d4b6b51ed00efe1358f0a2311de1b7
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 5
       removed: 3
@@ -5277,9 +5307,10 @@ pages:
       2.47.2: fc37ea736c6c8882cd96167b64ff002dfa791904
       2.48.1: fc37ea736c6c8882cd96167b64ff002dfa791904
       2.49.0: fc37ea736c6c8882cd96167b64ff002dfa791904
+      2.50.0: fc37ea736c6c8882cd96167b64ff002dfa791904
     latest-changes: 2.40.0
     page-versions:
-    - name: 2.40.1 &rarr; 2.49.0
+    - name: 2.40.1 &rarr; 2.50.0
     - name: 2.40.0
       added: 2
       removed: 2
@@ -5563,8 +5594,12 @@ pages:
       2.47.2: 6bf61e07cd3893b1697c3c68232d3cca746b3378
       2.48.1: 6bf61e07cd3893b1697c3c68232d3cca746b3378
       2.49.0: 6bf61e07cd3893b1697c3c68232d3cca746b3378
-    latest-changes: 2.44.0
+      2.50.0: ece2f6ae43cb6716f2ccd0df4461918ffc866f49
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 1
+      removed: 0
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 2
@@ -5686,6 +5721,10 @@ pages:
       - 2
       - 2
       - 4
+      6bf61e07cd3893b1697c3c68232d3cca746b3378..ece2f6ae43cb6716f2ccd0df4461918ffc866f49:
+      - 1
+      - 0
+      - 7
     languages:
       fr: b2e4bc210d69b7edb415b7af33b9b55807365cd7
       pt_BR: 100120221d6cf557b67862a42ed2ecf6d517c1eb
@@ -5894,8 +5933,12 @@ pages:
       2.47.2: f7e846b3d278aea8dee3abddd0f8b390553aaa34
       2.48.1: f7e846b3d278aea8dee3abddd0f8b390553aaa34
       2.49.0: f7e846b3d278aea8dee3abddd0f8b390553aaa34
-    latest-changes: 2.44.0
+      2.50.0: daea58224a9d258ea60d2f0fe73b23c5ef987aa0
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 1
@@ -6033,6 +6076,10 @@ pages:
       - 1
       - 1
       - 6
+      f7e846b3d278aea8dee3abddd0f8b390553aaa34..daea58224a9d258ea60d2f0fe73b23c5ef987aa0:
+      - 5
+      - 3
+      - 0
     languages:
       fr: 78dfcbe26102f941f64f433424483ef105af0146
       pt_BR: 6a544372a306f795af5cb74e090a6edc45e36a6a
@@ -6241,8 +6288,12 @@ pages:
       2.47.2: 8f2b26643f3fdb71985c32e7bc29791b70d7e848
       2.48.1: 8f2b26643f3fdb71985c32e7bc29791b70d7e848
       2.49.0: 8f2b26643f3fdb71985c32e7bc29791b70d7e848
-    latest-changes: 2.44.0
+      2.50.0: 2931ec818ccb8b0cc8acc1963f9c380ced33a176
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 2
@@ -6490,6 +6541,10 @@ pages:
       - 2
       - 1
       - 5
+      8f2b26643f3fdb71985c32e7bc29791b70d7e848..2931ec818ccb8b0cc8acc1963f9c380ced33a176:
+      - 4
+      - 4
+      - 0
     languages:
       fr: b346460d7494181c2c612a1e006fcac669051533
       pt_BR: 458180c77309d3162743fb89824d7d3b9509bf90
@@ -6699,9 +6754,10 @@ pages:
       2.47.2: 79bf4569ea8b16f9779d58a8c8f333178c05c2ef
       2.48.1: b412f5969da00f2fb1b87e0f9e4bd0916138b61d
       2.49.0: b412f5969da00f2fb1b87e0f9e4bd0916138b61d
+      2.50.0: b412f5969da00f2fb1b87e0f9e4bd0916138b61d
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 7
       removed: 1
@@ -6994,8 +7050,12 @@ pages:
       2.47.2: dab836881ad773cc3508b56e192f35abb33a8519
       2.48.1: dab836881ad773cc3508b56e192f35abb33a8519
       2.49.0: dab836881ad773cc3508b56e192f35abb33a8519
-    latest-changes: 2.46.1
+      2.50.0: 87a1c93a2dad7d78eea9725185eb9366e3d96f22
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 6
+      removed: 2
     - name: 2.46.2 &rarr; 2.49.0
     - name: 2.46.1
       added: 3
@@ -7135,6 +7195,10 @@ pages:
       - 3
       - 3
       - 2
+      dab836881ad773cc3508b56e192f35abb33a8519..87a1c93a2dad7d78eea9725185eb9366e3d96f22:
+      - 6
+      - 2
+      - 0
     languages:
       fr: f73592232d6a1ef3071bea26574e46c28c74ea7e
       pt_BR: b69ed88dc0a7163d08530fdd634a89955ea00bb3
@@ -7343,8 +7407,12 @@ pages:
       2.47.2: c1a58acc4bbbd58456605bce7a0bfe2b2e8ed4cc
       2.48.1: c1a58acc4bbbd58456605bce7a0bfe2b2e8ed4cc
       2.49.0: c1a58acc4bbbd58456605bce7a0bfe2b2e8ed4cc
-    latest-changes: 2.43.0
+      2.50.0: b6c53f5f798159b5da702c66d2d85bf8814e1ab2
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 6
+      removed: 0
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 3
@@ -7389,6 +7457,10 @@ pages:
       4b368d617c37b4651c6d1b56fe1b0702bb6bf6f9..c1a58acc4bbbd58456605bce7a0bfe2b2e8ed4cc:
       - 3
       - 3
+      - 2
+      c1a58acc4bbbd58456605bce7a0bfe2b2e8ed4cc..b6c53f5f798159b5da702c66d2d85bf8814e1ab2:
+      - 6
+      - 0
       - 2
     languages:
       fr: c53365cf48f8b68154346406ffd98d37150ce782
@@ -7598,9 +7670,10 @@ pages:
       2.47.2: c1b471ae7232698f9e1a401cd917fefc2d268029
       2.48.1: c1b471ae7232698f9e1a401cd917fefc2d268029
       2.49.0: c1b471ae7232698f9e1a401cd917fefc2d268029
+      2.50.0: c1b471ae7232698f9e1a401cd917fefc2d268029
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -7884,9 +7957,10 @@ pages:
       2.47.2: 6a6fb05117d05eb244bb8c63cac62bd3658db48e
       2.48.1: 6a6fb05117d05eb244bb8c63cac62bd3658db48e
       2.49.0: 6a6fb05117d05eb244bb8c63cac62bd3658db48e
+      2.50.0: 6a6fb05117d05eb244bb8c63cac62bd3658db48e
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 6
       removed: 2
@@ -8123,9 +8197,10 @@ pages:
       2.47.2: b24f0b6d4d08cd4183a4ad60a3042b450e067bba
       2.48.1: b24f0b6d4d08cd4183a4ad60a3042b450e067bba
       2.49.0: b24f0b6d4d08cd4183a4ad60a3042b450e067bba
+      2.50.0: b24f0b6d4d08cd4183a4ad60a3042b450e067bba
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -8393,9 +8468,10 @@ pages:
       2.47.2: 24f80f7a6cd125b06655a67b405374718cce0922
       2.48.1: 24f80f7a6cd125b06655a67b405374718cce0922
       2.49.0: 24f80f7a6cd125b06655a67b405374718cce0922
+      2.50.0: 24f80f7a6cd125b06655a67b405374718cce0922
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -8624,8 +8700,12 @@ pages:
       2.47.2: 8c2d127a3850d1478c81951d95fbb60375d53adf
       2.48.1: 8c2d127a3850d1478c81951d95fbb60375d53adf
       2.49.0: 8c2d127a3850d1478c81951d95fbb60375d53adf
-    latest-changes: 2.47.1
+      2.50.0: 208e4ae1a16ce0b8ef5cffeebd5d1fa003790b34
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.47.2 &rarr; 2.49.0
     - name: 2.47.1
       added: 4
@@ -8843,6 +8923,10 @@ pages:
       - 4
       - 4
       - 0
+      8c2d127a3850d1478c81951d95fbb60375d53adf..208e4ae1a16ce0b8ef5cffeebd5d1fa003790b34:
+      - 4
+      - 4
+      - 0
     languages:
       fr: 037ded113eae74cea00728b2fcbb6c06f245ca83
       pt_BR: 7372b02766c960c21b311e3355fdfc652fe3b552
@@ -9051,8 +9135,12 @@ pages:
       2.47.2: e9484f3085ae45cbcad4fa58e2a72a3fb8edfeb3
       2.48.1: e9484f3085ae45cbcad4fa58e2a72a3fb8edfeb3
       2.49.0: e9484f3085ae45cbcad4fa58e2a72a3fb8edfeb3
-    latest-changes: 2.45.0
+      2.50.0: be7192e3571217f1cc3374680c02bdaa663eb7cc
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 2
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 6
@@ -9161,6 +9249,10 @@ pages:
       - 6
       - 2
       - 0
+      e9484f3085ae45cbcad4fa58e2a72a3fb8edfeb3..be7192e3571217f1cc3374680c02bdaa663eb7cc:
+      - 2
+      - 2
+      - 4
     languages:
       fr: cc43efbda613bd786072bdda9888542d05a625d2
       pt_BR: 76504af272c30e7b817fe414a26b0c3fc164b1a0
@@ -9369,9 +9461,10 @@ pages:
       2.47.2: fca5b29775cc02c100f35be6819e2d1742c37129
       2.48.1: fca5b29775cc02c100f35be6819e2d1742c37129
       2.49.0: fca5b29775cc02c100f35be6819e2d1742c37129
+      2.50.0: fca5b29775cc02c100f35be6819e2d1742c37129
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -9584,9 +9677,10 @@ pages:
       2.47.2: e3c67bd3820e6646fd79f04bd04a766740e94ca8
       2.48.1: e3c67bd3820e6646fd79f04bd04a766740e94ca8
       2.49.0: e3c67bd3820e6646fd79f04bd04a766740e94ca8
+      2.50.0: e3c67bd3820e6646fd79f04bd04a766740e94ca8
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -9800,9 +9894,10 @@ pages:
       2.47.2: 7d276c2f798e8862e333439e7f71ac9fb2efdbf2
       2.48.1: 7d276c2f798e8862e333439e7f71ac9fb2efdbf2
       2.49.0: 7d276c2f798e8862e333439e7f71ac9fb2efdbf2
+      2.50.0: 7d276c2f798e8862e333439e7f71ac9fb2efdbf2
     latest-changes: 2.45.0
     page-versions:
-    - name: 2.45.1 &rarr; 2.49.0
+    - name: 2.45.1 &rarr; 2.50.0
     - name: 2.45.0
       added: 6
       removed: 2
@@ -10110,8 +10205,10 @@ pages:
       2.47.2: dd35fdf52376c38cf537adfd31672b565aa4a81a
       2.48.1: 76ef49ca5e9da0cf5c594564d02ab4017886c4b5
       2.49.0: 4f149a18fab5d2ec58e577aff365d7af1c378375
+      2.50.0: 4f149a18fab5d2ec58e577aff365d7af1c378375
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 6
       removed: 2
@@ -10573,8 +10670,12 @@ pages:
       2.47.2: 9860bf5aa473abd05872712874e31795c402e550
       2.48.1: 9860bf5aa473abd05872712874e31795c402e550
       2.49.0: 9860bf5aa473abd05872712874e31795c402e550
-    latest-changes: 2.43.0
+      2.50.0: 3ad3e5e40ee45c09a4a285d8aca2086507c4b184
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 3
+      removed: 0
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 2
@@ -10620,6 +10721,10 @@ pages:
       - 2
       - 2
       - 4
+      9860bf5aa473abd05872712874e31795c402e550..3ad3e5e40ee45c09a4a285d8aca2086507c4b184:
+      - 3
+      - 0
+      - 5
     languages:
       fr: d96f775b12a1a698e5e7f2cd08bba6c902b7d36d
       pt_BR: 1c061d291c384602a83e37b7b7e4e140d326ca38
@@ -10828,8 +10933,10 @@ pages:
       2.47.2: 968f0c2e58f5fc3bd4673819349a52fa9e20fe3e
       2.48.1: 968f0c2e58f5fc3bd4673819349a52fa9e20fe3e
       2.49.0: 9a8197a8797c0ee9c78a80327c7da1e43475df16
+      2.50.0: 9a8197a8797c0ee9c78a80327c7da1e43475df16
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 2
       removed: 2
@@ -11146,8 +11253,12 @@ pages:
       2.47.2: 91c678d637b1c463cb2fca1a41214c3fa310c350
       2.48.1: 91c678d637b1c463cb2fca1a41214c3fa310c350
       2.49.0: 16cb06e1512910bd6ab391160bf12ab7ef75a35a
-    latest-changes: 2.49.0
+      2.50.0: 4766b7afed8e46ddf676cb38f486020cf595a14b
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 3
     - name: 2.49.0
       added: 4
       removed: 4
@@ -11369,6 +11480,10 @@ pages:
       - 4
       - 4
       - 0
+      16cb06e1512910bd6ab391160bf12ab7ef75a35a..4766b7afed8e46ddf676cb38f486020cf595a14b:
+      - 4
+      - 3
+      - 1
     languages:
       es: 25bc8f618f665479073d3056bbed756bc96f63af
       fr: 874a3d42b7591b96effebcef99daea84b4ff39c6
@@ -11579,8 +11694,12 @@ pages:
       2.47.2: e5fe474d2410385af3f3198ceb744a88348af6d6
       2.48.1: b53378a2602d3638332dc19d2e3ad3b651cb5f7c
       2.49.0: b125f5ec78e74a71033ecf8d0aa155d8e16fb7b3
-    latest-changes: 2.49.0
+      2.50.0: 91ab593a9e06551c78e88754500144a5eeb62131
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.49.0
       added: 6
       removed: 2
@@ -12369,6 +12488,10 @@ pages:
       - 6
       - 2
       - 0
+      b125f5ec78e74a71033ecf8d0aa155d8e16fb7b3..91ab593a9e06551c78e88754500144a5eeb62131:
+      - 5
+      - 3
+      - 0
     languages:
       de: cfc4dde585cd604b17807e748698ba0e59d518ae
       fr: 572e726e76f0e310cc0861a7f71774a47a173279
@@ -12578,9 +12701,10 @@ pages:
       2.47.2: 69e470468b5f72bff478dd3c90b9353d48a8b164
       2.48.1: 69e470468b5f72bff478dd3c90b9353d48a8b164
       2.49.0: 69e470468b5f72bff478dd3c90b9353d48a8b164
+      2.50.0: 69e470468b5f72bff478dd3c90b9353d48a8b164
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 3
       removed: 3
@@ -12809,9 +12933,10 @@ pages:
       2.47.2: 0f496296c8f129e8440619fc5cd8d54c4f4f372e
       2.48.1: 0f496296c8f129e8440619fc5cd8d54c4f4f372e
       2.49.0: 0f496296c8f129e8440619fc5cd8d54c4f4f372e
+      2.50.0: 0f496296c8f129e8440619fc5cd8d54c4f4f372e
     latest-changes: 2.39.0
     page-versions:
-    - name: 2.39.1 &rarr; 2.49.0
+    - name: 2.39.1 &rarr; 2.50.0
     - name: 2.39.0
       added: 2
       removed: 2
@@ -13048,8 +13173,10 @@ pages:
       2.47.2: 843721e094e03d93da4e34787d4c2fdf34999847
       2.48.1: 843721e094e03d93da4e34787d4c2fdf34999847
       2.49.0: '0419b5542364bc66924a159363fb545894de0182'
+      2.50.0: '0419b5542364bc66924a159363fb545894de0182'
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 8
       removed: 0
@@ -13318,9 +13445,10 @@ pages:
       2.47.2: e9b29d031cebe068cd1c4ee28f1637edb46a5428
       2.48.1: e9b29d031cebe068cd1c4ee28f1637edb46a5428
       2.49.0: e9b29d031cebe068cd1c4ee28f1637edb46a5428
+      2.50.0: e9b29d031cebe068cd1c4ee28f1637edb46a5428
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -13580,9 +13708,10 @@ pages:
       2.47.2: d746383dfb0b8fb1199e16a2675c78cfb5e3a1a8
       2.48.1: d746383dfb0b8fb1199e16a2675c78cfb5e3a1a8
       2.49.0: d746383dfb0b8fb1199e16a2675c78cfb5e3a1a8
+      2.50.0: d746383dfb0b8fb1199e16a2675c78cfb5e3a1a8
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 8
       removed: 0
@@ -13876,9 +14005,10 @@ pages:
       2.47.2: 21e33cfed625a03ebe4b920a91c9d69bd613a4e6
       2.48.1: 21e33cfed625a03ebe4b920a91c9d69bd613a4e6
       2.49.0: 21e33cfed625a03ebe4b920a91c9d69bd613a4e6
+      2.50.0: 21e33cfed625a03ebe4b920a91c9d69bd613a4e6
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 2
       removed: 2
@@ -14099,9 +14229,10 @@ pages:
       2.47.2: be3b042784bcabd5af20b48fd0261b900cf05133
       2.48.1: be3b042784bcabd5af20b48fd0261b900cf05133
       2.49.0: be3b042784bcabd5af20b48fd0261b900cf05133
+      2.50.0: be3b042784bcabd5af20b48fd0261b900cf05133
     latest-changes: 2.43.1
     page-versions:
-    - name: 2.43.2 &rarr; 2.49.0
+    - name: 2.43.2 &rarr; 2.50.0
     - name: 2.43.1
       added: 2
       removed: 2
@@ -14353,8 +14484,12 @@ pages:
       2.47.2: db0953464f842de32c1aae2cb0f1f1110cec42ab
       2.48.1: db0953464f842de32c1aae2cb0f1f1110cec42ab
       2.49.0: db0953464f842de32c1aae2cb0f1f1110cec42ab
-    latest-changes: 2.44.0
+      2.50.0: af27dddd1532b8d81971be174a654dbeaafdf94e
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 0
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 2
@@ -14455,6 +14590,10 @@ pages:
       a9977a181715caa914c4497adf9e4554c0048e1b..db0953464f842de32c1aae2cb0f1f1110cec42ab:
       - 2
       - 2
+      - 4
+      db0953464f842de32c1aae2cb0f1f1110cec42ab..af27dddd1532b8d81971be174a654dbeaafdf94e:
+      - 4
+      - 0
       - 4
     languages:
       fr: b32e6039481eccf40c52cdf6d4e815f4551b0ede
@@ -14664,8 +14803,12 @@ pages:
       2.47.2: 5507f76621a1487b884677a2e5eab67bf1ab3c55
       2.48.1: 5507f76621a1487b884677a2e5eab67bf1ab3c55
       2.49.0: 5507f76621a1487b884677a2e5eab67bf1ab3c55
-    latest-changes: 2.44.0
+      2.50.0: 55bdb368052ae155f7a5cf96f1e0771fe35b5b6d
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 4
@@ -14723,6 +14866,10 @@ pages:
       - 1
       - 6
       7562d6fa94cdd8bc204c54fe0d0047ac9fe2c230..5507f76621a1487b884677a2e5eab67bf1ab3c55:
+      - 4
+      - 4
+      - 0
+      5507f76621a1487b884677a2e5eab67bf1ab3c55..55bdb368052ae155f7a5cf96f1e0771fe35b5b6d:
       - 4
       - 4
       - 0
@@ -14934,9 +15081,10 @@ pages:
       2.47.2: e267feee1b2feaedfa4d34a28aad98cbaeac6d5d
       2.48.1: e267feee1b2feaedfa4d34a28aad98cbaeac6d5d
       2.49.0: e267feee1b2feaedfa4d34a28aad98cbaeac6d5d
+      2.50.0: e267feee1b2feaedfa4d34a28aad98cbaeac6d5d
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 2
       removed: 2
@@ -15228,9 +15376,10 @@ pages:
       2.47.2: 601dce89f5701285953cf5dcef7ae2122a668ee2
       2.48.1: 7786d1ee3d861c488fc1a9716d4385eb5ce738bf
       2.49.0: 7786d1ee3d861c488fc1a9716d4385eb5ce738bf
+      2.50.0: 7786d1ee3d861c488fc1a9716d4385eb5ce738bf
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -15771,9 +15920,10 @@ pages:
       2.47.2: 200e31900e0001f5122c9d1a1ade8e3c7720376b
       2.48.1: ab672b9b91a36eebf890ce4e0b85f55efb332f25
       2.49.0: ab672b9b91a36eebf890ce4e0b85f55efb332f25
+      2.50.0: ab672b9b91a36eebf890ce4e0b85f55efb332f25
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -16305,8 +16455,10 @@ pages:
       2.47.2: 404ec08e034c85cd23b07709ab57fe0f43d6d4dd
       2.48.1: a4e693176b9bd0a9d8c36faef66a55c21a05a924
       2.49.0: 9b210626eff5c194ac242b147efe953ced4a53bb
+      2.50.0: 9b210626eff5c194ac242b147efe953ced4a53bb
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 4
       removed: 4
@@ -16903,8 +17055,10 @@ pages:
       2.47.2: 0e03d49a2ee69450a0369c9bc86a9c0b2a5e328c
       2.48.1: 920b5ced17ed1785b0d9cbbbeaef37892123ed35
       2.49.0: cccf9fea5edc232cfb9a72ee7096a47258c32821
+      2.50.0: cccf9fea5edc232cfb9a72ee7096a47258c32821
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 0
       removed: 8
@@ -17489,8 +17643,10 @@ pages:
       2.47.2: 53b71ebbead96e8a3a4637f91d9bdf93cb112cc7
       2.48.1: 53b71ebbead96e8a3a4637f91d9bdf93cb112cc7
       2.49.0: fb24b17b7cf74c71de2c1ae6cf449f196a8cb2f0
+      2.50.0: fb24b17b7cf74c71de2c1ae6cf449f196a8cb2f0
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 2
       removed: 0
@@ -17792,8 +17948,12 @@ pages:
       2.47.2: b3183479c616e2cc5fc4c153da99cab416bd3009
       2.48.1: b3183479c616e2cc5fc4c153da99cab416bd3009
       2.49.0: b3183479c616e2cc5fc4c153da99cab416bd3009
-    latest-changes: 2.45.0
+      2.50.0: 822fb36c35258fc4a868e447f7491834f397f21b
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 6
+      removed: 2
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 1
@@ -17885,6 +18045,10 @@ pages:
       - 1
       - 1
       - 6
+      b3183479c616e2cc5fc4c153da99cab416bd3009..822fb36c35258fc4a868e447f7491834f397f21b:
+      - 6
+      - 2
+      - 0
     languages:
       fr: 6a60888469c62514b5df35e7b7610b33df6b2303
       pt_BR: 1bd368c3343d7ff622eaec0dc805c074ac670eb5
@@ -18093,8 +18257,12 @@ pages:
       2.47.2: ba38170d35a19194a23d6b2c3d9e9b4b8516afa4
       2.48.1: ba38170d35a19194a23d6b2c3d9e9b4b8516afa4
       2.49.0: ba38170d35a19194a23d6b2c3d9e9b4b8516afa4
-    latest-changes: 2.45.0
+      2.50.0: aac14811be0a5461d0bdecec2995502b1cbd752f
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 5
@@ -18328,6 +18496,10 @@ pages:
       - 5
       - 3
       - 0
+      ba38170d35a19194a23d6b2c3d9e9b4b8516afa4..aac14811be0a5461d0bdecec2995502b1cbd752f:
+      - 8
+      - 0
+      - 0
     languages:
       fr: ba6e4930d7e8f7b4373b239bb37c39ef54c12fa0
       pt_BR: 40bf95e0e34f829860e85ff884a4270f3d124718
@@ -18536,9 +18708,10 @@ pages:
       2.47.2: dc0619993b810bf1468af259da3363f3be6b71c9
       2.48.1: e0099638b684ba8da577bc9e53b37089b9f41ee9
       2.49.0: e0099638b684ba8da577bc9e53b37089b9f41ee9
+      2.50.0: e0099638b684ba8da577bc9e53b37089b9f41ee9
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 1
       removed: 1
@@ -18813,9 +18986,10 @@ pages:
       2.47.2: e1b3262d5c41d83da4f5d81790e9c400b160c25d
       2.48.1: 23f9ed54f13fab9bd22c9f112e5d16f1c7dd3e47
       2.49.0: 23f9ed54f13fab9bd22c9f112e5d16f1c7dd3e47
+      2.50.0: 23f9ed54f13fab9bd22c9f112e5d16f1c7dd3e47
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -19317,9 +19491,10 @@ pages:
       2.47.2: 29cbb7e9b76ca46646ba0c22d12d1a1fd2cb1ad7
       2.48.1: 29cbb7e9b76ca46646ba0c22d12d1a1fd2cb1ad7
       2.49.0: 29cbb7e9b76ca46646ba0c22d12d1a1fd2cb1ad7
+      2.50.0: 29cbb7e9b76ca46646ba0c22d12d1a1fd2cb1ad7
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 3
       removed: 3
@@ -19638,8 +19813,12 @@ pages:
       2.47.2: 2099dedb6f39f1fab82df4167d22091a6ac14cbd
       2.48.1: 2099dedb6f39f1fab82df4167d22091a6ac14cbd
       2.49.0: 2099dedb6f39f1fab82df4167d22091a6ac14cbd
-    latest-changes: 2.35.0
+      2.50.0: 4017a372ea43cfee1ca99d755d35ce2b86973f06
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.35.1 &rarr; 2.49.0
     - name: 2.35.0
       added: 5
@@ -19693,6 +19872,10 @@ pages:
       - 5
       - 1
       - 2
+      2099dedb6f39f1fab82df4167d22091a6ac14cbd..4017a372ea43cfee1ca99d755d35ce2b86973f06:
+      - 4
+      - 4
+      - 0
     languages:
       fr: 50c1871dca7fa5c58bec46506576e00dac5871d4
       pt_BR: 381f12a5663d371c744069cbd5f08be3825d42aa
@@ -19901,8 +20084,12 @@ pages:
       2.47.2: 8a35ec01f3a8fe23e84c39bcc757ca417b0c0a08
       2.48.1: 8a35ec01f3a8fe23e84c39bcc757ca417b0c0a08
       2.49.0: 8a35ec01f3a8fe23e84c39bcc757ca417b0c0a08
-    latest-changes: 2.47.0
+      2.50.0: df8188be81717973fc0c77a9807b81c367462c43
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 0
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 8
@@ -20078,6 +20265,10 @@ pages:
       - 8
       - 0
       - 0
+      8a35ec01f3a8fe23e84c39bcc757ca417b0c0a08..df8188be81717973fc0c77a9807b81c367462c43:
+      - 2
+      - 0
+      - 6
     languages:
       pt_BR: 6ce74036c69ea0e1ad636ba153dd5d7e15091b42
       zh_HANS-CN: 92b7ef66ff16f9be55568bdf0c33ff60772793cc
@@ -20285,9 +20476,10 @@ pages:
       2.47.2: 7e5335ebc0985bf335d8299c08d799aa448f2920
       2.48.1: fbe899a3a4429cbdd11c174681a30c64393040c6
       2.49.0: fbe899a3a4429cbdd11c174681a30c64393040c6
+      2.50.0: fbe899a3a4429cbdd11c174681a30c64393040c6
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -20848,9 +21040,10 @@ pages:
       2.47.2: 2f75bacdf9c0336458ce7b44afd983ca0b5f956d
       2.48.1: 2f75bacdf9c0336458ce7b44afd983ca0b5f956d
       2.49.0: 2f75bacdf9c0336458ce7b44afd983ca0b5f956d
+      2.50.0: 2f75bacdf9c0336458ce7b44afd983ca0b5f956d
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -21064,8 +21257,12 @@ pages:
       2.47.2: ba76201b4cda725dae0baadc40f49e77a9117fa0
       2.48.1: 86c1e26010d79193bd5fdcaede36bd4c75851c27
       2.49.0: 86c1e26010d79193bd5fdcaede36bd4c75851c27
-    latest-changes: 2.48.0
+      2.50.0: 281bd5fce28a02d8fda37a07e2e431d5222ae040
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.48.1 &rarr; 2.49.0
     - name: 2.48.0
       added: 8
@@ -21251,6 +21448,10 @@ pages:
       - 0
       - 2
       ba76201b4cda725dae0baadc40f49e77a9117fa0..86c1e26010d79193bd5fdcaede36bd4c75851c27:
+      - 8
+      - 0
+      - 0
+      86c1e26010d79193bd5fdcaede36bd4c75851c27..281bd5fce28a02d8fda37a07e2e431d5222ae040:
       - 8
       - 0
       - 0
@@ -21462,8 +21663,10 @@ pages:
       2.47.2: 69d1108321267e26ab90ddab78d9e01407ed10e1
       2.48.1: 69d1108321267e26ab90ddab78d9e01407ed10e1
       2.49.0: 71e0531fcfa1ed88a82e20c01999791b636ad1e6
+      2.50.0: 71e0531fcfa1ed88a82e20c01999791b636ad1e6
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 7
       removed: 0
@@ -21835,9 +22038,10 @@ pages:
       2.47.2: 33918a057b37f17a84ecd8cfd5fa0bb2aab26054
       2.48.1: 33918a057b37f17a84ecd8cfd5fa0bb2aab26054
       2.49.0: 33918a057b37f17a84ecd8cfd5fa0bb2aab26054
+      2.50.0: 33918a057b37f17a84ecd8cfd5fa0bb2aab26054
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -22067,9 +22271,10 @@ pages:
       2.47.2: dd96902246f6a95e92029c83a7a5194520a2cb6f
       2.48.1: dd96902246f6a95e92029c83a7a5194520a2cb6f
       2.49.0: dd96902246f6a95e92029c83a7a5194520a2cb6f
+      2.50.0: dd96902246f6a95e92029c83a7a5194520a2cb6f
     latest-changes: 2.45.0
     page-versions:
-    - name: 2.45.1 &rarr; 2.49.0
+    - name: 2.45.1 &rarr; 2.50.0
     - name: 2.45.0
       added: 5
       removed: 3
@@ -22448,9 +22653,10 @@ pages:
       2.47.2: f0cbd417123f447b2aa226d698dde15bf9c8679a
       2.48.1: f0cbd417123f447b2aa226d698dde15bf9c8679a
       2.49.0: f0cbd417123f447b2aa226d698dde15bf9c8679a
+      2.50.0: f0cbd417123f447b2aa226d698dde15bf9c8679a
     latest-changes: 2.45.3
     page-versions:
-    - name: 2.46.0 &rarr; 2.49.0
+    - name: 2.46.0 &rarr; 2.50.0
     - name: 2.45.3
       added: 1
       removed: 1
@@ -22703,9 +22909,10 @@ pages:
       2.47.2: d8727c5c4a925c6e4c71b74795349e9a645fedcc
       2.48.1: d8727c5c4a925c6e4c71b74795349e9a645fedcc
       2.49.0: d8727c5c4a925c6e4c71b74795349e9a645fedcc
+      2.50.0: d8727c5c4a925c6e4c71b74795349e9a645fedcc
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -22965,9 +23172,10 @@ pages:
       2.47.2: 94a1e2dd7ba6275b08b8d87a60d1a6d84178dfae
       2.48.1: 94a1e2dd7ba6275b08b8d87a60d1a6d84178dfae
       2.49.0: 94a1e2dd7ba6275b08b8d87a60d1a6d84178dfae
+      2.50.0: 94a1e2dd7ba6275b08b8d87a60d1a6d84178dfae
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -23283,8 +23491,10 @@ pages:
       2.47.2: 35949f6c7459239f14a5c28d16217dcb6bb6882c
       2.48.1: 35949f6c7459239f14a5c28d16217dcb6bb6882c
       2.49.0: 937668604bb7560c793ea71d9195a65bd40f518c
+      2.50.0: 937668604bb7560c793ea71d9195a65bd40f518c
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 4
       removed: 0
@@ -23545,9 +23755,10 @@ pages:
       2.47.2: 3186964bf973c270ec7afff229ff0370c98de548
       2.48.1: 3186964bf973c270ec7afff229ff0370c98de548
       2.49.0: 3186964bf973c270ec7afff229ff0370c98de548
+      2.50.0: 3186964bf973c270ec7afff229ff0370c98de548
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -23800,9 +24011,10 @@ pages:
       2.47.2: 0cd14a2642ef81d3ee6d9693206ef3d63ca0cc5a
       2.48.1: 0cd14a2642ef81d3ee6d9693206ef3d63ca0cc5a
       2.49.0: 0cd14a2642ef81d3ee6d9693206ef3d63ca0cc5a
+      2.50.0: 0cd14a2642ef81d3ee6d9693206ef3d63ca0cc5a
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -24047,9 +24259,10 @@ pages:
       2.47.2: 2a22262350510db42ba4f9fd3813a9fa27e9f3cb
       2.48.1: 2a22262350510db42ba4f9fd3813a9fa27e9f3cb
       2.49.0: 2a22262350510db42ba4f9fd3813a9fa27e9f3cb
+      2.50.0: 2a22262350510db42ba4f9fd3813a9fa27e9f3cb
     latest-changes: 2.43.1
     page-versions:
-    - name: 2.43.2 &rarr; 2.49.0
+    - name: 2.43.2 &rarr; 2.50.0
     - name: 2.43.1
       added: 1
       removed: 1
@@ -24332,9 +24545,10 @@ pages:
       2.47.2: 00eb314c1cacf3c8f0c4fe125a3b8f41702d3ee6
       2.48.1: 90aa28547a94144c55e486f33c90940e0214eb5c
       2.49.0: 90aa28547a94144c55e486f33c90940e0214eb5c
+      2.50.0: 90aa28547a94144c55e486f33c90940e0214eb5c
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 7
       removed: 0
@@ -24643,9 +24857,10 @@ pages:
       2.47.2: 5e7a857f08e25bd644ed2d1c13c105937dbcc63a
       2.48.1: 5e7a857f08e25bd644ed2d1c13c105937dbcc63a
       2.49.0: 5e7a857f08e25bd644ed2d1c13c105937dbcc63a
+      2.50.0: 5e7a857f08e25bd644ed2d1c13c105937dbcc63a
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 1
       removed: 1
@@ -24869,9 +25084,10 @@ pages:
       2.47.2: 581e96c02fe5b5d4ace65c95d43cdddd65716437
       2.48.1: 7c7f9846764c8716fbbbecdadce966eb2ab919e8
       2.49.0: 7c7f9846764c8716fbbbecdadce966eb2ab919e8
+      2.50.0: 7c7f9846764c8716fbbbecdadce966eb2ab919e8
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 3
       removed: 5
@@ -25227,9 +25443,10 @@ pages:
       2.47.2: ef4540f05095293b720c561485db49220fca0e77
       2.48.1: ef4540f05095293b720c561485db49220fca0e77
       2.49.0: ef4540f05095293b720c561485db49220fca0e77
+      2.50.0: ef4540f05095293b720c561485db49220fca0e77
     latest-changes: 2.21.0
     page-versions:
-    - name: 2.21.1 &rarr; 2.49.0
+    - name: 2.21.1 &rarr; 2.50.0
     - name: 2.21.0
       added: 2
       removed: 1
@@ -25466,8 +25683,12 @@ pages:
       2.47.2: dd05cc3dff234862b5493972d69dae4e1be267d4
       2.48.1: 5735c5f74cccf4d4bc232504bd6ffe2f0301809c
       2.49.0: b440f748ce04a1966e7b7b5654e8ddb34e1daab4
-    latest-changes: 2.49.0
+      2.50.0: b0312803fded9b7805559468b6387b05373a05dc
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.49.0
       added: 5
       removed: 3
@@ -25894,6 +26115,10 @@ pages:
       - 5
       - 3
       - 0
+      b440f748ce04a1966e7b7b5654e8ddb34e1daab4..b0312803fded9b7805559468b6387b05373a05dc:
+      - 8
+      - 0
+      - 0
     languages:
       fr: cebc3647177f9a55f6b662414440403fd996d0c4
       pt_BR: 4a28046a2cfcb239508ebd403a6d742e94826d87
@@ -26102,9 +26327,10 @@ pages:
       2.47.2: a4c82967e0d3995c74b0fe4715b0a60ae16b6283
       2.48.1: a4c82967e0d3995c74b0fe4715b0a60ae16b6283
       2.49.0: a4c82967e0d3995c74b0fe4715b0a60ae16b6283
+      2.50.0: a4c82967e0d3995c74b0fe4715b0a60ae16b6283
     latest-changes: 2.46.1
     page-versions:
-    - name: 2.46.2 &rarr; 2.49.0
+    - name: 2.46.2 &rarr; 2.50.0
     - name: 2.46.1
       added: 3
       removed: 3
@@ -26487,9 +26713,10 @@ pages:
       2.47.2: 3a78b32eb402064556f9de21f13db229bf3d2afd
       2.48.1: 3e07445271cdc960531e07de8c93c4fcf098f2e0
       2.49.0: 3e07445271cdc960531e07de8c93c4fcf098f2e0
+      2.50.0: 3e07445271cdc960531e07de8c93c4fcf098f2e0
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 3
       removed: 0
@@ -26790,9 +27017,10 @@ pages:
       2.47.2: 82ee02dac9f136a08dfe0c92166eabc69a52a8a8
       2.48.1: 82ee02dac9f136a08dfe0c92166eabc69a52a8a8
       2.49.0: 82ee02dac9f136a08dfe0c92166eabc69a52a8a8
+      2.50.0: 82ee02dac9f136a08dfe0c92166eabc69a52a8a8
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 4
       removed: 4
@@ -27052,9 +27280,10 @@ pages:
       2.47.2: d9566086d5dbb92633db690c14008ff07785346a
       2.48.1: d9566086d5dbb92633db690c14008ff07785346a
       2.49.0: d9566086d5dbb92633db690c14008ff07785346a
+      2.50.0: d9566086d5dbb92633db690c14008ff07785346a
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -27323,9 +27552,10 @@ pages:
       2.47.2: 5fe8a0c7082be9c25f74f7247a857e833980a4d9
       2.48.1: 5fe8a0c7082be9c25f74f7247a857e833980a4d9
       2.49.0: 5fe8a0c7082be9c25f74f7247a857e833980a4d9
+      2.50.0: 5fe8a0c7082be9c25f74f7247a857e833980a4d9
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -27554,9 +27784,10 @@ pages:
       2.47.2: 3e062b11f43e62b3a46a92fe4b5b18fe596f0a77
       2.48.1: 3e062b11f43e62b3a46a92fe4b5b18fe596f0a77
       2.49.0: 3e062b11f43e62b3a46a92fe4b5b18fe596f0a77
+      2.50.0: 3e062b11f43e62b3a46a92fe4b5b18fe596f0a77
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -27824,9 +28055,10 @@ pages:
       2.47.2: cfe7f2bb66b69c257bf52a63f2da4a1b729f801b
       2.48.1: cfe7f2bb66b69c257bf52a63f2da4a1b729f801b
       2.49.0: cfe7f2bb66b69c257bf52a63f2da4a1b729f801b
+      2.50.0: cfe7f2bb66b69c257bf52a63f2da4a1b729f801b
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 6
       removed: 0
@@ -28070,9 +28302,10 @@ pages:
       2.47.2: 523dd2b13cacffb4bc9895b9d4b406f9541a6c87
       2.48.1: 523dd2b13cacffb4bc9895b9d4b406f9541a6c87
       2.49.0: 523dd2b13cacffb4bc9895b9d4b406f9541a6c87
+      2.50.0: 523dd2b13cacffb4bc9895b9d4b406f9541a6c87
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 1
       removed: 1
@@ -28300,9 +28533,10 @@ pages:
       2.47.2: b4afbaa801709f37927ad5525967847da103e8d1
       2.48.1: b4afbaa801709f37927ad5525967847da103e8d1
       2.49.0: b4afbaa801709f37927ad5525967847da103e8d1
+      2.50.0: b4afbaa801709f37927ad5525967847da103e8d1
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -28516,8 +28750,12 @@ pages:
       2.47.2: 40400316a420fa0c60270550d9d7f81cc4ea2fc9
       2.48.1: 40400316a420fa0c60270550d9d7f81cc4ea2fc9
       2.49.0: 17d049feb6e492a1bdd661555ccb1050739acf21
-    latest-changes: 2.49.0
+      2.50.0: 3896072e20a94e9ab72c26e3d110c561082382f2
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 6
+      removed: 0
     - name: 2.49.0
       added: 6
       removed: 2
@@ -28594,6 +28832,10 @@ pages:
       - 6
       - 2
       - 0
+      17d049feb6e492a1bdd661555ccb1050739acf21..3896072e20a94e9ab72c26e3d110c561082382f2:
+      - 6
+      - 0
+      - 2
     languages:
       fr: 2a74c03c895112834fc7af2758b4d9fc6be03d0b
       pt_BR: 38c45f869a741637a4f1873565639b98d9380ef6
@@ -28802,8 +29044,12 @@ pages:
       2.47.2: 2b3c8855d62e36898c0c6cb21e7fea00954180ac
       2.48.1: 2b3c8855d62e36898c0c6cb21e7fea00954180ac
       2.49.0: 56a1c0be3f0b8da24d27c3817c43fdafb2492de3
-    latest-changes: 2.49.0
+      2.50.0: 9feb65ada52cc6a47a8a3f86858cbed27b0fd90b
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.49.0
       added: 3
       removed: 5
@@ -29083,6 +29329,10 @@ pages:
       - 3
       - 5
       - 0
+      56a1c0be3f0b8da24d27c3817c43fdafb2492de3..9feb65ada52cc6a47a8a3f86858cbed27b0fd90b:
+      - 4
+      - 4
+      - 0
     languages:
       fr: 8bc86e2fc428602de052243251781ae1dcb63d1f
       pt_BR: 145f59f5f7876b7d5ceb4f35c0128a5f4e4765ce
@@ -29291,9 +29541,10 @@ pages:
       2.47.2: 287956d18f2db551f853548183d7fa826059c6f8
       2.48.1: 287956d18f2db551f853548183d7fa826059c6f8
       2.49.0: 287956d18f2db551f853548183d7fa826059c6f8
+      2.50.0: 287956d18f2db551f853548183d7fa826059c6f8
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -29530,8 +29781,12 @@ pages:
       2.47.2: 0e930886b339c9dec28f1c3e2ea665894a386659
       2.48.1: 0e930886b339c9dec28f1c3e2ea665894a386659
       2.49.0: 0e930886b339c9dec28f1c3e2ea665894a386659
-    latest-changes: 2.45.0
+      2.50.0: 9109ef46e3ed4a396db3a05cb4ff78608d83eadf
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 5
@@ -29623,6 +29878,10 @@ pages:
       f7e752805ffcf1257a49cb0dae94dc4e6a600a1c..0e930886b339c9dec28f1c3e2ea665894a386659:
       - 5
       - 3
+      - 0
+      0e930886b339c9dec28f1c3e2ea665894a386659..9109ef46e3ed4a396db3a05cb4ff78608d83eadf:
+      - 4
+      - 4
       - 0
     languages:
       fr: 66539ff1a44778d164dbd7319a080cf9e9d77981
@@ -29832,9 +30091,10 @@ pages:
       2.47.2: 96accbe433a821b80ca02cd76862b4d154ae105a
       2.48.1: 96accbe433a821b80ca02cd76862b4d154ae105a
       2.49.0: 96accbe433a821b80ca02cd76862b4d154ae105a
+      2.50.0: 96accbe433a821b80ca02cd76862b4d154ae105a
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 3
       removed: 3
@@ -30087,9 +30347,10 @@ pages:
       2.47.2: 7079c2a886c8b33f77c2c0d47a887674b7f8157b
       2.48.1: 7079c2a886c8b33f77c2c0d47a887674b7f8157b
       2.49.0: 7079c2a886c8b33f77c2c0d47a887674b7f8157b
+      2.50.0: 7079c2a886c8b33f77c2c0d47a887674b7f8157b
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -30335,8 +30596,12 @@ pages:
       2.47.2: bb463d99b5fbb11875d2822aaae60fdb1df9b062
       2.48.1: bb463d99b5fbb11875d2822aaae60fdb1df9b062
       2.49.0: bb463d99b5fbb11875d2822aaae60fdb1df9b062
-    latest-changes: 2.44.0
+      2.50.0: d3f8a5cd208841fb9e276893a054ad0b28fac2e6
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 1
@@ -30374,6 +30639,10 @@ pages:
       - 1
       - 1
       - 6
+      bb463d99b5fbb11875d2822aaae60fdb1df9b062..d3f8a5cd208841fb9e276893a054ad0b28fac2e6:
+      - 4
+      - 4
+      - 0
     languages:
       de: 318a4e849d44b9923f218742311181f3a1966d28
       fr: 64831d527dde73002b47035723afe4fdb1fc2da0
@@ -30583,9 +30852,10 @@ pages:
       2.47.2: 247079cffd5aabcf29e0fc882ae42b5a27712340
       2.48.1: 247079cffd5aabcf29e0fc882ae42b5a27712340
       2.49.0: 247079cffd5aabcf29e0fc882ae42b5a27712340
+      2.50.0: 247079cffd5aabcf29e0fc882ae42b5a27712340
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -30838,8 +31108,12 @@ pages:
       2.47.2: f4a0735c0fc28791052c111b1a94038750c6a629
       2.48.1: 0fd29d2cd4527d09ada71014b252fa8c01b25e01
       2.49.0: c7637a43ff9355c690d4b6127c215f3190c66298
-    latest-changes: 2.49.0
+      2.50.0: c59632cda792e6703ee6efcb894907389e8aa30a
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.49.0
       added: 4
       removed: 4
@@ -30970,6 +31244,10 @@ pages:
       0fd29d2cd4527d09ada71014b252fa8c01b25e01..c7637a43ff9355c690d4b6127c215f3190c66298:
       - 4
       - 4
+      - 0
+      c7637a43ff9355c690d4b6127c215f3190c66298..c59632cda792e6703ee6efcb894907389e8aa30a:
+      - 5
+      - 3
       - 0
     languages:
       fr: ce5d67591794502a6c11a5040c38420c03431f33
@@ -31179,8 +31457,12 @@ pages:
       2.47.2: 1a7dfe90bde58ed0a84e0f27ecca8d7dfe01228a
       2.48.1: 1a7dfe90bde58ed0a84e0f27ecca8d7dfe01228a
       2.49.0: 1a7dfe90bde58ed0a84e0f27ecca8d7dfe01228a
-    latest-changes: 2.37.0
+      2.50.0: ad0a62819662328ed97c5b8334daefe3614b95b3
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.37.1 &rarr; 2.49.0
     - name: 2.37.0
       added: 8
@@ -31321,6 +31603,10 @@ pages:
       - 4
       - 0
       edd4876c50d15f23c412e8b2b21386c3940a8f83..1a7dfe90bde58ed0a84e0f27ecca8d7dfe01228a:
+      - 8
+      - 0
+      - 0
+      1a7dfe90bde58ed0a84e0f27ecca8d7dfe01228a..ad0a62819662328ed97c5b8334daefe3614b95b3:
       - 8
       - 0
       - 0
@@ -31531,8 +31817,10 @@ pages:
       2.47.2: 0154cb0d9770171d0c49ce3e48f7b561e6a4b3e1
       2.48.1: 0154cb0d9770171d0c49ce3e48f7b561e6a4b3e1
       2.49.0: db46dec1017fe1a2a9c843ce31a4314fa9b6fb93
+      2.50.0: db46dec1017fe1a2a9c843ce31a4314fa9b6fb93
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 8
       removed: 0
@@ -31902,9 +32190,10 @@ pages:
       2.47.2: d3e402c0e1cc92321370a488a3909ba5732af524
       2.48.1: d3e402c0e1cc92321370a488a3909ba5732af524
       2.49.0: d3e402c0e1cc92321370a488a3909ba5732af524
+      2.50.0: d3e402c0e1cc92321370a488a3909ba5732af524
     latest-changes: 2.41.0
     page-versions:
-    - name: 2.41.1 &rarr; 2.49.0
+    - name: 2.41.1 &rarr; 2.50.0
     - name: 2.41.0
       added: 8
       removed: 0
@@ -32141,8 +32430,12 @@ pages:
       2.47.2: 74fb771cd74171c069e28e1ffddfdcd561d1786f
       2.48.1: 74fb771cd74171c069e28e1ffddfdcd561d1786f
       2.49.0: 74fb771cd74171c069e28e1ffddfdcd561d1786f
-    latest-changes: 2.45.0
+      2.50.0: 6078e625853ad98615df48a20030129031777dcd
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 2
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 7
@@ -32164,6 +32457,10 @@ pages:
       - 7
       - 1
       - 0
+      74fb771cd74171c069e28e1ffddfdcd561d1786f..6078e625853ad98615df48a20030129031777dcd:
+      - 2
+      - 2
+      - 4
     languages:
       fr: ae7015c9f5a4918e636df21c8a3c546341f1ac52
       pt_BR: 9c8e5a6c4f6788377c6ae80151352735f2d0fd16
@@ -32465,9 +32762,10 @@ pages:
       2.47.2: 9bab4f5911b70e67d6ad55a6c1e9c3a9da898d5c
       2.48.1: 9bab4f5911b70e67d6ad55a6c1e9c3a9da898d5c
       2.49.0: 9bab4f5911b70e67d6ad55a6c1e9c3a9da898d5c
+      2.50.0: 9bab4f5911b70e67d6ad55a6c1e9c3a9da898d5c
     latest-changes: 2.39.0
     page-versions:
-    - name: 2.39.1 &rarr; 2.49.0
+    - name: 2.39.1 &rarr; 2.50.0
     - name: 2.39.0
       added: 5
       removed: 3
@@ -32711,9 +33009,10 @@ pages:
       2.47.2: c491057d76095353b3825a90ffc82963a16dbe7e
       2.48.1: c491057d76095353b3825a90ffc82963a16dbe7e
       2.49.0: c491057d76095353b3825a90ffc82963a16dbe7e
+      2.50.0: c491057d76095353b3825a90ffc82963a16dbe7e
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -32951,9 +33250,10 @@ pages:
       2.47.2: 8d1f781904a5f1868b0899c1e3c6d420d57062a4
       2.48.1: 8d1f781904a5f1868b0899c1e3c6d420d57062a4
       2.49.0: 8d1f781904a5f1868b0899c1e3c6d420d57062a4
+      2.50.0: 8d1f781904a5f1868b0899c1e3c6d420d57062a4
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -33191,8 +33491,12 @@ pages:
       2.47.2: 3a98c8157bd13a8cc6966e0b5d6731205b23936c
       2.48.1: 8e7d395a6cfeedc55268bad91778f02ecf03dfa1
       2.49.0: 26b6e6d38cd9fb91edbe78fabfef6a9318819540
-    latest-changes: 2.49.0
+      2.50.0: e5230ddc6036c91e51bf2cb7a5f877eb83f09898
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.49.0
       added: 6
       removed: 2
@@ -33534,6 +33838,10 @@ pages:
       - 6
       - 2
       - 0
+      26b6e6d38cd9fb91edbe78fabfef6a9318819540..e5230ddc6036c91e51bf2cb7a5f877eb83f09898:
+      - 4
+      - 4
+      - 0
     languages:
       fr: 3431a4f0a387945b22bdab11f97440cb6efe41f1
       pt_BR: 527d6ea3145879e0dc9a20ac7e5f146d101bd116
@@ -33742,9 +34050,10 @@ pages:
       2.47.2: 24a92c0b37f0c407a4888682d740dbbb4ba76d46
       2.48.1: f12b6ba5e0180c041a32742a3870bfd4fed18fdd
       2.49.0: f12b6ba5e0180c041a32742a3870bfd4fed18fdd
+      2.50.0: f12b6ba5e0180c041a32742a3870bfd4fed18fdd
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 4
@@ -34210,9 +34519,10 @@ pages:
       2.47.2: a0e37ab85cac3328f6813c05a1e423a6e2c89439
       2.48.1: a0e37ab85cac3328f6813c05a1e423a6e2c89439
       2.49.0: a0e37ab85cac3328f6813c05a1e423a6e2c89439
+      2.50.0: a0e37ab85cac3328f6813c05a1e423a6e2c89439
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -34465,9 +34775,10 @@ pages:
       2.47.2: 1916efce3ad6ba9e04057c1189b2de03333406d9
       2.48.1: 1916efce3ad6ba9e04057c1189b2de03333406d9
       2.49.0: 1916efce3ad6ba9e04057c1189b2de03333406d9
+      2.50.0: 1916efce3ad6ba9e04057c1189b2de03333406d9
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 3
       removed: 3
@@ -34789,8 +35100,12 @@ pages:
       2.47.2: ab19c78a044ca4de1c17e5c350889d6bd207681c
       2.48.1: ab19c78a044ca4de1c17e5c350889d6bd207681c
       2.49.0: c862a07d43775ea7fbf641e4ffcaee241e95edde
-    latest-changes: 2.49.0
+      2.50.0: c0a42b451dcdd2754be958d30f3dea7c331eebce
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.49.0
       added: 6
       removed: 2
@@ -35159,6 +35474,10 @@ pages:
       - 6
       - 2
       - 0
+      c862a07d43775ea7fbf641e4ffcaee241e95edde..c0a42b451dcdd2754be958d30f3dea7c331eebce:
+      - 4
+      - 4
+      - 0
     languages:
       pt_BR: c8f48555c4abe0802f0f257650a2835be94218a1
       zh_HANS-CN: a97baab0bb62aa6ca8c2a5404c915c6ad38efda6
@@ -35367,8 +35686,12 @@ pages:
       2.47.2: d4d8326a6c438fc1b45f813bff7a309caed85a7d
       2.48.1: d4d8326a6c438fc1b45f813bff7a309caed85a7d
       2.49.0: d4d8326a6c438fc1b45f813bff7a309caed85a7d
-    latest-changes: 2.43.0
+      2.50.0: d48e55d6ef7e6044e6d7f09ec62443151904c4a9
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 2
@@ -35446,6 +35769,10 @@ pages:
       - 2
       - 2
       - 4
+      d4d8326a6c438fc1b45f813bff7a309caed85a7d..d48e55d6ef7e6044e6d7f09ec62443151904c4a9:
+      - 8
+      - 0
+      - 0
     languages:
       pt_BR: fad3b0d3c180aa736797c3b95116517bb8f40b62
       zh_HANS-CN: 62bb245ae82e2e1bf475cf227b5a7e5a9cd0fae9
@@ -35653,8 +35980,12 @@ pages:
       2.47.2: 83ab78afb13eddc0c109ded83f14251c305437df
       2.48.1: 83ab78afb13eddc0c109ded83f14251c305437df
       2.49.0: 83ab78afb13eddc0c109ded83f14251c305437df
-    latest-changes: 2.45.0
+      2.50.0: 4d751db748c1b8d67541df04e86b4325afcb9278
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 7
+      removed: 1
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 3
@@ -35724,6 +36055,10 @@ pages:
       - 3
       - 0
       - 5
+      83ab78afb13eddc0c109ded83f14251c305437df..4d751db748c1b8d67541df04e86b4325afcb9278:
+      - 7
+      - 1
+      - 0
     languages:
       pt_BR: 6204ec5b27657e3182475ede1f5af2c5fccc32c6
       zh_HANS-CN: 4770d62107eeeb2f7b9811c6daa90f60f2c06423
@@ -35952,9 +36287,10 @@ pages:
       2.47.2: 61cadb3e5af77953c513f5e23e0f85ee493fb820
       2.48.1: 61cadb3e5af77953c513f5e23e0f85ee493fb820
       2.49.0: 61cadb3e5af77953c513f5e23e0f85ee493fb820
+      2.50.0: 61cadb3e5af77953c513f5e23e0f85ee493fb820
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -36198,9 +36534,10 @@ pages:
       2.47.2: 9d41ace8e22584f332f5d42c52dd6f6b0de38bee
       2.48.1: 9d41ace8e22584f332f5d42c52dd6f6b0de38bee
       2.49.0: 9d41ace8e22584f332f5d42c52dd6f6b0de38bee
+      2.50.0: 9d41ace8e22584f332f5d42c52dd6f6b0de38bee
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -36500,9 +36837,10 @@ pages:
       2.47.2: 106236ca717c0be5169dd7b4b14934c91373f6bc
       2.48.1: 106236ca717c0be5169dd7b4b14934c91373f6bc
       2.49.0: 106236ca717c0be5169dd7b4b14934c91373f6bc
+      2.50.0: 106236ca717c0be5169dd7b4b14934c91373f6bc
     latest-changes: 2.45.0
     page-versions:
-    - name: 2.45.1 &rarr; 2.49.0
+    - name: 2.45.1 &rarr; 2.50.0
     - name: 2.45.0
       added: 1
       removed: 1
@@ -36818,8 +37156,12 @@ pages:
       2.47.2: cd01864f13fe7aaed93aec6539e9214a3930e1c7
       2.48.1: cd01864f13fe7aaed93aec6539e9214a3930e1c7
       2.49.0: 8381689d9874ddaeb1ea681431c5473ecc75fc63
-    latest-changes: 2.49.0
+      2.50.0: 7600db239db0a15963c518d1adfaf3e2e5ec21ab
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.49.0
       added: 7
       removed: 1
@@ -36973,6 +37315,10 @@ pages:
       cd01864f13fe7aaed93aec6539e9214a3930e1c7..8381689d9874ddaeb1ea681431c5473ecc75fc63:
       - 7
       - 1
+      - 0
+      8381689d9874ddaeb1ea681431c5473ecc75fc63..7600db239db0a15963c518d1adfaf3e2e5ec21ab:
+      - 5
+      - 3
       - 0
     languages:
       pt_BR: 15bb01746fa4e39727022a072b337a4204d101a1
@@ -37182,9 +37528,10 @@ pages:
       2.47.2: 52b665af515b61e3164ac298ac6a527d19a2d10b
       2.48.1: 52b665af515b61e3164ac298ac6a527d19a2d10b
       2.49.0: 52b665af515b61e3164ac298ac6a527d19a2d10b
+      2.50.0: 52b665af515b61e3164ac298ac6a527d19a2d10b
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 3
       removed: 3
@@ -37444,9 +37791,10 @@ pages:
       2.47.2: 9526440f6f639faf3d769c52e27484cddfe784d3
       2.48.1: 9526440f6f639faf3d769c52e27484cddfe784d3
       2.49.0: 9526440f6f639faf3d769c52e27484cddfe784d3
+      2.50.0: 9526440f6f639faf3d769c52e27484cddfe784d3
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -37691,9 +38039,10 @@ pages:
       2.47.2: 7de9d7cd34899cf5821f1ed276c2e9cea31bc888
       2.48.1: 7de9d7cd34899cf5821f1ed276c2e9cea31bc888
       2.49.0: 7de9d7cd34899cf5821f1ed276c2e9cea31bc888
+      2.50.0: 7de9d7cd34899cf5821f1ed276c2e9cea31bc888
     latest-changes: 2.39.0
     page-versions:
-    - name: 2.39.1 &rarr; 2.49.0
+    - name: 2.39.1 &rarr; 2.50.0
     - name: 2.39.0
       added: 1
       removed: 1
@@ -37954,8 +38303,12 @@ pages:
       2.47.2: a1b9d918d36224fa346f0534c4f374e4015225b5
       2.48.1: a1b9d918d36224fa346f0534c4f374e4015225b5
       2.49.0: a1b9d918d36224fa346f0534c4f374e4015225b5
-    latest-changes: 2.39.3
+      2.50.0: 9a29f34a2803c465d66d6338e7eae68ae6f0d45b
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.39.4 &rarr; 2.49.0
     - name: 2.39.3
       added: 2
@@ -38055,6 +38408,10 @@ pages:
       - 2
       - 1
       - 5
+      a1b9d918d36224fa346f0534c4f374e4015225b5..9a29f34a2803c465d66d6338e7eae68ae6f0d45b:
+      - 4
+      - 4
+      - 0
     languages:
       fr: 610bbcf9872c01ee64fa40c14897aa842cf58934
       pt_BR: b4a4065b382d03a2a3fc448d9b70f66994da01ec
@@ -38263,8 +38620,12 @@ pages:
       2.47.2: b847579e69d4ea2a369d5bccfad0b5e5f2884e28
       2.48.1: 5648bbbc6e5e197ef16407ca37d0de6c25f20ba2
       2.49.0: a4cbd135380836a11d7c0b4e31debb54ec822fc4
-    latest-changes: 2.49.0
+      2.50.0: 16d37d6b930da97b420a171f792c1b5467a3a94c
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.49.0
       added: 7
       removed: 1
@@ -38626,6 +38987,10 @@ pages:
       - 7
       - 1
       - 0
+      a4cbd135380836a11d7c0b4e31debb54ec822fc4..16d37d6b930da97b420a171f792c1b5467a3a94c:
+      - 8
+      - 0
+      - 0
     languages:
       de: 23d28fda43bda6f361975696650e03af50216ad1
       fr: 3326b78f725b55cc6f61c779c5b2cca0cd93ab4e
@@ -38835,9 +39200,10 @@ pages:
       2.47.2: ad2e1b2217c6adf64fbe9c62cef3a1767aa9cf86
       2.48.1: ad2e1b2217c6adf64fbe9c62cef3a1767aa9cf86
       2.49.0: ad2e1b2217c6adf64fbe9c62cef3a1767aa9cf86
+      2.50.0: ad2e1b2217c6adf64fbe9c62cef3a1767aa9cf86
     latest-changes: 2.45.3
     page-versions:
-    - name: 2.46.0 &rarr; 2.49.0
+    - name: 2.46.0 &rarr; 2.50.0
     - name: 2.45.3
       added: 7
       removed: 1
@@ -39288,8 +39654,12 @@ pages:
       2.47.2: 18e1fc3d5b9c0a729515171fd50ad9dfa988ac55
       2.48.1: 18e1fc3d5b9c0a729515171fd50ad9dfa988ac55
       2.49.0: 18e1fc3d5b9c0a729515171fd50ad9dfa988ac55
-    latest-changes: 2.44.0
+      2.50.0: 90b04a1a770da75ef452f3a07d78615dbb32555d
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 2
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 2
@@ -39387,6 +39757,10 @@ pages:
       - 0
       - 0
       ef5de5c28c8911217ded14a258091dd5e7d20d46..18e1fc3d5b9c0a729515171fd50ad9dfa988ac55:
+      - 2
+      - 2
+      - 4
+      18e1fc3d5b9c0a729515171fd50ad9dfa988ac55..90b04a1a770da75ef452f3a07d78615dbb32555d:
       - 2
       - 2
       - 4
@@ -39598,8 +39972,12 @@ pages:
       2.47.2: 92a24f988293d638a83243edc563bca5d817e313
       2.48.1: 92a24f988293d638a83243edc563bca5d817e313
       2.49.0: 92a24f988293d638a83243edc563bca5d817e313
-    latest-changes: 2.43.0
+      2.50.0: 12d7ac89bd672504b4f852f78b756a2a4871fcd2
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 1
@@ -39659,6 +40037,10 @@ pages:
       - 1
       - 1
       - 6
+      92a24f988293d638a83243edc563bca5d817e313..12d7ac89bd672504b4f852f78b756a2a4871fcd2:
+      - 4
+      - 4
+      - 0
     languages:
       fr: 703cf1e8ad23ae9e6712bf4826dc29b82c41e177
       pt_BR: 7692c42b4adb2322b1a016c90db52811efa4931c
@@ -39867,8 +40249,12 @@ pages:
       2.47.2: 3bbb0ce6fdb2f8ea03001fbb2d64b566fd4347a5
       2.48.1: 3bbb0ce6fdb2f8ea03001fbb2d64b566fd4347a5
       2.49.0: 3bbb0ce6fdb2f8ea03001fbb2d64b566fd4347a5
-    latest-changes: 2.47.0
+      2.50.0: c05631d471813dc9c879045d595ca77be414a316
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 7
+      removed: 1
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 8
@@ -40106,6 +40492,10 @@ pages:
       - 8
       - 0
       - 0
+      3bbb0ce6fdb2f8ea03001fbb2d64b566fd4347a5..c05631d471813dc9c879045d595ca77be414a316:
+      - 7
+      - 1
+      - 0
     languages:
       pt_BR: babbe28c1335b5e97dfdcc6ce8ee8443f9147260
       zh_HANS-CN: a2b06b16747b16e64b0ca6ed7ee0d80c434e37aa
@@ -40313,9 +40703,10 @@ pages:
       2.47.2: 200e6ec7093794ff832653267f587e3b9b809e23
       2.48.1: 200e6ec7093794ff832653267f587e3b9b809e23
       2.49.0: 200e6ec7093794ff832653267f587e3b9b809e23
+      2.50.0: 200e6ec7093794ff832653267f587e3b9b809e23
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -40606,9 +40997,10 @@ pages:
       2.47.2: 95d86d71a3967fdf0cdb94ca56c1ed443ee7ab1d
       2.48.1: 95d86d71a3967fdf0cdb94ca56c1ed443ee7ab1d
       2.49.0: 95d86d71a3967fdf0cdb94ca56c1ed443ee7ab1d
+      2.50.0: 95d86d71a3967fdf0cdb94ca56c1ed443ee7ab1d
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -40819,9 +41211,10 @@ pages:
       2.47.2: faf2fae41df4692d3a4ec0c0a7d15a3def078481
       2.48.1: faf2fae41df4692d3a4ec0c0a7d15a3def078481
       2.49.0: faf2fae41df4692d3a4ec0c0a7d15a3def078481
+      2.50.0: faf2fae41df4692d3a4ec0c0a7d15a3def078481
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -41033,9 +41426,10 @@ pages:
       2.47.2: f656e99d17fcfbb613587f1c514bb042293b56d0
       2.48.1: f656e99d17fcfbb613587f1c514bb042293b56d0
       2.49.0: f656e99d17fcfbb613587f1c514bb042293b56d0
+      2.50.0: f656e99d17fcfbb613587f1c514bb042293b56d0
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -41263,9 +41657,10 @@ pages:
       2.47.2: 5e4ba7e6467a5bff033603d1c36e108aaad5c2cb
       2.48.1: 5e4ba7e6467a5bff033603d1c36e108aaad5c2cb
       2.49.0: 5e4ba7e6467a5bff033603d1c36e108aaad5c2cb
+      2.50.0: 5e4ba7e6467a5bff033603d1c36e108aaad5c2cb
     latest-changes: 2.18.0
     page-versions:
-    - name: 2.18.1 &rarr; 2.49.0
+    - name: 2.18.1 &rarr; 2.50.0
     - name: 2.18.0
       added: 2
       removed: 2
@@ -41500,8 +41895,12 @@ pages:
       2.47.2: 94326746dd3f65444925c054c11a1d9ea80b076b
       2.48.1: c6ea5770922548142f9355c7f4c1c0e42d40ac11
       2.49.0: ac909fb26ef6fd68b897223893bc5ccfd87913b2
-    latest-changes: 2.49.0
+      2.50.0: b3524ca0683a4f2af11ec14ca23d696de5fe88c1
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.49.0
       added: 8
       removed: 0
@@ -41693,6 +42092,10 @@ pages:
       - 1
       - 5
       c6ea5770922548142f9355c7f4c1c0e42d40ac11..ac909fb26ef6fd68b897223893bc5ccfd87913b2:
+      - 8
+      - 0
+      - 0
+      ac909fb26ef6fd68b897223893bc5ccfd87913b2..b3524ca0683a4f2af11ec14ca23d696de5fe88c1:
       - 8
       - 0
       - 0
@@ -41904,9 +42307,10 @@ pages:
       2.47.2: e7d1e37cca37e7c25e9057cb349fcfb8d4151cb9
       2.48.1: e7d1e37cca37e7c25e9057cb349fcfb8d4151cb9
       2.49.0: e7d1e37cca37e7c25e9057cb349fcfb8d4151cb9
+      2.50.0: e7d1e37cca37e7c25e9057cb349fcfb8d4151cb9
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 1
       removed: 1
@@ -42190,8 +42594,10 @@ pages:
       2.47.2: de6d774f68b10fd43019fe238f62ca6b0aa48ce1
       2.48.1: de6d774f68b10fd43019fe238f62ca6b0aa48ce1
       2.49.0: 9ab08ab291199b29c91e3b4b165c4425729e140e
+      2.50.0: 9ab08ab291199b29c91e3b4b165c4425729e140e
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 1
       removed: 1
@@ -42451,9 +42857,10 @@ pages:
       2.47.2: 9f304894364e29dcf3b11de716808b2171e8bf7a
       2.48.1: 9f304894364e29dcf3b11de716808b2171e8bf7a
       2.49.0: 9f304894364e29dcf3b11de716808b2171e8bf7a
+      2.50.0: 9f304894364e29dcf3b11de716808b2171e8bf7a
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 4
       removed: 4
@@ -42729,8 +43136,10 @@ pages:
       2.47.2: 643b6c1fb5b45b759f275d0864537d532cd8dc82
       2.48.1: d9f67e827f3bc553bd29924dba32fe0de4715a96
       2.49.0: 1601de917bce222a3cff038a18b1710a87a2ae3a
+      2.50.0: 1601de917bce222a3cff038a18b1710a87a2ae3a
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 4
       removed: 4
@@ -43297,9 +43706,10 @@ pages:
       2.47.2: e4b3706c5bfe6923a5dcc4035aa3f523c0a11656
       2.48.1: e4b3706c5bfe6923a5dcc4035aa3f523c0a11656
       2.49.0: e4b3706c5bfe6923a5dcc4035aa3f523c0a11656
+      2.50.0: e4b3706c5bfe6923a5dcc4035aa3f523c0a11656
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 1
       removed: 1
@@ -43530,9 +43940,10 @@ pages:
       2.47.2: 68ce698cc0895b55ed417d081eb09e6d765ea51c
       2.48.1: 68ce698cc0895b55ed417d081eb09e6d765ea51c
       2.49.0: 68ce698cc0895b55ed417d081eb09e6d765ea51c
+      2.50.0: 68ce698cc0895b55ed417d081eb09e6d765ea51c
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -43885,9 +44296,10 @@ pages:
       2.47.2: f47a2439b5ef738dbfdf5242233f566f3b74ff75
       2.48.1: f47a2439b5ef738dbfdf5242233f566f3b74ff75
       2.49.0: f47a2439b5ef738dbfdf5242233f566f3b74ff75
+      2.50.0: f47a2439b5ef738dbfdf5242233f566f3b74ff75
     latest-changes: 2.45.0
     page-versions:
-    - name: 2.45.1 &rarr; 2.49.0
+    - name: 2.45.1 &rarr; 2.50.0
     - name: 2.45.0
       added: 3
       removed: 1
@@ -44280,8 +44692,12 @@ pages:
       2.47.2: a22779ce8a051359cf39164b92c0c3e96c10015c
       2.48.1: a22779ce8a051359cf39164b92c0c3e96c10015c
       2.49.0: a22779ce8a051359cf39164b92c0c3e96c10015c
-    latest-changes: 2.43.0
+      2.50.0: 67ee31f19762f75d66a1ba72cab174582ccbd2c6
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 1
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 3
@@ -44318,6 +44734,10 @@ pages:
       - 3
       - 3
       - 2
+      a22779ce8a051359cf39164b92c0c3e96c10015c..67ee31f19762f75d66a1ba72cab174582ccbd2c6:
+      - 2
+      - 1
+      - 5
     languages:
       pt_BR: 01a29055cb18d677188f1bc968c540aee5180504
       zh_HANS-CN: 42b3d66e77db8d5d2cbe99feb8432615188c4c0f
@@ -44525,9 +44945,10 @@ pages:
       2.47.2: e034e215bf841743e0d1fe783a82e3d65efed431
       2.48.1: e034e215bf841743e0d1fe783a82e3d65efed431
       2.49.0: e034e215bf841743e0d1fe783a82e3d65efed431
+      2.50.0: e034e215bf841743e0d1fe783a82e3d65efed431
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 6
       removed: 2
@@ -44910,9 +45331,10 @@ pages:
       2.47.2: 76ce9cab3e88d20b8bcba2b4494cfe9045eb61ae
       2.48.1: 76ce9cab3e88d20b8bcba2b4494cfe9045eb61ae
       2.49.0: 76ce9cab3e88d20b8bcba2b4494cfe9045eb61ae
+      2.50.0: 76ce9cab3e88d20b8bcba2b4494cfe9045eb61ae
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 4
       removed: 4
@@ -45285,9 +45707,10 @@ pages:
       2.47.2: 94a874723e8f280a4bcb810223e9e772d268fc86
       2.48.1: 5e6fd14451e476c01f9de509137a1206e3b5c24d
       2.49.0: 5e6fd14451e476c01f9de509137a1206e3b5c24d
+      2.50.0: 5e6fd14451e476c01f9de509137a1206e3b5c24d
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 4
       removed: 0
@@ -45523,9 +45946,10 @@ pages:
       2.47.2: a87f3d0a51899408199b3626776704f9ec7d43c2
       2.48.1: a87f3d0a51899408199b3626776704f9ec7d43c2
       2.49.0: a87f3d0a51899408199b3626776704f9ec7d43c2
+      2.50.0: a87f3d0a51899408199b3626776704f9ec7d43c2
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 7
       removed: 1
@@ -45953,9 +46377,10 @@ pages:
       2.47.2: 52b8f44c8b9fa8334d21fb75d33b1c8251396066
       2.48.1: 52b8f44c8b9fa8334d21fb75d33b1c8251396066
       2.49.0: 52b8f44c8b9fa8334d21fb75d33b1c8251396066
+      2.50.0: 52b8f44c8b9fa8334d21fb75d33b1c8251396066
     latest-changes: 2.13.7
     page-versions:
-    - name: 2.14.6 &rarr; 2.49.0
+    - name: 2.14.6 &rarr; 2.50.0
     - name: 2.13.7
       added: 1
       removed: 1
@@ -46180,9 +46605,10 @@ pages:
       2.47.2: e5594236a266c0cd48b1563ec59bbaf2e7ef2f9d
       2.48.1: e5594236a266c0cd48b1563ec59bbaf2e7ef2f9d
       2.49.0: e5594236a266c0cd48b1563ec59bbaf2e7ef2f9d
+      2.50.0: e5594236a266c0cd48b1563ec59bbaf2e7ef2f9d
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -46393,9 +46819,10 @@ pages:
       2.47.2: 81bd5ac30c3e2a378082e057dab607e1645ac919
       2.48.1: 81bd5ac30c3e2a378082e057dab607e1645ac919
       2.49.0: 81bd5ac30c3e2a378082e057dab607e1645ac919
+      2.50.0: 81bd5ac30c3e2a378082e057dab607e1645ac919
     latest-changes: 2.11.4
     page-versions:
-    - name: 2.12.5 &rarr; 2.49.0
+    - name: 2.12.5 &rarr; 2.50.0
     - name: 2.11.4
       added: 3
       removed: 0
@@ -46631,9 +47058,10 @@ pages:
       2.47.2: a5b7d626284bef69b2b5d533240c0349c6e71f82
       2.48.1: a5b7d626284bef69b2b5d533240c0349c6e71f82
       2.49.0: a5b7d626284bef69b2b5d533240c0349c6e71f82
+      2.50.0: a5b7d626284bef69b2b5d533240c0349c6e71f82
     latest-changes: 2.45.3
     page-versions:
-    - name: 2.46.0 &rarr; 2.49.0
+    - name: 2.46.0 &rarr; 2.50.0
     - name: 2.45.3
       added: 1
       removed: 0
@@ -47003,8 +47431,12 @@ pages:
       2.47.2: d5f53d0fdf3f9d33e513e38217c4c891ffecdbcd
       2.48.1: b5dcb5589af6ba133a1a960a703ec97deae602e5
       2.49.0: b5dcb5589af6ba133a1a960a703ec97deae602e5
-    latest-changes: 2.48.0
+      2.50.0: ef0a83c52e41663ec89815a9eb95a1b14d8343f6
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 7
+      removed: 1
     - name: 2.48.1 &rarr; 2.49.0
     - name: 2.48.0
       added: 4
@@ -47096,6 +47528,10 @@ pages:
       d5f53d0fdf3f9d33e513e38217c4c891ffecdbcd..b5dcb5589af6ba133a1a960a703ec97deae602e5:
       - 4
       - 4
+      - 0
+      b5dcb5589af6ba133a1a960a703ec97deae602e5..ef0a83c52e41663ec89815a9eb95a1b14d8343f6:
+      - 7
+      - 1
       - 0
     languages:
       pt_BR: 72c03905f4f1944de3bdf86d0496c61ec56cb6b0
@@ -47304,9 +47740,10 @@ pages:
       2.47.2: 9633f438a80b9093b1bfb1c0c27cc454a558a942
       2.48.1: 9633f438a80b9093b1bfb1c0c27cc454a558a942
       2.49.0: 9633f438a80b9093b1bfb1c0c27cc454a558a942
+      2.50.0: 9633f438a80b9093b1bfb1c0c27cc454a558a942
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -47542,9 +47979,10 @@ pages:
       2.47.2: f69eda69fdcfb686c59c4baa7caf623dc7319655
       2.48.1: f69eda69fdcfb686c59c4baa7caf623dc7319655
       2.49.0: f69eda69fdcfb686c59c4baa7caf623dc7319655
+      2.50.0: f69eda69fdcfb686c59c4baa7caf623dc7319655
     latest-changes: 2.39.0
     page-versions:
-    - name: 2.39.1 &rarr; 2.49.0
+    - name: 2.39.1 &rarr; 2.50.0
     - name: 2.39.0
       added: 2
       removed: 2
@@ -47772,9 +48210,10 @@ pages:
       2.47.2: 70e2a3ce71f26c5190fa57680b6cdb0304a740ab
       2.48.1: 70e2a3ce71f26c5190fa57680b6cdb0304a740ab
       2.49.0: 70e2a3ce71f26c5190fa57680b6cdb0304a740ab
+      2.50.0: 70e2a3ce71f26c5190fa57680b6cdb0304a740ab
     latest-changes: 2.45.1
     page-versions:
-    - name: 2.45.2 &rarr; 2.49.0
+    - name: 2.45.2 &rarr; 2.50.0
     - name: 2.45.1
       added: 8
       removed: 0
@@ -48095,8 +48534,12 @@ pages:
       2.47.2: b3509775dd0268fc34cd4b2645c729b121f95262
       2.48.1: b3509775dd0268fc34cd4b2645c729b121f95262
       2.49.0: b3509775dd0268fc34cd4b2645c729b121f95262
-    latest-changes: 2.43.0
+      2.50.0: 641b38952daaffcdf46bb86f86c0f196c1c98b06
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 1
@@ -48150,6 +48593,10 @@ pages:
       - 1
       - 1
       - 6
+      b3509775dd0268fc34cd4b2645c729b121f95262..641b38952daaffcdf46bb86f86c0f196c1c98b06:
+      - 4
+      - 4
+      - 0
     languages:
       pt_BR: 050aae0fff8c4769ccb354adce1baf118ad59a49
       zh_HANS-CN: c67e8190f65f840122968492786b19a0b64da904
@@ -48357,8 +48804,12 @@ pages:
       2.47.2: d2735ffa90090278cfbb9c55a04b494a6ca19443
       2.48.1: d2735ffa90090278cfbb9c55a04b494a6ca19443
       2.49.0: d2735ffa90090278cfbb9c55a04b494a6ca19443
-    latest-changes: 2.43.0
+      2.50.0: ea9aa593d5ff26b3bf187d88f213c0e372e274e2
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 3
+      removed: 5
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 3
@@ -48388,6 +48839,10 @@ pages:
       - 3
       - 3
       - 2
+      d2735ffa90090278cfbb9c55a04b494a6ca19443..ea9aa593d5ff26b3bf187d88f213c0e372e274e2:
+      - 3
+      - 5
+      - 0
     languages:
       pt_BR: 3debdd4045ead4ea0add0c13559082f498a3f321
       zh_HANS-CN: fc28eacc6b22e55db5e01479d58e17aaca34e5b2
@@ -48595,8 +49050,12 @@ pages:
       2.47.2: 5d0bd100b15ae44c345ab3f4ebbaed69030d787a
       2.48.1: 5d0bd100b15ae44c345ab3f4ebbaed69030d787a
       2.49.0: 5d0bd100b15ae44c345ab3f4ebbaed69030d787a
-    latest-changes: 2.39.0
+      2.50.0: d8e3a5d5337cde6d466fba00a4cb00b7900cc7bf
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 5
     - name: 2.39.1 &rarr; 2.49.0
     - name: 2.39.0
       added: 1
@@ -48626,6 +49085,10 @@ pages:
       - 1
       - 1
       - 6
+      5d0bd100b15ae44c345ab3f4ebbaed69030d787a..d8e3a5d5337cde6d466fba00a4cb00b7900cc7bf:
+      - 4
+      - 5
+      - 0
     languages:
       de: 8694e673bcec7cd79336f9f480a6062c3173f82b
       pt_BR: 67f6f6419a7a130d3f653c9cff29f3d166d7a632
@@ -48834,9 +49297,10 @@ pages:
       2.47.2: ff9ffee69bd02d48fc63cfbca65a45fd8bbe2b9e
       2.48.1: ff9ffee69bd02d48fc63cfbca65a45fd8bbe2b9e
       2.49.0: ff9ffee69bd02d48fc63cfbca65a45fd8bbe2b9e
+      2.50.0: ff9ffee69bd02d48fc63cfbca65a45fd8bbe2b9e
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 1
       removed: 1
@@ -49087,9 +49551,10 @@ pages:
       2.47.2: f41bc94b6300e1a47829888967420b923a874b79
       2.48.1: f41bc94b6300e1a47829888967420b923a874b79
       2.49.0: f41bc94b6300e1a47829888967420b923a874b79
+      2.50.0: f41bc94b6300e1a47829888967420b923a874b79
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -49309,8 +49774,12 @@ pages:
       2.47.2: b95d548e6017616485810c7a35d9dabd258b5956
       2.48.1: b95d548e6017616485810c7a35d9dabd258b5956
       2.49.0: b95d548e6017616485810c7a35d9dabd258b5956
-    latest-changes: 2.0.5
+      2.50.0: fc1fc6c3e7228d1f2de6a7831a476983ecb5bd3c
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.1.4 &rarr; 2.49.0
     - name: 2.0.5
       added: 8
@@ -49320,6 +49789,11 @@ pages:
       pt_BR: 26572df70f5fe9ea0dd0ad02ec142846dfd56c67
       zh_HANS-CN: ec09184aafeb6b36892831dafcbdc568f5890d29
       ru: 94dd1be3c5bd418b4671b5097f990e6292dcccc0
+    diff-cache:
+      b95d548e6017616485810c7a35d9dabd258b5956..fc1fc6c3e7228d1f2de6a7831a476983ecb5bd3c:
+      - 4
+      - 4
+      - 0
   git:
     version-map:
       2.0.5: 0d05574bc40423496fa93b0af40d83844074565c
@@ -49524,8 +49998,10 @@ pages:
       2.47.2: fc934ece0c6da2a4b94fc765f86ba70388d663f9
       2.48.1: 73ae4b8924e2c768a0a6ba30c01b634b977ea780
       2.49.0: 7caa7d46da05b9e78131e43f64aee216194c922b
+      2.50.0: 7caa7d46da05b9e78131e43f64aee216194c922b
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 0
       removed: 8
@@ -50218,8 +50694,12 @@ pages:
       2.47.2: 24ce46233c32d97b697a86f01215e365c86c7713
       2.48.1: 24ce46233c32d97b697a86f01215e365c86c7713
       2.49.0: 2488c57e91da9a643cb10c643e4d3a95c8fe4794
-    latest-changes: 2.49.0
+      2.50.0: fb9176e72a736e7de61743a250a385c7381a1155
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.49.0
       added: 4
       removed: 4
@@ -50450,6 +50930,10 @@ pages:
       - 4
       - 4
       - 0
+      2488c57e91da9a643cb10c643e4d3a95c8fe4794..fb9176e72a736e7de61743a250a385c7381a1155:
+      - 5
+      - 3
+      - 0
   gitcli:
     version-map:
       2.0.5: 63695965ca4b017ff98472fd485346970355eb38
@@ -50654,8 +51138,12 @@ pages:
       2.47.2: c31dd7b70c8221abc2823d8c051e0192fe01a3be
       2.48.1: 11765f23586f42d1db39692f82fd07d3a53f6fd8
       2.49.0: ac47005b52f2eedb234242d08edc0e9890b81b2b
-    latest-changes: 2.49.0
+      2.50.0: 0cc8f5944a79ce51044b2f3c34d0c83466dac345
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 1
+      removed: 1
     - name: 2.49.0
       added: 8
       removed: 0
@@ -50755,6 +51243,10 @@ pages:
       - 8
       - 0
       - 0
+      ac47005b52f2eedb234242d08edc0e9890b81b2b..0cc8f5944a79ce51044b2f3c34d0c83466dac345:
+      - 1
+      - 1
+      - 6
   gitcore-tutorial:
     version-map:
       2.0.5: 1637a827bc394c2ecd3166fb200509a5ed5aae65
@@ -50959,9 +51451,10 @@ pages:
       2.47.2: 60a8e198a2449404a781d9f86c2184412a6cc32e
       2.48.1: 60a8e198a2449404a781d9f86c2184412a6cc32e
       2.49.0: 60a8e198a2449404a781d9f86c2184412a6cc32e
+      2.50.0: 60a8e198a2449404a781d9f86c2184412a6cc32e
     latest-changes: 2.43.1
     page-versions:
-    - name: 2.43.2 &rarr; 2.49.0
+    - name: 2.43.2 &rarr; 2.50.0
     - name: 2.43.1
       added: 1
       removed: 1
@@ -51255,8 +51748,12 @@ pages:
       2.47.2: 1a25cd95d0ab4e5519c5fcbacc6654a042907b78
       2.48.1: fe069ee6eab05ad2dc15ad9e3ea0ef9d281d70f8
       2.49.0: 7ee2a8c9d96997dc093cc4ad112c3bcaced2811b
-    latest-changes: 2.49.0
+      2.50.0: 186eea7de05c4690c8b18c9237a82db2d347764d
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 0
     - name: 2.49.0
       added: 6
       removed: 2
@@ -51381,6 +51878,10 @@ pages:
       - 6
       - 2
       - 0
+      7ee2a8c9d96997dc093cc4ad112c3bcaced2811b..186eea7de05c4690c8b18c9237a82db2d347764d:
+      - 4
+      - 0
+      - 4
   gitcvs-migration:
     version-map:
       2.0.5: 5bab6c266cfd1a53f5471336368ae2bc797d9b91
@@ -51585,9 +52086,10 @@ pages:
       2.47.2: 3ed7d4034984bf1632ac84480dbdc632764a473b
       2.48.1: 3ed7d4034984bf1632ac84480dbdc632764a473b
       2.49.0: 3ed7d4034984bf1632ac84480dbdc632764a473b
+      2.50.0: 3ed7d4034984bf1632ac84480dbdc632764a473b
     latest-changes: 2.12.5
     page-versions:
-    - name: 2.13.7 &rarr; 2.49.0
+    - name: 2.13.7 &rarr; 2.50.0
     - name: 2.12.5
       added: 1
       removed: 1
@@ -51820,9 +52322,10 @@ pages:
       2.47.2: 99cadf87ae3892d47a595a56c09f3de9ef2afc40
       2.48.1: 99cadf87ae3892d47a595a56c09f3de9ef2afc40
       2.49.0: 99cadf87ae3892d47a595a56c09f3de9ef2afc40
+      2.50.0: 99cadf87ae3892d47a595a56c09f3de9ef2afc40
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 4
       removed: 4
@@ -52095,9 +52598,10 @@ pages:
       2.47.2: 6557796582319fb3cf28048dcda4ad37363a23e4
       2.48.1: 0de12720a5f5ba06f696c0f7b49323b38ea15e68
       2.49.0: 0de12720a5f5ba06f696c0f7b49323b38ea15e68
+      2.50.0: 0de12720a5f5ba06f696c0f7b49323b38ea15e68
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 5
       removed: 0
@@ -52491,9 +52995,10 @@ pages:
       2.47.2: 7e6bcb78ff6f23de8ec8d6b23d9d3473989c8f90
       2.48.1: 7e6bcb78ff6f23de8ec8d6b23d9d3473989c8f90
       2.49.0: 7e6bcb78ff6f23de8ec8d6b23d9d3473989c8f90
+      2.50.0: 7e6bcb78ff6f23de8ec8d6b23d9d3473989c8f90
     latest-changes: 2.46.1
     page-versions:
-    - name: 2.46.2 &rarr; 2.49.0
+    - name: 2.46.2 &rarr; 2.50.0
     - name: 2.46.1
       added: 5
       removed: 3
@@ -52920,9 +53425,10 @@ pages:
       2.47.2: 6146427e1a5e9ee6980f06f5e6d95c3484c23f49
       2.48.1: 6146427e1a5e9ee6980f06f5e6d95c3484c23f49
       2.49.0: 6146427e1a5e9ee6980f06f5e6d95c3484c23f49
+      2.50.0: 6146427e1a5e9ee6980f06f5e6d95c3484c23f49
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 4
       removed: 4
@@ -53244,9 +53750,10 @@ pages:
       2.47.2: c2828aecdb59f217184c45f65ec2079353e9a4fc
       2.48.1: c2828aecdb59f217184c45f65ec2079353e9a4fc
       2.49.0: c2828aecdb59f217184c45f65ec2079353e9a4fc
+      2.50.0: c2828aecdb59f217184c45f65ec2079353e9a4fc
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 2
       removed: 2
@@ -53541,9 +54048,10 @@ pages:
       2.47.2: '08a0dd1037a8afe6787eb18e94dca1f4753c28ee'
       2.48.1: '08a0dd1037a8afe6787eb18e94dca1f4753c28ee'
       2.49.0: '08a0dd1037a8afe6787eb18e94dca1f4753c28ee'
+      2.50.0: '08a0dd1037a8afe6787eb18e94dca1f4753c28ee'
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 3
       removed: 3
@@ -53943,9 +54451,10 @@ pages:
       2.47.2: 5bad30f98beb03162cb04d4c56c86076741cc60b
       2.48.1: 5bad30f98beb03162cb04d4c56c86076741cc60b
       2.49.0: 5bad30f98beb03162cb04d4c56c86076741cc60b
+      2.50.0: 5bad30f98beb03162cb04d4c56c86076741cc60b
     latest-changes: 2.32.0
     page-versions:
-    - name: 2.32.1 &rarr; 2.49.0
+    - name: 2.32.1 &rarr; 2.50.0
     - name: 2.32.0
       added: 4
       removed: 0
@@ -54170,9 +54679,10 @@ pages:
       2.47.2: fc90ad8ce61c37abda58c5778935252617003be3
       2.48.1: fc90ad8ce61c37abda58c5778935252617003be3
       2.49.0: fc90ad8ce61c37abda58c5778935252617003be3
+      2.50.0: fc90ad8ce61c37abda58c5778935252617003be3
     latest-changes: 2.45.0
     page-versions:
-    - name: 2.45.1 &rarr; 2.49.0
+    - name: 2.45.1 &rarr; 2.50.0
     - name: 2.45.0
       added: 3
       removed: 5
@@ -54491,8 +55001,10 @@ pages:
       2.47.2: 976b1677ff51ab58e3fb2f24bf26b6fc7d0474d2
       2.48.1: 112e9d9783b52e067650596c3ee2ee727faed932
       2.49.0: 759b7d4de0cfe5664a26c9f508d9752a8dc3ff6a
+      2.50.0: 759b7d4de0cfe5664a26c9f508d9752a8dc3ff6a
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 7
       removed: 1
@@ -54849,9 +55361,10 @@ pages:
       2.47.2: 7e272257ee26331c9b565be5b9b26cad12b16bdb
       2.48.1: 7e272257ee26331c9b565be5b9b26cad12b16bdb
       2.49.0: 7e272257ee26331c9b565be5b9b26cad12b16bdb
+      2.50.0: 7e272257ee26331c9b565be5b9b26cad12b16bdb
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 6
       removed: 2
@@ -55223,9 +55736,10 @@ pages:
       2.47.2: d7c43c2fe4d240fb099e7fb4b8d83c98e057176e
       2.48.1: d7c43c2fe4d240fb099e7fb4b8d83c98e057176e
       2.49.0: d7c43c2fe4d240fb099e7fb4b8d83c98e057176e
+      2.50.0: d7c43c2fe4d240fb099e7fb4b8d83c98e057176e
     latest-changes: 2.23.0
     page-versions:
-    - name: 2.23.1 &rarr; 2.49.0
+    - name: 2.23.1 &rarr; 2.50.0
     - name: 2.23.0
       added: 2
       removed: 2
@@ -55458,9 +55972,10 @@ pages:
       2.47.2: 3dd1d1e3ca7048b561c7ac43d93e10bebdf5b9d7
       2.48.1: 3dd1d1e3ca7048b561c7ac43d93e10bebdf5b9d7
       2.49.0: 3dd1d1e3ca7048b561c7ac43d93e10bebdf5b9d7
+      2.50.0: 3dd1d1e3ca7048b561c7ac43d93e10bebdf5b9d7
     latest-changes: 2.46.1
     page-versions:
-    - name: 2.46.2 &rarr; 2.49.0
+    - name: 2.46.2 &rarr; 2.50.0
     - name: 2.46.1
       added: 1
       removed: 1
@@ -55741,8 +56256,12 @@ pages:
       2.47.2: 40088532ead49694e39d3bdc7da91011e8b7c98b
       2.48.1: 40088532ead49694e39d3bdc7da91011e8b7c98b
       2.49.0: 40088532ead49694e39d3bdc7da91011e8b7c98b
-    latest-changes: 2.44.0
+      2.50.0: 38fd2411900a0026a8edea8bf92db259ef94e383
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 0
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 4
@@ -55864,6 +56383,10 @@ pages:
       - 4
       - 4
       - 0
+      40088532ead49694e39d3bdc7da91011e8b7c98b..38fd2411900a0026a8edea8bf92db259ef94e383:
+      - 2
+      - 0
+      - 6
   gitweb:
     version-map:
       2.0.5: 4fada514418eda019386bb945b05680297c066fd
@@ -56068,8 +56591,12 @@ pages:
       2.47.2: 5d52e6075248e53a04311157e9b01597d8698ab4
       2.48.1: 5d52e6075248e53a04311157e9b01597d8698ab4
       2.49.0: 5d52e6075248e53a04311157e9b01597d8698ab4
-    latest-changes: 2.47.0
+      2.50.0: 1d1f6e00bab04d917b57bd681f14f4fd8da0f79f
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 1
@@ -56153,6 +56680,10 @@ pages:
       - 1
       - 1
       - 6
+      5d52e6075248e53a04311157e9b01597d8698ab4..1d1f6e00bab04d917b57bd681f14f4fd8da0f79f:
+      - 8
+      - 0
+      - 0
   gitworkflows:
     version-map:
       2.0.5: 133d0338583097b1a9619da6a803a6bc1696460f
@@ -56357,9 +56888,10 @@ pages:
       2.47.2: d30bd569f92249efbed55fbd2d7edc42eaf99ed8
       2.48.1: d30bd569f92249efbed55fbd2d7edc42eaf99ed8
       2.49.0: d30bd569f92249efbed55fbd2d7edc42eaf99ed8
+      2.50.0: d30bd569f92249efbed55fbd2d7edc42eaf99ed8
     latest-changes: 2.35.0
     page-versions:
-    - name: 2.35.1 &rarr; 2.49.0
+    - name: 2.35.1 &rarr; 2.50.0
     - name: 2.35.0
       added: 3
       removed: 3
@@ -56715,8 +57247,12 @@ pages:
       2.47.2: b9829dc8e3120d4031b19a55961a9344cc486016
       2.48.1: b9829dc8e3120d4031b19a55961a9344cc486016
       2.49.0: b61d66c3bf2a32900dc91f80cbef6dba497a45ed
-    latest-changes: 2.49.0
+      2.50.0: 5ab4557b7376a6907342fd3cafed16457831c507
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.49.0
       added: 4
       removed: 4
@@ -56841,6 +57377,10 @@ pages:
       - 2
       - 4
       b9829dc8e3120d4031b19a55961a9344cc486016..b61d66c3bf2a32900dc91f80cbef6dba497a45ed:
+      - 4
+      - 4
+      - 0
+      b61d66c3bf2a32900dc91f80cbef6dba497a45ed..5ab4557b7376a6907342fd3cafed16457831c507:
       - 4
       - 4
       - 0
@@ -57048,8 +57588,12 @@ pages:
       2.47.2: 87efc460e9a8391851a15268aa7b50a4f67113a0
       2.48.1: 87efc460e9a8391851a15268aa7b50a4f67113a0
       2.49.0: 6a571e94542ed4a27cca510626d9567a5eb0f634
-    latest-changes: 2.49.0
+      2.50.0: 8286cccf5836b053cfeb419005ec6df3d30e3b6e
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.49.0
       added: 7
       removed: 1
@@ -57124,6 +57668,10 @@ pages:
       87efc460e9a8391851a15268aa7b50a4f67113a0..6a571e94542ed4a27cca510626d9567a5eb0f634:
       - 7
       - 1
+      - 0
+      6a571e94542ed4a27cca510626d9567a5eb0f634..8286cccf5836b053cfeb419005ec6df3d30e3b6e:
+      - 4
+      - 4
       - 0
   pretty-formats:
     version-map:
@@ -57329,8 +57877,10 @@ pages:
       2.47.2: e5108790c086dfe863432c7251843d2a12f4ee0b
       2.48.1: e5108790c086dfe863432c7251843d2a12f4ee0b
       2.49.0: 410016c9b82579891465d89318981dddd8268cc6
+      2.50.0: 410016c9b82579891465d89318981dddd8268cc6
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 4
       removed: 4
@@ -57759,9 +58309,10 @@ pages:
       2.47.2: 61cc7960fb9183adffba8c5bbea2ae423a25a1b0
       2.48.1: 61cc7960fb9183adffba8c5bbea2ae423a25a1b0
       2.49.0: 61cc7960fb9183adffba8c5bbea2ae423a25a1b0
+      2.50.0: 61cc7960fb9183adffba8c5bbea2ae423a25a1b0
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 6
       removed: 2
@@ -58054,9 +58605,10 @@ pages:
       2.47.2: 50183c7d59164333ceb5d9394fa39880ff6b27f3
       2.48.1: 50183c7d59164333ceb5d9394fa39880ff6b27f3
       2.49.0: 50183c7d59164333ceb5d9394fa39880ff6b27f3
+      2.50.0: 50183c7d59164333ceb5d9394fa39880ff6b27f3
     latest-changes: 2.47.1
     page-versions:
-    - name: 2.47.2 &rarr; 2.49.0
+    - name: 2.47.2 &rarr; 2.50.0
     - name: 2.47.1
       added: 4
       removed: 3
@@ -58328,8 +58880,12 @@ pages:
       2.47.2: c8c27d4d5dfd3bd282432c55bd98dfab043665c5
       2.48.1: 1fbbaac26cbc28b6b36c692ffc35b846be2e4242
       2.49.0: 8f3bf3fe68345f5864e30c2f958988275715f669
-    latest-changes: 2.49.0
+      2.50.0: b4a57b299ba1721503846ff3a6366e8b353f17c8
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.49.0
       added: 8
       removed: 0
@@ -58657,6 +59213,10 @@ pages:
       - 8
       - 0
       - 0
+      8f3bf3fe68345f5864e30c2f958988275715f669..b4a57b299ba1721503846ff3a6366e8b353f17c8:
+      - 8
+      - 0
+      - 0
   revisions:
     version-map:
       2.0.5: a71ebd4578c6bb96ec0dd3de540096b1888b5263
@@ -58861,9 +59421,10 @@ pages:
       2.47.2: 0fa9796ed48afa7c49b300f6f80cfb6566263a57
       2.48.1: 0fa9796ed48afa7c49b300f6f80cfb6566263a57
       2.49.0: 0fa9796ed48afa7c49b300f6f80cfb6566263a57
+      2.50.0: 0fa9796ed48afa7c49b300f6f80cfb6566263a57
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 6
       removed: 2
@@ -60173,9 +60734,10 @@ pages:
       2.47.2: e8fa29d63e17ceb0da341d723a99c65c14cc8d6b
       2.48.1: e8fa29d63e17ceb0da341d723a99c65c14cc8d6b
       2.49.0: e8fa29d63e17ceb0da341d723a99c65c14cc8d6b
+      2.50.0: e8fa29d63e17ceb0da341d723a99c65c14cc8d6b
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -60415,9 +60977,10 @@ pages:
       2.47.2: 1b8a3f5d44179164f22edd4196ef836621f7d418
       2.48.1: 1b8a3f5d44179164f22edd4196ef836621f7d418
       2.49.0: 1b8a3f5d44179164f22edd4196ef836621f7d418
+      2.50.0: 1b8a3f5d44179164f22edd4196ef836621f7d418
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 2
       removed: 2
@@ -60731,8 +61294,12 @@ pages:
       2.47.2: 163f761a1650ab2b4ee705eeb05dd365f6c72395
       2.48.1: 163f761a1650ab2b4ee705eeb05dd365f6c72395
       2.49.0: 163f761a1650ab2b4ee705eeb05dd365f6c72395
-    latest-changes: 2.38.0
+      2.50.0: 1890b4bef5ca98eba5da0c791c9fe3bb7f09f8f0
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.38.1 &rarr; 2.49.0
     - name: 2.38.0
       added: 7
@@ -60815,6 +61382,10 @@ pages:
       920e4e942ec2641583b9f58495043fa9d6f6aeab..163f761a1650ab2b4ee705eeb05dd365f6c72395:
       - 7
       - 1
+      - 0
+      163f761a1650ab2b4ee705eeb05dd365f6c72395..1890b4bef5ca98eba5da0c791c9fe3bb7f09f8f0:
+      - 5
+      - 3
       - 0
   api-quote:
     version-map:
@@ -61864,9 +62435,10 @@ pages:
       2.47.2: 335be61eb70bbbd98067a62eea36733acb2f92b6
       2.48.1: 335be61eb70bbbd98067a62eea36733acb2f92b6
       2.49.0: 335be61eb70bbbd98067a62eea36733acb2f92b6
+      2.50.0: 335be61eb70bbbd98067a62eea36733acb2f92b6
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 8
       removed: 0
@@ -62829,9 +63401,10 @@ pages:
       2.47.2: 9f7c7feb6d01be97d925e2878db265598558d9f2
       2.48.1: 9f7c7feb6d01be97d925e2878db265598558d9f2
       2.49.0: 9f7c7feb6d01be97d925e2878db265598558d9f2
+      2.50.0: 9f7c7feb6d01be97d925e2878db265598558d9f2
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -63750,9 +64323,10 @@ pages:
       2.47.2: 9d678beb56af337c527a81a55995da07fd1e1b80
       2.48.1: 9d678beb56af337c527a81a55995da07fd1e1b80
       2.49.0: 9d678beb56af337c527a81a55995da07fd1e1b80
+      2.50.0: 9d678beb56af337c527a81a55995da07fd1e1b80
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -63985,9 +64559,10 @@ pages:
       2.47.2: 20a428ce74c6c83ee2d0ec0094c5f4a742207939
       2.48.1: 20a428ce74c6c83ee2d0ec0094c5f4a742207939
       2.49.0: 20a428ce74c6c83ee2d0ec0094c5f4a742207939
+      2.50.0: 20a428ce74c6c83ee2d0ec0094c5f4a742207939
     latest-changes: 2.0.5
     page-versions:
-    - name: 2.1.4 &rarr; 2.49.0
+    - name: 2.1.4 &rarr; 2.50.0
     - name: 2.0.5
       added: 8
       removed: 0
@@ -64195,9 +64770,10 @@ pages:
       2.47.2: b6b5abb561f21434986717f4d404f81399401936
       2.48.1: b6b5abb561f21434986717f4d404f81399401936
       2.49.0: b6b5abb561f21434986717f4d404f81399401936
+      2.50.0: b6b5abb561f21434986717f4d404f81399401936
     latest-changes: 2.29.0
     page-versions:
-    - name: 2.29.1 &rarr; 2.49.0
+    - name: 2.29.1 &rarr; 2.50.0
     - name: 2.29.0
       added: 1
       removed: 1
@@ -64422,9 +64998,10 @@ pages:
       2.47.2: c83a8a4d450d81a02d158d3b1d007d2ae2062909
       2.48.1: c83a8a4d450d81a02d158d3b1d007d2ae2062909
       2.49.0: c83a8a4d450d81a02d158d3b1d007d2ae2062909
+      2.50.0: c83a8a4d450d81a02d158d3b1d007d2ae2062909
     latest-changes: 2.15.4
     page-versions:
-    - name: 2.16.6 &rarr; 2.49.0
+    - name: 2.16.6 &rarr; 2.50.0
     - name: 2.15.4
       added: 2
       removed: 2
@@ -64641,9 +65218,10 @@ pages:
       2.47.2: 1338e84dc0cf5293410f39f8cc3ce18ac0b4532c
       2.48.1: 49f8ec38fe00fd7d0045e4e009fb41c66e6b1fe7
       2.49.0: 49f8ec38fe00fd7d0045e4e009fb41c66e6b1fe7
+      2.50.0: 49f8ec38fe00fd7d0045e4e009fb41c66e6b1fe7
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 5
       removed: 0
@@ -65106,8 +65684,12 @@ pages:
       2.47.2: f9a164bcb3170cbcc55bcf28c1c49c7a1bb6ecf1
       2.48.1: f9a164bcb3170cbcc55bcf28c1c49c7a1bb6ecf1
       2.49.0: f9a164bcb3170cbcc55bcf28c1c49c7a1bb6ecf1
-    latest-changes: 2.39.0
+      2.50.0: 95f4144ca7f6df463c188fbf75198188c41d537c
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 5
     - name: 2.39.1 &rarr; 2.49.0
     - name: 2.39.0
       added: 1
@@ -65137,6 +65719,10 @@ pages:
       - 1
       - 1
       - 6
+      f9a164bcb3170cbcc55bcf28c1c49c7a1bb6ecf1..95f4144ca7f6df463c188fbf75198188c41d537c:
+      - 4
+      - 5
+      - 0
     languages:
       de: 00f86ccfba98d1fd7dde4fd3a1ee45aa9f60a8dc
       pt_BR: be19aab924e1c55b5f945b885c8b3eb80d2ee23b
@@ -65423,8 +66009,10 @@ pages:
       2.47.2: 92f0f104b2bb0d998284e364ba6fc02df7f31ea5
       2.48.1: 92f0f104b2bb0d998284e364ba6fc02df7f31ea5
       2.49.0: 1a7588e9c15bae496a9ffbccc716b74dab902416
+      2.50.0: 1a7588e9c15bae496a9ffbccc716b74dab902416
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 6
       removed: 0
@@ -65785,9 +66373,10 @@ pages:
       2.47.2: c745fcc2d8afa3e14e6b18cd8a5daa71962280d7
       2.48.1: c745fcc2d8afa3e14e6b18cd8a5daa71962280d7
       2.49.0: c745fcc2d8afa3e14e6b18cd8a5daa71962280d7
+      2.50.0: c745fcc2d8afa3e14e6b18cd8a5daa71962280d7
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -66040,9 +66629,10 @@ pages:
       2.47.2: e5a61b02f006e9e8b479c3167cb3327151692553
       2.48.1: e5a61b02f006e9e8b479c3167cb3327151692553
       2.49.0: e5a61b02f006e9e8b479c3167cb3327151692553
+      2.50.0: e5a61b02f006e9e8b479c3167cb3327151692553
     latest-changes: 2.37.0
     page-versions:
-    - name: 2.37.1 &rarr; 2.49.0
+    - name: 2.37.1 &rarr; 2.50.0
     - name: 2.37.0
       added: 8
       removed: 0
@@ -66262,9 +66852,10 @@ pages:
       2.47.2: f8809becc28a3d39df61cd55a347a7e5e52ff724
       2.48.1: e045f2213754578b249a7a75ad1583b903ea1976
       2.49.0: e045f2213754578b249a7a75ad1583b903ea1976
+      2.50.0: e045f2213754578b249a7a75ad1583b903ea1976
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 7
       removed: 1
@@ -66756,9 +67347,10 @@ pages:
       2.47.2: ca1f0401e52a085ba6d34b63a012fd6288d65b81
       2.48.1: e13fc38dec3419d028141c3cbba7e48ecca63463
       2.49.0: e13fc38dec3419d028141c3cbba7e48ecca63463
+      2.50.0: e13fc38dec3419d028141c3cbba7e48ecca63463
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 1
       removed: 7
@@ -67264,9 +67856,10 @@ pages:
       2.47.2: 79a932fb08571e0fd5519d015b56a42aa000eb1d
       2.48.1: 79a932fb08571e0fd5519d015b56a42aa000eb1d
       2.49.0: 79a932fb08571e0fd5519d015b56a42aa000eb1d
+      2.50.0: 79a932fb08571e0fd5519d015b56a42aa000eb1d
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 2
       removed: 2
@@ -67540,8 +68133,10 @@ pages:
       2.47.2: 3a0878d5a9acb00a41c9bfcd2f11ba52e6ea4879
       2.48.1: 305d1bd0aa3e530df383deea4fe984240da038f3
       2.49.0: 802801dd45342898e2b637ed922e6483d6fa70fc
+      2.50.0: 802801dd45342898e2b637ed922e6483d6fa70fc
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 1
       removed: 1
@@ -67822,8 +68417,10 @@ pages:
       2.47.2: 03100b82c0c23b1e648ed5589ba21dd367f73de3
       2.48.1: fd7c0724e7719ca35f12454a09cd622a20c4d6c6
       2.49.0: 4d31831d9d12ec8540fde234e64e54fba76fcb8d
+      2.50.0: 4d31831d9d12ec8540fde234e64e54fba76fcb8d
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 1
       removed: 1
@@ -68103,9 +68700,10 @@ pages:
       2.47.2: f86a8cf0ff52c3d7b7ca728ab6a6d9480cab5258
       2.48.1: f86a8cf0ff52c3d7b7ca728ab6a6d9480cab5258
       2.49.0: f86a8cf0ff52c3d7b7ca728ab6a6d9480cab5258
+      2.50.0: f86a8cf0ff52c3d7b7ca728ab6a6d9480cab5258
     latest-changes: 2.38.0
     page-versions:
-    - name: 2.38.1 &rarr; 2.49.0
+    - name: 2.38.1 &rarr; 2.50.0
     - name: 2.38.0
       added: 1
       removed: 1
@@ -68298,9 +68896,10 @@ pages:
       2.47.2: 766c577534308bbce80705181400029f52858cbd
       2.48.1: 766c577534308bbce80705181400029f52858cbd
       2.49.0: 766c577534308bbce80705181400029f52858cbd
+      2.50.0: 766c577534308bbce80705181400029f52858cbd
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 7
       removed: 1
@@ -68789,9 +69388,10 @@ pages:
       2.47.2: d45fc59dd30837780e6e07ae38021359d3d482da
       2.48.1: d45fc59dd30837780e6e07ae38021359d3d482da
       2.49.0: d45fc59dd30837780e6e07ae38021359d3d482da
+      2.50.0: d45fc59dd30837780e6e07ae38021359d3d482da
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 1
       removed: 1
@@ -69282,9 +69882,10 @@ pages:
       2.47.2: cea081835ecdec7a709a293cbb3b92e99ced64e0
       2.48.1: 70bef471cba1b38ec5eddae9ebc9f8289db5a190
       2.49.0: 70bef471cba1b38ec5eddae9ebc9f8289db5a190
+      2.50.0: 70bef471cba1b38ec5eddae9ebc9f8289db5a190
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 8
       removed: 0
@@ -69515,9 +70116,10 @@ pages:
       2.47.2: 17ad1d4b6725471790b08998088d9bf59dedb32e
       2.48.1: 17ad1d4b6725471790b08998088d9bf59dedb32e
       2.49.0: 17ad1d4b6725471790b08998088d9bf59dedb32e
+      2.50.0: 17ad1d4b6725471790b08998088d9bf59dedb32e
     latest-changes: 2.33.1
     page-versions:
-    - name: 2.33.2 &rarr; 2.49.0
+    - name: 2.33.2 &rarr; 2.50.0
     - name: 2.33.1
       added: 5
       removed: 3
@@ -69713,8 +70315,12 @@ pages:
       2.47.2: 6679c6405aaff023d65da78b863a5aa409c249fd
       2.48.1: 6679c6405aaff023d65da78b863a5aa409c249fd
       2.49.0: 6679c6405aaff023d65da78b863a5aa409c249fd
-    latest-changes: 2.47.0
+      2.50.0: 7e986ccbc995a46a2d0aa25f2829d8d892512f8c
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 7
@@ -69791,6 +70397,10 @@ pages:
       94207d98cbde09dc488de42ee7fd833a5b8a6acd..6679c6405aaff023d65da78b863a5aa409c249fd:
       - 7
       - 1
+      - 0
+      6679c6405aaff023d65da78b863a5aa409c249fd..7e986ccbc995a46a2d0aa25f2829d8d892512f8c:
+      - 5
+      - 3
       - 0
   multi-pack-index:
     version-map:
@@ -69959,8 +70569,12 @@ pages:
       2.47.2: a59bf46ec794d884b85f91e98024f86fb8febc60
       2.48.1: a59bf46ec794d884b85f91e98024f86fb8febc60
       2.49.0: a59bf46ec794d884b85f91e98024f86fb8febc60
-    latest-changes: 2.47.0
+      2.50.0: '0687082f68032257de420b7020b97500fa5b6eda'
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 7
+      removed: 1
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 8
@@ -70021,6 +70635,10 @@ pages:
       f9d4b5bb2230d069a2ecdfe869cf747ff00112bc..a59bf46ec794d884b85f91e98024f86fb8febc60:
       - 8
       - 0
+      - 0
+      a59bf46ec794d884b85f91e98024f86fb8febc60..0687082f68032257de420b7020b97500fa5b6eda:
+      - 7
+      - 1
       - 0
   rerere:
     version-map:
@@ -70189,9 +70807,10 @@ pages:
       2.47.2: 8f7849ed3be4d44e9b07ae84f911ceca5645f824
       2.48.1: 8f7849ed3be4d44e9b07ae84f911ceca5645f824
       2.49.0: 8f7849ed3be4d44e9b07ae84f911ceca5645f824
+      2.50.0: 8f7849ed3be4d44e9b07ae84f911ceca5645f824
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 3
       removed: 3
@@ -70384,9 +71003,10 @@ pages:
       2.47.2: eff72ece388611f816accdd266fc5b35e394d4bc
       2.48.1: eff72ece388611f816accdd266fc5b35e394d4bc
       2.49.0: eff72ece388611f816accdd266fc5b35e394d4bc
+      2.50.0: eff72ece388611f816accdd266fc5b35e394d4bc
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 7
       removed: 1
@@ -70652,8 +71272,12 @@ pages:
       2.47.2: 6d3ab9950ac8c144f6cbb5000d39285492edec3a
       2.48.1: 6d3ab9950ac8c144f6cbb5000d39285492edec3a
       2.49.0: 4f6f47e13b8a2a908ab4041caf684870cda3277b
-    latest-changes: 2.49.0
+      2.50.0: 72e5854d1b27ab92a19d868be60d96bf4f33898d
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 5
+      removed: 3
     - name: 2.49.0
       added: 4
       removed: 4
@@ -70816,6 +71440,10 @@ pages:
       - 4
       - 4
       - 0
+      4f6f47e13b8a2a908ab4041caf684870cda3277b..72e5854d1b27ab92a19d868be60d96bf4f33898d:
+      - 5
+      - 3
+      - 0
   git-restore:
     version-map:
       2.23.0: 6e842e8e3ba75d3bf05c482772529e7df11db190
@@ -70966,8 +71594,12 @@ pages:
       2.47.2: 9259f26a2ac7d62fc7228bee9ba7900ae7da1279
       2.48.1: 9259f26a2ac7d62fc7228bee9ba7900ae7da1279
       2.49.0: b5f432bd1d7869c9153bf7a8eefe236589fa2e37
-    latest-changes: 2.49.0
+      2.50.0: b61d51fd5c88c9bdfb4de0c773583de334aa3b04
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 0
+      removed: 3
     - name: 2.49.0
       added: 4
       removed: 4
@@ -71020,6 +71652,10 @@ pages:
       - 4
       - 4
       - 0
+      b5f432bd1d7869c9153bf7a8eefe236589fa2e37..b61d51fd5c88c9bdfb4de0c773583de334aa3b04:
+      - 0
+      - 3
+      - 5
     languages:
       de: a3d4c7a7b056ad4a658e6d7bce77afb9c86556a1
       fr: 17e606a5d3fe6149e17f2549b2c4be4c8eb6fdff
@@ -71175,8 +71811,12 @@ pages:
       2.47.2: 640debacb8b43a49dcf7a3f68d10dfacd324e6e9
       2.48.1: 640debacb8b43a49dcf7a3f68d10dfacd324e6e9
       2.49.0: 640debacb8b43a49dcf7a3f68d10dfacd324e6e9
-    latest-changes: 2.44.0
+      2.50.0: ca74be3fa278b2ca4daa9802ee63bbb0760aabb6
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.44.1 &rarr; 2.49.0
     - name: 2.44.0
       added: 6
@@ -71236,6 +71876,10 @@ pages:
       4ce71bf1d57912b0669b1228ebf5288524402f87..640debacb8b43a49dcf7a3f68d10dfacd324e6e9:
       - 6
       - 2
+      - 0
+      640debacb8b43a49dcf7a3f68d10dfacd324e6e9..ca74be3fa278b2ca4daa9802ee63bbb0760aabb6:
+      - 4
+      - 4
       - 0
     languages:
       pt_BR: ca5b22c8720aabb5485835ecf8f246ac34c49038
@@ -71381,8 +72025,12 @@ pages:
       2.47.2: 1e1cd7497415a0aa15fc277c9f05c150174cb250
       2.48.1: 1e1cd7497415a0aa15fc277c9f05c150174cb250
       2.49.0: 6e7c00bceae584ed0e401e31bc4192ea4b7d79bc
-    latest-changes: 2.49.0
+      2.50.0: 0e0d7ad2d1e2cf93b2f6ac39f41c967c0e68f85c
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 0
     - name: 2.49.0
       added: 4
       removed: 4
@@ -71459,6 +72107,10 @@ pages:
       - 4
       - 4
       - 0
+      6e7c00bceae584ed0e401e31bc4192ea4b7d79bc..0e0d7ad2d1e2cf93b2f6ac39f41c967c0e68f85c:
+      - 2
+      - 0
+      - 6
   git-sparse-checkout:
     version-map:
       2.25.0: 31848df2014b9bdf74704e158ee7a71a7f8452bc
@@ -71599,9 +72251,10 @@ pages:
       2.47.2: cd3f435a0d374550933a11945794a787ded0dbb2
       2.48.1: cd3f435a0d374550933a11945794a787ded0dbb2
       2.49.0: cd3f435a0d374550933a11945794a787ded0dbb2
+      2.50.0: cd3f435a0d374550933a11945794a787ded0dbb2
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 1
       removed: 1
@@ -71935,9 +72588,10 @@ pages:
       2.47.2: b39aa7e00739e2d74f05f14c6dad1b968622f21e
       2.48.1: b39aa7e00739e2d74f05f14c6dad1b968622f21e
       2.49.0: b39aa7e00739e2d74f05f14c6dad1b968622f21e
+      2.50.0: b39aa7e00739e2d74f05f14c6dad1b968622f21e
     latest-changes: 2.45.0
     page-versions:
-    - name: 2.45.1 &rarr; 2.49.0
+    - name: 2.45.1 &rarr; 2.50.0
     - name: 2.45.0
       added: 5
       removed: 1
@@ -72124,9 +72778,10 @@ pages:
       2.47.2: d26c27a27957296703a890c536e5a37fa4fbbc3d
       2.48.1: d26c27a27957296703a890c536e5a37fa4fbbc3d
       2.49.0: d26c27a27957296703a890c536e5a37fa4fbbc3d
+      2.50.0: d26c27a27957296703a890c536e5a37fa4fbbc3d
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 8
       removed: 0
@@ -72283,9 +72938,10 @@ pages:
       2.47.2: 5709c6c6b68d2bb40793d818b2f2c4c5bacc1935
       2.48.1: 5709c6c6b68d2bb40793d818b2f2c4c5bacc1935
       2.49.0: 5709c6c6b68d2bb40793d818b2f2c4c5bacc1935
+      2.50.0: 5709c6c6b68d2bb40793d818b2f2c4c5bacc1935
     latest-changes: 2.38.0
     page-versions:
-    - name: 2.38.1 &rarr; 2.49.0
+    - name: 2.38.1 &rarr; 2.50.0
     - name: 2.38.0
       added: 1
       removed: 1
@@ -72442,9 +73098,10 @@ pages:
       2.47.2: e5ccb529d6ec05cffb9d55eb48ee4006e02013a0
       2.48.1: e5ccb529d6ec05cffb9d55eb48ee4006e02013a0
       2.49.0: e5ccb529d6ec05cffb9d55eb48ee4006e02013a0
+      2.50.0: e5ccb529d6ec05cffb9d55eb48ee4006e02013a0
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -72615,8 +73272,12 @@ pages:
       2.47.2: 478549656039bd0953789796f03e178122238b91
       2.48.1: 478549656039bd0953789796f03e178122238b91
       2.49.0: 478549656039bd0953789796f03e178122238b91
-    latest-changes: 2.47.1
+      2.50.0: af14b8fee91dc22c00f640320abb9b9bf051d82b
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 7
+      removed: 1
     - name: 2.47.2 &rarr; 2.49.0
     - name: 2.47.1
       added: 3
@@ -72716,6 +73377,10 @@ pages:
       - 3
       - 1
       - 4
+      478549656039bd0953789796f03e178122238b91..af14b8fee91dc22c00f640320abb9b9bf051d82b:
+      - 7
+      - 1
+      - 0
   rev-list-description:
     version-map:
       2.29.0: de67093125527ab92b15872b543116173894248c
@@ -72842,9 +73507,10 @@ pages:
       2.47.2: de67093125527ab92b15872b543116173894248c
       2.48.1: de67093125527ab92b15872b543116173894248c
       2.49.0: de67093125527ab92b15872b543116173894248c
+      2.50.0: de67093125527ab92b15872b543116173894248c
     latest-changes: 2.29.0
     page-versions:
-    - name: 2.29.1 &rarr; 2.49.0
+    - name: 2.29.1 &rarr; 2.50.0
     - name: 2.29.0
       added: 8
       removed: 0
@@ -72970,9 +73636,10 @@ pages:
       2.47.2: 3ca64c9a6c67cdaa32d8e363bc0dd9eff7d46da4
       2.48.1: 3ca64c9a6c67cdaa32d8e363bc0dd9eff7d46da4
       2.49.0: 3ca64c9a6c67cdaa32d8e363bc0dd9eff7d46da4
+      2.50.0: 3ca64c9a6c67cdaa32d8e363bc0dd9eff7d46da4
     latest-changes: 2.45.3
     page-versions:
-    - name: 2.46.0 &rarr; 2.49.0
+    - name: 2.46.0 &rarr; 2.50.0
     - name: 2.45.3
       added: 8
       removed: 0
@@ -73097,9 +73764,10 @@ pages:
       2.47.2: 1291163cdc8377ec509c2a59860bdf3a536b7523
       2.48.1: 1291163cdc8377ec509c2a59860bdf3a536b7523
       2.49.0: 1291163cdc8377ec509c2a59860bdf3a536b7523
+      2.50.0: 1291163cdc8377ec509c2a59860bdf3a536b7523
     latest-changes: 2.32.0
     page-versions:
-    - name: 2.32.1 &rarr; 2.49.0
+    - name: 2.32.1 &rarr; 2.50.0
     - name: 2.32.0
       added: 7
       removed: 0
@@ -73282,8 +73950,10 @@ pages:
       2.47.2: 9c0b8adadca622f48e907e7ef6eb515aad5a87f1
       2.48.1: 9c0b8adadca622f48e907e7ef6eb515aad5a87f1
       2.49.0: 46c3e49d41d4a687b58bd6b0e4967401305ceeb7
+      2.50.0: 46c3e49d41d4a687b58bd6b0e4967401305ceeb7
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 1
       removed: 1
@@ -73415,9 +74085,10 @@ pages:
       2.47.2: aee784e02cdad5118474084090df6dc6fb45edb5
       2.48.1: aee784e02cdad5118474084090df6dc6fb45edb5
       2.49.0: aee784e02cdad5118474084090df6dc6fb45edb5
+      2.50.0: aee784e02cdad5118474084090df6dc6fb45edb5
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -73541,9 +74212,10 @@ pages:
       2.47.2: f8317483add010d53c40764442b456d6ec3c4c32
       2.48.1: f8317483add010d53c40764442b456d6ec3c4c32
       2.49.0: f8317483add010d53c40764442b456d6ec3c4c32
+      2.50.0: f8317483add010d53c40764442b456d6ec3c4c32
     latest-changes: 2.32.0
     page-versions:
-    - name: 2.32.1 &rarr; 2.49.0
+    - name: 2.32.1 &rarr; 2.50.0
     - name: 2.32.0
       added: 8
       removed: 0
@@ -73642,9 +74314,10 @@ pages:
       2.47.2: 86b6a318a5ed48926b48e96d4983457f9058132d
       2.48.1: 86b6a318a5ed48926b48e96d4983457f9058132d
       2.49.0: 86b6a318a5ed48926b48e96d4983457f9058132d
+      2.50.0: 86b6a318a5ed48926b48e96d4983457f9058132d
     latest-changes: 2.42.0
     page-versions:
-    - name: 2.42.1 &rarr; 2.49.0
+    - name: 2.42.1 &rarr; 2.50.0
     - name: 2.42.0
       added: 1
       removed: 1
@@ -73759,12 +74432,21 @@ pages:
       2.47.2: 07f2d560511eeb513b507e69fb80e8c6dfeec60d
       2.48.1: 07f2d560511eeb513b507e69fb80e8c6dfeec60d
       2.49.0: 07f2d560511eeb513b507e69fb80e8c6dfeec60d
-    latest-changes: 2.33.1
+      2.50.0: 67ce7bbc5373325a968be17a2e44a2505be607af
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.33.2 &rarr; 2.49.0
     - name: 2.33.1
       added: 8
       removed: 0
+    diff-cache:
+      07f2d560511eeb513b507e69fb80e8c6dfeec60d..67ce7bbc5373325a968be17a2e44a2505be607af:
+      - 8
+      - 0
+      - 0
   git-fsmonitor--daemon:
     version-map:
       2.36.0: 274f21aee37ff3d4d95c4e1ded41a98edf42a71c
@@ -73833,9 +74515,10 @@ pages:
       2.47.2: 91bf30386de3cf01cd5657baf17d45aa55b0f2a7
       2.48.1: 91bf30386de3cf01cd5657baf17d45aa55b0f2a7
       2.49.0: 91bf30386de3cf01cd5657baf17d45aa55b0f2a7
+      2.50.0: 91bf30386de3cf01cd5657baf17d45aa55b0f2a7
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -73924,9 +74607,10 @@ pages:
       2.47.2: b4d3a837e5931769f6fdc52e3e8ffdf34a83fde7
       2.48.1: b4d3a837e5931769f6fdc52e3e8ffdf34a83fde7
       2.49.0: b4d3a837e5931769f6fdc52e3e8ffdf34a83fde7
+      2.50.0: b4d3a837e5931769f6fdc52e3e8ffdf34a83fde7
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -74008,8 +74692,12 @@ pages:
       2.47.2: 787ad476f239f1a81fc8847b87ff51f5c5b5b865
       2.48.1: 787ad476f239f1a81fc8847b87ff51f5c5b5b865
       2.49.0: 787ad476f239f1a81fc8847b87ff51f5c5b5b865
-    latest-changes: 2.45.0
+      2.50.0: cdde13576a9cf5bf4d254c9a8307f3b6fe645b91
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.45.1 &rarr; 2.49.0
     - name: 2.45.0
       added: 2
@@ -74031,6 +74719,10 @@ pages:
       - 2
       - 1
       - 5
+      787ad476f239f1a81fc8847b87ff51f5c5b5b865..cdde13576a9cf5bf4d254c9a8307f3b6fe645b91:
+      - 4
+      - 4
+      - 0
   cruft-packs:
     version-map:
       2.37.0: d295e7749266148d7159b266c825d84f483427e7
@@ -74100,9 +74792,10 @@ pages:
       2.47.2: b929d774105e8bb77c62cc916df3c340362fa54e
       2.48.1: b929d774105e8bb77c62cc916df3c340362fa54e
       2.49.0: b929d774105e8bb77c62cc916df3c340362fa54e
+      2.50.0: b929d774105e8bb77c62cc916df3c340362fa54e
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 1
       removed: 1
@@ -74168,9 +74861,10 @@ pages:
       2.47.2: c917e70a2a0b1b2cf75d0c97cdf3c8c4474f4dee
       2.48.1: c917e70a2a0b1b2cf75d0c97cdf3c8c4474f4dee
       2.49.0: c917e70a2a0b1b2cf75d0c97cdf3c8c4474f4dee
+      2.50.0: c917e70a2a0b1b2cf75d0c97cdf3c8c4474f4dee
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 4
       removed: 4
@@ -74236,9 +74930,10 @@ pages:
       2.47.2: f1df68fb9520b76c3829947e41244defcb44a75c
       2.48.1: f1df68fb9520b76c3829947e41244defcb44a75c
       2.49.0: f1df68fb9520b76c3829947e41244defcb44a75c
+      2.50.0: f1df68fb9520b76c3829947e41244defcb44a75c
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 2
       removed: 2
@@ -74304,9 +74999,10 @@ pages:
       2.47.2: 830119db89ecec28f3c7f885ddd1187115692b93
       2.48.1: 830119db89ecec28f3c7f885ddd1187115692b93
       2.49.0: 830119db89ecec28f3c7f885ddd1187115692b93
+      2.50.0: 830119db89ecec28f3c7f885ddd1187115692b93
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 1
       removed: 1
@@ -74388,9 +75084,10 @@ pages:
       2.47.2: 84dba05a1b2990e5332bd36642209e347d2ec934
       2.48.1: 84dba05a1b2990e5332bd36642209e347d2ec934
       2.49.0: 84dba05a1b2990e5332bd36642209e347d2ec934
+      2.50.0: 84dba05a1b2990e5332bd36642209e347d2ec934
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 2
       removed: 2
@@ -74464,9 +75161,10 @@ pages:
       2.47.2: d7c9f7faf15eec1645cffdee6fa0e86b73146242
       2.48.1: d7c9f7faf15eec1645cffdee6fa0e86b73146242
       2.49.0: d7c9f7faf15eec1645cffdee6fa0e86b73146242
+      2.50.0: d7c9f7faf15eec1645cffdee6fa0e86b73146242
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 8
       removed: 0
@@ -74548,9 +75246,10 @@ pages:
       2.47.2: 94074b7c94ec8860c54a9fc676453b773c7144ce
       2.48.1: 94074b7c94ec8860c54a9fc676453b773c7144ce
       2.49.0: 94074b7c94ec8860c54a9fc676453b773c7144ce
+      2.50.0: 94074b7c94ec8860c54a9fc676453b773c7144ce
     latest-changes: 2.40.0
     page-versions:
-    - name: 2.40.1 &rarr; 2.49.0
+    - name: 2.40.1 &rarr; 2.50.0
     - name: 2.40.0
       added: 6
       removed: 2
@@ -74616,9 +75315,10 @@ pages:
       2.47.2: 82f6680b5e7d509a8f341e1e0dcdc042753cdf1e
       2.48.1: 82f6680b5e7d509a8f341e1e0dcdc042753cdf1e
       2.49.0: 82f6680b5e7d509a8f341e1e0dcdc042753cdf1e
+      2.50.0: 82f6680b5e7d509a8f341e1e0dcdc042753cdf1e
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 1
       removed: 1
@@ -74692,8 +75392,12 @@ pages:
       2.47.2: d3471b78059fde00de08f9a0a5d980f9325b98d1
       2.48.1: d3471b78059fde00de08f9a0a5d980f9325b98d1
       2.49.0: d3471b78059fde00de08f9a0a5d980f9325b98d1
-    latest-changes: 2.43.0
+      2.50.0: 1d249979e3a414d36f76c1a6878554038a42fa5e
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 2
+      removed: 0
     - name: 2.43.1 &rarr; 2.49.0
     - name: 2.43.0
       added: 1
@@ -74706,6 +75410,10 @@ pages:
       9b708c5018a1a669398639a6adb31686cbd4878a..d3471b78059fde00de08f9a0a5d980f9325b98d1:
       - 1
       - 1
+      - 6
+      d3471b78059fde00de08f9a0a5d980f9325b98d1..1d249979e3a414d36f76c1a6878554038a42fa5e:
+      - 2
+      - 0
       - 6
   gitprotocol-http:
     version-map:
@@ -74760,9 +75468,10 @@ pages:
       2.47.2: be98daefa82e93b18bebd5ef424d81e097a63cc4
       2.48.1: be98daefa82e93b18bebd5ef424d81e097a63cc4
       2.49.0: be98daefa82e93b18bebd5ef424d81e097a63cc4
+      2.50.0: be98daefa82e93b18bebd5ef424d81e097a63cc4
     latest-changes: 2.44.0
     page-versions:
-    - name: 2.44.1 &rarr; 2.49.0
+    - name: 2.44.1 &rarr; 2.50.0
     - name: 2.44.0
       added: 4
       removed: 4
@@ -74843,9 +75552,10 @@ pages:
       2.47.2: 9eddf823a6151354abc8c84c50a9364e297a0eaf
       2.48.1: 9eddf823a6151354abc8c84c50a9364e297a0eaf
       2.49.0: 9eddf823a6151354abc8c84c50a9364e297a0eaf
+      2.50.0: 9eddf823a6151354abc8c84c50a9364e297a0eaf
     latest-changes: 2.43.0
     page-versions:
-    - name: 2.43.1 &rarr; 2.49.0
+    - name: 2.43.1 &rarr; 2.50.0
     - name: 2.43.0
       added: 3
       removed: 3
@@ -74911,8 +75621,10 @@ pages:
       2.47.2: 3d44f2b0f4836a827a70d96f0e6be1402ab95f2a
       2.48.1: ad229d829ec8656df1f4375f8169b8145bf0ff19
       2.49.0: b51501c381ebe92976e805fd07d0166188607475
+      2.50.0: b51501c381ebe92976e805fd07d0166188607475
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 8
       removed: 0
@@ -75026,8 +75738,12 @@ pages:
       2.47.2: '078c31a1c82bae50a4c726fdd242f770d71e2741'
       2.48.1: '078c31a1c82bae50a4c726fdd242f770d71e2741'
       2.49.0: '078c31a1c82bae50a4c726fdd242f770d71e2741'
-    latest-changes: 2.47.0
+      2.50.0: 3f9f52821260ee54e1e517d1f9fa9b587bcd59cf
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 7
+      removed: 1
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 7
@@ -75049,6 +75765,10 @@ pages:
       - 7
       - 0
       - 1
+      '078c31a1c82bae50a4c726fdd242f770d71e2741..3f9f52821260ee54e1e517d1f9fa9b587bcd59cf':
+      - 7
+      - 1
+      - 0
   bundle-uri:
     version-map:
       2.38.0: 33a700e39a78ab93b5fb402be565b12b2ac81bd0
@@ -75102,8 +75822,12 @@ pages:
       2.47.2: 6cd4e693bb68d971aa4fa473473d04cedf6f967d
       2.48.1: 6cd4e693bb68d971aa4fa473473d04cedf6f967d
       2.49.0: 6cd4e693bb68d971aa4fa473473d04cedf6f967d
-    latest-changes: 2.40.0
+      2.50.0: 397011b112cfa54eb919811367dc82e4f40153d1
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 4
+      removed: 4
     - name: 2.40.1 &rarr; 2.49.0
     - name: 2.40.0
       added: 4
@@ -75122,6 +75846,10 @@ pages:
       - 4
       - 0
       d2879a626a60b151388e11888292a9166a4552da..6cd4e693bb68d971aa4fa473473d04cedf6f967d:
+      - 4
+      - 4
+      - 0
+      6cd4e693bb68d971aa4fa473473d04cedf6f967d..397011b112cfa54eb919811367dc82e4f40153d1:
       - 4
       - 4
       - 0
@@ -75172,8 +75900,12 @@ pages:
       2.47.2: 720c6c599645c8b7524ff19ea3d7af21fd448e43
       2.48.1: 720c6c599645c8b7524ff19ea3d7af21fd448e43
       2.49.0: 720c6c599645c8b7524ff19ea3d7af21fd448e43
-    latest-changes: 2.47.0
+      2.50.0: 6882c05664b2064fe6c80d4776548b926175d928
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 1
+      removed: 3
     - name: 2.47.1 &rarr; 2.49.0
     - name: 2.47.0
       added: 1
@@ -75187,6 +75919,10 @@ pages:
       - 1
       - 1
       - 6
+      720c6c599645c8b7524ff19ea3d7af21fd448e43..6882c05664b2064fe6c80d4776548b926175d928:
+      - 1
+      - 3
+      - 4
   git-replay:
     version-map:
       2.44.0: 969f06aaf9389635b547afd0b6e3426b39bda540
@@ -75207,8 +75943,12 @@ pages:
       2.47.2: e41899b2a256d03fbd0638f072d71faeac04cc3b
       2.48.1: 3afe11c3098ce884600461dc851a21a824c21d79
       2.49.0: 940d29c2ffa94dc756051b75edd77e98612d0eff
-    latest-changes: 2.49.0
+      2.50.0: 5fbd7be41d6db92b8e180171943df8f0fecc4d74
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
     - name: 2.49.0
       added: 8
       removed: 0
@@ -75237,6 +75977,10 @@ pages:
       - 8
       - 0
       - 0
+      940d29c2ffa94dc756051b75edd77e98612d0eff..5fbd7be41d6db92b8e180171943df8f0fecc4d74:
+      - 8
+      - 0
+      - 0
   unit-tests:
     version-map:
       2.44.0: 7ea8788da3b55fb2daf3f0a389c3a13907880769
@@ -75257,9 +76001,10 @@ pages:
       2.47.2: 457b3cfbce0e0464a7c40aef7812a5053a13ecff
       2.48.1: 457b3cfbce0e0464a7c40aef7812a5053a13ecff
       2.49.0: 457b3cfbce0e0464a7c40aef7812a5053a13ecff
+      2.50.0: 457b3cfbce0e0464a7c40aef7812a5053a13ecff
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 2
       removed: 0
@@ -75284,8 +76029,10 @@ pages:
       2.47.2: 47dac155f82d23ccf39b63e3ba0df52bbd8ab589
       2.48.1: e3014ccb9569365f41d3451fc86a8d7bcf3df227
       2.49.0: 9e5dca32294b1f172b5c59d9040e7fd188412035
+      2.50.0: 9e5dca32294b1f172b5c59d9040e7fd188412035
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 6
       removed: 2
@@ -75326,9 +76073,10 @@ pages:
       2.47.2: 3c37eb9b19b09c7c9edbb0fa4e68184b80e9a8d3
       2.48.1: 3c37eb9b19b09c7c9edbb0fa4e68184b80e9a8d3
       2.49.0: 3c37eb9b19b09c7c9edbb0fa4e68184b80e9a8d3
+      2.50.0: 3c37eb9b19b09c7c9edbb0fa4e68184b80e9a8d3
     latest-changes: 2.46.0
     page-versions:
-    - name: 2.46.1 &rarr; 2.49.0
+    - name: 2.46.1 &rarr; 2.50.0
     - name: 2.46.0
       added: 8
       removed: 0
@@ -75340,9 +76088,10 @@ pages:
       2.47.2: 817d53c8da22db548200fb25ec14c9d0f51cfded
       2.48.1: 817d53c8da22db548200fb25ec14c9d0f51cfded
       2.49.0: 817d53c8da22db548200fb25ec14c9d0f51cfded
+      2.50.0: 817d53c8da22db548200fb25ec14c9d0f51cfded
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 8
       removed: 0
@@ -75351,9 +76100,10 @@ pages:
       2.48.0: 76b6c01c346b4701021dfe7b176cb135c881e500
       2.48.1: 76b6c01c346b4701021dfe7b176cb135c881e500
       2.49.0: 76b6c01c346b4701021dfe7b176cb135c881e500
+      2.50.0: 76b6c01c346b4701021dfe7b176cb135c881e500
     latest-changes: 2.48.0
     page-versions:
-    - name: 2.48.1 &rarr; 2.49.0
+    - name: 2.48.1 &rarr; 2.50.0
     - name: 2.48.0
       added: 8
       removed: 0
@@ -75561,8 +76311,12 @@ pages:
       2.48.0: 9c32b5e746e13047c56b6acd89d1308b139d8cd1
       2.48.1: 9c32b5e746e13047c56b6acd89d1308b139d8cd1
       2.49.0: fe23642a63ff59195f958ccb353dc6b4ffe5942c
-    latest-changes: 2.49.0
+      2.50.0: 6e578e33fa0be9738330ad61ac8014634462018f
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 3
+      removed: 0
     - name: 2.49.0
       added: 2
       removed: 2
@@ -75825,6 +76579,10 @@ pages:
       - 2
       - 2
       - 4
+      fe23642a63ff59195f958ccb353dc6b4ffe5942c..6e578e33fa0be9738330ad61ac8014634462018f:
+      - 3
+      - 0
+      - 5
   ReviewingGuidelines:
     version-map:
       2.38.0: 660e60c007657c8aeaaf25cc41138f04b83f15ff
@@ -75878,9 +76636,10 @@ pages:
       2.48.0: 251eb6d9ec08d864904404e8cc131eca8ec72284
       2.48.1: 251eb6d9ec08d864904404e8cc131eca8ec72284
       2.49.0: 251eb6d9ec08d864904404e8cc131eca8ec72284
+      2.50.0: 251eb6d9ec08d864904404e8cc131eca8ec72284
     latest-changes: 2.47.0
     page-versions:
-    - name: 2.47.1 &rarr; 2.49.0
+    - name: 2.47.1 &rarr; 2.50.0
     - name: 2.47.0
       added: 7
       removed: 1
@@ -75913,8 +76672,12 @@ pages:
       2.48.0: ed8d63cdf8567e70f4d62c88daca3133a9142b79
       2.48.1: ed8d63cdf8567e70f4d62c88daca3133a9142b79
       2.49.0: 5b38fae52d37aa32e9e75796b7095727be410811
-    latest-changes: 2.49.0
+      2.50.0: 2fbb86fa8054d8f2e17ddd0f9a981b12fe22ff8a
+    latest-changes: 2.50.0
     page-versions:
+    - name: 2.50.0
+      added: 6
+      removed: 0
     - name: 2.49.0
       added: 7
       removed: 1
@@ -75943,31 +76706,49 @@ pages:
       - 7
       - 1
       - 0
+      5b38fae52d37aa32e9e75796b7095727be410811..2fbb86fa8054d8f2e17ddd0f9a981b12fe22ff8a:
+      - 6
+      - 0
+      - 2
   git-backfill:
     version-map:
       2.49.0: b9fb6db9f76afd4fb41523725a67f2ec5cda776e
+      2.50.0: b9fb6db9f76afd4fb41523725a67f2ec5cda776e
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 8
       removed: 0
   api-path-walk:
     version-map:
       2.49.0: 8c24e046e19850353999ca4fdbae50fc897b3a52
+      2.50.0: 8c24e046e19850353999ca4fdbae50fc897b3a52
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 8
       removed: 0
   large-object-promisors:
     version-map:
       2.49.0: 896b90200e6585db6222b8a96d79ccab6b637cad
+      2.50.0: 896b90200e6585db6222b8a96d79ccab6b637cad
     latest-changes: 2.49.0
     page-versions:
+    - name: 2.50.0
     - name: 2.49.0
       added: 8
       removed: 0
-latest-version: 2.49.0
+  git-diff-pairs:
+    version-map:
+      2.50.0: 8f8bf7487b10bbe3f715cf26db31d93895beab18
+    latest-changes: 2.50.0
+    page-versions:
+    - name: 2.50.0
+      added: 8
+      removed: 0
+latest-version: 2.50.0
 l10n:
   commit_sha: 8fe305cd4b9501541b89232972de80d917527778
   tree_sha: 50d2047c9813b1666527785d1eed424883369147

@@ -83,6 +83,7 @@ aliases:
 - "/docs/git-cvsexportcommit/2.48.0/index.html"
 - "/docs/git-cvsexportcommit/2.48.1/index.html"
 - "/docs/git-cvsexportcommit/2.49.0/index.html"
+- "/docs/git-cvsexportcommit/2.50.0/index.html"
 ---
 <div class="sect1">
 <h2 id="_name"><a class="anchor" href="#_name"></a>NAME</h2>
@@ -132,63 +133,63 @@ parent the changeset should be done against.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--c"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--c"></a>-c </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--c"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--c"></a>-c </dt>
 <dd>
 <p>Commit automatically if the patch applied cleanly. It will not
 commit if any hunks fail to apply or there were other problems.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--p"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--p"></a>-p </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--p"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--p"></a>-p </dt>
 <dd>
 <p>Be pedantic (paranoid) when applying patches. Invokes patch with
 --fuzz=0</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--a"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--a"></a>-a </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--a"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--a"></a>-a </dt>
 <dd>
 <p>Add authorship information. Adds Author line, and Committer (if
 different from Author) to the message.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--d"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--d"></a>-d </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--d"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--d"></a>-d </dt>
 <dd>
 <p>Set an alternative CVSROOT to use.  This corresponds to the CVS
 -d parameter.  Usually users will not want to set this, except
 if using CVS in an asymmetric fashion.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--f"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--f"></a>-f </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--f"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--f"></a>-f </dt>
 <dd>
 <p>Force the merge even if the files are not up to date.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--P"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--P"></a>-P </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--P"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--P"></a>-P </dt>
 <dd>
 <p>Force the parent commit, even if it is not a direct parent.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--m"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--m"></a>-m </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--m"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--m"></a>-m </dt>
 <dd>
 <p>Prepend the commit message with the provided prefix.
 Useful for patch series and the like.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--u"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--u"></a>-u </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--u"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--u"></a>-u </dt>
 <dd>
 <p>Update affected files from CVS repository before attempting export.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--k"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--k"></a>-k </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--k"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--k"></a>-k </dt>
 <dd>
 <p>Reverse CVS keyword expansion (e.g. $Revision: 1.2.3.4$
 becomes $Revision$) in working CVS checkout before applying patch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--w"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--w"></a>-w </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--w"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--w"></a>-w </dt>
 <dd>
 <p>Specify the location of the CVS checkout to use for the export. This
 option does not require GIT_DIR to be set before execution if the
 current directory is within a Git repository.  The default is the
 value of <em>cvsexportcommit.cvsdir</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--W"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--W"></a>-W </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--W"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--W"></a>-W </dt>
 <dd>
 <p>Tell cvsexportcommit that the current working directory is not only
 a Git checkout, but also the CVS checkout.  Therefore, Git will
 reset the working directory to the parent commit before proceeding.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--v"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt--v"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt--v"></a>-v </dt>
 <dd>
 <p>Verbose.</p>
 </dd>
@@ -201,7 +202,7 @@ reset the working directory to the parent commit before proceeding.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-cvsexportcommitcvsdir"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt-cvsexportcommitcvsdir"></a>cvsexportcommit.cvsdir </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-cvsexportcommitcvsdir"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt-cvsexportcommitcvsdir"></a>cvsexportcommit.cvsdir </dt>
 <dd>
 <p>The default location of the CVS checkout to use for the export.</p>
 </dd>
@@ -214,7 +215,7 @@ reset the working directory to the parent commit before proceeding.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS"></a>Merge one patch into CVS </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS"></a>Merge one patch into CVS </dt>
 <dd>
 <div class="listingblock">
 <div class="content">
@@ -225,7 +226,7 @@ $ cvs commit -F .msg &lt;files&gt;</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS-cand-woptionsTheworkingdirectoryiswithintheGitRepo"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS-cand-woptionsTheworkingdirectoryiswithintheGitRepo"></a>Merge one patch into CVS (-c and -w options). The working directory is within the Git Repo </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS-cand-woptionsTheworkingdirectoryiswithintheGitRepo"><a class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergeonepatchintoCVS-cand-woptionsTheworkingdirectoryiswithintheGitRepo"></a>Merge one patch into CVS (-c and -w options). The working directory is within the Git Repo </dt>
 <dd>
 <div class="listingblock">
 <div class="content">
@@ -233,7 +234,7 @@ $ cvs commit -F .msg &lt;files&gt;</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-MergependingpatchesintoCVSautomatically820182128201onlyifyoureallyknowwhatyouaredoing"> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergependingpatchesintoCVSautomaticallyonlyifyoureallyknowwhatyouaredoing"></a> <a class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergependingpatchesintoCVSautomatically820182128201onlyifyoureallyknowwhatyouaredoing"></a>Merge pending patches into CVS automatically&#8201;&#8212;&#8201;only if you really know what you are doing </dt>
+<dt class="hdlist1" id="Documentation/git-cvsexportcommit.txt-MergependingpatchesintoCVSautomatically820182128201onlyifyoureallyknowwhatyouaredoing"><a id="Documentation/git-cvsexportcommit.txt-MergependingpatchesintoCVSautomaticallyonlyifyoureallyknowwhatyouaredoing" class="anchor" href="#Documentation/git-cvsexportcommit.txt-MergependingpatchesintoCVSautomaticallyonlyifyoureallyknowwhatyouaredoing"></a>Merge pending patches into CVS automatically&#8201;&#8212;&#8201;only if you really know what you are doing </dt>
 <dd>
 <div class="listingblock">
 <div class="content">

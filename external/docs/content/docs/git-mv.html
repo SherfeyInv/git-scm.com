@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-mv Documentation
 docname: git-mv
-version: 2.44.0
-latest-changes: 2.44.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/git-mv/index.html"
 ---
@@ -22,8 +22,9 @@ aliases:
 <div class="sect1">
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>SYNOPSIS</h2>
 <div class="sectionbody">
-<div class="verseblock">
-<pre class="content"><em>git mv</em> [&lt;options&gt;] &lt;source&gt;&#8230;&#8203; &lt;destination&gt;</pre>
+<div class="paragraph">
+<p>git mv [-v] [-f] [-n] [-k] &lt;source&gt; &lt;destination&gt;
+git mv [-v] [-f] [-n] [-k] &lt;source&gt;&#8230;&#8203; &lt;destination-directory&gt;</p>
 </div>
 </div>
 </div>
@@ -33,16 +34,10 @@ aliases:
 <div class="paragraph">
 <p>Move or rename a file, directory, or symlink.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>git mv [-v] [-f] [-n] [-k] &lt;source&gt; &lt;destination&gt;
-git mv [-v] [-f] [-n] [-k] &lt;source&gt; ... &lt;destination-directory&gt;</pre>
-</div>
-</div>
 <div class="paragraph">
-<p>In the first form, it renames &lt;source&gt;, which must exist and be either
-a file, symlink or directory, to &lt;destination&gt;.
-In the second form, the last argument has to be an existing
+<p>In the first form, it renames <em>&lt;source&gt;</em>, which must exist and be either
+a file, symlink or directory, to <em>&lt;destination&gt;</em>.
+In the second form, <em>&lt;destination-directory&gt;</em> has to be an existing
 directory; the given sources will be moved into this directory.</p>
 </div>
 <div class="paragraph">
@@ -56,25 +51,25 @@ committed.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-mv.txt--f"> <a class="anchor" href="#Documentation/git-mv.txt--f"></a>-f </dt>
-<dt class="hdlist1" id="Documentation/git-mv.txt---force"> <a class="anchor" href="#Documentation/git-mv.txt---force"></a>--force </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code-fcode"><a id="Documentation/git-mv.txt--f" class="anchor" href="#Documentation/git-mv.txt--f"></a><code>-f</code> </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code--forcecode"><a id="Documentation/git-mv.txt---force" class="anchor" href="#Documentation/git-mv.txt---force"></a><code>--force</code> </dt>
 <dd>
 <p>Force renaming or moving of a file even if the &lt;destination&gt; exists.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mv.txt--k"> <a class="anchor" href="#Documentation/git-mv.txt--k"></a>-k </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code-kcode"><a id="Documentation/git-mv.txt--k" class="anchor" href="#Documentation/git-mv.txt--k"></a><code>-k</code> </dt>
 <dd>
 <p>Skip move or rename actions which would lead to an error
 condition. An error happens when a source is neither existing nor
 controlled by Git, or when it would overwrite an existing
 file unless <code>-f</code> is given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mv.txt--n"> <a class="anchor" href="#Documentation/git-mv.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-mv.txt---dry-run"> <a class="anchor" href="#Documentation/git-mv.txt---dry-run"></a>--dry-run </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code-ncode"><a id="Documentation/git-mv.txt--n" class="anchor" href="#Documentation/git-mv.txt--n"></a><code>-n</code> </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code--dry-runcode"><a id="Documentation/git-mv.txt---dry-run" class="anchor" href="#Documentation/git-mv.txt---dry-run"></a><code>--dry-run</code> </dt>
 <dd>
 <p>Do nothing; only show what would happen</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mv.txt--v"> <a class="anchor" href="#Documentation/git-mv.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-mv.txt---verbose"> <a class="anchor" href="#Documentation/git-mv.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code-vcode"><a id="Documentation/git-mv.txt--v" class="anchor" href="#Documentation/git-mv.txt--v"></a><code>-v</code> </dt>
+<dt class="hdlist1" id="Documentation/git-mv.txt-code--verbosecode"><a id="Documentation/git-mv.txt---verbose" class="anchor" href="#Documentation/git-mv.txt---verbose"></a><code>--verbose</code> </dt>
 <dd>
 <p>Report the names of files as they are moved.</p>
 </dd>
@@ -89,8 +84,8 @@ file unless <code>-f</code> is given.</p>
 <p>Moving a submodule using a gitfile (which means they were cloned
 with a Git version 1.7.8 or newer) will update the gitfile and
 core.worktree setting to make the submodule work in the new location.
-It also will attempt to update the submodule.&lt;name&gt;.path setting in
-the <a href='{{< relurl "docs/gitmodules" >}}'>gitmodules[5]</a> file and stage that file (unless -n is used).</p>
+It also will attempt to update the <code>submodule.&lt;name&gt;.path</code> setting in
+the <a href='{{< relurl "docs/gitmodules" >}}'>gitmodules[5]</a> file and stage that file (unless <code>-n</code> is used).</p>
 </div>
 </div>
 </div>

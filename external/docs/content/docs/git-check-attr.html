@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-check-attr Documentation
 docname: git-check-attr
-version: 2.43.0
-latest-changes: 2.43.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/git-check-attr/index.html"
 ---
@@ -42,34 +42,34 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt--a--all"> <a class="anchor" href="#Documentation/git-check-attr.txt--a--all"></a>-a, --all </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt--a--all"><a class="anchor" href="#Documentation/git-check-attr.txt--a--all"></a>-a, --all </dt>
 <dd>
 <p>List all attributes that are associated with the specified
 paths.  If this option is used, then <em>unspecified</em> attributes
 will not be included in the output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt---cached"> <a class="anchor" href="#Documentation/git-check-attr.txt---cached"></a>--cached </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt---cached"><a class="anchor" href="#Documentation/git-check-attr.txt---cached"></a>--cached </dt>
 <dd>
 <p>Consider <code>.gitattributes</code> in the index only, ignoring the working tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt---stdin"> <a class="anchor" href="#Documentation/git-check-attr.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt---stdin"><a class="anchor" href="#Documentation/git-check-attr.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>Read pathnames from the standard input, one per line,
 instead of from the command line.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt--z"> <a class="anchor" href="#Documentation/git-check-attr.txt--z"></a>-z </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt--z"><a class="anchor" href="#Documentation/git-check-attr.txt--z"></a>-z </dt>
 <dd>
 <p>The output format is modified to be machine-parsable.
 If <code>--stdin</code> is also given, input paths are separated
 with a NUL character instead of a linefeed character.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt---sourcelttree-ishgt"> <a class="anchor" href="#Documentation/git-check-attr.txt---sourcetree-ish"></a> <a class="anchor" href="#Documentation/git-check-attr.txt---sourcelttree-ishgt"></a>--source=&lt;tree-ish&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt---sourcelttree-ishgt"><a id="Documentation/git-check-attr.txt---sourcetree-ish" class="anchor" href="#Documentation/git-check-attr.txt---sourcetree-ish"></a>--source=&lt;tree-ish&gt; </dt>
 <dd>
 <p>Check attributes against the specified tree-ish. It is common to
 specify the source tree by naming a commit, branch, or tag associated
 with it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt---"> <a class="anchor" href="#Documentation/git-check-attr.txt---"></a>-- </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt---"><a class="anchor" href="#Documentation/git-check-attr.txt---"></a>-- </dt>
 <dd>
 <p>Interpret all preceding arguments as attributes and all following
 arguments as path names.</p>
@@ -100,19 +100,19 @@ being queried, and &lt;info&gt; can be either:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt-emunspecifiedem"> <a class="anchor" href="#Documentation/git-check-attr.txt-unspecified"></a> <a class="anchor" href="#Documentation/git-check-attr.txt-emunspecifiedem"></a><em>unspecified</em> </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt-emunspecifiedem"><a id="Documentation/git-check-attr.txt-unspecified" class="anchor" href="#Documentation/git-check-attr.txt-unspecified"></a><em>unspecified</em> </dt>
 <dd>
 <p>when the attribute is not defined for the path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt-emunsetem"> <a class="anchor" href="#Documentation/git-check-attr.txt-unset"></a> <a class="anchor" href="#Documentation/git-check-attr.txt-emunsetem"></a><em>unset</em> </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt-emunsetem"><a id="Documentation/git-check-attr.txt-unset" class="anchor" href="#Documentation/git-check-attr.txt-unset"></a><em>unset</em> </dt>
 <dd>
 <p>when the attribute is defined as false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt-emsetem"> <a class="anchor" href="#Documentation/git-check-attr.txt-set"></a> <a class="anchor" href="#Documentation/git-check-attr.txt-emsetem"></a><em>set</em> </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt-emsetem"><a id="Documentation/git-check-attr.txt-set" class="anchor" href="#Documentation/git-check-attr.txt-set"></a><em>set</em> </dt>
 <dd>
 <p>when the attribute is defined as true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-check-attr.txt-ltvaluegt"> <a class="anchor" href="#Documentation/git-check-attr.txt-value"></a> <a class="anchor" href="#Documentation/git-check-attr.txt-ltvaluegt"></a>&lt;value&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-check-attr.txt-ltvaluegt"><a id="Documentation/git-check-attr.txt-value" class="anchor" href="#Documentation/git-check-attr.txt-value"></a>&lt;value&gt; </dt>
 <dd>
 <p>when a value has been assigned to the attribute.</p>
 </dd>
@@ -143,22 +143,15 @@ README caveat=unspecified</pre>
 <ul>
 <li>
 <p>Listing a single attribute:</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr diff org/example/MyClass.java
 org/example/MyClass.java: diff: java</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Listing multiple attributes for a file:</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr crlf diff myAttr -- org/example/MyClass.java
@@ -167,13 +160,9 @@ org/example/MyClass.java: diff: java
 org/example/MyClass.java: myAttr: set</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Listing all attributes for a file:</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr --all -- org/example/MyClass.java
@@ -181,13 +170,9 @@ org/example/MyClass.java: diff: java
 org/example/MyClass.java: myAttr: set</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Listing an attribute for multiple files:</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr myAttr -- org/example/MyClass.java org/example/NoMyAttr.java
@@ -195,18 +180,17 @@ org/example/MyClass.java: myAttr: set
 org/example/NoMyAttr.java: myAttr: unspecified</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Not all values are equally unambiguous:</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr caveat README
 README: caveat: unspecified</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>

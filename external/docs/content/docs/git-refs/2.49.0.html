@@ -9,6 +9,7 @@ docname: git-refs
 version: 2.49.0
 aliases:
 - "/docs/git-refs/2.49.0/index.html"
+- "/docs/git-refs/2.50.0/index.html"
 ---
 <div class="sect1">
 <h2 id="_name"><a class="anchor" href="#_name"></a>NAME</h2>
@@ -40,11 +41,11 @@ git refs verify [--strict] [--verbose]</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-refs.txt-migrate"> <a class="anchor" href="#Documentation/git-refs.txt-migrate"></a>migrate </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt-migrate"><a class="anchor" href="#Documentation/git-refs.txt-migrate"></a>migrate </dt>
 <dd>
 <p>Migrate ref store between different formats.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-refs.txt-verify"> <a class="anchor" href="#Documentation/git-refs.txt-verify"></a>verify </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt-verify"><a class="anchor" href="#Documentation/git-refs.txt-verify"></a>verify </dt>
 <dd>
 <p>Verify reference database consistency.</p>
 </dd>
@@ -60,7 +61,7 @@ git refs verify [--strict] [--verbose]</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-refs.txt---ref-formatltformatgt"> <a class="anchor" href="#Documentation/git-refs.txt---ref-formatformat"></a> <a class="anchor" href="#Documentation/git-refs.txt---ref-formatltformatgt"></a>--ref-format=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt---ref-formatltformatgt"><a id="Documentation/git-refs.txt---ref-formatformat" class="anchor" href="#Documentation/git-refs.txt---ref-formatformat"></a>--ref-format=&lt;format&gt; </dt>
 <dd>
 <p>The ref format to migrate the ref store to. Can be one of:</p>
 <div class="ulist">
@@ -75,7 +76,7 @@ internals are subject to change.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-refs.txt---dry-run"> <a class="anchor" href="#Documentation/git-refs.txt---dry-run"></a>--dry-run </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt---dry-run"><a class="anchor" href="#Documentation/git-refs.txt---dry-run"></a>--dry-run </dt>
 <dd>
 <p>Perform the migration, but do not modify the repository. The migrated
 refs will be written into a separate directory that can be inspected
@@ -83,8 +84,8 @@ separately. The name of the directory will be reported on stdout. This
 can be used to double check that the migration works as expected before
 performing the actual migration.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-refs.txt---reflog"> <a class="anchor" href="#Documentation/git-refs.txt---reflog"></a>--reflog </dt>
-<dt class="hdlist1" id="Documentation/git-refs.txt---no-reflog"> <a class="anchor" href="#Documentation/git-refs.txt---no-reflog"></a>--no-reflog </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt---reflog"><a class="anchor" href="#Documentation/git-refs.txt---reflog"></a>--reflog </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt---no-reflog"><a class="anchor" href="#Documentation/git-refs.txt---no-reflog"></a>--no-reflog </dt>
 <dd>
 <p>Choose between migrating the reflog data to the new backend,
 and discarding them.  The default is "--reflog", to migrate.</p>
@@ -96,12 +97,12 @@ and discarding them.  The default is "--reflog", to migrate.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-refs.txt---strict"> <a class="anchor" href="#Documentation/git-refs.txt---strict"></a>--strict </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt---strict"><a class="anchor" href="#Documentation/git-refs.txt---strict"></a>--strict </dt>
 <dd>
 <p>Enable stricter error checking. This will cause warnings to be
 reported as errors. See <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-refs.txt---verbose"> <a class="anchor" href="#Documentation/git-refs.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-refs.txt---verbose"><a class="anchor" href="#Documentation/git-refs.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>When verifying the reference database consistency, be chatty.</p>
 </dd>

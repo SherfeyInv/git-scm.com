@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - BreakingChanges Documentation
 docname: BreakingChanges
-version: 2.49.0
-latest-changes: 2.49.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/BreakingChanges/index.html"
 ---
@@ -269,6 +269,12 @@ references.</p>
 <div class="paragraph">
 <p>These features will be removed.</p>
 </div>
+</li>
+<li>
+<p>Support for "--stdin" option in the "name-rev" command was
+deprecated (and hidden from the documentation) in the Git 2.40
+timeframe, in preference to its synonym "--annotate-stdin".  Git 3.0
+removes the support for "--stdin" altogether.</p>
 </li>
 </ul>
 </div>

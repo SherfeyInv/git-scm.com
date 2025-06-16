@@ -6,8 +6,8 @@ section: documentation
 subsection: manual
 title: Git - git-verify-commit Documentation
 docname: git-verify-commit
-version: 2.39.0
-latest-changes: 2.39.0
+version: 2.50.0
+latest-changes: 2.50.0
 aliases:
 - "/docs/git-verify-commit/index.html"
 ---
@@ -22,8 +22,8 @@ aliases:
 <div class="sect1">
 <h2 id="_synopsis"><a class="anchor" href="#_synopsis"></a>SYNOPSIS</h2>
 <div class="sectionbody">
-<div class="verseblock">
-<pre class="content"><em>git verify-commit</em> [-v | --verbose] [--raw] &lt;commit&gt;&#8230;&#8203;</pre>
+<div class="paragraph">
+<p>git verify-commit [-v | --verbose] [--raw] &lt;commit&gt;&#8230;&#8203;</p>
 </div>
 </div>
 </div>
@@ -31,7 +31,8 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Validates the GPG signature created by <em>git commit -S</em>.</p>
+<p>Validates the GPG signature created by <code>git commit -S</code>
+on the commit objects given on the command line.</p>
 </div>
 </div>
 </div>
@@ -40,19 +41,15 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-verify-commit.txt---raw"> <a class="anchor" href="#Documentation/git-verify-commit.txt---raw"></a>--raw </dt>
+<dt class="hdlist1" id="Documentation/git-verify-commit.txt-code--rawcode"><a id="Documentation/git-verify-commit.txt---raw" class="anchor" href="#Documentation/git-verify-commit.txt---raw"></a><code>--raw</code> </dt>
 <dd>
 <p>Print the raw gpg status output to standard error instead of the normal
 human-readable output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-verify-commit.txt--v"> <a class="anchor" href="#Documentation/git-verify-commit.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-verify-commit.txt---verbose"> <a class="anchor" href="#Documentation/git-verify-commit.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-verify-commit.txt-code-vcode"><a id="Documentation/git-verify-commit.txt--v" class="anchor" href="#Documentation/git-verify-commit.txt--v"></a><code>-v</code> </dt>
+<dt class="hdlist1" id="Documentation/git-verify-commit.txt-code--verbosecode"><a id="Documentation/git-verify-commit.txt---verbose" class="anchor" href="#Documentation/git-verify-commit.txt---verbose"></a><code>--verbose</code> </dt>
 <dd>
 <p>Print the contents of the commit object before validating it.</p>
-</dd>
-<dt class="hdlist1" id="Documentation/git-verify-commit.txt-ltcommitgt82308203"> <a class="anchor" href="#Documentation/git-verify-commit.txt-commit"></a> <a class="anchor" href="#Documentation/git-verify-commit.txt-ltcommitgt82308203"></a>&lt;commit&gt;&#8230;&#8203; </dt>
-<dd>
-<p>SHA-1 identifiers of Git commit objects.</p>
 </dd>
 </dl>
 </div>
