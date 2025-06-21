@@ -21,8 +21,9 @@ aliases:
 <div class="sect1">
 <h2 id="_resumo"><a class="anchor" href="#_resumo"></a>RESUMO</h2>
 <div class="sectionbody">
-<div class="verseblock">
-<pre class="content"><em>git mv</em> [&lt;opções&gt;] &lt;origem&gt;&#8230;&#8203; &lt;destino&gt;</pre>
+<div class="paragraph">
+<p>git mv [-v] [-f] [-n] [-k] &lt;source&gt; &lt;destination&gt;
+git mv [-v] [-f] [-n] [-k] &lt;source&gt;&#8230;&#8203; &lt;destination-directory&gt;</p>
 </div>
 </div>
 </div>
@@ -32,14 +33,8 @@ aliases:
 <div class="paragraph">
 <p>Move ou renomeia um arquivo, diretório ou link simbólico.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>git mv [-v] [-f] [-n] [-k] &lt;origem&gt; &lt;destino&gt;
-git mv [-v] [-f] [-n] [-k] &lt;origem&gt; ... &lt;diretório-de-destino&gt;</pre>
-</div>
-</div>
 <div class="paragraph">
-<p>No primeiro formulário, ele renomeia <code>&lt;origem&gt;</code>, que deve existir e ser um arquivo, link simbólico ou diretório, para &lt;destino&gt;. Na segunda forma, o último argumento deve ser um diretório existente; as fontes informadas serão movidas para este diretório.</p>
+<p>In the first form, it renames <em>&lt;source&gt;</em>, which must exist and be either a file, symlink or directory, to <em>&lt;destination&gt;</em>. In the second form, <em>&lt;destination-directory&gt;</em> has to be an existing directory; the given sources will be moved into this directory.</p>
 </div>
 <div class="paragraph">
 <p>O índice é atualizado após a conclusão bem-sucedida, mas a alteração ainda deve ser confirmada.</p>
@@ -51,22 +46,22 @@ git mv [-v] [-f] [-n] [-k] &lt;origem&gt; ... &lt;diretório-de-destino&gt;</pre
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="git-mv--f"> <a class="anchor" href="#git-mv--f"></a>-f </dt>
-<dt class="hdlist1" id="git-mv---force"> <a class="anchor" href="#git-mv---force"></a>--force </dt>
+<dt class="hdlist1" id="git-mv-code-fcode"> <a class="anchor" href="#git-mv--f"></a> <a class="anchor" href="#git-mv-code-fcode"></a><code>-f</code> </dt>
+<dt class="hdlist1" id="git-mv-code--forcecode"> <a class="anchor" href="#git-mv---force"></a> <a class="anchor" href="#git-mv-code--forcecode"></a><code>--force</code> </dt>
 <dd>
 <p>Impõem a renomeação ou o deslocamento de um arquivo, mesmo que o &lt;destino&gt; exista.</p>
 </dd>
-<dt class="hdlist1" id="git-mv--k"> <a class="anchor" href="#git-mv--k"></a>-k </dt>
+<dt class="hdlist1" id="git-mv-code-kcode"> <a class="anchor" href="#git-mv--k"></a> <a class="anchor" href="#git-mv-code-kcode"></a><code>-k</code> </dt>
 <dd>
 <p>Ignorar um ato de mover ou renomear as ações que levariam a uma condição de erro. Um erro acontece quando uma fonte não existe nem é controlada pelo Git ou quando ela substituiria um arquivo existente a menos que <code>-f</code> seja utilizado.</p>
 </dd>
-<dt class="hdlist1" id="git-mv--n"> <a class="anchor" href="#git-mv--n"></a>-n </dt>
-<dt class="hdlist1" id="git-mv---dry-run"> <a class="anchor" href="#git-mv---dry-run"></a>--dry-run </dt>
+<dt class="hdlist1" id="git-mv-code-ncode"> <a class="anchor" href="#git-mv--n"></a> <a class="anchor" href="#git-mv-code-ncode"></a><code>-n</code> </dt>
+<dt class="hdlist1" id="git-mv-code--dry-runcode"> <a class="anchor" href="#git-mv---dry-run"></a> <a class="anchor" href="#git-mv-code--dry-runcode"></a><code>--dry-run</code> </dt>
 <dd>
 <p>Não faça nada; apenas exiba o que aconteceria</p>
 </dd>
-<dt class="hdlist1" id="git-mv--v"> <a class="anchor" href="#git-mv--v"></a>-v </dt>
-<dt class="hdlist1" id="git-mv---verbose"> <a class="anchor" href="#git-mv---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="git-mv-code-vcode"> <a class="anchor" href="#git-mv--v"></a> <a class="anchor" href="#git-mv-code-vcode"></a><code>-v</code> </dt>
+<dt class="hdlist1" id="git-mv-code--verbosecode"> <a class="anchor" href="#git-mv---verbose"></a> <a class="anchor" href="#git-mv-code--verbosecode"></a><code>--verbose</code> </dt>
 <dd>
 <p>Relate os nomes dos arquivos conforme eles vão sendo movidos.</p>
 </dd>
@@ -78,7 +73,7 @@ git mv [-v] [-f] [-n] [-k] &lt;origem&gt; ... &lt;diretório-de-destino&gt;</pre
 <h2 id="_submódulos"><a class="anchor" href="#_submódulos"></a>SUBMÓDULOS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Mover um submódulo utilizando um gitfile (o que significa que eles foram clonados com uma versão 1.7.8 ou mais recente do Git) atualizará a configuração <code>gitfile</code> e <code>core.worktree</code> para fazer com que o submódulo funcione no novo local. Ele também tentará atualizar o <code>submodule.&lt;nome&gt;.path</code> no arquivo <a href='{{< relurl "docs/gitmodules/pt_BR" >}}'>gitmodules[5]</a> e preparar este arquivo (a menos que a opção <code>-n</code> seja utilizada).</p>
+<p>Moving a submodule using a gitfile (which means they were cloned with a Git version 1.7.8 or newer) will update the gitfile and core.worktree setting to make the submodule work in the new location. It also will attempt to update the <code>submodule.&lt;name&gt;.path</code> setting in the <a href='{{< relurl "docs/gitmodules/pt_BR" >}}'>gitmodules[5]</a> file and stage that file (unless <code>-n</code> is used).</p>
 </div>
 </div>
 </div>

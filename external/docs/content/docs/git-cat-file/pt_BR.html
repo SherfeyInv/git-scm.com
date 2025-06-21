@@ -22,9 +22,8 @@ aliases:
 <h2 id="_resumo"><a class="anchor" href="#_resumo"></a>RESUMO</h2>
 <div class="sectionbody">
 <div class="verseblock">
-<pre class="content"><em>git cat-file</em> &lt;tipo&gt; &lt;objeto&gt;
-<em>git cat-file</em> (-e | -p) &lt;objeto&gt;
-<em>git cat-file</em> (-t | -s) [--allow-unknown-type] &lt;objeto&gt;
+<pre class="content"><em>git cat-file</em> &lt;type&gt; &lt;object&gt;
+<em>git cat-file</em> (-e | -p | -t | -s) &lt;object&gt;
 <em>git cat-file</em> (--textconv | --filters)
 	     [&lt;rev&gt;:&lt;path|tree-ish&gt; | --path=&lt;path|tree-ish&gt; &lt;rev&gt;]
 <em>git cat-file</em> (--batch | --batch-check | --batch-command) [--batch-all-objects]
@@ -91,6 +90,20 @@ aliases:
 <dt class="hdlist1" id="git-cat-file---filters"> <a class="anchor" href="#git-cat-file---filters"></a>--filters </dt>
 <dd>
 <p>Exiba o conteúdo conforme foi convertido pelos filtros configurados na árvore de trabalho atual para o <code>&lt;caminho&gt;</code> informado (por exemplo, filtros de manchas, conversão da quebra de linha, etc.). Nesse caso, o <code>&lt;objeto&gt;</code> deve estar no formato <code>&lt;árvore&gt;:&lt;caminho&gt;</code> ou <code>:&lt;caminho&gt;</code>.</p>
+</dd>
+<dt class="hdlist1" id="git-cat-file---filterltfilter-specgt"> <a class="anchor" href="#git-cat-file---filterfilter-spec"></a> <a class="anchor" href="#git-cat-file---filterltfilter-specgt"></a>--filter=&lt;filter-spec&gt; </dt>
+<dt class="hdlist1" id="git-cat-file---no-filter"> <a class="anchor" href="#git-cat-file---no-filter"></a>--no-filter </dt>
+<dd>
+<p>Omit objects from the list of printed objects. This can only be used in combination with one of the batched modes. Excluded objects that have been explicitly requested via any of the batch modes that read objects via standard input (<code>--batch</code>, <code>--batch-check</code>) will be reported as "filtered". Excluded objects in <code>--batch-all-objects</code> mode will not be printed at all. The <em>&lt;filter-spec&gt;</em> may be one of the following:</p>
+<div class="paragraph">
+<p>O formulário <em>--filter=blob:none</em> omite todos as "bolhas".</p>
+</div>
+<div class="paragraph">
+<p>A opção <em>--filter=blob:limit=&lt;n&gt;[kmg]</em> omite as bolhas com tamanho de pelo menos n bytes ou com n unidades. O n pode ser zero. Os sufixos k, m e g podem ser usados para nomear as unidades em KiB, MiB ou GiB. Por exemplo, <em>blob:limit=1k</em> é o mesmo que <em>blob:limit=1024</em>.</p>
+</div>
+<div class="paragraph">
+<p>A forma <em>--filter=object:type=(tag|commit|tree|blob)</em> omite todo os objetos que não sejam do mesmo tipo que foi requisitado.</p>
+</div>
 </dd>
 <dt class="hdlist1" id="git-cat-file---pathltcaminhogt"> <a class="anchor" href="#git-cat-file---pathcaminho"></a> <a class="anchor" href="#git-cat-file---pathltcaminhogt"></a>--path=&lt;caminho&gt; </dt>
 <dd>
@@ -189,10 +202,6 @@ especificar o caminho, separado por espaço. Consulte a seção
 <dt class="hdlist1" id="git-cat-file---unordered"> <a class="anchor" href="#git-cat-file---unordered"></a>--unordered </dt>
 <dd>
 <p>Quando a opção <code>--batch-all-objects</code> estiver em uso, visite os objetos numa ordem que possa ser mais eficiente para acessar o conteúdo do objeto do que a ordem do hash. Os detalhes exatos da ordem não são especificados, porém caso não precise de uma ordem específica, isso geralmente resultará numa saída mais rápida, especialmente com a opção <code>--batch</code>. Observe que o comando <code>cat-file</code> ainda mostrará cada objeto apenas uma vez, ainda que ele esteja armazenado diversas vezes no repositório.</p>
-</dd>
-<dt class="hdlist1" id="git-cat-file---allow-unknown-type"> <a class="anchor" href="#git-cat-file---allow-unknown-type"></a>--allow-unknown-type </dt>
-<dd>
-<p>Permita que <code>-s</code> ou <code>-t</code> consultem os objetos quebrados/corrompidos de um tipo desconhecido.</p>
 </dd>
 <dt class="hdlist1" id="git-cat-file---follow-symlinks"> <a class="anchor" href="#git-cat-file---follow-symlinks"></a>--follow-symlinks </dt>
 <dd>
@@ -367,6 +376,14 @@ alink: um link simbólico para /etc/passwd</pre>
 <div class="listingblock">
 <div class="content">
 <pre>&lt;objeto&gt; SP faltando LF</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If a name is specified on stdin that is filtered out via <code>--filter=</code>, then <code>cat-file</code> will ignore any custom format and print:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;object&gt; SP excluded LF</pre>
 </div>
 </div>
 <div class="paragraph">

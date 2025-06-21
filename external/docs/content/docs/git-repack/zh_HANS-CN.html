@@ -75,7 +75,11 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-repack---max-cruft-sizeltngt"> <a class="anchor" href="#git-repack---max-cruft-sizen"></a> <a class="anchor" href="#git-repack---max-cruft-sizeltngt"></a>--max-cruft-size=&lt;n&gt; </dt>
 <dd>
-<p>在创建新的数据包之前，会先将 Cruft 物件重新打包到大小为 <code>&lt;n&gt;</code> 字节的数据包中。只要有足够的小于 <code>&lt;n&gt;</code> 的 Cruft 包，重新打包将导致创建一个新的 Cruft 包，其中包含来自任何合并 Cruft 包的对象，以及任何新的无法访问的对象。大于 <code>&lt;n&gt;</code> 的压缩包不会被修改。当新的 Cruft 包大于 <code>&lt;n&gt;</code> 字节时，它将被拆分成多个包，所有包的大小保证最多为 <code>&lt;n&gt;</code> 字节。仅在使用 <code>--cruft -d</code> 时有用。</p>
+<p>Overrides <code>--max-pack-size</code> for cruft packs. Inherits the value of <code>--max-pack-size</code> (if any) by default. See the documentation for <code>--max-pack-size</code> for more details.</p>
+</dd>
+<dt class="hdlist1" id="git-repack---combine-cruft-below-sizeltngt"> <a class="anchor" href="#git-repack---combine-cruft-below-sizen"></a> <a class="anchor" href="#git-repack---combine-cruft-below-sizeltngt"></a>--combine-cruft-below-size=&lt;n&gt; </dt>
+<dd>
+<p>When generating cruft packs without pruning, only repack existing cruft packs whose size is strictly less than <code>&lt;n&gt;</code>, where <code>&lt;n&gt;</code> represents a number of bytes, which can optionally be suffixed with "k", "m", or "g". Cruft packs whose size is greater than or equal to <code>&lt;n&gt;</code> are left as-is and not repacked. Useful when you want to avoid repacking large cruft pack(s) in repositories that have many and/or large unreachable objects.</p>
 </dd>
 <dt class="hdlist1" id="git-repack---expire-toltgt"> <a class="anchor" href="#git-repack---expire-to"></a> <a class="anchor" href="#git-repack---expire-toltgt"></a>--expire-to=&lt;目录&gt; </dt>
 <dd>

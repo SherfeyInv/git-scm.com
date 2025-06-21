@@ -25,7 +25,7 @@ aliases:
 <pre class="content"><em>git fsck</em> [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]
 	 [--[no-]full] [--strict] [--verbose] [--lost-found]
 	 [--[no-]dangling] [--[no-]progress] [--connectivity-only]
-	 [--[no-]name-objects] [&lt;对象&gt;*]</pre>
+	 [--[no-]name-objects] [--[no-]references] [&lt;object&gt;&#8230;&#8203;]</pre>
 </div>
 </div>
 </div>
@@ -103,6 +103,10 @@ aliases:
 <dt class="hdlist1" id="git-fsck---no-progress"> <a class="anchor" href="#git-fsck---no-progress"></a>--[no-]progress </dt>
 <dd>
 <p>除非指定 --no-progress 或 --verbose，否则当标准错误流连接到终端时，默认情况下会报告进度状态。--progress 即使标准错误流没有指向终端，也会强制显示进度状态。</p>
+</dd>
+<dt class="hdlist1" id="git-fsck---no-references"> <a class="anchor" href="#git-fsck---no-references"></a>--[no-]references </dt>
+<dd>
+<p>Control whether to check the references database consistency via <em>git refs verify</em>. See <a href='{{< relurl "docs/git-refs/zh_HANS-CN" >}}'>git-refs[1]</a> for details. The default is to check the references database.</p>
 </dd>
 </dl>
 </div>

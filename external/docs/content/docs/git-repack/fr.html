@@ -75,7 +75,11 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-repack---max-cruft-sizeltngt"> <a class="anchor" href="#git-repack---max-cruft-sizen"></a> <a class="anchor" href="#git-repack---max-cruft-sizeltngt"></a>--max-cruft-size=&lt;n&gt; </dt>
 <dd>
-<p>Rempaqueter les objets en paquets d&#8217;au plus <em>&lt;n&gt;</em> octets avant de créer de nouveaux paquets. Tant qu&#8217;il y a assez de paquets déchets plus petits que <em>&lt;n&gt;</em>, le rempaquetage créera un nouveau paquet déchet contenant les objets de tous les paquets déchets combinés, en plus de tous les nouveaux objets inaccessibles. Les paquets déchets plus grands que <em>&lt;n&gt;</em> ne seront pas modifiés. Lorsqu&#8217;un nouveau paquet déchet est plus grand que les <em>&lt;n&gt;_octets, il est divisé en plusieurs paquets, qui sont tous garantis d&#8217;avoir une taille d&#8217;au plus _&lt;n&gt;</em> octets. Seulement utile avec <code>--cruft -d</code>.</p>
+<p>Overrides <code>--max-pack-size</code> for cruft packs. Inherits the value of <code>--max-pack-size</code> (if any) by default. See the documentation for <code>--max-pack-size</code> for more details.</p>
+</dd>
+<dt class="hdlist1" id="git-repack---combine-cruft-below-sizeltngt"> <a class="anchor" href="#git-repack---combine-cruft-below-sizen"></a> <a class="anchor" href="#git-repack---combine-cruft-below-sizeltngt"></a>--combine-cruft-below-size=&lt;n&gt; </dt>
+<dd>
+<p>When generating cruft packs without pruning, only repack existing cruft packs whose size is strictly less than <code>&lt;n&gt;</code>, where <code>&lt;n&gt;</code> represents a number of bytes, which can optionally be suffixed with "k", "m", or "g". Cruft packs whose size is greater than or equal to <code>&lt;n&gt;</code> are left as-is and not repacked. Useful when you want to avoid repacking large cruft pack(s) in repositories that have many and/or large unreachable objects.</p>
 </dd>
 <dt class="hdlist1" id="git-repack---expire-toltrpgt"> <a class="anchor" href="#git-repack---expire-torp"></a> <a class="anchor" href="#git-repack---expire-toltrpgt"></a>--expire-to=&lt;rép.&gt; </dt>
 <dd>

@@ -34,7 +34,7 @@ aliases:
 <h2 id="_descripción"><a class="anchor" href="#_descripción"></a>DESCRIPCIÓN</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Este comando crea un repositorio Git vacío. Básicamente un directorio <code>.git</code> con subdirectorios para <code>objects</code>, <code>reas/heads</code>, <code>reos/tags</code>, y ficheros de plantillas. Se creará una rama inicial sin confirmaciones (ver la opción <code>--initial-branch</code> abajo por su nombre).</p>
+<p>Este comando crea un repositorio Git vacío. Básicamente un directorio <code>.git</code> con subdirectorios para <code>objects</code>, <code>refs/heads</code>, <code>refs/tags</code>, y ficheros de plantillas. Se creará una rama inicial sin confirmaciones (ver la opción <code>--initial-branch</code> abajo por su nombre).</p>
 </div>
 <div class="paragraph">
 <p>Si la variable de ambiente <code>GIT_DIR</code> se configura, entonces especifica una ruta a usar en lugar de <code>./.git</code> para la base del repositorio.</p>
@@ -63,7 +63,7 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-init-code--object-formatltformatogtcode"> <a class="anchor" href="#git-init---object-formatformato"></a> <a class="anchor" href="#git-init-code--object-formatltformatogtcode"></a><code>--object-format=&lt;formato&gt;</code> </dt>
 <dd>
-<p>Especifica el <em>&lt;formato&gt;</em> de objeto (algoritmo hash )dado para el repositorio. Los valores válidos son <code>sha1</code> y -si esta habilitado- <code>sha256</code>. <code>sha1</code> es el predeterminado.</p>
+<p>Especifica el <em>&lt;formato&gt;</em> de objeto (algoritmo hash) dado para el repositorio. Los valores válidos son <code>sha1</code> y (si esta habilitado) <code>sha256</code>. <code>sha1</code> es el predeterminado.</p>
 <div class="paragraph">
 <p>Nota: En el presente, no hay interoperabilidad entre repositorios SHA-256 y SHA-1.</p>
 </div>
@@ -78,25 +78,18 @@ aliases:
 <dt class="hdlist1" id="git-init-code--ref-formatltformatogtcode"> <a class="anchor" href="#git-init---ref-formatformato"></a> <a class="anchor" href="#git-init-code--ref-formatltformatogtcode"></a><code>--ref-format=&lt;formato&gt;</code> </dt>
 <dd>
 <p>Especifica el <em>&lt;formato&gt;</em> de almacenamiento de referencia dado para el repositorio. Los valores válidos son:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>files</code> para ficheros sueltos con referencias empaquetadas. Esto es predeterminado.</p>
+</li>
+<li>
+<p><code>reftable</code> para el formato de tabla de referencias. Este formato es experimental y su contenido está sujeto a cambios.</p>
+</li>
+</ul>
+</div>
 </dd>
 </dl>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Warning</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Missing <code>es/ref-storage-format.adoc</code></p>
-</div>
-<div class="paragraph">
-<p>See original version for this content.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="dlist">
 <dl>

@@ -26,9 +26,10 @@ aliases:
 <em>git reflog list</em>
 <em>git reflog expire</em> [--expire=&lt;time&gt;] [--expire-unreachable=&lt;time&gt;]
 	[--rewrite] [--updateref] [--stale-fix]
-	[--dry-run | -n] [--verbose] [--all [--single-worktree] | &lt;refs&gt;&#8230;&#8203;]
+	[--dry-run | -n] [--verbose] [--all [--single-worktree] | &lt;ref&gt;&#8230;&#8203;]
 <em>git reflog delete</em> [--rewrite] [--updateref]
 	[--dry-run | -n] [--verbose] &lt;ref&gt;@{&lt;specifier&gt;}&#8230;&#8203;
+<em>git reflog drop</em> [--all [--single-worktree] | &lt;ref&gt;&#8230;&#8203;]
 <em>git reflog exists</em> &lt;ref&gt;</pre>
 </div>
 </div>
@@ -55,7 +56,10 @@ aliases:
 <p>O subcomando <em>expire</em> remove as entradas mais antigas do reflog. São removidas do reflog as entradas de tempo mais antigas que <code>expire</code> ou as entradas de tempo mais antigas que <code>expire-unreachable</code> que não podem ser acessadas a partir da ponta atual. Normalmente, ele não é usado diretamente pelos usuários finais; em vez disso, consulte <a href='{{< relurl "docs/git-gc/pt_BR" >}}'>git-gc[1]</a>.</p>
 </div>
 <div class="paragraph">
-<p>O subcomando "delete" exclui as entradas únicas do reflog. O seu argumento deve ser uma entrada <em>exata</em> (por exemplo, "<code>git reflog delete master@{2}</code>"). Este subcomando também não é utilizado diretamente pelos usuários finais.</p>
+<p>The "delete" subcommand deletes single entries from the reflog, but not the reflog itself. Its argument must be an <em>exact</em> entry (e.g. "<code>git reflog delete master@{2}</code>"). This subcommand is also typically not used directly by end users.</p>
+</div>
+<div class="paragraph">
+<p>The "drop" subcommand completely removes the reflog for the specified references. This is in contrast to "expire" and "delete", both of which can be used to delete reflog entries, but not the reflog itself.</p>
 </div>
 <div class="paragraph">
 <p>O subcomando <em>exists</em> verifica se uma referência tem um reflog. Ele encerra com uma condição igual a zero se o reflog existir e com uma condição diferente de zero se não existir.</p>
@@ -122,6 +126,21 @@ aliases:
 <h3 id="_opções_para_o_delete"><a class="anchor" href="#_opções_para_o_delete"></a>Opções para o <code>delete</code></h3>
 <div class="paragraph">
 <p>O <code>git reflog delete</code> aceita as opções <code>--updateref</code>, <code>--rewrite</code>, <code>-n</code>, <code>--dry-run</code>, e <code>--verbose</code>, com os mesmos significados de quando são utilizadas com <code>expirar</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_options_for_drop"><a class="anchor" href="#_options_for_drop"></a>Options for <code>drop</code></h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1" id="git-reflog---all-1"> <a class="anchor" href="#git-reflog---all-1"></a>--all </dt>
+<dd>
+<p>Drop the reflogs of all references from all worktrees.</p>
+</dd>
+<dt class="hdlist1" id="git-reflog---single-worktree-1"> <a class="anchor" href="#git-reflog---single-worktree-1"></a>--single-worktree </dt>
+<dd>
+<p>By default when <code>--all</code> is specified, reflogs from all working trees are dropped. This option limits the processing to reflogs from the current working tree only.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>

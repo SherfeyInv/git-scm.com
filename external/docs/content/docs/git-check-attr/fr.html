@@ -125,22 +125,15 @@ README caveat=unspecified</pre>
 <ul>
 <li>
 <p>Lister un seul attribut :</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr diff org/example/MyClass.java
 org/example/MyClass.java: diff: java</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Lister plusieurs attributs pour un fichier :</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr crlf diff myAttr -- org/example/MyClass.java
@@ -149,13 +142,9 @@ org/example/MyClass.java: diff: java
 org/example/MyClass.java: myAttr: set</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Liste de tous les attributs d&#8217;un fichier :</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr --all -- org/example/MyClass.java
@@ -163,13 +152,9 @@ org/example/MyClass.java: diff: java
 org/example/MyClass.java: myAttr: set</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Lister un attribut pour plusieurs fichiers :</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr myAttr -- org/example/MyClass.java org/example/NoMyAttr.java
@@ -177,18 +162,17 @@ org/example/MyClass.java: myAttr: set
 org/example/NoMyAttr.java: myAttr: unspecified</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Toutes les valeurs ne sont pas également univoques :</p>
-</li>
-</ul>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre>$ git check-attr caveat README
 README: caveat: unspecified</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>

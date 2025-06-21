@@ -75,7 +75,11 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-repack---max-cruft-sizeltngt"> <a class="anchor" href="#git-repack---max-cruft-sizen"></a> <a class="anchor" href="#git-repack---max-cruft-sizeltngt"></a>--max-cruft-size=&lt;n&gt; </dt>
 <dd>
-<p>Reembale os objetos em pacotes de tamanho igual a <code>&lt;n&gt;</code> bytes antes de criar novos pacotes. Desde que existam pacotes suficientes de cruft menores que <code>&lt;n&gt;</code>, o reempacotamento fará com que um novo pacote cruft seja criado contendo objetos de quaisquer pacotes cruft combinados, juntamente com quaisquer novos objetos inacessíveis. Os pacotes cruft maiores que <code>&lt;n&gt;</code> não serão modificados. Quando o novo pacote cruft for maior do que <code>&lt;n&gt;</code> bytes, ele será dividido em vários pacotes, sendo garantido que todos tenham no máximo <code>&lt;n&gt;</code> bytes de tamanho. Útil apenas com <code>--cruft -d</code>.</p>
+<p>Overrides <code>--max-pack-size</code> for cruft packs. Inherits the value of <code>--max-pack-size</code> (if any) by default. See the documentation for <code>--max-pack-size</code> for more details.</p>
+</dd>
+<dt class="hdlist1" id="git-repack---combine-cruft-below-sizeltngt"> <a class="anchor" href="#git-repack---combine-cruft-below-sizen"></a> <a class="anchor" href="#git-repack---combine-cruft-below-sizeltngt"></a>--combine-cruft-below-size=&lt;n&gt; </dt>
+<dd>
+<p>When generating cruft packs without pruning, only repack existing cruft packs whose size is strictly less than <code>&lt;n&gt;</code>, where <code>&lt;n&gt;</code> represents a number of bytes, which can optionally be suffixed with "k", "m", or "g". Cruft packs whose size is greater than or equal to <code>&lt;n&gt;</code> are left as-is and not repacked. Useful when you want to avoid repacking large cruft pack(s) in repositories that have many and/or large unreachable objects.</p>
 </dd>
 <dt class="hdlist1" id="git-repack---expire-toltdiretriogt"> <a class="anchor" href="#git-repack---expire-todiretrio"></a> <a class="anchor" href="#git-repack---expire-toltdiretriogt"></a>--expire-to=&lt;diretório&gt; </dt>
 <dd>

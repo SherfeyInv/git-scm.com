@@ -158,7 +158,7 @@ aliases:
 </dd>
 <dt class="hdlist1" id="git-clone-code--revisionltrevisingtcode"> <a class="anchor" href="#git-clone---revisionrevisin"></a> <a class="anchor" href="#git-clone-code--revisionltrevisingtcode"></a><code>--revision=&lt;revisión&gt;</code> </dt>
 <dd>
-<p>Create a new repository, and fetch the history leading to the given revision <em>&lt;rev&gt;</em> (and nothing else), without making any remote-tracking branch, and without making any local branch, and detach <code>HEAD</code> to <em>&lt;rev&gt;</em>. The argument can be a ref name (e.g. <code>refs/heads/main</code> or <code>refs/tags/v1.0</code>) that peels down to a commit, or a hexadecimal object name. This option is incompatible with <code>--branch</code> and <code>--mirror</code>.</p>
+<p>Crea un repositorio nuevo, y trae el historial hasta la revisión <em>&lt;rev&gt;</em> dada (y nada mas), sin hacer rama de rastreo remoto alguna, y sin hacer una rama local, y desprender <code>HEAD</code> de <em>&lt;rev&gt;</em>. El argumento puede ser un nombre de referencia (ej. <code>refs/heads/main</code> o <code>refs/tags/v1.0</code>) que llegue hasta una confirmación, o a un nombre de objeto hexadecimal. Esta opción es incompatible con <code>--branch</code> y <code>--mirror</code>.</p>
 </dd>
 <dt class="hdlist1" id="git-clone-code-ucodeemltpaquete-a-subirgtem"> <a class="anchor" href="#git-clone--upaquete-a-subir"></a> <a class="anchor" href="#git-clone-code-ucodeemltpaquete-a-subirgtem"></a><code>-u</code> <em>&lt;paquete-a-subir&gt;</em> </dt>
 <dt class="hdlist1" id="git-clone-code--upload-packcodeemltpaquete-a-subirgtem"> <a class="anchor" href="#git-clone---upload-packpaquete-a-subir"></a> <a class="anchor" href="#git-clone-code--upload-packcodeemltpaquete-a-subirgtem"></a><code>--upload-pack</code> <em>&lt;paquete-a-subir&gt;</em> </dt>
@@ -196,10 +196,8 @@ aliases:
 <dt class="hdlist1" id="git-clone-code--no-tagscode"> <a class="anchor" href="#git-clone---no-tags"></a> <a class="anchor" href="#git-clone-code--no-tagscode"></a><code>--[no-]tags</code> </dt>
 <dd>
 <p>Controla si se clonaran o no las etiquetas. Cuando no se da la opción <code>--no-tags</code>, la opción será permanente al establecer la configuración <code>remote.&lt;remoto&gt;.tagOpt=--no-tags</code>. Esto garantiza que futuros <code>git pull</code> y <code>git fetch</code> no seguirán ninguna etiqueta. Las capturas explícitas subsecuentes de etiquetas seguirán funcionando (ver <a href='{{< relurl "docs/git-fetch/es" >}}'>git-fetch[1]</a>).</p>
-<div class="literalblock">
-<div class="content">
-<pre>By default, tags are cloned and passing `--tags` is thus typically a no-op, unless it cancels out a previous `--no-tags`.</pre>
-</div>
+<div class="paragraph">
+<p>Predeterminadamente, la etiquetas son clonadas; por lo tanto, pasar <code>--tags</code> es típicamente una no-operación, a menos que cancele un <code>--no-tags</code> previo.</p>
 </div>
 <div class="paragraph">
 <p>Puede ser usada en conjunto con <code>--single-branch</code> para clonar y mantener una rama sin otras referencias mas que una sola rama clonada. Esto es útil, por ejemplo, para mantener clones mínimos de la rama predeterminada de algún repositorio para indexado de búsqueda.</p>
@@ -227,25 +225,18 @@ aliases:
 <dt class="hdlist1" id="git-clone-code--ref-formatltformato-de-referenciagtcode"> <a class="anchor" href="#git-clone---ref-formatformato-de-referencia"></a> <a class="anchor" href="#git-clone-code--ref-formatltformato-de-referenciagtcode"></a><code>--ref-format=&lt;formato-de-referencia&gt;</code> </dt>
 <dd>
 <p>Especifica el formato de almacenamiento de referencia dado para el repositorio. Los valores válidos son:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>files</code> para ficheros sueltos con referencias empaquetadas. Esto es predeterminado.</p>
+</li>
+<li>
+<p><code>reftable</code> para el formato de tabla de referencias. Este formato es experimental y su contenido está sujeto a cambios.</p>
+</li>
+</ul>
+</div>
 </dd>
 </dl>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Warning</div>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Missing <code>es/ref-storage-format.adoc</code></p>
-</div>
-<div class="paragraph">
-<p>See original version for this content.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 <div class="dlist">
 <dl>

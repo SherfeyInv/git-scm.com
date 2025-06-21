@@ -150,7 +150,7 @@ aliases:
 <dd>
 <p>Linus Torvalds originalmente diseñó Git para ser un sistema de ficheros de espacio de usuario, ej. la infraestructura para contener ficheros y directorios. Eso aseguró la eficiencia y velocidad de Git.</p>
 </dd>
-<dt class="hdlist1" id="gitglossary-aiddefgitarchiveaGitarchive"> <a class="anchor" href="#gitglossary-Gitarchive"></a> <a class="anchor" href="#gitglossary-aiddefgitarchiveaGitarchive"></a><a id="def_git_archive"></a>Git archive </dt>
+<dt class="hdlist1" id="gitglossary-aiddefgitarchiveaArchivoGit"> <a class="anchor" href="#gitglossary-ArchivoGit"></a> <a class="anchor" href="#gitglossary-aiddefgitarchiveaArchivoGit"></a><a id="def_git_archive"></a>Archivo Git </dt>
 <dd>
 <p>Sinónimo de <a href="#def_repository">repository</a> (para gente familiarizada con arch).</p>
 </dd>
@@ -236,7 +236,7 @@ aliases:
 <dd>
 <p>El <a href="#def_repository">repositorio</a> de subida predeterminado. La mayoría de los proyectos tienen por lo menos un proyecto principal a seguir; por default <code>origin</code> es usado para ése propósito. Nuevas actualizaciones al flujo principal serán extraídas en las <a href="#def_remote_tracking_branch">ramas de seguimiento-remoto</a> nombradas origin/nombre-de-la-rama-de-subida, las cuales puedes ver usando <code>git branch -r</code>.</p>
 </dd>
-<dt class="hdlist1" id="gitglossary-aiddefoverlayaoverlay"> <a class="anchor" href="#gitglossary-overlay"></a> <a class="anchor" href="#gitglossary-aiddefoverlayaoverlay"></a><a id="def_overlay"></a>overlay </dt>
+<dt class="hdlist1" id="gitglossary-aiddefoverlayasobreponer"> <a class="anchor" href="#gitglossary-sobreponer"></a> <a class="anchor" href="#gitglossary-aiddefoverlayasobreponer"></a><a id="def_overlay"></a>sobreponer </dt>
 <dd>
 <p>Sólo actualizar y añadir ficheros al directorio de trabajo, pero no eliminarlos, similar a como <em>cp -R</em> actualizaría el contenido en el directorio destino. Este es el modo predeterminado en un <a href="#def_checkout">checkout</a> cuando se hace checkout a ficheros de un <a href="#def_index">índice</a> o un <a href="#def_tree-ish">árbol-ismo</a>. En contraste, el modo sin-sobreponer también elimina ficheros rastreados no presentes en el origen, similar a <em>rsync --delete</em>.</p>
 </dd>
@@ -421,11 +421,11 @@ aliases:
 <dd>
 <p>Re-aplicar una serie de cambios de una <a href="#def_branch">rama</a> de una base diferente, y reasignar la <a href="#def_head">head</a> de esa rama al resultado.</p>
 </dd>
-<dt class="hdlist1" id="gitglossary-aiddefrefaref"> <a class="anchor" href="#gitglossary-ref"></a> <a class="anchor" href="#gitglossary-aiddefrefaref"></a><a id="def_ref"></a>ref </dt>
+<dt class="hdlist1" id="gitglossary-aiddefrefareferencia"> <a class="anchor" href="#gitglossary-referencia"></a> <a class="anchor" href="#gitglossary-aiddefrefareferencia"></a><a id="def_ref"></a>referencia </dt>
 <dd>
 <p>Un nombre que apunta a un <a href="#def_object_name">nombre de objeto</a> o a otra referencia (a éste último se le llama <a href="#def_symref">referencia simbólica</a>). Por conveniencia, una referencia puede a veces ser abreviada cuando se usa como argumento de un comando Git; ver <a href='{{< relurl "docs/gitrevisions/es" >}}'>gitrevisions[7]</a> para detalles. Las referencias se almacenan en el <a href="#def_repository">repositorio</a>.</p>
 <div class="paragraph">
-<p>The ref namespace is hierarchical. Ref names must either start with <code>refs/</code> or be located in the root of the hierarchy. For the latter, their name must follow these rules:</p>
+<p>El espacio de nombres de referencias es jerárquico. Los nombres de referencias deben comenzar con <code>refs/</code> o estar ubicados en la raíz de la jerarquía. Para éste último, su nombre debe cumplir las reglas siguientes:</p>
 </div>
 <div class="ulist">
 <ul>
