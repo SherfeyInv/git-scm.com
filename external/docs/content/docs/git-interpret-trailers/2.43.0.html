@@ -161,24 +161,24 @@ rules for RFC 822 headers. For example they do not follow the encoding rule.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---in-place"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---in-place"></a>--in-place </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---in-place"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---in-place"></a>--in-place </dt>
 <dd>
 <p>Edit the files in place.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---trim-empty"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---trim-empty"></a>--trim-empty </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---trim-empty"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---trim-empty"></a>--trim-empty </dt>
 <dd>
 <p>If the &lt;value&gt; part of any trailer contains only whitespace,
 the whole trailer will be removed from the output.
 This applies to existing trailers as well as new trailers.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---trailerltkeygtltvaluegt"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---trailerkeyvalue"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---trailerltkeygtltvaluegt"></a>--trailer &lt;key&gt;[(=|:)&lt;value&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---trailerltkeygtltvaluegt"><a id="Documentation/git-interpret-trailers.txt---trailerkeyvalue" class="anchor" href="#Documentation/git-interpret-trailers.txt---trailerkeyvalue"></a>--trailer &lt;key&gt;[(=|:)&lt;value&gt;] </dt>
 <dd>
 <p>Specify a (&lt;key&gt;, &lt;value&gt;) pair that should be applied as a
 trailer to the inputs. See the description of this
 command.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---whereltplacementgt"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---whereplacement"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---whereltplacementgt"></a>--where &lt;placement&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-where"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-where"></a>--no-where </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---whereltplacementgt"><a id="Documentation/git-interpret-trailers.txt---whereplacement" class="anchor" href="#Documentation/git-interpret-trailers.txt---whereplacement"></a>--where &lt;placement&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-where"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-where"></a>--no-where </dt>
 <dd>
 <p>Specify where all new trailers will be added.  A setting
 provided with <em>--where</em> overrides the <code>trailer.where</code> and any
@@ -189,8 +189,8 @@ effect of any previous use of <em>--where</em>, such that the relevant configura
 variables are no longer overridden. Possible placements are <code>after</code>,
 <code>before</code>, <code>end</code> or <code>start</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-existsltactiongt"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---if-existsaction"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---if-existsltactiongt"></a>--if-exists &lt;action&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-exists"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-exists"></a>--no-if-exists </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-existsltactiongt"><a id="Documentation/git-interpret-trailers.txt---if-existsaction" class="anchor" href="#Documentation/git-interpret-trailers.txt---if-existsaction"></a>--if-exists &lt;action&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-exists"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-exists"></a>--no-if-exists </dt>
 <dd>
 <p>Specify what action will be performed when there is already at
 least one trailer with the same &lt;key&gt; in the input.  A setting
@@ -202,8 +202,8 @@ effect of any previous use of '--if-exists, such that the relevant configuration
 variables are no longer overridden. Possible actions are <code>addIfDifferent</code>,
 <code>addIfDifferentNeighbor</code>, <code>add</code>, <code>replace</code> and <code>doNothing</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-missingltactiongt"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---if-missingaction"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---if-missingltactiongt"></a>--if-missing &lt;action&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-missing"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-missing"></a>--no-if-missing </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-missingltactiongt"><a id="Documentation/git-interpret-trailers.txt---if-missingaction" class="anchor" href="#Documentation/git-interpret-trailers.txt---if-missingaction"></a>--if-missing &lt;action&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-missing"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-missing"></a>--no-if-missing </dt>
 <dd>
 <p>Specify what action will be performed when there is no other
 trailer with the same &lt;key&gt; in the input.  A setting
@@ -215,22 +215,22 @@ clear the effect of any previous use of '--if-missing, such that the relevant
 configuration variables are no longer overridden. Possible actions are <code>doNothing</code>
 or <code>add</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-trailers"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-trailers"></a>--only-trailers </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-trailers"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-trailers"></a>--only-trailers </dt>
 <dd>
 <p>Output only the trailers, not any other parts of the input.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-input"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-input"></a>--only-input </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-input"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-input"></a>--only-input </dt>
 <dd>
 <p>Output only trailers that exist in the input; do not add any
 from the command-line or by applying <code>trailer.*</code> configuration
 variables.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---unfold"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---unfold"></a>--unfold </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---unfold"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---unfold"></a>--unfold </dt>
 <dd>
 <p>If a trailer has a value that runs over multiple lines (aka "folded"),
 reformat the value into a single line.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---parse"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---parse"></a>--parse </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---parse"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---parse"></a>--parse </dt>
 <dd>
 <p>A convenience alias for <code>--only-trailers --only-input
 --unfold</code>. This makes it easier to only see the trailers coming from the
@@ -238,7 +238,7 @@ input without influencing them with any command line options or
 configuration variables, while also making the output machine-friendly with
 --unfold.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-divider"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-divider"></a>--no-divider </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-divider"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-divider"></a>--no-divider </dt>
 <dd>
 <p>Do not treat <code>---</code> as the end of the commit message. Use this
 when you know your input contains just the commit message itself
@@ -253,7 +253,7 @@ when you know your input contains just the commit message itself
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerseparators"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerseparators"></a>trailer.separators </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerseparators"><a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerseparators"></a>trailer.separators </dt>
 <dd>
 <p>This option tells which characters are recognized as trailer
 separators. By default only <em>:</em> is recognized as a trailer
@@ -273,7 +273,7 @@ the default separator used, so by default trailers will appear like:
 the key and the value).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerwhere"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerwhere"></a>trailer.where </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerwhere"><a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerwhere"></a>trailer.where </dt>
 <dd>
 <p>This option tells where a new trailer will be added.</p>
 <div class="paragraph">
@@ -296,7 +296,7 @@ last trailer with the same &lt;key&gt;.</p>
 first trailer with the same &lt;key&gt;.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerifexists"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerifexists"></a>trailer.ifexists </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerifexists"><a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerifexists"></a>trailer.ifexists </dt>
 <dd>
 <p>This option makes it possible to choose what action will be
 performed when there is already at least one trailer with the
@@ -329,7 +329,7 @@ will be added.</p>
 added if there is already one with the same &lt;key&gt; in the input.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerifmissing"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerifmissing"></a>trailer.ifmissing </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerifmissing"><a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerifmissing"></a>trailer.ifmissing </dt>
 <dd>
 <p>This option makes it possible to choose what action will be
 performed when there is not yet any trailer with the same
@@ -345,7 +345,7 @@ performed when there is not yet any trailer with the same
 <p>With <code>doNothing</code>, nothing will be done.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtkey"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliaskey"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtkey"></a>trailer.&lt;keyAlias&gt;.key </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtkey"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliaskey" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliaskey"></a>trailer.&lt;keyAlias&gt;.key </dt>
 <dd>
 <p>Defines a &lt;keyAlias&gt; for the &lt;key&gt;. The &lt;keyAlias&gt; must be a
 prefix (case does not matter) of the &lt;key&gt;. For example, in <code>git
@@ -364,25 +364,25 @@ variable.</p>
 separator when adding the trailer.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtwhere"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliaswhere"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtwhere"></a>trailer.&lt;keyAlias&gt;.where </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtwhere"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliaswhere" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliaswhere"></a>trailer.&lt;keyAlias&gt;.where </dt>
 <dd>
 <p>This option takes the same values as the <em>trailer.where</em>
 configuration variable and it overrides what is specified by
 that option for trailers with the specified &lt;keyAlias&gt;.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtifexists"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliasifexists"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtifexists"></a>trailer.&lt;keyAlias&gt;.ifexists </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtifexists"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliasifexists" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliasifexists"></a>trailer.&lt;keyAlias&gt;.ifexists </dt>
 <dd>
 <p>This option takes the same values as the <em>trailer.ifexists</em>
 configuration variable and it overrides what is specified by
 that option for trailers with the specified &lt;keyAlias&gt;.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtifmissing"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliasifmissing"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtifmissing"></a>trailer.&lt;keyAlias&gt;.ifmissing </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtifmissing"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliasifmissing" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliasifmissing"></a>trailer.&lt;keyAlias&gt;.ifmissing </dt>
 <dd>
 <p>This option takes the same values as the <em>trailer.ifmissing</em>
 configuration variable and it overrides what is specified by
 that option for trailers with the specified &lt;keyAlias&gt;.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtcommand"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliascommand"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtcommand"></a>trailer.&lt;keyAlias&gt;.command </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtcommand"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliascommand" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliascommand"></a>trailer.&lt;keyAlias&gt;.command </dt>
 <dd>
 <p>Deprecated in favor of <em>trailer.&lt;keyAlias&gt;.cmd</em>.
 This option behaves in the same way as <em>trailer.&lt;keyAlias&gt;.cmd</em>, except
@@ -399,7 +399,7 @@ for the same &lt;keyAlias&gt;, <em>trailer.&lt;keyAlias&gt;.cmd</em> is used and
 <em>trailer.&lt;keyAlias&gt;.command</em> is ignored.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtcmd"> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliascmd"></a> <a class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtcmd"></a>trailer.&lt;keyAlias&gt;.cmd </dt>
+<dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtcmd"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliascmd" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliascmd"></a>trailer.&lt;keyAlias&gt;.cmd </dt>
 <dd>
 <p>This option can be used to specify a shell command that will be called
 once to automatically add a trailer with the specified &lt;keyAlias&gt;, and then

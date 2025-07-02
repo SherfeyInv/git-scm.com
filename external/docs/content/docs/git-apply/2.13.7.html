@@ -58,17 +58,17 @@ and does not require them to be in a Git repository.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-apply.txt-ltpatchgt82308203"> <a class="anchor" href="#Documentation/git-apply.txt-patch"></a> <a class="anchor" href="#Documentation/git-apply.txt-ltpatchgt82308203"></a>&lt;patch&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt-ltpatchgt82308203"><a id="Documentation/git-apply.txt-patch" class="anchor" href="#Documentation/git-apply.txt-patch"></a>&lt;patch&gt;&#8230;&#8203; </dt>
 <dd>
 <p>The files to read the patch from.  <em>-</em> can be used to read
 from the standard input.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---stat"> <a class="anchor" href="#Documentation/git-apply.txt---stat"></a>--stat </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---stat"><a class="anchor" href="#Documentation/git-apply.txt---stat"></a>--stat </dt>
 <dd>
 <p>Instead of applying the patch, output diffstat for the
 input.  Turns off "apply".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---numstat"> <a class="anchor" href="#Documentation/git-apply.txt---numstat"></a>--numstat </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---numstat"><a class="anchor" href="#Documentation/git-apply.txt---numstat"></a>--numstat </dt>
 <dd>
 <p>Similar to <code>--stat</code>, but shows the number of added and
 deleted lines in decimal notation and the pathname without
@@ -76,20 +76,20 @@ abbreviation, to make it more machine friendly.  For
 binary files, outputs two <code>-</code> instead of saying
 <code>0 0</code>.  Turns off "apply".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---summary"> <a class="anchor" href="#Documentation/git-apply.txt---summary"></a>--summary </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---summary"><a class="anchor" href="#Documentation/git-apply.txt---summary"></a>--summary </dt>
 <dd>
 <p>Instead of applying the patch, output a condensed
 summary of information obtained from git diff extended
 headers, such as creations, renames and mode changes.
 Turns off "apply".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---check"> <a class="anchor" href="#Documentation/git-apply.txt---check"></a>--check </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---check"><a class="anchor" href="#Documentation/git-apply.txt---check"></a>--check </dt>
 <dd>
 <p>Instead of applying the patch, see if the patch is
 applicable to the current working tree and/or the index
 file and detects errors.  Turns off "apply".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---index"> <a class="anchor" href="#Documentation/git-apply.txt---index"></a>--index </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---index"><a class="anchor" href="#Documentation/git-apply.txt---index"></a>--index </dt>
 <dd>
 <p>When <code>--check</code> is in effect, or when applying the patch
 (which is the default when none of the options that
@@ -99,14 +99,14 @@ the file to be patched in the working tree is not
 up-to-date, it is flagged as an error.  This flag also
 causes the index file to be updated.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---cached"> <a class="anchor" href="#Documentation/git-apply.txt---cached"></a>--cached </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---cached"><a class="anchor" href="#Documentation/git-apply.txt---cached"></a>--cached </dt>
 <dd>
 <p>Apply a patch without touching the working tree. Instead take the
 cached data, apply the patch, and store the result in the index
 without using the working tree. This implies <code>--index</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt--3"> <a class="anchor" href="#Documentation/git-apply.txt--3"></a>-3 </dt>
-<dt class="hdlist1" id="Documentation/git-apply.txt---3way"> <a class="anchor" href="#Documentation/git-apply.txt---3way"></a>--3way </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt--3"><a class="anchor" href="#Documentation/git-apply.txt--3"></a>-3 </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---3way"><a class="anchor" href="#Documentation/git-apply.txt---3way"></a>--3way </dt>
 <dd>
 <p>When the patch does not apply cleanly, fall back on 3-way merge if
 the patch records the identity of blobs it is supposed to apply to,
@@ -115,7 +115,7 @@ conflict markers in the files in the working tree for the user to
 resolve.  This option implies the <code>--index</code> option, and is incompatible
 with the <code>--reject</code> and the <code>--cached</code> options.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---build-fake-ancestorltfilegt"> <a class="anchor" href="#Documentation/git-apply.txt---build-fake-ancestorfile"></a> <a class="anchor" href="#Documentation/git-apply.txt---build-fake-ancestorltfilegt"></a>--build-fake-ancestor=&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---build-fake-ancestorltfilegt"><a id="Documentation/git-apply.txt---build-fake-ancestorfile" class="anchor" href="#Documentation/git-apply.txt---build-fake-ancestorfile"></a>--build-fake-ancestor=&lt;file&gt; </dt>
 <dd>
 <p>Newer <em>git diff</em> output has embedded <em>index information</em>
 for each blob to help identify the original version that
@@ -127,12 +127,12 @@ builds a temporary index containing those blobs.</p>
 the information is read from the current index instead.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt--R"> <a class="anchor" href="#Documentation/git-apply.txt--R"></a>-R </dt>
-<dt class="hdlist1" id="Documentation/git-apply.txt---reverse"> <a class="anchor" href="#Documentation/git-apply.txt---reverse"></a>--reverse </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt--R"><a class="anchor" href="#Documentation/git-apply.txt--R"></a>-R </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---reverse"><a class="anchor" href="#Documentation/git-apply.txt---reverse"></a>--reverse </dt>
 <dd>
 <p>Apply the patch in reverse.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---reject"> <a class="anchor" href="#Documentation/git-apply.txt---reject"></a>--reject </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---reject"><a class="anchor" href="#Documentation/git-apply.txt---reject"></a>--reject </dt>
 <dd>
 <p>For atomicity, <em>git apply</em> by default fails the whole patch and
 does not touch the working tree when some of the hunks
@@ -140,7 +140,7 @@ do not apply.  This option makes it apply
 the parts of the patch that are applicable, and leave the
 rejected hunks in corresponding *.rej files.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt--z"> <a class="anchor" href="#Documentation/git-apply.txt--z"></a>-z </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt--z"><a class="anchor" href="#Documentation/git-apply.txt--z"></a>-z </dt>
 <dd>
 <p>When <code>--numstat</code> has been given, do not munge pathnames,
 but use a NUL-terminated machine-readable format.</p>
@@ -150,19 +150,19 @@ explained for the configuration variable <code>core.quotePath</code> (see
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt--pltngt"> <a class="anchor" href="#Documentation/git-apply.txt--pn"></a> <a class="anchor" href="#Documentation/git-apply.txt--pltngt"></a>-p&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt--pltngt"><a id="Documentation/git-apply.txt--pn" class="anchor" href="#Documentation/git-apply.txt--pn"></a>-p&lt;n&gt; </dt>
 <dd>
 <p>Remove &lt;n&gt; leading slashes from traditional diff paths. The
 default is 1.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt--Cltngt"> <a class="anchor" href="#Documentation/git-apply.txt--Cn"></a> <a class="anchor" href="#Documentation/git-apply.txt--Cltngt"></a>-C&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt--Cltngt"><a id="Documentation/git-apply.txt--Cn" class="anchor" href="#Documentation/git-apply.txt--Cn"></a>-C&lt;n&gt; </dt>
 <dd>
 <p>Ensure at least &lt;n&gt; lines of surrounding context match before
 and after each change.  When fewer lines of surrounding
 context exist they all must match.  By default no context is
 ever ignored.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---unidiff-zero"> <a class="anchor" href="#Documentation/git-apply.txt---unidiff-zero"></a>--unidiff-zero </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---unidiff-zero"><a class="anchor" href="#Documentation/git-apply.txt---unidiff-zero"></a>--unidiff-zero </dt>
 <dd>
 <p>By default, <em>git apply</em> expects that the patch being
 applied is a unified diff with at least one line of context.
@@ -174,7 +174,7 @@ checks use <code>--unidiff-zero</code>.</p>
 discouraged.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---apply"> <a class="anchor" href="#Documentation/git-apply.txt---apply"></a>--apply </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---apply"><a class="anchor" href="#Documentation/git-apply.txt---apply"></a>--apply </dt>
 <dd>
 <p>If you use any of the options marked "Turns off
 <em>apply</em>" above, <em>git apply</em> reads and outputs the
@@ -182,7 +182,7 @@ requested information without actually applying the
 patch.  Give this flag after those flags to also apply
 the patch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---no-add"> <a class="anchor" href="#Documentation/git-apply.txt---no-add"></a>--no-add </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---no-add"><a class="anchor" href="#Documentation/git-apply.txt---no-add"></a>--no-add </dt>
 <dd>
 <p>When applying a patch, ignore additions made by the
 patch.  This can be used to extract the common part between
@@ -190,21 +190,21 @@ two files by first running <em>diff</em> on them and applying
 the result with this option, which would apply the
 deletion part but not the addition part.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---allow-binary-replacement"> <a class="anchor" href="#Documentation/git-apply.txt---allow-binary-replacement"></a>--allow-binary-replacement </dt>
-<dt class="hdlist1" id="Documentation/git-apply.txt---binary"> <a class="anchor" href="#Documentation/git-apply.txt---binary"></a>--binary </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---allow-binary-replacement"><a class="anchor" href="#Documentation/git-apply.txt---allow-binary-replacement"></a>--allow-binary-replacement </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---binary"><a class="anchor" href="#Documentation/git-apply.txt---binary"></a>--binary </dt>
 <dd>
 <p>Historically we did not allow binary patch applied
 without an explicit permission from the user, and this
 flag was the way to do so.  Currently we always allow binary
 patch application, so this is a no-op.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---excludeltpath-patterngt"> <a class="anchor" href="#Documentation/git-apply.txt---excludepath-pattern"></a> <a class="anchor" href="#Documentation/git-apply.txt---excludeltpath-patterngt"></a>--exclude=&lt;path-pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---excludeltpath-patterngt"><a id="Documentation/git-apply.txt---excludepath-pattern" class="anchor" href="#Documentation/git-apply.txt---excludepath-pattern"></a>--exclude=&lt;path-pattern&gt; </dt>
 <dd>
 <p>Don&#8217;t apply changes to files matching the given path pattern. This can
 be useful when importing patchsets, where you want to exclude certain
 files or directories.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---includeltpath-patterngt"> <a class="anchor" href="#Documentation/git-apply.txt---includepath-pattern"></a> <a class="anchor" href="#Documentation/git-apply.txt---includeltpath-patterngt"></a>--include=&lt;path-pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---includeltpath-patterngt"><a id="Documentation/git-apply.txt---includepath-pattern" class="anchor" href="#Documentation/git-apply.txt---includepath-pattern"></a>--include=&lt;path-pattern&gt; </dt>
 <dd>
 <p>Apply changes to files matching the given path pattern. This can
 be useful when importing patchsets, where you want to include certain
@@ -217,8 +217,8 @@ include/exclude pattern is used by default if there is no include pattern
 on the command line, and ignored if there is any include pattern.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---ignore-space-change"> <a class="anchor" href="#Documentation/git-apply.txt---ignore-space-change"></a>--ignore-space-change </dt>
-<dt class="hdlist1" id="Documentation/git-apply.txt---ignore-whitespace"> <a class="anchor" href="#Documentation/git-apply.txt---ignore-whitespace"></a>--ignore-whitespace </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---ignore-space-change"><a class="anchor" href="#Documentation/git-apply.txt---ignore-space-change"></a>--ignore-space-change </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---ignore-whitespace"><a class="anchor" href="#Documentation/git-apply.txt---ignore-whitespace"></a>--ignore-whitespace </dt>
 <dd>
 <p>When applying a patch, ignore changes in whitespace in context
 lines if necessary.
@@ -226,7 +226,7 @@ Context lines will preserve their whitespace, and they will not
 undergo whitespace fixing regardless of the value of the
 <code>--whitespace</code> option. New lines will still be fixed, though.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---whitespaceltactiongt"> <a class="anchor" href="#Documentation/git-apply.txt---whitespaceaction"></a> <a class="anchor" href="#Documentation/git-apply.txt---whitespaceltactiongt"></a>--whitespace=&lt;action&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---whitespaceltactiongt"><a id="Documentation/git-apply.txt---whitespaceaction" class="anchor" href="#Documentation/git-apply.txt---whitespaceaction"></a>--whitespace=&lt;action&gt; </dt>
 <dd>
 <p>When applying a patch, detect a new or modified line that has
 whitespace errors.  What are considered whitespace errors is
@@ -269,7 +269,7 @@ to apply the patch.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---inaccurate-eof"> <a class="anchor" href="#Documentation/git-apply.txt---inaccurate-eof"></a>--inaccurate-eof </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---inaccurate-eof"><a class="anchor" href="#Documentation/git-apply.txt---inaccurate-eof"></a>--inaccurate-eof </dt>
 <dd>
 <p>Under certain circumstances, some versions of <em>diff</em> do not correctly
 detect a missing new-line at the end of the file. As a result, patches
@@ -277,20 +277,20 @@ created by such <em>diff</em> programs do not record incomplete lines
 correctly. This option adds support for applying such patches by
 working around this bug.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt--v"> <a class="anchor" href="#Documentation/git-apply.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-apply.txt---verbose"> <a class="anchor" href="#Documentation/git-apply.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt--v"><a class="anchor" href="#Documentation/git-apply.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---verbose"><a class="anchor" href="#Documentation/git-apply.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>Report progress to stderr. By default, only a message about the
 current patch being applied will be printed. This option will cause
 additional information to be reported.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---recount"> <a class="anchor" href="#Documentation/git-apply.txt---recount"></a>--recount </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---recount"><a class="anchor" href="#Documentation/git-apply.txt---recount"></a>--recount </dt>
 <dd>
 <p>Do not trust the line counts in the hunk headers, but infer them
 by inspecting the patch (e.g. after editing the patch without
 adjusting the hunk headers appropriately).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---directoryltrootgt"> <a class="anchor" href="#Documentation/git-apply.txt---directoryroot"></a> <a class="anchor" href="#Documentation/git-apply.txt---directoryltrootgt"></a>--directory=&lt;root&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---directoryltrootgt"><a id="Documentation/git-apply.txt---directoryroot" class="anchor" href="#Documentation/git-apply.txt---directoryroot"></a>--directory=&lt;root&gt; </dt>
 <dd>
 <p>Prepend &lt;root&gt; to all filenames.  If a "-p" argument was also passed,
 it is applied before prepending the new root.</p>
@@ -300,7 +300,7 @@ can be applied to the file in the working tree <code>modules/git-gui/git-gui.sh<
 running <code>git apply --directory=modules/git-gui</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt---unsafe-paths"> <a class="anchor" href="#Documentation/git-apply.txt---unsafe-paths"></a>--unsafe-paths </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt---unsafe-paths"><a class="anchor" href="#Documentation/git-apply.txt---unsafe-paths"></a>--unsafe-paths </dt>
 <dd>
 <p>By default, a patch that affects outside the working area
 (either a Git controlled working tree, or the current working
@@ -321,13 +321,13 @@ has no effect when <code>--index</code> or <code>--cached</code> is in use.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-apply.txt-applyignoreWhitespace"> <a class="anchor" href="#Documentation/git-apply.txt-applyignoreWhitespace"></a>apply.ignoreWhitespace </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt-applyignoreWhitespace"><a class="anchor" href="#Documentation/git-apply.txt-applyignoreWhitespace"></a>apply.ignoreWhitespace </dt>
 <dd>
 <p>Set to <em>change</em> if you want changes in whitespace to be ignored by default.
 Set to one of: no, none, never, false if you want changes in
 whitespace to be significant.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-apply.txt-applywhitespace"> <a class="anchor" href="#Documentation/git-apply.txt-applywhitespace"></a>apply.whitespace </dt>
+<dt class="hdlist1" id="Documentation/git-apply.txt-applywhitespace"><a class="anchor" href="#Documentation/git-apply.txt-applywhitespace"></a>apply.whitespace </dt>
 <dd>
 <p>When no <code>--whitespace</code> flag is given from the command
 line, this configuration item is used as the default.</p>

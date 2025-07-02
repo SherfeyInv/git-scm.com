@@ -47,13 +47,13 @@ host language allowing their direct evaluation in that language.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltcountgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-count"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ltcountgt"></a>&lt;count&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltcountgt"><a id="Documentation/git-for-each-ref.txt-count" class="anchor" href="#Documentation/git-for-each-ref.txt-count"></a>&lt;count&gt; </dt>
 <dd>
 <p>By default the command shows all refs that match
 <code>&lt;pattern&gt;</code>.  This option makes it stop after showing
 that many refs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltkeygt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-key"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ltkeygt"></a>&lt;key&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltkeygt"><a id="Documentation/git-for-each-ref.txt-key" class="anchor" href="#Documentation/git-for-each-ref.txt-key"></a>&lt;key&gt; </dt>
 <dd>
 <p>A field name to sort on.  Prefix <code>-</code> to sort in
 descending order of the value.  When unspecified,
@@ -61,7 +61,7 @@ descending order of the value.  When unspecified,
 multiple times, in which case the last key becomes the primary
 key.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltformatgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-format"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ltformatgt"></a>&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltformatgt"><a id="Documentation/git-for-each-ref.txt-format" class="anchor" href="#Documentation/git-for-each-ref.txt-format"></a>&lt;format&gt; </dt>
 <dd>
 <p>A string that interpolates <code>%(fieldname)</code> from the
 object pointed at by a ref being shown.  If <code>fieldname</code>
@@ -74,38 +74,38 @@ are hex digits interpolates to character with hex code
 <code>xx</code>; for example <code>%00</code> interpolates to <code>\0</code> (NUL),
 <code>%09</code> to <code>\t</code> (TAB) and <code>%0a</code> to <code>\n</code> (LF).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltpatterngt82308203"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-pattern"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ltpatterngt82308203"></a>&lt;pattern&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltpatterngt82308203"><a id="Documentation/git-for-each-ref.txt-pattern" class="anchor" href="#Documentation/git-for-each-ref.txt-pattern"></a>&lt;pattern&gt;&#8230;&#8203; </dt>
 <dd>
 <p>If one or more patterns are given, only refs are shown that
 match against at least one pattern, either using fnmatch(3) or
 literally, in the latter case matching completely or from the
 beginning up to a slash.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---shell"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---shell"></a>--shell </dt>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---perl"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---perl"></a>--perl </dt>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---python"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---python"></a>--python </dt>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---tcl"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---tcl"></a>--tcl </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---shell"><a class="anchor" href="#Documentation/git-for-each-ref.txt---shell"></a>--shell </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---perl"><a class="anchor" href="#Documentation/git-for-each-ref.txt---perl"></a>--perl </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---python"><a class="anchor" href="#Documentation/git-for-each-ref.txt---python"></a>--python </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---tcl"><a class="anchor" href="#Documentation/git-for-each-ref.txt---tcl"></a>--tcl </dt>
 <dd>
 <p>If given, strings that substitute <code>%(fieldname)</code>
 placeholders are quoted as string literals suitable for
 the specified host language.  This is meant to produce
 a scriptlet that can directly be `eval`ed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---points-atltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---points-atobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---points-atltobjectgt"></a>--points-at &lt;object&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---points-atltobjectgt"><a id="Documentation/git-for-each-ref.txt---points-atobject" class="anchor" href="#Documentation/git-for-each-ref.txt---points-atobject"></a>--points-at &lt;object&gt; </dt>
 <dd>
 <p>Only list refs which points at the given object.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---mergedltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---mergedobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---mergedltobjectgt"></a>--merged [&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---mergedltobjectgt"><a id="Documentation/git-for-each-ref.txt---mergedobject" class="anchor" href="#Documentation/git-for-each-ref.txt---mergedobject"></a>--merged [&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs whose tips are reachable from the
 specified commit (HEAD if not specified).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---no-mergedltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---no-mergedobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---no-mergedltobjectgt"></a>--no-merged [&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---no-mergedltobjectgt"><a id="Documentation/git-for-each-ref.txt---no-mergedobject" class="anchor" href="#Documentation/git-for-each-ref.txt---no-mergedobject"></a>--no-merged [&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs whose tips are not reachable from the
 specified commit (HEAD if not specified).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---containsltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---containsobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---containsltobjectgt"></a>--contains [&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---containsltobjectgt"><a id="Documentation/git-for-each-ref.txt---containsobject" class="anchor" href="#Documentation/git-for-each-ref.txt---containsobject"></a>--contains [&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs which contain the specified commit (HEAD if not
 specified).</p>
@@ -127,7 +127,7 @@ keys.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-refname"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-refname"></a>refname </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-refname"><a class="anchor" href="#Documentation/git-for-each-ref.txt-refname"></a>refname </dt>
 <dd>
 <p>The name of the ref (the part after $GIT_DIR/).
 For a non-ambiguous short name of the ref append <code>:short</code>.
@@ -138,20 +138,20 @@ slash-separated path components from the front of the refname
 <code>&lt;N&gt;</code> must be a positive integer.  If a displayed ref has fewer
 components than <code>&lt;N&gt;</code>, the command aborts with an error.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objecttype"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-objecttype"></a>objecttype </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objecttype"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objecttype"></a>objecttype </dt>
 <dd>
 <p>The type of the object (<code>blob</code>, <code>tree</code>, <code>commit</code>, <code>tag</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectsize"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-objectsize"></a>objectsize </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectsize"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objectsize"></a>objectsize </dt>
 <dd>
 <p>The size of the object (the same as <em>git cat-file -s</em> reports).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectname"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-objectname"></a>objectname </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectname"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objectname"></a>objectname </dt>
 <dd>
 <p>The object name (aka SHA-1).
 For a non-ambiguous abbreviation of the object name append <code>:short</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-upstream"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-upstream"></a>upstream </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-upstream"><a class="anchor" href="#Documentation/git-for-each-ref.txt-upstream"></a>upstream </dt>
 <dd>
 <p>The name of a local ref which can be considered &#8220;upstream&#8221;
 from the displayed ref. Respects <code>:short</code> in the same way as
@@ -161,24 +161,24 @@ version: "&gt;" (ahead), "&lt;" (behind), "&lt;&gt;" (ahead and behind),
 or "=" (in sync).  Has no effect if the ref does not have
 tracking information associated with it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-push"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-push"></a>push </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-push"><a class="anchor" href="#Documentation/git-for-each-ref.txt-push"></a>push </dt>
 <dd>
 <p>The name of a local ref which represents the <code>@{push}</code> location
 for the displayed ref. Respects <code>:short</code>, <code>:track</code>, and
 <code>:trackshort</code> options as <code>upstream</code> does. Produces an empty
 string if no <code>@{push}</code> ref is configured.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-HEAD"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-HEAD"></a>HEAD </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-HEAD"><a class="anchor" href="#Documentation/git-for-each-ref.txt-HEAD"></a>HEAD </dt>
 <dd>
 <p><em>*</em> if HEAD matches current ref (the checked out branch), ' '
 otherwise.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-color"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-color"></a>color </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-color"><a class="anchor" href="#Documentation/git-for-each-ref.txt-color"></a>color </dt>
 <dd>
 <p>Change output color.  Followed by <code>:&lt;colorname&gt;</code>, where names
 are described in <code>color.branch.*</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-align"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-align"></a>align </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-align"><a class="anchor" href="#Documentation/git-for-each-ref.txt-align"></a>align </dt>
 <dd>
 <p>Left-, middle-, or right-align the content between
 %(align:&#8230;&#8203;) and %(end). The "align:" is followed by

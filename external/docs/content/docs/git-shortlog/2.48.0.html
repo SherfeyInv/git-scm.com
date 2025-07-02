@@ -51,23 +51,23 @@ reference to the current repository.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--n"> <a class="anchor" href="#Documentation/git-shortlog.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---numbered"> <a class="anchor" href="#Documentation/git-shortlog.txt---numbered"></a>--numbered </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--n"><a class="anchor" href="#Documentation/git-shortlog.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---numbered"><a class="anchor" href="#Documentation/git-shortlog.txt---numbered"></a>--numbered </dt>
 <dd>
 <p>Sort output according to the number of commits per author instead
 of author alphabetic order.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--s"> <a class="anchor" href="#Documentation/git-shortlog.txt--s"></a>-s </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---summary"> <a class="anchor" href="#Documentation/git-shortlog.txt---summary"></a>--summary </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--s"><a class="anchor" href="#Documentation/git-shortlog.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---summary"><a class="anchor" href="#Documentation/git-shortlog.txt---summary"></a>--summary </dt>
 <dd>
 <p>Suppress commit description and provide a commit count summary only.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--e"> <a class="anchor" href="#Documentation/git-shortlog.txt--e"></a>-e </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---email"> <a class="anchor" href="#Documentation/git-shortlog.txt---email"></a>--email </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--e"><a class="anchor" href="#Documentation/git-shortlog.txt--e"></a>-e </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---email"><a class="anchor" href="#Documentation/git-shortlog.txt---email"></a>--email </dt>
 <dd>
 <p>Show the email address of each author.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---formatltformatgt"> <a class="anchor" href="#Documentation/git-shortlog.txt---formatformat"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---formatltformatgt"></a>--format[=&lt;format&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---formatltformatgt"><a id="Documentation/git-shortlog.txt---formatformat" class="anchor" href="#Documentation/git-shortlog.txt---formatformat"></a>--format[=&lt;format&gt;] </dt>
 <dd>
 <p>Instead of the commit subject, use some other information to
 describe each commit.  <em>&lt;format&gt;</em> can be any string accepted
@@ -79,13 +79,13 @@ by the <code>--format</code> option of <em>git log</em>, such as <em>* [%h] %s</
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---dateltformatgt"> <a class="anchor" href="#Documentation/git-shortlog.txt---dateformat"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---dateltformatgt"></a>--date=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---dateltformatgt"><a id="Documentation/git-shortlog.txt---dateformat" class="anchor" href="#Documentation/git-shortlog.txt---dateformat"></a>--date=&lt;format&gt; </dt>
 <dd>
 <p>Show dates formatted according to the given date string. (See
 the <code>--date</code> option in the "Commit Formatting" section of
 <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>). Useful with <code>--group=format:&lt;format&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---grouplttypegt"> <a class="anchor" href="#Documentation/git-shortlog.txt---grouptype"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---grouplttypegt"></a>--group=&lt;type&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---grouplttypegt"><a id="Documentation/git-shortlog.txt---grouptype" class="anchor" href="#Documentation/git-shortlog.txt---grouptype"></a>--group=&lt;type&gt; </dt>
 <dd>
 <p>Group commits based on <code>&lt;type&gt;</code>. If no <code>--group</code> option is
 specified, the default is <code>author</code>. <code>&lt;type&gt;</code> is one of:</p>
@@ -134,12 +134,12 @@ example, <code>git shortlog --group=author --group=trailer:co-authored-by</code>
 counts both authors and co-authors.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--c"> <a class="anchor" href="#Documentation/git-shortlog.txt--c"></a>-c </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---committer"> <a class="anchor" href="#Documentation/git-shortlog.txt---committer"></a>--committer </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--c"><a class="anchor" href="#Documentation/git-shortlog.txt--c"></a>-c </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---committer"><a class="anchor" href="#Documentation/git-shortlog.txt---committer"></a>--committer </dt>
 <dd>
 <p>This is an alias for <code>--group=committer</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--wltwidthgtltindent1gtltindent2gt"> <a class="anchor" href="#Documentation/git-shortlog.txt--wwidthindent1indent2"></a> <a class="anchor" href="#Documentation/git-shortlog.txt--wltwidthgtltindent1gtltindent2gt"></a>-w[&lt;width&gt;[,&lt;indent1&gt;[,&lt;indent2&gt;]]] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--wltwidthgtltindent1gtltindent2gt"><a id="Documentation/git-shortlog.txt--wwidthindent1indent2" class="anchor" href="#Documentation/git-shortlog.txt--wwidthindent1indent2"></a>-w[&lt;width&gt;[,&lt;indent1&gt;[,&lt;indent2&gt;]]] </dt>
 <dd>
 <p>Linewrap the output by wrapping each line at <code>width</code>.  The first
 line of each entry is indented by <code>indent1</code> spaces, and the second
@@ -150,7 +150,7 @@ and subsequent lines are indented by <code>indent2</code> spaces. <code>width</c
 them.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt-ltrevision-rangegt"> <a class="anchor" href="#Documentation/git-shortlog.txt-revision-range"></a> <a class="anchor" href="#Documentation/git-shortlog.txt-ltrevision-rangegt"></a>&lt;revision-range&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt-ltrevision-rangegt"><a id="Documentation/git-shortlog.txt-revision-range" class="anchor" href="#Documentation/git-shortlog.txt-revision-range"></a>&lt;revision-range&gt; </dt>
 <dd>
 <p>Show only commits in the specified revision range.  When no
 &lt;revision-range&gt; is specified, it defaults to <code>HEAD</code> (i.e. the
@@ -160,7 +160,7 @@ specifies all the commits reachable from the current commit
 ways to spell &lt;revision-range&gt;, see the "Specifying Ranges"
 section of <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---ltpathgt82308203"> <a class="anchor" href="#Documentation/git-shortlog.txt---path"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---ltpathgt82308203"></a>[--] &lt;path&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---ltpathgt82308203"><a id="Documentation/git-shortlog.txt---path" class="anchor" href="#Documentation/git-shortlog.txt---path"></a>[--] &lt;path&gt;&#8230;&#8203; </dt>
 <dd>
 <p>Consider only commits that are enough to explain how the files
 that match the specified paths came to be.</p>
@@ -190,34 +190,34 @@ ordering and formatting options, such as <code>--reverse</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--ltnumbergt"> <a class="anchor" href="#Documentation/git-shortlog.txt--number"></a> <a class="anchor" href="#Documentation/git-shortlog.txt--ltnumbergt"></a>-&lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--nltnumbergt"> <a class="anchor" href="#Documentation/git-shortlog.txt--nnumber"></a> <a class="anchor" href="#Documentation/git-shortlog.txt--nltnumbergt"></a>-n &lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---max-countltnumbergt"> <a class="anchor" href="#Documentation/git-shortlog.txt---max-countnumber"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---max-countltnumbergt"></a>--max-count=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--ltnumbergt"><a id="Documentation/git-shortlog.txt--number" class="anchor" href="#Documentation/git-shortlog.txt--number"></a>-&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--nltnumbergt"><a id="Documentation/git-shortlog.txt--nnumber" class="anchor" href="#Documentation/git-shortlog.txt--nnumber"></a>-n &lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---max-countltnumbergt"><a id="Documentation/git-shortlog.txt---max-countnumber" class="anchor" href="#Documentation/git-shortlog.txt---max-countnumber"></a>--max-count=&lt;number&gt; </dt>
 <dd>
 <p>Limit the number of commits to output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---skipltnumbergt"> <a class="anchor" href="#Documentation/git-shortlog.txt---skipnumber"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---skipltnumbergt"></a>--skip=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---skipltnumbergt"><a id="Documentation/git-shortlog.txt---skipnumber" class="anchor" href="#Documentation/git-shortlog.txt---skipnumber"></a>--skip=&lt;number&gt; </dt>
 <dd>
 <p>Skip <em>number</em> commits before starting to show the commit output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---sinceltdategt"> <a class="anchor" href="#Documentation/git-shortlog.txt---sincedate"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---sinceltdategt"></a>--since=&lt;date&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---afterltdategt"> <a class="anchor" href="#Documentation/git-shortlog.txt---afterdate"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---afterltdategt"></a>--after=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---sinceltdategt"><a id="Documentation/git-shortlog.txt---sincedate" class="anchor" href="#Documentation/git-shortlog.txt---sincedate"></a>--since=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---afterltdategt"><a id="Documentation/git-shortlog.txt---afterdate" class="anchor" href="#Documentation/git-shortlog.txt---afterdate"></a>--after=&lt;date&gt; </dt>
 <dd>
 <p>Show commits more recent than a specific date.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---since-as-filterltdategt"> <a class="anchor" href="#Documentation/git-shortlog.txt---since-as-filterdate"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---since-as-filterltdategt"></a>--since-as-filter=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---since-as-filterltdategt"><a id="Documentation/git-shortlog.txt---since-as-filterdate" class="anchor" href="#Documentation/git-shortlog.txt---since-as-filterdate"></a>--since-as-filter=&lt;date&gt; </dt>
 <dd>
 <p>Show all commits more recent than a specific date. This visits
 all commits in the range, rather than stopping at the first commit which
 is older than a specific date.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---untilltdategt"> <a class="anchor" href="#Documentation/git-shortlog.txt---untildate"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---untilltdategt"></a>--until=&lt;date&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---beforeltdategt"> <a class="anchor" href="#Documentation/git-shortlog.txt---beforedate"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---beforeltdategt"></a>--before=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---untilltdategt"><a id="Documentation/git-shortlog.txt---untildate" class="anchor" href="#Documentation/git-shortlog.txt---untildate"></a>--until=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---beforeltdategt"><a id="Documentation/git-shortlog.txt---beforedate" class="anchor" href="#Documentation/git-shortlog.txt---beforedate"></a>--before=&lt;date&gt; </dt>
 <dd>
 <p>Show commits older than a specific date.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---authorltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---authorpattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---authorltpatterngt"></a>--author=&lt;pattern&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---committerltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---committerpattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---committerltpatterngt"></a>--committer=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---authorltpatterngt"><a id="Documentation/git-shortlog.txt---authorpattern" class="anchor" href="#Documentation/git-shortlog.txt---authorpattern"></a>--author=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---committerltpatterngt"><a id="Documentation/git-shortlog.txt---committerpattern" class="anchor" href="#Documentation/git-shortlog.txt---committerpattern"></a>--committer=&lt;pattern&gt; </dt>
 <dd>
 <p>Limit the commits output to ones with author/committer
 header lines that match the specified pattern (regular
@@ -225,7 +225,7 @@ expression).  With more than one <code>--author=&lt;pattern&gt;</code>,
 commits whose author matches any of the given patterns are
 chosen (similarly for multiple <code>--committer=&lt;pattern&gt;</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---grep-reflogltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---grep-reflogpattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---grep-reflogltpatterngt"></a>--grep-reflog=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---grep-reflogltpatterngt"><a id="Documentation/git-shortlog.txt---grep-reflogpattern" class="anchor" href="#Documentation/git-shortlog.txt---grep-reflogpattern"></a>--grep-reflog=&lt;pattern&gt; </dt>
 <dd>
 <p>Limit the commits output to ones with reflog entries that
 match the specified pattern (regular expression). With
@@ -233,7 +233,7 @@ more than one <code>--grep-reflog</code>, commits whose reflog message
 matches any of the given patterns are chosen.  It is an
 error to use this option unless <code>--walk-reflogs</code> is in use.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---grepltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---greppattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---grepltpatterngt"></a>--grep=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---grepltpatterngt"><a id="Documentation/git-shortlog.txt---greppattern" class="anchor" href="#Documentation/git-shortlog.txt---greppattern"></a>--grep=&lt;pattern&gt; </dt>
 <dd>
 <p>Limit the commits output to ones with a log message that
 matches the specified pattern (regular expression).  With
@@ -245,41 +245,41 @@ matches any of the given patterns are chosen (but see
 matched as if it were part of the log message.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---all-match"> <a class="anchor" href="#Documentation/git-shortlog.txt---all-match"></a>--all-match </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---all-match"><a class="anchor" href="#Documentation/git-shortlog.txt---all-match"></a>--all-match </dt>
 <dd>
 <p>Limit the commits output to ones that match all given <code>--grep</code>,
 instead of ones that match at least one.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---invert-grep"> <a class="anchor" href="#Documentation/git-shortlog.txt---invert-grep"></a>--invert-grep </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---invert-grep"><a class="anchor" href="#Documentation/git-shortlog.txt---invert-grep"></a>--invert-grep </dt>
 <dd>
 <p>Limit the commits output to ones with a log message that do not
 match the pattern specified with <code>--grep=&lt;pattern&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--i"> <a class="anchor" href="#Documentation/git-shortlog.txt--i"></a>-i </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---regexp-ignore-case"> <a class="anchor" href="#Documentation/git-shortlog.txt---regexp-ignore-case"></a>--regexp-ignore-case </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--i"><a class="anchor" href="#Documentation/git-shortlog.txt--i"></a>-i </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---regexp-ignore-case"><a class="anchor" href="#Documentation/git-shortlog.txt---regexp-ignore-case"></a>--regexp-ignore-case </dt>
 <dd>
 <p>Match the regular expression limiting patterns without regard to letter
 case.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---basic-regexp"> <a class="anchor" href="#Documentation/git-shortlog.txt---basic-regexp"></a>--basic-regexp </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---basic-regexp"><a class="anchor" href="#Documentation/git-shortlog.txt---basic-regexp"></a>--basic-regexp </dt>
 <dd>
 <p>Consider the limiting patterns to be basic regular expressions;
 this is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--E"> <a class="anchor" href="#Documentation/git-shortlog.txt--E"></a>-E </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---extended-regexp"> <a class="anchor" href="#Documentation/git-shortlog.txt---extended-regexp"></a>--extended-regexp </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--E"><a class="anchor" href="#Documentation/git-shortlog.txt--E"></a>-E </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---extended-regexp"><a class="anchor" href="#Documentation/git-shortlog.txt---extended-regexp"></a>--extended-regexp </dt>
 <dd>
 <p>Consider the limiting patterns to be extended regular expressions
 instead of the default basic regular expressions.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--F"> <a class="anchor" href="#Documentation/git-shortlog.txt--F"></a>-F </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---fixed-strings"> <a class="anchor" href="#Documentation/git-shortlog.txt---fixed-strings"></a>--fixed-strings </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--F"><a class="anchor" href="#Documentation/git-shortlog.txt--F"></a>-F </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---fixed-strings"><a class="anchor" href="#Documentation/git-shortlog.txt---fixed-strings"></a>--fixed-strings </dt>
 <dd>
 <p>Consider the limiting patterns to be fixed strings (don&#8217;t interpret
 pattern as a regular expression).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--P"> <a class="anchor" href="#Documentation/git-shortlog.txt--P"></a>-P </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---perl-regexp"> <a class="anchor" href="#Documentation/git-shortlog.txt---perl-regexp"></a>--perl-regexp </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--P"><a class="anchor" href="#Documentation/git-shortlog.txt--P"></a>-P </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---perl-regexp"><a class="anchor" href="#Documentation/git-shortlog.txt---perl-regexp"></a>--perl-regexp </dt>
 <dd>
 <p>Consider the limiting patterns to be Perl-compatible regular
 expressions.</p>
@@ -289,23 +289,23 @@ compile-time dependency. If Git wasn&#8217;t compiled with support for them
 providing this option will cause it to die.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---remove-empty"> <a class="anchor" href="#Documentation/git-shortlog.txt---remove-empty"></a>--remove-empty </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---remove-empty"><a class="anchor" href="#Documentation/git-shortlog.txt---remove-empty"></a>--remove-empty </dt>
 <dd>
 <p>Stop when a given path disappears from the tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---merges"> <a class="anchor" href="#Documentation/git-shortlog.txt---merges"></a>--merges </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---merges"><a class="anchor" href="#Documentation/git-shortlog.txt---merges"></a>--merges </dt>
 <dd>
 <p>Print only merge commits. This is exactly the same as <code>--min-parents=2</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---no-merges"> <a class="anchor" href="#Documentation/git-shortlog.txt---no-merges"></a>--no-merges </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---no-merges"><a class="anchor" href="#Documentation/git-shortlog.txt---no-merges"></a>--no-merges </dt>
 <dd>
 <p>Do not print commits with more than one parent. This is
 exactly the same as <code>--max-parents=1</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---min-parentsltnumbergt"> <a class="anchor" href="#Documentation/git-shortlog.txt---min-parentsnumber"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---min-parentsltnumbergt"></a>--min-parents=&lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---max-parentsltnumbergt"> <a class="anchor" href="#Documentation/git-shortlog.txt---max-parentsnumber"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---max-parentsltnumbergt"></a>--max-parents=&lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---no-min-parents"> <a class="anchor" href="#Documentation/git-shortlog.txt---no-min-parents"></a>--no-min-parents </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---no-max-parents"> <a class="anchor" href="#Documentation/git-shortlog.txt---no-max-parents"></a>--no-max-parents </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---min-parentsltnumbergt"><a id="Documentation/git-shortlog.txt---min-parentsnumber" class="anchor" href="#Documentation/git-shortlog.txt---min-parentsnumber"></a>--min-parents=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---max-parentsltnumbergt"><a id="Documentation/git-shortlog.txt---max-parentsnumber" class="anchor" href="#Documentation/git-shortlog.txt---max-parentsnumber"></a>--max-parents=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---no-min-parents"><a class="anchor" href="#Documentation/git-shortlog.txt---no-min-parents"></a>--no-min-parents </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---no-max-parents"><a class="anchor" href="#Documentation/git-shortlog.txt---no-max-parents"></a>--no-max-parents </dt>
 <dd>
 <p>Show only commits which have at least (or at most) that many parent
 commits. In particular, <code>--max-parents=1</code> is the same as <code>--no-merges</code>,
@@ -317,7 +317,7 @@ again.  Equivalent forms are <code>--min-parents=0</code> (any commit has 0 or m
 parents) and <code>--max-parents=-1</code> (negative numbers denote no upper limit).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---first-parent"> <a class="anchor" href="#Documentation/git-shortlog.txt---first-parent"></a>--first-parent </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---first-parent"><a class="anchor" href="#Documentation/git-shortlog.txt---first-parent"></a>--first-parent </dt>
 <dd>
 <p>When finding commits to include, follow only the first
 parent commit upon seeing a merge commit.  This option
@@ -328,7 +328,7 @@ from time to time, and this option allows you to ignore
 the individual commits brought in to your history by such
 a merge.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---exclude-first-parent-only"> <a class="anchor" href="#Documentation/git-shortlog.txt---exclude-first-parent-only"></a>--exclude-first-parent-only </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---exclude-first-parent-only"><a class="anchor" href="#Documentation/git-shortlog.txt---exclude-first-parent-only"></a>--exclude-first-parent-only </dt>
 <dd>
 <p>When finding commits to exclude (with a <em>^</em>), follow only
 the first parent commit upon seeing a merge commit.
@@ -336,7 +336,7 @@ This can be used to find the set of changes in a topic branch
 from the point where it diverged from the remote branch, given
 that arbitrary merges can be valid topic branch changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---not"> <a class="anchor" href="#Documentation/git-shortlog.txt---not"></a>--not </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---not"><a class="anchor" href="#Documentation/git-shortlog.txt---not"></a>--not </dt>
 <dd>
 <p>Reverses the meaning of the <em>^</em> prefix (or lack thereof)
 for all following revision specifiers, up to the next <code>--not</code>.
@@ -345,40 +345,40 @@ through stdin will not be affected by it. Conversely, when passed
 via standard input, the revisions passed on the command line will
 not be affected by it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---all"> <a class="anchor" href="#Documentation/git-shortlog.txt---all"></a>--all </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---all"><a class="anchor" href="#Documentation/git-shortlog.txt---all"></a>--all </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/</code>, along with <code>HEAD</code>, are
 listed on the command line as <em>&lt;commit&gt;</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---branchesltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---branchespattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---branchesltpatterngt"></a>--branches[=&lt;pattern&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---branchesltpatterngt"><a id="Documentation/git-shortlog.txt---branchespattern" class="anchor" href="#Documentation/git-shortlog.txt---branchespattern"></a>--branches[=&lt;pattern&gt;] </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/heads</code> are listed
 on the command line as <em>&lt;commit&gt;</em>. If <em>&lt;pattern&gt;</em> is given, limit
 branches to ones matching given shell glob. If pattern lacks <em>?</em>,
 <em>*</em>, or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---tagsltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---tagspattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---tagsltpatterngt"></a>--tags[=&lt;pattern&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---tagsltpatterngt"><a id="Documentation/git-shortlog.txt---tagspattern" class="anchor" href="#Documentation/git-shortlog.txt---tagspattern"></a>--tags[=&lt;pattern&gt;] </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/tags</code> are listed
 on the command line as <em>&lt;commit&gt;</em>. If <em>&lt;pattern&gt;</em> is given, limit
 tags to ones matching given shell glob. If pattern lacks <em>?</em>, <em>*</em>,
 or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---remotesltpatterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---remotespattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---remotesltpatterngt"></a>--remotes[=&lt;pattern&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---remotesltpatterngt"><a id="Documentation/git-shortlog.txt---remotespattern" class="anchor" href="#Documentation/git-shortlog.txt---remotespattern"></a>--remotes[=&lt;pattern&gt;] </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/remotes</code> are listed
 on the command line as <em>&lt;commit&gt;</em>. If <em>&lt;pattern&gt;</em> is given, limit
 remote-tracking branches to ones matching given shell glob.
 If pattern lacks <em>?</em>, <em>*</em>, or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---globltglob-patterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---globglob-pattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---globltglob-patterngt"></a>--glob=&lt;glob-pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---globltglob-patterngt"><a id="Documentation/git-shortlog.txt---globglob-pattern" class="anchor" href="#Documentation/git-shortlog.txt---globglob-pattern"></a>--glob=&lt;glob-pattern&gt; </dt>
 <dd>
 <p>Pretend as if all the refs matching shell glob <em>&lt;glob-pattern&gt;</em>
 are listed on the command line as <em>&lt;commit&gt;</em>. Leading <em>refs/</em>,
 is automatically prepended if missing. If pattern lacks <em>?</em>, <em>*</em>,
 or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---excludeltglob-patterngt"> <a class="anchor" href="#Documentation/git-shortlog.txt---excludeglob-pattern"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---excludeltglob-patterngt"></a>--exclude=&lt;glob-pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---excludeltglob-patterngt"><a id="Documentation/git-shortlog.txt---excludeglob-pattern" class="anchor" href="#Documentation/git-shortlog.txt---excludeglob-pattern"></a>--exclude=&lt;glob-pattern&gt; </dt>
 <dd>
 <p>Do not include refs matching <em>&lt;glob-pattern&gt;</em> that the next <code>--all</code>,
 <code>--branches</code>, <code>--tags</code>, <code>--remotes</code>, or <code>--glob</code> would otherwise
@@ -394,7 +394,7 @@ or <code>--all</code>. If a trailing <em>/*</em> is intended, it must be given
 explicitly.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---exclude-hiddenfetchreceiveuploadpack"> <a class="anchor" href="#Documentation/git-shortlog.txt---exclude-hiddenfetchreceiveuploadpack"></a>--exclude-hidden=[fetch|receive|uploadpack] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---exclude-hiddenfetchreceiveuploadpack"><a class="anchor" href="#Documentation/git-shortlog.txt---exclude-hiddenfetchreceiveuploadpack"></a>--exclude-hidden=[fetch|receive|uploadpack] </dt>
 <dd>
 <p>Do not include refs that would be hidden by <code>git-fetch</code>,
 <code>git-receive-pack</code> or <code>git-upload-pack</code> by consulting the appropriate
@@ -403,12 +403,12 @@ configuration along with <code>transfer.hideRefs</code> (see
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>). This option affects the next pseudo-ref option
 <code>--all</code> or <code>--glob</code> and is cleared after processing them.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---reflog"> <a class="anchor" href="#Documentation/git-shortlog.txt---reflog"></a>--reflog </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---reflog"><a class="anchor" href="#Documentation/git-shortlog.txt---reflog"></a>--reflog </dt>
 <dd>
 <p>Pretend as if all objects mentioned by reflogs are listed on the
 command line as <code>&lt;commit&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---alternate-refs"> <a class="anchor" href="#Documentation/git-shortlog.txt---alternate-refs"></a>--alternate-refs </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---alternate-refs"><a class="anchor" href="#Documentation/git-shortlog.txt---alternate-refs"></a>--alternate-refs </dt>
 <dd>
 <p>Pretend as if all objects mentioned as ref tips of alternate
 repositories were listed on the command line. An alternate
@@ -417,7 +417,7 @@ in <code>objects/info/alternates</code>.  The set of included objects may
 be modified by <code>core.alternateRefsCommand</code>, etc. See
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---single-worktree"> <a class="anchor" href="#Documentation/git-shortlog.txt---single-worktree"></a>--single-worktree </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---single-worktree"><a class="anchor" href="#Documentation/git-shortlog.txt---single-worktree"></a>--single-worktree </dt>
 <dd>
 <p>By default, all working trees will be examined by the
 following options when there are more than one (see
@@ -426,19 +426,19 @@ following options when there are more than one (see
 This option forces them to examine the current working tree
 only.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---ignore-missing"> <a class="anchor" href="#Documentation/git-shortlog.txt---ignore-missing"></a>--ignore-missing </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---ignore-missing"><a class="anchor" href="#Documentation/git-shortlog.txt---ignore-missing"></a>--ignore-missing </dt>
 <dd>
 <p>Upon seeing an invalid object name in the input, pretend as if
 the bad input was not given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---bisect"> <a class="anchor" href="#Documentation/git-shortlog.txt---bisect"></a>--bisect </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---bisect"><a class="anchor" href="#Documentation/git-shortlog.txt---bisect"></a>--bisect </dt>
 <dd>
 <p>Pretend as if the bad bisection ref <code>refs/bisect/bad</code>
 was listed and as if it was followed by <code>--not</code> and the good
 bisection refs <code>refs/bisect/good-*</code> on the command
 line.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---stdin"> <a class="anchor" href="#Documentation/git-shortlog.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---stdin"><a class="anchor" href="#Documentation/git-shortlog.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>In addition to getting arguments from the command line, read
 them from standard input as well. This accepts commits and
@@ -448,12 +448,12 @@ limit the result. Flags like <code>--not</code> which are read via standard inpu
 are only respected for arguments passed in the same way and will not
 influence any subsequent command line arguments.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---cherry-mark"> <a class="anchor" href="#Documentation/git-shortlog.txt---cherry-mark"></a>--cherry-mark </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---cherry-mark"><a class="anchor" href="#Documentation/git-shortlog.txt---cherry-mark"></a>--cherry-mark </dt>
 <dd>
 <p>Like <code>--cherry-pick</code> (see below) but mark equivalent commits
 with <code>=</code> rather than omitting them, and inequivalent ones with <code>+</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---cherry-pick"> <a class="anchor" href="#Documentation/git-shortlog.txt---cherry-pick"></a>--cherry-pick </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---cherry-pick"><a class="anchor" href="#Documentation/git-shortlog.txt---cherry-pick"></a>--cherry-pick </dt>
 <dd>
 <p>Omit any commit that introduces the same change as
 another commit on the &#8220;other side&#8221; when the set of
@@ -468,8 +468,8 @@ cherry-picked from branch A). With this option, such pairs of commits are
 excluded from the output.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---left-only"> <a class="anchor" href="#Documentation/git-shortlog.txt---left-only"></a>--left-only </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---right-only"> <a class="anchor" href="#Documentation/git-shortlog.txt---right-only"></a>--right-only </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---left-only"><a class="anchor" href="#Documentation/git-shortlog.txt---left-only"></a>--left-only </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---right-only"><a class="anchor" href="#Documentation/git-shortlog.txt---right-only"></a>--right-only </dt>
 <dd>
 <p>List only commits on the respective side of a symmetric difference,
 i.e. only those which would be marked <code>&lt;</code> resp. <code>&gt;</code> by
@@ -482,7 +482,7 @@ More precisely, <code>--cherry-pick --right-only --no-merges</code> gives the ex
 list.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---cherry"> <a class="anchor" href="#Documentation/git-shortlog.txt---cherry"></a>--cherry </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---cherry"><a class="anchor" href="#Documentation/git-shortlog.txt---cherry"></a>--cherry </dt>
 <dd>
 <p>A synonym for <code>--right-only --cherry-mark --no-merges</code>; useful to
 limit the output to the commits on our side and mark those that
@@ -490,8 +490,8 @@ have been applied to the other side of a forked history with
 <code>git log --cherry upstream...mybranch</code>, similar to
 <code>git cherry upstream mybranch</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt--g"> <a class="anchor" href="#Documentation/git-shortlog.txt--g"></a>-g </dt>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---walk-reflogs"> <a class="anchor" href="#Documentation/git-shortlog.txt---walk-reflogs"></a>--walk-reflogs </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt--g"><a class="anchor" href="#Documentation/git-shortlog.txt--g"></a>-g </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---walk-reflogs"><a class="anchor" href="#Documentation/git-shortlog.txt---walk-reflogs"></a>--walk-reflogs </dt>
 <dd>
 <p>Instead of walking the commit ancestry chain, walk
 reflog entries from the most recent one to older ones.
@@ -539,7 +539,7 @@ See also <a href='{{< relurl "docs/git-reflog" >}}'>git-reflog[1]</a>.</p>
 <p>Under <code>--pretty=reference</code>, this information will not be shown at all.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---merge"> <a class="anchor" href="#Documentation/git-shortlog.txt---merge"></a>--merge </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---merge"><a class="anchor" href="#Documentation/git-shortlog.txt---merge"></a>--merge </dt>
 <dd>
 <p>Show commits touching conflicted paths in the range <code>HEAD...&lt;other&gt;</code>,
 where <code>&lt;other&gt;</code> is the first existing pseudoref in <code>MERGE_HEAD</code>,
@@ -547,7 +547,7 @@ where <code>&lt;other&gt;</code> is the first existing pseudoref in <code>MERGE_
 when the index has unmerged entries. This option can be used to show
 relevant commits when resolving conflicts from a 3-way merge.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---boundary"> <a class="anchor" href="#Documentation/git-shortlog.txt---boundary"></a>--boundary </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---boundary"><a class="anchor" href="#Documentation/git-shortlog.txt---boundary"></a>--boundary </dt>
 <dd>
 <p>Output excluded boundary commits. Boundary commits are
 prefixed with <code>-</code>.</p>
@@ -568,11 +568,11 @@ is how to do it, as there are various strategies to simplify the history.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt-ltpathsgt"> <a class="anchor" href="#Documentation/git-shortlog.txt-paths"></a> <a class="anchor" href="#Documentation/git-shortlog.txt-ltpathsgt"></a>&lt;paths&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt-ltpathsgt"><a id="Documentation/git-shortlog.txt-paths" class="anchor" href="#Documentation/git-shortlog.txt-paths"></a>&lt;paths&gt; </dt>
 <dd>
 <p>Commits modifying the given &lt;paths&gt; are selected.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---simplify-by-decoration"> <a class="anchor" href="#Documentation/git-shortlog.txt---simplify-by-decoration"></a>--simplify-by-decoration </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---simplify-by-decoration"><a class="anchor" href="#Documentation/git-shortlog.txt---simplify-by-decoration"></a>--simplify-by-decoration </dt>
 <dd>
 <p>Commits that are referred by some branch or tag are selected.</p>
 </dd>
@@ -586,40 +586,40 @@ is how to do it, as there are various strategies to simplify the history.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt-Defaultmode"> <a class="anchor" href="#Documentation/git-shortlog.txt-Defaultmode"></a>Default mode </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt-Defaultmode"><a class="anchor" href="#Documentation/git-shortlog.txt-Defaultmode"></a>Default mode </dt>
 <dd>
 <p>Simplifies the history to the simplest history explaining the
 final state of the tree. Simplest because it prunes some side
 branches if the end result is the same (i.e. merging branches
 with the same content)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---show-pulls"> <a class="anchor" href="#Documentation/git-shortlog.txt---show-pulls"></a>--show-pulls </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---show-pulls"><a class="anchor" href="#Documentation/git-shortlog.txt---show-pulls"></a>--show-pulls </dt>
 <dd>
 <p>Include all commits from the default mode, but also any merge
 commits that are not TREESAME to the first parent but are
 TREESAME to a later parent. This mode is helpful for showing
 the merge commits that "first introduced" a change to a branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---full-history"> <a class="anchor" href="#Documentation/git-shortlog.txt---full-history"></a>--full-history </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---full-history"><a class="anchor" href="#Documentation/git-shortlog.txt---full-history"></a>--full-history </dt>
 <dd>
 <p>Same as the default mode, but does not prune some history.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---dense"> <a class="anchor" href="#Documentation/git-shortlog.txt---dense"></a>--dense </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---dense"><a class="anchor" href="#Documentation/git-shortlog.txt---dense"></a>--dense </dt>
 <dd>
 <p>Only the selected commits are shown, plus some to have a
 meaningful history.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---sparse"> <a class="anchor" href="#Documentation/git-shortlog.txt---sparse"></a>--sparse </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---sparse"><a class="anchor" href="#Documentation/git-shortlog.txt---sparse"></a>--sparse </dt>
 <dd>
 <p>All commits in the simplified history are shown.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---simplify-merges"> <a class="anchor" href="#Documentation/git-shortlog.txt---simplify-merges"></a>--simplify-merges </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---simplify-merges"><a class="anchor" href="#Documentation/git-shortlog.txt---simplify-merges"></a>--simplify-merges </dt>
 <dd>
 <p>Additional option to <code>--full-history</code> to remove some needless
 merges from the resulting history, as there are no selected
 commits contributing to this merge.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---ancestry-pathltcommitgt"> <a class="anchor" href="#Documentation/git-shortlog.txt---ancestry-pathcommit"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---ancestry-pathltcommitgt"></a>--ancestry-path[=&lt;commit&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---ancestry-pathltcommitgt"><a id="Documentation/git-shortlog.txt---ancestry-pathcommit" class="anchor" href="#Documentation/git-shortlog.txt---ancestry-pathcommit"></a>--ancestry-path[=&lt;commit&gt;] </dt>
 <dd>
 <p>When given a range of commits to display (e.g. <em>commit1..commit2</em>
 or <em>commit2 ^commit1</em>), and a commit &lt;commit&gt; in that range,
@@ -699,7 +699,7 @@ are available.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt-Defaultmode-1"> <a class="anchor" href="#Documentation/git-shortlog.txt-Defaultmode-1"></a>Default mode </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt-Defaultmode-1"><a class="anchor" href="#Documentation/git-shortlog.txt-Defaultmode-1"></a>Default mode </dt>
 <dd>
 <p>Commits are included if they are not TREESAME to any parent
 (though this can be changed, see <code>--sparse</code> below).  If the
@@ -729,7 +729,7 @@ not affect the commits selected in default mode, so we have shown the
 parent lines.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---full-historywithoutparentrewriting"> <a class="anchor" href="#Documentation/git-shortlog.txt---full-historywithoutparentrewriting"></a>--full-history without parent rewriting </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---full-historywithoutparentrewriting"><a class="anchor" href="#Documentation/git-shortlog.txt---full-historywithoutparentrewriting"></a>--full-history without parent rewriting </dt>
 <dd>
 <p>This mode differs from the default in one point: always follow
 all parents of a merge, even if it is TREESAME to one of them.
@@ -752,7 +752,7 @@ about the parent/child relationships between the commits, so we show
 them disconnected.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---full-historywithparentrewriting"> <a class="anchor" href="#Documentation/git-shortlog.txt---full-historywithparentrewriting"></a>--full-history with parent rewriting </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---full-historywithparentrewriting"><a class="anchor" href="#Documentation/git-shortlog.txt---full-historywithparentrewriting"></a>--full-history with parent rewriting </dt>
 <dd>
 <p>Ordinary commits are only included if they are !TREESAME
 (though this can be changed, see <code>--sparse</code> below).</p>
@@ -785,12 +785,12 @@ affects inclusion:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---dense-1"> <a class="anchor" href="#Documentation/git-shortlog.txt---dense-1"></a>--dense </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---dense-1"><a class="anchor" href="#Documentation/git-shortlog.txt---dense-1"></a>--dense </dt>
 <dd>
 <p>Commits that are walked are included if they are not TREESAME
 to any parent.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---sparse-1"> <a class="anchor" href="#Documentation/git-shortlog.txt---sparse-1"></a>--sparse </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---sparse-1"><a class="anchor" href="#Documentation/git-shortlog.txt---sparse-1"></a>--sparse </dt>
 <dd>
 <p>All commits that are walked are included.</p>
 <div class="paragraph">
@@ -799,7 +799,7 @@ one of the parents is TREESAME, we follow only that one, so the other
 sides of the merge are never walked.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---simplify-merges-1"> <a class="anchor" href="#Documentation/git-shortlog.txt---simplify-merges-1"></a>--simplify-merges </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---simplify-merges-1"><a class="anchor" href="#Documentation/git-shortlog.txt---simplify-merges-1"></a>--simplify-merges </dt>
 <dd>
 <p>First, build a history graph in the same way that
 <code>--full-history</code> with parent rewriting does (see above).</p>
@@ -874,7 +874,7 @@ parent and is TREESAME.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---ancestry-pathltcommitgt-1"> <a class="anchor" href="#Documentation/git-shortlog.txt---ancestry-pathcommit-1"></a> <a class="anchor" href="#Documentation/git-shortlog.txt---ancestry-pathltcommitgt-1"></a>--ancestry-path[=&lt;commit&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---ancestry-pathltcommitgt-1"><a id="Documentation/git-shortlog.txt---ancestry-pathcommit-1" class="anchor" href="#Documentation/git-shortlog.txt---ancestry-pathcommit-1"></a>--ancestry-path[=&lt;commit&gt;] </dt>
 <dd>
 <p>Limit the displayed commits to those which are an ancestor of
 &lt;commit&gt;, or which are a descendant of &lt;commit&gt;, or are &lt;commit&gt;
@@ -1055,7 +1055,7 @@ commit message.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-shortlog.txt---show-pulls-1"> <a class="anchor" href="#Documentation/git-shortlog.txt---show-pulls-1"></a>--show-pulls </dt>
+<dt class="hdlist1" id="Documentation/git-shortlog.txt---show-pulls-1"><a class="anchor" href="#Documentation/git-shortlog.txt---show-pulls-1"></a>--show-pulls </dt>
 <dd>
 <p>In addition to the commits shown in the default history, show
 each merge commit that is not TREESAME to its first parent but

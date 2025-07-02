@@ -88,24 +88,24 @@ specified, it defaults to "blob".</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt--tlttypegt"> <a class="anchor" href="#Documentation/git-hash-object.txt--ttype"></a> <a class="anchor" href="#Documentation/git-hash-object.txt--tlttypegt"></a>-t &lt;type&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt--tlttypegt"><a id="Documentation/git-hash-object.txt--ttype" class="anchor" href="#Documentation/git-hash-object.txt--ttype"></a>-t &lt;type&gt; </dt>
 <dd>
 <p>Specify the type (default: "blob").</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt--w"> <a class="anchor" href="#Documentation/git-hash-object.txt--w"></a>-w </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt--w"><a class="anchor" href="#Documentation/git-hash-object.txt--w"></a>-w </dt>
 <dd>
 <p>Actually write the object into the object database.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt---stdin"> <a class="anchor" href="#Documentation/git-hash-object.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt---stdin"><a class="anchor" href="#Documentation/git-hash-object.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>Read the object from standard input instead of from a file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt---stdin-paths"> <a class="anchor" href="#Documentation/git-hash-object.txt---stdin-paths"></a>--stdin-paths </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt---stdin-paths"><a class="anchor" href="#Documentation/git-hash-object.txt---stdin-paths"></a>--stdin-paths </dt>
 <dd>
 <p>Read file names from the standard input, one per line, instead
 of from the command-line.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt---path"> <a class="anchor" href="#Documentation/git-hash-object.txt---path"></a>--path </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt---path"><a class="anchor" href="#Documentation/git-hash-object.txt---path"></a>--path </dt>
 <dd>
 <p>Hash object as it were located at the given path. The location of
 file does not directly influence on the hash value, but path is
@@ -116,14 +116,14 @@ differ from the given file. This option is mainly useful for hashing
 temporary files located outside of the working directory or files
 read from stdin.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt---no-filters"> <a class="anchor" href="#Documentation/git-hash-object.txt---no-filters"></a>--no-filters </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt---no-filters"><a class="anchor" href="#Documentation/git-hash-object.txt---no-filters"></a>--no-filters </dt>
 <dd>
 <p>Hash the contents as is, ignoring any input filter that would
 have been chosen by the attributes mechanism, including the end-of-line
 conversion. If the file is read from standard input then this
 is always implied, unless the <code>--path</code> option is given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-hash-object.txt---literally"> <a class="anchor" href="#Documentation/git-hash-object.txt---literally"></a>--literally </dt>
+<dt class="hdlist1" id="Documentation/git-hash-object.txt---literally"><a class="anchor" href="#Documentation/git-hash-object.txt---literally"></a>--literally </dt>
 <dd>
 <p>Allow <code>--stdin</code> to hash any garbage into a loose object which might not
 otherwise pass standard object parsing or git-fsck checks. Useful for

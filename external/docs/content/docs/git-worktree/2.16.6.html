@@ -70,7 +70,7 @@ specifying <code>--reason</code> to explain why the working tree is locked.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-worktree.txt-addltpathgtltcommit-ishgt"> <a class="anchor" href="#Documentation/git-worktree.txt-addpathcommit-ish"></a> <a class="anchor" href="#Documentation/git-worktree.txt-addltpathgtltcommit-ishgt"></a>add &lt;path&gt; [&lt;commit-ish&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt-addltpathgtltcommit-ishgt"><a id="Documentation/git-worktree.txt-addpathcommit-ish" class="anchor" href="#Documentation/git-worktree.txt-addpathcommit-ish"></a>add &lt;path&gt; [&lt;commit-ish&gt;] </dt>
 <dd>
 <p>Create <code>&lt;path&gt;</code> and checkout <code>&lt;commit-ish&gt;</code> into it. The new working directory
 is linked to the current repository, sharing everything except working
@@ -93,14 +93,14 @@ then, as a convenience, a new branch based at HEAD is created automatically,
 as if <code>-b $(basename &lt;path&gt;)</code> was specified.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt-list"> <a class="anchor" href="#Documentation/git-worktree.txt-list"></a>list </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt-list"><a class="anchor" href="#Documentation/git-worktree.txt-list"></a>list </dt>
 <dd>
 <p>List details of each worktree.  The main worktree is listed first, followed by
 each of the linked worktrees.  The output details include if the worktree is
 bare, the revision currently checked out, and the branch currently checked out
 (or <em>detached HEAD</em> if none).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt-lock"> <a class="anchor" href="#Documentation/git-worktree.txt-lock"></a>lock </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt-lock"><a class="anchor" href="#Documentation/git-worktree.txt-lock"></a>lock </dt>
 <dd>
 <p>If a working tree is on a portable device or network share which
 is not always mounted, lock it to prevent its administrative
@@ -108,11 +108,11 @@ files from being pruned automatically. This also prevents it from
 being moved or deleted. Optionally, specify a reason for the lock
 with <code>--reason</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt-prune"> <a class="anchor" href="#Documentation/git-worktree.txt-prune"></a>prune </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt-prune"><a class="anchor" href="#Documentation/git-worktree.txt-prune"></a>prune </dt>
 <dd>
 <p>Prune working tree information in $GIT_DIR/worktrees.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt-unlock"> <a class="anchor" href="#Documentation/git-worktree.txt-unlock"></a>unlock </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt-unlock"><a class="anchor" href="#Documentation/git-worktree.txt-unlock"></a>unlock </dt>
 <dd>
 <p>Unlock a working tree, allowing it to be pruned, moved or deleted.</p>
 </dd>
@@ -125,15 +125,15 @@ with <code>--reason</code>.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-worktree.txt--f"> <a class="anchor" href="#Documentation/git-worktree.txt--f"></a>-f </dt>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---force"> <a class="anchor" href="#Documentation/git-worktree.txt---force"></a>--force </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt--f"><a class="anchor" href="#Documentation/git-worktree.txt--f"></a>-f </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---force"><a class="anchor" href="#Documentation/git-worktree.txt---force"></a>--force </dt>
 <dd>
 <p>By default, <code>add</code> refuses to create a new working tree when <code>&lt;commit-ish&gt;</code> is a branch name and
 is already checked out by another working tree. This option overrides
 that safeguard.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt--bltnew-branchgt"> <a class="anchor" href="#Documentation/git-worktree.txt--bnew-branch"></a> <a class="anchor" href="#Documentation/git-worktree.txt--bltnew-branchgt"></a>-b &lt;new-branch&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-worktree.txt--Bltnew-branchgt"> <a class="anchor" href="#Documentation/git-worktree.txt--Bnew-branch"></a> <a class="anchor" href="#Documentation/git-worktree.txt--Bltnew-branchgt"></a>-B &lt;new-branch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt--bltnew-branchgt"><a id="Documentation/git-worktree.txt--bnew-branch" class="anchor" href="#Documentation/git-worktree.txt--bnew-branch"></a>-b &lt;new-branch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt--Bltnew-branchgt"><a id="Documentation/git-worktree.txt--Bnew-branch" class="anchor" href="#Documentation/git-worktree.txt--Bnew-branch"></a>-B &lt;new-branch&gt; </dt>
 <dd>
 <p>With <code>add</code>, create a new branch named <code>&lt;new-branch&gt;</code> starting at
 <code>&lt;commit-ish&gt;</code>, and check out <code>&lt;new-branch&gt;</code> into the new working tree.
@@ -142,19 +142,19 @@ By default, <code>-b</code> refuses to create a new branch if it already
 exists. <code>-B</code> overrides this safeguard, resetting <code>&lt;new-branch&gt;</code> to
 <code>&lt;commit-ish&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---detach"> <a class="anchor" href="#Documentation/git-worktree.txt---detach"></a>--detach </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---detach"><a class="anchor" href="#Documentation/git-worktree.txt---detach"></a>--detach </dt>
 <dd>
 <p>With <code>add</code>, detach HEAD in the new working tree. See "DETACHED HEAD"
 in <a href='{{< relurl "docs/git-checkout" >}}'>git-checkout[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---no-checkout"> <a class="anchor" href="#Documentation/git-worktree.txt---no-checkout"></a>--[no-]checkout </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---no-checkout"><a class="anchor" href="#Documentation/git-worktree.txt---no-checkout"></a>--[no-]checkout </dt>
 <dd>
 <p>By default, <code>add</code> checks out <code>&lt;commit-ish&gt;</code>, however, <code>--no-checkout</code> can
 be used to suppress checkout in order to make customizations,
 such as configuring sparse-checkout. See "Sparse checkout"
 in <a href='{{< relurl "docs/git-read-tree" >}}'>git-read-tree[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---no-guess-remote"> <a class="anchor" href="#Documentation/git-worktree.txt---no-guess-remote"></a>--[no-]guess-remote </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---no-guess-remote"><a class="anchor" href="#Documentation/git-worktree.txt---no-guess-remote"></a>--[no-]guess-remote </dt>
 <dd>
 <p>With <code>worktree add &lt;path&gt;</code>, without <code>&lt;commit-ish&gt;</code>, instead
 of creating a new branch from HEAD, if there exists a tracking
@@ -166,45 +166,45 @@ the remote-tracking branch as "upstream" from the new branch.</p>
 <code>worktree.guessRemote</code> config option.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---no-track"> <a class="anchor" href="#Documentation/git-worktree.txt---no-track"></a>--[no-]track </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---no-track"><a class="anchor" href="#Documentation/git-worktree.txt---no-track"></a>--[no-]track </dt>
 <dd>
 <p>When creating a new branch, if <code>&lt;commit-ish&gt;</code> is a branch,
 mark it as "upstream" from the new branch.  This is the
 default if <code>&lt;commit-ish&gt;</code> is a remote-tracking branch.  See
 "--track" in <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---lock"> <a class="anchor" href="#Documentation/git-worktree.txt---lock"></a>--lock </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---lock"><a class="anchor" href="#Documentation/git-worktree.txt---lock"></a>--lock </dt>
 <dd>
 <p>Keep the working tree locked after creation. This is the
 equivalent of <code>git worktree lock</code> after <code>git worktree add</code>,
 but without race condition.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt--n"> <a class="anchor" href="#Documentation/git-worktree.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---dry-run"> <a class="anchor" href="#Documentation/git-worktree.txt---dry-run"></a>--dry-run </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt--n"><a class="anchor" href="#Documentation/git-worktree.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---dry-run"><a class="anchor" href="#Documentation/git-worktree.txt---dry-run"></a>--dry-run </dt>
 <dd>
 <p>With <code>prune</code>, do not remove anything; just report what it would
 remove.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---porcelain"> <a class="anchor" href="#Documentation/git-worktree.txt---porcelain"></a>--porcelain </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---porcelain"><a class="anchor" href="#Documentation/git-worktree.txt---porcelain"></a>--porcelain </dt>
 <dd>
 <p>With <code>list</code>, output in an easy-to-parse format for scripts.
 This format will remain stable across Git versions and regardless of user
 configuration.  See below for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt--v"> <a class="anchor" href="#Documentation/git-worktree.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---verbose"> <a class="anchor" href="#Documentation/git-worktree.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt--v"><a class="anchor" href="#Documentation/git-worktree.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---verbose"><a class="anchor" href="#Documentation/git-worktree.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>With <code>prune</code>, report all removals.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---expirelttimegt"> <a class="anchor" href="#Documentation/git-worktree.txt---expiretime"></a> <a class="anchor" href="#Documentation/git-worktree.txt---expirelttimegt"></a>--expire &lt;time&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---expirelttimegt"><a id="Documentation/git-worktree.txt---expiretime" class="anchor" href="#Documentation/git-worktree.txt---expiretime"></a>--expire &lt;time&gt; </dt>
 <dd>
 <p>With <code>prune</code>, only expire unused working trees older than &lt;time&gt;.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt---reasonltstringgt"> <a class="anchor" href="#Documentation/git-worktree.txt---reasonstring"></a> <a class="anchor" href="#Documentation/git-worktree.txt---reasonltstringgt"></a>--reason &lt;string&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt---reasonltstringgt"><a id="Documentation/git-worktree.txt---reasonstring" class="anchor" href="#Documentation/git-worktree.txt---reasonstring"></a>--reason &lt;string&gt; </dt>
 <dd>
 <p>With <code>lock</code>, an explanation why the working tree is locked.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-worktree.txt-ltworktreegt"> <a class="anchor" href="#Documentation/git-worktree.txt-worktree"></a> <a class="anchor" href="#Documentation/git-worktree.txt-ltworktreegt"></a>&lt;worktree&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-worktree.txt-ltworktreegt"><a id="Documentation/git-worktree.txt-worktree" class="anchor" href="#Documentation/git-worktree.txt-worktree"></a>&lt;worktree&gt; </dt>
 <dd>
 <p>Working trees can be identified by path, either relative or
 absolute.</p>

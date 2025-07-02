@@ -44,7 +44,7 @@ when the program dies on a signal.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-holdlockfileforupdate"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-holdlockfileforupdate"></a>hold_lock_file_for_update </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-holdlockfileforupdate"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-holdlockfileforupdate"></a>hold_lock_file_for_update </dt>
 <dd>
 <p>Take a pointer to <code>struct lock_file</code>, the filename of
 the final destination (e.g. <code>$GIT_DIR/index</code>) and a flag
@@ -54,7 +54,7 @@ to the file.  If <code>die_on_error</code> flag is true, it dies if
 a lock is already taken for the file; otherwise it
 returns a negative integer to the caller on failure.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-commitlockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-commitlockfile"></a>commit_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-commitlockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-commitlockfile"></a>commit_lock_file </dt>
 <dd>
 <p>Take a pointer to the <code>struct lock_file</code> initialized
 with an earlier call to <code>hold_lock_file_for_update()</code>,
@@ -62,13 +62,13 @@ close the file descriptor and rename the lockfile to its
 final destination.  Returns 0 upon success, a negative
 value on failure to close(2) or rename(2).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-rollbacklockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-rollbacklockfile"></a>rollback_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-rollbacklockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-rollbacklockfile"></a>rollback_lock_file </dt>
 <dd>
 <p>Take a pointer to the <code>struct lock_file</code> initialized
 with an earlier call to <code>hold_lock_file_for_update()</code>,
 close the file descriptor and remove the lockfile.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-closelockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-closelockfile"></a>close_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-closelockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-closelockfile"></a>close_lock_file </dt>
 <dd>
 <p>Take a pointer to the <code>struct lock_file</code> initialized
 with an earlier call to <code>hold_lock_file_for_update()</code>,

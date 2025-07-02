@@ -189,7 +189,7 @@ and which to ignore.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleversion"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleversion"></a>bundle.version </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleversion"><a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleversion"></a>bundle.version </dt>
 <dd>
 <p>(Required) This value provides a version number for the bundle
 list. If a future Git change enables a feature that needs the Git
@@ -197,7 +197,7 @@ client to react to a new key in the bundle list file, then this version
 will increment. The only current version number is 1, and if any other
 value is specified then Git will fail to use this file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundlemode"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundlemode"></a>bundle.mode </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundlemode"><a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundlemode"></a>bundle.mode </dt>
 <dd>
 <p>(Required) This value has one of two values: <code>all</code> and <code>any</code>. When <code>all</code>
 is specified, then the client should expect to need all of the listed
@@ -207,7 +207,7 @@ that match their repository&#8217;s requirements will suffice. Typically, the
 <code>any</code> option is used to list a number of different bundle servers
 located in different geographies.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleheuristic"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleheuristic"></a>bundle.heuristic </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleheuristic"><a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleheuristic"></a>bundle.heuristic </dt>
 <dd>
 <p>If this string-valued key exists, then the bundle list is designed to
 work well with incremental <code>git fetch</code> commands. The heuristic signals
@@ -224,7 +224,7 @@ and <code>-</code> characters.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgturi"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleiduri"></a> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleltidgturi"></a>bundle.&lt;id&gt;.uri </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgturi"><a id="Documentation/technical/bundle-uri.txt-bundleiduri" class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleiduri"></a>bundle.&lt;id&gt;.uri </dt>
 <dd>
 <p>(Required) This string value is the URI for downloading bundle <code>&lt;id&gt;</code>.
 If the URI begins with a protocol (<code>http://</code> or <code>https://</code>) then the URI
@@ -235,20 +235,20 @@ of relative paths is intended to make it easier to distribute a set of
 bundles across a large number of servers or CDNs with different domain
 names.)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgtfilter"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleidfilter"></a> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleltidgtfilter"></a>bundle.&lt;id&gt;.filter </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgtfilter"><a id="Documentation/technical/bundle-uri.txt-bundleidfilter" class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleidfilter"></a>bundle.&lt;id&gt;.filter </dt>
 <dd>
 <p>This string value represents an object filter that should also appear in
 the header of this bundle. The server uses this value to differentiate
 different kinds of bundles from which the client can choose those that
 match their object filters.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgtcreationToken"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleidcreationToken"></a> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleltidgtcreationToken"></a>bundle.&lt;id&gt;.creationToken </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgtcreationToken"><a id="Documentation/technical/bundle-uri.txt-bundleidcreationToken" class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleidcreationToken"></a>bundle.&lt;id&gt;.creationToken </dt>
 <dd>
 <p>This value is a nonnegative 64-bit integer used for sorting the bundles
 list. This is used to download a subset of bundles during a fetch when
 <code>bundle.heuristic=creationToken</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgtlocation"> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleidlocation"></a> <a class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleltidgtlocation"></a>bundle.&lt;id&gt;.location </dt>
+<dt class="hdlist1" id="Documentation/technical/bundle-uri.txt-bundleltidgtlocation"><a id="Documentation/technical/bundle-uri.txt-bundleidlocation" class="anchor" href="#Documentation/technical/bundle-uri.txt-bundleidlocation"></a>bundle.&lt;id&gt;.location </dt>
 <dd>
 <p>This string value advertises a real-world location from where the bundle
 URI is served. This can be used to present the user with an option for

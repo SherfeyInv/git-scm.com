@@ -50,13 +50,13 @@ each commit introduces are shown.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---follow"> <a class="anchor" href="#Documentation/git-log.txt---follow"></a>--follow </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---follow"><a class="anchor" href="#Documentation/git-log.txt---follow"></a>--follow </dt>
 <dd>
 <p>Continue listing the history of a file beyond renames
 (works only for a single file).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-decorate"> <a class="anchor" href="#Documentation/git-log.txt---no-decorate"></a>--no-decorate </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---decorateshortfullautono"> <a class="anchor" href="#Documentation/git-log.txt---decorateshortfullautono"></a>--decorate[=short|full|auto|no] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-decorate"><a class="anchor" href="#Documentation/git-log.txt---no-decorate"></a>--no-decorate </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---decorateshortfullautono"><a class="anchor" href="#Documentation/git-log.txt---decorateshortfullautono"></a>--decorate[=short|full|auto|no] </dt>
 <dd>
 <p>Print out the ref names of any commits that are shown. If <em>short</em> is
 specified, the ref name prefixes <em>refs/heads/</em>, <em>refs/tags/</em> and
@@ -66,26 +66,26 @@ specified, then if the output is going to a terminal, the ref names
 are shown as if <em>short</em> were given, otherwise no ref names are
 shown. The default option is <em>short</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---decorate-refsltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---decorate-refspattern"></a> <a class="anchor" href="#Documentation/git-log.txt---decorate-refsltpatterngt"></a>--decorate-refs=&lt;pattern&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---decorate-refs-excludeltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---decorate-refs-excludepattern"></a> <a class="anchor" href="#Documentation/git-log.txt---decorate-refs-excludeltpatterngt"></a>--decorate-refs-exclude=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---decorate-refsltpatterngt"><a id="Documentation/git-log.txt---decorate-refspattern" class="anchor" href="#Documentation/git-log.txt---decorate-refspattern"></a>--decorate-refs=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---decorate-refs-excludeltpatterngt"><a id="Documentation/git-log.txt---decorate-refs-excludepattern" class="anchor" href="#Documentation/git-log.txt---decorate-refs-excludepattern"></a>--decorate-refs-exclude=&lt;pattern&gt; </dt>
 <dd>
 <p>If no <code>--decorate-refs</code> is given, pretend as if all refs were
 included.  For each candidate, do not use it for decoration if it
 matches any patterns given to <code>--decorate-refs-exclude</code> or if it
 doesn&#8217;t match any of the patterns given to <code>--decorate-refs</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---source"> <a class="anchor" href="#Documentation/git-log.txt---source"></a>--source </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---source"><a class="anchor" href="#Documentation/git-log.txt---source"></a>--source </dt>
 <dd>
 <p>Print out the ref name given on the command line by which each
 commit was reached.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---use-mailmap"> <a class="anchor" href="#Documentation/git-log.txt---use-mailmap"></a>--use-mailmap </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---use-mailmap"><a class="anchor" href="#Documentation/git-log.txt---use-mailmap"></a>--use-mailmap </dt>
 <dd>
 <p>Use mailmap file to map author and committer names and email
 addresses to canonical real names and email addresses. See
 <a href='{{< relurl "docs/git-shortlog" >}}'>git-shortlog[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---full-diff"> <a class="anchor" href="#Documentation/git-log.txt---full-diff"></a>--full-diff </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---full-diff"><a class="anchor" href="#Documentation/git-log.txt---full-diff"></a>--full-diff </dt>
 <dd>
 <p>Without this flag, <code>git log -p &lt;path&gt;...</code> shows commits that
 touch the specified paths, and diffs about the same specified
@@ -97,15 +97,15 @@ commits, and doesn&#8217;t limit diff for those commits.</p>
 produced by <code>--stat</code>, etc.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---log-size"> <a class="anchor" href="#Documentation/git-log.txt---log-size"></a>--log-size </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---log-size"><a class="anchor" href="#Documentation/git-log.txt---log-size"></a>--log-size </dt>
 <dd>
 <p>Include a line &#8220;log size &lt;number&gt;&#8221; in the output for each commit,
 where &lt;number&gt; is the length of that commit&#8217;s message in bytes.
 Intended to speed up tools that read log messages from <code>git log</code>
 output by allowing them to allocate space in advance.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Lltstartgtltendgtltfilegt"> <a class="anchor" href="#Documentation/git-log.txt--Lstartendfile"></a> <a class="anchor" href="#Documentation/git-log.txt--Lltstartgtltendgtltfilegt"></a>-L &lt;start&gt;,&lt;end&gt;:&lt;file&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt--Lltfuncnamegtltfilegt"> <a class="anchor" href="#Documentation/git-log.txt--Lfuncnamefile"></a> <a class="anchor" href="#Documentation/git-log.txt--Lltfuncnamegtltfilegt"></a>-L :&lt;funcname&gt;:&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Lltstartgtltendgtltfilegt"><a id="Documentation/git-log.txt--Lstartendfile" class="anchor" href="#Documentation/git-log.txt--Lstartendfile"></a>-L &lt;start&gt;,&lt;end&gt;:&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Lltfuncnamegtltfilegt"><a id="Documentation/git-log.txt--Lfuncnamefile" class="anchor" href="#Documentation/git-log.txt--Lfuncnamefile"></a>-L :&lt;funcname&gt;:&lt;file&gt; </dt>
 <dd>
 <p>Trace the evolution of the line range given by "&lt;start&gt;,&lt;end&gt;"
 (or the function name regex &lt;funcname&gt;) within the &lt;file&gt;.  You may
@@ -154,7 +154,7 @@ from the start of file. &#8220;^:&lt;funcname&gt;&#8221; searches from the start
 file.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-ltrevisionrangegt"> <a class="anchor" href="#Documentation/git-log.txt-revisionrange"></a> <a class="anchor" href="#Documentation/git-log.txt-ltrevisionrangegt"></a>&lt;revision range&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-ltrevisionrangegt"><a id="Documentation/git-log.txt-revisionrange" class="anchor" href="#Documentation/git-log.txt-revisionrange"></a>&lt;revision range&gt; </dt>
 <dd>
 <p>Show only commits in the specified revision range.  When no
 &lt;revision range&gt; is specified, it defaults to <code>HEAD</code> (i.e. the
@@ -164,7 +164,7 @@ specifies all the commits reachable from the current commit
 ways to spell &lt;revision range&gt;, see the <em>Specifying Ranges</em>
 section of <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ltpathgt82308203"> <a class="anchor" href="#Documentation/git-log.txt---path"></a> <a class="anchor" href="#Documentation/git-log.txt---ltpathgt82308203"></a>[--] &lt;path&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ltpathgt82308203"><a id="Documentation/git-log.txt---path" class="anchor" href="#Documentation/git-log.txt---path"></a>[--] &lt;path&gt;&#8230;&#8203; </dt>
 <dd>
 <p>Show only commits that are enough to explain how the files
 that match the specified paths came to be.  See <em>History
@@ -198,28 +198,28 @@ ordering and formatting options, such as <code>--reverse</code>.</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt--ltnumbergt"> <a class="anchor" href="#Documentation/git-log.txt--number"></a> <a class="anchor" href="#Documentation/git-log.txt--ltnumbergt"></a>-&lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt--nltnumbergt"> <a class="anchor" href="#Documentation/git-log.txt--nnumber"></a> <a class="anchor" href="#Documentation/git-log.txt--nltnumbergt"></a>-n &lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---max-countltnumbergt"> <a class="anchor" href="#Documentation/git-log.txt---max-countnumber"></a> <a class="anchor" href="#Documentation/git-log.txt---max-countltnumbergt"></a>--max-count=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--ltnumbergt"><a id="Documentation/git-log.txt--number" class="anchor" href="#Documentation/git-log.txt--number"></a>-&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--nltnumbergt"><a id="Documentation/git-log.txt--nnumber" class="anchor" href="#Documentation/git-log.txt--nnumber"></a>-n &lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---max-countltnumbergt"><a id="Documentation/git-log.txt---max-countnumber" class="anchor" href="#Documentation/git-log.txt---max-countnumber"></a>--max-count=&lt;number&gt; </dt>
 <dd>
 <p>Limit the number of commits to output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---skipltnumbergt"> <a class="anchor" href="#Documentation/git-log.txt---skipnumber"></a> <a class="anchor" href="#Documentation/git-log.txt---skipltnumbergt"></a>--skip=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---skipltnumbergt"><a id="Documentation/git-log.txt---skipnumber" class="anchor" href="#Documentation/git-log.txt---skipnumber"></a>--skip=&lt;number&gt; </dt>
 <dd>
 <p>Skip <em>number</em> commits before starting to show the commit output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---sinceltdategt"> <a class="anchor" href="#Documentation/git-log.txt---sincedate"></a> <a class="anchor" href="#Documentation/git-log.txt---sinceltdategt"></a>--since=&lt;date&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---afterltdategt"> <a class="anchor" href="#Documentation/git-log.txt---afterdate"></a> <a class="anchor" href="#Documentation/git-log.txt---afterltdategt"></a>--after=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---sinceltdategt"><a id="Documentation/git-log.txt---sincedate" class="anchor" href="#Documentation/git-log.txt---sincedate"></a>--since=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---afterltdategt"><a id="Documentation/git-log.txt---afterdate" class="anchor" href="#Documentation/git-log.txt---afterdate"></a>--after=&lt;date&gt; </dt>
 <dd>
 <p>Show commits more recent than a specific date.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---untilltdategt"> <a class="anchor" href="#Documentation/git-log.txt---untildate"></a> <a class="anchor" href="#Documentation/git-log.txt---untilltdategt"></a>--until=&lt;date&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---beforeltdategt"> <a class="anchor" href="#Documentation/git-log.txt---beforedate"></a> <a class="anchor" href="#Documentation/git-log.txt---beforeltdategt"></a>--before=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---untilltdategt"><a id="Documentation/git-log.txt---untildate" class="anchor" href="#Documentation/git-log.txt---untildate"></a>--until=&lt;date&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---beforeltdategt"><a id="Documentation/git-log.txt---beforedate" class="anchor" href="#Documentation/git-log.txt---beforedate"></a>--before=&lt;date&gt; </dt>
 <dd>
 <p>Show commits older than a specific date.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---authorltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---authorpattern"></a> <a class="anchor" href="#Documentation/git-log.txt---authorltpatterngt"></a>--author=&lt;pattern&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---committerltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---committerpattern"></a> <a class="anchor" href="#Documentation/git-log.txt---committerltpatterngt"></a>--committer=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---authorltpatterngt"><a id="Documentation/git-log.txt---authorpattern" class="anchor" href="#Documentation/git-log.txt---authorpattern"></a>--author=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---committerltpatterngt"><a id="Documentation/git-log.txt---committerpattern" class="anchor" href="#Documentation/git-log.txt---committerpattern"></a>--committer=&lt;pattern&gt; </dt>
 <dd>
 <p>Limit the commits output to ones with author/committer
 header lines that match the specified pattern (regular
@@ -227,7 +227,7 @@ expression).  With more than one <code>--author=&lt;pattern&gt;</code>,
 commits whose author matches any of the given patterns are
 chosen (similarly for multiple <code>--committer=&lt;pattern&gt;</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---grep-reflogltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---grep-reflogpattern"></a> <a class="anchor" href="#Documentation/git-log.txt---grep-reflogltpatterngt"></a>--grep-reflog=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---grep-reflogltpatterngt"><a id="Documentation/git-log.txt---grep-reflogpattern" class="anchor" href="#Documentation/git-log.txt---grep-reflogpattern"></a>--grep-reflog=&lt;pattern&gt; </dt>
 <dd>
 <p>Limit the commits output to ones with reflog entries that
 match the specified pattern (regular expression). With
@@ -235,7 +235,7 @@ more than one <code>--grep-reflog</code>, commits whose reflog message
 matches any of the given patterns are chosen.  It is an
 error to use this option unless <code>--walk-reflogs</code> is in use.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---grepltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---greppattern"></a> <a class="anchor" href="#Documentation/git-log.txt---grepltpatterngt"></a>--grep=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---grepltpatterngt"><a id="Documentation/git-log.txt---greppattern" class="anchor" href="#Documentation/git-log.txt---greppattern"></a>--grep=&lt;pattern&gt; </dt>
 <dd>
 <p>Limit the commits output to ones with log message that
 matches the specified pattern (regular expression).  With
@@ -247,41 +247,41 @@ matches any of the given patterns are chosen (but see
 matched as if it were part of the log message.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---all-match"> <a class="anchor" href="#Documentation/git-log.txt---all-match"></a>--all-match </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---all-match"><a class="anchor" href="#Documentation/git-log.txt---all-match"></a>--all-match </dt>
 <dd>
 <p>Limit the commits output to ones that match all given <code>--grep</code>,
 instead of ones that match at least one.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---invert-grep"> <a class="anchor" href="#Documentation/git-log.txt---invert-grep"></a>--invert-grep </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---invert-grep"><a class="anchor" href="#Documentation/git-log.txt---invert-grep"></a>--invert-grep </dt>
 <dd>
 <p>Limit the commits output to ones with log message that do not
 match the pattern specified with <code>--grep=&lt;pattern&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--i"> <a class="anchor" href="#Documentation/git-log.txt--i"></a>-i </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---regexp-ignore-case"> <a class="anchor" href="#Documentation/git-log.txt---regexp-ignore-case"></a>--regexp-ignore-case </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--i"><a class="anchor" href="#Documentation/git-log.txt--i"></a>-i </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---regexp-ignore-case"><a class="anchor" href="#Documentation/git-log.txt---regexp-ignore-case"></a>--regexp-ignore-case </dt>
 <dd>
 <p>Match the regular expression limiting patterns without regard to letter
 case.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---basic-regexp"> <a class="anchor" href="#Documentation/git-log.txt---basic-regexp"></a>--basic-regexp </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---basic-regexp"><a class="anchor" href="#Documentation/git-log.txt---basic-regexp"></a>--basic-regexp </dt>
 <dd>
 <p>Consider the limiting patterns to be basic regular expressions;
 this is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--E"> <a class="anchor" href="#Documentation/git-log.txt--E"></a>-E </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---extended-regexp"> <a class="anchor" href="#Documentation/git-log.txt---extended-regexp"></a>--extended-regexp </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--E"><a class="anchor" href="#Documentation/git-log.txt--E"></a>-E </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---extended-regexp"><a class="anchor" href="#Documentation/git-log.txt---extended-regexp"></a>--extended-regexp </dt>
 <dd>
 <p>Consider the limiting patterns to be extended regular expressions
 instead of the default basic regular expressions.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--F"> <a class="anchor" href="#Documentation/git-log.txt--F"></a>-F </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---fixed-strings"> <a class="anchor" href="#Documentation/git-log.txt---fixed-strings"></a>--fixed-strings </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--F"><a class="anchor" href="#Documentation/git-log.txt--F"></a>-F </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---fixed-strings"><a class="anchor" href="#Documentation/git-log.txt---fixed-strings"></a>--fixed-strings </dt>
 <dd>
 <p>Consider the limiting patterns to be fixed strings (don&#8217;t interpret
 pattern as a regular expression).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--P"> <a class="anchor" href="#Documentation/git-log.txt--P"></a>-P </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---perl-regexp"> <a class="anchor" href="#Documentation/git-log.txt---perl-regexp"></a>--perl-regexp </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--P"><a class="anchor" href="#Documentation/git-log.txt--P"></a>-P </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---perl-regexp"><a class="anchor" href="#Documentation/git-log.txt---perl-regexp"></a>--perl-regexp </dt>
 <dd>
 <p>Consider the limiting patterns to be Perl-compatible regular
 expressions.</p>
@@ -291,23 +291,23 @@ compile-time dependency. If Git wasn&#8217;t compiled with support for them
 providing this option will cause it to die.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---remove-empty"> <a class="anchor" href="#Documentation/git-log.txt---remove-empty"></a>--remove-empty </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---remove-empty"><a class="anchor" href="#Documentation/git-log.txt---remove-empty"></a>--remove-empty </dt>
 <dd>
 <p>Stop when a given path disappears from the tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---merges"> <a class="anchor" href="#Documentation/git-log.txt---merges"></a>--merges </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---merges"><a class="anchor" href="#Documentation/git-log.txt---merges"></a>--merges </dt>
 <dd>
 <p>Print only merge commits. This is exactly the same as <code>--min-parents=2</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-merges"> <a class="anchor" href="#Documentation/git-log.txt---no-merges"></a>--no-merges </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-merges"><a class="anchor" href="#Documentation/git-log.txt---no-merges"></a>--no-merges </dt>
 <dd>
 <p>Do not print commits with more than one parent. This is
 exactly the same as <code>--max-parents=1</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---min-parentsltnumbergt"> <a class="anchor" href="#Documentation/git-log.txt---min-parentsnumber"></a> <a class="anchor" href="#Documentation/git-log.txt---min-parentsltnumbergt"></a>--min-parents=&lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---max-parentsltnumbergt"> <a class="anchor" href="#Documentation/git-log.txt---max-parentsnumber"></a> <a class="anchor" href="#Documentation/git-log.txt---max-parentsltnumbergt"></a>--max-parents=&lt;number&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-min-parents"> <a class="anchor" href="#Documentation/git-log.txt---no-min-parents"></a>--no-min-parents </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-max-parents"> <a class="anchor" href="#Documentation/git-log.txt---no-max-parents"></a>--no-max-parents </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---min-parentsltnumbergt"><a id="Documentation/git-log.txt---min-parentsnumber" class="anchor" href="#Documentation/git-log.txt---min-parentsnumber"></a>--min-parents=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---max-parentsltnumbergt"><a id="Documentation/git-log.txt---max-parentsnumber" class="anchor" href="#Documentation/git-log.txt---max-parentsnumber"></a>--max-parents=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-min-parents"><a class="anchor" href="#Documentation/git-log.txt---no-min-parents"></a>--no-min-parents </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-max-parents"><a class="anchor" href="#Documentation/git-log.txt---no-max-parents"></a>--no-max-parents </dt>
 <dd>
 <p>Show only commits which have at least (or at most) that many parent
 commits. In particular, <code>--max-parents=1</code> is the same as <code>--no-merges</code>,
@@ -319,7 +319,7 @@ again.  Equivalent forms are <code>--min-parents=0</code> (any commit has 0 or m
 parents) and <code>--max-parents=-1</code> (negative numbers denote no upper limit).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---first-parent"> <a class="anchor" href="#Documentation/git-log.txt---first-parent"></a>--first-parent </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---first-parent"><a class="anchor" href="#Documentation/git-log.txt---first-parent"></a>--first-parent </dt>
 <dd>
 <p>Follow only the first parent commit upon seeing a merge
 commit.  This option can give a better overview when
@@ -330,45 +330,45 @@ this option allows you to ignore the individual commits
 brought in to your history by such a merge. Cannot be
 combined with --bisect.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---not"> <a class="anchor" href="#Documentation/git-log.txt---not"></a>--not </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---not"><a class="anchor" href="#Documentation/git-log.txt---not"></a>--not </dt>
 <dd>
 <p>Reverses the meaning of the <em>^</em> prefix (or lack thereof)
 for all following revision specifiers, up to the next <code>--not</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---all"> <a class="anchor" href="#Documentation/git-log.txt---all"></a>--all </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---all"><a class="anchor" href="#Documentation/git-log.txt---all"></a>--all </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/</code>, along with <code>HEAD</code>, are
 listed on the command line as <em>&lt;commit&gt;</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---branchesltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---branchespattern"></a> <a class="anchor" href="#Documentation/git-log.txt---branchesltpatterngt"></a>--branches[=&lt;pattern&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---branchesltpatterngt"><a id="Documentation/git-log.txt---branchespattern" class="anchor" href="#Documentation/git-log.txt---branchespattern"></a>--branches[=&lt;pattern&gt;] </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/heads</code> are listed
 on the command line as <em>&lt;commit&gt;</em>. If <em>&lt;pattern&gt;</em> is given, limit
 branches to ones matching given shell glob. If pattern lacks <em>?</em>,
 <em>*</em>, or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---tagsltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---tagspattern"></a> <a class="anchor" href="#Documentation/git-log.txt---tagsltpatterngt"></a>--tags[=&lt;pattern&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---tagsltpatterngt"><a id="Documentation/git-log.txt---tagspattern" class="anchor" href="#Documentation/git-log.txt---tagspattern"></a>--tags[=&lt;pattern&gt;] </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/tags</code> are listed
 on the command line as <em>&lt;commit&gt;</em>. If <em>&lt;pattern&gt;</em> is given, limit
 tags to ones matching given shell glob. If pattern lacks <em>?</em>, <em>*</em>,
 or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---remotesltpatterngt"> <a class="anchor" href="#Documentation/git-log.txt---remotespattern"></a> <a class="anchor" href="#Documentation/git-log.txt---remotesltpatterngt"></a>--remotes[=&lt;pattern&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---remotesltpatterngt"><a id="Documentation/git-log.txt---remotespattern" class="anchor" href="#Documentation/git-log.txt---remotespattern"></a>--remotes[=&lt;pattern&gt;] </dt>
 <dd>
 <p>Pretend as if all the refs in <code>refs/remotes</code> are listed
 on the command line as <em>&lt;commit&gt;</em>. If <em>&lt;pattern&gt;</em> is given, limit
 remote-tracking branches to ones matching given shell glob.
 If pattern lacks <em>?</em>, <em>*</em>, or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---globltglob-patterngt"> <a class="anchor" href="#Documentation/git-log.txt---globglob-pattern"></a> <a class="anchor" href="#Documentation/git-log.txt---globltglob-patterngt"></a>--glob=&lt;glob-pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---globltglob-patterngt"><a id="Documentation/git-log.txt---globglob-pattern" class="anchor" href="#Documentation/git-log.txt---globglob-pattern"></a>--glob=&lt;glob-pattern&gt; </dt>
 <dd>
 <p>Pretend as if all the refs matching shell glob <em>&lt;glob-pattern&gt;</em>
 are listed on the command line as <em>&lt;commit&gt;</em>. Leading <em>refs/</em>,
 is automatically prepended if missing. If pattern lacks <em>?</em>, <em>*</em>,
 or <em>[</em>, <em>/*</em> at the end is implied.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---excludeltglob-patterngt"> <a class="anchor" href="#Documentation/git-log.txt---excludeglob-pattern"></a> <a class="anchor" href="#Documentation/git-log.txt---excludeltglob-patterngt"></a>--exclude=&lt;glob-pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---excludeltglob-patterngt"><a id="Documentation/git-log.txt---excludeglob-pattern" class="anchor" href="#Documentation/git-log.txt---excludeglob-pattern"></a>--exclude=&lt;glob-pattern&gt; </dt>
 <dd>
 <p>Do not include refs matching <em>&lt;glob-pattern&gt;</em> that the next <code>--all</code>,
 <code>--branches</code>, <code>--tags</code>, <code>--remotes</code>, or <code>--glob</code> would otherwise
@@ -384,12 +384,12 @@ or <code>--all</code>. If a trailing <em>/*</em> is intended, it must be given
 explicitly.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---reflog"> <a class="anchor" href="#Documentation/git-log.txt---reflog"></a>--reflog </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---reflog"><a class="anchor" href="#Documentation/git-log.txt---reflog"></a>--reflog </dt>
 <dd>
 <p>Pretend as if all objects mentioned by reflogs are listed on the
 command line as <code>&lt;commit&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---single-worktree"> <a class="anchor" href="#Documentation/git-log.txt---single-worktree"></a>--single-worktree </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---single-worktree"><a class="anchor" href="#Documentation/git-log.txt---single-worktree"></a>--single-worktree </dt>
 <dd>
 <p>By default, all working trees will be examined by the
 following options when there are more than one (see
@@ -398,31 +398,31 @@ following options when there are more than one (see
 This option forces them to examine the current working tree
 only.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-missing"> <a class="anchor" href="#Documentation/git-log.txt---ignore-missing"></a>--ignore-missing </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-missing"><a class="anchor" href="#Documentation/git-log.txt---ignore-missing"></a>--ignore-missing </dt>
 <dd>
 <p>Upon seeing an invalid object name in the input, pretend as if
 the bad input was not given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---bisect"> <a class="anchor" href="#Documentation/git-log.txt---bisect"></a>--bisect </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---bisect"><a class="anchor" href="#Documentation/git-log.txt---bisect"></a>--bisect </dt>
 <dd>
 <p>Pretend as if the bad bisection ref <code>refs/bisect/bad</code>
 was listed and as if it was followed by <code>--not</code> and the good
 bisection refs <code>refs/bisect/good-*</code> on the command
 line. Cannot be combined with --first-parent.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---stdin"> <a class="anchor" href="#Documentation/git-log.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---stdin"><a class="anchor" href="#Documentation/git-log.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>In addition to the <em>&lt;commit&gt;</em> listed on the command
 line, read them from the standard input. If a <code>--</code> separator is
 seen, stop reading commits and start reading paths to limit the
 result.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---cherry-mark"> <a class="anchor" href="#Documentation/git-log.txt---cherry-mark"></a>--cherry-mark </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---cherry-mark"><a class="anchor" href="#Documentation/git-log.txt---cherry-mark"></a>--cherry-mark </dt>
 <dd>
 <p>Like <code>--cherry-pick</code> (see below) but mark equivalent commits
 with <code>=</code> rather than omitting them, and inequivalent ones with <code>+</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---cherry-pick"> <a class="anchor" href="#Documentation/git-log.txt---cherry-pick"></a>--cherry-pick </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---cherry-pick"><a class="anchor" href="#Documentation/git-log.txt---cherry-pick"></a>--cherry-pick </dt>
 <dd>
 <p>Omit any commit that introduces the same change as
 another commit on the &#8220;other side&#8221; when the set of
@@ -437,8 +437,8 @@ cherry-picked from branch A). With this option, such pairs of commits are
 excluded from the output.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---left-only"> <a class="anchor" href="#Documentation/git-log.txt---left-only"></a>--left-only </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---right-only"> <a class="anchor" href="#Documentation/git-log.txt---right-only"></a>--right-only </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---left-only"><a class="anchor" href="#Documentation/git-log.txt---left-only"></a>--left-only </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---right-only"><a class="anchor" href="#Documentation/git-log.txt---right-only"></a>--right-only </dt>
 <dd>
 <p>List only commits on the respective side of a symmetric difference,
 i.e. only those which would be marked <code>&lt;</code> resp. <code>&gt;</code> by
@@ -451,7 +451,7 @@ More precisely, <code>--cherry-pick --right-only --no-merges</code> gives the ex
 list.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---cherry"> <a class="anchor" href="#Documentation/git-log.txt---cherry"></a>--cherry </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---cherry"><a class="anchor" href="#Documentation/git-log.txt---cherry"></a>--cherry </dt>
 <dd>
 <p>A synonym for <code>--right-only --cherry-mark --no-merges</code>; useful to
 limit the output to the commits on our side and mark those that
@@ -459,8 +459,8 @@ have been applied to the other side of a forked history with
 <code>git log --cherry upstream...mybranch</code>, similar to
 <code>git cherry upstream mybranch</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--g"> <a class="anchor" href="#Documentation/git-log.txt--g"></a>-g </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---walk-reflogs"> <a class="anchor" href="#Documentation/git-log.txt---walk-reflogs"></a>--walk-reflogs </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--g"><a class="anchor" href="#Documentation/git-log.txt--g"></a>-g </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---walk-reflogs"><a class="anchor" href="#Documentation/git-log.txt---walk-reflogs"></a>--walk-reflogs </dt>
 <dd>
 <p>Instead of walking the commit ancestry chain, walk
 reflog entries from the most recent one to older ones.
@@ -510,12 +510,12 @@ See also <a href='{{< relurl "docs/git-reflog" >}}'>git-reflog[1]</a>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---merge"> <a class="anchor" href="#Documentation/git-log.txt---merge"></a>--merge </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---merge"><a class="anchor" href="#Documentation/git-log.txt---merge"></a>--merge </dt>
 <dd>
 <p>After a failed merge, show refs that touch files having a
 conflict and don&#8217;t exist on all heads to merge.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---boundary"> <a class="anchor" href="#Documentation/git-log.txt---boundary"></a>--boundary </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---boundary"><a class="anchor" href="#Documentation/git-log.txt---boundary"></a>--boundary </dt>
 <dd>
 <p>Output excluded boundary commits. Boundary commits are
 prefixed with <code>-</code>.</p>
@@ -538,11 +538,11 @@ is how to do it, as there are various strategies to simplify the history.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-ltpathsgt"> <a class="anchor" href="#Documentation/git-log.txt-paths"></a> <a class="anchor" href="#Documentation/git-log.txt-ltpathsgt"></a>&lt;paths&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-ltpathsgt"><a id="Documentation/git-log.txt-paths" class="anchor" href="#Documentation/git-log.txt-paths"></a>&lt;paths&gt; </dt>
 <dd>
 <p>Commits modifying the given &lt;paths&gt; are selected.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---simplify-by-decoration"> <a class="anchor" href="#Documentation/git-log.txt---simplify-by-decoration"></a>--simplify-by-decoration </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---simplify-by-decoration"><a class="anchor" href="#Documentation/git-log.txt---simplify-by-decoration"></a>--simplify-by-decoration </dt>
 <dd>
 <p>Commits that are referred by some branch or tag are selected.</p>
 </dd>
@@ -556,33 +556,33 @@ is how to do it, as there are various strategies to simplify the history.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-Defaultmode"> <a class="anchor" href="#Documentation/git-log.txt-Defaultmode"></a>Default mode </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-Defaultmode"><a class="anchor" href="#Documentation/git-log.txt-Defaultmode"></a>Default mode </dt>
 <dd>
 <p>Simplifies the history to the simplest history explaining the
 final state of the tree. Simplest because it prunes some side
 branches if the end result is the same (i.e. merging branches
 with the same content)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---full-history"> <a class="anchor" href="#Documentation/git-log.txt---full-history"></a>--full-history </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---full-history"><a class="anchor" href="#Documentation/git-log.txt---full-history"></a>--full-history </dt>
 <dd>
 <p>Same as the default mode, but does not prune some history.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---dense"> <a class="anchor" href="#Documentation/git-log.txt---dense"></a>--dense </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---dense"><a class="anchor" href="#Documentation/git-log.txt---dense"></a>--dense </dt>
 <dd>
 <p>Only the selected commits are shown, plus some to have a
 meaningful history.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---sparse"> <a class="anchor" href="#Documentation/git-log.txt---sparse"></a>--sparse </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---sparse"><a class="anchor" href="#Documentation/git-log.txt---sparse"></a>--sparse </dt>
 <dd>
 <p>All commits in the simplified history are shown.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---simplify-merges"> <a class="anchor" href="#Documentation/git-log.txt---simplify-merges"></a>--simplify-merges </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---simplify-merges"><a class="anchor" href="#Documentation/git-log.txt---simplify-merges"></a>--simplify-merges </dt>
 <dd>
 <p>Additional option to <code>--full-history</code> to remove some needless
 merges from the resulting history, as there are no selected
 commits contributing to this merge.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ancestry-path"> <a class="anchor" href="#Documentation/git-log.txt---ancestry-path"></a>--ancestry-path </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ancestry-path"><a class="anchor" href="#Documentation/git-log.txt---ancestry-path"></a>--ancestry-path </dt>
 <dd>
 <p>When given a range of commits to display (e.g. <em>commit1..commit2</em>
 or <em>commit2 ^commit1</em>), only display commits that exist
@@ -659,7 +659,7 @@ are available.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-Defaultmode-1"> <a class="anchor" href="#Documentation/git-log.txt-Defaultmode-1"></a>Default mode </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-Defaultmode-1"><a class="anchor" href="#Documentation/git-log.txt-Defaultmode-1"></a>Default mode </dt>
 <dd>
 <p>Commits are included if they are not TREESAME to any parent
 (though this can be changed, see <code>--sparse</code> below).  If the
@@ -689,7 +689,7 @@ not affect the commits selected in default mode, so we have shown the
 parent lines.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---full-historywithoutparentrewriting"> <a class="anchor" href="#Documentation/git-log.txt---full-historywithoutparentrewriting"></a>--full-history without parent rewriting </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---full-historywithoutparentrewriting"><a class="anchor" href="#Documentation/git-log.txt---full-historywithoutparentrewriting"></a>--full-history without parent rewriting </dt>
 <dd>
 <p>This mode differs from the default in one point: always follow
 all parents of a merge, even if it is TREESAME to one of them.
@@ -712,7 +712,7 @@ about the parent/child relationships between the commits, so we show
 them disconnected.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---full-historywithparentrewriting"> <a class="anchor" href="#Documentation/git-log.txt---full-historywithparentrewriting"></a>--full-history with parent rewriting </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---full-historywithparentrewriting"><a class="anchor" href="#Documentation/git-log.txt---full-historywithparentrewriting"></a>--full-history with parent rewriting </dt>
 <dd>
 <p>Ordinary commits are only included if they are !TREESAME
 (though this can be changed, see <code>--sparse</code> below).</p>
@@ -745,12 +745,12 @@ affects inclusion:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---dense-1"> <a class="anchor" href="#Documentation/git-log.txt---dense-1"></a>--dense </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---dense-1"><a class="anchor" href="#Documentation/git-log.txt---dense-1"></a>--dense </dt>
 <dd>
 <p>Commits that are walked are included if they are not TREESAME
 to any parent.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---sparse-1"> <a class="anchor" href="#Documentation/git-log.txt---sparse-1"></a>--sparse </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---sparse-1"><a class="anchor" href="#Documentation/git-log.txt---sparse-1"></a>--sparse </dt>
 <dd>
 <p>All commits that are walked are included.</p>
 <div class="paragraph">
@@ -759,7 +759,7 @@ one of the parents is TREESAME, we follow only that one, so the other
 sides of the merge are never walked.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---simplify-merges-1"> <a class="anchor" href="#Documentation/git-log.txt---simplify-merges-1"></a>--simplify-merges </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---simplify-merges-1"><a class="anchor" href="#Documentation/git-log.txt---simplify-merges-1"></a>--simplify-merges </dt>
 <dd>
 <p>First, build a history graph in the same way that
 <code>--full-history</code> with parent rewriting does (see above).</p>
@@ -834,7 +834,7 @@ parent and is TREESAME.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---ancestry-path-1"> <a class="anchor" href="#Documentation/git-log.txt---ancestry-path-1"></a>--ancestry-path </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ancestry-path-1"><a class="anchor" href="#Documentation/git-log.txt---ancestry-path-1"></a>--ancestry-path </dt>
 <dd>
 <p>Limit the displayed commits to those directly on the ancestry
 chain between the &#8220;from&#8221; and &#8220;to&#8221; commits in the given commit
@@ -896,17 +896,17 @@ commits are marked as TREESAME (subject to be simplified away).</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---date-order"> <a class="anchor" href="#Documentation/git-log.txt---date-order"></a>--date-order </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---date-order"><a class="anchor" href="#Documentation/git-log.txt---date-order"></a>--date-order </dt>
 <dd>
 <p>Show no parents before all of its children are shown, but
 otherwise show commits in the commit timestamp order.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---author-date-order"> <a class="anchor" href="#Documentation/git-log.txt---author-date-order"></a>--author-date-order </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---author-date-order"><a class="anchor" href="#Documentation/git-log.txt---author-date-order"></a>--author-date-order </dt>
 <dd>
 <p>Show no parents before all of its children are shown, but
 otherwise show commits in the author timestamp order.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---topo-order"> <a class="anchor" href="#Documentation/git-log.txt---topo-order"></a>--topo-order </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---topo-order"><a class="anchor" href="#Documentation/git-log.txt---topo-order"></a>--topo-order </dt>
 <dd>
 <p>Show no parents before all of its children are shown, and
 avoid showing commits on multiple lines of history
@@ -933,7 +933,7 @@ avoid showing the commits from two parallel development track mixed
 together.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---reverse"> <a class="anchor" href="#Documentation/git-log.txt---reverse"></a>--reverse </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---reverse"><a class="anchor" href="#Documentation/git-log.txt---reverse"></a>--reverse </dt>
 <dd>
 <p>Output the commits chosen to be shown (see Commit Limiting
 section above) in reverse order. Cannot be combined with
@@ -949,7 +949,7 @@ section above) in reverse order. Cannot be combined with
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---exclude-promisor-objects"> <a class="anchor" href="#Documentation/git-log.txt---exclude-promisor-objects"></a>--exclude-promisor-objects </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---exclude-promisor-objects"><a class="anchor" href="#Documentation/git-log.txt---exclude-promisor-objects"></a>--exclude-promisor-objects </dt>
 <dd>
 <p>(For internal use only.)  Prefilter object traversal at
 promisor boundary.  This is used with partial clone.  This is
@@ -957,7 +957,7 @@ stronger than <code>--missing=allow-promisor</code> because it limits the
 traversal, rather than just silencing errors about missing
 objects.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-walksortedunsorted"> <a class="anchor" href="#Documentation/git-log.txt---no-walksortedunsorted"></a>--no-walk[=(sorted|unsorted)] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-walksortedunsorted"><a class="anchor" href="#Documentation/git-log.txt---no-walksortedunsorted"></a>--no-walk[=(sorted|unsorted)] </dt>
 <dd>
 <p>Only show the given commits, but do not traverse their ancestors.
 This has no effect if a range is specified. If the argument
@@ -967,7 +967,7 @@ was given), the commits are shown in reverse chronological order
 by commit time.
 Cannot be combined with <code>--graph</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---do-walk"> <a class="anchor" href="#Documentation/git-log.txt---do-walk"></a>--do-walk </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---do-walk"><a class="anchor" href="#Documentation/git-log.txt---do-walk"></a>--do-walk </dt>
 <dd>
 <p>Overrides a previous <code>--no-walk</code>.</p>
 </dd>
@@ -978,8 +978,8 @@ Cannot be combined with <code>--graph</code>.</p>
 <h3 id="_commit_formatting"><a class="anchor" href="#_commit_formatting"></a>Commit Formatting</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt---prettyltformatgt"> <a class="anchor" href="#Documentation/git-log.txt---prettyformat"></a> <a class="anchor" href="#Documentation/git-log.txt---prettyltformatgt"></a>--pretty[=&lt;format&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---formatltformatgt"> <a class="anchor" href="#Documentation/git-log.txt---formatformat"></a> <a class="anchor" href="#Documentation/git-log.txt---formatltformatgt"></a>--format=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---prettyltformatgt"><a id="Documentation/git-log.txt---prettyformat" class="anchor" href="#Documentation/git-log.txt---prettyformat"></a>--pretty[=&lt;format&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---formatltformatgt"><a id="Documentation/git-log.txt---formatformat" class="anchor" href="#Documentation/git-log.txt---formatformat"></a>--format=&lt;format&gt; </dt>
 <dd>
 <p>Pretty-print the contents of the commit logs in a given format,
 where <em>&lt;format&gt;</em> can be one of <em>oneline</em>, <em>short</em>, <em>medium</em>,
@@ -996,7 +996,7 @@ format.  When <em>=&lt;format&gt;</em> part is omitted, it defaults to <em>mediu
 configuration (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---abbrev-commit"> <a class="anchor" href="#Documentation/git-log.txt---abbrev-commit"></a>--abbrev-commit </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---abbrev-commit"><a class="anchor" href="#Documentation/git-log.txt---abbrev-commit"></a>--abbrev-commit </dt>
 <dd>
 <p>Instead of showing the full 40-byte hexadecimal commit object
 name, show only a partial prefix.  Non default number of
@@ -1007,18 +1007,18 @@ diff output, if it is displayed).</p>
 people using 80-column terminals.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-abbrev-commit"> <a class="anchor" href="#Documentation/git-log.txt---no-abbrev-commit"></a>--no-abbrev-commit </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-abbrev-commit"><a class="anchor" href="#Documentation/git-log.txt---no-abbrev-commit"></a>--no-abbrev-commit </dt>
 <dd>
 <p>Show the full 40-byte hexadecimal commit object name. This negates
 <code>--abbrev-commit</code> and those options which imply it such as
 "--oneline". It also overrides the <code>log.abbrevCommit</code> variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---oneline"> <a class="anchor" href="#Documentation/git-log.txt---oneline"></a>--oneline </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---oneline"><a class="anchor" href="#Documentation/git-log.txt---oneline"></a>--oneline </dt>
 <dd>
 <p>This is a shorthand for "--pretty=oneline --abbrev-commit"
 used together.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---encodingltencodinggt"> <a class="anchor" href="#Documentation/git-log.txt---encodingencoding"></a> <a class="anchor" href="#Documentation/git-log.txt---encodingltencodinggt"></a>--encoding=&lt;encoding&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---encodingltencodinggt"><a id="Documentation/git-log.txt---encodingencoding" class="anchor" href="#Documentation/git-log.txt---encodingencoding"></a>--encoding=&lt;encoding&gt; </dt>
 <dd>
 <p>The commit objects record the encoding used for the log message
 in their encoding header; this option can be used to tell the
@@ -1029,9 +1029,9 @@ in <code>X</code> and we are outputting in <code>X</code>, we will output the ob
 verbatim; this means that invalid sequences in the original
 commit may be copied to the output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---expand-tabsltngt"> <a class="anchor" href="#Documentation/git-log.txt---expand-tabsn"></a> <a class="anchor" href="#Documentation/git-log.txt---expand-tabsltngt"></a>--expand-tabs=&lt;n&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---expand-tabs"> <a class="anchor" href="#Documentation/git-log.txt---expand-tabs"></a>--expand-tabs </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-expand-tabs"> <a class="anchor" href="#Documentation/git-log.txt---no-expand-tabs"></a>--no-expand-tabs </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---expand-tabsltngt"><a id="Documentation/git-log.txt---expand-tabsn" class="anchor" href="#Documentation/git-log.txt---expand-tabsn"></a>--expand-tabs=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---expand-tabs"><a class="anchor" href="#Documentation/git-log.txt---expand-tabs"></a>--expand-tabs </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-expand-tabs"><a class="anchor" href="#Documentation/git-log.txt---no-expand-tabs"></a>--no-expand-tabs </dt>
 <dd>
 <p>Perform a tab expansion (replace each tab with enough spaces
 to fill to the next display column that is multiple of <em>&lt;n&gt;</em>)
@@ -1045,7 +1045,7 @@ message by 4 spaces (i.e.  <em>medium</em>, which is the default, <em>full</em>,
 and <em>fuller</em>).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---noteslttreeishgt"> <a class="anchor" href="#Documentation/git-log.txt---notestreeish"></a> <a class="anchor" href="#Documentation/git-log.txt---noteslttreeishgt"></a>--notes[=&lt;treeish&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---noteslttreeishgt"><a id="Documentation/git-log.txt---notestreeish" class="anchor" href="#Documentation/git-log.txt---notestreeish"></a>--notes[=&lt;treeish&gt;] </dt>
 <dd>
 <p>Show the notes (see <a href='{{< relurl "docs/git-notes" >}}'>git-notes[1]</a>) that annotate the
 commit, when showing the commit log message.  This is the default
@@ -1070,7 +1070,7 @@ being displayed. Examples: "--notes=foo" will show only notes from
 "refs/notes/foo" and from the default notes ref(s).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-notes"> <a class="anchor" href="#Documentation/git-log.txt---no-notes"></a>--no-notes </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-notes"><a class="anchor" href="#Documentation/git-log.txt---no-notes"></a>--no-notes </dt>
 <dd>
 <p>Do not show notes. This negates the above <code>--notes</code> option, by
 resetting the list of notes refs from which notes are shown.
@@ -1078,22 +1078,22 @@ Options are parsed in the order given on the command line, so e.g.
 "--notes --notes=foo --no-notes --notes=bar" will only show notes
 from "refs/notes/bar".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---show-noteslttreeishgt"> <a class="anchor" href="#Documentation/git-log.txt---show-notestreeish"></a> <a class="anchor" href="#Documentation/git-log.txt---show-noteslttreeishgt"></a>--show-notes[=&lt;treeish&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-standard-notes"> <a class="anchor" href="#Documentation/git-log.txt---no-standard-notes"></a>--[no-]standard-notes </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---show-noteslttreeishgt"><a id="Documentation/git-log.txt---show-notestreeish" class="anchor" href="#Documentation/git-log.txt---show-notestreeish"></a>--show-notes[=&lt;treeish&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-standard-notes"><a class="anchor" href="#Documentation/git-log.txt---no-standard-notes"></a>--[no-]standard-notes </dt>
 <dd>
 <p>These options are deprecated. Use the above --notes/--no-notes
 options instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---show-signature"> <a class="anchor" href="#Documentation/git-log.txt---show-signature"></a>--show-signature </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---show-signature"><a class="anchor" href="#Documentation/git-log.txt---show-signature"></a>--show-signature </dt>
 <dd>
 <p>Check the validity of a signed commit object by passing the signature
 to <code>gpg --verify</code> and show the output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---relative-date"> <a class="anchor" href="#Documentation/git-log.txt---relative-date"></a>--relative-date </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---relative-date"><a class="anchor" href="#Documentation/git-log.txt---relative-date"></a>--relative-date </dt>
 <dd>
 <p>Synonym for <code>--date=relative</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---dateltformatgt"> <a class="anchor" href="#Documentation/git-log.txt---dateformat"></a> <a class="anchor" href="#Documentation/git-log.txt---dateltformatgt"></a>--date=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---dateltformatgt"><a id="Documentation/git-log.txt---dateformat" class="anchor" href="#Documentation/git-log.txt---dateformat"></a>--date=&lt;format&gt; </dt>
 <dd>
 <p>Only takes effect for dates shown in human-readable format, such
 as when using <code>--pretty</code>. <code>log.date</code> config variable sets a default
@@ -1181,17 +1181,17 @@ format placeholders. When using <code>-local</code>, the correct syntax is
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---parents"> <a class="anchor" href="#Documentation/git-log.txt---parents"></a>--parents </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---parents"><a class="anchor" href="#Documentation/git-log.txt---parents"></a>--parents </dt>
 <dd>
 <p>Print also the parents of the commit (in the form "commit parent&#8230;&#8203;").
 Also enables parent rewriting, see <em>History Simplification</em> above.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---children"> <a class="anchor" href="#Documentation/git-log.txt---children"></a>--children </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---children"><a class="anchor" href="#Documentation/git-log.txt---children"></a>--children </dt>
 <dd>
 <p>Print also the children of the commit (in the form "commit child&#8230;&#8203;").
 Also enables parent rewriting, see <em>History Simplification</em> above.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---left-right"> <a class="anchor" href="#Documentation/git-log.txt---left-right"></a>--left-right </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---left-right"><a class="anchor" href="#Documentation/git-log.txt---left-right"></a>--left-right </dt>
 <dd>
 <p>Mark which side of a symmetric difference a commit is reachable from.
 Commits from the left side are prefixed with <code>&lt;</code> and those from
@@ -1225,7 +1225,7 @@ commits are prefixed with <code>-</code>.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---graph"> <a class="anchor" href="#Documentation/git-log.txt---graph"></a>--graph </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---graph"><a class="anchor" href="#Documentation/git-log.txt---graph"></a>--graph </dt>
 <dd>
 <p>Draw a text-based graphical representation of the commit history
 on the left hand side of the output.  This may cause extra lines
@@ -1240,7 +1240,7 @@ Cannot be combined with <code>--no-walk</code>.</p>
 <code>--date-order</code> option may also be specified.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---show-linear-breakltbarriergt"> <a class="anchor" href="#Documentation/git-log.txt---show-linear-breakbarrier"></a> <a class="anchor" href="#Documentation/git-log.txt---show-linear-breakltbarriergt"></a>--show-linear-break[=&lt;barrier&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---show-linear-breakltbarriergt"><a id="Documentation/git-log.txt---show-linear-breakbarrier" class="anchor" href="#Documentation/git-log.txt---show-linear-breakbarrier"></a>--show-linear-break[=&lt;barrier&gt;] </dt>
 <dd>
 <p>When --graph is not used, all history branches are flattened
 which can make it hard to see that the two consecutive commits
@@ -1260,7 +1260,7 @@ options may be given. See <a href='{{< relurl "docs/git-diff-files" >}}'>git-dif
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt--c"> <a class="anchor" href="#Documentation/git-log.txt--c"></a>-c </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--c"><a class="anchor" href="#Documentation/git-log.txt--c"></a>-c </dt>
 <dd>
 <p>With this option, diff output for a merge commit
 shows the differences from each of the parents to the merge result
@@ -1268,14 +1268,14 @@ simultaneously instead of showing pairwise diff between a parent
 and the result one at a time. Furthermore, it lists only files
 which were modified from all parents.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---cc"> <a class="anchor" href="#Documentation/git-log.txt---cc"></a>--cc </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---cc"><a class="anchor" href="#Documentation/git-log.txt---cc"></a>--cc </dt>
 <dd>
 <p>This flag implies the <code>-c</code> option and further compresses the
 patch output by omitting uninteresting hunks whose contents in
 the parents have only two variants and the merge result picks
 one of them without modification.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--m"> <a class="anchor" href="#Documentation/git-log.txt--m"></a>-m </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--m"><a class="anchor" href="#Documentation/git-log.txt--m"></a>-m </dt>
 <dd>
 <p>This flag makes the merge commits show the full diff like
 regular commits; for each merge parent, a separate log entry
@@ -1284,11 +1284,11 @@ the first parent is shown when <code>--first-parent</code> option is given;
 in that case, the output represents the changes the merge
 brought <em>into</em> the then-current branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--r"> <a class="anchor" href="#Documentation/git-log.txt--r"></a>-r </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--r"><a class="anchor" href="#Documentation/git-log.txt--r"></a>-r </dt>
 <dd>
 <p>Show recursive diffs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--t"> <a class="anchor" href="#Documentation/git-log.txt--t"></a>-t </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--t"><a class="anchor" href="#Documentation/git-log.txt--t"></a>-t </dt>
 <dd>
 <p>Show the tree objects in the diff output. This implies <code>-r</code>.</p>
 </dd>
@@ -1774,26 +1774,26 @@ $ git log -2 --pretty=%h 4da45bef</pre>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt--p"> <a class="anchor" href="#Documentation/git-log.txt--p"></a>-p </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt--u"> <a class="anchor" href="#Documentation/git-log.txt--u"></a>-u </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---patch"> <a class="anchor" href="#Documentation/git-log.txt---patch"></a>--patch </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--p"><a class="anchor" href="#Documentation/git-log.txt--p"></a>-p </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--u"><a class="anchor" href="#Documentation/git-log.txt--u"></a>-u </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---patch"><a class="anchor" href="#Documentation/git-log.txt---patch"></a>--patch </dt>
 <dd>
 <p>Generate patch (see section on generating patches).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--s"> <a class="anchor" href="#Documentation/git-log.txt--s"></a>-s </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-patch"> <a class="anchor" href="#Documentation/git-log.txt---no-patch"></a>--no-patch </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--s"><a class="anchor" href="#Documentation/git-log.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-patch"><a class="anchor" href="#Documentation/git-log.txt---no-patch"></a>--no-patch </dt>
 <dd>
 <p>Suppress diff output. Useful for commands like <code>git show</code> that
 show the patch by default, or to cancel the effect of <code>--patch</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Ultngt"> <a class="anchor" href="#Documentation/git-log.txt--Un"></a> <a class="anchor" href="#Documentation/git-log.txt--Ultngt"></a>-U&lt;n&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---unifiedltngt"> <a class="anchor" href="#Documentation/git-log.txt---unifiedn"></a> <a class="anchor" href="#Documentation/git-log.txt---unifiedltngt"></a>--unified=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Ultngt"><a id="Documentation/git-log.txt--Un" class="anchor" href="#Documentation/git-log.txt--Un"></a>-U&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---unifiedltngt"><a id="Documentation/git-log.txt---unifiedn" class="anchor" href="#Documentation/git-log.txt---unifiedn"></a>--unified=&lt;n&gt; </dt>
 <dd>
 <p>Generate diffs with &lt;n&gt; lines of context instead of
 the usual three.
 Implies <code>-p</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---raw"> <a class="anchor" href="#Documentation/git-log.txt---raw"></a>--raw </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---raw"><a class="anchor" href="#Documentation/git-log.txt---raw"></a>--raw </dt>
 <dd>
 <p>For each commit, show a summary of changes using the raw diff
 format. See the "RAW OUTPUT FORMAT" section of
@@ -1801,33 +1801,33 @@ format. See the "RAW OUTPUT FORMAT" section of
 itself in raw format, which you can achieve with
 <code>--format=raw</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---patch-with-raw"> <a class="anchor" href="#Documentation/git-log.txt---patch-with-raw"></a>--patch-with-raw </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---patch-with-raw"><a class="anchor" href="#Documentation/git-log.txt---patch-with-raw"></a>--patch-with-raw </dt>
 <dd>
 <p>Synonym for <code>-p --raw</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---indent-heuristic"> <a class="anchor" href="#Documentation/git-log.txt---indent-heuristic"></a>--indent-heuristic </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---indent-heuristic"><a class="anchor" href="#Documentation/git-log.txt---indent-heuristic"></a>--indent-heuristic </dt>
 <dd>
 <p>Enable the heuristic that shifts diff hunk boundaries to make patches
 easier to read. This is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-indent-heuristic"> <a class="anchor" href="#Documentation/git-log.txt---no-indent-heuristic"></a>--no-indent-heuristic </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-indent-heuristic"><a class="anchor" href="#Documentation/git-log.txt---no-indent-heuristic"></a>--no-indent-heuristic </dt>
 <dd>
 <p>Disable the indent heuristic.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---minimal"> <a class="anchor" href="#Documentation/git-log.txt---minimal"></a>--minimal </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---minimal"><a class="anchor" href="#Documentation/git-log.txt---minimal"></a>--minimal </dt>
 <dd>
 <p>Spend extra time to make sure the smallest possible
 diff is produced.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---patience"> <a class="anchor" href="#Documentation/git-log.txt---patience"></a>--patience </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---patience"><a class="anchor" href="#Documentation/git-log.txt---patience"></a>--patience </dt>
 <dd>
 <p>Generate a diff using the "patience diff" algorithm.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---histogram"> <a class="anchor" href="#Documentation/git-log.txt---histogram"></a>--histogram </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---histogram"><a class="anchor" href="#Documentation/git-log.txt---histogram"></a>--histogram </dt>
 <dd>
 <p>Generate a diff using the "histogram diff" algorithm.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---anchoredlttextgt"> <a class="anchor" href="#Documentation/git-log.txt---anchoredtext"></a> <a class="anchor" href="#Documentation/git-log.txt---anchoredlttextgt"></a>--anchored=&lt;text&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---anchoredlttextgt"><a id="Documentation/git-log.txt---anchoredtext" class="anchor" href="#Documentation/git-log.txt---anchoredtext"></a>--anchored=&lt;text&gt; </dt>
 <dd>
 <p>Generate a diff using the "anchored diff" algorithm.</p>
 <div class="paragraph">
@@ -1840,27 +1840,27 @@ appearing as a deletion or addition in the output. It uses the "patience
 diff" algorithm internally.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---diff-algorithmpatienceminimalhistogrammyers"> <a class="anchor" href="#Documentation/git-log.txt---diff-algorithmpatienceminimalhistogrammyers"></a>--diff-algorithm={patience|minimal|histogram|myers} </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---diff-algorithmpatienceminimalhistogrammyers"><a class="anchor" href="#Documentation/git-log.txt---diff-algorithmpatienceminimalhistogrammyers"></a>--diff-algorithm={patience|minimal|histogram|myers} </dt>
 <dd>
 <p>Choose a diff algorithm. The variants are as follows:</p>
 <div class="openblock">
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-codedefaultcodecodemyerscode"> <a class="anchor" href="#Documentation/git-log.txt-defaultmyers"></a> <a class="anchor" href="#Documentation/git-log.txt-codedefaultcodecodemyerscode"></a><code>default</code>, <code>myers</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codedefaultcodecodemyerscode"><a id="Documentation/git-log.txt-defaultmyers" class="anchor" href="#Documentation/git-log.txt-defaultmyers"></a><code>default</code>, <code>myers</code> </dt>
 <dd>
 <p>The basic greedy diff algorithm. Currently, this is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codeminimalcode"> <a class="anchor" href="#Documentation/git-log.txt-minimal"></a> <a class="anchor" href="#Documentation/git-log.txt-codeminimalcode"></a><code>minimal</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codeminimalcode"><a id="Documentation/git-log.txt-minimal" class="anchor" href="#Documentation/git-log.txt-minimal"></a><code>minimal</code> </dt>
 <dd>
 <p>Spend extra time to make sure the smallest possible diff is
 produced.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codepatiencecode"> <a class="anchor" href="#Documentation/git-log.txt-patience"></a> <a class="anchor" href="#Documentation/git-log.txt-codepatiencecode"></a><code>patience</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codepatiencecode"><a id="Documentation/git-log.txt-patience" class="anchor" href="#Documentation/git-log.txt-patience"></a><code>patience</code> </dt>
 <dd>
 <p>Use "patience diff" algorithm when generating patches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codehistogramcode"> <a class="anchor" href="#Documentation/git-log.txt-histogram"></a> <a class="anchor" href="#Documentation/git-log.txt-codehistogramcode"></a><code>histogram</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codehistogramcode"><a id="Documentation/git-log.txt-histogram" class="anchor" href="#Documentation/git-log.txt-histogram"></a><code>histogram</code> </dt>
 <dd>
 <p>This algorithm extends the patience algorithm to "support
 low-occurrence common elements".</p>
@@ -1875,7 +1875,7 @@ non-default value and want to use the default one, then you
 have to use <code>--diff-algorithm=default</code> option.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---statltwidthgtltname-widthgtltcountgt"> <a class="anchor" href="#Documentation/git-log.txt---statwidthname-widthcount"></a> <a class="anchor" href="#Documentation/git-log.txt---statltwidthgtltname-widthgtltcountgt"></a>--stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---statltwidthgtltname-widthgtltcountgt"><a id="Documentation/git-log.txt---statwidthname-widthcount" class="anchor" href="#Documentation/git-log.txt---statwidthname-widthcount"></a>--stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]] </dt>
 <dd>
 <p>Generate a diffstat. By default, as much space as necessary
 will be used for the filename part, and the rest for the graph
@@ -1895,7 +1895,7 @@ there are more.</p>
 <code>--stat-name-width=&lt;name-width&gt;</code> and <code>--stat-count=&lt;count&gt;</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---compact-summary"> <a class="anchor" href="#Documentation/git-log.txt---compact-summary"></a>--compact-summary </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---compact-summary"><a class="anchor" href="#Documentation/git-log.txt---compact-summary"></a>--compact-summary </dt>
 <dd>
 <p>Output a condensed summary of extended header information such
 as file creations or deletions ("new" or "gone", optionally "+l"
@@ -1904,7 +1904,7 @@ or removing executable bit respectively) in diffstat. The
 information is put between the filename part and the graph
 part. Implies <code>--stat</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---numstat"> <a class="anchor" href="#Documentation/git-log.txt---numstat"></a>--numstat </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---numstat"><a class="anchor" href="#Documentation/git-log.txt---numstat"></a>--numstat </dt>
 <dd>
 <p>Similar to <code>--stat</code>, but shows number of added and
 deleted lines in decimal notation and pathname without
@@ -1912,13 +1912,13 @@ abbreviation, to make it more machine friendly.  For
 binary files, outputs two <code>-</code> instead of saying
 <code>0 0</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---shortstat"> <a class="anchor" href="#Documentation/git-log.txt---shortstat"></a>--shortstat </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---shortstat"><a class="anchor" href="#Documentation/git-log.txt---shortstat"></a>--shortstat </dt>
 <dd>
 <p>Output only the last line of the <code>--stat</code> format containing total
 number of modified files, as well as number of added and deleted
 lines.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---dirstatltparam1param282308203gt"> <a class="anchor" href="#Documentation/git-log.txt---dirstatparam1param2"></a> <a class="anchor" href="#Documentation/git-log.txt---dirstatltparam1param282308203gt"></a>--dirstat[=&lt;param1,param2,&#8230;&#8203;&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---dirstatltparam1param282308203gt"><a id="Documentation/git-log.txt---dirstatparam1param2" class="anchor" href="#Documentation/git-log.txt---dirstatparam1param2"></a>--dirstat[=&lt;param1,param2,&#8230;&#8203;&gt;] </dt>
 <dd>
 <p>Output the distribution of relative amount of changes for each
 sub-directory. The behavior of <code>--dirstat</code> can be customized by
@@ -1930,7 +1930,7 @@ The following parameters are available:</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-codechangescode"> <a class="anchor" href="#Documentation/git-log.txt-changes"></a> <a class="anchor" href="#Documentation/git-log.txt-codechangescode"></a><code>changes</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codechangescode"><a id="Documentation/git-log.txt-changes" class="anchor" href="#Documentation/git-log.txt-changes"></a><code>changes</code> </dt>
 <dd>
 <p>Compute the dirstat numbers by counting the lines that have been
 removed from the source, or added to the destination. This ignores
@@ -1938,7 +1938,7 @@ the amount of pure code movements within a file.  In other words,
 rearranging lines in a file is not counted as much as other changes.
 This is the default behavior when no parameter is given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codelinescode"> <a class="anchor" href="#Documentation/git-log.txt-lines"></a> <a class="anchor" href="#Documentation/git-log.txt-codelinescode"></a><code>lines</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codelinescode"><a id="Documentation/git-log.txt-lines" class="anchor" href="#Documentation/git-log.txt-lines"></a><code>lines</code> </dt>
 <dd>
 <p>Compute the dirstat numbers by doing the regular line-based diff
 analysis, and summing the removed/added line counts. (For binary
@@ -1948,21 +1948,21 @@ behavior than the <code>changes</code> behavior, but it does count rearranged
 lines within a file as much as other changes. The resulting output
 is consistent with what you get from the other <code>--*stat</code> options.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codefilescode"> <a class="anchor" href="#Documentation/git-log.txt-files"></a> <a class="anchor" href="#Documentation/git-log.txt-codefilescode"></a><code>files</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codefilescode"><a id="Documentation/git-log.txt-files" class="anchor" href="#Documentation/git-log.txt-files"></a><code>files</code> </dt>
 <dd>
 <p>Compute the dirstat numbers by counting the number of files changed.
 Each changed file counts equally in the dirstat analysis. This is
 the computationally cheapest <code>--dirstat</code> behavior, since it does
 not have to look at the file contents at all.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codecumulativecode"> <a class="anchor" href="#Documentation/git-log.txt-cumulative"></a> <a class="anchor" href="#Documentation/git-log.txt-codecumulativecode"></a><code>cumulative</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codecumulativecode"><a id="Documentation/git-log.txt-cumulative" class="anchor" href="#Documentation/git-log.txt-cumulative"></a><code>cumulative</code> </dt>
 <dd>
 <p>Count changes in a child directory for the parent directory as well.
 Note that when using <code>cumulative</code>, the sum of the percentages
 reported may exceed 100%. The default (non-cumulative) behavior can
 be specified with the <code>noncumulative</code> parameter.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-ltlimitgt"> <a class="anchor" href="#Documentation/git-log.txt-limit"></a> <a class="anchor" href="#Documentation/git-log.txt-ltlimitgt"></a>&lt;limit&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-ltlimitgt"><a id="Documentation/git-log.txt-limit" class="anchor" href="#Documentation/git-log.txt-limit"></a>&lt;limit&gt; </dt>
 <dd>
 <p>An integer parameter specifies a cut-off percent (3% by default).
 Directories contributing less than this percentage of the changes
@@ -1979,16 +1979,16 @@ and accumulating child directory counts in the parent directories:
 <code>--dirstat=files,10,cumulative</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---summary"> <a class="anchor" href="#Documentation/git-log.txt---summary"></a>--summary </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---summary"><a class="anchor" href="#Documentation/git-log.txt---summary"></a>--summary </dt>
 <dd>
 <p>Output a condensed summary of extended header information
 such as creations, renames and mode changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---patch-with-stat"> <a class="anchor" href="#Documentation/git-log.txt---patch-with-stat"></a>--patch-with-stat </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---patch-with-stat"><a class="anchor" href="#Documentation/git-log.txt---patch-with-stat"></a>--patch-with-stat </dt>
 <dd>
 <p>Synonym for <code>-p --stat</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--z"> <a class="anchor" href="#Documentation/git-log.txt--z"></a>-z </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--z"><a class="anchor" href="#Documentation/git-log.txt--z"></a>-z </dt>
 <dd>
 <p>Separate the commits with NULs instead of with new newlines.</p>
 <div class="paragraph">
@@ -2001,16 +2001,16 @@ explained for the configuration variable <code>core.quotePath</code> (see
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---name-only"> <a class="anchor" href="#Documentation/git-log.txt---name-only"></a>--name-only </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---name-only"><a class="anchor" href="#Documentation/git-log.txt---name-only"></a>--name-only </dt>
 <dd>
 <p>Show only names of changed files.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---name-status"> <a class="anchor" href="#Documentation/git-log.txt---name-status"></a>--name-status </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---name-status"><a class="anchor" href="#Documentation/git-log.txt---name-status"></a>--name-status </dt>
 <dd>
 <p>Show only names and status of changed files. See the description
 of the <code>--diff-filter</code> option on what the status letters mean.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---submoduleltformatgt"> <a class="anchor" href="#Documentation/git-log.txt---submoduleformat"></a> <a class="anchor" href="#Documentation/git-log.txt---submoduleltformatgt"></a>--submodule[=&lt;format&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---submoduleltformatgt"><a id="Documentation/git-log.txt---submoduleformat" class="anchor" href="#Documentation/git-log.txt---submoduleformat"></a>--submodule[=&lt;format&gt;] </dt>
 <dd>
 <p>Specify how differences in submodules are shown.  When specifying
 <code>--submodule=short</code> the <em>short</em> format is used.  This format just
@@ -2023,18 +2023,18 @@ inline diff of the changes in the submodule contents between the
 commit range.  Defaults to <code>diff.submodule</code> or the <em>short</em> format
 if the config option is unset.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---colorltwhengt"> <a class="anchor" href="#Documentation/git-log.txt---colorwhen"></a> <a class="anchor" href="#Documentation/git-log.txt---colorltwhengt"></a>--color[=&lt;when&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---colorltwhengt"><a id="Documentation/git-log.txt---colorwhen" class="anchor" href="#Documentation/git-log.txt---colorwhen"></a>--color[=&lt;when&gt;] </dt>
 <dd>
 <p>Show colored diff.
 <code>--color</code> (i.e. without <em>=&lt;when&gt;</em>) is the same as <code>--color=always</code>.
 <em>&lt;when&gt;</em> can be one of <code>always</code>, <code>never</code>, or <code>auto</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-color"> <a class="anchor" href="#Documentation/git-log.txt---no-color"></a>--no-color </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-color"><a class="anchor" href="#Documentation/git-log.txt---no-color"></a>--no-color </dt>
 <dd>
 <p>Turn off colored diff.
 It is the same as <code>--color=never</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---color-movedltmodegt"> <a class="anchor" href="#Documentation/git-log.txt---color-movedmode"></a> <a class="anchor" href="#Documentation/git-log.txt---color-movedltmodegt"></a>--color-moved[=&lt;mode&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---color-movedltmodegt"><a id="Documentation/git-log.txt---color-movedmode" class="anchor" href="#Documentation/git-log.txt---color-movedmode"></a>--color-moved[=&lt;mode&gt;] </dt>
 <dd>
 <p>Moved lines of code are colored differently.
 The &lt;mode&gt; defaults to <em>no</em> if the option is not given
@@ -2044,16 +2044,16 @@ The mode must be one of:</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-no"> <a class="anchor" href="#Documentation/git-log.txt-no"></a>no </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-no"><a class="anchor" href="#Documentation/git-log.txt-no"></a>no </dt>
 <dd>
 <p>Moved lines are not highlighted.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-default"> <a class="anchor" href="#Documentation/git-log.txt-default"></a>default </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-default"><a class="anchor" href="#Documentation/git-log.txt-default"></a>default </dt>
 <dd>
 <p>Is a synonym for <code>zebra</code>. This may change to a more sensible mode
 in the future.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-plain"> <a class="anchor" href="#Documentation/git-log.txt-plain"></a>plain </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-plain"><a class="anchor" href="#Documentation/git-log.txt-plain"></a>plain </dt>
 <dd>
 <p>Any line that is added in one location and was removed
 in another location will be colored with <em>color.diff.newMoved</em>.
@@ -2062,7 +2062,7 @@ that are added somewhere else in the diff. This mode picks up any
 moved line, but it is not very useful in a review to determine
 if a block of code was moved without permutation.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-zebra"> <a class="anchor" href="#Documentation/git-log.txt-zebra"></a>zebra </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-zebra"><a class="anchor" href="#Documentation/git-log.txt-zebra"></a>zebra </dt>
 <dd>
 <p>Blocks of moved text of at least 20 alphanumeric characters
 are detected greedily. The detected blocks are
@@ -2070,7 +2070,7 @@ painted using either the <em>color.diff.{old,new}Moved</em> color or
 <em>color.diff.{old,new}MovedAlternative</em>. The change between
 the two colors indicates that a new block was detected.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-dimmedzebra"> <a class="anchor" href="#Documentation/git-log.txt-dimmedzebra"></a>dimmed_zebra </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-dimmedzebra"><a class="anchor" href="#Documentation/git-log.txt-dimmedzebra"></a>dimmed_zebra </dt>
 <dd>
 <p>Similar to <em>zebra</em>, but additional dimming of uninteresting parts
 of moved code is performed. The bordering lines of two adjacent
@@ -2081,7 +2081,7 @@ blocks are considered interesting, the rest is uninteresting.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---word-diffltmodegt"> <a class="anchor" href="#Documentation/git-log.txt---word-diffmode"></a> <a class="anchor" href="#Documentation/git-log.txt---word-diffltmodegt"></a>--word-diff[=&lt;mode&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---word-diffltmodegt"><a id="Documentation/git-log.txt---word-diffmode" class="anchor" href="#Documentation/git-log.txt---word-diffmode"></a>--word-diff[=&lt;mode&gt;] </dt>
 <dd>
 <p>Show a word diff, using the &lt;mode&gt; to delimit changed words.
 By default, words are delimited by whitespace; see
@@ -2091,17 +2091,17 @@ must be one of:</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-color"> <a class="anchor" href="#Documentation/git-log.txt-color"></a>color </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-color"><a class="anchor" href="#Documentation/git-log.txt-color"></a>color </dt>
 <dd>
 <p>Highlight changed words using only colors.  Implies <code>--color</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-plain-1"> <a class="anchor" href="#Documentation/git-log.txt-plain-1"></a>plain </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-plain-1"><a class="anchor" href="#Documentation/git-log.txt-plain-1"></a>plain </dt>
 <dd>
 <p>Show words as <code>[-removed-]</code> and <code>{+added+}</code>.  Makes no
 attempts to escape the delimiters if they appear in the input,
 so the output may be ambiguous.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-porcelain"> <a class="anchor" href="#Documentation/git-log.txt-porcelain"></a>porcelain </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-porcelain"><a class="anchor" href="#Documentation/git-log.txt-porcelain"></a>porcelain </dt>
 <dd>
 <p>Use a special line-based format intended for script
 consumption.  Added/removed/unchanged runs are printed in the
@@ -2110,7 +2110,7 @@ character at the beginning of the line and extending to the
 end of the line.  Newlines in the input are represented by a
 tilde <code>~</code> on a line of its own.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-none"> <a class="anchor" href="#Documentation/git-log.txt-none"></a>none </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-none"><a class="anchor" href="#Documentation/git-log.txt-none"></a>none </dt>
 <dd>
 <p>Disable word diff again.</p>
 </dd>
@@ -2123,7 +2123,7 @@ tilde <code>~</code> on a line of its own.</p>
 highlight the changed parts in all modes if enabled.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---word-diff-regexltregexgt"> <a class="anchor" href="#Documentation/git-log.txt---word-diff-regexregex"></a> <a class="anchor" href="#Documentation/git-log.txt---word-diff-regexltregexgt"></a>--word-diff-regex=&lt;regex&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---word-diff-regexltregexgt"><a id="Documentation/git-log.txt---word-diff-regexregex" class="anchor" href="#Documentation/git-log.txt---word-diff-regexregex"></a>--word-diff-regex=&lt;regex&gt; </dt>
 <dd>
 <p>Use &lt;regex&gt; to decide what a word is, instead of considering
 runs of non-whitespace to be a word.  Also implies
@@ -2148,17 +2148,17 @@ overrides any diff driver or configuration setting.  Diff drivers
 override configuration settings.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---color-wordsltregexgt"> <a class="anchor" href="#Documentation/git-log.txt---color-wordsregex"></a> <a class="anchor" href="#Documentation/git-log.txt---color-wordsltregexgt"></a>--color-words[=&lt;regex&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---color-wordsltregexgt"><a id="Documentation/git-log.txt---color-wordsregex" class="anchor" href="#Documentation/git-log.txt---color-wordsregex"></a>--color-words[=&lt;regex&gt;] </dt>
 <dd>
 <p>Equivalent to <code>--word-diff=color</code> plus (if a regex was
 specified) <code>--word-diff-regex=&lt;regex&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-renames"> <a class="anchor" href="#Documentation/git-log.txt---no-renames"></a>--no-renames </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-renames"><a class="anchor" href="#Documentation/git-log.txt---no-renames"></a>--no-renames </dt>
 <dd>
 <p>Turn off rename detection, even when the configuration
 file gives the default to do so.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---check"> <a class="anchor" href="#Documentation/git-log.txt---check"></a>--check </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---check"><a class="anchor" href="#Documentation/git-log.txt---check"></a>--check </dt>
 <dd>
 <p>Warn if changes introduce conflict markers or whitespace errors.
 What are considered whitespace errors is controlled by <code>core.whitespace</code>
@@ -2169,7 +2169,7 @@ initial indent of the line are considered whitespace errors.
 Exits with non-zero status if problems are found. Not compatible
 with --exit-code.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ws-error-highlightltkindgt"> <a class="anchor" href="#Documentation/git-log.txt---ws-error-highlightkind"></a> <a class="anchor" href="#Documentation/git-log.txt---ws-error-highlightltkindgt"></a>--ws-error-highlight=&lt;kind&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ws-error-highlightltkindgt"><a id="Documentation/git-log.txt---ws-error-highlightkind" class="anchor" href="#Documentation/git-log.txt---ws-error-highlightkind"></a>--ws-error-highlight=&lt;kind&gt; </dt>
 <dd>
 <p>Highlight whitespace errors in the <code>context</code>, <code>old</code> or <code>new</code>
 lines of the diff.  Multiple values are separated by comma,
@@ -2180,18 +2180,18 @@ this option is not given, and the configuration variable
 <code>new</code> lines are highlighted. The whitespace errors are colored
 with <code>color.diff.whitespace</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---full-index"> <a class="anchor" href="#Documentation/git-log.txt---full-index"></a>--full-index </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---full-index"><a class="anchor" href="#Documentation/git-log.txt---full-index"></a>--full-index </dt>
 <dd>
 <p>Instead of the first handful of characters, show the full
 pre- and post-image blob object names on the "index"
 line when generating patch format output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---binary"> <a class="anchor" href="#Documentation/git-log.txt---binary"></a>--binary </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---binary"><a class="anchor" href="#Documentation/git-log.txt---binary"></a>--binary </dt>
 <dd>
 <p>In addition to <code>--full-index</code>, output a binary diff that
 can be applied with <code>git-apply</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---abbrevltngt"> <a class="anchor" href="#Documentation/git-log.txt---abbrevn"></a> <a class="anchor" href="#Documentation/git-log.txt---abbrevltngt"></a>--abbrev[=&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---abbrevltngt"><a id="Documentation/git-log.txt---abbrevn" class="anchor" href="#Documentation/git-log.txt---abbrevn"></a>--abbrev[=&lt;n&gt;] </dt>
 <dd>
 <p>Instead of showing the full 40-byte hexadecimal object
 name in diff-raw format output and diff-tree header
@@ -2200,8 +2200,8 @@ independent of the <code>--full-index</code> option above, which controls
 the diff-patch output format.  Non default number of
 digits can be specified with <code>--abbrev=&lt;n&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Bltngtltmgt"> <a class="anchor" href="#Documentation/git-log.txt--Bnm"></a> <a class="anchor" href="#Documentation/git-log.txt--Bltngtltmgt"></a>-B[&lt;n&gt;][/&lt;m&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---break-rewritesltngtltmgt"> <a class="anchor" href="#Documentation/git-log.txt---break-rewritesnm"></a> <a class="anchor" href="#Documentation/git-log.txt---break-rewritesltngtltmgt"></a>--break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Bltngtltmgt"><a id="Documentation/git-log.txt--Bnm" class="anchor" href="#Documentation/git-log.txt--Bnm"></a>-B[&lt;n&gt;][/&lt;m&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---break-rewritesltngtltmgt"><a id="Documentation/git-log.txt---break-rewritesnm" class="anchor" href="#Documentation/git-log.txt---break-rewritesnm"></a>--break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]] </dt>
 <dd>
 <p>Break complete rewrite changes into pairs of delete and
 create. This serves two purposes:</p>
@@ -2226,8 +2226,8 @@ eligible for being picked up as a possible source of a rename to
 another file.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Mltngt"> <a class="anchor" href="#Documentation/git-log.txt--Mn"></a> <a class="anchor" href="#Documentation/git-log.txt--Mltngt"></a>-M[&lt;n&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---find-renamesltngt"> <a class="anchor" href="#Documentation/git-log.txt---find-renamesn"></a> <a class="anchor" href="#Documentation/git-log.txt---find-renamesltngt"></a>--find-renames[=&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Mltngt"><a id="Documentation/git-log.txt--Mn" class="anchor" href="#Documentation/git-log.txt--Mn"></a>-M[&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---find-renamesltngt"><a id="Documentation/git-log.txt---find-renamesn" class="anchor" href="#Documentation/git-log.txt---find-renamesn"></a>--find-renames[=&lt;n&gt;] </dt>
 <dd>
 <p>If generating diffs, detect and report renames for each commit.
 For following files across renames while traversing history, see
@@ -2242,13 +2242,13 @@ a fraction, with a decimal point before it.  I.e., <code>-M5</code> becomes
 the same as <code>-M5%</code>.  To limit detection to exact renames, use
 <code>-M100%</code>.  The default similarity index is 50%.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Cltngt"> <a class="anchor" href="#Documentation/git-log.txt--Cn"></a> <a class="anchor" href="#Documentation/git-log.txt--Cltngt"></a>-C[&lt;n&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---find-copiesltngt"> <a class="anchor" href="#Documentation/git-log.txt---find-copiesn"></a> <a class="anchor" href="#Documentation/git-log.txt---find-copiesltngt"></a>--find-copies[=&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Cltngt"><a id="Documentation/git-log.txt--Cn" class="anchor" href="#Documentation/git-log.txt--Cn"></a>-C[&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---find-copiesltngt"><a id="Documentation/git-log.txt---find-copiesn" class="anchor" href="#Documentation/git-log.txt---find-copiesn"></a>--find-copies[=&lt;n&gt;] </dt>
 <dd>
 <p>Detect copies as well as renames.  See also <code>--find-copies-harder</code>.
 If <code>n</code> is specified, it has the same meaning as for <code>-M&lt;n&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---find-copies-harder"> <a class="anchor" href="#Documentation/git-log.txt---find-copies-harder"></a>--find-copies-harder </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---find-copies-harder"><a class="anchor" href="#Documentation/git-log.txt---find-copies-harder"></a>--find-copies-harder </dt>
 <dd>
 <p>For performance reasons, by default, <code>-C</code> option finds copies only
 if the original file of the copy was modified in the same
@@ -2258,8 +2258,8 @@ copy.  This is a very expensive operation for large
 projects, so use it with caution.  Giving more than one
 <code>-C</code> option has the same effect.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--D"> <a class="anchor" href="#Documentation/git-log.txt--D"></a>-D </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---irreversible-delete"> <a class="anchor" href="#Documentation/git-log.txt---irreversible-delete"></a>--irreversible-delete </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--D"><a class="anchor" href="#Documentation/git-log.txt--D"></a>-D </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---irreversible-delete"><a class="anchor" href="#Documentation/git-log.txt---irreversible-delete"></a>--irreversible-delete </dt>
 <dd>
 <p>Omit the preimage for deletes, i.e. print only the header but not
 the diff between the preimage and <code>/dev/null</code>. The resulting patch
@@ -2273,7 +2273,7 @@ hence the name of the option.</p>
 of a delete/create pair.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--lltnumgt"> <a class="anchor" href="#Documentation/git-log.txt--lnum"></a> <a class="anchor" href="#Documentation/git-log.txt--lltnumgt"></a>-l&lt;num&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--lltnumgt"><a id="Documentation/git-log.txt--lnum" class="anchor" href="#Documentation/git-log.txt--lnum"></a>-l&lt;num&gt; </dt>
 <dd>
 <p>The <code>-M</code> and <code>-C</code> options require O(n^2) processing time where n
 is the number of potential rename/copy targets.  This
@@ -2281,7 +2281,7 @@ option prevents rename/copy detection from running if
 the number of rename/copy targets exceeds the specified
 number.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---diff-filterACDMRTUXB82308203"> <a class="anchor" href="#Documentation/git-log.txt---diff-filterACDMRTUXB"></a> <a class="anchor" href="#Documentation/git-log.txt---diff-filterACDMRTUXB82308203"></a>--diff-filter=[(A|C|D|M|R|T|U|X|B)&#8230;&#8203;[*]] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---diff-filterACDMRTUXB82308203"><a id="Documentation/git-log.txt---diff-filterACDMRTUXB" class="anchor" href="#Documentation/git-log.txt---diff-filterACDMRTUXB"></a>--diff-filter=[(A|C|D|M|R|T|U|X|B)&#8230;&#8203;[*]] </dt>
 <dd>
 <p>Select only files that are Added (<code>A</code>), Copied (<code>C</code>),
 Deleted (<code>D</code>), Modified (<code>M</code>), Renamed (<code>R</code>), have their
@@ -2305,7 +2305,7 @@ the index).  Similarly, copied and renamed entries cannot appear if
 detection for those types is disabled.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Sltstringgt"> <a class="anchor" href="#Documentation/git-log.txt--Sstring"></a> <a class="anchor" href="#Documentation/git-log.txt--Sltstringgt"></a>-S&lt;string&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Sltstringgt"><a id="Documentation/git-log.txt--Sstring" class="anchor" href="#Documentation/git-log.txt--Sstring"></a>-S&lt;string&gt; </dt>
 <dd>
 <p>Look for differences that change the number of occurrences of
 the specified string (i.e. addition/deletion) in a file.
@@ -2318,7 +2318,7 @@ block in the preimage back into <code>-S</code>, and keep going until you get th
 very first version of the block.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Gltregexgt"> <a class="anchor" href="#Documentation/git-log.txt--Gregex"></a> <a class="anchor" href="#Documentation/git-log.txt--Gltregexgt"></a>-G&lt;regex&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Gltregexgt"><a id="Documentation/git-log.txt--Gregex" class="anchor" href="#Documentation/git-log.txt--Gregex"></a>-G&lt;regex&gt; </dt>
 <dd>
 <p>Look for differences whose patch text contains added/removed
 lines that match &lt;regex&gt;.</p>
@@ -2344,7 +2344,7 @@ occurrences of that string did not change).</p>
 information.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---find-objectltobject-idgt"> <a class="anchor" href="#Documentation/git-log.txt---find-objectobject-id"></a> <a class="anchor" href="#Documentation/git-log.txt---find-objectltobject-idgt"></a>--find-object=&lt;object-id&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---find-objectltobject-idgt"><a id="Documentation/git-log.txt---find-objectobject-id" class="anchor" href="#Documentation/git-log.txt---find-objectobject-id"></a>--find-object=&lt;object-id&gt; </dt>
 <dd>
 <p>Look for differences that change the number of occurrences of
 the specified object. Similar to <code>-S</code>, just the argument is different
@@ -2355,18 +2355,18 @@ object id.</p>
 <code>git-log</code> to also find trees.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---pickaxe-all"> <a class="anchor" href="#Documentation/git-log.txt---pickaxe-all"></a>--pickaxe-all </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---pickaxe-all"><a class="anchor" href="#Documentation/git-log.txt---pickaxe-all"></a>--pickaxe-all </dt>
 <dd>
 <p>When <code>-S</code> or <code>-G</code> finds a change, show all the changes in that
 changeset, not just the files that contain the change
 in &lt;string&gt;.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---pickaxe-regex"> <a class="anchor" href="#Documentation/git-log.txt---pickaxe-regex"></a>--pickaxe-regex </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---pickaxe-regex"><a class="anchor" href="#Documentation/git-log.txt---pickaxe-regex"></a>--pickaxe-regex </dt>
 <dd>
 <p>Treat the &lt;string&gt; given to <code>-S</code> as an extended POSIX regular
 expression to match.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--Oltorderfilegt"> <a class="anchor" href="#Documentation/git-log.txt--Oorderfile"></a> <a class="anchor" href="#Documentation/git-log.txt--Oltorderfilegt"></a>-O&lt;orderfile&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--Oltorderfilegt"><a id="Documentation/git-log.txt--Oorderfile" class="anchor" href="#Documentation/git-log.txt--Oorderfile"></a>-O&lt;orderfile&gt; </dt>
 <dd>
 <p>Control the order in which files appear in the output.
 This overrides the <code>diff.orderFile</code> configuration variable
@@ -2416,12 +2416,12 @@ components matches the pattern.  For example, the pattern "<code>foo*bar</code>"
 matches "<code>fooasdfbar</code>" and "<code>foo/bar/baz/asdf</code>" but not "<code>foobarx</code>".</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--R"> <a class="anchor" href="#Documentation/git-log.txt--R"></a>-R </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--R"><a class="anchor" href="#Documentation/git-log.txt--R"></a>-R </dt>
 <dd>
 <p>Swap two inputs; that is, show differences from index or
 on-disk file to tree contents.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---relativeltpathgt"> <a class="anchor" href="#Documentation/git-log.txt---relativepath"></a> <a class="anchor" href="#Documentation/git-log.txt---relativeltpathgt"></a>--relative[=&lt;path&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---relativeltpathgt"><a id="Documentation/git-log.txt---relativepath" class="anchor" href="#Documentation/git-log.txt---relativepath"></a>--relative[=&lt;path&gt;] </dt>
 <dd>
 <p>When run from a subdirectory of the project, it can be
 told to exclude changes outside the directory and show
@@ -2430,61 +2430,61 @@ not in a subdirectory (e.g. in a bare repository), you
 can name which subdirectory to make the output relative
 to by giving a &lt;path&gt; as an argument.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--a"> <a class="anchor" href="#Documentation/git-log.txt--a"></a>-a </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---text"> <a class="anchor" href="#Documentation/git-log.txt---text"></a>--text </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--a"><a class="anchor" href="#Documentation/git-log.txt--a"></a>-a </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---text"><a class="anchor" href="#Documentation/git-log.txt---text"></a>--text </dt>
 <dd>
 <p>Treat all files as text.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-cr-at-eol"> <a class="anchor" href="#Documentation/git-log.txt---ignore-cr-at-eol"></a>--ignore-cr-at-eol </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-cr-at-eol"><a class="anchor" href="#Documentation/git-log.txt---ignore-cr-at-eol"></a>--ignore-cr-at-eol </dt>
 <dd>
 <p>Ignore carriage-return at the end of line when doing a comparison.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-space-at-eol"> <a class="anchor" href="#Documentation/git-log.txt---ignore-space-at-eol"></a>--ignore-space-at-eol </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-space-at-eol"><a class="anchor" href="#Documentation/git-log.txt---ignore-space-at-eol"></a>--ignore-space-at-eol </dt>
 <dd>
 <p>Ignore changes in whitespace at EOL.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--b"> <a class="anchor" href="#Documentation/git-log.txt--b"></a>-b </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-space-change"> <a class="anchor" href="#Documentation/git-log.txt---ignore-space-change"></a>--ignore-space-change </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--b"><a class="anchor" href="#Documentation/git-log.txt--b"></a>-b </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-space-change"><a class="anchor" href="#Documentation/git-log.txt---ignore-space-change"></a>--ignore-space-change </dt>
 <dd>
 <p>Ignore changes in amount of whitespace.  This ignores whitespace
 at line end, and considers all other sequences of one or
 more whitespace characters to be equivalent.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--w"> <a class="anchor" href="#Documentation/git-log.txt--w"></a>-w </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-all-space"> <a class="anchor" href="#Documentation/git-log.txt---ignore-all-space"></a>--ignore-all-space </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--w"><a class="anchor" href="#Documentation/git-log.txt--w"></a>-w </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-all-space"><a class="anchor" href="#Documentation/git-log.txt---ignore-all-space"></a>--ignore-all-space </dt>
 <dd>
 <p>Ignore whitespace when comparing lines.  This ignores
 differences even if one line has whitespace where the other
 line has none.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-blank-lines"> <a class="anchor" href="#Documentation/git-log.txt---ignore-blank-lines"></a>--ignore-blank-lines </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-blank-lines"><a class="anchor" href="#Documentation/git-log.txt---ignore-blank-lines"></a>--ignore-blank-lines </dt>
 <dd>
 <p>Ignore changes whose lines are all blank.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---inter-hunk-contextltlinesgt"> <a class="anchor" href="#Documentation/git-log.txt---inter-hunk-contextlines"></a> <a class="anchor" href="#Documentation/git-log.txt---inter-hunk-contextltlinesgt"></a>--inter-hunk-context=&lt;lines&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---inter-hunk-contextltlinesgt"><a id="Documentation/git-log.txt---inter-hunk-contextlines" class="anchor" href="#Documentation/git-log.txt---inter-hunk-contextlines"></a>--inter-hunk-context=&lt;lines&gt; </dt>
 <dd>
 <p>Show the context between diff hunks, up to the specified number
 of lines, thereby fusing hunks that are close to each other.
 Defaults to <code>diff.interHunkContext</code> or 0 if the config option
 is unset.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt--W"> <a class="anchor" href="#Documentation/git-log.txt--W"></a>-W </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---function-context"> <a class="anchor" href="#Documentation/git-log.txt---function-context"></a>--function-context </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt--W"><a class="anchor" href="#Documentation/git-log.txt--W"></a>-W </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---function-context"><a class="anchor" href="#Documentation/git-log.txt---function-context"></a>--function-context </dt>
 <dd>
 <p>Show whole surrounding functions of changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ext-diff"> <a class="anchor" href="#Documentation/git-log.txt---ext-diff"></a>--ext-diff </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ext-diff"><a class="anchor" href="#Documentation/git-log.txt---ext-diff"></a>--ext-diff </dt>
 <dd>
 <p>Allow an external diff helper to be executed. If you set an
 external diff driver with <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>, you need
 to use this option with <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> and friends.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-ext-diff"> <a class="anchor" href="#Documentation/git-log.txt---no-ext-diff"></a>--no-ext-diff </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-ext-diff"><a class="anchor" href="#Documentation/git-log.txt---no-ext-diff"></a>--no-ext-diff </dt>
 <dd>
 <p>Disallow external diff drivers.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---textconv"> <a class="anchor" href="#Documentation/git-log.txt---textconv"></a>--textconv </dt>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-textconv"> <a class="anchor" href="#Documentation/git-log.txt---no-textconv"></a>--no-textconv </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---textconv"><a class="anchor" href="#Documentation/git-log.txt---textconv"></a>--textconv </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-textconv"><a class="anchor" href="#Documentation/git-log.txt---no-textconv"></a>--no-textconv </dt>
 <dd>
 <p>Allow (or disallow) external text conversion filters to be run
 when comparing binary files. See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for
@@ -2495,7 +2495,7 @@ filters are enabled by default only for <a href='{{< relurl "docs/git-diff" >}}'
 <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>, but not for <a href='{{< relurl "docs/git-format-patch" >}}'>git-format-patch[1]</a> or
 diff plumbing commands.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ignore-submodulesltwhengt"> <a class="anchor" href="#Documentation/git-log.txt---ignore-submoduleswhen"></a> <a class="anchor" href="#Documentation/git-log.txt---ignore-submodulesltwhengt"></a>--ignore-submodules[=&lt;when&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ignore-submodulesltwhengt"><a id="Documentation/git-log.txt---ignore-submoduleswhen" class="anchor" href="#Documentation/git-log.txt---ignore-submoduleswhen"></a>--ignore-submodules[=&lt;when&gt;] </dt>
 <dd>
 <p>Ignore changes to submodules in the diff generation. &lt;when&gt; can be
 either "none", "untracked", "dirty" or "all", which is the default.
@@ -2509,23 +2509,23 @@ content). Using "dirty" ignores all changes to the work tree of submodules,
 only changes to the commits stored in the superproject are shown (this was
 the behavior until 1.7.0). Using "all" hides all changes to submodules.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---src-prefixltprefixgt"> <a class="anchor" href="#Documentation/git-log.txt---src-prefixprefix"></a> <a class="anchor" href="#Documentation/git-log.txt---src-prefixltprefixgt"></a>--src-prefix=&lt;prefix&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---src-prefixltprefixgt"><a id="Documentation/git-log.txt---src-prefixprefix" class="anchor" href="#Documentation/git-log.txt---src-prefixprefix"></a>--src-prefix=&lt;prefix&gt; </dt>
 <dd>
 <p>Show the given source prefix instead of "a/".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---dst-prefixltprefixgt"> <a class="anchor" href="#Documentation/git-log.txt---dst-prefixprefix"></a> <a class="anchor" href="#Documentation/git-log.txt---dst-prefixltprefixgt"></a>--dst-prefix=&lt;prefix&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---dst-prefixltprefixgt"><a id="Documentation/git-log.txt---dst-prefixprefix" class="anchor" href="#Documentation/git-log.txt---dst-prefixprefix"></a>--dst-prefix=&lt;prefix&gt; </dt>
 <dd>
 <p>Show the given destination prefix instead of "b/".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---no-prefix"> <a class="anchor" href="#Documentation/git-log.txt---no-prefix"></a>--no-prefix </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---no-prefix"><a class="anchor" href="#Documentation/git-log.txt---no-prefix"></a>--no-prefix </dt>
 <dd>
 <p>Do not show any source or destination prefix.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---line-prefixltprefixgt"> <a class="anchor" href="#Documentation/git-log.txt---line-prefixprefix"></a> <a class="anchor" href="#Documentation/git-log.txt---line-prefixltprefixgt"></a>--line-prefix=&lt;prefix&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---line-prefixltprefixgt"><a id="Documentation/git-log.txt---line-prefixprefix" class="anchor" href="#Documentation/git-log.txt---line-prefixprefix"></a>--line-prefix=&lt;prefix&gt; </dt>
 <dd>
 <p>Prepend an additional prefix to every line of output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt---ita-invisible-in-index"> <a class="anchor" href="#Documentation/git-log.txt---ita-invisible-in-index"></a>--ita-invisible-in-index </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt---ita-invisible-in-index"><a class="anchor" href="#Documentation/git-log.txt---ita-invisible-in-index"></a>--ita-invisible-in-index </dt>
 <dd>
 <p>By default entries added by "git add -N" appear as an existing
 empty file in "git diff" and a new file in "git diff --cached".
@@ -2793,45 +2793,45 @@ two unresolved merge parents with the working tree file
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--no-mergescode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog--no-merges"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog--no-mergescode"></a><code>git log --no-merges</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--no-mergescode"><a id="Documentation/git-log.txt-gitlog--no-merges" class="anchor" href="#Documentation/git-log.txt-gitlog--no-merges"></a><code>git log --no-merges</code> </dt>
 <dd>
 <p>Show the whole commit history, but skip any merges</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlogv2612includescsidriversscsicode"> <a class="anchor" href="#Documentation/git-log.txt-gitlogv2612includescsidriversscsi"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlogv2612includescsidriversscsicode"></a><code>git log v2.6.12.. include/scsi drivers/scsi</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlogv2612includescsidriversscsicode"><a id="Documentation/git-log.txt-gitlogv2612includescsidriversscsi" class="anchor" href="#Documentation/git-log.txt-gitlogv2612includescsidriversscsi"></a><code>git log v2.6.12.. include/scsi drivers/scsi</code> </dt>
 <dd>
 <p>Show all commits since version <em>v2.6.12</em> that changed any file
 in the <code>include/scsi</code> or <code>drivers/scsi</code> subdirectories</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--since2weeksago--gitkcode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog--since2weeksago--gitk"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog--since2weeksago--gitkcode"></a><code>git log --since="2 weeks ago" -- gitk</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--since2weeksago--gitkcode"><a id="Documentation/git-log.txt-gitlog--since2weeksago--gitk" class="anchor" href="#Documentation/git-log.txt-gitlog--since2weeksago--gitk"></a><code>git log --since="2 weeks ago" -- gitk</code> </dt>
 <dd>
 <p>Show the changes during the last two weeks to the file <em>gitk</em>.
 The <code>--</code> is necessary to avoid confusion with the <strong>branch</strong> named
 <em>gitk</em></p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--name-statusreleasetestcode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog--name-statusreleasetest"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog--name-statusreleasetestcode"></a><code>git log --name-status release..test</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--name-statusreleasetestcode"><a id="Documentation/git-log.txt-gitlog--name-statusreleasetest" class="anchor" href="#Documentation/git-log.txt-gitlog--name-statusreleasetest"></a><code>git log --name-status release..test</code> </dt>
 <dd>
 <p>Show the commits that are in the "test" branch but not yet
 in the "release" branch, along with the list of paths
 each commit modifies.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--followbuiltinrev-listccode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog--followbuiltinrev-listc"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog--followbuiltinrev-listccode"></a><code>git log --follow builtin/rev-list.c</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--followbuiltinrev-listccode"><a id="Documentation/git-log.txt-gitlog--followbuiltinrev-listc" class="anchor" href="#Documentation/git-log.txt-gitlog--followbuiltinrev-listc"></a><code>git log --follow builtin/rev-list.c</code> </dt>
 <dd>
 <p>Shows the commits that changed <code>builtin/rev-list.c</code>, including
 those commits that occurred before the file was given its
 present name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--branches--not--remotesorigincode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog--branches--not--remotesorigin"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog--branches--not--remotesorigincode"></a><code>git log --branches --not --remotes=origin</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog--branches--not--remotesorigincode"><a id="Documentation/git-log.txt-gitlog--branches--not--remotesorigin" class="anchor" href="#Documentation/git-log.txt-gitlog--branches--not--remotesorigin"></a><code>git log --branches --not --remotes=origin</code> </dt>
 <dd>
 <p>Shows all commits that are in any of local branches but not in
 any of remote-tracking branches for <em>origin</em> (what you have that
 origin doesn&#8217;t).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlogmaster--not--remotesmastercode"> <a class="anchor" href="#Documentation/git-log.txt-gitlogmaster--not--remotesmaster"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlogmaster--not--remotesmastercode"></a><code>git log master --not --remotes=*/master</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlogmaster--not--remotesmastercode"><a id="Documentation/git-log.txt-gitlogmaster--not--remotesmaster" class="anchor" href="#Documentation/git-log.txt-gitlogmaster--not--remotesmaster"></a><code>git log master --not --remotes=*/master</code> </dt>
 <dd>
 <p>Shows all commits that are in local master but not in any remote
 repository master branches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog-p-m--first-parentcode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog-p-m--first-parent"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog-p-m--first-parentcode"></a><code>git log -p -m --first-parent</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog-p-m--first-parentcode"><a id="Documentation/git-log.txt-gitlog-p-m--first-parent" class="anchor" href="#Documentation/git-log.txt-gitlog-p-m--first-parent"></a><code>git log -p -m --first-parent</code> </dt>
 <dd>
 <p>Shows the history including change diffs, but only from the
 &#8220;main branch&#8221; perspective, skipping commits that come from merged
@@ -2839,12 +2839,12 @@ branches, and showing full diffs of changes introduced by the merges.
 This makes sense only when following a strict policy of merging all
 topic branches when staying on a single integration branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog-Lintmainmainccode"> <a class="anchor" href="#Documentation/git-log.txt-gitlog-Lintmainmainc"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog-Lintmainmainccode"></a><code>git log -L '/int main/',/^}/:main.c</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog-Lintmainmainccode"><a id="Documentation/git-log.txt-gitlog-Lintmainmainc" class="anchor" href="#Documentation/git-log.txt-gitlog-Lintmainmainc"></a><code>git log -L '/int main/',/^}/:main.c</code> </dt>
 <dd>
 <p>Shows how the function <code>main()</code> in the file <code>main.c</code> evolved
 over time.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog-3code"> <a class="anchor" href="#Documentation/git-log.txt-gitlog-3"></a> <a class="anchor" href="#Documentation/git-log.txt-codegitlog-3code"></a><code>git log -3</code> </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-codegitlog-3code"><a id="Documentation/git-log.txt-gitlog-3" class="anchor" href="#Documentation/git-log.txt-gitlog-3"></a><code>git log -3</code> </dt>
 <dd>
 <p>Limits the number of commits to show to 3.</p>
 </dd>
@@ -2958,47 +2958,47 @@ for settings related to diff generation.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-log.txt-formatpretty"> <a class="anchor" href="#Documentation/git-log.txt-formatpretty"></a>format.pretty </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-formatpretty"><a class="anchor" href="#Documentation/git-log.txt-formatpretty"></a>format.pretty </dt>
 <dd>
 <p>Default for the <code>--format</code> option.  (See <em>Pretty Formats</em> above.)
 Defaults to <code>medium</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-i18nlogOutputEncoding"> <a class="anchor" href="#Documentation/git-log.txt-i18nlogOutputEncoding"></a>i18n.logOutputEncoding </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-i18nlogOutputEncoding"><a class="anchor" href="#Documentation/git-log.txt-i18nlogOutputEncoding"></a>i18n.logOutputEncoding </dt>
 <dd>
 <p>Encoding to use when displaying logs.  (See <em>Discussion</em> above.)
 Defaults to the value of <code>i18n.commitEncoding</code> if set, and UTF-8
 otherwise.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-logdate"> <a class="anchor" href="#Documentation/git-log.txt-logdate"></a>log.date </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-logdate"><a class="anchor" href="#Documentation/git-log.txt-logdate"></a>log.date </dt>
 <dd>
 <p>Default format for human-readable dates.  (Compare the
 <code>--date</code> option.)  Defaults to "default", which means to write
 dates like <code>Sat May 8 19:35:34 2010 -0500</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-logfollow"> <a class="anchor" href="#Documentation/git-log.txt-logfollow"></a>log.follow </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-logfollow"><a class="anchor" href="#Documentation/git-log.txt-logfollow"></a>log.follow </dt>
 <dd>
 <p>If <code>true</code>, <code>git log</code> will act as if the <code>--follow</code> option was used when
 a single &lt;path&gt; is given.  This has the same limitations as <code>--follow</code>,
 i.e. it cannot be used to follow multiple files and does not work well
 on non-linear history.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-logshowRoot"> <a class="anchor" href="#Documentation/git-log.txt-logshowRoot"></a>log.showRoot </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-logshowRoot"><a class="anchor" href="#Documentation/git-log.txt-logshowRoot"></a>log.showRoot </dt>
 <dd>
 <p>If <code>false</code>, <code>git log</code> and related commands will not treat the
 initial commit as a big creation event.  Any root commits in
 <code>git log -p</code> output would be shown without a diff attached.
 The default is <code>true</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-logshowSignature"> <a class="anchor" href="#Documentation/git-log.txt-logshowSignature"></a>log.showSignature </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-logshowSignature"><a class="anchor" href="#Documentation/git-log.txt-logshowSignature"></a>log.showSignature </dt>
 <dd>
 <p>If <code>true</code>, <code>git log</code> and related commands will act as if the
 <code>--show-signature</code> option was passed to them.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-mailmap"> <a class="anchor" href="#Documentation/git-log.txt-mailmap"></a>mailmap.* </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-mailmap"><a class="anchor" href="#Documentation/git-log.txt-mailmap"></a>mailmap.* </dt>
 <dd>
 <p>See <a href='{{< relurl "docs/git-shortlog" >}}'>git-shortlog[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-log.txt-notesdisplayRef"> <a class="anchor" href="#Documentation/git-log.txt-notesdisplayRef"></a>notes.displayRef </dt>
+<dt class="hdlist1" id="Documentation/git-log.txt-notesdisplayRef"><a class="anchor" href="#Documentation/git-log.txt-notesdisplayRef"></a>notes.displayRef </dt>
 <dd>
 <p>Which refs, in addition to the default set by <code>core.notesRef</code>
 or <code>GIT_NOTES_REF</code>, to read notes from when showing commit

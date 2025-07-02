@@ -162,7 +162,7 @@ Git repositories, and how repositories are displayed and accessed.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectroot"> <a class="anchor" href="#Documentation/gitweb.conf.txt-projectroot"></a>$projectroot </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectroot"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectroot"></a>$projectroot </dt>
 <dd>
 <p>Absolute filesystem path which will be prepended to project path;
 the path to repository is <code>$projectroot/$project</code>.  Set to
@@ -197,7 +197,7 @@ in gitweb config file:</p>
 <p>will map to the path <em>/srv/git/foo/bar.git</em> on the filesystem.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslist"> <a class="anchor" href="#Documentation/gitweb.conf.txt-projectslist"></a>$projects_list </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslist"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectslist"></a>$projects_list </dt>
 <dd>
 <p>Name of a plain text file listing projects, or a name of directory
 to be scanned for projects.</p>
@@ -216,7 +216,7 @@ makefile variable at installation time.  If this variable is empty, gitweb
 will fall back to scanning the <code>$projectroot</code> directory for repositories.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectmaxdepth"> <a class="anchor" href="#Documentation/gitweb.conf.txt-projectmaxdepth"></a>$project_maxdepth </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectmaxdepth"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectmaxdepth"></a>$project_maxdepth </dt>
 <dd>
 <p>If <code>$projects_list</code> variable is unset, gitweb will recursively
 scan filesystem for Git repositories.  The <code>$project_maxdepth</code>
@@ -234,7 +234,7 @@ configuration variable <code>GITWEB_PROJECT_MAXDEPTH</code>, which defaults to
 2007.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-exportok"> <a class="anchor" href="#Documentation/gitweb.conf.txt-exportok"></a>$export_ok </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-exportok"><a class="anchor" href="#Documentation/gitweb.conf.txt-exportok"></a>$export_ok </dt>
 <dd>
 <p>Show repository only if this file exists (in repository).  Only
 effective if this variable evaluates to true.  Can be set when
@@ -243,7 +243,7 @@ relative to <code>GIT_DIR</code>.  git-daemon[1] uses <em>git-daemon-export-ok</
 unless started with <code>--export-all</code>.  By default this variable is
 not set, which means that this feature is turned off.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-exportauthhook"> <a class="anchor" href="#Documentation/gitweb.conf.txt-exportauthhook"></a>$export_auth_hook </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-exportauthhook"><a class="anchor" href="#Documentation/gitweb.conf.txt-exportauthhook"></a>$export_auth_hook </dt>
 <dd>
 <p>Function used to determine which repositories should be shown.
 This subroutine should take one parameter, the full path to
@@ -272,7 +272,7 @@ $projects_list, and $projects_maxdepth.  Example:</p>
 subsection on <a href='{{< relurl "docs/gitweb" >}}'>gitweb[1]</a> manpage.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-strictexport"> <a class="anchor" href="#Documentation/gitweb.conf.txt-strictexport"></a>$strict_export </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-strictexport"><a class="anchor" href="#Documentation/gitweb.conf.txt-strictexport"></a>$strict_export </dt>
 <dd>
 <p>Only allow viewing of repositories also shown on the overview page.
 This for example makes <code>$gitweb_export_ok</code> file decide if repository is
@@ -295,7 +295,7 @@ The values of these variables are paths on the filesystem.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GIT"> <a class="anchor" href="#Documentation/gitweb.conf.txt-GIT"></a>$GIT </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GIT"><a class="anchor" href="#Documentation/gitweb.conf.txt-GIT"></a>$GIT </dt>
 <dd>
 <p>Core git executable to use.  By default set to <code>$GIT_BINDIR/git</code>, which
 in turn is by default set to <code>$(bindir)/git</code>.  If you use Git installed
@@ -306,7 +306,7 @@ If you have multiple Git versions installed it can be used to choose
 which one to use.  Must be (correctly) set for gitweb to be able to
 work.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-mimetypesfile"> <a class="anchor" href="#Documentation/gitweb.conf.txt-mimetypesfile"></a>$mimetypes_file </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-mimetypesfile"><a class="anchor" href="#Documentation/gitweb.conf.txt-mimetypesfile"></a>$mimetypes_file </dt>
 <dd>
 <p>File to use for (filename extension based) guessing of MIME types before
 trying <em>/etc/mime.types</em>.  <strong>NOTE</strong> that this path, if relative, is taken
@@ -315,7 +315,7 @@ only <em>/etc/mime.types</em> is used (if present on filesystem).  If no mimetyp
 file is found, mimetype guessing based on extension of file is disabled.
 Unset by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-highlightbin"> <a class="anchor" href="#Documentation/gitweb.conf.txt-highlightbin"></a>$highlight_bin </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-highlightbin"><a class="anchor" href="#Documentation/gitweb.conf.txt-highlightbin"></a>$highlight_bin </dt>
 <dd>
 <p>Path to the highlight executable to use (it must be the one from
 <a href="http://www.andre-simon.de" class="bare">http://www.andre-simon.de</a> due to assumptions about parameters and output).
@@ -358,7 +358,7 @@ variable.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-stylesheets"> <a class="anchor" href="#Documentation/gitweb.conf.txt-stylesheets"></a>@stylesheets </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-stylesheets"><a class="anchor" href="#Documentation/gitweb.conf.txt-stylesheets"></a>@stylesheets </dt>
 <dd>
 <p>List of URIs of stylesheets (relative to the base URI of a page). You
 might specify more than one stylesheet, for example to use "gitweb.css"
@@ -387,7 +387,7 @@ used by older gitweb.  If <code>$stylesheet</code> variable is defined, only CSS
 given by this variable is used by gitweb.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-logo"> <a class="anchor" href="#Documentation/gitweb.conf.txt-logo"></a>$logo </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-logo"><a class="anchor" href="#Documentation/gitweb.conf.txt-logo"></a>$logo </dt>
 <dd>
 <p>Points to the location where you put <em>git-logo.png</em> on your web
 server, or to be more the generic URI of logo, 72x27 size).  This image
@@ -396,7 +396,7 @@ a logo for the Atom feed.  Relative to the base URI of gitweb (as a path).
 Can be adjusted when building gitweb using <code>GITWEB_LOGO</code> variable
 By default set to <em>static/git-logo.png</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-favicon"> <a class="anchor" href="#Documentation/gitweb.conf.txt-favicon"></a>$favicon </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-favicon"><a class="anchor" href="#Documentation/gitweb.conf.txt-favicon"></a>$favicon </dt>
 <dd>
 <p>Points to the location where you put <em>git-favicon.png</em> on your web
 server, or to be more the generic URI of favicon, which will be served
@@ -406,7 +406,7 @@ bookmarks.  Relative to the base URI of gitweb.  Can be adjusted at
 build time using <code>GITWEB_FAVICON</code> variable.
 By default set to <em>static/git-favicon.png</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-javascript"> <a class="anchor" href="#Documentation/gitweb.conf.txt-javascript"></a>$javascript </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-javascript"><a class="anchor" href="#Documentation/gitweb.conf.txt-javascript"></a>$javascript </dt>
 <dd>
 <p>Points to the location where you put <em>gitweb.js</em> on your web server,
 or to be more generic the URI of JavaScript code used by gitweb.
@@ -419,14 +419,14 @@ at build time.  <strong>Note</strong> that this single file is generated from mu
 individual JavaScript "modules".</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-homelink"> <a class="anchor" href="#Documentation/gitweb.conf.txt-homelink"></a>$home_link </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-homelink"><a class="anchor" href="#Documentation/gitweb.conf.txt-homelink"></a>$home_link </dt>
 <dd>
 <p>Target of the home link on the top of all pages (the first part of view
 "breadcrumbs").  By default it is set to the absolute URI of a current page
 (to the value of <code>$my_uri</code> variable, or to "/" if <code>$my_uri</code> is undefined
 or is an empty string).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-homelinkstr"> <a class="anchor" href="#Documentation/gitweb.conf.txt-homelinkstr"></a>$home_link_str </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-homelinkstr"><a class="anchor" href="#Documentation/gitweb.conf.txt-homelinkstr"></a>$home_link_str </dt>
 <dd>
 <p>Label for the "home link" at the top of all pages, leading to <code>$home_link</code>
 (usually the main gitweb page, which contains the projects list).  It is
@@ -437,7 +437,7 @@ as this link leads to the list of projects.  Another popular choice is to
 set it to the name of site.  Note that it is treated as raw HTML so it
 should not be set from untrusted sources.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-extrabreadcrumbs"> <a class="anchor" href="#Documentation/gitweb.conf.txt-extrabreadcrumbs"></a>@extra_breadcrumbs </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-extrabreadcrumbs"><a class="anchor" href="#Documentation/gitweb.conf.txt-extrabreadcrumbs"></a>@extra_breadcrumbs </dt>
 <dd>
 <p>Additional links to be added to the start of the breadcrumb trail before
 the home link, to pages that are logically "above" the gitweb projects
@@ -462,8 +462,8 @@ element 0 is the link text (equivalent to <code>$home_link_str</code>) and eleme
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-logourl"> <a class="anchor" href="#Documentation/gitweb.conf.txt-logourl"></a>$logo_url </dt>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-logolabel"> <a class="anchor" href="#Documentation/gitweb.conf.txt-logolabel"></a>$logo_label </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-logourl"><a class="anchor" href="#Documentation/gitweb.conf.txt-logourl"></a>$logo_url </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-logolabel"><a class="anchor" href="#Documentation/gitweb.conf.txt-logolabel"></a>$logo_label </dt>
 <dd>
 <p>URI and label (title) for the Git logo link (or your site logo,
 if you chose to use different logo image). By default, these both
@@ -483,7 +483,7 @@ pages, and add a description of this gitweb installation on its main page
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitename"> <a class="anchor" href="#Documentation/gitweb.conf.txt-sitename"></a>$site_name </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitename"><a class="anchor" href="#Documentation/gitweb.conf.txt-sitename"></a>$site_name </dt>
 <dd>
 <p>Name of your site or organization, to appear in page titles.  Set it
 to something descriptive for clearer bookmarks etc.  If this variable
@@ -495,27 +495,27 @@ as standalone script).</p>
 <p>Can be set using the <code>GITWEB_SITENAME</code> at build time.  Unset by default.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitehtmlheadstring"> <a class="anchor" href="#Documentation/gitweb.conf.txt-sitehtmlheadstring"></a>$site_html_head_string </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitehtmlheadstring"><a class="anchor" href="#Documentation/gitweb.conf.txt-sitehtmlheadstring"></a>$site_html_head_string </dt>
 <dd>
 <p>HTML snippet to be included in the &lt;head&gt; section of each page.
 Can be set using <code>GITWEB_SITE_HTML_HEAD_STRING</code> at build time.
 No default value.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-siteheader"> <a class="anchor" href="#Documentation/gitweb.conf.txt-siteheader"></a>$site_header </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-siteheader"><a class="anchor" href="#Documentation/gitweb.conf.txt-siteheader"></a>$site_header </dt>
 <dd>
 <p>Name of a file with HTML to be included at the top of each page.
 Relative to the directory containing the <em>gitweb.cgi</em> script.
 Can be set using <code>GITWEB_SITE_HEADER</code> at build time.  No default
 value.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitefooter"> <a class="anchor" href="#Documentation/gitweb.conf.txt-sitefooter"></a>$site_footer </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitefooter"><a class="anchor" href="#Documentation/gitweb.conf.txt-sitefooter"></a>$site_footer </dt>
 <dd>
 <p>Name of a file with HTML to be included at the bottom of each page.
 Relative to the directory containing the <em>gitweb.cgi</em> script.
 Can be set using <code>GITWEB_SITE_FOOTER</code> at build time.  No default
 value.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-hometext"> <a class="anchor" href="#Documentation/gitweb.conf.txt-hometext"></a>$home_text </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-hometext"><a class="anchor" href="#Documentation/gitweb.conf.txt-hometext"></a>$home_text </dt>
 <dd>
 <p>Name of a HTML file which, if it exists, is included on the
 gitweb projects overview page ("projects_list" view).  Relative to
@@ -523,7 +523,7 @@ the directory containing the gitweb.cgi script.  Default value
 can be adjusted during build time using <code>GITWEB_HOMETEXT</code> variable.
 By default set to <em>indextext.html</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslistdescriptionwidth"> <a class="anchor" href="#Documentation/gitweb.conf.txt-projectslistdescriptionwidth"></a>$projects_list_description_width </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslistdescriptionwidth"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectslistdescriptionwidth"></a>$projects_list_description_width </dt>
 <dd>
 <p>The width (in characters) of the "Description" column of the projects list.
 Longer descriptions will be truncated (trying to cut at word boundary);
@@ -531,7 +531,7 @@ the full description is available in the <em>title</em> attribute (usually shown
 mouseover).  The default is 25, which might be too small if you
 use long project descriptions.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-defaultprojectsorder"> <a class="anchor" href="#Documentation/gitweb.conf.txt-defaultprojectsorder"></a>$default_projects_order </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-defaultprojectsorder"><a class="anchor" href="#Documentation/gitweb.conf.txt-defaultprojectsorder"></a>$default_projects_order </dt>
 <dd>
 <p>Default value of ordering of projects on projects list page, which
 means the ordering used if you don&#8217;t explicitly sort projects list
@@ -554,7 +554,7 @@ commit).</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-defaultblobplainmimetype"> <a class="anchor" href="#Documentation/gitweb.conf.txt-defaultblobplainmimetype"></a>$default_blob_plain_mimetype </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-defaultblobplainmimetype"><a class="anchor" href="#Documentation/gitweb.conf.txt-defaultblobplainmimetype"></a>$default_blob_plain_mimetype </dt>
 <dd>
 <p>Default mimetype for the blob_plain (raw) view, if mimetype checking
 doesn&#8217;t result in some other type; by default "text/plain".
@@ -563,19 +563,19 @@ of its filename, using <code>$mimetypes_file</code> (if set and file exists)
 and <em>/etc/mime.types</em> files (see <strong>mime.types</strong>(5) manpage; only
 filename extension rules are supported by gitweb).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-defaulttextplaincharset"> <a class="anchor" href="#Documentation/gitweb.conf.txt-defaulttextplaincharset"></a>$default_text_plain_charset </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-defaulttextplaincharset"><a class="anchor" href="#Documentation/gitweb.conf.txt-defaulttextplaincharset"></a>$default_text_plain_charset </dt>
 <dd>
 <p>Default charset for text files. If this is not set, the web server
 configuration will be used.  Unset by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-fallbackencoding"> <a class="anchor" href="#Documentation/gitweb.conf.txt-fallbackencoding"></a>$fallback_encoding </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-fallbackencoding"><a class="anchor" href="#Documentation/gitweb.conf.txt-fallbackencoding"></a>$fallback_encoding </dt>
 <dd>
 <p>Gitweb assumes this charset when a line contains non-UTF-8 characters.
 The fallback decoding is used without error checking, so it can be even
 "utf-8". The value must be a valid encoding; see the <strong>Encoding::Supported</strong>(3pm)
 man page for a list. The default is "latin1", aka. "iso-8859-1".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-diffopts"> <a class="anchor" href="#Documentation/gitweb.conf.txt-diffopts"></a>@diff_opts </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-diffopts"><a class="anchor" href="#Documentation/gitweb.conf.txt-diffopts"></a>@diff_opts </dt>
 <dd>
 <p>Rename detection options for git-diff and git-diff-tree. The default is
 ('-M'); set it to ('-C') or ('-C', '-C') to also detect copies,
@@ -603,7 +603,7 @@ affects how "summary" pages look like, or load limiting).</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-gitbaseurllist"> <a class="anchor" href="#Documentation/gitweb.conf.txt-gitbaseurllist"></a>@git_base_url_list </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-gitbaseurllist"><a class="anchor" href="#Documentation/gitweb.conf.txt-gitbaseurllist"></a>@git_base_url_list </dt>
 <dd>
 <p>List of Git base URLs.  These URLs are used to generate URLs
 describing from where to fetch a project, which are shown on
@@ -624,14 +624,14 @@ By default it is set to (), i.e. an empty list.  This means that gitweb
 would not try to create project URL (to fetch) from project name.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslistgroupcategories"> <a class="anchor" href="#Documentation/gitweb.conf.txt-projectslistgroupcategories"></a>$projects_list_group_categories </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslistgroupcategories"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectslistgroupcategories"></a>$projects_list_group_categories </dt>
 <dd>
 <p>Whether to enables the grouping of projects by category on the project
 list page. The category of a project is determined by the
 <code>$GIT_DIR/category</code> file or the <code>gitweb.category</code> variable in each
 repository&#8217;s configuration.  Disabled by default (set to 0).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectlistdefaultcategory"> <a class="anchor" href="#Documentation/gitweb.conf.txt-projectlistdefaultcategory"></a>$project_list_default_category </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectlistdefaultcategory"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectlistdefaultcategory"></a>$project_list_default_category </dt>
 <dd>
 <p>Default category for projects for which none is specified.  If this is
 set to the empty string, such projects will remain uncategorized and
@@ -639,14 +639,14 @@ listed at the top, above categorized projects.  Used only if project
 categories are enabled, which means if <code>$projects_list_group_categories</code>
 is true.  By default set to "" (empty string).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-preventxss"> <a class="anchor" href="#Documentation/gitweb.conf.txt-preventxss"></a>$prevent_xss </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-preventxss"><a class="anchor" href="#Documentation/gitweb.conf.txt-preventxss"></a>$prevent_xss </dt>
 <dd>
 <p>If true, some gitweb features are disabled to prevent content in
 repositories from launching cross-site scripting (XSS) attacks.  Set this
 to true if you don&#8217;t trust the content of your repositories.
 False by default (set to 0).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-maxload"> <a class="anchor" href="#Documentation/gitweb.conf.txt-maxload"></a>$maxload </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-maxload"><a class="anchor" href="#Documentation/gitweb.conf.txt-maxload"></a>$maxload </dt>
 <dd>
 <p>Used to set the maximum load that we will still respond to gitweb queries.
 If the server load exceeds this value then gitweb will return
@@ -660,16 +660,16 @@ over the last minute.</p>
 The default value is 300.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-omitagecolumn"> <a class="anchor" href="#Documentation/gitweb.conf.txt-omitagecolumn"></a>$omit_age_column </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-omitagecolumn"><a class="anchor" href="#Documentation/gitweb.conf.txt-omitagecolumn"></a>$omit_age_column </dt>
 <dd>
 <p>If true, omit the column with date of the most current commit on the
 projects list page. It can save a bit of I/O and a fork per repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-omitowner"> <a class="anchor" href="#Documentation/gitweb.conf.txt-omitowner"></a>$omit_owner </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-omitowner"><a class="anchor" href="#Documentation/gitweb.conf.txt-omitowner"></a>$omit_owner </dt>
 <dd>
 <p>If true prevents displaying information about repository owner.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-perrequestconfig"> <a class="anchor" href="#Documentation/gitweb.conf.txt-perrequestconfig"></a>$per_request_config </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-perrequestconfig"><a class="anchor" href="#Documentation/gitweb.conf.txt-perrequestconfig"></a>$per_request_config </dt>
 <dd>
 <p>If this is set to code reference, it will be run once for each request.
 You can	set parts of configuration that change per session this way.
@@ -711,7 +711,7 @@ correct value.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-version"> <a class="anchor" href="#Documentation/gitweb.conf.txt-version"></a>$version </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-version"><a class="anchor" href="#Documentation/gitweb.conf.txt-version"></a>$version </dt>
 <dd>
 <p>Gitweb version, set automatically when creating gitweb.cgi from
 gitweb.perl. You might want to modify it if you are running modified
@@ -727,15 +727,15 @@ is purely informational, used e.g. in the "generator" meta header in HTML
 header.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-myurl"> <a class="anchor" href="#Documentation/gitweb.conf.txt-myurl"></a>$my_url </dt>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-myuri"> <a class="anchor" href="#Documentation/gitweb.conf.txt-myuri"></a>$my_uri </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-myurl"><a class="anchor" href="#Documentation/gitweb.conf.txt-myurl"></a>$my_url </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-myuri"><a class="anchor" href="#Documentation/gitweb.conf.txt-myuri"></a>$my_uri </dt>
 <dd>
 <p>Full URL and absolute URL of the gitweb script;
 in earlier versions of gitweb you might have need to set those
 variables, but now there should be no need to do it.  See
 <code>$per_request_config</code> if you need to set them still.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-baseurl"> <a class="anchor" href="#Documentation/gitweb.conf.txt-baseurl"></a>$base_url </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-baseurl"><a class="anchor" href="#Documentation/gitweb.conf.txt-baseurl"></a>$base_url </dt>
 <dd>
 <p>Base URL for relative URLs in pages generated by gitweb,
 (e.g. <code>$logo</code>, <code>$favicon</code>, <code>@stylesheets</code> if they are relative URLs),
@@ -791,7 +791,7 @@ below:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-default"> <a class="anchor" href="#Documentation/gitweb.conf.txt-default"></a>default </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-default"><a class="anchor" href="#Documentation/gitweb.conf.txt-default"></a>default </dt>
 <dd>
 <p>List (array reference) of feature parameters (if there are any),
 used also to toggle (enable or disable) given feature.</p>
@@ -808,7 +808,7 @@ section.</p>
 need to set this element to empty list i.e. <code>[]</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-override"> <a class="anchor" href="#Documentation/gitweb.conf.txt-override"></a>override </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-override"><a class="anchor" href="#Documentation/gitweb.conf.txt-override"></a>override </dt>
 <dd>
 <p>If this field has a true value then the given feature is
 overridable, which means that it can be configured
@@ -821,7 +821,7 @@ config variable in the per-repository Git configuration file.</p>
 <p><strong>Note</strong> that no feature is overridable by default.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sub"> <a class="anchor" href="#Documentation/gitweb.conf.txt-sub"></a>sub </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-sub"><a class="anchor" href="#Documentation/gitweb.conf.txt-sub"></a>sub </dt>
 <dd>
 <p>Internal detail of implementation.  What is important is that
 if this field is not present then per-repository override for
@@ -842,7 +842,7 @@ in the comments.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-blame"> <a class="anchor" href="#Documentation/gitweb.conf.txt-blame"></a>blame </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-blame"><a class="anchor" href="#Documentation/gitweb.conf.txt-blame"></a>blame </dt>
 <dd>
 <p>Enable the "blame" and "blame_incremental" blob views, showing for
 each line the last commit that modified it; see <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.
@@ -852,7 +852,7 @@ This can be very CPU-intensive and is therefore disabled by default.</p>
 repository&#8217;s <code>gitweb.blame</code> configuration variable (boolean).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-snapshot"> <a class="anchor" href="#Documentation/gitweb.conf.txt-snapshot"></a>snapshot </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-snapshot"><a class="anchor" href="#Documentation/gitweb.conf.txt-snapshot"></a>snapshot </dt>
 <dd>
 <p>Enable and configure the "snapshot" action, which allows user to
 download a compressed archive of any tree or commit, as produced
@@ -872,7 +872,7 @@ a comma separated list of formats or "none" to disable snapshots.
 Unknown values are ignored.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-grep"> <a class="anchor" href="#Documentation/gitweb.conf.txt-grep"></a>grep </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-grep"><a class="anchor" href="#Documentation/gitweb.conf.txt-grep"></a>grep </dt>
 <dd>
 <p>Enable grep search, which lists the files in currently selected
 tree (directory) containing the given string; see <a href='{{< relurl "docs/git-grep" >}}'>git-grep[1]</a>.
@@ -882,7 +882,7 @@ This can be potentially CPU-intensive, of course.  Enabled by default.</p>
 repository&#8217;s <code>gitweb.grep</code> configuration variable (boolean).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-pickaxe"> <a class="anchor" href="#Documentation/gitweb.conf.txt-pickaxe"></a>pickaxe </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-pickaxe"><a class="anchor" href="#Documentation/gitweb.conf.txt-pickaxe"></a>pickaxe </dt>
 <dd>
 <p>Enable the so called pickaxe search, which will list the commits
 that introduced or removed a given string in a file.  This can be
@@ -898,7 +898,7 @@ description of <code>-S&lt;string&gt;</code> option, which refers to pickaxe ent
 repository&#8217;s <code>gitweb.pickaxe</code> configuration variable (boolean).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-show-sizes"> <a class="anchor" href="#Documentation/gitweb.conf.txt-show-sizes"></a>show-sizes </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-show-sizes"><a class="anchor" href="#Documentation/gitweb.conf.txt-show-sizes"></a>show-sizes </dt>
 <dd>
 <p>Enable showing size of blobs (ordinary files) in a "tree" view, in a
 separate column, similar to what <code>ls -l</code> does; see description of
@@ -909,7 +909,7 @@ I/O.  Enabled by default.</p>
 repository&#8217;s <code>gitweb.showsizes</code> configuration variable (boolean).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-patches"> <a class="anchor" href="#Documentation/gitweb.conf.txt-patches"></a>patches </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-patches"><a class="anchor" href="#Documentation/gitweb.conf.txt-patches"></a>patches </dt>
 <dd>
 <p>Enable and configure "patches" view, which displays list of commits in email
 (plain text) output format; see also <a href='{{< relurl "docs/git-format-patch" >}}'>git-format-patch[1]</a>.
@@ -923,7 +923,7 @@ Default value is 16.</p>
 repository&#8217;s <code>gitweb.patches</code> configuration variable (integer).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-avatar"> <a class="anchor" href="#Documentation/gitweb.conf.txt-avatar"></a>avatar </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-avatar"><a class="anchor" href="#Documentation/gitweb.conf.txt-avatar"></a>avatar </dt>
 <dd>
 <p>Avatar support.  When this feature is enabled, views such as
 "shortlog" or "commit" will display an avatar associated with
@@ -948,7 +948,7 @@ CSS stylesheet in <code>@stylesheets</code>), it may be appropriate to change
 these values.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-highlight"> <a class="anchor" href="#Documentation/gitweb.conf.txt-highlight"></a>highlight </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-highlight"><a class="anchor" href="#Documentation/gitweb.conf.txt-highlight"></a>highlight </dt>
 <dd>
 <p>Server-side syntax highlight support in "blob" view.  It requires
 <code>$highlight_bin</code> program to be available (see the description of
@@ -959,7 +959,7 @@ and therefore is disabled by default.</p>
 repository&#8217;s <code>gitweb.highlight</code> configuration variable (boolean).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-remoteheads"> <a class="anchor" href="#Documentation/gitweb.conf.txt-remoteheads"></a>remote_heads </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-remoteheads"><a class="anchor" href="#Documentation/gitweb.conf.txt-remoteheads"></a>remote_heads </dt>
 <dd>
 <p>Enable displaying remote heads (remote-tracking branches) in the "heads"
 list.  In most cases the list of remote-tracking branches is an
@@ -978,7 +978,7 @@ repository&#8217;s <code>gitweb.remote_heads</code> configuration variable (bool
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-search"> <a class="anchor" href="#Documentation/gitweb.conf.txt-search"></a>search </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-search"><a class="anchor" href="#Documentation/gitweb.conf.txt-search"></a>search </dt>
 <dd>
 <p>Enable text search, which will list the commits which match author,
 committer or commit text to a given string; see the description of
@@ -988,7 +988,7 @@ manpage.  Enabled by default.</p>
 <p>Project specific override is not supported.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-forks"> <a class="anchor" href="#Documentation/gitweb.conf.txt-forks"></a>forks </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-forks"><a class="anchor" href="#Documentation/gitweb.conf.txt-forks"></a>forks </dt>
 <dd>
 <p>If this feature is enabled, gitweb considers projects in
 subdirectories of project root (basename) to be forks of existing
@@ -1007,7 +1007,7 @@ in that file.</p>
 <p>Project specific override is not supported.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-actions"> <a class="anchor" href="#Documentation/gitweb.conf.txt-actions"></a>actions </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-actions"><a class="anchor" href="#Documentation/gitweb.conf.txt-actions"></a>actions </dt>
 <dd>
 <p>Insert custom links to the action bar of all project pages.  This
 allows you to link to third-party scripts integrating into gitweb.</p>
@@ -1039,7 +1039,7 @@ Git hosting site set it to the following to enable graphical log
 <p>Project specific override is not supported.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-timed"> <a class="anchor" href="#Documentation/gitweb.conf.txt-timed"></a>timed </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-timed"><a class="anchor" href="#Documentation/gitweb.conf.txt-timed"></a>timed </dt>
 <dd>
 <p>Enable displaying how much time and how many Git commands it took to
 generate and display each page in the page footer (at the bottom of
@@ -1049,7 +1049,7 @@ seconds and 13 Git commands to generate."  Disabled by default.</p>
 <p>Project specific override is not supported.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-javascript-timezone"> <a class="anchor" href="#Documentation/gitweb.conf.txt-javascript-timezone"></a>javascript-timezone </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-javascript-timezone"><a class="anchor" href="#Documentation/gitweb.conf.txt-javascript-timezone"></a>javascript-timezone </dt>
 <dd>
 <p>Enable and configure the ability to change a common time zone for dates
 in gitweb output via JavaScript.  Dates in gitweb output include
@@ -1084,7 +1084,7 @@ time zones in the form of "+/-HHMM", such as "+0200".</p>
 <p>Project specific override is not supported.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-extra-branch-refs"> <a class="anchor" href="#Documentation/gitweb.conf.txt-extra-branch-refs"></a>extra-branch-refs </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-extra-branch-refs"><a class="anchor" href="#Documentation/gitweb.conf.txt-extra-branch-refs"></a>extra-branch-refs </dt>
 <dd>
 <p>List of additional directories under "refs" which are going to
 be used as branch refs. For example if you have a gerrit setup
@@ -1194,16 +1194,16 @@ overridden using the following environment variables:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GITWEBCONFIG"> <a class="anchor" href="#Documentation/gitweb.conf.txt-GITWEBCONFIG"></a>GITWEB_CONFIG </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GITWEBCONFIG"><a class="anchor" href="#Documentation/gitweb.conf.txt-GITWEBCONFIG"></a>GITWEB_CONFIG </dt>
 <dd>
 <p>Sets location of per-instance configuration file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GITWEBCONFIGSYSTEM"> <a class="anchor" href="#Documentation/gitweb.conf.txt-GITWEBCONFIGSYSTEM"></a>GITWEB_CONFIG_SYSTEM </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GITWEBCONFIGSYSTEM"><a class="anchor" href="#Documentation/gitweb.conf.txt-GITWEBCONFIGSYSTEM"></a>GITWEB_CONFIG_SYSTEM </dt>
 <dd>
 <p>Sets location of fallback system-wide configuration file.
 This file is read only if per-instance one does not exist.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GITWEBCONFIGCOMMON"> <a class="anchor" href="#Documentation/gitweb.conf.txt-GITWEBCONFIGCOMMON"></a>GITWEB_CONFIG_COMMON </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-GITWEBCONFIGCOMMON"><a class="anchor" href="#Documentation/gitweb.conf.txt-GITWEBCONFIGCOMMON"></a>GITWEB_CONFIG_COMMON </dt>
 <dd>
 <p>Sets location of common system-wide configuration file.</p>
 </dd>
@@ -1216,18 +1216,18 @@ This file is read only if per-instance one does not exist.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-gitwebconfigperl"> <a class="anchor" href="#Documentation/gitweb.conf.txt-gitwebconfigperl"></a>gitweb_config.perl </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-gitwebconfigperl"><a class="anchor" href="#Documentation/gitweb.conf.txt-gitwebconfigperl"></a>gitweb_config.perl </dt>
 <dd>
 <p>This is default name of per-instance configuration file.  The
 format of this file is described above.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-etcgitwebconf"> <a class="anchor" href="#Documentation/gitweb.conf.txt-etcgitwebconf"></a>/etc/gitweb.conf </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-etcgitwebconf"><a class="anchor" href="#Documentation/gitweb.conf.txt-etcgitwebconf"></a>/etc/gitweb.conf </dt>
 <dd>
 <p>This is default name of fallback system-wide configuration
 file.  This file is used only if per-instance configuration
 variable is not found.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitweb.conf.txt-etcgitweb-commonconf"> <a class="anchor" href="#Documentation/gitweb.conf.txt-etcgitweb-commonconf"></a>/etc/gitweb-common.conf </dt>
+<dt class="hdlist1" id="Documentation/gitweb.conf.txt-etcgitweb-commonconf"><a class="anchor" href="#Documentation/gitweb.conf.txt-etcgitweb-commonconf"></a>/etc/gitweb-common.conf </dt>
 <dd>
 <p>This is default name of common system-wide configuration
 file.</p>

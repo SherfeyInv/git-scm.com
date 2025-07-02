@@ -95,31 +95,31 @@ closely as possible.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt---base-pathltpathgt"> <a class="anchor" href="#Documentation/git-cvsserver.txt---base-pathpath"></a> <a class="anchor" href="#Documentation/git-cvsserver.txt---base-pathltpathgt"></a>--base-path &lt;path&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt---base-pathltpathgt"><a id="Documentation/git-cvsserver.txt---base-pathpath" class="anchor" href="#Documentation/git-cvsserver.txt---base-pathpath"></a>--base-path &lt;path&gt; </dt>
 <dd>
 <p>Prepend <em>path</em> to requested CVSROOT</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt---strict-paths"> <a class="anchor" href="#Documentation/git-cvsserver.txt---strict-paths"></a>--strict-paths </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt---strict-paths"><a class="anchor" href="#Documentation/git-cvsserver.txt---strict-paths"></a>--strict-paths </dt>
 <dd>
 <p>Don&#8217;t allow recursing into subdirectories</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt---export-all"> <a class="anchor" href="#Documentation/git-cvsserver.txt---export-all"></a>--export-all </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt---export-all"><a class="anchor" href="#Documentation/git-cvsserver.txt---export-all"></a>--export-all </dt>
 <dd>
 <p>Don&#8217;t check for <code>gitcvs.enabled</code> in config. You also have to specify a list
 of allowed directories (see below) if you want to use this option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt--V"> <a class="anchor" href="#Documentation/git-cvsserver.txt--V"></a>-V </dt>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt---version"> <a class="anchor" href="#Documentation/git-cvsserver.txt---version"></a>--version </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt--V"><a class="anchor" href="#Documentation/git-cvsserver.txt--V"></a>-V </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt---version"><a class="anchor" href="#Documentation/git-cvsserver.txt---version"></a>--version </dt>
 <dd>
 <p>Print version information and exit</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt--h"> <a class="anchor" href="#Documentation/git-cvsserver.txt--h"></a>-h </dt>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt--H"> <a class="anchor" href="#Documentation/git-cvsserver.txt--H"></a>-H </dt>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt---help"> <a class="anchor" href="#Documentation/git-cvsserver.txt---help"></a>--help </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt--h"><a class="anchor" href="#Documentation/git-cvsserver.txt--h"></a>-h </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt--H"><a class="anchor" href="#Documentation/git-cvsserver.txt--H"></a>-H </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt---help"><a class="anchor" href="#Documentation/git-cvsserver.txt---help"></a>--help </dt>
 <dd>
 <p>Print usage information and exit</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-ltdirectorygt"> <a class="anchor" href="#Documentation/git-cvsserver.txt-directory"></a> <a class="anchor" href="#Documentation/git-cvsserver.txt-ltdirectorygt"></a>&lt;directory&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-ltdirectorygt"><a id="Documentation/git-cvsserver.txt-directory" class="anchor" href="#Documentation/git-cvsserver.txt-directory"></a>&lt;directory&gt; </dt>
 <dd>
 <p>The remaining arguments provide a list of directories. If no directories
 are given, then all are allowed. Repositories within these directories
@@ -369,7 +369,7 @@ about <code>DBI-&gt;connect()</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbName"> <a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbName"></a>gitcvs.dbName </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbName"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbName"></a>gitcvs.dbName </dt>
 <dd>
 <p>Database name. The exact meaning depends on the
 selected database driver, for SQLite this is a filename.
@@ -377,7 +377,7 @@ Supports variable substitution (see below). May
 not contain semicolons (<code>;</code>).
 Default: <em>%Ggitcvs.%m.sqlite</em></p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbDriver"> <a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbDriver"></a>gitcvs.dbDriver </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbDriver"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbDriver"></a>gitcvs.dbDriver </dt>
 <dd>
 <p>Used DBI driver. You can specify any available driver
 for this here, but it might not work. cvsserver is tested
@@ -387,18 +387,18 @@ Please regard this as an experimental feature. May not
 contain colons (<code>:</code>).
 Default: <em>SQLite</em></p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbuser"> <a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbuser"></a>gitcvs.dbuser </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbuser"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbuser"></a>gitcvs.dbuser </dt>
 <dd>
 <p>Database user. Only useful if setting <code>dbDriver</code>, since
 SQLite has no concept of database users. Supports variable
 substitution (see below).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbPass"> <a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbPass"></a>gitcvs.dbPass </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbPass"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbPass"></a>gitcvs.dbPass </dt>
 <dd>
 <p>Database password.  Only useful if setting <code>dbDriver</code>, since
 SQLite has no concept of database passwords.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbTableNamePrefix"> <a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbTableNamePrefix"></a>gitcvs.dbTableNamePrefix </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbTableNamePrefix"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbTableNamePrefix"></a>gitcvs.dbTableNamePrefix </dt>
 <dd>
 <p>Database table name prefix.  Supports variable substitution
 (see below).  Any non-alphabetic characters will be replaced
@@ -416,26 +416,26 @@ with underscores.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-G"> <a class="anchor" href="#Documentation/git-cvsserver.txt-G"></a>%G </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-G"><a class="anchor" href="#Documentation/git-cvsserver.txt-G"></a>%G </dt>
 <dd>
 <p>Git directory name</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-g"> <a class="anchor" href="#Documentation/git-cvsserver.txt-g"></a>%g </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-g"><a class="anchor" href="#Documentation/git-cvsserver.txt-g"></a>%g </dt>
 <dd>
 <p>Git directory name, where all characters except for
 alphanumeric ones, <code>.</code>, and <code>-</code> are replaced with
 <code>_</code> (this should make it easier to use the directory
 name in a filename if wanted)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-m"> <a class="anchor" href="#Documentation/git-cvsserver.txt-m"></a>%m </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-m"><a class="anchor" href="#Documentation/git-cvsserver.txt-m"></a>%m </dt>
 <dd>
 <p>CVS module/Git head name</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-a"> <a class="anchor" href="#Documentation/git-cvsserver.txt-a"></a>%a </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-a"><a class="anchor" href="#Documentation/git-cvsserver.txt-a"></a>%a </dt>
 <dd>
 <p>access method (one of "ext" or "pserver")</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-u"> <a class="anchor" href="#Documentation/git-cvsserver.txt-u"></a>%u </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-u"><a class="anchor" href="#Documentation/git-cvsserver.txt-u"></a>%u </dt>
 <dd>
 <p>Name of the user running <em>git-cvsserver</em>.
 If no name can be determined, the
@@ -456,11 +456,11 @@ circumstances, allowing easier restricted usage through git-shell.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-GITCVSSERVERBASEPATH"> <a class="anchor" href="#Documentation/git-cvsserver.txt-GITCVSSERVERBASEPATH"></a>GIT_CVSSERVER_BASE_PATH </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-GITCVSSERVERBASEPATH"><a class="anchor" href="#Documentation/git-cvsserver.txt-GITCVSSERVERBASEPATH"></a>GIT_CVSSERVER_BASE_PATH </dt>
 <dd>
 <p>This variable replaces the argument to --base-path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsserver.txt-GITCVSSERVERROOT"> <a class="anchor" href="#Documentation/git-cvsserver.txt-GITCVSSERVERROOT"></a>GIT_CVSSERVER_ROOT </dt>
+<dt class="hdlist1" id="Documentation/git-cvsserver.txt-GITCVSSERVERROOT"><a class="anchor" href="#Documentation/git-cvsserver.txt-GITCVSSERVERROOT"></a>GIT_CVSSERVER_ROOT </dt>
 <dd>
 <p>This variable specifies a single directory, replacing the
 <code>&lt;directory&gt;...</code> argument list. The repository still requires the

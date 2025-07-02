@@ -63,7 +63,7 @@ configuration file:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpgetanyfile"> <a class="anchor" href="#Documentation/git-http-backend.txt-httpgetanyfile"></a>http.getanyfile </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpgetanyfile"><a class="anchor" href="#Documentation/git-http-backend.txt-httpgetanyfile"></a>http.getanyfile </dt>
 <dd>
 <p>This serves Git clients older than version 1.6.6 that are unable to use the
 upload pack service.  When enabled, clients are able to read
@@ -72,13 +72,13 @@ no longer reachable from a branch but are still present.
 It is enabled by default, but a repository can disable it
 by setting this configuration value to <code>false</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadpack"> <a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadpack"></a>http.uploadpack </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadpack"><a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadpack"></a>http.uploadpack </dt>
 <dd>
 <p>This serves <em>git fetch-pack</em> and <em>git ls-remote</em> clients.
 It is enabled by default, but a repository can disable it
 by setting this configuration value to <code>false</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpreceivepack"> <a class="anchor" href="#Documentation/git-http-backend.txt-httpreceivepack"></a>http.receivepack </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpreceivepack"><a class="anchor" href="#Documentation/git-http-backend.txt-httpreceivepack"></a>http.receivepack </dt>
 <dd>
 <p>This serves <em>git send-pack</em> clients, allowing push.  It is
 disabled by default for anonymous users, and enabled by
@@ -86,7 +86,7 @@ default for users authenticated by the web server.  It can be
 disabled by setting this item to <code>false</code>, or enabled for all
 users, including anonymous users, by setting it to <code>true</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadarchive"> <a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadarchive"></a>http.uploadarchive </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadarchive"><a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadarchive"></a>http.uploadarchive </dt>
 <dd>
 <p>This serves <em>git archive</em> clients for remote archive over HTTP/HTTPS
 protocols. It is disabled by default. It only works in protocol v2.</p>
@@ -117,7 +117,7 @@ to <code>/var/www/git/foo/bar.git</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-Apache2x"> <a class="anchor" href="#Documentation/git-http-backend.txt-Apache2x"></a>Apache 2.x </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-Apache2x"><a class="anchor" href="#Documentation/git-http-backend.txt-Apache2x"></a>Apache 2.x </dt>
 <dd>
 <p>Ensure mod_cgi, mod_alias, and mod_env are enabled, set
 GIT_PROJECT_ROOT (or DocumentRoot) appropriately, and
@@ -234,7 +234,7 @@ ScriptAliasMatch ^/git/[^/]*(.*) /usr/libexec/git-core/git-http-backend/storage.
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-AcceleratedstaticApache2x"> <a class="anchor" href="#Documentation/git-http-backend.txt-AcceleratedstaticApache2x"></a>Accelerated static Apache 2.x </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-AcceleratedstaticApache2x"><a class="anchor" href="#Documentation/git-http-backend.txt-AcceleratedstaticApache2x"></a>Accelerated static Apache 2.x </dt>
 <dd>
 <p>Similar to the above, but Apache can be used to return static
 files that are stored on disk.  On many systems this may
@@ -268,7 +268,7 @@ ScriptAlias /git/ /var/www/cgi-bin/gitweb.cgi/</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-http-backend.txt-Lighttpd"> <a class="anchor" href="#Documentation/git-http-backend.txt-Lighttpd"></a>Lighttpd </dt>
+<dt class="hdlist1" id="Documentation/git-http-backend.txt-Lighttpd"><a class="anchor" href="#Documentation/git-http-backend.txt-Lighttpd"></a>Lighttpd </dt>
 <dd>
 <p>Ensure that <code>mod_cgi</code>, <code>mod_alias</code>, <code>mod_auth</code>, <code>mod_setenv</code> are
 loaded, then set <code>GIT_PROJECT_ROOT</code> appropriately and redirect

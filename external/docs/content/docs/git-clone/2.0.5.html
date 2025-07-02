@@ -64,8 +64,8 @@ configuration variables.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-clone.txt---local"> <a class="anchor" href="#Documentation/git-clone.txt---local"></a>--local </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--l"> <a class="anchor" href="#Documentation/git-clone.txt--l"></a>-l </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---local"><a class="anchor" href="#Documentation/git-clone.txt---local"></a>--local </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--l"><a class="anchor" href="#Documentation/git-clone.txt--l"></a>-l </dt>
 <dd>
 <p>When the repository to clone from is on a local machine,
 this flag bypasses the normal "Git aware" transport
@@ -82,15 +82,15 @@ override the default when <code>/path/to/repo</code> is given, using the regular
 Git transport instead.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---no-hardlinks"> <a class="anchor" href="#Documentation/git-clone.txt---no-hardlinks"></a>--no-hardlinks </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---no-hardlinks"><a class="anchor" href="#Documentation/git-clone.txt---no-hardlinks"></a>--no-hardlinks </dt>
 <dd>
 <p>Force the cloning process from a repository on a local
 filesystem to copy the files under the <code>.git/objects</code>
 directory instead of using hardlinks. This may be desirable
 if you are trying to make a back-up of your repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---shared"> <a class="anchor" href="#Documentation/git-clone.txt---shared"></a>--shared </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--s"> <a class="anchor" href="#Documentation/git-clone.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---shared"><a class="anchor" href="#Documentation/git-clone.txt---shared"></a>--shared </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--s"><a class="anchor" href="#Documentation/git-clone.txt--s"></a>-s </dt>
 <dd>
 <p>When the repository to clone is on the local machine,
 instead of using hard links, automatically setup
@@ -121,7 +121,7 @@ its source repository, you can simply run <code>git repack -a</code> to copy all
 objects from the source repository into a pack in the cloned repository.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---referenceltrepositorygt"> <a class="anchor" href="#Documentation/git-clone.txt---referencerepository"></a> <a class="anchor" href="#Documentation/git-clone.txt---referenceltrepositorygt"></a>--reference &lt;repository&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---referenceltrepositorygt"><a id="Documentation/git-clone.txt---referencerepository" class="anchor" href="#Documentation/git-clone.txt---referencerepository"></a>--reference &lt;repository&gt; </dt>
 <dd>
 <p>If the reference repository is on the local machine,
 automatically setup <code>.git/objects/info/alternates</code> to
@@ -133,32 +133,32 @@ being cloned, reducing network and local storage costs.</p>
 <p><strong>NOTE</strong>: see the NOTE for the <code>--shared</code> option.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---quiet"> <a class="anchor" href="#Documentation/git-clone.txt---quiet"></a>--quiet </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--q"> <a class="anchor" href="#Documentation/git-clone.txt--q"></a>-q </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---quiet"><a class="anchor" href="#Documentation/git-clone.txt---quiet"></a>--quiet </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--q"><a class="anchor" href="#Documentation/git-clone.txt--q"></a>-q </dt>
 <dd>
 <p>Operate quietly.  Progress is not reported to the standard
 error stream. This flag is also passed to the &#8216;rsync&#8217;
 command when given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---verbose"> <a class="anchor" href="#Documentation/git-clone.txt---verbose"></a>--verbose </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--v"> <a class="anchor" href="#Documentation/git-clone.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---verbose"><a class="anchor" href="#Documentation/git-clone.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--v"><a class="anchor" href="#Documentation/git-clone.txt--v"></a>-v </dt>
 <dd>
 <p>Run verbosely. Does not affect the reporting of progress status
 to the standard error stream.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---progress"> <a class="anchor" href="#Documentation/git-clone.txt---progress"></a>--progress </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---progress"><a class="anchor" href="#Documentation/git-clone.txt---progress"></a>--progress </dt>
 <dd>
 <p>Progress status is reported on the standard error stream
 by default when it is attached to a terminal, unless -q
 is specified. This flag forces progress status even if the
 standard error stream is not directed to a terminal.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---no-checkout"> <a class="anchor" href="#Documentation/git-clone.txt---no-checkout"></a>--no-checkout </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--n"> <a class="anchor" href="#Documentation/git-clone.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---no-checkout"><a class="anchor" href="#Documentation/git-clone.txt---no-checkout"></a>--no-checkout </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--n"><a class="anchor" href="#Documentation/git-clone.txt--n"></a>-n </dt>
 <dd>
 <p>No checkout of HEAD is performed after the clone is complete.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---bare"> <a class="anchor" href="#Documentation/git-clone.txt---bare"></a>--bare </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---bare"><a class="anchor" href="#Documentation/git-clone.txt---bare"></a>--bare </dt>
 <dd>
 <p>Make a <em>bare</em> Git repository.  That is, instead of
 creating <code>&lt;directory&gt;</code> and placing the administrative
@@ -171,7 +171,7 @@ them to <code>refs/remotes/origin/</code>.  When this option is
 used, neither remote-tracking branches nor the related
 configuration variables are created.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---mirror"> <a class="anchor" href="#Documentation/git-clone.txt---mirror"></a>--mirror </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---mirror"><a class="anchor" href="#Documentation/git-clone.txt---mirror"></a>--mirror </dt>
 <dd>
 <p>Set up a mirror of the source repository.  This implies <code>--bare</code>.
 Compared to <code>--bare</code>, <code>--mirror</code> not only maps local branches of the
@@ -180,14 +180,14 @@ remote-tracking branches, notes etc.) and sets up a refspec configuration such
 that all these refs are overwritten by a <code>git remote update</code> in the
 target repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---originltnamegt"> <a class="anchor" href="#Documentation/git-clone.txt---originname"></a> <a class="anchor" href="#Documentation/git-clone.txt---originltnamegt"></a>--origin &lt;name&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--oltnamegt"> <a class="anchor" href="#Documentation/git-clone.txt--oname"></a> <a class="anchor" href="#Documentation/git-clone.txt--oltnamegt"></a>-o &lt;name&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---originltnamegt"><a id="Documentation/git-clone.txt---originname" class="anchor" href="#Documentation/git-clone.txt---originname"></a>--origin &lt;name&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--oltnamegt"><a id="Documentation/git-clone.txt--oname" class="anchor" href="#Documentation/git-clone.txt--oname"></a>-o &lt;name&gt; </dt>
 <dd>
 <p>Instead of using the remote name <code>origin</code> to keep track
 of the upstream repository, use <code>&lt;name&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---branchltnamegt"> <a class="anchor" href="#Documentation/git-clone.txt---branchname"></a> <a class="anchor" href="#Documentation/git-clone.txt---branchltnamegt"></a>--branch &lt;name&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--bltnamegt"> <a class="anchor" href="#Documentation/git-clone.txt--bname"></a> <a class="anchor" href="#Documentation/git-clone.txt--bltnamegt"></a>-b &lt;name&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---branchltnamegt"><a id="Documentation/git-clone.txt---branchname" class="anchor" href="#Documentation/git-clone.txt---branchname"></a>--branch &lt;name&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--bltnamegt"><a id="Documentation/git-clone.txt--bname" class="anchor" href="#Documentation/git-clone.txt--bname"></a>-b &lt;name&gt; </dt>
 <dd>
 <p>Instead of pointing the newly created HEAD to the branch pointed
 to by the cloned repository&#8217;s HEAD, point to <code>&lt;name&gt;</code> branch
@@ -196,20 +196,20 @@ be checked out.
 <code>--branch</code> can also take tags and detaches the HEAD at that commit
 in the resulting repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---upload-packltupload-packgt"> <a class="anchor" href="#Documentation/git-clone.txt---upload-packupload-pack"></a> <a class="anchor" href="#Documentation/git-clone.txt---upload-packltupload-packgt"></a>--upload-pack &lt;upload-pack&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--ultupload-packgt"> <a class="anchor" href="#Documentation/git-clone.txt--uupload-pack"></a> <a class="anchor" href="#Documentation/git-clone.txt--ultupload-packgt"></a>-u &lt;upload-pack&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---upload-packltupload-packgt"><a id="Documentation/git-clone.txt---upload-packupload-pack" class="anchor" href="#Documentation/git-clone.txt---upload-packupload-pack"></a>--upload-pack &lt;upload-pack&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--ultupload-packgt"><a id="Documentation/git-clone.txt--uupload-pack" class="anchor" href="#Documentation/git-clone.txt--uupload-pack"></a>-u &lt;upload-pack&gt; </dt>
 <dd>
 <p>When given, and the repository to clone from is accessed
 via ssh, this specifies a non-default path for the command
 run on the other end.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---templatelttemplatedirectorygt"> <a class="anchor" href="#Documentation/git-clone.txt---templatetemplatedirectory"></a> <a class="anchor" href="#Documentation/git-clone.txt---templatelttemplatedirectorygt"></a>--template=&lt;template_directory&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---templatelttemplatedirectorygt"><a id="Documentation/git-clone.txt---templatetemplatedirectory" class="anchor" href="#Documentation/git-clone.txt---templatetemplatedirectory"></a>--template=&lt;template_directory&gt; </dt>
 <dd>
 <p>Specify the directory from which templates will be used;
 (See the "TEMPLATE DIRECTORY" section of <a href='{{< relurl "docs/git-init" >}}'>git-init[1]</a>.)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---configltkeygtltvaluegt"> <a class="anchor" href="#Documentation/git-clone.txt---configkeyvalue"></a> <a class="anchor" href="#Documentation/git-clone.txt---configltkeygtltvaluegt"></a>--config &lt;key&gt;=&lt;value&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt--cltkeygtltvaluegt"> <a class="anchor" href="#Documentation/git-clone.txt--ckeyvalue"></a> <a class="anchor" href="#Documentation/git-clone.txt--cltkeygtltvaluegt"></a>-c &lt;key&gt;=&lt;value&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---configltkeygtltvaluegt"><a id="Documentation/git-clone.txt---configkeyvalue" class="anchor" href="#Documentation/git-clone.txt---configkeyvalue"></a>--config &lt;key&gt;=&lt;value&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt--cltkeygtltvaluegt"><a id="Documentation/git-clone.txt--ckeyvalue" class="anchor" href="#Documentation/git-clone.txt--ckeyvalue"></a>-c &lt;key&gt;=&lt;value&gt; </dt>
 <dd>
 <p>Set a configuration variable in the newly-created repository;
 this takes effect immediately after the repository is
@@ -220,12 +220,12 @@ values are given for the same key, each value will be written to
 the config file. This makes it safe, for example, to add
 additional fetch refspecs to the origin remote.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---depthltdepthgt"> <a class="anchor" href="#Documentation/git-clone.txt---depthdepth"></a> <a class="anchor" href="#Documentation/git-clone.txt---depthltdepthgt"></a>--depth &lt;depth&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---depthltdepthgt"><a id="Documentation/git-clone.txt---depthdepth" class="anchor" href="#Documentation/git-clone.txt---depthdepth"></a>--depth &lt;depth&gt; </dt>
 <dd>
 <p>Create a <em>shallow</em> clone with a history truncated to the
 specified number of revisions.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---no-single-branch"> <a class="anchor" href="#Documentation/git-clone.txt---no-single-branch"></a>--[no-]single-branch </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---no-single-branch"><a class="anchor" href="#Documentation/git-clone.txt---no-single-branch"></a>--[no-]single-branch </dt>
 <dd>
 <p>Clone only the history leading to the tip of a single branch,
 either specified by the <code>--branch</code> option or the primary
@@ -239,8 +239,8 @@ initial cloning.  If the HEAD at the remote did not point at any
 branch when <code>--single-branch</code> clone was made, no remote-tracking
 branch is created.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---recursive"> <a class="anchor" href="#Documentation/git-clone.txt---recursive"></a>--recursive </dt>
-<dt class="hdlist1" id="Documentation/git-clone.txt---recurse-submodules"> <a class="anchor" href="#Documentation/git-clone.txt---recurse-submodules"></a>--recurse-submodules </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---recursive"><a class="anchor" href="#Documentation/git-clone.txt---recursive"></a>--recursive </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---recurse-submodules"><a class="anchor" href="#Documentation/git-clone.txt---recurse-submodules"></a>--recurse-submodules </dt>
 <dd>
 <p>After the clone is created, initialize all submodules within,
 using their default settings. This is equivalent to running
@@ -249,7 +249,7 @@ the clone is finished. This option is ignored if the cloned
 repository does not have a worktree/checkout (i.e. if any of
 <code>--no-checkout</code>/<code>-n</code>, <code>--bare</code>, or <code>--mirror</code> is given)</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt---separate-git-dirltgitdirgt"> <a class="anchor" href="#Documentation/git-clone.txt---separate-git-dirgitdir"></a> <a class="anchor" href="#Documentation/git-clone.txt---separate-git-dirltgitdirgt"></a>--separate-git-dir=&lt;git dir&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt---separate-git-dirltgitdirgt"><a id="Documentation/git-clone.txt---separate-git-dirgitdir" class="anchor" href="#Documentation/git-clone.txt---separate-git-dirgitdir"></a>--separate-git-dir=&lt;git dir&gt; </dt>
 <dd>
 <p>Instead of placing the cloned repository where it is supposed
 to be, place the cloned repository at the specified directory,
@@ -257,13 +257,13 @@ then make a filesystem-agnostic Git symbolic link to there.
 The result is Git repository can be separated from working
 tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt-ltrepositorygt"> <a class="anchor" href="#Documentation/git-clone.txt-repository"></a> <a class="anchor" href="#Documentation/git-clone.txt-ltrepositorygt"></a>&lt;repository&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt-ltrepositorygt"><a id="Documentation/git-clone.txt-repository" class="anchor" href="#Documentation/git-clone.txt-repository"></a>&lt;repository&gt; </dt>
 <dd>
 <p>The (possibly remote) repository to clone from.  See the
 <a href="#URLS">URLS</a> section below for more information on specifying
 repositories.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-clone.txt-ltdirectorygt"> <a class="anchor" href="#Documentation/git-clone.txt-directory"></a> <a class="anchor" href="#Documentation/git-clone.txt-ltdirectorygt"></a>&lt;directory&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-clone.txt-ltdirectorygt"><a id="Documentation/git-clone.txt-directory" class="anchor" href="#Documentation/git-clone.txt-directory"></a>&lt;directory&gt; </dt>
 <dd>
 <p>The name of a new directory to clone into.  The "humanish"
 part of the source repository is used if no directory is

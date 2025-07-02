@@ -293,12 +293,12 @@ $ git p4 unshelve 12345
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt---git-dirltdirgt"> <a class="anchor" href="#Documentation/git-p4.txt---git-dirdir"></a> <a class="anchor" href="#Documentation/git-p4.txt---git-dirltdirgt"></a>--git-dir &lt;dir&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---git-dirltdirgt"><a id="Documentation/git-p4.txt---git-dirdir" class="anchor" href="#Documentation/git-p4.txt---git-dirdir"></a>--git-dir &lt;dir&gt; </dt>
 <dd>
 <p>Set the <code>GIT_DIR</code> environment variable.  See <a href='{{< relurl "docs/git" >}}'>git[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt--v"> <a class="anchor" href="#Documentation/git-p4.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-p4.txt---verbose"> <a class="anchor" href="#Documentation/git-p4.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt--v"><a class="anchor" href="#Documentation/git-p4.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---verbose"><a class="anchor" href="#Documentation/git-p4.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>Provide more progress information.</p>
 </dd>
@@ -313,7 +313,7 @@ subsequent <em>sync</em> operations.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt---branchltrefgt"> <a class="anchor" href="#Documentation/git-p4.txt---branchref"></a> <a class="anchor" href="#Documentation/git-p4.txt---branchltrefgt"></a>--branch &lt;ref&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---branchltrefgt"><a id="Documentation/git-p4.txt---branchref" class="anchor" href="#Documentation/git-p4.txt---branchref"></a>--branch &lt;ref&gt; </dt>
 <dd>
 <p>Import changes into &lt;ref&gt; instead of refs/remotes/p4/master.
 If &lt;ref&gt; starts with refs/, it is used as is.  Otherwise, if
@@ -337,32 +337,32 @@ Git repository:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---detect-branches"> <a class="anchor" href="#Documentation/git-p4.txt---detect-branches"></a>--detect-branches </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---detect-branches"><a class="anchor" href="#Documentation/git-p4.txt---detect-branches"></a>--detect-branches </dt>
 <dd>
 <p>Use the branch detection algorithm to find new paths in p4.  It is
 documented below in "BRANCH DETECTION".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---changesfileltfilegt"> <a class="anchor" href="#Documentation/git-p4.txt---changesfilefile"></a> <a class="anchor" href="#Documentation/git-p4.txt---changesfileltfilegt"></a>--changesfile &lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---changesfileltfilegt"><a id="Documentation/git-p4.txt---changesfilefile" class="anchor" href="#Documentation/git-p4.txt---changesfilefile"></a>--changesfile &lt;file&gt; </dt>
 <dd>
 <p>Import exactly the p4 change numbers listed in <em>file</em>, one per
 line.  Normally, <em>git p4</em> inspects the current p4 repository
 state and detects the changes it should import.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---silent"> <a class="anchor" href="#Documentation/git-p4.txt---silent"></a>--silent </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---silent"><a class="anchor" href="#Documentation/git-p4.txt---silent"></a>--silent </dt>
 <dd>
 <p>Do not print any progress information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---detect-labels"> <a class="anchor" href="#Documentation/git-p4.txt---detect-labels"></a>--detect-labels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---detect-labels"><a class="anchor" href="#Documentation/git-p4.txt---detect-labels"></a>--detect-labels </dt>
 <dd>
 <p>Query p4 for labels associated with the depot paths, and add
 them as tags in Git. Limited usefulness as only imports labels
 associated with new changelists. Deprecated.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---import-labels"> <a class="anchor" href="#Documentation/git-p4.txt---import-labels"></a>--import-labels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---import-labels"><a class="anchor" href="#Documentation/git-p4.txt---import-labels"></a>--import-labels </dt>
 <dd>
 <p>Import labels from p4 into Git.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---import-local"> <a class="anchor" href="#Documentation/git-p4.txt---import-local"></a>--import-local </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---import-local"><a class="anchor" href="#Documentation/git-p4.txt---import-local"></a>--import-local </dt>
 <dd>
 <p>By default, p4 branches are stored in <em>refs/remotes/p4/</em>,
 where they will be treated as remote-tracking branches by
@@ -371,7 +371,7 @@ puts p4 branches in <em>refs/heads/p4/</em>.  Note that future
 sync operations must specify <code>--import-local</code> as well so that
 they can find the p4 branches in refs/heads.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---max-changesltngt"> <a class="anchor" href="#Documentation/git-p4.txt---max-changesn"></a> <a class="anchor" href="#Documentation/git-p4.txt---max-changesltngt"></a>--max-changes &lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---max-changesltngt"><a id="Documentation/git-p4.txt---max-changesn" class="anchor" href="#Documentation/git-p4.txt---max-changesn"></a>--max-changes &lt;n&gt; </dt>
 <dd>
 <p>Import at most <em>n</em> changes, rather than the entire range of
 changes included in the given revision specifier. A typical
@@ -379,7 +379,7 @@ usage would be use <em>@all</em> as the revision specifier, but then
 to use <em>--max-changes 1000</em> to import only the last 1000
 revisions rather than the entire revision history.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---changes-block-sizeltngt"> <a class="anchor" href="#Documentation/git-p4.txt---changes-block-sizen"></a> <a class="anchor" href="#Documentation/git-p4.txt---changes-block-sizeltngt"></a>--changes-block-size &lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---changes-block-sizeltngt"><a id="Documentation/git-p4.txt---changes-block-sizen" class="anchor" href="#Documentation/git-p4.txt---changes-block-sizen"></a>--changes-block-size &lt;n&gt; </dt>
 <dd>
 <p>The internal block size to use when converting a revision
 specifier such as <em>@all</em> into a list of specific change
@@ -389,7 +389,7 @@ sequence of calls to <em>p4 changes -m</em>, each of which requests
 one block of changes of the given size. The default block size
 is 500, which should usually be suitable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---keep-path"> <a class="anchor" href="#Documentation/git-p4.txt---keep-path"></a>--keep-path </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---keep-path"><a class="anchor" href="#Documentation/git-p4.txt---keep-path"></a>--keep-path </dt>
 <dd>
 <p>The mapping of file names from the p4 depot path to Git, by
 default, involves removing the entire depot path.  With this
@@ -398,12 +398,12 @@ path <em>//depot/main/foo/bar.c</em>, when imported from
 <em>//depot/main/</em>, becomes <em>foo/bar.c</em>.  With <code>--keep-path</code>, the
 Git path is instead <em>depot/main/foo/bar.c</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---use-client-spec"> <a class="anchor" href="#Documentation/git-p4.txt---use-client-spec"></a>--use-client-spec </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---use-client-spec"><a class="anchor" href="#Documentation/git-p4.txt---use-client-spec"></a>--use-client-spec </dt>
 <dd>
 <p>Use a client spec to find the list of interesting files in p4.
 See the "CLIENT SPEC" section below.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt--ltpathgt"> <a class="anchor" href="#Documentation/git-p4.txt--path"></a> <a class="anchor" href="#Documentation/git-p4.txt--ltpathgt"></a>-/ &lt;path&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt--ltpathgt"><a id="Documentation/git-p4.txt--path" class="anchor" href="#Documentation/git-p4.txt--path"></a>-/ &lt;path&gt; </dt>
 <dd>
 <p>Exclude selected depot paths when cloning or syncing.</p>
 </dd>
@@ -418,13 +418,13 @@ options described above.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt---destinationltdirectorygt"> <a class="anchor" href="#Documentation/git-p4.txt---destinationdirectory"></a> <a class="anchor" href="#Documentation/git-p4.txt---destinationltdirectorygt"></a>--destination &lt;directory&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---destinationltdirectorygt"><a id="Documentation/git-p4.txt---destinationdirectory" class="anchor" href="#Documentation/git-p4.txt---destinationdirectory"></a>--destination &lt;directory&gt; </dt>
 <dd>
 <p>Where to create the Git repository.  If not provided, the last
 component in the p4 depot path is used to create a new
 directory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---bare"> <a class="anchor" href="#Documentation/git-p4.txt---bare"></a>--bare </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---bare"><a class="anchor" href="#Documentation/git-p4.txt---bare"></a>--bare </dt>
 <dd>
 <p>Perform a bare clone.  See <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>.</p>
 </dd>
@@ -438,36 +438,36 @@ directory.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt---originltcommitgt"> <a class="anchor" href="#Documentation/git-p4.txt---origincommit"></a> <a class="anchor" href="#Documentation/git-p4.txt---originltcommitgt"></a>--origin &lt;commit&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---originltcommitgt"><a id="Documentation/git-p4.txt---origincommit" class="anchor" href="#Documentation/git-p4.txt---origincommit"></a>--origin &lt;commit&gt; </dt>
 <dd>
 <p>Upstream location from which commits are identified to submit to
 p4.  By default, this is the most recent p4 commit reachable
 from <code>HEAD</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt--M"> <a class="anchor" href="#Documentation/git-p4.txt--M"></a>-M </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt--M"><a class="anchor" href="#Documentation/git-p4.txt--M"></a>-M </dt>
 <dd>
 <p>Detect renames.  See <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>.  Renames will be
 represented in p4 using explicit <em>move</em> operations.  There
 is no corresponding option to detect copies, but there are
 variables for both moves and copies.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---preserve-user"> <a class="anchor" href="#Documentation/git-p4.txt---preserve-user"></a>--preserve-user </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---preserve-user"><a class="anchor" href="#Documentation/git-p4.txt---preserve-user"></a>--preserve-user </dt>
 <dd>
 <p>Re-author p4 changes before submitting to p4.  This option
 requires p4 admin privileges.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---export-labels"> <a class="anchor" href="#Documentation/git-p4.txt---export-labels"></a>--export-labels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---export-labels"><a class="anchor" href="#Documentation/git-p4.txt---export-labels"></a>--export-labels </dt>
 <dd>
 <p>Export tags from Git as p4 labels. Tags found in Git are applied
 to the perforce working directory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt--n"> <a class="anchor" href="#Documentation/git-p4.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-p4.txt---dry-run"> <a class="anchor" href="#Documentation/git-p4.txt---dry-run"></a>--dry-run </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt--n"><a class="anchor" href="#Documentation/git-p4.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---dry-run"><a class="anchor" href="#Documentation/git-p4.txt---dry-run"></a>--dry-run </dt>
 <dd>
 <p>Show just what commits would be submitted to p4; do not change
 state in Git or p4.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---prepare-p4-only"> <a class="anchor" href="#Documentation/git-p4.txt---prepare-p4-only"></a>--prepare-p4-only </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---prepare-p4-only"><a class="anchor" href="#Documentation/git-p4.txt---prepare-p4-only"></a>--prepare-p4-only </dt>
 <dd>
 <p>Apply a commit to the p4 workspace, opening, adding and deleting
 files in p4 as for a normal submit operation.  Do not issue the
@@ -475,18 +475,18 @@ final "p4 submit", but instead print a message about how to
 submit manually or revert.  This option always stops after the
 first (oldest) commit.  Git tags are not exported to p4.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---shelve"> <a class="anchor" href="#Documentation/git-p4.txt---shelve"></a>--shelve </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---shelve"><a class="anchor" href="#Documentation/git-p4.txt---shelve"></a>--shelve </dt>
 <dd>
 <p>Instead of submitting create a series of shelved changelists.
 After creating each shelve, the relevant files are reverted/deleted.
 If you have multiple commits pending multiple shelves will be created.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---update-shelveCHANGELIST"> <a class="anchor" href="#Documentation/git-p4.txt---update-shelveCHANGELIST"></a>--update-shelve CHANGELIST </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---update-shelveCHANGELIST"><a class="anchor" href="#Documentation/git-p4.txt---update-shelveCHANGELIST"></a>--update-shelve CHANGELIST </dt>
 <dd>
 <p>Update an existing shelved changelist with this commit. Implies
 --shelve. Repeat for multiple shelved changelists.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---conflictaskskipquit"> <a class="anchor" href="#Documentation/git-p4.txt---conflictaskskipquit"></a>--conflict=(ask|skip|quit) </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---conflictaskskipquit"><a class="anchor" href="#Documentation/git-p4.txt---conflictaskskipquit"></a>--conflict=(ask|skip|quit) </dt>
 <dd>
 <p>Conflicts can occur when applying a commit to p4.  When this
 happens, the default behavior ("ask") is to prompt whether to
@@ -494,23 +494,23 @@ skip this commit and continue, or quit.  This option can be used
 to bypass the prompt, causing conflicting commits to be automatically
 skipped, or to quit trying to apply commits, without prompting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---branchltbranchgt"> <a class="anchor" href="#Documentation/git-p4.txt---branchbranch"></a> <a class="anchor" href="#Documentation/git-p4.txt---branchltbranchgt"></a>--branch &lt;branch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---branchltbranchgt"><a id="Documentation/git-p4.txt---branchbranch" class="anchor" href="#Documentation/git-p4.txt---branchbranch"></a>--branch &lt;branch&gt; </dt>
 <dd>
 <p>After submitting, sync this named branch instead of the default
 p4/master.  See the "Sync options" section above for more
 information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---commitltsha1gtltsha1sha1gt"> <a class="anchor" href="#Documentation/git-p4.txt---commitsha1sha1sha1"></a> <a class="anchor" href="#Documentation/git-p4.txt---commitltsha1gtltsha1sha1gt"></a>--commit &lt;sha1&gt;|&lt;sha1..sha1&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---commitltsha1gtltsha1sha1gt"><a id="Documentation/git-p4.txt---commitsha1sha1sha1" class="anchor" href="#Documentation/git-p4.txt---commitsha1sha1sha1"></a>--commit &lt;sha1&gt;|&lt;sha1..sha1&gt; </dt>
 <dd>
 <p>Submit only the specified commit or range of commits, instead of the full
 list of changes that are in the current Git branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---disable-rebase"> <a class="anchor" href="#Documentation/git-p4.txt---disable-rebase"></a>--disable-rebase </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---disable-rebase"><a class="anchor" href="#Documentation/git-p4.txt---disable-rebase"></a>--disable-rebase </dt>
 <dd>
 <p>Disable the automatic rebase after all commits have been successfully
 submitted. Can also be set with git-p4.disableRebase.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt---disable-p4sync"> <a class="anchor" href="#Documentation/git-p4.txt---disable-p4sync"></a>--disable-p4sync </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---disable-p4sync"><a class="anchor" href="#Documentation/git-p4.txt---disable-p4sync"></a>--disable-p4sync </dt>
 <dd>
 <p>Disable the automatic sync of p4/master from Perforce after commits have
 been submitted. Implies --disable-rebase. Can also be set with
@@ -537,7 +537,7 @@ non-zero status from this script prevents <code>git-p4 submit</code> from launch
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt---import-labels-1"> <a class="anchor" href="#Documentation/git-p4.txt---import-labels-1"></a>--import-labels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---import-labels-1"><a class="anchor" href="#Documentation/git-p4.txt---import-labels-1"></a>--import-labels </dt>
 <dd>
 <p>Import p4 labels.</p>
 </dd>
@@ -548,7 +548,7 @@ non-zero status from this script prevents <code>git-p4 submit</code> from launch
 <h3 id="_unshelve_options"><a class="anchor" href="#_unshelve_options"></a>Unshelve options</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt---origin"> <a class="anchor" href="#Documentation/git-p4.txt---origin"></a>--origin </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt---origin"><a class="anchor" href="#Documentation/git-p4.txt---origin"></a>--origin </dt>
 <dd>
 <p>Sets the git refspec against which the shelved P4 changelist is compared.
 Defaults to p4/master.</p>
@@ -568,19 +568,19 @@ p4 revision specifier on the end:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt-depotmyproject"> <a class="anchor" href="#Documentation/git-p4.txt-depotmyproject"></a>"//depot/my/project" </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-depotmyproject"><a class="anchor" href="#Documentation/git-p4.txt-depotmyproject"></a>"//depot/my/project" </dt>
 <dd>
 <p>Import one commit with all files in the <em>#head</em> change under that tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-depotmyprojectall"> <a class="anchor" href="#Documentation/git-p4.txt-depotmyprojectall"></a>"//depot/my/project@all" </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-depotmyprojectall"><a class="anchor" href="#Documentation/git-p4.txt-depotmyprojectall"></a>"//depot/my/project@all" </dt>
 <dd>
 <p>Import one commit for each change in the history of that depot path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-depotmyproject16"> <a class="anchor" href="#Documentation/git-p4.txt-depotmyproject16"></a>"//depot/my/project@1,6" </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-depotmyproject16"><a class="anchor" href="#Documentation/git-p4.txt-depotmyproject16"></a>"//depot/my/project@1,6" </dt>
 <dd>
 <p>Import only changes 1 through 6.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-depotproj1alldepotproj2all"> <a class="anchor" href="#Documentation/git-p4.txt-depotproj1alldepotproj2all"></a>"//depot/proj1@all //depot/proj2@all" </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-depotproj1alldepotproj2all"><a class="anchor" href="#Documentation/git-p4.txt-depotproj1alldepotproj2all"></a>"//depot/proj1@all //depot/proj2@all" </dt>
 <dd>
 <p>Import all changes from both named depot paths into a single
 repository.  Only files below these directories are included.
@@ -723,35 +723,35 @@ They all are in the <em>git-p4</em> section.</p>
 <h3 id="_general_variables"><a class="anchor" href="#_general_variables"></a>General variables</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4user"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4user"></a>git-p4.user </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4user"><a class="anchor" href="#Documentation/git-p4.txt-git-p4user"></a>git-p4.user </dt>
 <dd>
 <p>User specified as an option to all p4 commands, with <em>-u &lt;user&gt;</em>.
 The environment variable <code>P4USER</code> can be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4password"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4password"></a>git-p4.password </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4password"><a class="anchor" href="#Documentation/git-p4.txt-git-p4password"></a>git-p4.password </dt>
 <dd>
 <p>Password specified as an option to all p4 commands, with
 <em>-P &lt;password&gt;</em>.
 The environment variable <code>P4PASS</code> can be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4port"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4port"></a>git-p4.port </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4port"><a class="anchor" href="#Documentation/git-p4.txt-git-p4port"></a>git-p4.port </dt>
 <dd>
 <p>Port specified as an option to all p4 commands, with
 <em>-p &lt;port&gt;</em>.
 The environment variable <code>P4PORT</code> can be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4host"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4host"></a>git-p4.host </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4host"><a class="anchor" href="#Documentation/git-p4.txt-git-p4host"></a>git-p4.host </dt>
 <dd>
 <p>Host specified as an option to all p4 commands, with
 <em>-h &lt;host&gt;</em>.
 The environment variable <code>P4HOST</code> can be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4client"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4client"></a>git-p4.client </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4client"><a class="anchor" href="#Documentation/git-p4.txt-git-p4client"></a>git-p4.client </dt>
 <dd>
 <p>Client specified as an option to all p4 commands, with
 <em>-c &lt;client&gt;</em>, including the client spec.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4retries"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4retries"></a>git-p4.retries </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4retries"><a class="anchor" href="#Documentation/git-p4.txt-git-p4retries"></a>git-p4.retries </dt>
 <dd>
 <p>Specifies the number of times to retry a p4 command (notably,
 <em>p4 sync</em>) if the network times out. The default value is 3.
@@ -765,7 +765,7 @@ does not support retries (pre 2012.2).</p>
 <h3 id="_clone_and_sync_variables"><a class="anchor" href="#_clone_and_sync_variables"></a>Clone and sync variables</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4syncFromOrigin"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4syncFromOrigin"></a>git-p4.syncFromOrigin </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4syncFromOrigin"><a class="anchor" href="#Documentation/git-p4.txt-git-p4syncFromOrigin"></a>git-p4.syncFromOrigin </dt>
 <dd>
 <p>Because importing commits from other Git repositories is much faster
 than importing them from p4, a mechanism exists to find p4 changes
@@ -773,14 +773,14 @@ first in Git remotes.  If branches exist under <em>refs/remote/origin/p4</em>,
 those will be fetched and used when syncing from p4.  This
 variable can be set to <em>false</em> to disable this behavior.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4branchUser"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4branchUser"></a>git-p4.branchUser </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4branchUser"><a class="anchor" href="#Documentation/git-p4.txt-git-p4branchUser"></a>git-p4.branchUser </dt>
 <dd>
 <p>One phase in branch detection involves looking at p4 branches
 to find new ones to import.  By default, all branches are
 inspected.  This option limits the search to just those owned
 by the single user named in the variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4branchList"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4branchList"></a>git-p4.branchList </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4branchList"><a class="anchor" href="#Documentation/git-p4.txt-git-p4branchList"></a>git-p4.branchList </dt>
 <dd>
 <p>List of branches to be imported when branch detection is
 enabled.  Each entry should be a pair of branch names separated
@@ -793,28 +793,28 @@ git config --add git-p4.branchList main:branchB</pre>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4ignoredP4Labels"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4ignoredP4Labels"></a>git-p4.ignoredP4Labels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4ignoredP4Labels"><a class="anchor" href="#Documentation/git-p4.txt-git-p4ignoredP4Labels"></a>git-p4.ignoredP4Labels </dt>
 <dd>
 <p>List of p4 labels to ignore. This is built automatically as
 unimportable labels are discovered.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4importLabels"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4importLabels"></a>git-p4.importLabels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4importLabels"><a class="anchor" href="#Documentation/git-p4.txt-git-p4importLabels"></a>git-p4.importLabels </dt>
 <dd>
 <p>Import p4 labels into git, as per --import-labels.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4labelImportRegexp"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4labelImportRegexp"></a>git-p4.labelImportRegexp </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4labelImportRegexp"><a class="anchor" href="#Documentation/git-p4.txt-git-p4labelImportRegexp"></a>git-p4.labelImportRegexp </dt>
 <dd>
 <p>Only p4 labels matching this regular expression will be imported. The
 default value is <em>[a-zA-Z0-9_\-.]+$</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4useClientSpec"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4useClientSpec"></a>git-p4.useClientSpec </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4useClientSpec"><a class="anchor" href="#Documentation/git-p4.txt-git-p4useClientSpec"></a>git-p4.useClientSpec </dt>
 <dd>
 <p>Specify that the p4 client spec should be used to identify p4
 depot paths of interest.  This is equivalent to specifying the
 option <code>--use-client-spec</code>.  See the "CLIENT SPEC" section above.
 This variable is a boolean, not the name of a p4 client.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4pathEncoding"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4pathEncoding"></a>git-p4.pathEncoding </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4pathEncoding"><a class="anchor" href="#Documentation/git-p4.txt-git-p4pathEncoding"></a>git-p4.pathEncoding </dt>
 <dd>
 <p>Perforce keeps the encoding of a path as given by the originating OS.
 Git expects paths encoded as UTF-8. Use this config to tell git-p4
@@ -822,7 +822,7 @@ what encoding Perforce had used for the paths. This encoding is used
 to transcode the paths to UTF-8. As an example, Perforce on Windows
 often uses "cp1252" to encode path names.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileSystem"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileSystem"></a>git-p4.largeFileSystem </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileSystem"><a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileSystem"></a>git-p4.largeFileSystem </dt>
 <dd>
 <p>Specify the system that is used for large (binary) files. Please note
 that large file systems do not support the <em>git p4 submit</em> command.
@@ -835,35 +835,35 @@ extension to use this option and configure it like this:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileExtensions"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileExtensions"></a>git-p4.largeFileExtensions </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileExtensions"><a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileExtensions"></a>git-p4.largeFileExtensions </dt>
 <dd>
 <p>All files matching a file extension in the list will be processed
 by the large file system. Do not prefix the extensions with <em>.</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileThreshold"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileThreshold"></a>git-p4.largeFileThreshold </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileThreshold"><a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileThreshold"></a>git-p4.largeFileThreshold </dt>
 <dd>
 <p>All files with an uncompressed size exceeding the threshold will be
 processed by the large file system. By default the threshold is
 defined in bytes. Add the suffix k, m, or g to change the unit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileCompressedThreshold"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileCompressedThreshold"></a>git-p4.largeFileCompressedThreshold </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFileCompressedThreshold"><a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFileCompressedThreshold"></a>git-p4.largeFileCompressedThreshold </dt>
 <dd>
 <p>All files with a compressed size exceeding the threshold will be
 processed by the large file system. This option might slow down
 your clone/sync process. By default the threshold is defined in
 bytes. Add the suffix k, m, or g to change the unit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFilePush"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFilePush"></a>git-p4.largeFilePush </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4largeFilePush"><a class="anchor" href="#Documentation/git-p4.txt-git-p4largeFilePush"></a>git-p4.largeFilePush </dt>
 <dd>
 <p>Boolean variable which defines if large files are automatically
 pushed to a server.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4keepEmptyCommits"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4keepEmptyCommits"></a>git-p4.keepEmptyCommits </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4keepEmptyCommits"><a class="anchor" href="#Documentation/git-p4.txt-git-p4keepEmptyCommits"></a>git-p4.keepEmptyCommits </dt>
 <dd>
 <p>A changelist that contains only excluded files will be imported
 as an empty commit if this boolean option is set to true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4mapUser"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4mapUser"></a>git-p4.mapUser </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4mapUser"><a class="anchor" href="#Documentation/git-p4.txt-git-p4mapUser"></a>git-p4.mapUser </dt>
 <dd>
 <p>Map a P4 user to a name and email address in Git. Use a string
 with the following format to create a mapping:</p>
@@ -884,44 +884,44 @@ multiple P4 user can be defined.</p>
 <h3 id="_submit_variables"><a class="anchor" href="#_submit_variables"></a>Submit variables</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4detectRenames"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4detectRenames"></a>git-p4.detectRenames </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4detectRenames"><a class="anchor" href="#Documentation/git-p4.txt-git-p4detectRenames"></a>git-p4.detectRenames </dt>
 <dd>
 <p>Detect renames.  See <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>.  This can be true,
 false, or a score as expected by <em>git diff -M</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4detectCopies"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4detectCopies"></a>git-p4.detectCopies </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4detectCopies"><a class="anchor" href="#Documentation/git-p4.txt-git-p4detectCopies"></a>git-p4.detectCopies </dt>
 <dd>
 <p>Detect copies.  See <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>.  This can be true,
 false, or a score as expected by <em>git diff -C</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4detectCopiesHarder"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4detectCopiesHarder"></a>git-p4.detectCopiesHarder </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4detectCopiesHarder"><a class="anchor" href="#Documentation/git-p4.txt-git-p4detectCopiesHarder"></a>git-p4.detectCopiesHarder </dt>
 <dd>
 <p>Detect copies harder.  See <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>.  A boolean.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4preserveUser"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4preserveUser"></a>git-p4.preserveUser </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4preserveUser"><a class="anchor" href="#Documentation/git-p4.txt-git-p4preserveUser"></a>git-p4.preserveUser </dt>
 <dd>
 <p>On submit, re-author changes to reflect the Git author,
 regardless of who invokes <em>git p4 submit</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4allowMissingP4Users"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4allowMissingP4Users"></a>git-p4.allowMissingP4Users </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4allowMissingP4Users"><a class="anchor" href="#Documentation/git-p4.txt-git-p4allowMissingP4Users"></a>git-p4.allowMissingP4Users </dt>
 <dd>
 <p>When <em>preserveUser</em> is true, <em>git p4</em> normally dies if it
 cannot find an author in the p4 user map.  This setting
 submits the change regardless.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4skipSubmitEdit"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4skipSubmitEdit"></a>git-p4.skipSubmitEdit </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4skipSubmitEdit"><a class="anchor" href="#Documentation/git-p4.txt-git-p4skipSubmitEdit"></a>git-p4.skipSubmitEdit </dt>
 <dd>
 <p>The submit process invokes the editor before each p4 change
 is submitted.  If this setting is true, though, the editing
 step is skipped.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4skipSubmitEditCheck"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4skipSubmitEditCheck"></a>git-p4.skipSubmitEditCheck </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4skipSubmitEditCheck"><a class="anchor" href="#Documentation/git-p4.txt-git-p4skipSubmitEditCheck"></a>git-p4.skipSubmitEditCheck </dt>
 <dd>
 <p>After editing the p4 change message, <em>git p4</em> makes sure that
 the description really was changed by looking at the file
 modification time.  This option disables that test.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4allowSubmit"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4allowSubmit"></a>git-p4.allowSubmit </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4allowSubmit"><a class="anchor" href="#Documentation/git-p4.txt-git-p4allowSubmit"></a>git-p4.allowSubmit </dt>
 <dd>
 <p>By default, any branch can be used as the source for a <em>git p4
 submit</em> operation.  This configuration variable, if set, permits only
@@ -929,38 +929,38 @@ the named branches to be used as submit sources.  Branch names
 must be the short names (no "refs/heads/"), and should be
 separated by commas (","), with no spaces.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4skipUserNameCheck"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4skipUserNameCheck"></a>git-p4.skipUserNameCheck </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4skipUserNameCheck"><a class="anchor" href="#Documentation/git-p4.txt-git-p4skipUserNameCheck"></a>git-p4.skipUserNameCheck </dt>
 <dd>
 <p>If the user running <em>git p4 submit</em> does not exist in the p4
 user map, <em>git p4</em> exits.  This option can be used to force
 submission regardless.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4attemptRCSCleanup"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4attemptRCSCleanup"></a>git-p4.attemptRCSCleanup </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4attemptRCSCleanup"><a class="anchor" href="#Documentation/git-p4.txt-git-p4attemptRCSCleanup"></a>git-p4.attemptRCSCleanup </dt>
 <dd>
 <p>If enabled, <em>git p4 submit</em> will attempt to cleanup RCS keywords
 ($Header$, etc). These would otherwise cause merge conflicts and prevent
 the submit going ahead. This option should be considered experimental at
 present.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4exportLabels"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4exportLabels"></a>git-p4.exportLabels </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4exportLabels"><a class="anchor" href="#Documentation/git-p4.txt-git-p4exportLabels"></a>git-p4.exportLabels </dt>
 <dd>
 <p>Export Git tags to p4 labels, as per --export-labels.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4labelExportRegexp"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4labelExportRegexp"></a>git-p4.labelExportRegexp </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4labelExportRegexp"><a class="anchor" href="#Documentation/git-p4.txt-git-p4labelExportRegexp"></a>git-p4.labelExportRegexp </dt>
 <dd>
 <p>Only p4 labels matching this regular expression will be exported. The
 default value is <em>[a-zA-Z0-9_\-.]+$</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4conflict"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4conflict"></a>git-p4.conflict </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4conflict"><a class="anchor" href="#Documentation/git-p4.txt-git-p4conflict"></a>git-p4.conflict </dt>
 <dd>
 <p>Specify submit behavior when a conflict with p4 is found, as per
 --conflict.  The default behavior is <em>ask</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4disableRebase"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4disableRebase"></a>git-p4.disableRebase </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4disableRebase"><a class="anchor" href="#Documentation/git-p4.txt-git-p4disableRebase"></a>git-p4.disableRebase </dt>
 <dd>
 <p>Do not rebase the tree against p4/master following a submit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4disableP4Sync"> <a class="anchor" href="#Documentation/git-p4.txt-git-p4disableP4Sync"></a>git-p4.disableP4Sync </dt>
+<dt class="hdlist1" id="Documentation/git-p4.txt-git-p4disableP4Sync"><a class="anchor" href="#Documentation/git-p4.txt-git-p4disableP4Sync"></a>git-p4.disableP4Sync </dt>
 <dd>
 <p>Do not sync p4/master with Perforce following a submit. Implies git-p4.disableRebase.</p>
 </dd>

@@ -103,19 +103,19 @@ way to clean up all obsolete remote-tracking branches.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-branch.txt--d"> <a class="anchor" href="#Documentation/git-branch.txt--d"></a>-d </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---delete"> <a class="anchor" href="#Documentation/git-branch.txt---delete"></a>--delete </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--d"><a class="anchor" href="#Documentation/git-branch.txt--d"></a>-d </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---delete"><a class="anchor" href="#Documentation/git-branch.txt---delete"></a>--delete </dt>
 <dd>
 <p>Delete a branch. The branch must be fully merged in its
 upstream branch, or in <code>HEAD</code> if no upstream was set with
 <code>--track</code> or <code>--set-upstream</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--D"> <a class="anchor" href="#Documentation/git-branch.txt--D"></a>-D </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--D"><a class="anchor" href="#Documentation/git-branch.txt--D"></a>-D </dt>
 <dd>
 <p>Shortcut for <code>--delete --force</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--l"> <a class="anchor" href="#Documentation/git-branch.txt--l"></a>-l </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---create-reflog"> <a class="anchor" href="#Documentation/git-branch.txt---create-reflog"></a>--create-reflog </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--l"><a class="anchor" href="#Documentation/git-branch.txt--l"></a>-l </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---create-reflog"><a class="anchor" href="#Documentation/git-branch.txt---create-reflog"></a>--create-reflog </dt>
 <dd>
 <p>Create the branch&#8217;s reflog.  This activates recording of
 all changes made to the branch ref, enabling use of date
@@ -123,8 +123,8 @@ based sha1 expressions such as "&lt;branchname&gt;@{yesterday}".
 Note that in non-bare repositories, reflogs are usually
 enabled by default by the <code>core.logallrefupdates</code> config option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--f"> <a class="anchor" href="#Documentation/git-branch.txt--f"></a>-f </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---force"> <a class="anchor" href="#Documentation/git-branch.txt---force"></a>--force </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--f"><a class="anchor" href="#Documentation/git-branch.txt--f"></a>-f </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---force"><a class="anchor" href="#Documentation/git-branch.txt---force"></a>--force </dt>
 <dd>
 <p>Reset &lt;branchname&gt; to &lt;startpoint&gt; if &lt;branchname&gt; exists
 already. Without <code>-f</code> <em>git branch</em> refuses to change an existing branch.
@@ -133,29 +133,29 @@ branch irrespective of its merged status. In combination with
 <code>-m</code> (or <code>--move</code>), allow renaming the branch even if the new
 branch name already exists.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--m"> <a class="anchor" href="#Documentation/git-branch.txt--m"></a>-m </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---move"> <a class="anchor" href="#Documentation/git-branch.txt---move"></a>--move </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--m"><a class="anchor" href="#Documentation/git-branch.txt--m"></a>-m </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---move"><a class="anchor" href="#Documentation/git-branch.txt---move"></a>--move </dt>
 <dd>
 <p>Move/rename a branch and the corresponding reflog.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--M"> <a class="anchor" href="#Documentation/git-branch.txt--M"></a>-M </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--M"><a class="anchor" href="#Documentation/git-branch.txt--M"></a>-M </dt>
 <dd>
 <p>Shortcut for <code>--move --force</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---colorltwhengt"> <a class="anchor" href="#Documentation/git-branch.txt---colorwhen"></a> <a class="anchor" href="#Documentation/git-branch.txt---colorltwhengt"></a>--color[=&lt;when&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---colorltwhengt"><a id="Documentation/git-branch.txt---colorwhen" class="anchor" href="#Documentation/git-branch.txt---colorwhen"></a>--color[=&lt;when&gt;] </dt>
 <dd>
 <p>Color branches to highlight current, local, and
 remote-tracking branches.
 The value must be always (the default), never, or auto.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---no-color"> <a class="anchor" href="#Documentation/git-branch.txt---no-color"></a>--no-color </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---no-color"><a class="anchor" href="#Documentation/git-branch.txt---no-color"></a>--no-color </dt>
 <dd>
 <p>Turn off branch colors, even when the configuration file gives the
 default to color output.
 Same as <code>--color=never</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---columnltoptionsgt"> <a class="anchor" href="#Documentation/git-branch.txt---columnoptions"></a> <a class="anchor" href="#Documentation/git-branch.txt---columnltoptionsgt"></a>--column[=&lt;options&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---no-column"> <a class="anchor" href="#Documentation/git-branch.txt---no-column"></a>--no-column </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---columnltoptionsgt"><a id="Documentation/git-branch.txt---columnoptions" class="anchor" href="#Documentation/git-branch.txt---columnoptions"></a>--column[=&lt;options&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---no-column"><a class="anchor" href="#Documentation/git-branch.txt---no-column"></a>--no-column </dt>
 <dd>
 <p>Display branch listing in columns. See configuration variable
 column.branch for option syntax.<code>--column</code> and <code>--no-column</code>
@@ -164,24 +164,24 @@ without options are equivalent to <em>always</em> and <em>never</em> respectivel
 <p>This option is only applicable in non-verbose mode.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--r"> <a class="anchor" href="#Documentation/git-branch.txt--r"></a>-r </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---remotes"> <a class="anchor" href="#Documentation/git-branch.txt---remotes"></a>--remotes </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--r"><a class="anchor" href="#Documentation/git-branch.txt--r"></a>-r </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---remotes"><a class="anchor" href="#Documentation/git-branch.txt---remotes"></a>--remotes </dt>
 <dd>
 <p>List or delete (if used with -d) the remote-tracking branches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--a"> <a class="anchor" href="#Documentation/git-branch.txt--a"></a>-a </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---all"> <a class="anchor" href="#Documentation/git-branch.txt---all"></a>--all </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--a"><a class="anchor" href="#Documentation/git-branch.txt--a"></a>-a </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---all"><a class="anchor" href="#Documentation/git-branch.txt---all"></a>--all </dt>
 <dd>
 <p>List both remote-tracking branches and local branches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---list"> <a class="anchor" href="#Documentation/git-branch.txt---list"></a>--list </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---list"><a class="anchor" href="#Documentation/git-branch.txt---list"></a>--list </dt>
 <dd>
 <p>Activate the list mode. <code>git branch &lt;pattern&gt;</code> would try to create a branch,
 use <code>git branch --list &lt;pattern&gt;</code> to list matching branches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--v"> <a class="anchor" href="#Documentation/git-branch.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt--vv"> <a class="anchor" href="#Documentation/git-branch.txt--vv"></a>-vv </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---verbose"> <a class="anchor" href="#Documentation/git-branch.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--v"><a class="anchor" href="#Documentation/git-branch.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--vv"><a class="anchor" href="#Documentation/git-branch.txt--vv"></a>-vv </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---verbose"><a class="anchor" href="#Documentation/git-branch.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>When in list mode,
 show sha1 and commit subject line for each head, along with
@@ -189,24 +189,24 @@ relationship to upstream branch (if any). If given twice, print
 the name of the upstream branch, as well (see also <code>git remote
 show &lt;remote&gt;</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--q"> <a class="anchor" href="#Documentation/git-branch.txt--q"></a>-q </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---quiet"> <a class="anchor" href="#Documentation/git-branch.txt---quiet"></a>--quiet </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--q"><a class="anchor" href="#Documentation/git-branch.txt--q"></a>-q </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---quiet"><a class="anchor" href="#Documentation/git-branch.txt---quiet"></a>--quiet </dt>
 <dd>
 <p>Be more quiet when creating or deleting a branch, suppressing
 non-error messages.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---abbrevltlengthgt"> <a class="anchor" href="#Documentation/git-branch.txt---abbrevlength"></a> <a class="anchor" href="#Documentation/git-branch.txt---abbrevltlengthgt"></a>--abbrev=&lt;length&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---abbrevltlengthgt"><a id="Documentation/git-branch.txt---abbrevlength" class="anchor" href="#Documentation/git-branch.txt---abbrevlength"></a>--abbrev=&lt;length&gt; </dt>
 <dd>
 <p>Alter the sha1&#8217;s minimum display length in the output listing.
 The default value is 7 and can be overridden by the <code>core.abbrev</code>
 config option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---no-abbrev"> <a class="anchor" href="#Documentation/git-branch.txt---no-abbrev"></a>--no-abbrev </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---no-abbrev"><a class="anchor" href="#Documentation/git-branch.txt---no-abbrev"></a>--no-abbrev </dt>
 <dd>
 <p>Display the full sha1s in the output listing rather than abbreviating them.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--t"> <a class="anchor" href="#Documentation/git-branch.txt--t"></a>-t </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---track"> <a class="anchor" href="#Documentation/git-branch.txt---track"></a>--track </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--t"><a class="anchor" href="#Documentation/git-branch.txt--t"></a>-t </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---track"><a class="anchor" href="#Documentation/git-branch.txt---track"></a>--track </dt>
 <dd>
 <p>When creating a new branch, set up <code>branch.&lt;name&gt;.remote</code> and
 <code>branch.&lt;name&gt;.merge</code> configuration entries to mark the
@@ -223,68 +223,68 @@ were given. Set it to <code>always</code> if you want this behavior when the
 start-point is either a local or remote-tracking branch.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---no-track"> <a class="anchor" href="#Documentation/git-branch.txt---no-track"></a>--no-track </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---no-track"><a class="anchor" href="#Documentation/git-branch.txt---no-track"></a>--no-track </dt>
 <dd>
 <p>Do not set up "upstream" configuration, even if the
 branch.autoSetupMerge configuration variable is true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---set-upstream"> <a class="anchor" href="#Documentation/git-branch.txt---set-upstream"></a>--set-upstream </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---set-upstream"><a class="anchor" href="#Documentation/git-branch.txt---set-upstream"></a>--set-upstream </dt>
 <dd>
 <p>If specified branch does not exist yet or if <code>--force</code> has been
 given, acts exactly like <code>--track</code>. Otherwise sets up configuration
 like <code>--track</code> would when creating the branch, except that where
 branch points to is not changed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt--ultupstreamgt"> <a class="anchor" href="#Documentation/git-branch.txt--uupstream"></a> <a class="anchor" href="#Documentation/git-branch.txt--ultupstreamgt"></a>-u &lt;upstream&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-branch.txt---set-upstream-toltupstreamgt"> <a class="anchor" href="#Documentation/git-branch.txt---set-upstream-toupstream"></a> <a class="anchor" href="#Documentation/git-branch.txt---set-upstream-toltupstreamgt"></a>--set-upstream-to=&lt;upstream&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt--ultupstreamgt"><a id="Documentation/git-branch.txt--uupstream" class="anchor" href="#Documentation/git-branch.txt--uupstream"></a>-u &lt;upstream&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---set-upstream-toltupstreamgt"><a id="Documentation/git-branch.txt---set-upstream-toupstream" class="anchor" href="#Documentation/git-branch.txt---set-upstream-toupstream"></a>--set-upstream-to=&lt;upstream&gt; </dt>
 <dd>
 <p>Set up &lt;branchname&gt;'s tracking information so &lt;upstream&gt; is
 considered &lt;branchname&gt;'s upstream branch. If no &lt;branchname&gt;
 is specified, then it defaults to the current branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---unset-upstream"> <a class="anchor" href="#Documentation/git-branch.txt---unset-upstream"></a>--unset-upstream </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---unset-upstream"><a class="anchor" href="#Documentation/git-branch.txt---unset-upstream"></a>--unset-upstream </dt>
 <dd>
 <p>Remove the upstream information for &lt;branchname&gt;. If no branch
 is specified it defaults to the current branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---edit-description"> <a class="anchor" href="#Documentation/git-branch.txt---edit-description"></a>--edit-description </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---edit-description"><a class="anchor" href="#Documentation/git-branch.txt---edit-description"></a>--edit-description </dt>
 <dd>
 <p>Open an editor and edit the text to explain what the branch is
 for, to be used by various other commands (e.g. <code>request-pull</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---containsltcommitgt"> <a class="anchor" href="#Documentation/git-branch.txt---containscommit"></a> <a class="anchor" href="#Documentation/git-branch.txt---containsltcommitgt"></a>--contains [&lt;commit&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---containsltcommitgt"><a id="Documentation/git-branch.txt---containscommit" class="anchor" href="#Documentation/git-branch.txt---containscommit"></a>--contains [&lt;commit&gt;] </dt>
 <dd>
 <p>Only list branches which contain the specified commit (HEAD
 if not specified). Implies <code>--list</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---mergedltcommitgt"> <a class="anchor" href="#Documentation/git-branch.txt---mergedcommit"></a> <a class="anchor" href="#Documentation/git-branch.txt---mergedltcommitgt"></a>--merged [&lt;commit&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---mergedltcommitgt"><a id="Documentation/git-branch.txt---mergedcommit" class="anchor" href="#Documentation/git-branch.txt---mergedcommit"></a>--merged [&lt;commit&gt;] </dt>
 <dd>
 <p>Only list branches whose tips are reachable from the
 specified commit (HEAD if not specified). Implies <code>--list</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt---no-mergedltcommitgt"> <a class="anchor" href="#Documentation/git-branch.txt---no-mergedcommit"></a> <a class="anchor" href="#Documentation/git-branch.txt---no-mergedltcommitgt"></a>--no-merged [&lt;commit&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt---no-mergedltcommitgt"><a id="Documentation/git-branch.txt---no-mergedcommit" class="anchor" href="#Documentation/git-branch.txt---no-mergedcommit"></a>--no-merged [&lt;commit&gt;] </dt>
 <dd>
 <p>Only list branches whose tips are not reachable from the
 specified commit (HEAD if not specified). Implies <code>--list</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt-ltbranchnamegt"> <a class="anchor" href="#Documentation/git-branch.txt-branchname"></a> <a class="anchor" href="#Documentation/git-branch.txt-ltbranchnamegt"></a>&lt;branchname&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt-ltbranchnamegt"><a id="Documentation/git-branch.txt-branchname" class="anchor" href="#Documentation/git-branch.txt-branchname"></a>&lt;branchname&gt; </dt>
 <dd>
 <p>The name of the branch to create or delete.
 The new branch name must pass all checks defined by
 <a href='{{< relurl "docs/git-check-ref-format" >}}'>git-check-ref-format[1]</a>.  Some of these checks
 may restrict the characters allowed in a branch name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt-ltstart-pointgt"> <a class="anchor" href="#Documentation/git-branch.txt-start-point"></a> <a class="anchor" href="#Documentation/git-branch.txt-ltstart-pointgt"></a>&lt;start-point&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt-ltstart-pointgt"><a id="Documentation/git-branch.txt-start-point" class="anchor" href="#Documentation/git-branch.txt-start-point"></a>&lt;start-point&gt; </dt>
 <dd>
 <p>The new branch head will point to this commit.  It may be
 given as a branch name, a commit-id, or a tag.  If this
 option is omitted, the current HEAD will be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt-ltoldbranchgt"> <a class="anchor" href="#Documentation/git-branch.txt-oldbranch"></a> <a class="anchor" href="#Documentation/git-branch.txt-ltoldbranchgt"></a>&lt;oldbranch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt-ltoldbranchgt"><a id="Documentation/git-branch.txt-oldbranch" class="anchor" href="#Documentation/git-branch.txt-oldbranch"></a>&lt;oldbranch&gt; </dt>
 <dd>
 <p>The name of an existing branch to rename.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt-ltnewbranchgt"> <a class="anchor" href="#Documentation/git-branch.txt-newbranch"></a> <a class="anchor" href="#Documentation/git-branch.txt-ltnewbranchgt"></a>&lt;newbranch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt-ltnewbranchgt"><a id="Documentation/git-branch.txt-newbranch" class="anchor" href="#Documentation/git-branch.txt-newbranch"></a>&lt;newbranch&gt; </dt>
 <dd>
 <p>The new name for an existing branch. The same restrictions as for
 &lt;branchname&gt; apply.</p>
@@ -298,7 +298,7 @@ option is omitted, the current HEAD will be used instead.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-branch.txt-Startdevelopmentfromaknowntag"> <a class="anchor" href="#Documentation/git-branch.txt-Startdevelopmentfromaknowntag"></a>Start development from a known tag </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt-Startdevelopmentfromaknowntag"><a class="anchor" href="#Documentation/git-branch.txt-Startdevelopmentfromaknowntag"></a>Start development from a known tag </dt>
 <dd>
 <div class="listingblock">
 <div class="content">
@@ -317,7 +317,7 @@ $ git checkout my2.6.14</pre>
 </ol>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-branch.txt-Deleteanunneededbranch"> <a class="anchor" href="#Documentation/git-branch.txt-Deleteanunneededbranch"></a>Delete an unneeded branch </dt>
+<dt class="hdlist1" id="Documentation/git-branch.txt-Deleteanunneededbranch"><a class="anchor" href="#Documentation/git-branch.txt-Deleteanunneededbranch"></a>Delete an unneeded branch </dt>
 <dd>
 <div class="listingblock">
 <div class="content">

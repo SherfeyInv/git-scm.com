@@ -113,7 +113,7 @@ command directly.  See <a href='{{< relurl "docs/git-am" >}}'>git-am[1]</a> inst
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt--k"> <a class="anchor" href="#Documentation/git-mailinfo.txt--k"></a>-k </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt--k"><a class="anchor" href="#Documentation/git-mailinfo.txt--k"></a>-k </dt>
 <dd>
 <p>Usually the program removes email cruft from the Subject:
 header line to extract the title line for the commit log
@@ -145,13 +145,13 @@ useful when used to read back <em>git format-patch -k</em> output.</p>
 character.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt--b"> <a class="anchor" href="#Documentation/git-mailinfo.txt--b"></a>-b </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt--b"><a class="anchor" href="#Documentation/git-mailinfo.txt--b"></a>-b </dt>
 <dd>
 <p>When -k is not in effect, all leading strings bracketed with <em>[</em>
 and <em>]</em> pairs are stripped.  This option limits the stripping to
 only the pairs whose bracketed string contains the word "PATCH".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt--u"> <a class="anchor" href="#Documentation/git-mailinfo.txt--u"></a>-u </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt--u"><a class="anchor" href="#Documentation/git-mailinfo.txt--u"></a>-u </dt>
 <dd>
 <p>The commit log message, author name and author email are
 taken from the e-mail, and after minimally decoding MIME
@@ -163,22 +163,22 @@ them.  This used to be optional but now it is the default.</p>
 conversion, even with this flag.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt---encodingltencodinggt"> <a class="anchor" href="#Documentation/git-mailinfo.txt---encodingencoding"></a> <a class="anchor" href="#Documentation/git-mailinfo.txt---encodingltencodinggt"></a>--encoding=&lt;encoding&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt---encodingltencodinggt"><a id="Documentation/git-mailinfo.txt---encodingencoding" class="anchor" href="#Documentation/git-mailinfo.txt---encodingencoding"></a>--encoding=&lt;encoding&gt; </dt>
 <dd>
 <p>Similar to -u.  But when re-coding, the charset specified here is
 used instead of the one specified by i18n.commitencoding or UTF-8.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt--n"> <a class="anchor" href="#Documentation/git-mailinfo.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt--n"><a class="anchor" href="#Documentation/git-mailinfo.txt--n"></a>-n </dt>
 <dd>
 <p>Disable all charset re-coding of the metadata.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt--m"> <a class="anchor" href="#Documentation/git-mailinfo.txt--m"></a>-m </dt>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt---message-id"> <a class="anchor" href="#Documentation/git-mailinfo.txt---message-id"></a>--message-id </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt--m"><a class="anchor" href="#Documentation/git-mailinfo.txt--m"></a>-m </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt---message-id"><a class="anchor" href="#Documentation/git-mailinfo.txt---message-id"></a>--message-id </dt>
 <dd>
 <p>Copy the Message-ID header at the end of the commit message.  This
 is useful in order to associate commits with mailing list discussions.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt---scissors"> <a class="anchor" href="#Documentation/git-mailinfo.txt---scissors"></a>--scissors </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt---scissors"><a class="anchor" href="#Documentation/git-mailinfo.txt---scissors"></a>--scissors </dt>
 <dd>
 <p>Remove everything in body before a scissors line.  A line that
 mainly consists of scissors (either "&gt;8" or "8&lt;") and perforation
@@ -197,16 +197,16 @@ beginning of the proposed commit log message with a scissors line.</p>
 <p>This can be enabled by default with the configuration option mailinfo.scissors.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt---no-scissors"> <a class="anchor" href="#Documentation/git-mailinfo.txt---no-scissors"></a>--no-scissors </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt---no-scissors"><a class="anchor" href="#Documentation/git-mailinfo.txt---no-scissors"></a>--no-scissors </dt>
 <dd>
 <p>Ignore scissors lines. Useful for overriding mailinfo.scissors settings.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt-ltmsggt"> <a class="anchor" href="#Documentation/git-mailinfo.txt-msg"></a> <a class="anchor" href="#Documentation/git-mailinfo.txt-ltmsggt"></a>&lt;msg&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt-ltmsggt"><a id="Documentation/git-mailinfo.txt-msg" class="anchor" href="#Documentation/git-mailinfo.txt-msg"></a>&lt;msg&gt; </dt>
 <dd>
 <p>The commit log message extracted from e-mail, usually
 except the title line which comes from e-mail Subject.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-mailinfo.txt-ltpatchgt"> <a class="anchor" href="#Documentation/git-mailinfo.txt-patch"></a> <a class="anchor" href="#Documentation/git-mailinfo.txt-ltpatchgt"></a>&lt;patch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-mailinfo.txt-ltpatchgt"><a id="Documentation/git-mailinfo.txt-patch" class="anchor" href="#Documentation/git-mailinfo.txt-patch"></a>&lt;patch&gt; </dt>
 <dd>
 <p>The patch extracted from e-mail.</p>
 </dd>

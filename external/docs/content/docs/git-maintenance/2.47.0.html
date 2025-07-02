@@ -53,7 +53,7 @@ Git repository.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-run"> <a class="anchor" href="#Documentation/git-maintenance.txt-run"></a>run </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-run"><a class="anchor" href="#Documentation/git-maintenance.txt-run"></a>run </dt>
 <dd>
 <p>Run one or more maintenance tasks. If one or more <code>--task</code> options
 are specified, then those tasks are run in that order. Otherwise,
@@ -61,20 +61,20 @@ the tasks are determined by which <code>maintenance.&lt;task&gt;.enabled</code>
 config options are true. By default, only <code>maintenance.gc.enabled</code>
 is true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-start"> <a class="anchor" href="#Documentation/git-maintenance.txt-start"></a>start </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-start"><a class="anchor" href="#Documentation/git-maintenance.txt-start"></a>start </dt>
 <dd>
 <p>Start running maintenance on the current repository. This performs
 the same config updates as the <code>register</code> subcommand, then updates
 the background scheduler to run <code>git maintenance run --scheduled</code>
 on an hourly basis.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-stop"> <a class="anchor" href="#Documentation/git-maintenance.txt-stop"></a>stop </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-stop"><a class="anchor" href="#Documentation/git-maintenance.txt-stop"></a>stop </dt>
 <dd>
 <p>Halt the background maintenance schedule. The current repository
 is not removed from the list of maintained repositories, in case
 the background maintenance is restarted later.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-register"> <a class="anchor" href="#Documentation/git-maintenance.txt-register"></a>register </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-register"><a class="anchor" href="#Documentation/git-maintenance.txt-register"></a>register </dt>
 <dd>
 <p>Initialize Git config values so any scheduled maintenance will start
 running on this repository. This adds the repository to the
@@ -118,7 +118,7 @@ setting <code>maintenance.auto = false</code> in the current repository. This co
 setting will remain after a <code>git maintenance unregister</code> command.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-unregister"> <a class="anchor" href="#Documentation/git-maintenance.txt-unregister"></a>unregister </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-unregister"><a class="anchor" href="#Documentation/git-maintenance.txt-unregister"></a>unregister </dt>
 <dd>
 <p>Remove the current repository from background maintenance. This
 only removes the repository from the configured list. It does not
@@ -138,7 +138,7 @@ when the current repository is not registered.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-commit-graph"> <a class="anchor" href="#Documentation/git-maintenance.txt-commit-graph"></a>commit-graph </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-commit-graph"><a class="anchor" href="#Documentation/git-maintenance.txt-commit-graph"></a>commit-graph </dt>
 <dd>
 <p>The <code>commit-graph</code> job updates the <code>commit-graph</code> files incrementally,
 then verifies that the written data is correct. The incremental
@@ -147,7 +147,7 @@ will not expire <code>.graph</code> files that were in the previous
 <code>commit-graph-chain</code> file. They will be deleted by a later run based
 on the expiration delay.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-prefetch"> <a class="anchor" href="#Documentation/git-maintenance.txt-prefetch"></a>prefetch </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-prefetch"><a class="anchor" href="#Documentation/git-maintenance.txt-prefetch"></a>prefetch </dt>
 <dd>
 <p>The <code>prefetch</code> task updates the object directory with the latest
 objects from all registered remotes. For each remote, a <code>git fetch</code>
@@ -166,7 +166,7 @@ any object transfer.</p>
 exclude a particular remote from getting prefetched.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-gc"> <a class="anchor" href="#Documentation/git-maintenance.txt-gc"></a>gc </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-gc"><a class="anchor" href="#Documentation/git-maintenance.txt-gc"></a>gc </dt>
 <dd>
 <p>Clean up unnecessary files and optimize the local repository. "GC"
 stands for "garbage collection," but this task performs many
@@ -175,7 +175,7 @@ as it repacks all Git objects into a single pack-file. It can also
 be disruptive in some situations, as it deletes stale data. See
 <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a> for more details on garbage collection in Git.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-loose-objects"> <a class="anchor" href="#Documentation/git-maintenance.txt-loose-objects"></a>loose-objects </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-loose-objects"><a class="anchor" href="#Documentation/git-maintenance.txt-loose-objects"></a>loose-objects </dt>
 <dd>
 <p>The <code>loose-objects</code> job cleans up loose objects and places them into
 pack-files. In order to prevent race conditions with concurrent Git
@@ -191,7 +191,7 @@ they are not re-added to a pack-file; for this reason it is not
 advisable to enable both the <code>loose-objects</code> and <code>gc</code> tasks at the
 same time.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-incremental-repack"> <a class="anchor" href="#Documentation/git-maintenance.txt-incremental-repack"></a>incremental-repack </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-incremental-repack"><a class="anchor" href="#Documentation/git-maintenance.txt-incremental-repack"></a>incremental-repack </dt>
 <dd>
 <p>The <code>incremental-repack</code> job repacks the object directory
 using the <code>multi-pack-index</code> feature. In order to prevent race
@@ -210,7 +210,7 @@ size of the big pack-file is at least the batch size; see the
 which is a special case that attempts to repack all pack-files
 into a single pack-file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-pack-refs"> <a class="anchor" href="#Documentation/git-maintenance.txt-pack-refs"></a>pack-refs </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-pack-refs"><a class="anchor" href="#Documentation/git-maintenance.txt-pack-refs"></a>pack-refs </dt>
 <dd>
 <p>The <code>pack-refs</code> task collects the loose reference files and
 collects them into a single file. This speeds up operations that
@@ -226,7 +226,7 @@ for more information.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---auto"> <a class="anchor" href="#Documentation/git-maintenance.txt---auto"></a>--auto </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---auto"><a class="anchor" href="#Documentation/git-maintenance.txt---auto"></a>--auto </dt>
 <dd>
 <p>When combined with the <code>run</code> subcommand, run maintenance tasks
 only if certain thresholds are met. For example, the <code>gc</code> task
@@ -235,7 +235,7 @@ in the <code>gc.auto</code> config setting, or when the number of pack-files
 exceeds the <code>gc.autoPackLimit</code> config setting. Not compatible with
 the <code>--schedule</code> option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---schedule"> <a class="anchor" href="#Documentation/git-maintenance.txt---schedule"></a>--schedule </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---schedule"><a class="anchor" href="#Documentation/git-maintenance.txt---schedule"></a>--schedule </dt>
 <dd>
 <p>When combined with the <code>run</code> subcommand, run maintenance tasks
 only if certain time conditions are met, as specified by the
@@ -246,11 +246,11 @@ config value. The tasks that are tested are those provided by
 the <code>--task=&lt;task&gt;</code> option(s) or those with
 <code>maintenance.&lt;task&gt;.enabled</code> set to true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---quiet"> <a class="anchor" href="#Documentation/git-maintenance.txt---quiet"></a>--quiet </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---quiet"><a class="anchor" href="#Documentation/git-maintenance.txt---quiet"></a>--quiet </dt>
 <dd>
 <p>Do not report progress or other information over <code>stderr</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---tasklttaskgt"> <a class="anchor" href="#Documentation/git-maintenance.txt---tasktask"></a> <a class="anchor" href="#Documentation/git-maintenance.txt---tasklttaskgt"></a>--task=&lt;task&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---tasklttaskgt"><a id="Documentation/git-maintenance.txt---tasktask" class="anchor" href="#Documentation/git-maintenance.txt---tasktask"></a>--task=&lt;task&gt; </dt>
 <dd>
 <p>If this option is specified one or more times, then only run the
 specified tasks in the specified order. If no <code>--task=&lt;task&gt;</code>
@@ -258,7 +258,7 @@ arguments are specified, then only the tasks with
 <code>maintenance.&lt;task&gt;.enabled</code> configured as <code>true</code> are considered.
 See the <em>TASKS</em> section for the list of accepted <code>&lt;task&gt;</code> values.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---schedulerautocrontabsystemd-timerlaunchctlschtasks"> <a class="anchor" href="#Documentation/git-maintenance.txt---schedulerautocrontabsystemd-timerlaunchctlschtasks"></a>--scheduler=auto|crontab|systemd-timer|launchctl|schtasks </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---schedulerautocrontabsystemd-timerlaunchctlschtasks"><a class="anchor" href="#Documentation/git-maintenance.txt---schedulerautocrontabsystemd-timerlaunchctlschtasks"></a>--scheduler=auto|crontab|systemd-timer|launchctl|schtasks </dt>
 <dd>
 <p>When combined with the <code>start</code> subcommand, specify the scheduler
 for running the hourly, daily and weekly executions of
@@ -528,13 +528,13 @@ as what&#8217;s found there:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceauto"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceauto"></a>maintenance.auto </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceauto"><a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceauto"></a>maintenance.auto </dt>
 <dd>
 <p>This boolean config option controls whether some commands run
 <code>git maintenance run --auto</code> after doing their normal work. Defaults
 to true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceautoDetach"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceautoDetach"></a>maintenance.autoDetach </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceautoDetach"><a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceautoDetach"></a>maintenance.autoDetach </dt>
 <dd>
 <p>Many Git commands trigger automatic maintenance after they have
 written data into the repository. This boolean config option
@@ -547,7 +547,7 @@ to true if both are unset, meaning that the maintenance process will
 detach.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancestrategy"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenancestrategy"></a>maintenance.strategy </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancestrategy"><a class="anchor" href="#Documentation/git-maintenance.txt-maintenancestrategy"></a>maintenance.strategy </dt>
 <dd>
 <p>This string config option provides a way to specify one of a few
 recommended schedules for background maintenance. This only affects
@@ -571,7 +571,7 @@ task weekly.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancelttaskgtenabled"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenancetaskenabled"></a> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenancelttaskgtenabled"></a>maintenance.&lt;task&gt;.enabled </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancelttaskgtenabled"><a id="Documentation/git-maintenance.txt-maintenancetaskenabled" class="anchor" href="#Documentation/git-maintenance.txt-maintenancetaskenabled"></a>maintenance.&lt;task&gt;.enabled </dt>
 <dd>
 <p>This boolean config option controls whether the maintenance task
 with name <code>&lt;task&gt;</code> is run when no <code>--task</code> option is specified to
@@ -579,13 +579,13 @@ with name <code>&lt;task&gt;</code> is run when no <code>--task</code> option is
 <code>--task</code> option exists. By default, only <code>maintenance.gc.enabled</code>
 is true.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancelttaskgtschedule"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenancetaskschedule"></a> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenancelttaskgtschedule"></a>maintenance.&lt;task&gt;.schedule </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancelttaskgtschedule"><a id="Documentation/git-maintenance.txt-maintenancetaskschedule" class="anchor" href="#Documentation/git-maintenance.txt-maintenancetaskschedule"></a>maintenance.&lt;task&gt;.schedule </dt>
 <dd>
 <p>This config option controls whether or not the given <code>&lt;task&gt;</code> runs
 during a <code>git maintenance run --schedule=&lt;frequency&gt;</code> command. The
 value must be one of "hourly", "daily", or "weekly".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancecommit-graphauto"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenancecommit-graphauto"></a>maintenance.commit-graph.auto </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenancecommit-graphauto"><a class="anchor" href="#Documentation/git-maintenance.txt-maintenancecommit-graphauto"></a>maintenance.commit-graph.auto </dt>
 <dd>
 <p>This integer config option controls how often the <code>commit-graph</code> task
 should be run as part of <code>git maintenance run --auto</code>. If zero, then
@@ -596,7 +596,7 @@ reachable commits that are not in the commit-graph file is at least
 the value of <code>maintenance.commit-graph.auto</code>. The default value is
 100.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceloose-objectsauto"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceloose-objectsauto"></a>maintenance.loose-objects.auto </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceloose-objectsauto"><a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceloose-objectsauto"></a>maintenance.loose-objects.auto </dt>
 <dd>
 <p>This integer config option controls how often the <code>loose-objects</code> task
 should be run as part of <code>git maintenance run --auto</code>. If zero, then
@@ -606,7 +606,7 @@ positive value implies the command should run when the number of
 loose objects is at least the value of <code>maintenance.loose-objects.auto</code>.
 The default value is 100.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceincremental-repackauto"> <a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceincremental-repackauto"></a>maintenance.incremental-repack.auto </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-maintenanceincremental-repackauto"><a class="anchor" href="#Documentation/git-maintenance.txt-maintenanceincremental-repackauto"></a>maintenance.incremental-repack.auto </dt>
 <dd>
 <p>This integer config option controls how often the <code>incremental-repack</code>
 task should be run as part of <code>git maintenance run --auto</code>. If zero,

@@ -918,7 +918,7 @@ such a case.</p>
 <h4 id="_bundle_uri_client_and_server_expectations"><a class="anchor" href="#_bundle_uri_client_and_server_expectations"></a>bundle-uri CLIENT AND SERVER EXPECTATIONS</h4>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-URICONTENTS"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-URICONTENTS"></a>URI CONTENTS </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-URICONTENTS"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-URICONTENTS"></a>URI CONTENTS </dt>
 <dd>
 <p>The content at the advertised URIs MUST be one of two types.</p>
 <div class="paragraph">
@@ -935,7 +935,7 @@ pairs in this list are in the <code>bundle.*</code> namespace (see
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-bundle-uriCLIENTERRORRECOVERY"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-bundle-uriCLIENTERRORRECOVERY"></a>bundle-uri CLIENT ERROR RECOVERY </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-bundle-uriCLIENTERRORRECOVERY"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-bundle-uriCLIENTERRORRECOVERY"></a>bundle-uri CLIENT ERROR RECOVERY </dt>
 <dd>
 <p>A client MUST above all gracefully degrade on errors, whether that
 error is because of bad missing/data in the bundle URI(s), because
@@ -954,7 +954,7 @@ protocol extension.</p>
 this in mind.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-bundle-uriSERVERTOCLIENT"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-bundle-uriSERVERTOCLIENT"></a>bundle-uri SERVER TO CLIENT </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-bundle-uriSERVERTOCLIENT"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-bundle-uriSERVERTOCLIENT"></a>bundle-uri SERVER TO CLIENT </dt>
 <dd>
 <p>The ordering of the returned bundle uris is not significant. Clients
 MUST parse their headers to discover their contained OIDS and
@@ -967,7 +967,7 @@ or intentional "clever" configuration), and expect a client to sort
 out what data they&#8217;d like from the bundle(s), if any.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-bundle-uriCLIENTTOSERVER"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-bundle-uriCLIENTTOSERVER"></a>bundle-uri CLIENT TO SERVER </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-bundle-uriCLIENTTOSERVER"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-bundle-uriCLIENTTOSERVER"></a>bundle-uri CLIENT TO SERVER </dt>
 <dd>
 <p>The client SHOULD provide reference tips found in the bundle header(s)
 as <em>have</em> lines in any subsequent <code>fetch</code> request. A client MAY also
@@ -975,7 +975,7 @@ ignore the bundle(s) entirely if doing so is deemed worse for some
 reason, e.g. if the bundles can&#8217;t be downloaded, it doesn&#8217;t like the
 tips it finds etc.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIRENOFURTHERNEGOTIATION"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIRENOFURTHERNEGOTIATION"></a>WHEN ADVERTISED BUNDLE(S) REQUIRE NO FURTHER NEGOTIATION </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIRENOFURTHERNEGOTIATION"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIRENOFURTHERNEGOTIATION"></a>WHEN ADVERTISED BUNDLE(S) REQUIRE NO FURTHER NEGOTIATION </dt>
 <dd>
 <p>If after issuing <code>bundle-uri</code> and <code>ls-refs</code>, and getting the header(s)
 of the bundle(s) the client finds that the ref tips it wants can be
@@ -983,7 +983,7 @@ retrieved entirely from advertised bundle(s), the client MAY disconnect
 from the Git server. The results of such a <em>clone</em> or <em>fetch</em> should be
 indistinguishable from the state attained without using bundle-uri.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-EARLYCLIENTDISCONNECTIONSANDERRORRECOVERY"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-EARLYCLIENTDISCONNECTIONSANDERRORRECOVERY"></a>EARLY CLIENT DISCONNECTIONS AND ERROR RECOVERY </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-EARLYCLIENTDISCONNECTIONSANDERRORRECOVERY"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-EARLYCLIENTDISCONNECTIONSANDERRORRECOVERY"></a>EARLY CLIENT DISCONNECTIONS AND ERROR RECOVERY </dt>
 <dd>
 <p>A client MAY perform an early disconnect while still downloading the
 bundle(s) (having streamed and parsed their headers). In such a case
@@ -1003,7 +1003,7 @@ if an early disconnect is worth it, should falling back on a full
 "fetch" dialog be necessary.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIREFURTHERNEGOTIATION"> <a class="anchor" href="#Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIREFURTHERNEGOTIATION"></a>WHEN ADVERTISED BUNDLE(S) REQUIRE FURTHER NEGOTIATION </dt>
+<dt class="hdlist1" id="Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIREFURTHERNEGOTIATION"><a class="anchor" href="#Documentation/gitprotocol-v2.txt-WHENADVERTISEDBUNDLESREQUIREFURTHERNEGOTIATION"></a>WHEN ADVERTISED BUNDLE(S) REQUIRE FURTHER NEGOTIATION </dt>
 <dd>
 <p>A client SHOULD commence a negotiation of a PACK from the server via
 the "fetch" command using the OID tips found in advertised bundles,

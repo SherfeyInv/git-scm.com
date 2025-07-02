@@ -85,14 +85,14 @@ merge base, creating a virtual merge base by merging the merge bases)</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt--z"> <a class="anchor" href="#Documentation/git-merge-tree.txt--z"></a>-z </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt--z"><a class="anchor" href="#Documentation/git-merge-tree.txt--z"></a>-z </dt>
 <dd>
 <p>Do not quote filenames in the &lt;Conflicted file info&gt; section,
 and end each filename with a NUL character rather than
 newline.  Also begin the messages section with a NUL character
 instead of a newline.  See <a href="#OUTPUT">OUTPUT</a> below for more information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---name-only"> <a class="anchor" href="#Documentation/git-merge-tree.txt---name-only"></a>--name-only </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---name-only"><a class="anchor" href="#Documentation/git-merge-tree.txt---name-only"></a>--name-only </dt>
 <dd>
 <p>In the Conflicted file info section, instead of writing a list
 of (mode, oid, stage, path) tuples to output for conflicted
@@ -100,20 +100,20 @@ files, just provide a list of filenames with conflicts (and
 do not list filenames multiple times if they have multiple
 conflicting stages).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---no-messages"> <a class="anchor" href="#Documentation/git-merge-tree.txt---no-messages"></a>--[no-]messages </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---no-messages"><a class="anchor" href="#Documentation/git-merge-tree.txt---no-messages"></a>--[no-]messages </dt>
 <dd>
 <p>Write any informational messages such as "Auto-merging &lt;path&gt;"
 or CONFLICT notices to the end of stdout.  If unspecified, the
 default is to include these messages if there are merge
 conflicts, and to omit them otherwise.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---allow-unrelated-histories"> <a class="anchor" href="#Documentation/git-merge-tree.txt---allow-unrelated-histories"></a>--allow-unrelated-histories </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---allow-unrelated-histories"><a class="anchor" href="#Documentation/git-merge-tree.txt---allow-unrelated-histories"></a>--allow-unrelated-histories </dt>
 <dd>
 <p>merge-tree will by default error out if the two branches specified
 share no common history.  This flag can be given to override that
 check and make the merge proceed anyway.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---merge-baseltcommitgt"> <a class="anchor" href="#Documentation/git-merge-tree.txt---merge-basecommit"></a> <a class="anchor" href="#Documentation/git-merge-tree.txt---merge-baseltcommitgt"></a>--merge-base=&lt;commit&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---merge-baseltcommitgt"><a id="Documentation/git-merge-tree.txt---merge-basecommit" class="anchor" href="#Documentation/git-merge-tree.txt---merge-basecommit"></a>--merge-base=&lt;commit&gt; </dt>
 <dd>
 <p>Instead of finding the merge-bases for &lt;branch1&gt; and &lt;branch2&gt;,
 specify a merge-base for the merge, and specifying multiple bases is

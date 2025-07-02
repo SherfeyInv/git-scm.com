@@ -77,16 +77,16 @@ MIDXs, both the bit-cache and rev-cache extensions are required.</p>
 <p>A header appears at the beginning:</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-4-bytesignature"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-4-bytesignature"></a>4-byte signature:  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-4-bytesignature"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-4-bytesignature"></a>4-byte signature:  </dt>
 <dd>
 <p>{<em>B</em>, <em>I</em>, <em>T</em>, <em>M</em>}</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-2-byteversionnumbernetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-2-byteversionnumbernetworkbyteorder"></a>2-byte version number (network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-2-byteversionnumbernetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-2-byteversionnumbernetworkbyteorder"></a>2-byte version number (network byte order):  </dt>
 <dd>
 <p>The current implementation only supports version 1
 of the bitmap index (the same one as JGit).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-2-byteflagsnetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-2-byteflagsnetworkbyteorder"></a>2-byte flags (network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-2-byteflagsnetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-2-byteflagsnetworkbyteorder"></a>2-byte flags (network byte order):  </dt>
 <dd>
 <p>The following flags are supported:</p>
 <div class="ulist">
@@ -95,7 +95,7 @@ of the bitmap index (the same one as JGit).</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTFULLDAG0x1REQUIRED"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTFULLDAG0x1REQUIRED"></a>BITMAP_OPT_FULL_DAG (0x1) REQUIRED:  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTFULLDAG0x1REQUIRED"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTFULLDAG0x1REQUIRED"></a>BITMAP_OPT_FULL_DAG (0x1) REQUIRED:  </dt>
 <dd>
 <p>This flag must always be present. It implies that the
 bitmap index has been generated for a packfile or
@@ -113,7 +113,7 @@ implementation.</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTHASHCACHE0x4"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTHASHCACHE0x4"></a>BITMAP_OPT_HASH_CACHE (0x4):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTHASHCACHE0x4"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTHASHCACHE0x4"></a>BITMAP_OPT_HASH_CACHE (0x4):  </dt>
 <dd>
 <p>If present, the end of the bitmap file contains
 <code>N</code> 32-bit name-hash values, one per object in the
@@ -127,7 +127,7 @@ described below.</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTLOOKUPTABLE0x10"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTLOOKUPTABLE0x10"></a>BITMAP_OPT_LOOKUP_TABLE (0x10):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTLOOKUPTABLE0x10"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTLOOKUPTABLE0x10"></a>BITMAP_OPT_LOOKUP_TABLE (0x10):  </dt>
 <dd>
 <p>If present, the end of the bitmap file contains a table
 containing a list of <code>N</code> &lt;commit_pos, offset, xor_row&gt;
@@ -154,11 +154,11 @@ relative to the current entry.
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-4-byteentrycountnetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-4-byteentrycountnetworkbyteorder"></a>4-byte entry count (network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-4-byteentrycountnetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-4-byteentrycountnetworkbyteorder"></a>4-byte entry count (network byte order):  </dt>
 <dd>
 <p>The total count of entries (bitmapped commits) in this bitmap index.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-20-bytechecksum"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-20-bytechecksum"></a>20-byte checksum:  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-20-bytechecksum"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-20-bytechecksum"></a>20-byte checksum:  </dt>
 <dd>
 <p>The SHA1 checksum of the pack/MIDX this bitmap index
 belongs to.</p>
@@ -215,7 +215,7 @@ Each entry contains the following:</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-4-byteobjectpositionnetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-4-byteobjectpositionnetworkbyteorder"></a>4-byte object position (network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-4-byteobjectpositionnetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-4-byteobjectpositionnetworkbyteorder"></a>4-byte object position (network byte order):  </dt>
 <dd>
 <p>The position <strong>in the index for the packfile or
 multi-pack index</strong> where the bitmap for this commit is
@@ -228,7 +228,7 @@ found.</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-1-byteXOR-offset"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-1-byteXOR-offset"></a>1-byte XOR-offset:  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-1-byteXOR-offset"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-1-byteXOR-offset"></a>1-byte XOR-offset:  </dt>
 <dd>
 <p>The xor offset used to compress this bitmap. For an entry
 in position <code>x</code>, an XOR offset of <code>y</code> means that the actual
@@ -264,7 +264,7 @@ in the index.</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-1-byteflagsforthisbitmap"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-1-byteflagsforthisbitmap"></a>1-byte flags for this bitmap:  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-1-byteflagsforthisbitmap"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-1-byteflagsforthisbitmap"></a>1-byte flags for this bitmap:  </dt>
 <dd>
 <p>At the moment the only available flag is <code>0x1</code>, which hints
 that this bitmap can be re-used when rebuilding bitmap indexes
@@ -283,7 +283,7 @@ for the repository.</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-TRAILER"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-TRAILER"></a>TRAILER:  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-TRAILER"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-TRAILER"></a>TRAILER:  </dt>
 <dd>
 <p>Trailing checksum of the preceding contents.</p>
 </dd>
@@ -436,7 +436,7 @@ triplet is -</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-commitpos4byteintegernetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-commitpos4byteintegernetworkbyteorder"></a>commit_pos (4 byte integer, network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-commitpos4byteintegernetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-commitpos4byteintegernetworkbyteorder"></a>commit_pos (4 byte integer, network byte order):  </dt>
 <dd>
 <p>It stores the object position of a commit (in the midx or pack
 index).</p>
@@ -448,7 +448,7 @@ index).</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-offset8byteintegernetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-offset8byteintegernetworkbyteorder"></a>offset (8 byte integer, network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-offset8byteintegernetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-offset8byteintegernetworkbyteorder"></a>offset (8 byte integer, network byte order):  </dt>
 <dd>
 <p>The offset from which that commit&#8217;s bitmap can be read.</p>
 </dd>
@@ -459,7 +459,7 @@ index).</p>
 <p></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-xorrow4byteintegernetworkbyteorder"> <a class="anchor" href="#Documentation/technical/bitmap-format.txt-xorrow4byteintegernetworkbyteorder"></a>xor_row (4 byte integer, network byte order):  </dt>
+<dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-xorrow4byteintegernetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-xorrow4byteintegernetworkbyteorder"></a>xor_row (4 byte integer, network byte order):  </dt>
 <dd>
 <p>The position of the triplet whose bitmap is used to compress
 this one, or <code>0xffffffff</code> if no such bitmap exists.</p>

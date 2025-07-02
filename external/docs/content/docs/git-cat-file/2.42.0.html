@@ -57,35 +57,35 @@ whitespace, so that the appropriate drivers can be determined.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-ltobjectgt"> <a class="anchor" href="#Documentation/git-cat-file.txt-object"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-ltobjectgt"></a>&lt;object&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-ltobjectgt"><a id="Documentation/git-cat-file.txt-object" class="anchor" href="#Documentation/git-cat-file.txt-object"></a>&lt;object&gt; </dt>
 <dd>
 <p>The name of the object to show.
 For a more complete list of ways to spell object names, see
 the "SPECIFYING REVISIONS" section in <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt--t"> <a class="anchor" href="#Documentation/git-cat-file.txt--t"></a>-t </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt--t"><a class="anchor" href="#Documentation/git-cat-file.txt--t"></a>-t </dt>
 <dd>
 <p>Instead of the content, show the object type identified by
 <code>&lt;object&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt--s"> <a class="anchor" href="#Documentation/git-cat-file.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt--s"><a class="anchor" href="#Documentation/git-cat-file.txt--s"></a>-s </dt>
 <dd>
 <p>Instead of the content, show the object size identified by
 <code>&lt;object&gt;</code>. If used with <code>--use-mailmap</code> option, will show
 the size of updated object after replacing idents using the
 mailmap mechanism.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt--e"> <a class="anchor" href="#Documentation/git-cat-file.txt--e"></a>-e </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt--e"><a class="anchor" href="#Documentation/git-cat-file.txt--e"></a>-e </dt>
 <dd>
 <p>Exit with zero status if <code>&lt;object&gt;</code> exists and is a valid
 object. If <code>&lt;object&gt;</code> is of an invalid format exit with non-zero and
 emits an error on stderr.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt--p"> <a class="anchor" href="#Documentation/git-cat-file.txt--p"></a>-p </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt--p"><a class="anchor" href="#Documentation/git-cat-file.txt--p"></a>-p </dt>
 <dd>
 <p>Pretty-print the contents of <code>&lt;object&gt;</code> based on its type.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-lttypegt"> <a class="anchor" href="#Documentation/git-cat-file.txt-type"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-lttypegt"></a>&lt;type&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-lttypegt"><a id="Documentation/git-cat-file.txt-type" class="anchor" href="#Documentation/git-cat-file.txt-type"></a>&lt;type&gt; </dt>
 <dd>
 <p>Typically this matches the real type of <code>&lt;object&gt;</code> but asking
 for a type that can trivially be dereferenced from the given
@@ -94,35 +94,35 @@ for a type that can trivially be dereferenced from the given
 or to ask for a "blob" with <code>&lt;object&gt;</code> being a tag object that
 points at it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---no-mailmap"> <a class="anchor" href="#Documentation/git-cat-file.txt---no-mailmap"></a>--[no-]mailmap </dt>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---no-use-mailmap"> <a class="anchor" href="#Documentation/git-cat-file.txt---no-use-mailmap"></a>--[no-]use-mailmap </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---no-mailmap"><a class="anchor" href="#Documentation/git-cat-file.txt---no-mailmap"></a>--[no-]mailmap </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---no-use-mailmap"><a class="anchor" href="#Documentation/git-cat-file.txt---no-use-mailmap"></a>--[no-]use-mailmap </dt>
 <dd>
 <p>Use mailmap file to map author, committer and tagger names
 and email addresses to canonical real names and email addresses.
 See <a href='{{< relurl "docs/git-shortlog" >}}'>git-shortlog[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---textconv"> <a class="anchor" href="#Documentation/git-cat-file.txt---textconv"></a>--textconv </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---textconv"><a class="anchor" href="#Documentation/git-cat-file.txt---textconv"></a>--textconv </dt>
 <dd>
 <p>Show the content as transformed by a textconv filter. In this case,
 <code>&lt;object&gt;</code> has to be of the form <code>&lt;tree-ish&gt;:&lt;path&gt;</code>, or <code>:&lt;path&gt;</code> in
 order to apply the filter to the content recorded in the index at
 <code>&lt;path&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---filters"> <a class="anchor" href="#Documentation/git-cat-file.txt---filters"></a>--filters </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---filters"><a class="anchor" href="#Documentation/git-cat-file.txt---filters"></a>--filters </dt>
 <dd>
 <p>Show the content as converted by the filters configured in
 the current working tree for the given <code>&lt;path&gt;</code> (i.e. smudge filters,
 end-of-line conversion, etc). In this case, <code>&lt;object&gt;</code> has to be of
 the form <code>&lt;tree-ish&gt;:&lt;path&gt;</code>, or <code>:&lt;path&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---pathltpathgt"> <a class="anchor" href="#Documentation/git-cat-file.txt---pathpath"></a> <a class="anchor" href="#Documentation/git-cat-file.txt---pathltpathgt"></a>--path=&lt;path&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---pathltpathgt"><a id="Documentation/git-cat-file.txt---pathpath" class="anchor" href="#Documentation/git-cat-file.txt---pathpath"></a>--path=&lt;path&gt; </dt>
 <dd>
 <p>For use with <code>--textconv</code> or <code>--filters</code>, to allow specifying an object
 name and a path separately, e.g. when it is difficult to figure out
 the revision from which the blob came.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch"> <a class="anchor" href="#Documentation/git-cat-file.txt---batch"></a>--batch </dt>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batchltformatgt"> <a class="anchor" href="#Documentation/git-cat-file.txt---batchformat"></a> <a class="anchor" href="#Documentation/git-cat-file.txt---batchltformatgt"></a>--batch=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch"><a class="anchor" href="#Documentation/git-cat-file.txt---batch"></a>--batch </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batchltformatgt"><a id="Documentation/git-cat-file.txt---batchformat" class="anchor" href="#Documentation/git-cat-file.txt---batchformat"></a>--batch=&lt;format&gt; </dt>
 <dd>
 <p>Print object information and contents for each object provided
 on stdin. May not be combined with any other options or arguments
@@ -148,8 +148,8 @@ identities.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-check"> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-check"></a>--batch-check </dt>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-checkltformatgt"> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-checkformat"></a> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-checkltformatgt"></a>--batch-check=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-check"><a class="anchor" href="#Documentation/git-cat-file.txt---batch-check"></a>--batch-check </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-checkltformatgt"><a id="Documentation/git-cat-file.txt---batch-checkformat" class="anchor" href="#Documentation/git-cat-file.txt---batch-checkformat"></a>--batch-check=&lt;format&gt; </dt>
 <dd>
 <p>Print object information for each object provided on stdin. May not be
 combined with any other options or arguments except <code>--textconv</code>, <code>--filters</code>
@@ -173,8 +173,8 @@ identities recorded in it were replaced by the mailmap mechanism.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-command"> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-command"></a>--batch-command </dt>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-commandltformatgt"> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-commandformat"></a> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-commandltformatgt"></a>--batch-command=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-command"><a class="anchor" href="#Documentation/git-cat-file.txt---batch-command"></a>--batch-command </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-commandltformatgt"><a id="Documentation/git-cat-file.txt---batch-commandformat" class="anchor" href="#Documentation/git-cat-file.txt---batch-commandformat"></a>--batch-command=&lt;format&gt; </dt>
 <dd>
 <p>Enter a command mode that reads commands and arguments from stdin. May
 only be combined with <code>--buffer</code>, <code>--textconv</code>, <code>--use-mailmap</code> or
@@ -206,17 +206,17 @@ identities.</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-contentsltobjectgt"> <a class="anchor" href="#Documentation/git-cat-file.txt-contentsobject"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-contentsltobjectgt"></a>contents &lt;object&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-contentsltobjectgt"><a id="Documentation/git-cat-file.txt-contentsobject" class="anchor" href="#Documentation/git-cat-file.txt-contentsobject"></a>contents &lt;object&gt; </dt>
 <dd>
 <p>Print object contents for object reference <code>&lt;object&gt;</code>. This corresponds to
 the output of <code>--batch</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-infoltobjectgt"> <a class="anchor" href="#Documentation/git-cat-file.txt-infoobject"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-infoltobjectgt"></a>info &lt;object&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-infoltobjectgt"><a id="Documentation/git-cat-file.txt-infoobject" class="anchor" href="#Documentation/git-cat-file.txt-infoobject"></a>info &lt;object&gt; </dt>
 <dd>
 <p>Print object info for object reference <code>&lt;object&gt;</code>. This corresponds to the
 output of <code>--batch-check</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-flush"> <a class="anchor" href="#Documentation/git-cat-file.txt-flush"></a>flush </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-flush"><a class="anchor" href="#Documentation/git-cat-file.txt-flush"></a>flush </dt>
 <dd>
 <p>Used with <code>--buffer</code> to execute all preceding commands that were issued
 since the beginning or since the last flush was issued. When <code>--buffer</code>
@@ -228,7 +228,7 @@ is not used, commands are flushed each time without issuing <code>flush</code>.<
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-all-objects"> <a class="anchor" href="#Documentation/git-cat-file.txt---batch-all-objects"></a>--batch-all-objects </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-all-objects"><a class="anchor" href="#Documentation/git-cat-file.txt---batch-all-objects"></a>--batch-all-objects </dt>
 <dd>
 <p>Instead of reading a list of objects on stdin, perform the
 requested batch operation on all objects in the repository and
@@ -238,7 +238,7 @@ the objects are visited in order sorted by their hashes; see
 also <code>--unordered</code> below. Objects are presented as-is, without
 respecting the "replace" mechanism of <a href='{{< relurl "docs/git-replace" >}}'>git-replace[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---buffer"> <a class="anchor" href="#Documentation/git-cat-file.txt---buffer"></a>--buffer </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---buffer"><a class="anchor" href="#Documentation/git-cat-file.txt---buffer"></a>--buffer </dt>
 <dd>
 <p>Normally batch output is flushed after each object is output, so
 that a process can interactively read and write from
@@ -246,7 +246,7 @@ that a process can interactively read and write from
 buffering; this is much more efficient when invoking
 <code>--batch-check</code> or <code>--batch-command</code> on a large number of objects.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---unordered"> <a class="anchor" href="#Documentation/git-cat-file.txt---unordered"></a>--unordered </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---unordered"><a class="anchor" href="#Documentation/git-cat-file.txt---unordered"></a>--unordered </dt>
 <dd>
 <p>When <code>--batch-all-objects</code> is in use, visit objects in an
 order which may be more efficient for accessing the object
@@ -257,11 +257,11 @@ should generally result in faster output, especially with
 only once, even if it is stored multiple times in the
 repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---allow-unknown-type"> <a class="anchor" href="#Documentation/git-cat-file.txt---allow-unknown-type"></a>--allow-unknown-type </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---allow-unknown-type"><a class="anchor" href="#Documentation/git-cat-file.txt---allow-unknown-type"></a>--allow-unknown-type </dt>
 <dd>
 <p>Allow <code>-s</code> or <code>-t</code> to query broken/corrupt objects of unknown type.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt---follow-symlinks"> <a class="anchor" href="#Documentation/git-cat-file.txt---follow-symlinks"></a>--follow-symlinks </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt---follow-symlinks"><a class="anchor" href="#Documentation/git-cat-file.txt---follow-symlinks"></a>--follow-symlinks </dt>
 <dd>
 <p>With <code>--batch</code> or <code>--batch-check</code>, follow symlinks inside the
 repository when requesting objects with extended SHA-1
@@ -347,13 +347,13 @@ respectively print:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt--Z"> <a class="anchor" href="#Documentation/git-cat-file.txt--Z"></a>-Z </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt--Z"><a class="anchor" href="#Documentation/git-cat-file.txt--Z"></a>-Z </dt>
 <dd>
 <p>Only meaningful with <code>--batch</code>, <code>--batch-check</code>, or
 <code>--batch-command</code>; input and output is NUL-delimited instead of
 newline-delimited.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt--z"> <a class="anchor" href="#Documentation/git-cat-file.txt--z"></a>-z </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt--z"><a class="anchor" href="#Documentation/git-cat-file.txt--z"></a>-z </dt>
 <dd>
 <p>Only meaningful with <code>--batch</code>, <code>--batch-check</code>, or
 <code>--batch-command</code>; input is NUL-delimited instead of
@@ -410,32 +410,32 @@ newline. The available atoms are:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectnamecode"> <a class="anchor" href="#Documentation/git-cat-file.txt-objectname"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-codeobjectnamecode"></a><code>objectname</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectnamecode"><a id="Documentation/git-cat-file.txt-objectname" class="anchor" href="#Documentation/git-cat-file.txt-objectname"></a><code>objectname</code> </dt>
 <dd>
 <p>The full hex representation of the object name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjecttypecode"> <a class="anchor" href="#Documentation/git-cat-file.txt-objecttype"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-codeobjecttypecode"></a><code>objecttype</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjecttypecode"><a id="Documentation/git-cat-file.txt-objecttype" class="anchor" href="#Documentation/git-cat-file.txt-objecttype"></a><code>objecttype</code> </dt>
 <dd>
 <p>The type of the object (the same as <code>cat-file -t</code> reports).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectsizecode"> <a class="anchor" href="#Documentation/git-cat-file.txt-objectsize"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-codeobjectsizecode"></a><code>objectsize</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectsizecode"><a id="Documentation/git-cat-file.txt-objectsize" class="anchor" href="#Documentation/git-cat-file.txt-objectsize"></a><code>objectsize</code> </dt>
 <dd>
 <p>The size, in bytes, of the object (the same as <code>cat-file -s</code>
 reports).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectsizediskcode"> <a class="anchor" href="#Documentation/git-cat-file.txt-objectsizedisk"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-codeobjectsizediskcode"></a><code>objectsize:disk</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectsizediskcode"><a id="Documentation/git-cat-file.txt-objectsizedisk" class="anchor" href="#Documentation/git-cat-file.txt-objectsizedisk"></a><code>objectsize:disk</code> </dt>
 <dd>
 <p>The size, in bytes, that the object takes up on disk. See the
 note about on-disk sizes in the <code>CAVEATS</code> section below.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codedeltabasecode"> <a class="anchor" href="#Documentation/git-cat-file.txt-deltabase"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-codedeltabasecode"></a><code>deltabase</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-codedeltabasecode"><a id="Documentation/git-cat-file.txt-deltabase" class="anchor" href="#Documentation/git-cat-file.txt-deltabase"></a><code>deltabase</code> </dt>
 <dd>
 <p>If the object is stored as a delta on-disk, this expands to the
 full hex representation of the delta base object name.
 Otherwise, expands to the null OID (all zeroes). See <code>CAVEATS</code>
 below.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-coderestcode"> <a class="anchor" href="#Documentation/git-cat-file.txt-rest"></a> <a class="anchor" href="#Documentation/git-cat-file.txt-coderestcode"></a><code>rest</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-coderestcode"><a id="Documentation/git-cat-file.txt-rest" class="anchor" href="#Documentation/git-cat-file.txt-rest"></a><code>rest</code> </dt>
 <dd>
 <p>If this atom is used in the output string, input lines are split
 at the first whitespace boundary. All characters before that
