@@ -50,7 +50,7 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt---object-dir"> <a class="anchor" href="#Documentation/git-commit-graph.txt---object-dir"></a>--object-dir </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt---object-dir"><a class="anchor" href="#Documentation/git-commit-graph.txt---object-dir"></a>--object-dir </dt>
 <dd>
 <p>Use given directory for the location of packfiles and commit-graph
 file. This parameter exists to specify the location of an alternate
@@ -61,7 +61,7 @@ could not be made into an absolute path, or does not match any known
 object directory, <code>git commit-graph ...</code> will exit with non-zero
 status.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt---no-progress"> <a class="anchor" href="#Documentation/git-commit-graph.txt---no-progress"></a>--[no-]progress </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt---no-progress"><a class="anchor" href="#Documentation/git-commit-graph.txt---no-progress"></a>--[no-]progress </dt>
 <dd>
 <p>Turn progress on/off explicitly. If neither is specified, progress is
 shown if standard error is connected to a terminal.</p>
@@ -75,7 +75,7 @@ shown if standard error is connected to a terminal.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt-emwriteem"> <a class="anchor" href="#Documentation/git-commit-graph.txt-write"></a> <a class="anchor" href="#Documentation/git-commit-graph.txt-emwriteem"></a><em>write</em> </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt-emwriteem"><a id="Documentation/git-commit-graph.txt-write" class="anchor" href="#Documentation/git-commit-graph.txt-write"></a><em>write</em> </dt>
 <dd>
 <p>Write a commit-graph file based on the commits found in packfiles. If
 the config option <code>core.commitGraph</code> is disabled, then this command will
@@ -156,7 +156,7 @@ unused commit-graph whose modified times are older than <code>datetime</code>.</
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt-emverifyem"> <a class="anchor" href="#Documentation/git-commit-graph.txt-verify"></a> <a class="anchor" href="#Documentation/git-commit-graph.txt-emverifyem"></a><em>verify</em> </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt-emverifyem"><a id="Documentation/git-commit-graph.txt-verify" class="anchor" href="#Documentation/git-commit-graph.txt-verify"></a><em>verify</em> </dt>
 <dd>
 <p>Read the commit-graph file and verify its contents against the object
 database. Used to check for corrupted data.</p>
@@ -223,19 +223,19 @@ as what&#8217;s found there:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt-commitGraphgenerationVersion"> <a class="anchor" href="#Documentation/git-commit-graph.txt-commitGraphgenerationVersion"></a>commitGraph.generationVersion </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt-commitGraphgenerationVersion"><a class="anchor" href="#Documentation/git-commit-graph.txt-commitGraphgenerationVersion"></a>commitGraph.generationVersion </dt>
 <dd>
 <p>Specifies the type of generation number version to use when writing
 or reading the commit-graph file. If version 1 is specified, then
 the corrected commit dates will not be written or read. Defaults to
 2.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt-commitGraphmaxNewFilters"> <a class="anchor" href="#Documentation/git-commit-graph.txt-commitGraphmaxNewFilters"></a>commitGraph.maxNewFilters </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt-commitGraphmaxNewFilters"><a class="anchor" href="#Documentation/git-commit-graph.txt-commitGraphmaxNewFilters"></a>commitGraph.maxNewFilters </dt>
 <dd>
 <p>Specifies the default value for the <code>--max-new-filters</code> option of <code>git
 commit-graph write</code> (c.f., <a href='{{< relurl "docs/git-commit-graph" >}}'>git-commit-graph[1]</a>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-commit-graph.txt-commitGraphreadChangedPaths"> <a class="anchor" href="#Documentation/git-commit-graph.txt-commitGraphreadChangedPaths"></a>commitGraph.readChangedPaths </dt>
+<dt class="hdlist1" id="Documentation/git-commit-graph.txt-commitGraphreadChangedPaths"><a class="anchor" href="#Documentation/git-commit-graph.txt-commitGraphreadChangedPaths"></a>commitGraph.readChangedPaths </dt>
 <dd>
 <p>If true, then git will use the changed-path Bloom filters in the
 commit-graph file (if it exists, and they are present). Defaults to

@@ -77,26 +77,26 @@ to <em>git diff</em> and accepts the same options and arguments. See
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-difftool.txt--d"> <a class="anchor" href="#Documentation/git-difftool.txt--d"></a>-d </dt>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---dir-diff"> <a class="anchor" href="#Documentation/git-difftool.txt---dir-diff"></a>--dir-diff </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt--d"><a class="anchor" href="#Documentation/git-difftool.txt--d"></a>-d </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---dir-diff"><a class="anchor" href="#Documentation/git-difftool.txt---dir-diff"></a>--dir-diff </dt>
 <dd>
 <p>Copy the modified files to a temporary location and perform
 a directory diff on them. This mode never prompts before
 launching the diff tool.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt--y"> <a class="anchor" href="#Documentation/git-difftool.txt--y"></a>-y </dt>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---no-prompt"> <a class="anchor" href="#Documentation/git-difftool.txt---no-prompt"></a>--no-prompt </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt--y"><a class="anchor" href="#Documentation/git-difftool.txt--y"></a>-y </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---no-prompt"><a class="anchor" href="#Documentation/git-difftool.txt---no-prompt"></a>--no-prompt </dt>
 <dd>
 <p>Do not prompt before launching a diff tool.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---prompt"> <a class="anchor" href="#Documentation/git-difftool.txt---prompt"></a>--prompt </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---prompt"><a class="anchor" href="#Documentation/git-difftool.txt---prompt"></a>--prompt </dt>
 <dd>
 <p>Prompt before each invocation of the diff tool.
 This is the default behaviour; the option is provided to
 override any configuration settings.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt--tlttoolgt"> <a class="anchor" href="#Documentation/git-difftool.txt--ttool"></a> <a class="anchor" href="#Documentation/git-difftool.txt--tlttoolgt"></a>-t &lt;tool&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---toollttoolgt"> <a class="anchor" href="#Documentation/git-difftool.txt---tooltool"></a> <a class="anchor" href="#Documentation/git-difftool.txt---toollttoolgt"></a>--tool=&lt;tool&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt--tlttoolgt"><a id="Documentation/git-difftool.txt--ttool" class="anchor" href="#Documentation/git-difftool.txt--ttool"></a>-t &lt;tool&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---toollttoolgt"><a id="Documentation/git-difftool.txt---tooltool" class="anchor" href="#Documentation/git-difftool.txt---tooltool"></a>--tool=&lt;tool&gt; </dt>
 <dd>
 <p>Use the diff tool specified by &lt;tool&gt;.  Valid values include
 emerge, kompare, meld, and vimdiff. Run <code>git difftool --tool-help</code>
@@ -132,11 +132,11 @@ being compared. <code>$BASE</code> is provided for compatibility
 with custom merge tool commands and has the same value as <code>$MERGED</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---tool-help"> <a class="anchor" href="#Documentation/git-difftool.txt---tool-help"></a>--tool-help </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---tool-help"><a class="anchor" href="#Documentation/git-difftool.txt---tool-help"></a>--tool-help </dt>
 <dd>
 <p>Print a list of diff tools that may be used with <code>--tool</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---no-symlinks"> <a class="anchor" href="#Documentation/git-difftool.txt---no-symlinks"></a>--[no-]symlinks </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---no-symlinks"><a class="anchor" href="#Documentation/git-difftool.txt---no-symlinks"></a>--[no-]symlinks </dt>
 <dd>
 <p><em>git difftool</em>'s default behavior is create symlinks to the
 working tree when run in <code>--dir-diff</code> mode and the right-hand
@@ -147,23 +147,23 @@ the working tree.</p>
 instead.  <code>--no-symlinks</code> is the default on Windows.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt--xltcommandgt"> <a class="anchor" href="#Documentation/git-difftool.txt--xcommand"></a> <a class="anchor" href="#Documentation/git-difftool.txt--xltcommandgt"></a>-x &lt;command&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---extcmdltcommandgt"> <a class="anchor" href="#Documentation/git-difftool.txt---extcmdcommand"></a> <a class="anchor" href="#Documentation/git-difftool.txt---extcmdltcommandgt"></a>--extcmd=&lt;command&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt--xltcommandgt"><a id="Documentation/git-difftool.txt--xcommand" class="anchor" href="#Documentation/git-difftool.txt--xcommand"></a>-x &lt;command&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---extcmdltcommandgt"><a id="Documentation/git-difftool.txt---extcmdcommand" class="anchor" href="#Documentation/git-difftool.txt---extcmdcommand"></a>--extcmd=&lt;command&gt; </dt>
 <dd>
 <p>Specify a custom command for viewing diffs.
 <em>git-difftool</em> ignores the configured defaults and runs
 <code>$command $LOCAL $REMOTE</code> when this option is specified.
 Additionally, <code>$BASE</code> is set in the environment.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt--g"> <a class="anchor" href="#Documentation/git-difftool.txt--g"></a>-g </dt>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---no-gui"> <a class="anchor" href="#Documentation/git-difftool.txt---no-gui"></a>--[no-]gui </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt--g"><a class="anchor" href="#Documentation/git-difftool.txt--g"></a>-g </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---no-gui"><a class="anchor" href="#Documentation/git-difftool.txt---no-gui"></a>--[no-]gui </dt>
 <dd>
 <p>When <em>git-difftool</em> is invoked with the <code>-g</code> or <code>--gui</code> option
 the default diff tool will be read from the configured
 <code>diff.guitool</code> variable instead of <code>diff.tool</code>. The <code>--no-gui</code>
 option can be used to override this setting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt---no-trust-exit-code"> <a class="anchor" href="#Documentation/git-difftool.txt---no-trust-exit-code"></a>--[no-]trust-exit-code </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt---no-trust-exit-code"><a class="anchor" href="#Documentation/git-difftool.txt---no-trust-exit-code"></a>--[no-]trust-exit-code </dt>
 <dd>
 <p><em>git-difftool</em> invokes a diff tool individually on each file.
 Errors reported by the diff tool are ignored by default.
@@ -190,31 +190,31 @@ difftool equivalents have not been defined.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-difftool"> <a class="anchor" href="#Documentation/git-difftool.txt-difftool"></a>diff.tool </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-difftool"><a class="anchor" href="#Documentation/git-difftool.txt-difftool"></a>diff.tool </dt>
 <dd>
 <p>The default diff tool to use.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-diffguitool"> <a class="anchor" href="#Documentation/git-difftool.txt-diffguitool"></a>diff.guitool </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-diffguitool"><a class="anchor" href="#Documentation/git-difftool.txt-diffguitool"></a>diff.guitool </dt>
 <dd>
 <p>The default diff tool to use when <code>--gui</code> is specified.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-difftoollttoolgtpath"> <a class="anchor" href="#Documentation/git-difftool.txt-difftooltoolpath"></a> <a class="anchor" href="#Documentation/git-difftool.txt-difftoollttoolgtpath"></a>difftool.&lt;tool&gt;.path </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-difftoollttoolgtpath"><a id="Documentation/git-difftool.txt-difftooltoolpath" class="anchor" href="#Documentation/git-difftool.txt-difftooltoolpath"></a>difftool.&lt;tool&gt;.path </dt>
 <dd>
 <p>Override the path for the given tool.  This is useful in case
 your tool is not in the PATH.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-difftoollttoolgtcmd"> <a class="anchor" href="#Documentation/git-difftool.txt-difftooltoolcmd"></a> <a class="anchor" href="#Documentation/git-difftool.txt-difftoollttoolgtcmd"></a>difftool.&lt;tool&gt;.cmd </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-difftoollttoolgtcmd"><a id="Documentation/git-difftool.txt-difftooltoolcmd" class="anchor" href="#Documentation/git-difftool.txt-difftooltoolcmd"></a>difftool.&lt;tool&gt;.cmd </dt>
 <dd>
 <p>Specify the command to invoke the specified diff tool.</p>
 <div class="paragraph">
 <p>See the <code>--tool=&lt;tool&gt;</code> option above for more details.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-difftoolprompt"> <a class="anchor" href="#Documentation/git-difftool.txt-difftoolprompt"></a>difftool.prompt </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-difftoolprompt"><a class="anchor" href="#Documentation/git-difftool.txt-difftoolprompt"></a>difftool.prompt </dt>
 <dd>
 <p>Prompt before each invocation of the diff tool.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-difftooltrustExitCode"> <a class="anchor" href="#Documentation/git-difftool.txt-difftooltrustExitCode"></a>difftool.trustExitCode </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-difftooltrustExitCode"><a class="anchor" href="#Documentation/git-difftool.txt-difftooltrustExitCode"></a>difftool.trustExitCode </dt>
 <dd>
 <p>Exit difftool if the invoked diff tool returns a non-zero exit status.</p>
 <div class="paragraph">
@@ -230,15 +230,15 @@ your tool is not in the PATH.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-ahrefrelurldocsgit-diffgit-diff1a"> <a class="anchor" href="#Documentation/git-difftool.txt-git-diff1"></a> <a class="anchor" href="#Documentation/git-difftool.txt-ahrefrelurldocsgit-diffgit-diff1a"></a><a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-ahrefrelurldocsgit-diffgit-diff1a"><a id="Documentation/git-difftool.txt-git-diff1" class="anchor" href="#Documentation/git-difftool.txt-git-diff1"></a><a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> </dt>
 <dd>
 <p>Show changes between commits, commit and working tree, etc</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-ahrefrelurldocsgit-mergetoolgit-mergetool1a"> <a class="anchor" href="#Documentation/git-difftool.txt-git-mergetool1"></a> <a class="anchor" href="#Documentation/git-difftool.txt-ahrefrelurldocsgit-mergetoolgit-mergetool1a"></a><a href='{{< relurl "docs/git-mergetool" >}}'>git-mergetool[1]</a> </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-ahrefrelurldocsgit-mergetoolgit-mergetool1a"><a id="Documentation/git-difftool.txt-git-mergetool1" class="anchor" href="#Documentation/git-difftool.txt-git-mergetool1"></a><a href='{{< relurl "docs/git-mergetool" >}}'>git-mergetool[1]</a> </dt>
 <dd>
 <p>Run merge conflict resolution tools to resolve merge conflicts</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-difftool.txt-ahrefrelurldocsgit-configgit-config1a"> <a class="anchor" href="#Documentation/git-difftool.txt-git-config1"></a> <a class="anchor" href="#Documentation/git-difftool.txt-ahrefrelurldocsgit-configgit-config1a"></a><a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> </dt>
+<dt class="hdlist1" id="Documentation/git-difftool.txt-ahrefrelurldocsgit-configgit-config1a"><a id="Documentation/git-difftool.txt-git-config1" class="anchor" href="#Documentation/git-difftool.txt-git-config1"></a><a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> </dt>
 <dd>
 <p>Get and set repository or global options</p>
 </dd>

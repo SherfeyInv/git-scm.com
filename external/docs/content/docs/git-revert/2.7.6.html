@@ -56,7 +56,7 @@ both will discard uncommitted changes in your working directory.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-revert.txt-ltcommitgt82308203"> <a class="anchor" href="#Documentation/git-revert.txt-commit"></a> <a class="anchor" href="#Documentation/git-revert.txt-ltcommitgt82308203"></a>&lt;commit&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt-ltcommitgt82308203"><a id="Documentation/git-revert.txt-commit" class="anchor" href="#Documentation/git-revert.txt-commit"></a>&lt;commit&gt;&#8230;&#8203; </dt>
 <dd>
 <p>Commits to revert.
 For a more complete list of ways to spell commit names, see
@@ -65,15 +65,15 @@ Sets of commits can also be given but no traversal is done by
 default, see <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a> and its <em>--no-walk</em>
 option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt--e"> <a class="anchor" href="#Documentation/git-revert.txt--e"></a>-e </dt>
-<dt class="hdlist1" id="Documentation/git-revert.txt---edit"> <a class="anchor" href="#Documentation/git-revert.txt---edit"></a>--edit </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt--e"><a class="anchor" href="#Documentation/git-revert.txt--e"></a>-e </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---edit"><a class="anchor" href="#Documentation/git-revert.txt---edit"></a>--edit </dt>
 <dd>
 <p>With this option, <em>git revert</em> will let you edit the commit
 message prior to committing the revert. This is the default if
 you run the command from a terminal.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt--mparent-number"> <a class="anchor" href="#Documentation/git-revert.txt--mparent-number"></a>-m parent-number </dt>
-<dt class="hdlist1" id="Documentation/git-revert.txt---mainlineparent-number"> <a class="anchor" href="#Documentation/git-revert.txt---mainlineparent-number"></a>--mainline parent-number </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt--mparent-number"><a class="anchor" href="#Documentation/git-revert.txt--mparent-number"></a>-m parent-number </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---mainlineparent-number"><a class="anchor" href="#Documentation/git-revert.txt---mainlineparent-number"></a>--mainline parent-number </dt>
 <dd>
 <p>Usually you cannot revert a merge because you do not know which
 side of the merge should be considered the mainline.  This
@@ -91,13 +91,13 @@ reverted merge.  This may or may not be what you want.</p>
 more details.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt---no-edit"> <a class="anchor" href="#Documentation/git-revert.txt---no-edit"></a>--no-edit </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---no-edit"><a class="anchor" href="#Documentation/git-revert.txt---no-edit"></a>--no-edit </dt>
 <dd>
 <p>With this option, <em>git revert</em> will not start the commit
 message editor.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt--n"> <a class="anchor" href="#Documentation/git-revert.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-revert.txt---no-commit"> <a class="anchor" href="#Documentation/git-revert.txt---no-commit"></a>--no-commit </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt--n"><a class="anchor" href="#Documentation/git-revert.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---no-commit"><a class="anchor" href="#Documentation/git-revert.txt---no-commit"></a>--no-commit </dt>
 <dd>
 <p>Usually the command automatically creates some commits with
 commit log messages stating which commits were
@@ -112,27 +112,27 @@ beginning state of your index.</p>
 effect to your index in a row.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt--Sltkeyidgt"> <a class="anchor" href="#Documentation/git-revert.txt--Skeyid"></a> <a class="anchor" href="#Documentation/git-revert.txt--Sltkeyidgt"></a>-S[&lt;keyid&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-revert.txt---gpg-signltkeyidgt"> <a class="anchor" href="#Documentation/git-revert.txt---gpg-signkeyid"></a> <a class="anchor" href="#Documentation/git-revert.txt---gpg-signltkeyidgt"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt--Sltkeyidgt"><a id="Documentation/git-revert.txt--Skeyid" class="anchor" href="#Documentation/git-revert.txt--Skeyid"></a>-S[&lt;keyid&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---gpg-signltkeyidgt"><a id="Documentation/git-revert.txt---gpg-signkeyid" class="anchor" href="#Documentation/git-revert.txt---gpg-signkeyid"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
 <dd>
 <p>GPG-sign commits. The <code>keyid</code> argument is optional and
 defaults to the committer identity; if specified, it must be
 stuck to the option without a space.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt--s"> <a class="anchor" href="#Documentation/git-revert.txt--s"></a>-s </dt>
-<dt class="hdlist1" id="Documentation/git-revert.txt---signoff"> <a class="anchor" href="#Documentation/git-revert.txt---signoff"></a>--signoff </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt--s"><a class="anchor" href="#Documentation/git-revert.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---signoff"><a class="anchor" href="#Documentation/git-revert.txt---signoff"></a>--signoff </dt>
 <dd>
 <p>Add Signed-off-by line at the end of the commit message.
 See the signoff option in <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for more information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt---strategyltstrategygt"> <a class="anchor" href="#Documentation/git-revert.txt---strategystrategy"></a> <a class="anchor" href="#Documentation/git-revert.txt---strategyltstrategygt"></a>--strategy=&lt;strategy&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---strategyltstrategygt"><a id="Documentation/git-revert.txt---strategystrategy" class="anchor" href="#Documentation/git-revert.txt---strategystrategy"></a>--strategy=&lt;strategy&gt; </dt>
 <dd>
 <p>Use the given merge strategy.  Should only be used once.
 See the MERGE STRATEGIES section in <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a>
 for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt--Xltoptiongt"> <a class="anchor" href="#Documentation/git-revert.txt--Xoption"></a> <a class="anchor" href="#Documentation/git-revert.txt--Xltoptiongt"></a>-X&lt;option&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-revert.txt---strategy-optionltoptiongt"> <a class="anchor" href="#Documentation/git-revert.txt---strategy-optionoption"></a> <a class="anchor" href="#Documentation/git-revert.txt---strategy-optionltoptiongt"></a>--strategy-option=&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt--Xltoptiongt"><a id="Documentation/git-revert.txt--Xoption" class="anchor" href="#Documentation/git-revert.txt--Xoption"></a>-X&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---strategy-optionltoptiongt"><a id="Documentation/git-revert.txt---strategy-optionoption" class="anchor" href="#Documentation/git-revert.txt---strategy-optionoption"></a>--strategy-option=&lt;option&gt; </dt>
 <dd>
 <p>Pass the merge strategy-specific option through to the
 merge strategy.  See <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> for details.</p>
@@ -146,19 +146,19 @@ merge strategy.  See <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> 
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-revert.txt---continue"> <a class="anchor" href="#Documentation/git-revert.txt---continue"></a>--continue </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---continue"><a class="anchor" href="#Documentation/git-revert.txt---continue"></a>--continue </dt>
 <dd>
 <p>Continue the operation in progress using the information in
 <em>.git/sequencer</em>.  Can be used to continue after resolving
 conflicts in a failed cherry-pick or revert.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt---quit"> <a class="anchor" href="#Documentation/git-revert.txt---quit"></a>--quit </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---quit"><a class="anchor" href="#Documentation/git-revert.txt---quit"></a>--quit </dt>
 <dd>
 <p>Forget about the current operation in progress.  Can be used
 to clear the sequencer state after a failed cherry-pick or
 revert.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt---abort"> <a class="anchor" href="#Documentation/git-revert.txt---abort"></a>--abort </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt---abort"><a class="anchor" href="#Documentation/git-revert.txt---abort"></a>--abort </dt>
 <dd>
 <p>Cancel the operation and return to the pre-sequence state.</p>
 </dd>
@@ -171,12 +171,12 @@ revert.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-revert.txt-codegitrevertHEAD3code"> <a class="anchor" href="#Documentation/git-revert.txt-gitrevertHEAD3"></a> <a class="anchor" href="#Documentation/git-revert.txt-codegitrevertHEAD3code"></a><code>git revert HEAD~3</code> </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt-codegitrevertHEAD3code"><a id="Documentation/git-revert.txt-gitrevertHEAD3" class="anchor" href="#Documentation/git-revert.txt-gitrevertHEAD3"></a><code>git revert HEAD~3</code> </dt>
 <dd>
 <p>Revert the changes specified by the fourth last commit in HEAD
 and create a new commit with the reverted changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt-codegitrevert-nmaster5master2code"> <a class="anchor" href="#Documentation/git-revert.txt-gitrevert-nmaster5master2"></a> <a class="anchor" href="#Documentation/git-revert.txt-codegitrevert-nmaster5master2code"></a><code>git revert -n master~5..master~2</code> </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt-codegitrevert-nmaster5master2code"><a id="Documentation/git-revert.txt-gitrevert-nmaster5master2" class="anchor" href="#Documentation/git-revert.txt-gitrevert-nmaster5master2"></a><code>git revert -n master~5..master~2</code> </dt>
 <dd>
 <p>Revert the changes done by commits from the fifth last commit
 in master (included) to the third last commit in master

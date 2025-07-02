@@ -294,7 +294,7 @@ desired resolution, you can continue the rebasing process with</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---ontoltnewbasegt"> <a class="anchor" href="#Documentation/git-rebase.txt---ontonewbase"></a> <a class="anchor" href="#Documentation/git-rebase.txt---ontoltnewbasegt"></a>--onto &lt;newbase&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---ontoltnewbasegt"><a id="Documentation/git-rebase.txt---ontonewbase" class="anchor" href="#Documentation/git-rebase.txt---ontonewbase"></a>--onto &lt;newbase&gt; </dt>
 <dd>
 <p>Starting point at which to create the new commits. If the
 <code>--onto</code> option is not specified, the starting point is
@@ -306,7 +306,7 @@ merge base of A and B if there is exactly one merge base. You can
 leave out at most one of A and B, in which case it defaults to HEAD.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---keep-base"> <a class="anchor" href="#Documentation/git-rebase.txt---keep-base"></a>--keep-base </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---keep-base"><a class="anchor" href="#Documentation/git-rebase.txt---keep-base"></a>--keep-base </dt>
 <dd>
 <p>Set the starting point at which to create the new commits to the
 merge base of <code>&lt;upstream&gt;</code> and <code>&lt;branch&gt;</code>. Running
@@ -331,21 +331,21 @@ the merge base to determine the <em>set of commits</em> which will be rebased.</
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ltupstreamgt"> <a class="anchor" href="#Documentation/git-rebase.txt-upstream"></a> <a class="anchor" href="#Documentation/git-rebase.txt-ltupstreamgt"></a>&lt;upstream&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ltupstreamgt"><a id="Documentation/git-rebase.txt-upstream" class="anchor" href="#Documentation/git-rebase.txt-upstream"></a>&lt;upstream&gt; </dt>
 <dd>
 <p>Upstream branch to compare against.  May be any valid commit,
 not just an existing branch name. Defaults to the configured
 upstream for the current branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ltbranchgt"> <a class="anchor" href="#Documentation/git-rebase.txt-branch"></a> <a class="anchor" href="#Documentation/git-rebase.txt-ltbranchgt"></a>&lt;branch&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ltbranchgt"><a id="Documentation/git-rebase.txt-branch" class="anchor" href="#Documentation/git-rebase.txt-branch"></a>&lt;branch&gt; </dt>
 <dd>
 <p>Working branch; defaults to <code>HEAD</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---continue"> <a class="anchor" href="#Documentation/git-rebase.txt---continue"></a>--continue </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---continue"><a class="anchor" href="#Documentation/git-rebase.txt---continue"></a>--continue </dt>
 <dd>
 <p>Restart the rebasing process after having resolved a merge conflict.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---abort"> <a class="anchor" href="#Documentation/git-rebase.txt---abort"></a>--abort </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---abort"><a class="anchor" href="#Documentation/git-rebase.txt---abort"></a>--abort </dt>
 <dd>
 <p>Abort the rebase operation and reset HEAD to the original
 branch. If <code>&lt;branch&gt;</code> was provided when the rebase operation was
@@ -353,14 +353,14 @@ started, then <code>HEAD</code> will be reset to <code>&lt;branch&gt;</code>. Ot
 will be reset to where it was when the rebase operation was
 started.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---quit"> <a class="anchor" href="#Documentation/git-rebase.txt---quit"></a>--quit </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---quit"><a class="anchor" href="#Documentation/git-rebase.txt---quit"></a>--quit </dt>
 <dd>
 <p>Abort the rebase operation but <code>HEAD</code> is not reset back to the
 original branch. The index and working tree are also left
 unchanged as a result. If a temporary stash entry was created
 using <code>--autostash</code>, it will be saved to the stash list.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---apply"> <a class="anchor" href="#Documentation/git-rebase.txt---apply"></a>--apply </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---apply"><a class="anchor" href="#Documentation/git-rebase.txt---apply"></a>--apply </dt>
 <dd>
 <p>Use applying strategies to rebase (calling <code>git-am</code>
 internally).  This option may become a no-op in the future
@@ -369,7 +369,7 @@ once the merge backend handles everything the apply one does.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---emptydropkeepask"> <a class="anchor" href="#Documentation/git-rebase.txt---emptydropkeepask"></a>--empty={drop,keep,ask} </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---emptydropkeepask"><a class="anchor" href="#Documentation/git-rebase.txt---emptydropkeepask"></a>--empty={drop,keep,ask} </dt>
 <dd>
 <p>How to handle commits that are not empty to start and are not
 clean cherry-picks of any upstream commit, but which become
@@ -392,8 +392,8 @@ passed).</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-keep-empty"> <a class="anchor" href="#Documentation/git-rebase.txt---no-keep-empty"></a>--no-keep-empty </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---keep-empty"> <a class="anchor" href="#Documentation/git-rebase.txt---keep-empty"></a>--keep-empty </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-keep-empty"><a class="anchor" href="#Documentation/git-rebase.txt---no-keep-empty"></a>--no-keep-empty </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---keep-empty"><a class="anchor" href="#Documentation/git-rebase.txt---keep-empty"></a>--keep-empty </dt>
 <dd>
 <p>Do not keep commits that start empty before the rebase
 (i.e. that do not change anything from its parent) in the
@@ -417,8 +417,8 @@ see the <code>--empty</code> flag.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---reapply-cherry-picks"> <a class="anchor" href="#Documentation/git-rebase.txt---reapply-cherry-picks"></a>--reapply-cherry-picks </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-reapply-cherry-picks"> <a class="anchor" href="#Documentation/git-rebase.txt---no-reapply-cherry-picks"></a>--no-reapply-cherry-picks </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---reapply-cherry-picks"><a class="anchor" href="#Documentation/git-rebase.txt---reapply-cherry-picks"></a>--reapply-cherry-picks </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-reapply-cherry-picks"><a class="anchor" href="#Documentation/git-rebase.txt---no-reapply-cherry-picks"></a>--no-reapply-cherry-picks </dt>
 <dd>
 <p>Reapply all clean cherry-picks of any upstream commit instead
 of preemptively dropping them. (If these commits then become
@@ -443,7 +443,7 @@ commits, potentially improving performance.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---allow-empty-message"> <a class="anchor" href="#Documentation/git-rebase.txt---allow-empty-message"></a>--allow-empty-message </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---allow-empty-message"><a class="anchor" href="#Documentation/git-rebase.txt---allow-empty-message"></a>--allow-empty-message </dt>
 <dd>
 <p>No-op.  Rebasing commits with an empty message used to fail
 and this option would override that behavior, allowing commits
@@ -453,22 +453,22 @@ message do not cause rebasing to halt.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---skip"> <a class="anchor" href="#Documentation/git-rebase.txt---skip"></a>--skip </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---skip"><a class="anchor" href="#Documentation/git-rebase.txt---skip"></a>--skip </dt>
 <dd>
 <p>Restart the rebasing process by skipping the current patch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---edit-todo"> <a class="anchor" href="#Documentation/git-rebase.txt---edit-todo"></a>--edit-todo </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---edit-todo"><a class="anchor" href="#Documentation/git-rebase.txt---edit-todo"></a>--edit-todo </dt>
 <dd>
 <p>Edit the todo list during an interactive rebase.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---show-current-patch"> <a class="anchor" href="#Documentation/git-rebase.txt---show-current-patch"></a>--show-current-patch </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---show-current-patch"><a class="anchor" href="#Documentation/git-rebase.txt---show-current-patch"></a>--show-current-patch </dt>
 <dd>
 <p>Show the current patch in an interactive rebase or when rebase
 is stopped because of conflicts. This is the equivalent of
 <code>git show REBASE_HEAD</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--m"> <a class="anchor" href="#Documentation/git-rebase.txt--m"></a>-m </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---merge"> <a class="anchor" href="#Documentation/git-rebase.txt---merge"></a>--merge </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--m"><a class="anchor" href="#Documentation/git-rebase.txt--m"></a>-m </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---merge"><a class="anchor" href="#Documentation/git-rebase.txt---merge"></a>--merge </dt>
 <dd>
 <p>Using merging strategies to rebase (default).</p>
 <div class="paragraph">
@@ -482,8 +482,8 @@ In other words, the sides are swapped.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--sltstrategygt"> <a class="anchor" href="#Documentation/git-rebase.txt--sstrategy"></a> <a class="anchor" href="#Documentation/git-rebase.txt--sltstrategygt"></a>-s &lt;strategy&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---strategyltstrategygt"> <a class="anchor" href="#Documentation/git-rebase.txt---strategystrategy"></a> <a class="anchor" href="#Documentation/git-rebase.txt---strategyltstrategygt"></a>--strategy=&lt;strategy&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--sltstrategygt"><a id="Documentation/git-rebase.txt--sstrategy" class="anchor" href="#Documentation/git-rebase.txt--sstrategy"></a>-s &lt;strategy&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---strategyltstrategygt"><a id="Documentation/git-rebase.txt---strategystrategy" class="anchor" href="#Documentation/git-rebase.txt---strategystrategy"></a>--strategy=&lt;strategy&gt; </dt>
 <dd>
 <p>Use the given merge strategy, instead of the default <code>ort</code>.
 This implies <code>--merge</code>.</p>
@@ -497,8 +497,8 @@ which makes little sense.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--Xltstrategy-optiongt"> <a class="anchor" href="#Documentation/git-rebase.txt--Xstrategy-option"></a> <a class="anchor" href="#Documentation/git-rebase.txt--Xltstrategy-optiongt"></a>-X &lt;strategy-option&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---strategy-optionltstrategy-optiongt"> <a class="anchor" href="#Documentation/git-rebase.txt---strategy-optionstrategy-option"></a> <a class="anchor" href="#Documentation/git-rebase.txt---strategy-optionltstrategy-optiongt"></a>--strategy-option=&lt;strategy-option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--Xltstrategy-optiongt"><a id="Documentation/git-rebase.txt--Xstrategy-option" class="anchor" href="#Documentation/git-rebase.txt--Xstrategy-option"></a>-X &lt;strategy-option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---strategy-optionltstrategy-optiongt"><a id="Documentation/git-rebase.txt---strategy-optionstrategy-option" class="anchor" href="#Documentation/git-rebase.txt---strategy-optionstrategy-option"></a>--strategy-option=&lt;strategy-option&gt; </dt>
 <dd>
 <p>Pass the &lt;strategy-option&gt; through to the merge strategy.
 This implies <code>--merge</code> and, if no strategy has been
@@ -508,8 +508,8 @@ specified, <code>-s ort</code>.  Note the reversal of <em>ours</em> and
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---rerere-autoupdate"> <a class="anchor" href="#Documentation/git-rebase.txt---rerere-autoupdate"></a>--rerere-autoupdate </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-rerere-autoupdate"> <a class="anchor" href="#Documentation/git-rebase.txt---no-rerere-autoupdate"></a>--no-rerere-autoupdate </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---rerere-autoupdate"><a class="anchor" href="#Documentation/git-rebase.txt---rerere-autoupdate"></a>--rerere-autoupdate </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-rerere-autoupdate"><a class="anchor" href="#Documentation/git-rebase.txt---no-rerere-autoupdate"></a>--no-rerere-autoupdate </dt>
 <dd>
 <p>After the rerere mechanism reuses a recorded resolution on
 the current conflict to update the files in the working
@@ -519,9 +519,9 @@ double-check what <code>rerere</code> did and catch potential
 mismerges, before committing the result to the index with a
 separate <code>git add</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--Sltkeyidgt"> <a class="anchor" href="#Documentation/git-rebase.txt--Skeyid"></a> <a class="anchor" href="#Documentation/git-rebase.txt--Sltkeyidgt"></a>-S[&lt;keyid&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---gpg-signltkeyidgt"> <a class="anchor" href="#Documentation/git-rebase.txt---gpg-signkeyid"></a> <a class="anchor" href="#Documentation/git-rebase.txt---gpg-signltkeyidgt"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-gpg-sign"> <a class="anchor" href="#Documentation/git-rebase.txt---no-gpg-sign"></a>--no-gpg-sign </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--Sltkeyidgt"><a id="Documentation/git-rebase.txt--Skeyid" class="anchor" href="#Documentation/git-rebase.txt--Skeyid"></a>-S[&lt;keyid&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---gpg-signltkeyidgt"><a id="Documentation/git-rebase.txt---gpg-signkeyid" class="anchor" href="#Documentation/git-rebase.txt---gpg-signkeyid"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-gpg-sign"><a class="anchor" href="#Documentation/git-rebase.txt---no-gpg-sign"></a>--no-gpg-sign </dt>
 <dd>
 <p>GPG-sign commits. The <code>keyid</code> argument is optional and
 defaults to the committer identity; if specified, it must be
@@ -529,36 +529,36 @@ stuck to the option without a space. <code>--no-gpg-sign</code> is useful to
 countermand both <code>commit.gpgSign</code> configuration variable, and
 earlier <code>--gpg-sign</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--q"> <a class="anchor" href="#Documentation/git-rebase.txt--q"></a>-q </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---quiet"> <a class="anchor" href="#Documentation/git-rebase.txt---quiet"></a>--quiet </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--q"><a class="anchor" href="#Documentation/git-rebase.txt--q"></a>-q </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---quiet"><a class="anchor" href="#Documentation/git-rebase.txt---quiet"></a>--quiet </dt>
 <dd>
 <p>Be quiet. Implies <code>--no-stat</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--v"> <a class="anchor" href="#Documentation/git-rebase.txt--v"></a>-v </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---verbose"> <a class="anchor" href="#Documentation/git-rebase.txt---verbose"></a>--verbose </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--v"><a class="anchor" href="#Documentation/git-rebase.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---verbose"><a class="anchor" href="#Documentation/git-rebase.txt---verbose"></a>--verbose </dt>
 <dd>
 <p>Be verbose. Implies <code>--stat</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---stat"> <a class="anchor" href="#Documentation/git-rebase.txt---stat"></a>--stat </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---stat"><a class="anchor" href="#Documentation/git-rebase.txt---stat"></a>--stat </dt>
 <dd>
 <p>Show a diffstat of what changed upstream since the last rebase. The
 diffstat is also controlled by the configuration option rebase.stat.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--n"> <a class="anchor" href="#Documentation/git-rebase.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-stat"> <a class="anchor" href="#Documentation/git-rebase.txt---no-stat"></a>--no-stat </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--n"><a class="anchor" href="#Documentation/git-rebase.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-stat"><a class="anchor" href="#Documentation/git-rebase.txt---no-stat"></a>--no-stat </dt>
 <dd>
 <p>Do not show a diffstat as part of the rebase process.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-verify"> <a class="anchor" href="#Documentation/git-rebase.txt---no-verify"></a>--no-verify </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-verify"><a class="anchor" href="#Documentation/git-rebase.txt---no-verify"></a>--no-verify </dt>
 <dd>
 <p>This option bypasses the pre-rebase hook.  See also <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---verify"> <a class="anchor" href="#Documentation/git-rebase.txt---verify"></a>--verify </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---verify"><a class="anchor" href="#Documentation/git-rebase.txt---verify"></a>--verify </dt>
 <dd>
 <p>Allows the pre-rebase hook to run, which is the default.  This option can
 be used to override <code>--no-verify</code>.  See also <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--Cltngt"> <a class="anchor" href="#Documentation/git-rebase.txt--Cn"></a> <a class="anchor" href="#Documentation/git-rebase.txt--Cltngt"></a>-C&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--Cltngt"><a id="Documentation/git-rebase.txt--Cn" class="anchor" href="#Documentation/git-rebase.txt--Cn"></a>-C&lt;n&gt; </dt>
 <dd>
 <p>Ensure at least <code>&lt;n&gt;</code> lines of surrounding context match before
 and after each change.  When fewer lines of surrounding
@@ -568,9 +568,9 @@ ever ignored.  Implies <code>--apply</code>.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-ff"> <a class="anchor" href="#Documentation/git-rebase.txt---no-ff"></a>--no-ff </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---force-rebase"> <a class="anchor" href="#Documentation/git-rebase.txt---force-rebase"></a>--force-rebase </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--f"> <a class="anchor" href="#Documentation/git-rebase.txt--f"></a>-f </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-ff"><a class="anchor" href="#Documentation/git-rebase.txt---no-ff"></a>--no-ff </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---force-rebase"><a class="anchor" href="#Documentation/git-rebase.txt---force-rebase"></a>--force-rebase </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--f"><a class="anchor" href="#Documentation/git-rebase.txt--f"></a>-f </dt>
 <dd>
 <p>Individually replay all rebased commits instead of fast-forwarding
 over the unchanged ones.  This ensures that the entire history of
@@ -583,8 +583,8 @@ successfully without needing to "revert the reversion" (see the
 details).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---fork-point"> <a class="anchor" href="#Documentation/git-rebase.txt---fork-point"></a>--fork-point </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-fork-point"> <a class="anchor" href="#Documentation/git-rebase.txt---no-fork-point"></a>--no-fork-point </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---fork-point"><a class="anchor" href="#Documentation/git-rebase.txt---fork-point"></a>--fork-point </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-fork-point"><a class="anchor" href="#Documentation/git-rebase.txt---no-fork-point"></a>--no-fork-point </dt>
 <dd>
 <p>Use reflog to find a better common ancestor between <code>&lt;upstream&gt;</code>
 and <code>&lt;branch&gt;</code> when calculating which commits have been
@@ -610,14 +610,14 @@ with <code>--keep-base</code> in order to drop those commits from your branch.</
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---ignore-whitespace"> <a class="anchor" href="#Documentation/git-rebase.txt---ignore-whitespace"></a>--ignore-whitespace </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---ignore-whitespace"><a class="anchor" href="#Documentation/git-rebase.txt---ignore-whitespace"></a>--ignore-whitespace </dt>
 <dd>
 <p>Ignore whitespace differences when trying to reconcile
 differences. Currently, each backend implements an approximation of
 this behavior:</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-applybackend"> <a class="anchor" href="#Documentation/git-rebase.txt-applybackend"></a>apply backend </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-applybackend"><a class="anchor" href="#Documentation/git-rebase.txt-applybackend"></a>apply backend </dt>
 <dd>
 <p>When applying a patch, ignore changes in whitespace in context
 lines. Unfortunately, this means that if the "old" lines being
@@ -625,7 +625,7 @@ replaced by the patch differ only in whitespace from the existing
 file, you will get a merge conflict instead of a successful patch
 application.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-mergebackend"> <a class="anchor" href="#Documentation/git-rebase.txt-mergebackend"></a>merge backend </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-mergebackend"><a class="anchor" href="#Documentation/git-rebase.txt-mergebackend"></a>merge backend </dt>
 <dd>
 <p>Treat lines with only whitespace changes as unchanged when merging.
 Unfortunately, this means that any patch hunks that were intended
@@ -635,7 +635,7 @@ other side had no changes that conflicted.</p>
 </dl>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---whitespaceltoptiongt"> <a class="anchor" href="#Documentation/git-rebase.txt---whitespaceoption"></a> <a class="anchor" href="#Documentation/git-rebase.txt---whitespaceltoptiongt"></a>--whitespace=&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---whitespaceltoptiongt"><a id="Documentation/git-rebase.txt---whitespaceoption" class="anchor" href="#Documentation/git-rebase.txt---whitespaceoption"></a>--whitespace=&lt;option&gt; </dt>
 <dd>
 <p>This flag is passed to the <code>git apply</code> program
 (see <a href='{{< relurl "docs/git-apply" >}}'>git-apply[1]</a>) that applies the patch.
@@ -644,14 +644,14 @@ Implies <code>--apply</code>.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---committer-date-is-author-date"> <a class="anchor" href="#Documentation/git-rebase.txt---committer-date-is-author-date"></a>--committer-date-is-author-date </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---committer-date-is-author-date"><a class="anchor" href="#Documentation/git-rebase.txt---committer-date-is-author-date"></a>--committer-date-is-author-date </dt>
 <dd>
 <p>Instead of using the current time as the committer date, use
 the author date of the commit being rebased as the committer
 date. This option implies <code>--force-rebase</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---ignore-date"> <a class="anchor" href="#Documentation/git-rebase.txt---ignore-date"></a>--ignore-date </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---reset-author-date"> <a class="anchor" href="#Documentation/git-rebase.txt---reset-author-date"></a>--reset-author-date </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---ignore-date"><a class="anchor" href="#Documentation/git-rebase.txt---ignore-date"></a>--ignore-date </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---reset-author-date"><a class="anchor" href="#Documentation/git-rebase.txt---reset-author-date"></a>--reset-author-date </dt>
 <dd>
 <p>Instead of using the author date of the original commit, use
 the current time as the	author date of the rebased commit.  This
@@ -660,7 +660,7 @@ option implies <code>--force-rebase</code>.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---signoff"> <a class="anchor" href="#Documentation/git-rebase.txt---signoff"></a>--signoff </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---signoff"><a class="anchor" href="#Documentation/git-rebase.txt---signoff"></a>--signoff </dt>
 <dd>
 <p>Add a <code>Signed-off-by</code> trailer to all the rebased commits. Note
 that if <code>--interactive</code> is given then only commits marked to be
@@ -669,8 +669,8 @@ picked, edited or reworded will have the trailer added.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--i"> <a class="anchor" href="#Documentation/git-rebase.txt--i"></a>-i </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---interactive"> <a class="anchor" href="#Documentation/git-rebase.txt---interactive"></a>--interactive </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--i"><a class="anchor" href="#Documentation/git-rebase.txt--i"></a>-i </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---interactive"><a class="anchor" href="#Documentation/git-rebase.txt---interactive"></a>--interactive </dt>
 <dd>
 <p>Make a list of the commits which are about to be rebased.  Let the
 user edit that list before rebasing.  This mode can also be used to
@@ -684,8 +684,8 @@ have the long commit hash prepended to the format.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--r"> <a class="anchor" href="#Documentation/git-rebase.txt--r"></a>-r </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---rebase-mergesrebase-cousinsno-rebase-cousins"> <a class="anchor" href="#Documentation/git-rebase.txt---rebase-mergesrebase-cousinsno-rebase-cousins"></a>--rebase-merges[=(rebase-cousins|no-rebase-cousins)] </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--r"><a class="anchor" href="#Documentation/git-rebase.txt--r"></a>-r </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---rebase-mergesrebase-cousinsno-rebase-cousins"><a class="anchor" href="#Documentation/git-rebase.txt---rebase-mergesrebase-cousinsno-rebase-cousins"></a>--rebase-merges[=(rebase-cousins|no-rebase-cousins)] </dt>
 <dd>
 <p>By default, a rebase will simply drop merge commits from the todo
 list, and put the rebased commits into a single, linear branch.
@@ -711,8 +711,8 @@ explicit <code>exec git merge -s &lt;strategy&gt; [...]</code> commands.</p>
 <p>See also REBASING MERGES and INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt--xltcmdgt"> <a class="anchor" href="#Documentation/git-rebase.txt--xcmd"></a> <a class="anchor" href="#Documentation/git-rebase.txt--xltcmdgt"></a>-x &lt;cmd&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---execltcmdgt"> <a class="anchor" href="#Documentation/git-rebase.txt---execcmd"></a> <a class="anchor" href="#Documentation/git-rebase.txt---execltcmdgt"></a>--exec &lt;cmd&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt--xltcmdgt"><a id="Documentation/git-rebase.txt--xcmd" class="anchor" href="#Documentation/git-rebase.txt--xcmd"></a>-x &lt;cmd&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---execltcmdgt"><a id="Documentation/git-rebase.txt---execcmd" class="anchor" href="#Documentation/git-rebase.txt---execcmd"></a>--exec &lt;cmd&gt; </dt>
 <dd>
 <p>Append "exec &lt;cmd&gt;" after each line creating a commit in the
 final history. <code>&lt;cmd&gt;</code> will be interpreted as one or more shell
@@ -748,7 +748,7 @@ without an explicit <code>--interactive</code>.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---root"> <a class="anchor" href="#Documentation/git-rebase.txt---root"></a>--root </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---root"><a class="anchor" href="#Documentation/git-rebase.txt---root"></a>--root </dt>
 <dd>
 <p>Rebase all commits reachable from <code>&lt;branch&gt;</code>, instead of
 limiting them with an <code>&lt;upstream&gt;</code>.  This allows you to rebase
@@ -760,8 +760,8 @@ change.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---autosquash"> <a class="anchor" href="#Documentation/git-rebase.txt---autosquash"></a>--autosquash </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-autosquash"> <a class="anchor" href="#Documentation/git-rebase.txt---no-autosquash"></a>--no-autosquash </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---autosquash"><a class="anchor" href="#Documentation/git-rebase.txt---autosquash"></a>--autosquash </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-autosquash"><a class="anchor" href="#Documentation/git-rebase.txt---no-autosquash"></a>--no-autosquash </dt>
 <dd>
 <p>When the commit log message begins with "squash! &#8230;&#8203;" or "fixup! &#8230;&#8203;"
 or "amend! &#8230;&#8203;", and there is already a commit in the todo list that
@@ -783,8 +783,8 @@ used to override and disable this setting.</p>
 <p>See also INCOMPATIBLE OPTIONS below.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---autostash"> <a class="anchor" href="#Documentation/git-rebase.txt---autostash"></a>--autostash </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-autostash"> <a class="anchor" href="#Documentation/git-rebase.txt---no-autostash"></a>--no-autostash </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---autostash"><a class="anchor" href="#Documentation/git-rebase.txt---autostash"></a>--autostash </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-autostash"><a class="anchor" href="#Documentation/git-rebase.txt---no-autostash"></a>--no-autostash </dt>
 <dd>
 <p>Automatically create a temporary stash entry before the operation
 begins, and apply it after the operation ends.  This means
@@ -792,8 +792,8 @@ that you can run rebase on a dirty worktree.  However, use
 with care: the final stash application after a successful
 rebase might result in non-trivial conflicts.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---reschedule-failed-exec"> <a class="anchor" href="#Documentation/git-rebase.txt---reschedule-failed-exec"></a>--reschedule-failed-exec </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-reschedule-failed-exec"> <a class="anchor" href="#Documentation/git-rebase.txt---no-reschedule-failed-exec"></a>--no-reschedule-failed-exec </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---reschedule-failed-exec"><a class="anchor" href="#Documentation/git-rebase.txt---reschedule-failed-exec"></a>--reschedule-failed-exec </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-reschedule-failed-exec"><a class="anchor" href="#Documentation/git-rebase.txt---no-reschedule-failed-exec"></a>--no-reschedule-failed-exec </dt>
 <dd>
 <p>Automatically reschedule <code>exec</code> commands that failed. This only makes
 sense in interactive mode (or when an <code>--exec</code> option was provided).</p>
@@ -807,8 +807,8 @@ start would be overridden by the presence of
 <code>rebase.rescheduleFailedExec=true</code> configuration.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---update-refs"> <a class="anchor" href="#Documentation/git-rebase.txt---update-refs"></a>--update-refs </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt---no-update-refs"> <a class="anchor" href="#Documentation/git-rebase.txt---no-update-refs"></a>--no-update-refs </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---update-refs"><a class="anchor" href="#Documentation/git-rebase.txt---update-refs"></a>--update-refs </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt---no-update-refs"><a class="anchor" href="#Documentation/git-rebase.txt---no-update-refs"></a>--no-update-refs </dt>
 <dd>
 <p>Automatically force-update any branches that point to commits that
 are being rebased. Any branches that are checked out in a worktree
@@ -1081,7 +1081,7 @@ arguments to <code>git merge</code> and/or <code>git pull</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ort"> <a class="anchor" href="#Documentation/git-rebase.txt-ort"></a>ort </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ort"><a class="anchor" href="#Documentation/git-rebase.txt-ort"></a>ort </dt>
 <dd>
 <p>This is the default merge strategy when pulling or merging one
 branch.  This strategy can only resolve two heads using a
@@ -1102,7 +1102,7 @@ algorithm, <code>recursive</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ours"> <a class="anchor" href="#Documentation/git-rebase.txt-ours"></a>ours </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ours"><a class="anchor" href="#Documentation/git-rebase.txt-ours"></a>ours </dt>
 <dd>
 <p>This option forces conflicting hunks to be auto-resolved cleanly by
 favoring <em>our</em> version.  Changes from the other tree that do not
@@ -1114,15 +1114,15 @@ even look at what the other tree contains at all.  It discards everything
 the other tree did, declaring <em>our</em> history contains all that happened in it.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-theirs"> <a class="anchor" href="#Documentation/git-rebase.txt-theirs"></a>theirs </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-theirs"><a class="anchor" href="#Documentation/git-rebase.txt-theirs"></a>theirs </dt>
 <dd>
 <p>This is the opposite of <em>ours</em>; note that, unlike <em>ours</em>, there is
 no <em>theirs</em> merge strategy to confuse this merge option with.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-space-change"> <a class="anchor" href="#Documentation/git-rebase.txt-ignore-space-change"></a>ignore-space-change </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-all-space"> <a class="anchor" href="#Documentation/git-rebase.txt-ignore-all-space"></a>ignore-all-space </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-space-at-eol"> <a class="anchor" href="#Documentation/git-rebase.txt-ignore-space-at-eol"></a>ignore-space-at-eol </dt>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-cr-at-eol"> <a class="anchor" href="#Documentation/git-rebase.txt-ignore-cr-at-eol"></a>ignore-cr-at-eol </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-space-change"><a class="anchor" href="#Documentation/git-rebase.txt-ignore-space-change"></a>ignore-space-change </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-all-space"><a class="anchor" href="#Documentation/git-rebase.txt-ignore-all-space"></a>ignore-all-space </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-space-at-eol"><a class="anchor" href="#Documentation/git-rebase.txt-ignore-space-at-eol"></a>ignore-space-at-eol </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ignore-cr-at-eol"><a class="anchor" href="#Documentation/git-rebase.txt-ignore-cr-at-eol"></a>ignore-cr-at-eol </dt>
 <dd>
 <p>Treats lines with the indicated type of whitespace change as
 unchanged for the sake of a three-way merge.  Whitespace
@@ -1145,7 +1145,7 @@ version includes a substantial change, <em>their</em> version is used;</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-renormalize"> <a class="anchor" href="#Documentation/git-rebase.txt-renormalize"></a>renormalize </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-renormalize"><a class="anchor" href="#Documentation/git-rebase.txt-renormalize"></a>renormalize </dt>
 <dd>
 <p>This runs a virtual check-out and check-in of all three stages
 of a file when resolving a three-way merge.  This option is
@@ -1154,23 +1154,23 @@ filters or end-of-line normalization rules.  See "Merging
 branches with differing checkin/checkout attributes" in
 <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-no-renormalize"> <a class="anchor" href="#Documentation/git-rebase.txt-no-renormalize"></a>no-renormalize </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-no-renormalize"><a class="anchor" href="#Documentation/git-rebase.txt-no-renormalize"></a>no-renormalize </dt>
 <dd>
 <p>Disables the <code>renormalize</code> option.  This overrides the
 <code>merge.renormalize</code> configuration variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-find-renamesltngt"> <a class="anchor" href="#Documentation/git-rebase.txt-find-renamesn"></a> <a class="anchor" href="#Documentation/git-rebase.txt-find-renamesltngt"></a>find-renames[=&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-find-renamesltngt"><a id="Documentation/git-rebase.txt-find-renamesn" class="anchor" href="#Documentation/git-rebase.txt-find-renamesn"></a>find-renames[=&lt;n&gt;] </dt>
 <dd>
 <p>Turn on rename detection, optionally setting the similarity
 threshold.  This is the default. This overrides the
 <em>merge.renames</em> configuration variable.
 See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--find-renames</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rename-thresholdltngt"> <a class="anchor" href="#Documentation/git-rebase.txt-rename-thresholdn"></a> <a class="anchor" href="#Documentation/git-rebase.txt-rename-thresholdltngt"></a>rename-threshold=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rename-thresholdltngt"><a id="Documentation/git-rebase.txt-rename-thresholdn" class="anchor" href="#Documentation/git-rebase.txt-rename-thresholdn"></a>rename-threshold=&lt;n&gt; </dt>
 <dd>
 <p>Deprecated synonym for <code>find-renames=&lt;n&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-subtreeltpathgt"> <a class="anchor" href="#Documentation/git-rebase.txt-subtreepath"></a> <a class="anchor" href="#Documentation/git-rebase.txt-subtreeltpathgt"></a>subtree[=&lt;path&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-subtreeltpathgt"><a id="Documentation/git-rebase.txt-subtreepath" class="anchor" href="#Documentation/git-rebase.txt-subtreepath"></a>subtree[=&lt;path&gt;] </dt>
 <dd>
 <p>This option is a more advanced form of <em>subtree</em> strategy, where
 the strategy makes a guess on how two trees must be shifted to
@@ -1181,7 +1181,7 @@ two trees to match.</p>
 </dl>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-recursive"> <a class="anchor" href="#Documentation/git-rebase.txt-recursive"></a>recursive </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-recursive"><a class="anchor" href="#Documentation/git-rebase.txt-recursive"></a>recursive </dt>
 <dd>
 <p>This can only resolve two heads using a 3-way merge
 algorithm.  When there is more than one common
@@ -1202,11 +1202,11 @@ above) that are potentially useful with the <em>recursive</em> strategy:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-patience"> <a class="anchor" href="#Documentation/git-rebase.txt-patience"></a>patience </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-patience"><a class="anchor" href="#Documentation/git-rebase.txt-patience"></a>patience </dt>
 <dd>
 <p>Deprecated synonym for <code>diff-algorithm=patience</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-diff-algorithmpatienceminimalhistogrammyers"> <a class="anchor" href="#Documentation/git-rebase.txt-diff-algorithmpatienceminimalhistogrammyers"></a>diff-algorithm=[patience|minimal|histogram|myers] </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-diff-algorithmpatienceminimalhistogrammyers"><a class="anchor" href="#Documentation/git-rebase.txt-diff-algorithmpatienceminimalhistogrammyers"></a>diff-algorithm=[patience|minimal|histogram|myers] </dt>
 <dd>
 <p>Use a different diff algorithm while merging, which can help
 avoid mismerges that occur due to unimportant matching lines
@@ -1215,7 +1215,7 @@ avoid mismerges that occur due to unimportant matching lines
 specifically uses <code>diff-algorithm=histogram</code>, while <code>recursive</code>
 defaults to the <code>diff.algorithm</code> config setting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-no-renames"> <a class="anchor" href="#Documentation/git-rebase.txt-no-renames"></a>no-renames </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-no-renames"><a class="anchor" href="#Documentation/git-rebase.txt-no-renames"></a>no-renames </dt>
 <dd>
 <p>Turn off rename detection. This overrides the <code>merge.renames</code>
 configuration variable.
@@ -1224,14 +1224,14 @@ See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--no-ren
 </dl>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-resolve"> <a class="anchor" href="#Documentation/git-rebase.txt-resolve"></a>resolve </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-resolve"><a class="anchor" href="#Documentation/git-rebase.txt-resolve"></a>resolve </dt>
 <dd>
 <p>This can only resolve two heads (i.e. the current branch
 and another branch you pulled from) using a 3-way merge
 algorithm.  It tries to carefully detect criss-cross
 merge ambiguities.  It does not handle renames.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-octopus"> <a class="anchor" href="#Documentation/git-rebase.txt-octopus"></a>octopus </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-octopus"><a class="anchor" href="#Documentation/git-rebase.txt-octopus"></a>octopus </dt>
 <dd>
 <p>This resolves cases with more than two heads, but refuses to do
 a complex merge that needs manual resolution.  It is
@@ -1239,7 +1239,7 @@ primarily meant to be used for bundling topic branch
 heads together.  This is the default merge strategy when
 pulling or merging more than one branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-ours-1"> <a class="anchor" href="#Documentation/git-rebase.txt-ours-1"></a>ours </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-ours-1"><a class="anchor" href="#Documentation/git-rebase.txt-ours-1"></a>ours </dt>
 <dd>
 <p>This resolves any number of heads, but the resulting tree of the
 merge is always that of the current branch head, effectively
@@ -1248,7 +1248,7 @@ be used to supersede old development history of side
 branches.  Note that this is different from the -Xours option to
 the <em>recursive</em> merge strategy.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-subtree"> <a class="anchor" href="#Documentation/git-rebase.txt-subtree"></a>subtree </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-subtree"><a class="anchor" href="#Documentation/git-rebase.txt-subtree"></a>subtree </dt>
 <dd>
 <p>This is a modified <code>ort</code> strategy. When merging trees A and
 B, if B corresponds to a subtree of A, B is first adjusted to
@@ -1617,12 +1617,12 @@ rebase <em>topic</em>.  This becomes a ripple effect: anyone downstream from
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-EasycaseThechangesareliterallythesame"> <a class="anchor" href="#Documentation/git-rebase.txt-EasycaseThechangesareliterallythesame"></a>Easy case: The changes are literally the same. </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-EasycaseThechangesareliterallythesame"><a class="anchor" href="#Documentation/git-rebase.txt-EasycaseThechangesareliterallythesame"></a>Easy case: The changes are literally the same. </dt>
 <dd>
 <p>This happens if the <em>subsystem</em> rebase was a simple rebase and
 had no conflicts.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-HardcaseThechangesarenotthesame"> <a class="anchor" href="#Documentation/git-rebase.txt-HardcaseThechangesarenotthesame"></a>Hard case: The changes are not the same. </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-HardcaseThechangesarenotthesame"><a class="anchor" href="#Documentation/git-rebase.txt-HardcaseThechangesarenotthesame"></a>Hard case: The changes are not the same. </dt>
 <dd>
 <p>This happens if the <em>subsystem</em> rebase had conflicts, or used
 <code>--interactive</code> to omit, edit, squash, or fixup commits; or
@@ -1888,23 +1888,23 @@ as what&#8217;s found there:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebasebackend"> <a class="anchor" href="#Documentation/git-rebase.txt-rebasebackend"></a>rebase.backend </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebasebackend"><a class="anchor" href="#Documentation/git-rebase.txt-rebasebackend"></a>rebase.backend </dt>
 <dd>
 <p>Default backend to use for rebasing.  Possible choices are
 <em>apply</em> or <em>merge</em>.  In the future, if the merge backend gains
 all remaining capabilities of the apply backend, this setting
 may become unused.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebasestat"> <a class="anchor" href="#Documentation/git-rebase.txt-rebasestat"></a>rebase.stat </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebasestat"><a class="anchor" href="#Documentation/git-rebase.txt-rebasestat"></a>rebase.stat </dt>
 <dd>
 <p>Whether to show a diffstat of what changed upstream since the last
 rebase. False by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseautoSquash"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaseautoSquash"></a>rebase.autoSquash </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseautoSquash"><a class="anchor" href="#Documentation/git-rebase.txt-rebaseautoSquash"></a>rebase.autoSquash </dt>
 <dd>
 <p>If set to true enable <code>--autosquash</code> option by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseautoStash"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaseautoStash"></a>rebase.autoStash </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseautoStash"><a class="anchor" href="#Documentation/git-rebase.txt-rebaseautoStash"></a>rebase.autoStash </dt>
 <dd>
 <p>When set to true, automatically create a temporary stash entry
 before the operation begins, and apply it after the operation
@@ -1915,11 +1915,11 @@ This option can be overridden by the <code>--no-autostash</code> and
 <code>--autostash</code> options of <a href='{{< relurl "docs/git-rebase" >}}'>git-rebase[1]</a>.
 Defaults to false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseupdateRefs"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaseupdateRefs"></a>rebase.updateRefs </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseupdateRefs"><a class="anchor" href="#Documentation/git-rebase.txt-rebaseupdateRefs"></a>rebase.updateRefs </dt>
 <dd>
 <p>If set to true enable <code>--update-refs</code> option by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebasemissingCommitsCheck"> <a class="anchor" href="#Documentation/git-rebase.txt-rebasemissingCommitsCheck"></a>rebase.missingCommitsCheck </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebasemissingCommitsCheck"><a class="anchor" href="#Documentation/git-rebase.txt-rebasemissingCommitsCheck"></a>rebase.missingCommitsCheck </dt>
 <dd>
 <p>If set to "warn", git rebase -i will print a warning if some
 commits are removed (e.g. a line was deleted), however the
@@ -1931,13 +1931,13 @@ To drop a commit without warning or error, use the <code>drop</code>
 command in the todo list.
 Defaults to "ignore".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseinstructionFormat"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaseinstructionFormat"></a>rebase.instructionFormat </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseinstructionFormat"><a class="anchor" href="#Documentation/git-rebase.txt-rebaseinstructionFormat"></a>rebase.instructionFormat </dt>
 <dd>
 <p>A format string, as specified in <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>, to be used for the
 todo list during an interactive rebase.  The format will
 automatically have the long commit hash prepended to the format.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseabbreviateCommands"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaseabbreviateCommands"></a>rebase.abbreviateCommands </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseabbreviateCommands"><a class="anchor" href="#Documentation/git-rebase.txt-rebaseabbreviateCommands"></a>rebase.abbreviateCommands </dt>
 <dd>
 <p>If set to true, <code>git rebase</code> will use abbreviated command names in the
 todo list resulting in something like this:</p>
@@ -1962,17 +1962,17 @@ todo list resulting in something like this:</p>
 <p>Defaults to false.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaserescheduleFailedExec"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaserescheduleFailedExec"></a>rebase.rescheduleFailedExec </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaserescheduleFailedExec"><a class="anchor" href="#Documentation/git-rebase.txt-rebaserescheduleFailedExec"></a>rebase.rescheduleFailedExec </dt>
 <dd>
 <p>Automatically reschedule <code>exec</code> commands that failed. This only makes
 sense in interactive mode (or when an <code>--exec</code> option was provided).
 This is the same as specifying the <code>--reschedule-failed-exec</code> option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseforkPoint"> <a class="anchor" href="#Documentation/git-rebase.txt-rebaseforkPoint"></a>rebase.forkPoint </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-rebaseforkPoint"><a class="anchor" href="#Documentation/git-rebase.txt-rebaseforkPoint"></a>rebase.forkPoint </dt>
 <dd>
 <p>If set to false set <code>--no-fork-point</code> option by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-rebase.txt-sequenceeditor"> <a class="anchor" href="#Documentation/git-rebase.txt-sequenceeditor"></a>sequence.editor </dt>
+<dt class="hdlist1" id="Documentation/git-rebase.txt-sequenceeditor"><a class="anchor" href="#Documentation/git-rebase.txt-sequenceeditor"></a>sequence.editor </dt>
 <dd>
 <p>Text editor used by <code>git rebase -i</code> for editing the rebase instruction file.
 The value is meant to be interpreted by the shell when it is used.

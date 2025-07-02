@@ -55,25 +55,25 @@ host language allowing their direct evaluation in that language.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltpatterngt82308203"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-pattern"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ltpatterngt82308203"></a>&lt;pattern&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltpatterngt82308203"><a id="Documentation/git-for-each-ref.txt-pattern" class="anchor" href="#Documentation/git-for-each-ref.txt-pattern"></a>&lt;pattern&gt;&#8230;&#8203; </dt>
 <dd>
 <p>If one or more patterns are given, only refs are shown that
 match against at least one pattern, either using fnmatch(3) or
 literally, in the latter case matching completely or from the
 beginning up to a slash.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---stdin"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---stdin"></a>--stdin </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---stdin"><a class="anchor" href="#Documentation/git-for-each-ref.txt---stdin"></a>--stdin </dt>
 <dd>
 <p>If <code>--stdin</code> is supplied, then the list of patterns is read from
 standard input instead of from the argument list.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---countltcountgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---countcount"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---countltcountgt"></a>--count=&lt;count&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---countltcountgt"><a id="Documentation/git-for-each-ref.txt---countcount" class="anchor" href="#Documentation/git-for-each-ref.txt---countcount"></a>--count=&lt;count&gt; </dt>
 <dd>
 <p>By default the command shows all refs that match
 <code>&lt;pattern&gt;</code>.  This option makes it stop after showing
 that many refs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---sortltkeygt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---sortkey"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---sortltkeygt"></a>--sort=&lt;key&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---sortltkeygt"><a id="Documentation/git-for-each-ref.txt---sortkey" class="anchor" href="#Documentation/git-for-each-ref.txt---sortkey"></a>--sort=&lt;key&gt; </dt>
 <dd>
 <p>A field name to sort on.  Prefix <code>-</code> to sort in
 descending order of the value.  When unspecified,
@@ -81,7 +81,7 @@ descending order of the value.  When unspecified,
 multiple times, in which case the last key becomes the primary
 key.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---formatltformatgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---formatformat"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---formatltformatgt"></a>--format=&lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---formatltformatgt"><a id="Documentation/git-for-each-ref.txt---formatformat" class="anchor" href="#Documentation/git-for-each-ref.txt---formatformat"></a>--format=&lt;format&gt; </dt>
 <dd>
 <p>A string that interpolates <code>%(fieldname)</code> from a ref being shown and
 the object it points at. In addition, the string literal <code>%%</code>
@@ -93,62 +93,62 @@ the character with hex code <code>xx</code>. For example, <code>%00</code> inter
 TAB %(refname)</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---colorltwhengt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---colorwhen"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---colorltwhengt"></a>--color[=&lt;when&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---colorltwhengt"><a id="Documentation/git-for-each-ref.txt---colorwhen" class="anchor" href="#Documentation/git-for-each-ref.txt---colorwhen"></a>--color[=&lt;when&gt;] </dt>
 <dd>
 <p>Respect any colors specified in the <code>--format</code> option. The
 <code>&lt;when&gt;</code> field must be one of <code>always</code>, <code>never</code>, or <code>auto</code> (if
 <code>&lt;when&gt;</code> is absent, behave as if <code>always</code> was given).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---shell"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---shell"></a>--shell </dt>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---perl"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---perl"></a>--perl </dt>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---python"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---python"></a>--python </dt>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---tcl"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---tcl"></a>--tcl </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---shell"><a class="anchor" href="#Documentation/git-for-each-ref.txt---shell"></a>--shell </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---perl"><a class="anchor" href="#Documentation/git-for-each-ref.txt---perl"></a>--perl </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---python"><a class="anchor" href="#Documentation/git-for-each-ref.txt---python"></a>--python </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---tcl"><a class="anchor" href="#Documentation/git-for-each-ref.txt---tcl"></a>--tcl </dt>
 <dd>
 <p>If given, strings that substitute <code>%(fieldname)</code>
 placeholders are quoted as string literals suitable for
 the specified host language.  This is meant to produce
 a scriptlet that can directly be `eval`ed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---points-atltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---points-atobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---points-atltobjectgt"></a>--points-at=&lt;object&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---points-atltobjectgt"><a id="Documentation/git-for-each-ref.txt---points-atobject" class="anchor" href="#Documentation/git-for-each-ref.txt---points-atobject"></a>--points-at=&lt;object&gt; </dt>
 <dd>
 <p>Only list refs which points at the given object.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---mergedltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---mergedobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---mergedltobjectgt"></a>--merged[=&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---mergedltobjectgt"><a id="Documentation/git-for-each-ref.txt---mergedobject" class="anchor" href="#Documentation/git-for-each-ref.txt---mergedobject"></a>--merged[=&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs whose tips are reachable from the
 specified commit (HEAD if not specified).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---no-mergedltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---no-mergedobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---no-mergedltobjectgt"></a>--no-merged[=&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---no-mergedltobjectgt"><a id="Documentation/git-for-each-ref.txt---no-mergedobject" class="anchor" href="#Documentation/git-for-each-ref.txt---no-mergedobject"></a>--no-merged[=&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs whose tips are not reachable from the
 specified commit (HEAD if not specified).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---containsltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---containsobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---containsltobjectgt"></a>--contains[=&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---containsltobjectgt"><a id="Documentation/git-for-each-ref.txt---containsobject" class="anchor" href="#Documentation/git-for-each-ref.txt---containsobject"></a>--contains[=&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs which contain the specified commit (HEAD if not
 specified).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---no-containsltobjectgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---no-containsobject"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---no-containsltobjectgt"></a>--no-contains[=&lt;object&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---no-containsltobjectgt"><a id="Documentation/git-for-each-ref.txt---no-containsobject" class="anchor" href="#Documentation/git-for-each-ref.txt---no-containsobject"></a>--no-contains[=&lt;object&gt;] </dt>
 <dd>
 <p>Only list refs which don&#8217;t contain the specified commit (HEAD
 if not specified).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---ignore-case"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---ignore-case"></a>--ignore-case </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---ignore-case"><a class="anchor" href="#Documentation/git-for-each-ref.txt---ignore-case"></a>--ignore-case </dt>
 <dd>
 <p>Sorting and filtering refs are case insensitive.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---omit-empty"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---omit-empty"></a>--omit-empty </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---omit-empty"><a class="anchor" href="#Documentation/git-for-each-ref.txt---omit-empty"></a>--omit-empty </dt>
 <dd>
 <p>Do not print a newline after formatted refs where the format expands
 to the empty string.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---excludeltpatterngt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---excludepattern"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt---excludeltpatterngt"></a>--exclude=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---excludeltpatterngt"><a id="Documentation/git-for-each-ref.txt---excludepattern" class="anchor" href="#Documentation/git-for-each-ref.txt---excludepattern"></a>--exclude=&lt;pattern&gt; </dt>
 <dd>
 <p>If one or more patterns are given, only refs which do not match
 any excluded pattern(s) are shown. Matching is done using the
 same rules as <code>&lt;pattern&gt;</code> above.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---include-root-refs"> <a class="anchor" href="#Documentation/git-for-each-ref.txt---include-root-refs"></a>--include-root-refs </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt---include-root-refs"><a class="anchor" href="#Documentation/git-for-each-ref.txt---include-root-refs"></a>--include-root-refs </dt>
 <dd>
 <p>List root refs (HEAD and pseudorefs) apart from regular refs.</p>
 </dd>
@@ -169,7 +169,7 @@ keys.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-refname"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-refname"></a>refname </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-refname"><a class="anchor" href="#Documentation/git-for-each-ref.txt-refname"></a>refname </dt>
 <dd>
 <p>The name of the ref (the part after $GIT_DIR/).
 For a non-ambiguous short name of the ref append <code>:short</code>.
@@ -190,17 +190,17 @@ stripping with negative &lt;N&gt;.  Neither is an error.</p>
 <p><code>strip</code> can be used as a synonym to <code>lstrip</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objecttype"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-objecttype"></a>objecttype </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objecttype"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objecttype"></a>objecttype </dt>
 <dd>
 <p>The type of the object (<code>blob</code>, <code>tree</code>, <code>commit</code>, <code>tag</code>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectsize"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-objectsize"></a>objectsize </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectsize"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objectsize"></a>objectsize </dt>
 <dd>
 <p>The size of the object (the same as <em>git cat-file -s</em> reports).
 Append <code>:disk</code> to get the size, in bytes, that the object takes up on
 disk. See the note about on-disk sizes in the <code>CAVEATS</code> section below.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectname"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-objectname"></a>objectname </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectname"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objectname"></a>objectname </dt>
 <dd>
 <p>The object name (aka SHA-1).
 For a non-ambiguous abbreviation of the object name append <code>:short</code>.
@@ -208,13 +208,13 @@ For an abbreviation of the object name with desired length append
 <code>:short=&lt;length&gt;</code>, where the minimum length is MINIMUM_ABBREV. The
 length may be exceeded to ensure unique object names.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-deltabase"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-deltabase"></a>deltabase </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-deltabase"><a class="anchor" href="#Documentation/git-for-each-ref.txt-deltabase"></a>deltabase </dt>
 <dd>
 <p>This expands to the object name of the delta base for the
 given object, if it is stored as a delta.  Otherwise it
 expands to the null object name (all zeroes).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-upstream"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-upstream"></a>upstream </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-upstream"><a class="anchor" href="#Documentation/git-for-each-ref.txt-upstream"></a>upstream </dt>
 <dd>
 <p>The name of a local ref which can be considered &#8220;upstream&#8221;
 from the displayed ref. Respects <code>:short</code>, <code>:lstrip</code> and
@@ -239,7 +239,7 @@ with it.  All the options apart from <code>nobracket</code> are mutually exclusi
 but if used together the last option is selected.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-push"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-push"></a>push </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-push"><a class="anchor" href="#Documentation/git-for-each-ref.txt-push"></a>push </dt>
 <dd>
 <p>The name of a local ref which represents the <code>@{push}</code>
 location for the displayed ref. Respects <code>:short</code>, <code>:lstrip</code>,
@@ -247,19 +247,19 @@ location for the displayed ref. Respects <code>:short</code>, <code>:lstrip</cod
 options as <code>upstream</code> does. Produces an empty string if no <code>@{push}</code>
 ref is configured.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-HEAD"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-HEAD"></a>HEAD </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-HEAD"><a class="anchor" href="#Documentation/git-for-each-ref.txt-HEAD"></a>HEAD </dt>
 <dd>
 <p><em>*</em> if HEAD matches current ref (the checked out branch), ' '
 otherwise.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-color"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-color"></a>color </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-color"><a class="anchor" href="#Documentation/git-for-each-ref.txt-color"></a>color </dt>
 <dd>
 <p>Change output color. Followed by <code>:&lt;colorname&gt;</code>, where color
 names are described under Values in the "CONFIGURATION FILE"
 section of <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.  For example,
 <code>%(color:bold red)</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-align"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-align"></a>align </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-align"><a class="anchor" href="#Documentation/git-for-each-ref.txt-align"></a>align </dt>
 <dd>
 <p>Left-, middle-, or right-align the content between
 %(align:&#8230;&#8203;) and %(end). The "align:" is followed by
@@ -275,7 +275,7 @@ than the width then no alignment is performed. If used with
 quoted, but if nested then only the topmost level performs
 quoting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-if"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-if"></a>if </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-if"><a class="anchor" href="#Documentation/git-for-each-ref.txt-if"></a>if </dt>
 <dd>
 <p>Used as %(if)&#8230;&#8203;%(then)&#8230;&#8203;%(end) or
 %(if)&#8230;&#8203;%(then)&#8230;&#8203;%(else)&#8230;&#8203;%(end).  If there is an atom with
@@ -289,18 +289,18 @@ Append ":equals=&lt;string&gt;" or ":notequals=&lt;string&gt;" to compare
 the value between the %(if:&#8230;&#8203;) and %(then) atoms with the
 given string.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-symref"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-symref"></a>symref </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-symref"><a class="anchor" href="#Documentation/git-for-each-ref.txt-symref"></a>symref </dt>
 <dd>
 <p>The ref which the given symbolic ref refers to. If not a
 symbolic ref, nothing is printed. Respects the <code>:short</code>,
 <code>:lstrip</code> and <code>:rstrip</code> options in the same way as <code>refname</code>
 above.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signature"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signature"></a>signature </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signature"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signature"></a>signature </dt>
 <dd>
 <p>The GPG signature of a commit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturegrade"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturegrade"></a>signature:grade </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturegrade"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturegrade"></a>signature:grade </dt>
 <dd>
 <p>Show "G" for a good (valid) signature, "B" for a bad
 signature, "U" for a good signature with unknown validity, "X"
@@ -309,40 +309,40 @@ signature made by an expired key, "R" for a good signature
 made by a revoked key, "E" if the signature cannot be
 checked (e.g. missing key) and "N" for no signature.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturesigner"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturesigner"></a>signature:signer </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturesigner"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturesigner"></a>signature:signer </dt>
 <dd>
 <p>The signer of the GPG signature of a commit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturekey"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturekey"></a>signature:key </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturekey"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturekey"></a>signature:key </dt>
 <dd>
 <p>The key of the GPG signature of a commit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturefingerprint"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturefingerprint"></a>signature:fingerprint </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturefingerprint"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturefingerprint"></a>signature:fingerprint </dt>
 <dd>
 <p>The fingerprint of the GPG signature of a commit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signatureprimarykeyfingerprint"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signatureprimarykeyfingerprint"></a>signature:primarykeyfingerprint </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signatureprimarykeyfingerprint"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signatureprimarykeyfingerprint"></a>signature:primarykeyfingerprint </dt>
 <dd>
 <p>The primary key fingerprint of the GPG signature of a commit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturetrustlevel"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturetrustlevel"></a>signature:trustlevel </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-signaturetrustlevel"><a class="anchor" href="#Documentation/git-for-each-ref.txt-signaturetrustlevel"></a>signature:trustlevel </dt>
 <dd>
 <p>The trust level of the GPG signature of a commit. Possible
 outputs are <code>ultimate</code>, <code>fully</code>, <code>marginal</code>, <code>never</code> and <code>undefined</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-worktreepath"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-worktreepath"></a>worktreepath </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-worktreepath"><a class="anchor" href="#Documentation/git-for-each-ref.txt-worktreepath"></a>worktreepath </dt>
 <dd>
 <p>The absolute path to the worktree in which the ref is checked
 out, if it is checked out in any linked worktree. Empty string
 otherwise.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ahead-behindltcommittishgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ahead-behindcommittish"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-ahead-behindltcommittishgt"></a>ahead-behind:&lt;committish&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ahead-behindltcommittishgt"><a id="Documentation/git-for-each-ref.txt-ahead-behindcommittish" class="anchor" href="#Documentation/git-for-each-ref.txt-ahead-behindcommittish"></a>ahead-behind:&lt;committish&gt; </dt>
 <dd>
 <p>Two integers, separated by a space, demonstrating the number of
 commits ahead and behind, respectively, when comparing the output
 ref to the <code>&lt;committish&gt;</code> specified in the format.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-is-baseltcommittishgt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-is-basecommittish"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-is-baseltcommittishgt"></a>is-base:&lt;committish&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-is-baseltcommittishgt"><a id="Documentation/git-for-each-ref.txt-is-basecommittish" class="anchor" href="#Documentation/git-for-each-ref.txt-is-basecommittish"></a>is-base:&lt;committish&gt; </dt>
 <dd>
 <p>In at most one row, <code>(&lt;committish&gt;)</code> will appear to indicate the ref
 that is most likely the ref used as a starting point for the branch
@@ -391,7 +391,7 @@ earliest ref in the sorted order.</p>
 filtered refs.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-describeoptions"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-describeoptions"></a>describe[:options] </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-describeoptions"><a class="anchor" href="#Documentation/git-for-each-ref.txt-describeoptions"></a>describe[:options] </dt>
 <dd>
 <p>A human-readable name, like <a href='{{< relurl "docs/git-describe" >}}'>git-describe[1]</a>;
 empty string for undescribable commits. The <code>describe</code> string may
@@ -400,24 +400,24 @@ be followed by a colon and one or more comma-separated options.</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-tagsltbool-valuegt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-tagsbool-value"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-tagsltbool-valuegt"></a>tags=&lt;bool-value&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-tagsltbool-valuegt"><a id="Documentation/git-for-each-ref.txt-tagsbool-value" class="anchor" href="#Documentation/git-for-each-ref.txt-tagsbool-value"></a>tags=&lt;bool-value&gt; </dt>
 <dd>
 <p>Instead of only considering annotated tags, consider
 lightweight tags as well; see the corresponding option in
 <a href='{{< relurl "docs/git-describe" >}}'>git-describe[1]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-abbrevltnumbergt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-abbrevnumber"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-abbrevltnumbergt"></a>abbrev=&lt;number&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-abbrevltnumbergt"><a id="Documentation/git-for-each-ref.txt-abbrevnumber" class="anchor" href="#Documentation/git-for-each-ref.txt-abbrevnumber"></a>abbrev=&lt;number&gt; </dt>
 <dd>
 <p>Use at least &lt;number&gt; hexadecimal digits; see the corresponding
 option in <a href='{{< relurl "docs/git-describe" >}}'>git-describe[1]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-matchltpatterngt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-matchpattern"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-matchltpatterngt"></a>match=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-matchltpatterngt"><a id="Documentation/git-for-each-ref.txt-matchpattern" class="anchor" href="#Documentation/git-for-each-ref.txt-matchpattern"></a>match=&lt;pattern&gt; </dt>
 <dd>
 <p>Only consider tags matching the given <code>glob(7)</code> pattern,
 excluding the "refs/tags/" prefix; see the corresponding option
 in <a href='{{< relurl "docs/git-describe" >}}'>git-describe[1]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-excludeltpatterngt"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-excludepattern"></a> <a class="anchor" href="#Documentation/git-for-each-ref.txt-excludeltpatterngt"></a>exclude=&lt;pattern&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-excludeltpatterngt"><a id="Documentation/git-for-each-ref.txt-excludepattern" class="anchor" href="#Documentation/git-for-each-ref.txt-excludepattern"></a>exclude=&lt;pattern&gt; </dt>
 <dd>
 <p>Do not consider tags matching the given <code>glob(7)</code> pattern,
 excluding the "refs/tags/" prefix; see the corresponding option
@@ -465,7 +465,7 @@ variable (see <a href='{{< relurl "docs/gitmailmap" >}}'>gitmailmap[5]</a>).</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-rawsize"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-rawsize"></a>raw:size </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-rawsize"><a class="anchor" href="#Documentation/git-for-each-ref.txt-rawsize"></a>raw:size </dt>
 <dd>
 <p>The raw data size of the object.</p>
 </dd>
@@ -482,11 +482,11 @@ variable type.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentssize"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-contentssize"></a>contents:size </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentssize"><a class="anchor" href="#Documentation/git-for-each-ref.txt-contentssize"></a>contents:size </dt>
 <dd>
 <p>The size in bytes of the commit or tag message.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentssubject"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-contentssubject"></a>contents:subject </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentssubject"><a class="anchor" href="#Documentation/git-for-each-ref.txt-contentssubject"></a>contents:subject </dt>
 <dd>
 <p>The first paragraph of the message, which typically is a
 single line, is taken as the "subject" of the commit or the
@@ -495,16 +495,16 @@ Instead of <code>contents:subject</code>, field <code>subject</code> can also be
 obtain same results. <code>:sanitize</code> can be appended to <code>subject</code> for
 subject line suitable for filename.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentsbody"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-contentsbody"></a>contents:body </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentsbody"><a class="anchor" href="#Documentation/git-for-each-ref.txt-contentsbody"></a>contents:body </dt>
 <dd>
 <p>The remainder of the commit or the tag message that follows
 the "subject".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentssignature"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-contentssignature"></a>contents:signature </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentssignature"><a class="anchor" href="#Documentation/git-for-each-ref.txt-contentssignature"></a>contents:signature </dt>
 <dd>
 <p>The optional GPG signature of the tag.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentslinesN"> <a class="anchor" href="#Documentation/git-for-each-ref.txt-contentslinesN"></a>contents:lines=N </dt>
+<dt class="hdlist1" id="Documentation/git-for-each-ref.txt-contentslinesN"><a class="anchor" href="#Documentation/git-for-each-ref.txt-contentslinesN"></a>contents:lines=N </dt>
 <dd>
 <p>The first <code>N</code> lines of the message.</p>
 </dd>

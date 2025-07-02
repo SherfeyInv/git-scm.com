@@ -137,15 +137,15 @@ reported by passing <code>errno</code> to one of the following helper functions:
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-unabletolockmessage"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-unabletolockmessage"></a>unable_to_lock_message </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-unabletolockmessage"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-unabletolockmessage"></a>unable_to_lock_message </dt>
 <dd>
 <p>Append an appropriate error message to a <code>strbuf</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-unabletolockerror"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-unabletolockerror"></a>unable_to_lock_error </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-unabletolockerror"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-unabletolockerror"></a>unable_to_lock_error </dt>
 <dd>
 <p>Emit an appropriate error message using <code>error()</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-unabletolockdie"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-unabletolockdie"></a>unable_to_lock_die </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-unabletolockdie"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-unabletolockdie"></a>unable_to_lock_die </dt>
 <dd>
 <p>Emit an appropriate error message and <code>die()</code>.</p>
 </dd>
@@ -167,7 +167,7 @@ appropriately, do their best to roll back the lockfile, and return -1.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-LOCKNODEREF"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-LOCKNODEREF"></a>LOCK_NO_DEREF </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-LOCKNODEREF"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-LOCKNODEREF"></a>LOCK_NO_DEREF </dt>
 <dd>
 <p>Usually symbolic links in the destination path are resolved
 and the lockfile is created by adding ".lock" to the resolved
@@ -177,7 +177,7 @@ used, for example, when locking a symbolic reference, which
 for backwards-compatibility reasons can be a symbolic link
 containing the name of the referred-to-reference.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-LOCKDIEONERROR"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-LOCKDIEONERROR"></a>LOCK_DIE_ON_ERROR </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-LOCKDIEONERROR"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-LOCKDIEONERROR"></a>LOCK_DIE_ON_ERROR </dt>
 <dd>
 <p>If a lock is already taken for the file, <code>die()</code> with an error
 message. If this option is not specified, trying to lock a
@@ -192,32 +192,32 @@ file that is already locked returns -1 to the caller.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-holdlockfileforupdate"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-holdlockfileforupdate"></a>hold_lock_file_for_update </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-holdlockfileforupdate"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-holdlockfileforupdate"></a>hold_lock_file_for_update </dt>
 <dd>
 <p>Take a pointer to <code>struct lock_file</code>, the path of the file to
 be locked (e.g. <code>$GIT_DIR/index</code>) and a flags argument (see
 above). Attempt to create a lockfile for the destination and
 return the file descriptor for writing to the file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-holdlockfileforappend"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-holdlockfileforappend"></a>hold_lock_file_for_append </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-holdlockfileforappend"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-holdlockfileforappend"></a>hold_lock_file_for_append </dt>
 <dd>
 <p>Like <code>hold_lock_file_for_update</code>, but before returning copy
 the existing contents of the file (if any) to the lockfile and
 position its write pointer at the end of the file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-fdopenlockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-fdopenlockfile"></a>fdopen_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-fdopenlockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-fdopenlockfile"></a>fdopen_lock_file </dt>
 <dd>
 <p>Associate a stdio stream with the lockfile. Return NULL
 (<strong>without</strong> rolling back the lockfile) on error. The stream is
 closed automatically when <code>close_lock_file</code> is called or when
 the file is committed or rolled back.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-getlockedfilepath"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-getlockedfilepath"></a>get_locked_file_path </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-getlockedfilepath"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-getlockedfilepath"></a>get_locked_file_path </dt>
 <dd>
 <p>Return the path of the file that is locked by the specified
 lock_file object. The caller must free the memory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-commitlockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-commitlockfile"></a>commit_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-commitlockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-commitlockfile"></a>commit_lock_file </dt>
 <dd>
 <p>Take a pointer to the <code>struct lock_file</code> initialized with an
 earlier call to <code>hold_lock_file_for_update</code> or
@@ -229,13 +229,13 @@ with <code>errno</code> set to the value from the failing call to
 <code>commit_lock_file</code> for a <code>lock_file</code> object that is not
 currently locked.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-commitlockfileto"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-commitlockfileto"></a>commit_lock_file_to </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-commitlockfileto"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-commitlockfileto"></a>commit_lock_file_to </dt>
 <dd>
 <p>Like <code>commit_lock_file()</code>, except that it takes an explicit
 <code>path</code> argument to which the lockfile should be renamed. The
 <code>path</code> must be on the same filesystem as the lock file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-rollbacklockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-rollbacklockfile"></a>rollback_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-rollbacklockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-rollbacklockfile"></a>rollback_lock_file </dt>
 <dd>
 <p>Take a pointer to the <code>struct lock_file</code> initialized with an
 earlier call to <code>hold_lock_file_for_update</code> or
@@ -244,7 +244,7 @@ remove the lockfile. It is a NOOP to call
 <code>rollback_lock_file()</code> for a <code>lock_file</code> object that has
 already been committed or rolled back.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-closelockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-closelockfile"></a>close_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-closelockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-closelockfile"></a>close_lock_file </dt>
 <dd>
 <p>Take a pointer to the <code>struct lock_file</code> initialized with an
 earlier call to <code>hold_lock_file_for_update</code> or
@@ -256,7 +256,7 @@ file. Usually <code>commit_lock_file</code>, <code>commit_lock_file_to</code>, o
 <code>rollback_lock_file</code> should eventually be called if
 <code>close_lock_file</code> succeeds.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-reopenlockfile"> <a class="anchor" href="#Documentation/technical/api-lockfile.txt-reopenlockfile"></a>reopen_lock_file </dt>
+<dt class="hdlist1" id="Documentation/technical/api-lockfile.txt-reopenlockfile"><a class="anchor" href="#Documentation/technical/api-lockfile.txt-reopenlockfile"></a>reopen_lock_file </dt>
 <dd>
 <p>Re-open a lockfile that has been closed (using
 <code>close_lock_file</code>) but not yet committed or rolled back. This

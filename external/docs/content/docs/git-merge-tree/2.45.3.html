@@ -80,14 +80,14 @@ merge base, creating a virtual merge base by merging the merge bases)</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt--z"> <a class="anchor" href="#Documentation/git-merge-tree.txt--z"></a>-z </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt--z"><a class="anchor" href="#Documentation/git-merge-tree.txt--z"></a>-z </dt>
 <dd>
 <p>Do not quote filenames in the &lt;Conflicted file info&gt; section,
 and end each filename with a NUL character rather than
 newline.  Also begin the messages section with a NUL character
 instead of a newline.  See <a href="#OUTPUT">OUTPUT</a> below for more information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---name-only"> <a class="anchor" href="#Documentation/git-merge-tree.txt---name-only"></a>--name-only </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---name-only"><a class="anchor" href="#Documentation/git-merge-tree.txt---name-only"></a>--name-only </dt>
 <dd>
 <p>In the Conflicted file info section, instead of writing a list
 of (mode, oid, stage, path) tuples to output for conflicted
@@ -95,20 +95,20 @@ files, just provide a list of filenames with conflicts (and
 do not list filenames multiple times if they have multiple
 conflicting stages).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---no-messages"> <a class="anchor" href="#Documentation/git-merge-tree.txt---no-messages"></a>--[no-]messages </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---no-messages"><a class="anchor" href="#Documentation/git-merge-tree.txt---no-messages"></a>--[no-]messages </dt>
 <dd>
 <p>Write any informational messages such as "Auto-merging &lt;path&gt;"
 or CONFLICT notices to the end of stdout.  If unspecified, the
 default is to include these messages if there are merge
 conflicts, and to omit them otherwise.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---allow-unrelated-histories"> <a class="anchor" href="#Documentation/git-merge-tree.txt---allow-unrelated-histories"></a>--allow-unrelated-histories </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---allow-unrelated-histories"><a class="anchor" href="#Documentation/git-merge-tree.txt---allow-unrelated-histories"></a>--allow-unrelated-histories </dt>
 <dd>
 <p>merge-tree will by default error out if the two branches specified
 share no common history.  This flag can be given to override that
 check and make the merge proceed anyway.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---merge-baselttree-ishgt"> <a class="anchor" href="#Documentation/git-merge-tree.txt---merge-basetree-ish"></a> <a class="anchor" href="#Documentation/git-merge-tree.txt---merge-baselttree-ishgt"></a>--merge-base=&lt;tree-ish&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---merge-baselttree-ishgt"><a id="Documentation/git-merge-tree.txt---merge-basetree-ish" class="anchor" href="#Documentation/git-merge-tree.txt---merge-basetree-ish"></a>--merge-base=&lt;tree-ish&gt; </dt>
 <dd>
 <p>Instead of finding the merge-bases for &lt;branch1&gt; and &lt;branch2&gt;,
 specify a merge-base for the merge, and specifying multiple bases is
@@ -118,8 +118,8 @@ currently not supported. This option is incompatible with <code>--stdin</code>.<
 to specify commits; trees are enough.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt--Xltoptiongt"> <a class="anchor" href="#Documentation/git-merge-tree.txt--Xoption"></a> <a class="anchor" href="#Documentation/git-merge-tree.txt--Xltoptiongt"></a>-X&lt;option&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-merge-tree.txt---strategy-optionltoptiongt"> <a class="anchor" href="#Documentation/git-merge-tree.txt---strategy-optionoption"></a> <a class="anchor" href="#Documentation/git-merge-tree.txt---strategy-optionltoptiongt"></a>--strategy-option=&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt--Xltoptiongt"><a id="Documentation/git-merge-tree.txt--Xoption" class="anchor" href="#Documentation/git-merge-tree.txt--Xoption"></a>-X&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-merge-tree.txt---strategy-optionltoptiongt"><a id="Documentation/git-merge-tree.txt---strategy-optionoption" class="anchor" href="#Documentation/git-merge-tree.txt---strategy-optionoption"></a>--strategy-option=&lt;option&gt; </dt>
 <dd>
 <p>Pass the merge strategy-specific option through to the merge strategy.
 See <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> for details.</p>

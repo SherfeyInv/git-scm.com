@@ -61,13 +61,13 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt---object-dirltdirgt"> <a class="anchor" href="#Documentation/git-multi-pack-index.txt---object-dirdir"></a> <a class="anchor" href="#Documentation/git-multi-pack-index.txt---object-dirltdirgt"></a>--object-dir=&lt;dir&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt---object-dirltdirgt"><a id="Documentation/git-multi-pack-index.txt---object-dirdir" class="anchor" href="#Documentation/git-multi-pack-index.txt---object-dirdir"></a>--object-dir=&lt;dir&gt; </dt>
 <dd>
 <p>Use given directory for the location of Git objects. We check
 <code>&lt;dir&gt;/packs/multi-pack-index</code> for the current MIDX file, and
 <code>&lt;dir&gt;/packs</code> for the pack-files to index.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt---no-progress"> <a class="anchor" href="#Documentation/git-multi-pack-index.txt---no-progress"></a>--[no-]progress </dt>
+<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt---no-progress"><a class="anchor" href="#Documentation/git-multi-pack-index.txt---no-progress"></a>--[no-]progress </dt>
 <dd>
 <p>Turn progress on/off explicitly. If neither is specified, progress is
 shown if standard error is connected to a terminal.</p>
@@ -79,21 +79,21 @@ shown if standard error is connected to a terminal.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-write"> <a class="anchor" href="#Documentation/git-multi-pack-index.txt-write"></a>write </dt>
+<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-write"><a class="anchor" href="#Documentation/git-multi-pack-index.txt-write"></a>write </dt>
 <dd>
 <p>Write a new MIDX file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-verify"> <a class="anchor" href="#Documentation/git-multi-pack-index.txt-verify"></a>verify </dt>
+<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-verify"><a class="anchor" href="#Documentation/git-multi-pack-index.txt-verify"></a>verify </dt>
 <dd>
 <p>Verify the contents of the MIDX file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-expire"> <a class="anchor" href="#Documentation/git-multi-pack-index.txt-expire"></a>expire </dt>
+<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-expire"><a class="anchor" href="#Documentation/git-multi-pack-index.txt-expire"></a>expire </dt>
 <dd>
 <p>Delete the pack-files that are tracked 	by the MIDX file, but
 have no objects referenced by the MIDX. Rewrite the MIDX file
 afterward to remove all references to these pack-files.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-repack"> <a class="anchor" href="#Documentation/git-multi-pack-index.txt-repack"></a>repack </dt>
+<dt class="hdlist1" id="Documentation/git-multi-pack-index.txt-repack"><a class="anchor" href="#Documentation/git-multi-pack-index.txt-repack"></a>repack </dt>
 <dd>
 <p>Create a new pack-file containing objects in small pack-files
 referenced by the multi-pack-index. If the size given by the

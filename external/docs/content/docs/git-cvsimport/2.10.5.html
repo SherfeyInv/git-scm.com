@@ -190,11 +190,11 @@ See <a href='{{< relurl "docs/gitcvs-migration" >}}'>gitcvs-migration[7]</a>.</p
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--v"> <a class="anchor" href="#Documentation/git-cvsimport.txt--v"></a>-v </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--v"><a class="anchor" href="#Documentation/git-cvsimport.txt--v"></a>-v </dt>
 <dd>
 <p>Verbosity: let <em>cvsimport</em> report what it is doing.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--dltCVSROOTgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--dCVSROOT"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--dltCVSROOTgt"></a>-d &lt;CVSROOT&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--dltCVSROOTgt"><a id="Documentation/git-cvsimport.txt--dCVSROOT" class="anchor" href="#Documentation/git-cvsimport.txt--dCVSROOT"></a>-d &lt;CVSROOT&gt; </dt>
 <dd>
 <p>The root of the CVS archive. May be local (a simple path) or remote;
 currently, only the :local:, :ext: and :pserver: access methods
@@ -202,24 +202,24 @@ are supported. If not given, <em>git cvsimport</em> will try to read it
 from <code>CVS/Root</code>. If no such file exists, it checks for the
 <code>CVSROOT</code> environment variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt-ltCVSmodulegt"> <a class="anchor" href="#Documentation/git-cvsimport.txt-CVSmodule"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt-ltCVSmodulegt"></a>&lt;CVS_module&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt-ltCVSmodulegt"><a id="Documentation/git-cvsimport.txt-CVSmodule" class="anchor" href="#Documentation/git-cvsimport.txt-CVSmodule"></a>&lt;CVS_module&gt; </dt>
 <dd>
 <p>The CVS module you want to import. Relative to &lt;CVSROOT&gt;.
 If not given, <em>git cvsimport</em> tries to read it from
 <code>CVS/Repository</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Clttarget-dirgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--Ctarget-dir"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--Clttarget-dirgt"></a>-C &lt;target-dir&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Clttarget-dirgt"><a id="Documentation/git-cvsimport.txt--Ctarget-dir" class="anchor" href="#Documentation/git-cvsimport.txt--Ctarget-dir"></a>-C &lt;target-dir&gt; </dt>
 <dd>
 <p>The Git repository to import to.  If the directory doesn&#8217;t
        exist, it will be created.  Default is the current directory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--rltremotegt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--rremote"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--rltremotegt"></a>-r &lt;remote&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--rltremotegt"><a id="Documentation/git-cvsimport.txt--rremote" class="anchor" href="#Documentation/git-cvsimport.txt--rremote"></a>-r &lt;remote&gt; </dt>
 <dd>
 <p>The Git remote to import this CVS repository into.
 Moves all CVS branches into remotes/&lt;remote&gt;/&lt;branch&gt;
 akin to the way <em>git clone</em> uses <em>origin</em> by default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--oltbranch-for-HEADgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--obranch-for-HEAD"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--oltbranch-for-HEADgt"></a>-o &lt;branch-for-HEAD&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--oltbranch-for-HEADgt"><a id="Documentation/git-cvsimport.txt--obranch-for-HEAD" class="anchor" href="#Documentation/git-cvsimport.txt--obranch-for-HEAD"></a>-o &lt;branch-for-HEAD&gt; </dt>
 <dd>
 <p>When no remote is specified (via -r) the <code>HEAD</code> branch
 from CVS is imported to the <em>origin</em> branch within the Git
@@ -233,27 +233,27 @@ branch.</p>
 the old cvs2git tool.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--i"> <a class="anchor" href="#Documentation/git-cvsimport.txt--i"></a>-i </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--i"><a class="anchor" href="#Documentation/git-cvsimport.txt--i"></a>-i </dt>
 <dd>
 <p>Import-only: don&#8217;t perform a checkout after importing.  This option
 ensures the working directory and index remain untouched and will
 not create them if they do not exist.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--k"> <a class="anchor" href="#Documentation/git-cvsimport.txt--k"></a>-k </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--k"><a class="anchor" href="#Documentation/git-cvsimport.txt--k"></a>-k </dt>
 <dd>
 <p>Kill keywords: will extract files with <em>-kk</em> from the CVS archive
 to avoid noisy changesets. Highly recommended, but off by default
 to preserve compatibility with early imported trees.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--u"> <a class="anchor" href="#Documentation/git-cvsimport.txt--u"></a>-u </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--u"><a class="anchor" href="#Documentation/git-cvsimport.txt--u"></a>-u </dt>
 <dd>
 <p>Convert underscores in tag and branch names to dots.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--sltsubstgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--ssubst"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--sltsubstgt"></a>-s &lt;subst&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--sltsubstgt"><a id="Documentation/git-cvsimport.txt--ssubst" class="anchor" href="#Documentation/git-cvsimport.txt--ssubst"></a>-s &lt;subst&gt; </dt>
 <dd>
 <p>Substitute the character "/" in branch names with &lt;subst&gt;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--pltoptions-for-cvspsgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--poptions-for-cvsps"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--pltoptions-for-cvspsgt"></a>-p &lt;options-for-cvsps&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--pltoptions-for-cvspsgt"><a id="Documentation/git-cvsimport.txt--poptions-for-cvsps" class="anchor" href="#Documentation/git-cvsimport.txt--poptions-for-cvsps"></a>-p &lt;options-for-cvsps&gt; </dt>
 <dd>
 <p>Additional options for cvsps.
 The options <code>-u</code> and <em>-A</em> are implicit and should not be used here.</p>
@@ -261,23 +261,23 @@ The options <code>-u</code> and <em>-A</em> are implicit and should not be used 
 <p>If you need to pass multiple options, separate them with a comma.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--zltfuzzgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--zfuzz"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--zltfuzzgt"></a>-z &lt;fuzz&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--zltfuzzgt"><a id="Documentation/git-cvsimport.txt--zfuzz" class="anchor" href="#Documentation/git-cvsimport.txt--zfuzz"></a>-z &lt;fuzz&gt; </dt>
 <dd>
 <p>Pass the timestamp fuzz factor to cvsps, in seconds. If unset,
 cvsps defaults to 300s.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Pltcvsps-output-filegt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--Pcvsps-output-file"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--Pltcvsps-output-filegt"></a>-P &lt;cvsps-output-file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Pltcvsps-output-filegt"><a id="Documentation/git-cvsimport.txt--Pcvsps-output-file" class="anchor" href="#Documentation/git-cvsimport.txt--Pcvsps-output-file"></a>-P &lt;cvsps-output-file&gt; </dt>
 <dd>
 <p>Instead of calling cvsps, read the provided cvsps output file. Useful
 for debugging or when cvsps is being handled outside cvsimport.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--m"> <a class="anchor" href="#Documentation/git-cvsimport.txt--m"></a>-m </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--m"><a class="anchor" href="#Documentation/git-cvsimport.txt--m"></a>-m </dt>
 <dd>
 <p>Attempt to detect merges based on the commit message. This option
 will enable default regexes that try to capture the source
 branch name from the commit message.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Mltregexgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--Mregex"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--Mltregexgt"></a>-M &lt;regex&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Mltregexgt"><a id="Documentation/git-cvsimport.txt--Mregex" class="anchor" href="#Documentation/git-cvsimport.txt--Mregex"></a>-M &lt;regex&gt; </dt>
 <dd>
 <p>Attempt to detect merges based on the commit message with a custom
 regex. It can be used with <code>-m</code> to enable the default regexes
@@ -289,21 +289,21 @@ as well. You must escape forward slashes.</p>
 <p>This option can be used several times to provide several detection regexes.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Sltregexgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--Sregex"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--Sltregexgt"></a>-S &lt;regex&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Sltregexgt"><a id="Documentation/git-cvsimport.txt--Sregex" class="anchor" href="#Documentation/git-cvsimport.txt--Sregex"></a>-S &lt;regex&gt; </dt>
 <dd>
 <p>Skip paths matching the regex.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--a"> <a class="anchor" href="#Documentation/git-cvsimport.txt--a"></a>-a </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--a"><a class="anchor" href="#Documentation/git-cvsimport.txt--a"></a>-a </dt>
 <dd>
 <p>Import all commits, including recent ones. cvsimport by default
 skips commits that have a timestamp less than 10 minutes ago.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Lltlimitgt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--Llimit"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--Lltlimitgt"></a>-L &lt;limit&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Lltlimitgt"><a id="Documentation/git-cvsimport.txt--Llimit" class="anchor" href="#Documentation/git-cvsimport.txt--Llimit"></a>-L &lt;limit&gt; </dt>
 <dd>
 <p>Limit the number of commits imported. Workaround for cases where
 cvsimport leaks memory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Altauthor-conv-filegt"> <a class="anchor" href="#Documentation/git-cvsimport.txt--Aauthor-conv-file"></a> <a class="anchor" href="#Documentation/git-cvsimport.txt--Altauthor-conv-filegt"></a>-A &lt;author-conv-file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--Altauthor-conv-filegt"><a id="Documentation/git-cvsimport.txt--Aauthor-conv-file" class="anchor" href="#Documentation/git-cvsimport.txt--Aauthor-conv-file"></a>-A &lt;author-conv-file&gt; </dt>
 <dd>
 <p>CVS by default uses the Unix username when writing its
 commit logs. Using this option and an author-conv-file
@@ -332,7 +332,7 @@ export changes back to CVS again later with
 <em>git cvsexportcommit</em>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--R"> <a class="anchor" href="#Documentation/git-cvsimport.txt--R"></a>-R </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--R"><a class="anchor" href="#Documentation/git-cvsimport.txt--R"></a>-R </dt>
 <dd>
 <p>Generate a <code>$GIT_DIR/cvs-revisions</code> file containing a mapping from CVS
 revision numbers to newly-created Git commit IDs.  The generated file
@@ -352,7 +352,7 @@ doing incremental imports.</p>
 messages, bug-tracking systems, email archives, and the like.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cvsimport.txt--h"> <a class="anchor" href="#Documentation/git-cvsimport.txt--h"></a>-h </dt>
+<dt class="hdlist1" id="Documentation/git-cvsimport.txt--h"><a class="anchor" href="#Documentation/git-cvsimport.txt--h"></a>-h </dt>
 <dd>
 <p>Print a short usage message and exit.</p>
 </dd>

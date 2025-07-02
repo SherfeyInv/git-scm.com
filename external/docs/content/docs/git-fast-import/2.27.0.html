@@ -57,27 +57,27 @@ the frontend program in use.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---force"> <a class="anchor" href="#Documentation/git-fast-import.txt---force"></a>--force </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---force"><a class="anchor" href="#Documentation/git-fast-import.txt---force"></a>--force </dt>
 <dd>
 <p>Force updating modified existing branches, even if doing
 so would cause commits to be lost (as the new commit does
 not contain the old commit).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---quiet"> <a class="anchor" href="#Documentation/git-fast-import.txt---quiet"></a>--quiet </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---quiet"><a class="anchor" href="#Documentation/git-fast-import.txt---quiet"></a>--quiet </dt>
 <dd>
 <p>Disable the output shown by --stats, making fast-import usually
 be silent when it is successful.  However, if the import stream
 has directives intended to show user output (e.g. <code>progress</code>
 directives), the corresponding messages will still be shown.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---stats"> <a class="anchor" href="#Documentation/git-fast-import.txt---stats"></a>--stats </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---stats"><a class="anchor" href="#Documentation/git-fast-import.txt---stats"></a>--stats </dt>
 <dd>
 <p>Display some basic statistics about the objects fast-import has
 created, the packfiles they were stored into, and the
 memory used by fast-import during this run.  Showing this output
 is currently the default, but can be disabled with --quiet.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---allow-unsafe-features"> <a class="anchor" href="#Documentation/git-fast-import.txt---allow-unsafe-features"></a>--allow-unsafe-features </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---allow-unsafe-features"><a class="anchor" href="#Documentation/git-fast-import.txt---allow-unsafe-features"></a>--allow-unsafe-features </dt>
 <dd>
 <p>Many command-line options can be provided as part of the
 fast-import stream itself by using the <code>feature</code> or <code>option</code>
@@ -102,21 +102,21 @@ already trusted to run their own code.</pre>
 <h3 id="_options_for_frontends"><a class="anchor" href="#_options_for_frontends"></a>Options for Frontends</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---cat-blob-fdltfdgt"> <a class="anchor" href="#Documentation/git-fast-import.txt---cat-blob-fdfd"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---cat-blob-fdltfdgt"></a>--cat-blob-fd=&lt;fd&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---cat-blob-fdltfdgt"><a id="Documentation/git-fast-import.txt---cat-blob-fdfd" class="anchor" href="#Documentation/git-fast-import.txt---cat-blob-fdfd"></a>--cat-blob-fd=&lt;fd&gt; </dt>
 <dd>
 <p>Write responses to <code>get-mark</code>, <code>cat-blob</code>, and <code>ls</code> queries to the
 file descriptor &lt;fd&gt; instead of <code>stdout</code>.  Allows <code>progress</code>
 output intended for the end-user to be separated from other
 output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---date-formatltfmtgt"> <a class="anchor" href="#Documentation/git-fast-import.txt---date-formatfmt"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---date-formatltfmtgt"></a>--date-format=&lt;fmt&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---date-formatltfmtgt"><a id="Documentation/git-fast-import.txt---date-formatfmt" class="anchor" href="#Documentation/git-fast-import.txt---date-formatfmt"></a>--date-format=&lt;fmt&gt; </dt>
 <dd>
 <p>Specify the type of dates the frontend will supply to
 fast-import within <code>author</code>, <code>committer</code> and <code>tagger</code> commands.
 See &#8220;Date Formats&#8221; below for details about which formats
 are supported, and their syntax.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---done"> <a class="anchor" href="#Documentation/git-fast-import.txt---done"></a>--done </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---done"><a class="anchor" href="#Documentation/git-fast-import.txt---done"></a>--done </dt>
 <dd>
 <p>Terminate with error if there is no <code>done</code> command at the end of
 the stream.  This option might be useful for detecting errors
@@ -130,7 +130,7 @@ write a stream.</p>
 <h3 id="_locations_of_marks_files"><a class="anchor" href="#_locations_of_marks_files"></a>Locations of Marks Files</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---export-marksltfilegt"> <a class="anchor" href="#Documentation/git-fast-import.txt---export-marksfile"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---export-marksltfilegt"></a>--export-marks=&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---export-marksltfilegt"><a id="Documentation/git-fast-import.txt---export-marksfile" class="anchor" href="#Documentation/git-fast-import.txt---export-marksfile"></a>--export-marks=&lt;file&gt; </dt>
 <dd>
 <p>Dumps the internal marks table to &lt;file&gt; when complete.
 Marks are written one per line as <code>:markid SHA-1</code>.
@@ -140,7 +140,7 @@ incremental runs.  As &lt;file&gt; is only opened and truncated
 at checkpoint (or completion) the same path can also be
 safely given to --import-marks.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---import-marksltfilegt"> <a class="anchor" href="#Documentation/git-fast-import.txt---import-marksfile"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---import-marksltfilegt"></a>--import-marks=&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---import-marksltfilegt"><a id="Documentation/git-fast-import.txt---import-marksfile" class="anchor" href="#Documentation/git-fast-import.txt---import-marksfile"></a>--import-marks=&lt;file&gt; </dt>
 <dd>
 <p>Before processing any input, load the marks specified in
 &lt;file&gt;.  The input file must exist, must be readable, and
@@ -149,12 +149,12 @@ Multiple options may be supplied to import more than one
 set of marks.  If a mark is defined to different values,
 the last file wins.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---import-marks-if-existsltfilegt"> <a class="anchor" href="#Documentation/git-fast-import.txt---import-marks-if-existsfile"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---import-marks-if-existsltfilegt"></a>--import-marks-if-exists=&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---import-marks-if-existsltfilegt"><a id="Documentation/git-fast-import.txt---import-marks-if-existsfile" class="anchor" href="#Documentation/git-fast-import.txt---import-marks-if-existsfile"></a>--import-marks-if-exists=&lt;file&gt; </dt>
 <dd>
 <p>Like --import-marks but instead of erroring out, silently
 skips the file if it does not exist.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---no-relative-marks"> <a class="anchor" href="#Documentation/git-fast-import.txt---no-relative-marks"></a>--[no-]relative-marks </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---no-relative-marks"><a class="anchor" href="#Documentation/git-fast-import.txt---no-relative-marks"></a>--[no-]relative-marks </dt>
 <dd>
 <p>After specifying --relative-marks the paths specified
 with --import-marks= and --export-marks= are relative
@@ -174,8 +174,8 @@ importers may use a different location.</p>
 <h3 id="_submodule_rewriting"><a class="anchor" href="#_submodule_rewriting"></a>Submodule Rewriting</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---rewrite-submodules-fromltnamegtltfilegt"> <a class="anchor" href="#Documentation/git-fast-import.txt---rewrite-submodules-fromnamefile"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---rewrite-submodules-fromltnamegtltfilegt"></a>--rewrite-submodules-from=&lt;name&gt;:&lt;file&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---rewrite-submodules-toltnamegtltfilegt"> <a class="anchor" href="#Documentation/git-fast-import.txt---rewrite-submodules-tonamefile"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---rewrite-submodules-toltnamegtltfilegt"></a>--rewrite-submodules-to=&lt;name&gt;:&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---rewrite-submodules-fromltnamegtltfilegt"><a id="Documentation/git-fast-import.txt---rewrite-submodules-fromnamefile" class="anchor" href="#Documentation/git-fast-import.txt---rewrite-submodules-fromnamefile"></a>--rewrite-submodules-from=&lt;name&gt;:&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---rewrite-submodules-toltnamegtltfilegt"><a id="Documentation/git-fast-import.txt---rewrite-submodules-tonamefile" class="anchor" href="#Documentation/git-fast-import.txt---rewrite-submodules-tonamefile"></a>--rewrite-submodules-to=&lt;name&gt;:&lt;file&gt; </dt>
 <dd>
 <p> Rewrite the object IDs for the submodule specified by &lt;name&gt; from the values
 used in the from &lt;file&gt; to those used in the to &lt;file&gt;. The from marks should
@@ -201,24 +201,24 @@ algorithm.</p>
 <h3 id="_performance_and_compression_tuning"><a class="anchor" href="#_performance_and_compression_tuning"></a>Performance and Compression Tuning</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---active-branchesltngt"> <a class="anchor" href="#Documentation/git-fast-import.txt---active-branchesn"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---active-branchesltngt"></a>--active-branches=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---active-branchesltngt"><a id="Documentation/git-fast-import.txt---active-branchesn" class="anchor" href="#Documentation/git-fast-import.txt---active-branchesn"></a>--active-branches=&lt;n&gt; </dt>
 <dd>
 <p>Maximum number of branches to maintain active at once.
 See &#8220;Memory Utilization&#8221; below for details.  Default is 5.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---big-file-thresholdltngt"> <a class="anchor" href="#Documentation/git-fast-import.txt---big-file-thresholdn"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---big-file-thresholdltngt"></a>--big-file-threshold=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---big-file-thresholdltngt"><a id="Documentation/git-fast-import.txt---big-file-thresholdn" class="anchor" href="#Documentation/git-fast-import.txt---big-file-thresholdn"></a>--big-file-threshold=&lt;n&gt; </dt>
 <dd>
 <p>Maximum size of a blob that fast-import will attempt to
 create a delta for, expressed in bytes.  The default is 512m
 (512 MiB).  Some importers may wish to lower this on systems
 with constrained memory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---depthltngt"> <a class="anchor" href="#Documentation/git-fast-import.txt---depthn"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---depthltngt"></a>--depth=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---depthltngt"><a id="Documentation/git-fast-import.txt---depthn" class="anchor" href="#Documentation/git-fast-import.txt---depthn"></a>--depth=&lt;n&gt; </dt>
 <dd>
 <p>Maximum delta depth, for blob and tree deltification.
 Default is 50.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---export-pack-edgesltfilegt"> <a class="anchor" href="#Documentation/git-fast-import.txt---export-pack-edgesfile"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---export-pack-edgesltfilegt"></a>--export-pack-edges=&lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---export-pack-edgesltfilegt"><a id="Documentation/git-fast-import.txt---export-pack-edgesfile" class="anchor" href="#Documentation/git-fast-import.txt---export-pack-edgesfile"></a>--export-pack-edges=&lt;file&gt; </dt>
 <dd>
 <p>After creating a packfile, print a line of data to
 &lt;file&gt; listing the filename of the packfile and the last
@@ -228,12 +228,12 @@ whose total object set exceeds the 4 GiB packfile limit,
 as these commits can be used as edge points during calls
 to <em>git pack-objects</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt---max-pack-sizeltngt"> <a class="anchor" href="#Documentation/git-fast-import.txt---max-pack-sizen"></a> <a class="anchor" href="#Documentation/git-fast-import.txt---max-pack-sizeltngt"></a>--max-pack-size=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt---max-pack-sizeltngt"><a id="Documentation/git-fast-import.txt---max-pack-sizen" class="anchor" href="#Documentation/git-fast-import.txt---max-pack-sizen"></a>--max-pack-size=&lt;n&gt; </dt>
 <dd>
 <p>Maximum size of each output packfile.
 The default is unlimited.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-fastimportunpackLimit"> <a class="anchor" href="#Documentation/git-fast-import.txt-fastimportunpackLimit"></a>fastimport.unpackLimit </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-fastimportunpackLimit"><a class="anchor" href="#Documentation/git-fast-import.txt-fastimportunpackLimit"></a>fastimport.unpackLimit </dt>
 <dd>
 <p>See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a></p>
 </dd>
@@ -363,7 +363,7 @@ in the --date-format=&lt;fmt&gt; command-line option.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-coderawcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-raw"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-coderawcode"></a><code>raw</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-coderawcode"><a id="Documentation/git-fast-import.txt-raw" class="anchor" href="#Documentation/git-fast-import.txt-raw"></a><code>raw</code> </dt>
 <dd>
 <p>This is the Git native format and is <code>&lt;time&gt; SP &lt;offutc&gt;</code>.
 It is also fast-import&#8217;s default format, if --date-format was
@@ -392,7 +392,7 @@ case a reasonable offset from UTC could be assumed.</p>
 variation in formatting will cause fast-import to reject the value.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-coderfc2822code"> <a class="anchor" href="#Documentation/git-fast-import.txt-rfc2822"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-coderfc2822code"></a><code>rfc2822</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-coderfc2822code"><a id="Documentation/git-fast-import.txt-rfc2822" class="anchor" href="#Documentation/git-fast-import.txt-rfc2822"></a><code>rfc2822</code> </dt>
 <dd>
 <p>This is the standard email format as described by RFC 2822.</p>
 <div class="paragraph">
@@ -427,7 +427,7 @@ format, or its format is easily convertible to it, as there is no
 ambiguity in parsing.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codenowcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-now"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codenowcode"></a><code>now</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codenowcode"><a id="Documentation/git-fast-import.txt-now" class="anchor" href="#Documentation/git-fast-import.txt-now"></a><code>now</code> </dt>
 <dd>
 <p>Always use the current time and time zone.  The literal
 <code>now</code> must always be supplied for <code>&lt;when&gt;</code>.</p>
@@ -464,32 +464,32 @@ and control the current import process.  More detailed discussion
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codecommitcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-commit"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codecommitcode"></a><code>commit</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codecommitcode"><a id="Documentation/git-fast-import.txt-commit" class="anchor" href="#Documentation/git-fast-import.txt-commit"></a><code>commit</code> </dt>
 <dd>
 <p>Creates a new branch or updates an existing branch by
 creating a new commit and updating the branch to point at
 the newly created commit.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codetagcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-tag"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codetagcode"></a><code>tag</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codetagcode"><a id="Documentation/git-fast-import.txt-tag" class="anchor" href="#Documentation/git-fast-import.txt-tag"></a><code>tag</code> </dt>
 <dd>
 <p>Creates an annotated tag object from an existing commit or
 branch.  Lightweight tags are not supported by this command,
 as they are not recommended for recording meaningful points
 in time.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-coderesetcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-reset"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-coderesetcode"></a><code>reset</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-coderesetcode"><a id="Documentation/git-fast-import.txt-reset" class="anchor" href="#Documentation/git-fast-import.txt-reset"></a><code>reset</code> </dt>
 <dd>
 <p>Reset an existing branch (or a new branch) to a specific
 revision.  This command must be used to change a branch to
 a specific revision without making a commit on it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeblobcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-blob"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codeblobcode"></a><code>blob</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeblobcode"><a id="Documentation/git-fast-import.txt-blob" class="anchor" href="#Documentation/git-fast-import.txt-blob"></a><code>blob</code> </dt>
 <dd>
 <p>Convert raw file data into a blob, for future use in a
 <code>commit</code> command.  This command is optional and is not
 needed to perform an import.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codealiascode"> <a class="anchor" href="#Documentation/git-fast-import.txt-alias"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codealiascode"></a><code>alias</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codealiascode"><a id="Documentation/git-fast-import.txt-alias" class="anchor" href="#Documentation/git-fast-import.txt-alias"></a><code>alias</code> </dt>
 <dd>
 <p>Record that a mark refers to a given object without first
 creating any new object.  Using --import-marks and referring
@@ -497,49 +497,49 @@ to missing marks will cause fast-import to fail, so aliases
 can provide a way to set otherwise pruned commits to a valid
 value (e.g. the nearest non-pruned ancestor).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codecheckpointcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-checkpoint"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codecheckpointcode"></a><code>checkpoint</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codecheckpointcode"><a id="Documentation/git-fast-import.txt-checkpoint" class="anchor" href="#Documentation/git-fast-import.txt-checkpoint"></a><code>checkpoint</code> </dt>
 <dd>
 <p>Forces fast-import to close the current packfile, generate its
 unique SHA-1 checksum and index, and start a new packfile.
 This command is optional and is not needed to perform
 an import.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeprogresscode"> <a class="anchor" href="#Documentation/git-fast-import.txt-progress"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codeprogresscode"></a><code>progress</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeprogresscode"><a id="Documentation/git-fast-import.txt-progress" class="anchor" href="#Documentation/git-fast-import.txt-progress"></a><code>progress</code> </dt>
 <dd>
 <p>Causes fast-import to echo the entire line to its own
 standard output.  This command is optional and is not needed
 to perform an import.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codedonecode"> <a class="anchor" href="#Documentation/git-fast-import.txt-done"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codedonecode"></a><code>done</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codedonecode"><a id="Documentation/git-fast-import.txt-done" class="anchor" href="#Documentation/git-fast-import.txt-done"></a><code>done</code> </dt>
 <dd>
 <p>Marks the end of the stream. This command is optional
 unless the <code>done</code> feature was requested using the
 <code>--done</code> command-line option or <code>feature done</code> command.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeget-markcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-get-mark"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codeget-markcode"></a><code>get-mark</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeget-markcode"><a id="Documentation/git-fast-import.txt-get-mark" class="anchor" href="#Documentation/git-fast-import.txt-get-mark"></a><code>get-mark</code> </dt>
 <dd>
 <p>Causes fast-import to print the SHA-1 corresponding to a mark
 to the file descriptor set with <code>--cat-blob-fd</code>, or <code>stdout</code> if
 unspecified.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codecat-blobcode"> <a class="anchor" href="#Documentation/git-fast-import.txt-cat-blob"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codecat-blobcode"></a><code>cat-blob</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codecat-blobcode"><a id="Documentation/git-fast-import.txt-cat-blob" class="anchor" href="#Documentation/git-fast-import.txt-cat-blob"></a><code>cat-blob</code> </dt>
 <dd>
 <p>Causes fast-import to print a blob in <em>cat-file --batch</em>
 format to the file descriptor set with <code>--cat-blob-fd</code> or
 <code>stdout</code> if unspecified.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codelscode"> <a class="anchor" href="#Documentation/git-fast-import.txt-ls"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codelscode"></a><code>ls</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codelscode"><a id="Documentation/git-fast-import.txt-ls" class="anchor" href="#Documentation/git-fast-import.txt-ls"></a><code>ls</code> </dt>
 <dd>
 <p>Causes fast-import to print a line describing a directory
 entry in <em>ls-tree</em> format to the file descriptor set with
 <code>--cat-blob-fd</code> or <code>stdout</code> if unspecified.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codefeaturecode"> <a class="anchor" href="#Documentation/git-fast-import.txt-feature"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codefeaturecode"></a><code>feature</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codefeaturecode"><a id="Documentation/git-fast-import.txt-feature" class="anchor" href="#Documentation/git-fast-import.txt-feature"></a><code>feature</code> </dt>
 <dd>
 <p>Enable the specified feature. This requires that fast-import
 supports the specified feature, and aborts if it does not.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeoptioncode"> <a class="anchor" href="#Documentation/git-fast-import.txt-option"></a> <a class="anchor" href="#Documentation/git-fast-import.txt-codeoptioncode"></a><code>option</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-codeoptioncode"><a id="Documentation/git-fast-import.txt-option" class="anchor" href="#Documentation/git-fast-import.txt-option"></a><code>option</code> </dt>
 <dd>
 <p>Specify any of the options listed under OPTIONS that do not
 change stream semantic to suit the frontend&#8217;s needs. This
@@ -751,7 +751,7 @@ of specifying the content of the file.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Externaldataformat"> <a class="anchor" href="#Documentation/git-fast-import.txt-Externaldataformat"></a>External data format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Externaldataformat"><a class="anchor" href="#Documentation/git-fast-import.txt-Externaldataformat"></a>External data format </dt>
 <dd>
 <p>The data content for the file was already supplied by a prior
 <code>blob</code> command.  The frontend just needs to connect it.</p>
@@ -768,7 +768,7 @@ existing Git blob object.  If <code>&lt;mode&gt;</code> is <code>040000`</code> 
 Git tree object or a mark reference set with <code>--import-marks</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Inlinedataformat"> <a class="anchor" href="#Documentation/git-fast-import.txt-Inlinedataformat"></a>Inline data format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Inlinedataformat"><a class="anchor" href="#Documentation/git-fast-import.txt-Inlinedataformat"></a>Inline data format </dt>
 <dd>
 <p>The data content for the file has not been supplied yet.
 The frontend wants to supply it as part of this modify
@@ -981,7 +981,7 @@ of the note.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Externaldataformat-1"> <a class="anchor" href="#Documentation/git-fast-import.txt-Externaldataformat-1"></a>External data format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Externaldataformat-1"><a class="anchor" href="#Documentation/git-fast-import.txt-Externaldataformat-1"></a>External data format </dt>
 <dd>
 <p>The data content for the note was already supplied by a prior
 <code>blob</code> command.  The frontend just needs to connect it to the
@@ -997,7 +997,7 @@ set by a prior <code>blob</code> command, or a full 40-byte SHA-1 of an
 existing Git blob object.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Inlinedataformat-1"> <a class="anchor" href="#Documentation/git-fast-import.txt-Inlinedataformat-1"></a>Inline data format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Inlinedataformat-1"><a class="anchor" href="#Documentation/git-fast-import.txt-Inlinedataformat-1"></a>Inline data format </dt>
 <dd>
 <p>The data content for the note has not been supplied yet.
 The frontend wants to supply it as part of this modify
@@ -1200,7 +1200,7 @@ file/message content whose lines might start with <code>#</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Exactbytecountformat"> <a class="anchor" href="#Documentation/git-fast-import.txt-Exactbytecountformat"></a>Exact byte count format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Exactbytecountformat"><a class="anchor" href="#Documentation/git-fast-import.txt-Exactbytecountformat"></a>Exact byte count format </dt>
 <dd>
 <p>The frontend must specify the number of bytes of data.</p>
 <div class="literalblock">
@@ -1222,7 +1222,7 @@ stream easier as the next command always starts in column 0
 of the next line, even if <code>&lt;raw&gt;</code> did not end with an <code>LF</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Delimitedformat"> <a class="anchor" href="#Documentation/git-fast-import.txt-Delimitedformat"></a>Delimited format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Delimitedformat"><a class="anchor" href="#Documentation/git-fast-import.txt-Delimitedformat"></a>Delimited format </dt>
 <dd>
 <p>A delimiter string is used to mark the end of the data.
 fast-import will compute the length by searching for the delimiter.
@@ -1416,7 +1416,7 @@ appear, allowing it to be used in the middle of a commit.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Readingfromtheactivecommit"> <a class="anchor" href="#Documentation/git-fast-import.txt-Readingfromtheactivecommit"></a>Reading from the active commit </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Readingfromtheactivecommit"><a class="anchor" href="#Documentation/git-fast-import.txt-Readingfromtheactivecommit"></a>Reading from the active commit </dt>
 <dd>
 <p>This form can only be used in the middle of a <code>commit</code>.
 The path names a directory entry within fast-import&#8217;s
@@ -1427,7 +1427,7 @@ active commit.  The path must be quoted in this case.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-Readingfromanamedtree"> <a class="anchor" href="#Documentation/git-fast-import.txt-Readingfromanamedtree"></a>Reading from a named tree </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-Readingfromanamedtree"><a class="anchor" href="#Documentation/git-fast-import.txt-Readingfromanamedtree"></a>Reading from a named tree </dt>
 <dd>
 <p>The <code>&lt;dataref&gt;</code> can be a mark reference (<code>:&lt;idnum&gt;</code>) or the
 full 40-byte SHA-1 of a Git tag, commit, or tree object,
@@ -1496,18 +1496,18 @@ it does not.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-date-format"> <a class="anchor" href="#Documentation/git-fast-import.txt-date-format"></a>date-format </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-export-marks"> <a class="anchor" href="#Documentation/git-fast-import.txt-export-marks"></a>export-marks </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-relative-marks"> <a class="anchor" href="#Documentation/git-fast-import.txt-relative-marks"></a>relative-marks </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-no-relative-marks"> <a class="anchor" href="#Documentation/git-fast-import.txt-no-relative-marks"></a>no-relative-marks </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-force"> <a class="anchor" href="#Documentation/git-fast-import.txt-force"></a>force </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-date-format"><a class="anchor" href="#Documentation/git-fast-import.txt-date-format"></a>date-format </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-export-marks"><a class="anchor" href="#Documentation/git-fast-import.txt-export-marks"></a>export-marks </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-relative-marks"><a class="anchor" href="#Documentation/git-fast-import.txt-relative-marks"></a>relative-marks </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-no-relative-marks"><a class="anchor" href="#Documentation/git-fast-import.txt-no-relative-marks"></a>no-relative-marks </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-force"><a class="anchor" href="#Documentation/git-fast-import.txt-force"></a>force </dt>
 <dd>
 <p>Act as though the corresponding command-line option with
 a leading <code>--</code> was passed on the command line
 (see OPTIONS, above).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-import-marks"> <a class="anchor" href="#Documentation/git-fast-import.txt-import-marks"></a>import-marks </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-import-marks-if-exists"> <a class="anchor" href="#Documentation/git-fast-import.txt-import-marks-if-exists"></a>import-marks-if-exists </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-import-marks"><a class="anchor" href="#Documentation/git-fast-import.txt-import-marks"></a>import-marks </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-import-marks-if-exists"><a class="anchor" href="#Documentation/git-fast-import.txt-import-marks-if-exists"></a>import-marks-if-exists </dt>
 <dd>
 <p>Like --import-marks except in two respects: first, only one
 "feature import-marks" or "feature import-marks-if-exists"
@@ -1517,9 +1517,9 @@ any of these "feature" commands in the stream; third,
 "feature import-marks-if-exists" like a corresponding
 command-line option silently skips a nonexistent file.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-get-mark-1"> <a class="anchor" href="#Documentation/git-fast-import.txt-get-mark-1"></a>get-mark </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-cat-blob-1"> <a class="anchor" href="#Documentation/git-fast-import.txt-cat-blob-1"></a>cat-blob </dt>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-ls-1"> <a class="anchor" href="#Documentation/git-fast-import.txt-ls-1"></a>ls </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-get-mark-1"><a class="anchor" href="#Documentation/git-fast-import.txt-get-mark-1"></a>get-mark </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-cat-blob-1"><a class="anchor" href="#Documentation/git-fast-import.txt-cat-blob-1"></a>cat-blob </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-ls-1"><a class="anchor" href="#Documentation/git-fast-import.txt-ls-1"></a>ls </dt>
 <dd>
 <p>Require that the backend support the <em>get-mark</em>, <em>cat-blob</em>,
 or <em>ls</em> command respectively.
@@ -1529,14 +1529,14 @@ This lets the import error out early with a clear message,
 rather than wasting time on the early part of an import
 before the unsupported command is detected.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-notes"> <a class="anchor" href="#Documentation/git-fast-import.txt-notes"></a>notes </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-notes"><a class="anchor" href="#Documentation/git-fast-import.txt-notes"></a>notes </dt>
 <dd>
 <p>Require that the backend support the <em>notemodify</em> (N)
 subcommand to the <em>commit</em> command.
 Versions of fast-import not supporting notes will exit
 with a message indicating so.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fast-import.txt-done-1"> <a class="anchor" href="#Documentation/git-fast-import.txt-done-1"></a>done </dt>
+<dt class="hdlist1" id="Documentation/git-fast-import.txt-done-1"><a class="anchor" href="#Documentation/git-fast-import.txt-done-1"></a>done </dt>
 <dd>
 <p>Error out if the stream ends without a <em>done</em> command.
 Without this feature, errors causing the frontend to end

@@ -91,7 +91,7 @@ transport by their peers.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt-base-name"> <a class="anchor" href="#Documentation/git-pack-objects.txt-base-name"></a>base-name </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt-base-name"><a class="anchor" href="#Documentation/git-pack-objects.txt-base-name"></a>base-name </dt>
 <dd>
 <p>Write into pairs of files (.pack and .idx), using
 &lt;base-name&gt; to determine the name of the created file.
@@ -100,12 +100,12 @@ When this option is used, the two files in a pair are written in
 based on the pack content and is written to the standard
 output of the command.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---stdout"> <a class="anchor" href="#Documentation/git-pack-objects.txt---stdout"></a>--stdout </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---stdout"><a class="anchor" href="#Documentation/git-pack-objects.txt---stdout"></a>--stdout </dt>
 <dd>
 <p>Write the pack contents (what would have been written to
 .pack file) out to the standard output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---revs"> <a class="anchor" href="#Documentation/git-pack-objects.txt---revs"></a>--revs </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---revs"><a class="anchor" href="#Documentation/git-pack-objects.txt---revs"></a>--revs </dt>
 <dd>
 <p>Read the revision arguments from the standard input, instead of
 individual object names.  The revision arguments are processed
@@ -115,27 +115,27 @@ outputs.  The objects on the resulting list are packed.
 Besides revisions, <code>--not</code> or <code>--shallow &lt;SHA-1&gt;</code> lines are
 also accepted.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---unpacked"> <a class="anchor" href="#Documentation/git-pack-objects.txt---unpacked"></a>--unpacked </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---unpacked"><a class="anchor" href="#Documentation/git-pack-objects.txt---unpacked"></a>--unpacked </dt>
 <dd>
 <p>This implies <code>--revs</code>.  When processing the list of
 revision arguments read from the standard input, limit
 the objects packed to those that are not already packed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---all"> <a class="anchor" href="#Documentation/git-pack-objects.txt---all"></a>--all </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---all"><a class="anchor" href="#Documentation/git-pack-objects.txt---all"></a>--all </dt>
 <dd>
 <p>This implies <code>--revs</code>.  In addition to the list of
 revision arguments read from the standard input, pretend
 as if all refs under <code>refs/</code> are specified to be
 included.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---include-tag"> <a class="anchor" href="#Documentation/git-pack-objects.txt---include-tag"></a>--include-tag </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---include-tag"><a class="anchor" href="#Documentation/git-pack-objects.txt---include-tag"></a>--include-tag </dt>
 <dd>
 <p>Include unasked-for annotated tags if the object they
 reference was included in the resulting packfile.  This
 can be useful to send new tags to native Git clients.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---windowltngt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---windown"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---windowltngt"></a>--window=&lt;n&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---depthltngt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---depthn"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---depthltngt"></a>--depth=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---windowltngt"><a id="Documentation/git-pack-objects.txt---windown" class="anchor" href="#Documentation/git-pack-objects.txt---windown"></a>--window=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---depthltngt"><a id="Documentation/git-pack-objects.txt---depthn" class="anchor" href="#Documentation/git-pack-objects.txt---depthn"></a>--depth=&lt;n&gt; </dt>
 <dd>
 <p>These two options affect how the objects contained in
 the pack are stored using delta compression.  The
@@ -151,7 +151,7 @@ times to get to the necessary object.</p>
 depth is 4095.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---window-memoryltngt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---window-memoryn"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---window-memoryltngt"></a>--window-memory=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---window-memoryltngt"><a id="Documentation/git-pack-objects.txt---window-memoryn" class="anchor" href="#Documentation/git-pack-objects.txt---window-memoryn"></a>--window-memory=&lt;n&gt; </dt>
 <dd>
 <p>This option provides an additional limit on top of <code>--window</code>;
 the window size will dynamically scale down so as to not take
@@ -163,7 +163,7 @@ size can be suffixed with "k", "m", or "g".
 <code>--window-memory=0</code> makes memory usage unlimited.  The default
 is taken from the <code>pack.windowMemory</code> configuration variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---max-pack-sizeltngt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---max-pack-sizen"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---max-pack-sizeltngt"></a>--max-pack-size=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---max-pack-sizeltngt"><a id="Documentation/git-pack-objects.txt---max-pack-sizen" class="anchor" href="#Documentation/git-pack-objects.txt---max-pack-sizen"></a>--max-pack-size=&lt;n&gt; </dt>
 <dd>
 <p>In unusual scenarios, you may not be able to create files
 larger than a certain size on your filesystem, and this option
@@ -176,13 +176,13 @@ prevents the creation of a bitmap index.
 The default is unlimited, unless the config variable
 <code>pack.packSizeLimit</code> is set.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---honor-pack-keep"> <a class="anchor" href="#Documentation/git-pack-objects.txt---honor-pack-keep"></a>--honor-pack-keep </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---honor-pack-keep"><a class="anchor" href="#Documentation/git-pack-objects.txt---honor-pack-keep"></a>--honor-pack-keep </dt>
 <dd>
 <p>This flag causes an object already in a local pack that
 has a .keep file to be ignored, even if it would have
 otherwise been packed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---keep-packltpack-namegt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---keep-packpack-name"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---keep-packltpack-namegt"></a>--keep-pack=&lt;pack-name&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---keep-packltpack-namegt"><a id="Documentation/git-pack-objects.txt---keep-packpack-name" class="anchor" href="#Documentation/git-pack-objects.txt---keep-packpack-name"></a>--keep-pack=&lt;pack-name&gt; </dt>
 <dd>
 <p>This flag causes an object already in the given pack to be
 ignored, even if it would have otherwise been
@@ -190,30 +190,30 @@ packed. <code>&lt;pack-name&gt;</code> is the pack file name without
 leading directory (e.g. <code>pack-123.pack</code>). The option could be
 specified multiple times to keep multiple packs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---incremental"> <a class="anchor" href="#Documentation/git-pack-objects.txt---incremental"></a>--incremental </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---incremental"><a class="anchor" href="#Documentation/git-pack-objects.txt---incremental"></a>--incremental </dt>
 <dd>
 <p>This flag causes an object already in a pack to be ignored
 even if it would have otherwise been packed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---local"> <a class="anchor" href="#Documentation/git-pack-objects.txt---local"></a>--local </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---local"><a class="anchor" href="#Documentation/git-pack-objects.txt---local"></a>--local </dt>
 <dd>
 <p>This flag causes an object that is borrowed from an alternate
 object store to be ignored even if it would have otherwise been
 packed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---non-empty"> <a class="anchor" href="#Documentation/git-pack-objects.txt---non-empty"></a>--non-empty </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---non-empty"><a class="anchor" href="#Documentation/git-pack-objects.txt---non-empty"></a>--non-empty </dt>
 <dd>
 <p>Only create a packed archive if it would contain at
 least one object.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---progress"> <a class="anchor" href="#Documentation/git-pack-objects.txt---progress"></a>--progress </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---progress"><a class="anchor" href="#Documentation/git-pack-objects.txt---progress"></a>--progress </dt>
 <dd>
 <p>Progress status is reported on the standard error stream
 by default when it is attached to a terminal, unless -q
 is specified. This flag forces progress status even if
 the standard error stream is not directed to a terminal.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---all-progress"> <a class="anchor" href="#Documentation/git-pack-objects.txt---all-progress"></a>--all-progress </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---all-progress"><a class="anchor" href="#Documentation/git-pack-objects.txt---all-progress"></a>--all-progress </dt>
 <dd>
 <p>When --stdout is specified then progress report is
 displayed during the object count and compression phases
@@ -225,18 +225,18 @@ This flag is like --progress except that it forces progress
 report for the write-out phase as well even if --stdout is
 used.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---all-progress-implied"> <a class="anchor" href="#Documentation/git-pack-objects.txt---all-progress-implied"></a>--all-progress-implied </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---all-progress-implied"><a class="anchor" href="#Documentation/git-pack-objects.txt---all-progress-implied"></a>--all-progress-implied </dt>
 <dd>
 <p>This is used to imply --all-progress whenever progress display
 is activated.  Unlike --all-progress this flag doesn&#8217;t actually
 force any progress display by itself.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt--q"> <a class="anchor" href="#Documentation/git-pack-objects.txt--q"></a>-q </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt--q"><a class="anchor" href="#Documentation/git-pack-objects.txt--q"></a>-q </dt>
 <dd>
 <p>This flag makes the command not to report its progress
 on the standard error stream.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---no-reuse-delta"> <a class="anchor" href="#Documentation/git-pack-objects.txt---no-reuse-delta"></a>--no-reuse-delta </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---no-reuse-delta"><a class="anchor" href="#Documentation/git-pack-objects.txt---no-reuse-delta"></a>--no-reuse-delta </dt>
 <dd>
 <p>When creating a packed archive in a repository that
 has existing packs, the command reuses existing deltas.
@@ -244,7 +244,7 @@ This sometimes results in a slightly suboptimal pack.
 This flag tells the command not to reuse existing deltas
 but compute them from scratch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---no-reuse-object"> <a class="anchor" href="#Documentation/git-pack-objects.txt---no-reuse-object"></a>--no-reuse-object </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---no-reuse-object"><a class="anchor" href="#Documentation/git-pack-objects.txt---no-reuse-object"></a>--no-reuse-object </dt>
 <dd>
 <p>This flag tells the command not to reuse existing object data at all,
 including non deltified object, forcing recompression of everything.
@@ -252,7 +252,7 @@ This implies --no-reuse-delta. Useful only in the obscure case where
 wholesale enforcement of a different compression level on the
 packed data is desired.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---compressionltngt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---compressionn"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---compressionltngt"></a>--compression=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---compressionltngt"><a id="Documentation/git-pack-objects.txt---compressionn" class="anchor" href="#Documentation/git-pack-objects.txt---compressionn"></a>--compression=&lt;n&gt; </dt>
 <dd>
 <p>Specifies compression level for newly-compressed data in the
 generated pack.  If not specified,  pack compression level is
@@ -261,7 +261,7 @@ and defaults to -1,  the zlib default,  if neither is set.
 Add --no-reuse-object if you want to force a uniform compression
 level on all data no matter the source.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---sparse"> <a class="anchor" href="#Documentation/git-pack-objects.txt---sparse"></a>--sparse </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---sparse"><a class="anchor" href="#Documentation/git-pack-objects.txt---sparse"></a>--sparse </dt>
 <dd>
 <p>Use the "sparse" algorithm to determine which objects to include in
 the pack, when combined with the "--revs" option. This algorithm
@@ -271,7 +271,7 @@ a pack to send a small change. However, it is possible that extra
 objects are added to the pack-file if the included commits contain
 certain types of direct renames.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---thin"> <a class="anchor" href="#Documentation/git-pack-objects.txt---thin"></a>--thin </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---thin"><a class="anchor" href="#Documentation/git-pack-objects.txt---thin"></a>--thin </dt>
 <dd>
 <p>Create a "thin" pack by omitting the common objects between a
 sender and a receiver in order to reduce network transfer. This
@@ -283,13 +283,13 @@ self-contained. Use <code>git index-pack --fix-thin</code>
 (see <a href='{{< relurl "docs/git-index-pack" >}}'>git-index-pack[1]</a>) to restore the self-contained property.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---shallow"> <a class="anchor" href="#Documentation/git-pack-objects.txt---shallow"></a>--shallow </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---shallow"><a class="anchor" href="#Documentation/git-pack-objects.txt---shallow"></a>--shallow </dt>
 <dd>
 <p>Optimize a pack that will be provided to a client with a shallow
 repository.  This option, combined with --thin, can result in a
 smaller pack at the cost of speed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---delta-base-offset"> <a class="anchor" href="#Documentation/git-pack-objects.txt---delta-base-offset"></a>--delta-base-offset </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---delta-base-offset"><a class="anchor" href="#Documentation/git-pack-objects.txt---delta-base-offset"></a>--delta-base-offset </dt>
 <dd>
 <p>A packed archive can express the base object of a delta as
 either a 20-byte object name or as an offset in the
@@ -307,7 +307,7 @@ in modern Git when they put objects in your repository into pack files.
 So does <code>git bundle</code> (see <a href='{{< relurl "docs/git-bundle" >}}'>git-bundle[1]</a>) when it creates a bundle.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---threadsltngt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---threadsn"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---threadsltngt"></a>--threads=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---threadsltngt"><a id="Documentation/git-pack-objects.txt---threadsn" class="anchor" href="#Documentation/git-pack-objects.txt---threadsn"></a>--threads=&lt;n&gt; </dt>
 <dd>
 <p>Specifies the number of threads to spawn when searching for best
 delta matches.  This requires that pack-objects be compiled with
@@ -318,28 +318,28 @@ however multiplied by the number of threads.
 Specifying 0 will cause Git to auto-detect the number of CPU&#8217;s
 and set the number of threads accordingly.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---index-versionltversiongtltoffsetgt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---index-versionversionoffset"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---index-versionltversiongtltoffsetgt"></a>--index-version=&lt;version&gt;[,&lt;offset&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---index-versionltversiongtltoffsetgt"><a id="Documentation/git-pack-objects.txt---index-versionversionoffset" class="anchor" href="#Documentation/git-pack-objects.txt---index-versionversionoffset"></a>--index-version=&lt;version&gt;[,&lt;offset&gt;] </dt>
 <dd>
 <p>This is intended to be used by the test suite only. It allows
 to force the version for the generated pack index, and to force
 64-bit index entries on objects located above the given offset.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---keep-true-parents"> <a class="anchor" href="#Documentation/git-pack-objects.txt---keep-true-parents"></a>--keep-true-parents </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---keep-true-parents"><a class="anchor" href="#Documentation/git-pack-objects.txt---keep-true-parents"></a>--keep-true-parents </dt>
 <dd>
 <p>With this option, parents that are hidden by grafts are packed
 nevertheless.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---filterltfilter-specgt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---filterfilter-spec"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---filterltfilter-specgt"></a>--filter=&lt;filter-spec&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---filterltfilter-specgt"><a id="Documentation/git-pack-objects.txt---filterfilter-spec" class="anchor" href="#Documentation/git-pack-objects.txt---filterfilter-spec"></a>--filter=&lt;filter-spec&gt; </dt>
 <dd>
 <p>Requires <code>--stdout</code>.  Omits certain objects (usually blobs) from
 the resulting packfile.  See <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a> for valid
 <code>&lt;filter-spec&gt;</code> forms.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---no-filter"> <a class="anchor" href="#Documentation/git-pack-objects.txt---no-filter"></a>--no-filter </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---no-filter"><a class="anchor" href="#Documentation/git-pack-objects.txt---no-filter"></a>--no-filter </dt>
 <dd>
 <p>Turns off any previous <code>--filter=</code> argument.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---missingltmissing-actiongt"> <a class="anchor" href="#Documentation/git-pack-objects.txt---missingmissing-action"></a> <a class="anchor" href="#Documentation/git-pack-objects.txt---missingltmissing-actiongt"></a>--missing=&lt;missing-action&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---missingltmissing-actiongt"><a id="Documentation/git-pack-objects.txt---missingmissing-action" class="anchor" href="#Documentation/git-pack-objects.txt---missingmissing-action"></a>--missing=&lt;missing-action&gt; </dt>
 <dd>
 <p>A debug option to help with future "partial clone" development.
 This option specifies how missing objects are handled.</p>
@@ -358,7 +358,7 @@ allow object traversal to continue for EXPECTED promisor missing objects.
 Unexpected missing object will raise an error.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---exclude-promisor-objects"> <a class="anchor" href="#Documentation/git-pack-objects.txt---exclude-promisor-objects"></a>--exclude-promisor-objects </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---exclude-promisor-objects"><a class="anchor" href="#Documentation/git-pack-objects.txt---exclude-promisor-objects"></a>--exclude-promisor-objects </dt>
 <dd>
 <p>Omit objects that are known to be in the promisor remote.  (This
 option has the purpose of operating only on locally created objects,
@@ -366,23 +366,23 @@ so that when we repack, we still maintain a distinction between
 locally created objects [without .promisor] and objects from the
 promisor remote [with .promisor].)  This is used with partial clone.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---keep-unreachable"> <a class="anchor" href="#Documentation/git-pack-objects.txt---keep-unreachable"></a>--keep-unreachable </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---keep-unreachable"><a class="anchor" href="#Documentation/git-pack-objects.txt---keep-unreachable"></a>--keep-unreachable </dt>
 <dd>
 <p>Objects unreachable from the refs in packs named with
 --unpacked= option are added to the resulting pack, in
 addition to the reachable objects that are not in packs marked
 with *.keep files. This implies <code>--revs</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---pack-loose-unreachable"> <a class="anchor" href="#Documentation/git-pack-objects.txt---pack-loose-unreachable"></a>--pack-loose-unreachable </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---pack-loose-unreachable"><a class="anchor" href="#Documentation/git-pack-objects.txt---pack-loose-unreachable"></a>--pack-loose-unreachable </dt>
 <dd>
 <p>Pack unreachable loose objects (and their loose counterparts
 removed). This implies <code>--revs</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---unpack-unreachable"> <a class="anchor" href="#Documentation/git-pack-objects.txt---unpack-unreachable"></a>--unpack-unreachable </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---unpack-unreachable"><a class="anchor" href="#Documentation/git-pack-objects.txt---unpack-unreachable"></a>--unpack-unreachable </dt>
 <dd>
 <p>Keep unreachable objects in loose form. This implies <code>--revs</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-pack-objects.txt---delta-islands"> <a class="anchor" href="#Documentation/git-pack-objects.txt---delta-islands"></a>--delta-islands </dt>
+<dt class="hdlist1" id="Documentation/git-pack-objects.txt---delta-islands"><a class="anchor" href="#Documentation/git-pack-objects.txt---delta-islands"></a>--delta-islands </dt>
 <dd>
 <p>Restrict delta matches based on "islands". See DELTA ISLANDS
 below.</p>

@@ -26,7 +26,7 @@ arguments to <code>git merge</code> and/or <code>git pull</code>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-resolve"> <a class="anchor" href="#Documentation/merge-strategies.txt-resolve"></a>resolve </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-resolve"><a class="anchor" href="#Documentation/merge-strategies.txt-resolve"></a>resolve </dt>
 <dd>
 <p>This can only resolve two heads (i.e. the current branch
 and another branch you pulled from) using a 3-way merge
@@ -34,7 +34,7 @@ algorithm.  It tries to carefully detect criss-cross
 merge ambiguities and is considered generally safe and
 fast.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-recursive"> <a class="anchor" href="#Documentation/merge-strategies.txt-recursive"></a>recursive </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-recursive"><a class="anchor" href="#Documentation/merge-strategies.txt-recursive"></a>recursive </dt>
 <dd>
 <p>This can only resolve two heads using a 3-way merge
 algorithm.  When there is more than one common
@@ -52,7 +52,7 @@ pulling or merging one branch.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-ours"> <a class="anchor" href="#Documentation/merge-strategies.txt-ours"></a>ours </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-ours"><a class="anchor" href="#Documentation/merge-strategies.txt-ours"></a>ours </dt>
 <dd>
 <p>This option forces conflicting hunks to be auto-resolved cleanly by
 favoring <em>our</em> version.  Changes from the other tree that do not
@@ -64,11 +64,11 @@ even look at what the other tree contains at all.  It discards everything
 the other tree did, declaring <em>our</em> history contains all that happened in it.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-theirs"> <a class="anchor" href="#Documentation/merge-strategies.txt-theirs"></a>theirs </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-theirs"><a class="anchor" href="#Documentation/merge-strategies.txt-theirs"></a>theirs </dt>
 <dd>
 <p>This is the opposite of <em>ours</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-patience"> <a class="anchor" href="#Documentation/merge-strategies.txt-patience"></a>patience </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-patience"><a class="anchor" href="#Documentation/merge-strategies.txt-patience"></a>patience </dt>
 <dd>
 <p>With this option, <em>merge-recursive</em> spends a little extra time
 to avoid mismerges that sometimes occur due to unimportant
@@ -76,16 +76,16 @@ matching lines (e.g., braces from distinct functions).  Use
 this when the branches to be merged have diverged wildly.
 See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--patience</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-diff-algorithmpatienceminimalhistogrammyers"> <a class="anchor" href="#Documentation/merge-strategies.txt-diff-algorithmpatienceminimalhistogrammyers"></a>diff-algorithm=[patience|minimal|histogram|myers] </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-diff-algorithmpatienceminimalhistogrammyers"><a class="anchor" href="#Documentation/merge-strategies.txt-diff-algorithmpatienceminimalhistogrammyers"></a>diff-algorithm=[patience|minimal|histogram|myers] </dt>
 <dd>
 <p>Tells <em>merge-recursive</em> to use a different diff algorithm, which
 can help avoid mismerges that occur due to unimportant matching
 lines (such as braces from distinct functions).  See also
 <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--diff-algorithm</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-space-change"> <a class="anchor" href="#Documentation/merge-strategies.txt-ignore-space-change"></a>ignore-space-change </dt>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-all-space"> <a class="anchor" href="#Documentation/merge-strategies.txt-ignore-all-space"></a>ignore-all-space </dt>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-space-at-eol"> <a class="anchor" href="#Documentation/merge-strategies.txt-ignore-space-at-eol"></a>ignore-space-at-eol </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-space-change"><a class="anchor" href="#Documentation/merge-strategies.txt-ignore-space-change"></a>ignore-space-change </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-all-space"><a class="anchor" href="#Documentation/merge-strategies.txt-ignore-all-space"></a>ignore-all-space </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-space-at-eol"><a class="anchor" href="#Documentation/merge-strategies.txt-ignore-space-at-eol"></a>ignore-space-at-eol </dt>
 <dd>
 <p>Treats lines with the indicated type of whitespace change as
 unchanged for the sake of a three-way merge.  Whitespace
@@ -108,7 +108,7 @@ version includes a substantial change, <em>their</em> version is used;</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-renormalize"> <a class="anchor" href="#Documentation/merge-strategies.txt-renormalize"></a>renormalize </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-renormalize"><a class="anchor" href="#Documentation/merge-strategies.txt-renormalize"></a>renormalize </dt>
 <dd>
 <p>This runs a virtual check-out and check-in of all three stages
 of a file when resolving a three-way merge.  This option is
@@ -117,27 +117,27 @@ filters or end-of-line normalization rules.  See "Merging
 branches with differing checkin/checkout attributes" in
 <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-no-renormalize"> <a class="anchor" href="#Documentation/merge-strategies.txt-no-renormalize"></a>no-renormalize </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-no-renormalize"><a class="anchor" href="#Documentation/merge-strategies.txt-no-renormalize"></a>no-renormalize </dt>
 <dd>
 <p>Disables the <code>renormalize</code> option.  This overrides the
 <code>merge.renormalize</code> configuration variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-no-renames"> <a class="anchor" href="#Documentation/merge-strategies.txt-no-renames"></a>no-renames </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-no-renames"><a class="anchor" href="#Documentation/merge-strategies.txt-no-renames"></a>no-renames </dt>
 <dd>
 <p>Turn off rename detection.
 See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--no-renames</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-find-renamesltngt"> <a class="anchor" href="#Documentation/merge-strategies.txt-find-renamesn"></a> <a class="anchor" href="#Documentation/merge-strategies.txt-find-renamesltngt"></a>find-renames[=&lt;n&gt;] </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-find-renamesltngt"><a id="Documentation/merge-strategies.txt-find-renamesn" class="anchor" href="#Documentation/merge-strategies.txt-find-renamesn"></a>find-renames[=&lt;n&gt;] </dt>
 <dd>
 <p>Turn on rename detection, optionally setting the similarity
 threshold.  This is the default.
 See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--find-renames</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-rename-thresholdltngt"> <a class="anchor" href="#Documentation/merge-strategies.txt-rename-thresholdn"></a> <a class="anchor" href="#Documentation/merge-strategies.txt-rename-thresholdltngt"></a>rename-threshold=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-rename-thresholdltngt"><a id="Documentation/merge-strategies.txt-rename-thresholdn" class="anchor" href="#Documentation/merge-strategies.txt-rename-thresholdn"></a>rename-threshold=&lt;n&gt; </dt>
 <dd>
 <p>Deprecated synonym for <code>find-renames=&lt;n&gt;</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-subtreeltpathgt"> <a class="anchor" href="#Documentation/merge-strategies.txt-subtreepath"></a> <a class="anchor" href="#Documentation/merge-strategies.txt-subtreeltpathgt"></a>subtree[=&lt;path&gt;] </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-subtreeltpathgt"><a id="Documentation/merge-strategies.txt-subtreepath" class="anchor" href="#Documentation/merge-strategies.txt-subtreepath"></a>subtree[=&lt;path&gt;] </dt>
 <dd>
 <p>This option is a more advanced form of <em>subtree</em> strategy, where
 the strategy makes a guess on how two trees must be shifted to
@@ -148,7 +148,7 @@ two trees to match.</p>
 </dl>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-octopus"> <a class="anchor" href="#Documentation/merge-strategies.txt-octopus"></a>octopus </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-octopus"><a class="anchor" href="#Documentation/merge-strategies.txt-octopus"></a>octopus </dt>
 <dd>
 <p>This resolves cases with more than two heads, but refuses to do
 a complex merge that needs manual resolution.  It is
@@ -156,7 +156,7 @@ primarily meant to be used for bundling topic branch
 heads together.  This is the default merge strategy when
 pulling or merging more than one branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-ours-1"> <a class="anchor" href="#Documentation/merge-strategies.txt-ours-1"></a>ours </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-ours-1"><a class="anchor" href="#Documentation/merge-strategies.txt-ours-1"></a>ours </dt>
 <dd>
 <p>This resolves any number of heads, but the resulting tree of the
 merge is always that of the current branch head, effectively
@@ -165,7 +165,7 @@ be used to supersede old development history of side
 branches.  Note that this is different from the -Xours option to
 the <em>recursive</em> merge strategy.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-strategies.txt-subtree"> <a class="anchor" href="#Documentation/merge-strategies.txt-subtree"></a>subtree </dt>
+<dt class="hdlist1" id="Documentation/merge-strategies.txt-subtree"><a class="anchor" href="#Documentation/merge-strategies.txt-subtree"></a>subtree </dt>
 <dd>
 <p>This is a modified recursive strategy. When merging trees A and
 B, if B corresponds to a subtree of A, B is first adjusted to

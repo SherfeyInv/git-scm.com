@@ -83,7 +83,7 @@ conflicts.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-ltcommitgt82308203"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-commit"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-ltcommitgt82308203"></a>&lt;commit&gt;&#8230;&#8203; </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-ltcommitgt82308203"><a id="Documentation/git-cherry-pick.txt-commit" class="anchor" href="#Documentation/git-cherry-pick.txt-commit"></a>&lt;commit&gt;&#8230;&#8203; </dt>
 <dd>
 <p>Commits to cherry-pick.
 For a more complete list of ways to spell commits, see
@@ -94,13 +94,13 @@ default, as if the <code>--no-walk</code> option was specified, see
 feed all &lt;commit&gt;&#8230;&#8203; arguments to a single revision walk
 (see a later example that uses <em>maint master..next</em>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--e"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--e"></a>-e </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---edit"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---edit"></a>--edit </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--e"><a class="anchor" href="#Documentation/git-cherry-pick.txt--e"></a>-e </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---edit"><a class="anchor" href="#Documentation/git-cherry-pick.txt---edit"></a>--edit </dt>
 <dd>
 <p>With this option, <em>git cherry-pick</em> will let you edit the commit
 message prior to committing.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--x"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--x"></a>-x </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--x"><a class="anchor" href="#Documentation/git-cherry-pick.txt--x"></a>-x </dt>
 <dd>
 <p>When recording the commit, append a line that says
 "(cherry picked from commit &#8230;&#8203;)" to the original commit
@@ -115,14 +115,14 @@ maintenance branch for an older release from a
 development branch), adding this information can be
 useful.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--r"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--r"></a>-r </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--r"><a class="anchor" href="#Documentation/git-cherry-pick.txt--r"></a>-r </dt>
 <dd>
 <p>It used to be that the command defaulted to do <code>-x</code>
 described above, and <code>-r</code> was to disable it.  Now the
 default is not to do <code>-x</code> so this option is a no-op.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--mparent-number"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--mparent-number"></a>-m parent-number </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---mainlineparent-number"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---mainlineparent-number"></a>--mainline parent-number </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--mparent-number"><a class="anchor" href="#Documentation/git-cherry-pick.txt--mparent-number"></a>-m parent-number </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---mainlineparent-number"><a class="anchor" href="#Documentation/git-cherry-pick.txt---mainlineparent-number"></a>--mainline parent-number </dt>
 <dd>
 <p>Usually you cannot cherry-pick a merge because you do not know which
 side of the merge should be considered the mainline.  This
@@ -130,8 +130,8 @@ option specifies the parent number (starting from 1) of
 the mainline and allows cherry-pick to replay the change
 relative to the specified parent.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--n"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---no-commit"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---no-commit"></a>--no-commit </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--n"><a class="anchor" href="#Documentation/git-cherry-pick.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---no-commit"><a class="anchor" href="#Documentation/git-cherry-pick.txt---no-commit"></a>--no-commit </dt>
 <dd>
 <p>Usually the command automatically creates a sequence of commits.
 This flag applies the changes necessary to cherry-pick
@@ -145,26 +145,26 @@ beginning state of your index.</p>
 effect to your index in a row.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--s"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--s"></a>-s </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---signoff"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---signoff"></a>--signoff </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--s"><a class="anchor" href="#Documentation/git-cherry-pick.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---signoff"><a class="anchor" href="#Documentation/git-cherry-pick.txt---signoff"></a>--signoff </dt>
 <dd>
 <p>Add Signed-off-by line at the end of the commit message.
 See the signoff option in <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for more information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--Sltkeyidgt"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--Skeyid"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt--Sltkeyidgt"></a>-S[&lt;keyid&gt;] </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---gpg-signltkeyidgt"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---gpg-signkeyid"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt---gpg-signltkeyidgt"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--Sltkeyidgt"><a id="Documentation/git-cherry-pick.txt--Skeyid" class="anchor" href="#Documentation/git-cherry-pick.txt--Skeyid"></a>-S[&lt;keyid&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---gpg-signltkeyidgt"><a id="Documentation/git-cherry-pick.txt---gpg-signkeyid" class="anchor" href="#Documentation/git-cherry-pick.txt---gpg-signkeyid"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
 <dd>
 <p>GPG-sign commits. The <code>keyid</code> argument is optional and
 defaults to the committer identity; if specified, it must be
 stuck to the option without a space.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---ff"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---ff"></a>--ff </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---ff"><a class="anchor" href="#Documentation/git-cherry-pick.txt---ff"></a>--ff </dt>
 <dd>
 <p>If the current HEAD is the same as the parent of the
 cherry-pick&#8217;ed commit, then a fast forward to this commit will
 be performed.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---allow-empty"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---allow-empty"></a>--allow-empty </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---allow-empty"><a class="anchor" href="#Documentation/git-cherry-pick.txt---allow-empty"></a>--allow-empty </dt>
 <dd>
 <p>By default, cherry-picking an empty commit will fail,
 indicating that an explicit invocation of <code>git commit
@@ -178,13 +178,13 @@ same tree as its parent).  Commits which are made empty due to a
 previous commit are dropped.  To force the inclusion of those commits
 use <code>--keep-redundant-commits</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---allow-empty-message"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---allow-empty-message"></a>--allow-empty-message </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---allow-empty-message"><a class="anchor" href="#Documentation/git-cherry-pick.txt---allow-empty-message"></a>--allow-empty-message </dt>
 <dd>
 <p>By default, cherry-picking a commit with an empty message will fail.
 This option overrides that behavior, allowing commits with empty
 messages to be cherry picked.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---keep-redundant-commits"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---keep-redundant-commits"></a>--keep-redundant-commits </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---keep-redundant-commits"><a class="anchor" href="#Documentation/git-cherry-pick.txt---keep-redundant-commits"></a>--keep-redundant-commits </dt>
 <dd>
 <p>If a commit being cherry picked duplicates a commit already in the
 current history, it will become empty.  By default these
@@ -192,14 +192,14 @@ redundant commits cause <code>cherry-pick</code> to stop so the user can
 examine the commit. This option overrides that behavior and
 creates an empty commit object.  Implies <code>--allow-empty</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---strategyltstrategygt"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---strategystrategy"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt---strategyltstrategygt"></a>--strategy=&lt;strategy&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---strategyltstrategygt"><a id="Documentation/git-cherry-pick.txt---strategystrategy" class="anchor" href="#Documentation/git-cherry-pick.txt---strategystrategy"></a>--strategy=&lt;strategy&gt; </dt>
 <dd>
 <p>Use the given merge strategy.  Should only be used once.
 See the MERGE STRATEGIES section in <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a>
 for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--Xltoptiongt"> <a class="anchor" href="#Documentation/git-cherry-pick.txt--Xoption"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt--Xltoptiongt"></a>-X&lt;option&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---strategy-optionltoptiongt"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---strategy-optionoption"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt---strategy-optionltoptiongt"></a>--strategy-option=&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt--Xltoptiongt"><a id="Documentation/git-cherry-pick.txt--Xoption" class="anchor" href="#Documentation/git-cherry-pick.txt--Xoption"></a>-X&lt;option&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---strategy-optionltoptiongt"><a id="Documentation/git-cherry-pick.txt---strategy-optionoption" class="anchor" href="#Documentation/git-cherry-pick.txt---strategy-optionoption"></a>--strategy-option=&lt;option&gt; </dt>
 <dd>
 <p>Pass the merge strategy-specific option through to the
 merge strategy.  See <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> for details.</p>
@@ -213,19 +213,19 @@ merge strategy.  See <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> 
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---continue"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---continue"></a>--continue </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---continue"><a class="anchor" href="#Documentation/git-cherry-pick.txt---continue"></a>--continue </dt>
 <dd>
 <p>Continue the operation in progress using the information in
 <em>.git/sequencer</em>.  Can be used to continue after resolving
 conflicts in a failed cherry-pick or revert.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---quit"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---quit"></a>--quit </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---quit"><a class="anchor" href="#Documentation/git-cherry-pick.txt---quit"></a>--quit </dt>
 <dd>
 <p>Forget about the current operation in progress.  Can be used
 to clear the sequencer state after a failed cherry-pick or
 revert.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---abort"> <a class="anchor" href="#Documentation/git-cherry-pick.txt---abort"></a>--abort </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt---abort"><a class="anchor" href="#Documentation/git-cherry-pick.txt---abort"></a>--abort </dt>
 <dd>
 <p>Cancel the operation and return to the pre-sequence state.</p>
 </dd>
@@ -238,19 +238,19 @@ revert.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmastercode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaster"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pickmastercode"></a><code>git cherry-pick master</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmastercode"><a id="Documentation/git-cherry-pick.txt-gitcherry-pickmaster" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaster"></a><code>git cherry-pick master</code> </dt>
 <dd>
 <p>Apply the change introduced by the commit at the tip of the
 master branch and create a new commit with this change.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmastercode-1"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaster-1"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pickmastercode-1"></a><code>git cherry-pick ..master</code> </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickHEADmastercode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickHEADmaster"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pickHEADmastercode"></a><code>git cherry-pick ^HEAD master</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmastercode-1"><a id="Documentation/git-cherry-pick.txt-gitcherry-pickmaster-1" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaster-1"></a><code>git cherry-pick ..master</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickHEADmastercode"><a id="Documentation/git-cherry-pick.txt-gitcherry-pickHEADmaster" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickHEADmaster"></a><code>git cherry-pick ^HEAD master</code> </dt>
 <dd>
 <p>Apply the changes introduced by all commits that are ancestors
 of master but not of HEAD to produce new commits.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmaintnextmastercode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaintnextmaster"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pickmaintnextmastercode"></a><code>git cherry-pick maint next ^master</code> </dt>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmaintmasternextcode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaintmasternext"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pickmaintmasternextcode"></a><code>git cherry-pick maint master..next</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmaintnextmastercode"><a id="Documentation/git-cherry-pick.txt-gitcherry-pickmaintnextmaster" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaintnextmaster"></a><code>git cherry-pick maint next ^master</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmaintmasternextcode"><a id="Documentation/git-cherry-pick.txt-gitcherry-pickmaintmasternext" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaintmasternext"></a><code>git cherry-pick maint master..next</code> </dt>
 <dd>
 <p>Apply the changes introduced by all commits that are
 ancestors of maint or next, but not master or any of its
@@ -258,20 +258,20 @@ ancestors.  Note that the latter does not mean <code>maint</code> and
 everything between <code>master</code> and <code>next</code>; specifically,
 <code>maint</code> will not be used if it is included in <code>master</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmaster4master2code"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaster4master2"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pickmaster4master2code"></a><code>git cherry-pick master~4 master~2</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pickmaster4master2code"><a id="Documentation/git-cherry-pick.txt-gitcherry-pickmaster4master2" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pickmaster4master2"></a><code>git cherry-pick master~4 master~2</code> </dt>
 <dd>
 <p>Apply the changes introduced by the fifth and third last
 commits pointed to by master and create 2 new commits with
 these changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pick-nmaster1nextcode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pick-nmaster1next"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pick-nmaster1nextcode"></a><code>git cherry-pick -n master~1 next</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pick-nmaster1nextcode"><a id="Documentation/git-cherry-pick.txt-gitcherry-pick-nmaster1next" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pick-nmaster1next"></a><code>git cherry-pick -n master~1 next</code> </dt>
 <dd>
 <p>Apply to the working tree and the index the changes introduced
 by the second last commit pointed to by master and by the last
 commit pointed to by next, but do not create any commit with
 these changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pick--ffnextcode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pick--ffnext"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitcherry-pick--ffnextcode"></a><code>git cherry-pick --ff ..next</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitcherry-pick--ffnextcode"><a id="Documentation/git-cherry-pick.txt-gitcherry-pick--ffnext" class="anchor" href="#Documentation/git-cherry-pick.txt-gitcherry-pick--ffnext"></a><code>git cherry-pick --ff ..next</code> </dt>
 <dd>
 <p>If history is linear and HEAD is an ancestor of next, update
 the working tree and advance the HEAD pointer to match next.
@@ -279,7 +279,7 @@ Otherwise, apply the changes introduced by those commits that
 are in next but not HEAD to the current branch, creating a new
 commit for each new change.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitrev-list--reversemaster--READMEgitcherry-pick-n--stdincode"> <a class="anchor" href="#Documentation/git-cherry-pick.txt-gitrev-list--reversemaster--READMEgitcherry-pick-n--stdin"></a> <a class="anchor" href="#Documentation/git-cherry-pick.txt-codegitrev-list--reversemaster--READMEgitcherry-pick-n--stdincode"></a><code>git rev-list --reverse master -- README | git cherry-pick -n --stdin</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cherry-pick.txt-codegitrev-list--reversemaster--READMEgitcherry-pick-n--stdincode"><a id="Documentation/git-cherry-pick.txt-gitrev-list--reversemaster--READMEgitcherry-pick-n--stdin" class="anchor" href="#Documentation/git-cherry-pick.txt-gitrev-list--reversemaster--READMEgitcherry-pick-n--stdin"></a><code>git rev-list --reverse master -- README | git cherry-pick -n --stdin</code> </dt>
 <dd>
 <p>Apply the changes introduced by all commits on the master
 branch that touched README to the working tree and index,

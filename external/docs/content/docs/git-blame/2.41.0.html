@@ -83,22 +83,22 @@ ea4c7f9bf69e781dd0cd88d2bccb2bf5cc15c9a7 git-blame: Make the output</pre>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-blame.txt--b"> <a class="anchor" href="#Documentation/git-blame.txt--b"></a>-b </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--b"><a class="anchor" href="#Documentation/git-blame.txt--b"></a>-b </dt>
 <dd>
 <p>Show blank SHA-1 for boundary commits.  This can also
 be controlled via the <code>blame.blankBoundary</code> config option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---root"> <a class="anchor" href="#Documentation/git-blame.txt---root"></a>--root </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---root"><a class="anchor" href="#Documentation/git-blame.txt---root"></a>--root </dt>
 <dd>
 <p>Do not treat root commits as boundaries.  This can also be
 controlled via the <code>blame.showRoot</code> config option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---show-stats"> <a class="anchor" href="#Documentation/git-blame.txt---show-stats"></a>--show-stats </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---show-stats"><a class="anchor" href="#Documentation/git-blame.txt---show-stats"></a>--show-stats </dt>
 <dd>
 <p>Include additional statistics at the end of blame output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--Lltstartgtltendgt"> <a class="anchor" href="#Documentation/git-blame.txt--Lstartend"></a> <a class="anchor" href="#Documentation/git-blame.txt--Lltstartgtltendgt"></a>-L &lt;start&gt;,&lt;end&gt; </dt>
-<dt class="hdlist1" id="Documentation/git-blame.txt--Lltfuncnamegt"> <a class="anchor" href="#Documentation/git-blame.txt--Lfuncname"></a> <a class="anchor" href="#Documentation/git-blame.txt--Lltfuncnamegt"></a>-L :&lt;funcname&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--Lltstartgtltendgt"><a id="Documentation/git-blame.txt--Lstartend" class="anchor" href="#Documentation/git-blame.txt--Lstartend"></a>-L &lt;start&gt;,&lt;end&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--Lltfuncnamegt"><a id="Documentation/git-blame.txt--Lfuncname" class="anchor" href="#Documentation/git-blame.txt--Lfuncname"></a>-L :&lt;funcname&gt; </dt>
 <dd>
 <p>Annotate only the line range given by <em>&lt;start&gt;,&lt;end&gt;</em>,
 or by the function name regex <em>&lt;funcname&gt;</em>.
@@ -150,19 +150,19 @@ works out patch hunk headers (see <em>Defining a custom hunk-header</em>
 in <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>).</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--l"> <a class="anchor" href="#Documentation/git-blame.txt--l"></a>-l </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--l"><a class="anchor" href="#Documentation/git-blame.txt--l"></a>-l </dt>
 <dd>
 <p>Show long rev (Default: off).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--t"> <a class="anchor" href="#Documentation/git-blame.txt--t"></a>-t </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--t"><a class="anchor" href="#Documentation/git-blame.txt--t"></a>-t </dt>
 <dd>
 <p>Show raw timestamp (Default: off).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--Sltrevs-filegt"> <a class="anchor" href="#Documentation/git-blame.txt--Srevs-file"></a> <a class="anchor" href="#Documentation/git-blame.txt--Sltrevs-filegt"></a>-S &lt;revs-file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--Sltrevs-filegt"><a id="Documentation/git-blame.txt--Srevs-file" class="anchor" href="#Documentation/git-blame.txt--Srevs-file"></a>-S &lt;revs-file&gt; </dt>
 <dd>
 <p>Use revisions from revs-file instead of calling <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---reverseltrevgtltrevgt"> <a class="anchor" href="#Documentation/git-blame.txt---reverserevrev"></a> <a class="anchor" href="#Documentation/git-blame.txt---reverseltrevgtltrevgt"></a>--reverse &lt;rev&gt;..&lt;rev&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---reverseltrevgtltrevgt"><a id="Documentation/git-blame.txt---reverserevrev" class="anchor" href="#Documentation/git-blame.txt---reverserevrev"></a>--reverse &lt;rev&gt;..&lt;rev&gt; </dt>
 <dd>
 <p>Walk history forward instead of backward. Instead of showing
 the revision in which a line appeared, this shows the last
@@ -171,30 +171,30 @@ revision like START..END where the path to blame exists in
 START.  <code>git blame --reverse START</code> is taken as <code>git blame
 --reverse START..HEAD</code> for convenience.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---first-parent"> <a class="anchor" href="#Documentation/git-blame.txt---first-parent"></a>--first-parent </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---first-parent"><a class="anchor" href="#Documentation/git-blame.txt---first-parent"></a>--first-parent </dt>
 <dd>
 <p>Follow only the first parent commit upon seeing a merge
 commit. This option can be used to determine when a line
 was introduced to a particular integration branch, rather
 than when it was introduced to the history overall.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--p"> <a class="anchor" href="#Documentation/git-blame.txt--p"></a>-p </dt>
-<dt class="hdlist1" id="Documentation/git-blame.txt---porcelain"> <a class="anchor" href="#Documentation/git-blame.txt---porcelain"></a>--porcelain </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--p"><a class="anchor" href="#Documentation/git-blame.txt--p"></a>-p </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---porcelain"><a class="anchor" href="#Documentation/git-blame.txt---porcelain"></a>--porcelain </dt>
 <dd>
 <p>Show in a format designed for machine consumption.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---line-porcelain"> <a class="anchor" href="#Documentation/git-blame.txt---line-porcelain"></a>--line-porcelain </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---line-porcelain"><a class="anchor" href="#Documentation/git-blame.txt---line-porcelain"></a>--line-porcelain </dt>
 <dd>
 <p>Show the porcelain format, but output commit information for
 each line, not just the first time a commit is referenced.
 Implies --porcelain.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---incremental"> <a class="anchor" href="#Documentation/git-blame.txt---incremental"></a>--incremental </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---incremental"><a class="anchor" href="#Documentation/git-blame.txt---incremental"></a>--incremental </dt>
 <dd>
 <p>Show the result incrementally in a format designed for
 machine consumption.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---encodingltencodinggt"> <a class="anchor" href="#Documentation/git-blame.txt---encodingencoding"></a> <a class="anchor" href="#Documentation/git-blame.txt---encodingltencodinggt"></a>--encoding=&lt;encoding&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---encodingltencodinggt"><a id="Documentation/git-blame.txt---encodingencoding" class="anchor" href="#Documentation/git-blame.txt---encodingencoding"></a>--encoding=&lt;encoding&gt; </dt>
 <dd>
 <p>Specifies the encoding used to output author names
 and commit summaries. Setting it to <code>none</code> makes blame
@@ -202,13 +202,13 @@ output unconverted data. For more information see the
 discussion about encoding in the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>
 manual page.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---contentsltfilegt"> <a class="anchor" href="#Documentation/git-blame.txt---contentsfile"></a> <a class="anchor" href="#Documentation/git-blame.txt---contentsltfilegt"></a>--contents &lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---contentsltfilegt"><a id="Documentation/git-blame.txt---contentsfile" class="anchor" href="#Documentation/git-blame.txt---contentsfile"></a>--contents &lt;file&gt; </dt>
 <dd>
 <p>Annotate using the contents from the named file, starting from &lt;rev&gt;
 if it is specified, and HEAD otherwise. You may specify <em>-</em> to make
 the command read from the standard input for the file contents.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---dateltformatgt"> <a class="anchor" href="#Documentation/git-blame.txt---dateformat"></a> <a class="anchor" href="#Documentation/git-blame.txt---dateltformatgt"></a>--date &lt;format&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---dateltformatgt"><a id="Documentation/git-blame.txt---dateformat" class="anchor" href="#Documentation/git-blame.txt---dateformat"></a>--date &lt;format&gt; </dt>
 <dd>
 <p>Specifies the format used to output dates. If --date is not
 provided, the value of the blame.date config variable is
@@ -216,7 +216,7 @@ used. If the blame.date config variable is also not set, the
 iso format is used. For supported values, see the discussion
 of the --date option at <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---no-progress"> <a class="anchor" href="#Documentation/git-blame.txt---no-progress"></a>--[no-]progress </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---no-progress"><a class="anchor" href="#Documentation/git-blame.txt---no-progress"></a>--[no-]progress </dt>
 <dd>
 <p>Progress status is reported on the standard error stream
 by default when it is attached to a terminal. This flag
@@ -224,7 +224,7 @@ enables progress reporting even if not attached to a
 terminal. Can&#8217;t use <code>--progress</code> together with <code>--porcelain</code>
 or <code>--incremental</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--Mltnumgt"> <a class="anchor" href="#Documentation/git-blame.txt--Mnum"></a> <a class="anchor" href="#Documentation/git-blame.txt--Mltnumgt"></a>-M[&lt;num&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--Mltnumgt"><a id="Documentation/git-blame.txt--Mnum" class="anchor" href="#Documentation/git-blame.txt--Mnum"></a>-M[&lt;num&gt;] </dt>
 <dd>
 <p>Detect moved or copied lines within a file. When a commit
 moves or copies a block of lines (e.g. the original file
@@ -242,7 +242,7 @@ within a file for it to associate those lines with the parent
 commit. The default value is 20.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--Cltnumgt"> <a class="anchor" href="#Documentation/git-blame.txt--Cnum"></a> <a class="anchor" href="#Documentation/git-blame.txt--Cltnumgt"></a>-C[&lt;num&gt;] </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--Cltnumgt"><a id="Documentation/git-blame.txt--Cnum" class="anchor" href="#Documentation/git-blame.txt--Cnum"></a>-C[&lt;num&gt;] </dt>
 <dd>
 <p>In addition to <code>-M</code>, detect lines moved or copied from other
 files that were modified in the same commit.  This is
@@ -261,7 +261,7 @@ commit. And the default value is 40. If there are more than one
 take effect.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---ignore-revltrevgt"> <a class="anchor" href="#Documentation/git-blame.txt---ignore-revrev"></a> <a class="anchor" href="#Documentation/git-blame.txt---ignore-revltrevgt"></a>--ignore-rev &lt;rev&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---ignore-revltrevgt"><a id="Documentation/git-blame.txt---ignore-revrev" class="anchor" href="#Documentation/git-blame.txt---ignore-revrev"></a>--ignore-rev &lt;rev&gt; </dt>
 <dd>
 <p>Ignore changes made by the revision when assigning blame, as if the
 change never happened.  Lines that were changed or added by an ignored
@@ -274,7 +274,7 @@ another commit will be marked with a <code>?</code> in the blame output.  If the
 by an ignored commit that we could not attribute to another revision are
 marked with a <em>*</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---ignore-revs-fileltfilegt"> <a class="anchor" href="#Documentation/git-blame.txt---ignore-revs-filefile"></a> <a class="anchor" href="#Documentation/git-blame.txt---ignore-revs-fileltfilegt"></a>--ignore-revs-file &lt;file&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---ignore-revs-fileltfilegt"><a id="Documentation/git-blame.txt---ignore-revs-filefile" class="anchor" href="#Documentation/git-blame.txt---ignore-revs-filefile"></a>--ignore-revs-file &lt;file&gt; </dt>
 <dd>
 <p>Ignore revisions listed in <code>file</code>, which must be in the same format as an
 <code>fsck.skipList</code>.  This option may be repeated, and these files will be
@@ -282,28 +282,28 @@ processed after any files specified with the <code>blame.ignoreRevsFile</code> c
 option.  An empty file name, <code>""</code>, will clear the list of revs from
 previously processed files.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---color-lines"> <a class="anchor" href="#Documentation/git-blame.txt---color-lines"></a>--color-lines </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---color-lines"><a class="anchor" href="#Documentation/git-blame.txt---color-lines"></a>--color-lines </dt>
 <dd>
 <p>Color line annotations in the default format differently if they come from
 the same commit as the preceding line. This makes it easier to distinguish
 code blocks introduced by different commits. The color defaults to cyan and
 can be adjusted using the <code>color.blame.repeatedLines</code> config option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---color-by-age"> <a class="anchor" href="#Documentation/git-blame.txt---color-by-age"></a>--color-by-age </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---color-by-age"><a class="anchor" href="#Documentation/git-blame.txt---color-by-age"></a>--color-by-age </dt>
 <dd>
 <p>Color line annotations depending on the age of the line in the default format.
 The <code>color.blame.highlightRecent</code> config option controls what color is used for
 each range of age.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--h"> <a class="anchor" href="#Documentation/git-blame.txt--h"></a>-h </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--h"><a class="anchor" href="#Documentation/git-blame.txt--h"></a>-h </dt>
 <dd>
 <p>Show help message.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--c"> <a class="anchor" href="#Documentation/git-blame.txt--c"></a>-c </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--c"><a class="anchor" href="#Documentation/git-blame.txt--c"></a>-c </dt>
 <dd>
 <p>Use the same output mode as <a href='{{< relurl "docs/git-annotate" >}}'>git-annotate[1]</a> (Default: off).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---score-debug"> <a class="anchor" href="#Documentation/git-blame.txt---score-debug"></a>--score-debug </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---score-debug"><a class="anchor" href="#Documentation/git-blame.txt---score-debug"></a>--score-debug </dt>
 <dd>
 <p>Include debugging information related to the movement of
 lines between files (see <code>-C</code>) and lines moved within a
@@ -313,35 +313,35 @@ as having been moved between or within files.  This must be above
 a certain threshold for <em>git blame</em> to consider those lines
 of code to have been moved.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--f"> <a class="anchor" href="#Documentation/git-blame.txt--f"></a>-f </dt>
-<dt class="hdlist1" id="Documentation/git-blame.txt---show-name"> <a class="anchor" href="#Documentation/git-blame.txt---show-name"></a>--show-name </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--f"><a class="anchor" href="#Documentation/git-blame.txt--f"></a>-f </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---show-name"><a class="anchor" href="#Documentation/git-blame.txt---show-name"></a>--show-name </dt>
 <dd>
 <p>Show the filename in the original commit.  By default
 the filename is shown if there is any line that came from a
 file with a different name, due to rename detection.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--n"> <a class="anchor" href="#Documentation/git-blame.txt--n"></a>-n </dt>
-<dt class="hdlist1" id="Documentation/git-blame.txt---show-number"> <a class="anchor" href="#Documentation/git-blame.txt---show-number"></a>--show-number </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--n"><a class="anchor" href="#Documentation/git-blame.txt--n"></a>-n </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---show-number"><a class="anchor" href="#Documentation/git-blame.txt---show-number"></a>--show-number </dt>
 <dd>
 <p>Show the line number in the original commit (Default: off).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--s"> <a class="anchor" href="#Documentation/git-blame.txt--s"></a>-s </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--s"><a class="anchor" href="#Documentation/git-blame.txt--s"></a>-s </dt>
 <dd>
 <p>Suppress the author name and timestamp from the output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--e"> <a class="anchor" href="#Documentation/git-blame.txt--e"></a>-e </dt>
-<dt class="hdlist1" id="Documentation/git-blame.txt---show-email"> <a class="anchor" href="#Documentation/git-blame.txt---show-email"></a>--show-email </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--e"><a class="anchor" href="#Documentation/git-blame.txt--e"></a>-e </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---show-email"><a class="anchor" href="#Documentation/git-blame.txt---show-email"></a>--show-email </dt>
 <dd>
 <p>Show the author email instead of author name (Default: off).
 This can also be controlled via the <code>blame.showEmail</code> config
 option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt--w"> <a class="anchor" href="#Documentation/git-blame.txt--w"></a>-w </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt--w"><a class="anchor" href="#Documentation/git-blame.txt--w"></a>-w </dt>
 <dd>
 <p>Ignore whitespace when comparing the parent&#8217;s version and
 the child&#8217;s to find where the lines came from.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt---abbrevltngt"> <a class="anchor" href="#Documentation/git-blame.txt---abbrevn"></a> <a class="anchor" href="#Documentation/git-blame.txt---abbrevltngt"></a>--abbrev=&lt;n&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt---abbrevltngt"><a id="Documentation/git-blame.txt---abbrevn" class="anchor" href="#Documentation/git-blame.txt---abbrevn"></a>--abbrev=&lt;n&gt; </dt>
 <dd>
 <p>Instead of using the default 7+1 hexadecimal digits as the
 abbreviated object name, use &lt;m&gt;+1 digits, where &lt;m&gt; is at
@@ -606,34 +606,34 @@ as what&#8217;s found there:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blameblankBoundary"> <a class="anchor" href="#Documentation/git-blame.txt-blameblankBoundary"></a>blame.blankBoundary </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blameblankBoundary"><a class="anchor" href="#Documentation/git-blame.txt-blameblankBoundary"></a>blame.blankBoundary </dt>
 <dd>
 <p>Show blank commit object name for boundary commits in
 <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>. This option defaults to false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blamecoloring"> <a class="anchor" href="#Documentation/git-blame.txt-blamecoloring"></a>blame.coloring </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blamecoloring"><a class="anchor" href="#Documentation/git-blame.txt-blamecoloring"></a>blame.coloring </dt>
 <dd>
 <p>This determines the coloring scheme to be applied to blame
 output. It can be <em>repeatedLines</em>, <em>highlightRecent</em>,
 or <em>none</em> which is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blamedate"> <a class="anchor" href="#Documentation/git-blame.txt-blamedate"></a>blame.date </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blamedate"><a class="anchor" href="#Documentation/git-blame.txt-blamedate"></a>blame.date </dt>
 <dd>
 <p>Specifies the format used to output dates in <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.
 If unset the iso format is used. For supported values,
 see the discussion of the <code>--date</code> option at <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blameshowEmail"> <a class="anchor" href="#Documentation/git-blame.txt-blameshowEmail"></a>blame.showEmail </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blameshowEmail"><a class="anchor" href="#Documentation/git-blame.txt-blameshowEmail"></a>blame.showEmail </dt>
 <dd>
 <p>Show the author email instead of author name in <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.
 This option defaults to false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blameshowRoot"> <a class="anchor" href="#Documentation/git-blame.txt-blameshowRoot"></a>blame.showRoot </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blameshowRoot"><a class="anchor" href="#Documentation/git-blame.txt-blameshowRoot"></a>blame.showRoot </dt>
 <dd>
 <p>Do not treat root commits as boundaries in <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.
 This option defaults to false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blameignoreRevsFile"> <a class="anchor" href="#Documentation/git-blame.txt-blameignoreRevsFile"></a>blame.ignoreRevsFile </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blameignoreRevsFile"><a class="anchor" href="#Documentation/git-blame.txt-blameignoreRevsFile"></a>blame.ignoreRevsFile </dt>
 <dd>
 <p>Ignore revisions listed in the file, one unabbreviated object name per
 line, in <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.  Whitespace and comments beginning with
@@ -641,13 +641,13 @@ line, in <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.  Whitespace
 file names will reset the list of ignored revisions.  This option will
 be handled before the command line option <code>--ignore-revs-file</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blamemarkUnblamableLines"> <a class="anchor" href="#Documentation/git-blame.txt-blamemarkUnblamableLines"></a>blame.markUnblamableLines </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blamemarkUnblamableLines"><a class="anchor" href="#Documentation/git-blame.txt-blamemarkUnblamableLines"></a>blame.markUnblamableLines </dt>
 <dd>
 <p>Mark lines that were changed by an ignored revision that we could not
 attribute to another commit with a <em>*</em> in the output of
 <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-blame.txt-blamemarkIgnoredLines"> <a class="anchor" href="#Documentation/git-blame.txt-blamemarkIgnoredLines"></a>blame.markIgnoredLines </dt>
+<dt class="hdlist1" id="Documentation/git-blame.txt-blamemarkIgnoredLines"><a class="anchor" href="#Documentation/git-blame.txt-blamemarkIgnoredLines"></a>blame.markIgnoredLines </dt>
 <dd>
 <p>Mark lines that were changed by an ignored revision that we attributed to
 another commit with a <em>?</em> in the output of <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>.</p>

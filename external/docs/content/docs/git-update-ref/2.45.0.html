@@ -148,53 +148,53 @@ repeated &lt;ref&gt; produce an error.  Command meanings are:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-update"> <a class="anchor" href="#Documentation/git-update-ref.txt-update"></a>update </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-update"><a class="anchor" href="#Documentation/git-update-ref.txt-update"></a>update </dt>
 <dd>
 <p>Set &lt;ref&gt; to &lt;new-oid&gt; after verifying &lt;old-oid&gt;, if given.
 Specify a zero &lt;new-oid&gt; to ensure the ref does not exist
 after the update and/or a zero &lt;old-oid&gt; to make sure the
 ref does not exist before the update.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-create"> <a class="anchor" href="#Documentation/git-update-ref.txt-create"></a>create </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-create"><a class="anchor" href="#Documentation/git-update-ref.txt-create"></a>create </dt>
 <dd>
 <p>Create &lt;ref&gt; with &lt;new-oid&gt; after verifying it does not
 exist.  The given &lt;new-oid&gt; may not be zero.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-delete"> <a class="anchor" href="#Documentation/git-update-ref.txt-delete"></a>delete </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-delete"><a class="anchor" href="#Documentation/git-update-ref.txt-delete"></a>delete </dt>
 <dd>
 <p>Delete &lt;ref&gt; after verifying it exists with &lt;old-oid&gt;, if
 given.  If given, &lt;old-oid&gt; may not be zero.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-verify"> <a class="anchor" href="#Documentation/git-update-ref.txt-verify"></a>verify </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-verify"><a class="anchor" href="#Documentation/git-update-ref.txt-verify"></a>verify </dt>
 <dd>
 <p>Verify &lt;ref&gt; against &lt;old-oid&gt; but do not change it.  If
 &lt;old-oid&gt; is zero or missing, the ref must not exist.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-option"> <a class="anchor" href="#Documentation/git-update-ref.txt-option"></a>option </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-option"><a class="anchor" href="#Documentation/git-update-ref.txt-option"></a>option </dt>
 <dd>
 <p>Modify the behavior of the next command naming a &lt;ref&gt;.
 The only valid option is <code>no-deref</code> to avoid dereferencing
 a symbolic ref.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-start"> <a class="anchor" href="#Documentation/git-update-ref.txt-start"></a>start </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-start"><a class="anchor" href="#Documentation/git-update-ref.txt-start"></a>start </dt>
 <dd>
 <p>Start a transaction. In contrast to a non-transactional session, a
 transaction will automatically abort if the session ends without an
 explicit commit. This command may create a new empty transaction when
 the current one has been committed or aborted already.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-prepare"> <a class="anchor" href="#Documentation/git-update-ref.txt-prepare"></a>prepare </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-prepare"><a class="anchor" href="#Documentation/git-update-ref.txt-prepare"></a>prepare </dt>
 <dd>
 <p>Prepare to commit the transaction. This will create lock files for all
 queued reference updates. If one reference could not be locked, the
 transaction will be aborted.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-commit"> <a class="anchor" href="#Documentation/git-update-ref.txt-commit"></a>commit </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-commit"><a class="anchor" href="#Documentation/git-update-ref.txt-commit"></a>commit </dt>
 <dd>
 <p>Commit all reference updates queued for the transaction, ending the
 transaction.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-update-ref.txt-abort"> <a class="anchor" href="#Documentation/git-update-ref.txt-abort"></a>abort </dt>
+<dt class="hdlist1" id="Documentation/git-update-ref.txt-abort"><a class="anchor" href="#Documentation/git-update-ref.txt-abort"></a>abort </dt>
 <dd>
 <p>Abort the transaction, releasing all locks if the transaction is in
 prepared state.</p>

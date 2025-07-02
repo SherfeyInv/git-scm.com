@@ -14,7 +14,7 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffautorefreshindex"> <a class="anchor" href="#Documentation/diff-config.txt-diffautorefreshindex"></a>diff.autorefreshindex </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffautorefreshindex"><a class="anchor" href="#Documentation/diff-config.txt-diffautorefreshindex"></a>diff.autorefreshindex </dt>
 <dd>
 <p>When using <em>git diff</em> to compare with work tree
 files, do not consider stat-only change as changed.
@@ -25,7 +25,7 @@ index.  This option defaults to true.  Note that this
 affects only <em>git diff</em> Porcelain, and not lower level
 <em>diff</em> commands such as <em>git diff-files</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffdirstat"> <a class="anchor" href="#Documentation/diff-config.txt-diffdirstat"></a>diff.dirstat </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffdirstat"><a class="anchor" href="#Documentation/diff-config.txt-diffdirstat"></a>diff.dirstat </dt>
 <dd>
 <p>A comma separated list of <code>--dirstat</code> parameters specifying the
 default behavior of the <code>--dirstat</code> option to <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>`
@@ -37,7 +37,7 @@ The following parameters are available:</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codechangescode"> <a class="anchor" href="#Documentation/diff-config.txt-changes"></a> <a class="anchor" href="#Documentation/diff-config.txt-codechangescode"></a><code>changes</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codechangescode"><a id="Documentation/diff-config.txt-changes" class="anchor" href="#Documentation/diff-config.txt-changes"></a><code>changes</code> </dt>
 <dd>
 <p>Compute the dirstat numbers by counting the lines that have been
 removed from the source, or added to the destination. This ignores
@@ -45,7 +45,7 @@ the amount of pure code movements within a file.  In other words,
 rearranging lines in a file is not counted as much as other changes.
 This is the default behavior when no parameter is given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codelinescode"> <a class="anchor" href="#Documentation/diff-config.txt-lines"></a> <a class="anchor" href="#Documentation/diff-config.txt-codelinescode"></a><code>lines</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codelinescode"><a id="Documentation/diff-config.txt-lines" class="anchor" href="#Documentation/diff-config.txt-lines"></a><code>lines</code> </dt>
 <dd>
 <p>Compute the dirstat numbers by doing the regular line-based diff
 analysis, and summing the removed/added line counts. (For binary
@@ -55,21 +55,21 @@ behavior than the <code>changes</code> behavior, but it does count rearranged
 lines within a file as much as other changes. The resulting output
 is consistent with what you get from the other <code>--*stat</code> options.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codefilescode"> <a class="anchor" href="#Documentation/diff-config.txt-files"></a> <a class="anchor" href="#Documentation/diff-config.txt-codefilescode"></a><code>files</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codefilescode"><a id="Documentation/diff-config.txt-files" class="anchor" href="#Documentation/diff-config.txt-files"></a><code>files</code> </dt>
 <dd>
 <p>Compute the dirstat numbers by counting the number of files changed.
 Each changed file counts equally in the dirstat analysis. This is
 the computationally cheapest <code>--dirstat</code> behavior, since it does
 not have to look at the file contents at all.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codecumulativecode"> <a class="anchor" href="#Documentation/diff-config.txt-cumulative"></a> <a class="anchor" href="#Documentation/diff-config.txt-codecumulativecode"></a><code>cumulative</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codecumulativecode"><a id="Documentation/diff-config.txt-cumulative" class="anchor" href="#Documentation/diff-config.txt-cumulative"></a><code>cumulative</code> </dt>
 <dd>
 <p>Count changes in a child directory for the parent directory as well.
 Note that when using <code>cumulative</code>, the sum of the percentages
 reported may exceed 100%. The default (non-cumulative) behavior can
 be specified with the <code>noncumulative</code> parameter.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-ltlimitgt"> <a class="anchor" href="#Documentation/diff-config.txt-limit"></a> <a class="anchor" href="#Documentation/diff-config.txt-ltlimitgt"></a>&lt;limit&gt; </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-ltlimitgt"><a id="Documentation/diff-config.txt-limit" class="anchor" href="#Documentation/diff-config.txt-limit"></a>&lt;limit&gt; </dt>
 <dd>
 <p>An integer parameter specifies a cut-off percent (3% by default).
 Directories contributing less than this percentage of the changes
@@ -86,17 +86,17 @@ and accumulating child directory counts in the parent directories:
 <code>files,10,cumulative</code>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffstatGraphWidth"> <a class="anchor" href="#Documentation/diff-config.txt-diffstatGraphWidth"></a>diff.statGraphWidth </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffstatGraphWidth"><a class="anchor" href="#Documentation/diff-config.txt-diffstatGraphWidth"></a>diff.statGraphWidth </dt>
 <dd>
 <p>Limit the width of the graph part in --stat output. If set, applies
 to all commands generating --stat output except format-patch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffcontext"> <a class="anchor" href="#Documentation/diff-config.txt-diffcontext"></a>diff.context </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffcontext"><a class="anchor" href="#Documentation/diff-config.txt-diffcontext"></a>diff.context </dt>
 <dd>
 <p>Generate diffs with &lt;n&gt; lines of context instead of the default
 of 3. This value is overridden by the -U option.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffexternal"> <a class="anchor" href="#Documentation/diff-config.txt-diffexternal"></a>diff.external </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffexternal"><a class="anchor" href="#Documentation/diff-config.txt-diffexternal"></a>diff.external </dt>
 <dd>
 <p>If this config variable is set, diff generation is not
 performed using the internal diff machinery, but using the
@@ -106,7 +106,7 @@ as described under "git Diffs" in <a href='{{< relurl "docs/git" >}}'>git[1]</a>
 you want to use an external diff program only on a subset of
 your files, you	might want to use <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffignoreSubmodules"> <a class="anchor" href="#Documentation/diff-config.txt-diffignoreSubmodules"></a>diff.ignoreSubmodules </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffignoreSubmodules"><a class="anchor" href="#Documentation/diff-config.txt-diffignoreSubmodules"></a>diff.ignoreSubmodules </dt>
 <dd>
 <p>Sets the default value of --ignore-submodules. Note that this
 affects only <em>git diff</em> Porcelain, and not lower level <em>diff</em>
@@ -117,7 +117,7 @@ and <em>git status</em> when <em>status.submodulesummary</em> is set unless it i
 overridden by using the --ignore-submodules command-line option.
 The <em>git submodule</em> commands are not affected by this setting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffmnemonicprefix"> <a class="anchor" href="#Documentation/diff-config.txt-diffmnemonicprefix"></a>diff.mnemonicprefix </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffmnemonicprefix"><a class="anchor" href="#Documentation/diff-config.txt-diffmnemonicprefix"></a>diff.mnemonicprefix </dt>
 <dd>
 <p>If set, <em>git diff</em> uses a prefix pair that is different from the
 standard "a/" and "b/" depending on what is being compared.  When
@@ -125,56 +125,56 @@ this configuration is in effect, reverse diff output also swaps
 the order of the prefixes:</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffcode"> <a class="anchor" href="#Documentation/diff-config.txt-gitdiff"></a> <a class="anchor" href="#Documentation/diff-config.txt-codegitdiffcode"></a><code>git diff</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffcode"><a id="Documentation/diff-config.txt-gitdiff" class="anchor" href="#Documentation/diff-config.txt-gitdiff"></a><code>git diff</code> </dt>
 <dd>
 <p>compares the (i)ndex and the (w)ork tree;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffHEADcode"> <a class="anchor" href="#Documentation/diff-config.txt-gitdiffHEAD"></a> <a class="anchor" href="#Documentation/diff-config.txt-codegitdiffHEADcode"></a><code>git diff HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffHEADcode"><a id="Documentation/diff-config.txt-gitdiffHEAD" class="anchor" href="#Documentation/diff-config.txt-gitdiffHEAD"></a><code>git diff HEAD</code> </dt>
 <dd>
 <p>compares a (c)ommit and the (w)ork tree;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiff--cachedcode"> <a class="anchor" href="#Documentation/diff-config.txt-gitdiff--cached"></a> <a class="anchor" href="#Documentation/diff-config.txt-codegitdiff--cachedcode"></a><code>git diff --cached</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiff--cachedcode"><a id="Documentation/diff-config.txt-gitdiff--cached" class="anchor" href="#Documentation/diff-config.txt-gitdiff--cached"></a><code>git diff --cached</code> </dt>
 <dd>
 <p>compares a (c)ommit and the (i)ndex;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffHEADfile1file2code"> <a class="anchor" href="#Documentation/diff-config.txt-gitdiffHEADfile1file2"></a> <a class="anchor" href="#Documentation/diff-config.txt-codegitdiffHEADfile1file2code"></a><code>git diff HEAD:file1 file2</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffHEADfile1file2code"><a id="Documentation/diff-config.txt-gitdiffHEADfile1file2" class="anchor" href="#Documentation/diff-config.txt-gitdiffHEADfile1file2"></a><code>git diff HEAD:file1 file2</code> </dt>
 <dd>
 <p>compares an (o)bject and a (w)ork tree entity;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiff--no-indexabcode"> <a class="anchor" href="#Documentation/diff-config.txt-gitdiff--no-indexab"></a> <a class="anchor" href="#Documentation/diff-config.txt-codegitdiff--no-indexabcode"></a><code>git diff --no-index a b</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiff--no-indexabcode"><a id="Documentation/diff-config.txt-gitdiff--no-indexab" class="anchor" href="#Documentation/diff-config.txt-gitdiff--no-indexab"></a><code>git diff --no-index a b</code> </dt>
 <dd>
 <p>compares two non-git things (1) and (2).</p>
 </dd>
 </dl>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffnoprefix"> <a class="anchor" href="#Documentation/diff-config.txt-diffnoprefix"></a>diff.noprefix </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffnoprefix"><a class="anchor" href="#Documentation/diff-config.txt-diffnoprefix"></a>diff.noprefix </dt>
 <dd>
 <p>If set, <em>git diff</em> does not show any source or destination prefix.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-difforderfile"> <a class="anchor" href="#Documentation/diff-config.txt-difforderfile"></a>diff.orderfile </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-difforderfile"><a class="anchor" href="#Documentation/diff-config.txt-difforderfile"></a>diff.orderfile </dt>
 <dd>
 <p>File indicating how to order files within a diff, using
 one shell glob pattern per line.
 Can be overridden by the <em>-O</em> option to <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffrenameLimit"> <a class="anchor" href="#Documentation/diff-config.txt-diffrenameLimit"></a>diff.renameLimit </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffrenameLimit"><a class="anchor" href="#Documentation/diff-config.txt-diffrenameLimit"></a>diff.renameLimit </dt>
 <dd>
 <p>The number of files to consider when performing the copy/rename
 detection; equivalent to the <em>git diff</em> option <em>-l</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffrenames"> <a class="anchor" href="#Documentation/diff-config.txt-diffrenames"></a>diff.renames </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffrenames"><a class="anchor" href="#Documentation/diff-config.txt-diffrenames"></a>diff.renames </dt>
 <dd>
 <p>Tells Git to detect renames.  If set to any boolean value, it
 will enable basic rename detection.  If set to "copies" or
 "copy", it will detect copies, as well.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffsuppressBlankEmpty"> <a class="anchor" href="#Documentation/diff-config.txt-diffsuppressBlankEmpty"></a>diff.suppressBlankEmpty </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffsuppressBlankEmpty"><a class="anchor" href="#Documentation/diff-config.txt-diffsuppressBlankEmpty"></a>diff.suppressBlankEmpty </dt>
 <dd>
 <p>A boolean to inhibit the standard behavior of printing a space
 before each empty output line. Defaults to false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffsubmodule"> <a class="anchor" href="#Documentation/diff-config.txt-diffsubmodule"></a>diff.submodule </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffsubmodule"><a class="anchor" href="#Documentation/diff-config.txt-diffsubmodule"></a>diff.submodule </dt>
 <dd>
 <p>Specify the format in which differences in submodules are
 shown.  The "log" format lists the commits in the range like
@@ -182,48 +182,48 @@ shown.  The "log" format lists the commits in the range like
 format just shows the names of the commits at the beginning
 and end of the range.  Defaults to short.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffwordRegex"> <a class="anchor" href="#Documentation/diff-config.txt-diffwordRegex"></a>diff.wordRegex </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffwordRegex"><a class="anchor" href="#Documentation/diff-config.txt-diffwordRegex"></a>diff.wordRegex </dt>
 <dd>
 <p>A POSIX Extended Regular Expression used to determine what is a "word"
 when performing word-by-word difference calculations.  Character
 sequences that match the regular expression are "words", all other
 characters are <strong>ignorable</strong> whitespace.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtcommand"> <a class="anchor" href="#Documentation/diff-config.txt-diffdrivercommand"></a> <a class="anchor" href="#Documentation/diff-config.txt-diffltdrivergtcommand"></a>diff.&lt;driver&gt;.command </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtcommand"><a id="Documentation/diff-config.txt-diffdrivercommand" class="anchor" href="#Documentation/diff-config.txt-diffdrivercommand"></a>diff.&lt;driver&gt;.command </dt>
 <dd>
 <p>The custom diff driver command.  See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>
 for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtxfuncname"> <a class="anchor" href="#Documentation/diff-config.txt-diffdriverxfuncname"></a> <a class="anchor" href="#Documentation/diff-config.txt-diffltdrivergtxfuncname"></a>diff.&lt;driver&gt;.xfuncname </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtxfuncname"><a id="Documentation/diff-config.txt-diffdriverxfuncname" class="anchor" href="#Documentation/diff-config.txt-diffdriverxfuncname"></a>diff.&lt;driver&gt;.xfuncname </dt>
 <dd>
 <p>The regular expression that the diff driver should use to
 recognize the hunk header.  A built-in pattern may also be used.
 See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtbinary"> <a class="anchor" href="#Documentation/diff-config.txt-diffdriverbinary"></a> <a class="anchor" href="#Documentation/diff-config.txt-diffltdrivergtbinary"></a>diff.&lt;driver&gt;.binary </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtbinary"><a id="Documentation/diff-config.txt-diffdriverbinary" class="anchor" href="#Documentation/diff-config.txt-diffdriverbinary"></a>diff.&lt;driver&gt;.binary </dt>
 <dd>
 <p>Set this option to true to make the diff driver treat files as
 binary.  See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergttextconv"> <a class="anchor" href="#Documentation/diff-config.txt-diffdrivertextconv"></a> <a class="anchor" href="#Documentation/diff-config.txt-diffltdrivergttextconv"></a>diff.&lt;driver&gt;.textconv </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergttextconv"><a id="Documentation/diff-config.txt-diffdrivertextconv" class="anchor" href="#Documentation/diff-config.txt-diffdrivertextconv"></a>diff.&lt;driver&gt;.textconv </dt>
 <dd>
 <p>The command that the diff driver should call to generate the
 text-converted version of a file.  The result of the
 conversion is used to generate a human-readable diff.  See
 <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtwordregex"> <a class="anchor" href="#Documentation/diff-config.txt-diffdriverwordregex"></a> <a class="anchor" href="#Documentation/diff-config.txt-diffltdrivergtwordregex"></a>diff.&lt;driver&gt;.wordregex </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtwordregex"><a id="Documentation/diff-config.txt-diffdriverwordregex" class="anchor" href="#Documentation/diff-config.txt-diffdriverwordregex"></a>diff.&lt;driver&gt;.wordregex </dt>
 <dd>
 <p>The regular expression that the diff driver should use to
 split words in a line.  See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for
 details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtcachetextconv"> <a class="anchor" href="#Documentation/diff-config.txt-diffdrivercachetextconv"></a> <a class="anchor" href="#Documentation/diff-config.txt-diffltdrivergtcachetextconv"></a>diff.&lt;driver&gt;.cachetextconv </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffltdrivergtcachetextconv"><a id="Documentation/diff-config.txt-diffdrivercachetextconv" class="anchor" href="#Documentation/diff-config.txt-diffdrivercachetextconv"></a>diff.&lt;driver&gt;.cachetextconv </dt>
 <dd>
 <p>Set this option to true to make the diff driver cache the text
 conversion outputs.  See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-difftool"> <a class="anchor" href="#Documentation/diff-config.txt-difftool"></a>diff.tool </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-difftool"><a class="anchor" href="#Documentation/diff-config.txt-difftool"></a>diff.tool </dt>
 <dd>
 <p>Controls which diff tool is used by <a href='{{< relurl "docs/git-difftool" >}}'>git-difftool[1]</a>.
 This variable overrides the value configured in <code>merge.tool</code>.
@@ -298,27 +298,27 @@ that a corresponding difftool.&lt;tool&gt;.cmd variable is defined.</p>
 </ul>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-diffalgorithm"> <a class="anchor" href="#Documentation/diff-config.txt-diffalgorithm"></a>diff.algorithm </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-diffalgorithm"><a class="anchor" href="#Documentation/diff-config.txt-diffalgorithm"></a>diff.algorithm </dt>
 <dd>
 <p>Choose a diff algorithm.  The variants are as follows:</p>
 <div class="openblock">
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codedefaultcodecodemyerscode"> <a class="anchor" href="#Documentation/diff-config.txt-defaultmyers"></a> <a class="anchor" href="#Documentation/diff-config.txt-codedefaultcodecodemyerscode"></a><code>default</code>, <code>myers</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codedefaultcodecodemyerscode"><a id="Documentation/diff-config.txt-defaultmyers" class="anchor" href="#Documentation/diff-config.txt-defaultmyers"></a><code>default</code>, <code>myers</code> </dt>
 <dd>
 <p>The basic greedy diff algorithm. Currently, this is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codeminimalcode"> <a class="anchor" href="#Documentation/diff-config.txt-minimal"></a> <a class="anchor" href="#Documentation/diff-config.txt-codeminimalcode"></a><code>minimal</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codeminimalcode"><a id="Documentation/diff-config.txt-minimal" class="anchor" href="#Documentation/diff-config.txt-minimal"></a><code>minimal</code> </dt>
 <dd>
 <p>Spend extra time to make sure the smallest possible diff is
 produced.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codepatiencecode"> <a class="anchor" href="#Documentation/diff-config.txt-patience"></a> <a class="anchor" href="#Documentation/diff-config.txt-codepatiencecode"></a><code>patience</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codepatiencecode"><a id="Documentation/diff-config.txt-patience" class="anchor" href="#Documentation/diff-config.txt-patience"></a><code>patience</code> </dt>
 <dd>
 <p>Use "patience diff" algorithm when generating patches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codehistogramcode"> <a class="anchor" href="#Documentation/diff-config.txt-histogram"></a> <a class="anchor" href="#Documentation/diff-config.txt-codehistogramcode"></a><code>histogram</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-codehistogramcode"><a id="Documentation/diff-config.txt-histogram" class="anchor" href="#Documentation/diff-config.txt-histogram"></a><code>histogram</code> </dt>
 <dd>
 <p>This algorithm extends the patience algorithm to "support
 low-occurrence common elements".</p>

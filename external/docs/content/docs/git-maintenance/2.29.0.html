@@ -54,7 +54,7 @@ Git repository.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-run"> <a class="anchor" href="#Documentation/git-maintenance.txt-run"></a>run </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-run"><a class="anchor" href="#Documentation/git-maintenance.txt-run"></a>run </dt>
 <dd>
 <p>Run one or more maintenance tasks. If one or more <code>--task</code> options
 are specified, then those tasks are run in that order. Otherwise,
@@ -71,7 +71,7 @@ is true.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-commit-graph"> <a class="anchor" href="#Documentation/git-maintenance.txt-commit-graph"></a>commit-graph </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-commit-graph"><a class="anchor" href="#Documentation/git-maintenance.txt-commit-graph"></a>commit-graph </dt>
 <dd>
 <p>The <code>commit-graph</code> job updates the <code>commit-graph</code> files incrementally,
 then verifies that the written data is correct. The incremental
@@ -80,7 +80,7 @@ will not expire <code>.graph</code> files that were in the previous
 <code>commit-graph-chain</code> file. They will be deleted by a later run based
 on the expiration delay.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt-gc"> <a class="anchor" href="#Documentation/git-maintenance.txt-gc"></a>gc </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt-gc"><a class="anchor" href="#Documentation/git-maintenance.txt-gc"></a>gc </dt>
 <dd>
 <p>Clean up unnecessary files and optimize the local repository. "GC"
 stands for "garbage collection," but this task performs many
@@ -98,7 +98,7 @@ be disruptive in some situations, as it deletes stale data. See
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---auto"> <a class="anchor" href="#Documentation/git-maintenance.txt---auto"></a>--auto </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---auto"><a class="anchor" href="#Documentation/git-maintenance.txt---auto"></a>--auto </dt>
 <dd>
 <p>When combined with the <code>run</code> subcommand, run maintenance tasks
 only if certain thresholds are met. For example, the <code>gc</code> task
@@ -106,11 +106,11 @@ runs when the number of loose objects exceeds the number stored
 in the <code>gc.auto</code> config setting, or when the number of pack-files
 exceeds the <code>gc.autoPackLimit</code> config setting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---quiet"> <a class="anchor" href="#Documentation/git-maintenance.txt---quiet"></a>--quiet </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---quiet"><a class="anchor" href="#Documentation/git-maintenance.txt---quiet"></a>--quiet </dt>
 <dd>
 <p>Do not report progress or other information over <code>stderr</code>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-maintenance.txt---tasklttaskgt"> <a class="anchor" href="#Documentation/git-maintenance.txt---tasktask"></a> <a class="anchor" href="#Documentation/git-maintenance.txt---tasklttaskgt"></a>--task=&lt;task&gt; </dt>
+<dt class="hdlist1" id="Documentation/git-maintenance.txt---tasklttaskgt"><a id="Documentation/git-maintenance.txt---tasktask" class="anchor" href="#Documentation/git-maintenance.txt---tasktask"></a>--task=&lt;task&gt; </dt>
 <dd>
 <p>If this option is specified one or more times, then only run the
 specified tasks in the specified order. If no <code>--task=&lt;task&gt;</code>
