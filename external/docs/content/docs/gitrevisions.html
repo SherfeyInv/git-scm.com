@@ -81,7 +81,7 @@ your repository whose object name starts with dae86e.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltdescribeOutputgtemegemv1742-679-g3bee7fbem"><a id="Documentation/gitrevisions.txt-describeOutputegv1742-679-g3bee7fb" class="anchor" href="#Documentation/gitrevisions.txt-describeOutputegv1742-679-g3bee7fb"></a><em>&lt;describeOutput&gt;</em>, e.g. <em>v1.7.4.2-679-g3bee7fb</em> </dt>
 <dd>
-<p>Output from <code>git describe</code>; i.e. a closest tag, optionally
+<p>Output from <span class='synopsis'><code>git</code> <code>describe</code></span>; i.e. a closest tag, optionally
 followed by a dash and a number of commits, followed by a dash, a
 <em>g</em>, and an abbreviated object name.</p>
 </dd>
@@ -97,9 +97,9 @@ first match in the following rules:</p>
 <ol class="arabic">
 <li>
 <p>If <em>$GIT_DIR/&lt;refname&gt;</em> exists, that is what you mean (this is usually
-useful only for <code>HEAD</code>, <code>FETCH_HEAD</code>, <code>ORIG_HEAD</code>, <code>MERGE_HEAD</code>,
-<code>REBASE_HEAD</code>, <code>REVERT_HEAD</code>, <code>CHERRY_PICK_HEAD</code>, <code>BISECT_HEAD</code>
-and <code>AUTO_MERGE</code>);</p>
+useful only for <span class='synopsis'><code>HEAD</code></span>, <span class='synopsis'><code>FETCH_HEAD</code></span>, <span class='synopsis'><code>ORIG_HEAD</code></span>, <span class='synopsis'><code>MERGE_HEAD</code></span>,
+<span class='synopsis'><code>REBASE_HEAD</code></span>, <span class='synopsis'><code>REVERT_HEAD</code></span>, <span class='synopsis'><code>CHERRY_PICK_HEAD</code></span>, <span class='synopsis'><code>BISECT_HEAD</code></span>
+and <span class='synopsis'><code>AUTO_MERGE</code></span>);</p>
 </li>
 <li>
 <p>otherwise, <em>refs/&lt;refname&gt;</em> if it exists;</p>
@@ -117,48 +117,51 @@ and <code>AUTO_MERGE</code>);</p>
 <p>otherwise, <em>refs/remotes/&lt;refname&gt;/HEAD</em> if it exists.</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeHEADcode"><a id="Documentation/gitrevisions.txt-HEAD" class="anchor" href="#Documentation/gitrevisions.txt-HEAD"></a><code>HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeHEADcodespan"><a id="Documentation/gitrevisions.txt-HEAD" class="anchor" href="#Documentation/gitrevisions.txt-HEAD"></a><span class='synopsis'><code>HEAD</code></span> </dt>
 <dd>
 <p>names the commit on which you based the changes in the working tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeFETCHHEADcode"><a id="Documentation/gitrevisions.txt-FETCHHEAD" class="anchor" href="#Documentation/gitrevisions.txt-FETCHHEAD"></a><code>FETCH_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeFETCHHEADcodespan"><a id="Documentation/gitrevisions.txt-FETCHHEAD" class="anchor" href="#Documentation/gitrevisions.txt-FETCHHEAD"></a><span class='synopsis'><code>FETCH_HEAD</code></span> </dt>
 <dd>
 <p>records the branch which you fetched from a remote repository with
-your last <code>git fetch</code> invocation.</p>
+your last <span class='synopsis'><code>git</code> <code>fetch</code></span> invocation.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeORIGHEADcode"><a id="Documentation/gitrevisions.txt-ORIGHEAD" class="anchor" href="#Documentation/gitrevisions.txt-ORIGHEAD"></a><code>ORIG_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeORIGHEADcodespan"><a id="Documentation/gitrevisions.txt-ORIGHEAD" class="anchor" href="#Documentation/gitrevisions.txt-ORIGHEAD"></a><span class='synopsis'><code>ORIG_HEAD</code></span> </dt>
 <dd>
-<p>is created by commands that move your <code>HEAD</code> in a drastic way (<code>git
-am</code>, <code>git merge</code>, <code>git rebase</code>, <code>git reset</code>), to record the position
-of the <code>HEAD</code> before their operation, so that you can easily change
+<p>is created by commands that move your <span class='synopsis'><code>HEAD</code></span> in a drastic way (<span class='synopsis'><code>git</code>
+
+<code>am</code></span>, <span class='synopsis'><code>git</code> <code>merge</code></span>, <span class='synopsis'><code>git</code> <code>rebase</code></span>, <span class='synopsis'><code>git</code> <code>reset</code></span>), to record the position
+of the <span class='synopsis'><code>HEAD</code></span> before their operation, so that you can easily change
 the tip of the branch back to the state before you ran them.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeMERGEHEADcode"><a id="Documentation/gitrevisions.txt-MERGEHEAD" class="anchor" href="#Documentation/gitrevisions.txt-MERGEHEAD"></a><code>MERGE_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeMERGEHEADcodespan"><a id="Documentation/gitrevisions.txt-MERGEHEAD" class="anchor" href="#Documentation/gitrevisions.txt-MERGEHEAD"></a><span class='synopsis'><code>MERGE_HEAD</code></span> </dt>
 <dd>
 <p>records the commit(s) which you are merging into your branch when you
-run <code>git merge</code>.</p>
+run <span class='synopsis'><code>git</code> <code>merge</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeREBASEHEADcode"><a id="Documentation/gitrevisions.txt-REBASEHEAD" class="anchor" href="#Documentation/gitrevisions.txt-REBASEHEAD"></a><code>REBASE_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeREBASEHEADcodespan"><a id="Documentation/gitrevisions.txt-REBASEHEAD" class="anchor" href="#Documentation/gitrevisions.txt-REBASEHEAD"></a><span class='synopsis'><code>REBASE_HEAD</code></span> </dt>
 <dd>
 <p>during a rebase, records the commit at which the operation is
-currently stopped, either because of conflicts or an <code>edit</code> command in
+currently stopped, either because of conflicts or an <span class='synopsis'><code>edit</code></span> command in
 an interactive rebase.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeREVERTHEADcode"><a id="Documentation/gitrevisions.txt-REVERTHEAD" class="anchor" href="#Documentation/gitrevisions.txt-REVERTHEAD"></a><code>REVERT_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeREVERTHEADcodespan"><a id="Documentation/gitrevisions.txt-REVERTHEAD" class="anchor" href="#Documentation/gitrevisions.txt-REVERTHEAD"></a><span class='synopsis'><code>REVERT_HEAD</code></span> </dt>
 <dd>
-<p>records the commit which you are reverting when you run <code>git revert</code>.</p>
+<p>records the commit which you are reverting when you run <span class='synopsis'><code>git</code> <code>revert</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeCHERRYPICKHEADcode"><a id="Documentation/gitrevisions.txt-CHERRYPICKHEAD" class="anchor" href="#Documentation/gitrevisions.txt-CHERRYPICKHEAD"></a><code>CHERRY_PICK_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeCHERRYPICKHEADcodespan"><a id="Documentation/gitrevisions.txt-CHERRYPICKHEAD" class="anchor" href="#Documentation/gitrevisions.txt-CHERRYPICKHEAD"></a><span class='synopsis'><code>CHERRY_PICK_HEAD</code></span> </dt>
 <dd>
-<p>records the commit which you are cherry-picking when you run <code>git
-cherry-pick</code>.</p>
+<p>records the commit which you are cherry-picking when you run <span class='synopsis'><code>git</code>
+
+<code>cherry-pick</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeBISECTHEADcode"><a id="Documentation/gitrevisions.txt-BISECTHEAD" class="anchor" href="#Documentation/gitrevisions.txt-BISECTHEAD"></a><code>BISECT_HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeBISECTHEADcodespan"><a id="Documentation/gitrevisions.txt-BISECTHEAD" class="anchor" href="#Documentation/gitrevisions.txt-BISECTHEAD"></a><span class='synopsis'><code>BISECT_HEAD</code></span> </dt>
 <dd>
-<p>records the current commit to be tested when you run <code>git bisect
---no-checkout</code>.</p>
+<p>records the current commit to be tested when you run <span class='synopsis'><code>git</code> <code>bisect</code>
+
+<code>--no-checkout</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrevisions.txt-codeAUTOMERGEcode"><a id="Documentation/gitrevisions.txt-AUTOMERGE" class="anchor" href="#Documentation/gitrevisions.txt-AUTOMERGE"></a><code>AUTO_MERGE</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrevisions.txt-spanclasssynopsiscodeAUTOMERGEcodespan"><a id="Documentation/gitrevisions.txt-AUTOMERGE" class="anchor" href="#Documentation/gitrevisions.txt-AUTOMERGE"></a><span class='synopsis'><code>AUTO_MERGE</code></span> </dt>
 <dd>
 <p>records a tree object corresponding to the state the
 <em>ort</em> merge strategy wrote to the working tree when a merge operation
@@ -171,14 +174,14 @@ resulted in conflicts.</p>
 </div>
 <div class="paragraph">
 <p>Note that any of the <em>refs/*</em> cases above may come either from
-the <code>$GIT_DIR/refs</code> directory or from the <code>$GIT_DIR/packed-refs</code> file.
+the <span class='synopsis'><code>$GIT_DIR/refs</code></span> directory or from the <span class='synopsis'><code>$GIT_DIR/packed-refs</code></span> file.
 While the ref name encoding is unspecified, UTF-8 is preferred as
 some output processing may assume ref names in UTF-8.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emem"><a id="Documentation/gitrevisions.txt-" class="anchor" href="#Documentation/gitrevisions.txt-"></a><em>@</em> </dt>
 <dd>
-<p><em>@</em> alone is a shortcut for <code>HEAD</code>.</p>
+<p><em>@</em> alone is a shortcut for <span class='synopsis'><code>HEAD</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltrefnamegtltdategtemegemmasteryesterdayememHEAD5minutesagoem"><a id="Documentation/gitrevisions.txt-refnamedateegmasteryesterdayHEAD5minutesago" class="anchor" href="#Documentation/gitrevisions.txt-refnamedateegmasteryesterdayHEAD5minutesago"></a><em>[&lt;refname&gt;]@{&lt;date&gt;}</em>, e.g. <em>master@{yesterday}</em>, <em>HEAD@{5 minutes ago}</em> </dt>
 <dd>
@@ -191,7 +194,7 @@ used immediately following a ref name and the ref must have an
 existing log (<em>$GIT_DIR/logs/&lt;ref&gt;</em>). Note that this looks up the state
 of your <strong>local</strong> ref at a given time; e.g., what was in your local
 <em>master</em> branch last week. If you want to look at commits made during
-certain times, see <code>--since</code> and <code>--until</code>.</p>
+certain times, see <span class='synopsis'><code>--since</code></span> and <span class='synopsis'><code>--until</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltrefnamegtltngtemegemmaster1em"><a id="Documentation/gitrevisions.txt-refnamenegmaster1" class="anchor" href="#Documentation/gitrevisions.txt-refnamenegmaster1"></a><em>&lt;refname&gt;@{&lt;n&gt;}</em>, e.g. <em>master@{1}</em> </dt>
 <dd>
@@ -217,15 +220,15 @@ before the current one.</p>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltbranchnamegtupstreamemegemmasterupstreamememuem"><a id="Documentation/gitrevisions.txt-branchnameupstreamegmasterupstreamu" class="anchor" href="#Documentation/gitrevisions.txt-branchnameupstreamegmasterupstreamu"></a><em>[&lt;branchname&gt;]@{upstream}</em>, e.g. <em>master@{upstream}</em>, <em>@{u}</em> </dt>
 <dd>
 <p>A branch B may be set up to build on top of a branch X (configured with
-<code>branch.&lt;name&gt;.merge</code>) at a remote R (configured with
-<code>branch.&lt;name&gt;.remote</code>). B@{u} refers to the remote-tracking branch for
-the branch X taken from remote R, typically found at <code>refs/remotes/R/X</code>.</p>
+<span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.merge</code></span>) at a remote R (configured with
+<span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.remote</code></span>). B@{u} refers to the remote-tracking branch for
+the branch X taken from remote R, typically found at <span class='synopsis'><code>refs/remotes/R/X</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltbranchnamegtpushemegemmasterpushemempushem"><a id="Documentation/gitrevisions.txt-branchnamepushegmasterpushpush" class="anchor" href="#Documentation/gitrevisions.txt-branchnamepushegmasterpushpush"></a><em>[&lt;branchname&gt;]@{push}</em>, e.g. <em>master@{push}</em>, <em>@{push}</em> </dt>
 <dd>
 <p>The suffix <em>@{push}</em> reports the branch "where we would push to" if
-<code>git push</code> were run while <code>branchname</code> was checked out (or the current
-<code>HEAD</code> if no branchname is specified). Like for <em>@{upstream}</em>, we report
+<span class='synopsis'><code>git</code> <code>push</code></span> were run while <span class='synopsis'><code>branchname</code></span> was checked out (or the current
+<span class='synopsis'><code>HEAD</code></span> if no branchname is specified). Like for <em>@{upstream}</em>, we report
 the remote-tracking branch that corresponds to that branch at the remote.</p>
 <div class="paragraph">
 <p>Here&#8217;s an example to make it more clear:</p>
@@ -387,13 +390,13 @@ J = F^2  = B^3^2   = A^^3^2</pre>
 <h2 id="_specifying_ranges"><a class="anchor" href="#_specifying_ranges"></a>SPECIFYING RANGES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>History traversing commands such as <code>git log</code> operate on a set
+<p>History traversing commands such as <span class='synopsis'><code>git</code> <code>log</code></span> operate on a set
 of commits, not just a single commit.</p>
 </div>
 <div class="paragraph">
 <p>For these commands,
 specifying a single revision, using the notation described in the
-previous section, means the set of commits <code>reachable</code> from the given
+previous section, means the set of commits <span class='synopsis'><code>reachable</code></span> from the given
 commit.</p>
 </div>
 <div class="paragraph">
@@ -529,13 +532,13 @@ ancestors).</p>
 <dd>
 <p>Include commits that are reachable from &lt;rev2&gt; but exclude
 those that are reachable from &lt;rev1&gt;.  When either &lt;rev1&gt; or
-&lt;rev2&gt; is omitted, it defaults to <code>HEAD</code>.</p>
+&lt;rev2&gt; is omitted, it defaults to <span class='synopsis'><code>HEAD</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltrev1gtltrev2gtem-1"><a id="Documentation/gitrevisions.txt-rev1rev2-1" class="anchor" href="#Documentation/gitrevisions.txt-rev1rev2-1"></a><em>&lt;rev1&gt;...&lt;rev2&gt;</em> </dt>
 <dd>
 <p>Include commits that are reachable from either &lt;rev1&gt; or
 &lt;rev2&gt; but exclude those that are reachable from both.  When
-either &lt;rev1&gt; or &lt;rev2&gt; is omitted, it defaults to <code>HEAD</code>.</p>
+either &lt;rev1&gt; or &lt;rev2&gt; is omitted, it defaults to <span class='synopsis'><code>HEAD</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltrevgtemegemHEADem"><a id="Documentation/gitrevisions.txt-revegHEAD" class="anchor" href="#Documentation/gitrevisions.txt-revegHEAD"></a><em>&lt;rev&gt;^@</em>, e.g. <em>HEAD^@</em> </dt>
 <dd>

@@ -52,7 +52,7 @@ each repository to maintain good disk space utilization and good
 operating performance.</p>
 </div>
 <div class="paragraph">
-<p>Some git commands may automatically run <em>git gc</em>; see the <code>--auto</code> flag
+<p>Some git commands may automatically run <em>git gc</em>; see the <span class='synopsis'><code>--auto</code></span> flag
 below for details. If you know what you&#8217;re doing and all you want is to
 disable this behavior permanently without further considerations, just do:</p>
 </div>
@@ -81,28 +81,28 @@ few hundred changesets or so.</p>
 <dd>
 <p>With this option, <em>git gc</em> checks whether any housekeeping is
 required; if not, it exits without performing any work.
-Some git commands run <code>git gc --auto</code> after performing
+Some git commands run <span class='synopsis'><code>git</code> <code>gc</code> <code>--auto</code></span> after performing
 operations that could create many loose objects.</p>
 <div class="paragraph">
 <p>Housekeeping is required if there are too many loose objects or
 too many packs in the repository. If the number of loose objects
-exceeds the value of the <code>gc.auto</code> configuration variable, then
+exceeds the value of the <span class='synopsis'><code>gc.auto</code></span> configuration variable, then
 all loose objects are combined into a single pack using
-<code>git repack -d -l</code>.  Setting the value of <code>gc.auto</code> to 0
+<span class='synopsis'><code>git</code> <code>repack</code> <code>-d</code> <code>-l</code></span>.  Setting the value of <span class='synopsis'><code>gc.auto</code></span> to 0
 disables automatic packing of loose objects.</p>
 </div>
 <div class="paragraph">
-<p>If the number of packs exceeds the value of <code>gc.autoPackLimit</code>,
-then existing packs (except those marked with a <code>.keep</code> file)
-are consolidated into a single pack by using the <code>-A</code> option of
-<em>git repack</em>. Setting <code>gc.autoPackLimit</code> to 0 disables
+<p>If the number of packs exceeds the value of <span class='synopsis'><code>gc.autoPackLimit</code></span>,
+then existing packs (except those marked with a <span class='synopsis'><code>.keep</code></span> file)
+are consolidated into a single pack by using the <span class='synopsis'><code>-A</code></span> option of
+<em>git repack</em>. Setting <span class='synopsis'><code>gc.autoPackLimit</code></span> to 0 disables
 automatic consolidation of packs.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-gc.txt---pruneltdategt"><a id="Documentation/git-gc.txt---prunedate" class="anchor" href="#Documentation/git-gc.txt---prunedate"></a>--prune=&lt;date&gt; </dt>
 <dd>
 <p>Prune loose objects older than date (default is 2 weeks ago,
-overridable by the config variable <code>gc.pruneExpire</code>).
+overridable by the config variable <span class='synopsis'><code>gc.pruneExpire</code></span>).
 --prune=all prunes loose objects regardless of their age and
 increases the risk of corruption if another process is writing to
 the repository concurrently; see "NOTES" below. --prune is on by
@@ -118,7 +118,7 @@ default.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-gc.txt---force"><a class="anchor" href="#Documentation/git-gc.txt---force"></a>--force </dt>
 <dd>
-<p>Force <code>git gc</code> to run even if there may be another <code>git gc</code>
+<p>Force <span class='synopsis'><code>git</code> <code>gc</code></span> to run even if there may be another <span class='synopsis'><code>git</code> <code>gc</code></span>
 instance running on this repository.</p>
 </dd>
 </dl>
@@ -129,18 +129,18 @@ instance running on this repository.</p>
 <h2 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.reflogExpire</code> can be
+<p>The optional configuration variable <span class='synopsis'><code>gc.reflogExpire</code></span> can be
 set to indicate how long historical entries within each branch&#8217;s
 reflog should remain available in this repository.  The setting is
 expressed as a length of time, for example <em>90 days</em> or <em>3 months</em>.
 It defaults to <em>90 days</em>.</p>
 </div>
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.reflogExpireUnreachable</code>
+<p>The optional configuration variable <span class='synopsis'><code>gc.reflogExpireUnreachable</code></span>
 can be set to indicate how long historical reflog entries which
 are not part of the current branch should remain available in
 this repository.  These types of entries are generally created as
-a result of using <code>git commit --amend</code> or <code>git rebase</code> and are the
+a result of using <span class='synopsis'><code>git</code> <code>commit</code> <code>--amend</code></span> or <span class='synopsis'><code>git</code> <code>rebase</code></span> and are the
 commits prior to the amend or rebase occurring.  Since these changes
 are not part of the current project most users will want to expire
 them sooner.  This option defaults to <em>30 days</em>.</p>
@@ -158,23 +158,23 @@ branches:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.rerereResolved</code> indicates
+<p>The optional configuration variable <span class='synopsis'><code>gc.rerereResolved</code></span> indicates
 how long records of conflicted merge you resolved earlier are
 kept.  This defaults to 60 days.</p>
 </div>
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.rerereUnresolved</code> indicates
+<p>The optional configuration variable <span class='synopsis'><code>gc.rerereUnresolved</code></span> indicates
 how long records of conflicted merge you have not resolved are
 kept.  This defaults to 15 days.</p>
 </div>
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.packRefs</code> determines if
+<p>The optional configuration variable <span class='synopsis'><code>gc.packRefs</code></span> determines if
 <em>git gc</em> runs <em>git pack-refs</em>. This can be set to "notbare" to enable
 it within all non-bare repos or it can be set to a boolean value.
 This defaults to true.</p>
 </div>
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.aggressiveWindow</code> controls how
+<p>The optional configuration variable <span class='synopsis'><code>gc.aggressiveWindow</code></span> controls how
 much time is spent optimizing the delta compression of the objects in
 the repository when the --aggressive option is specified.  The larger
 the value, the more time is spent optimizing the delta compression.  See
@@ -182,11 +182,11 @@ the documentation for the --window' option in <a href='{{< relurl "docs/git-repa
 more details.  This defaults to 250.</p>
 </div>
 <div class="paragraph">
-<p>Similarly, the optional configuration variable <code>gc.aggressiveDepth</code>
+<p>Similarly, the optional configuration variable <span class='synopsis'><code>gc.aggressiveDepth</code></span>
 controls --depth option in <a href='{{< relurl "docs/git-repack" >}}'>git-repack[1]</a>. This defaults to 50.</p>
 </div>
 <div class="paragraph">
-<p>The optional configuration variable <code>gc.pruneExpire</code> controls how old
+<p>The optional configuration variable <span class='synopsis'><code>gc.pruneExpire</code></span> controls how old
 the unreferenced loose objects have to be before they are pruned.  The
 default is "2 weeks ago".</p>
 </div>
@@ -218,7 +218,7 @@ mitigate this problem:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Any object with modification time newer than the <code>--prune</code> date is kept,
+<p>Any object with modification time newer than the <span class='synopsis'><code>--prune</code></span> date is kept,
 along with everything reachable from it.</p>
 </li>
 <li>

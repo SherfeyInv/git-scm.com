@@ -91,7 +91,7 @@ produced incorrect results if you gave these options.</p>
 <dt class="hdlist1" id="Documentation/git-fast-export.txt---export-marksltfilegt"><a id="Documentation/git-fast-export.txt---export-marksfile" class="anchor" href="#Documentation/git-fast-export.txt---export-marksfile"></a>--export-marks=&lt;file&gt; </dt>
 <dd>
 <p>Dumps the internal marks table to &lt;file&gt; when complete.
-Marks are written one per line as <code>:markid SHA-1</code>. Only marks
+Marks are written one per line as <span class='synopsis'><code>:markid</code> <code>SHA-1</code></span>. Only marks
 for revisions are dumped; marks for blobs are ignored.
 Backends can use this file to validate imports after they
 have been completed, or to save the marks table across
@@ -145,7 +145,7 @@ different from the commit&#8217;s first parent).</p>
 <dd>
 <p>A list of arguments, acceptable to <em>git rev-parse</em> and
 <em>git rev-list</em>, that specifies the specific objects and references
-to export.  For example, <code>master~10..master</code> causes the
+to export.  For example, <span class='synopsis'><code>master~10..master</code></span> causes the
 current master reference to be exported along with all objects
 added since its 10th ancestor commit.</p>
 </dd>

@@ -101,7 +101,7 @@ produced incorrect results if you gave these options.</p>
 <dt class="hdlist1" id="Documentation/git-fast-export.txt---export-marksltfilegt"><a id="Documentation/git-fast-export.txt---export-marksfile" class="anchor" href="#Documentation/git-fast-export.txt---export-marksfile"></a>--export-marks=&lt;file&gt; </dt>
 <dd>
 <p>Dumps the internal marks table to &lt;file&gt; when complete.
-Marks are written one per line as <code>:markid SHA-1</code>. Only marks
+Marks are written one per line as <span class='synopsis'><code>:markid</code> <code>SHA-1</code></span>. Only marks
 for revisions are dumped; marks for blobs are ignored.
 Backends can use this file to validate imports after they
 have been completed, or to save the marks table across
@@ -155,12 +155,13 @@ different from the commit&#8217;s first parent).</p>
 <dd>
 <p>Anonymize the contents of the repository while still retaining
 the shape of the history and stored tree.  See the section on
-<code>ANONYMIZING</code> below.</p>
+<span class='synopsis'><code>ANONYMIZING</code></span> below.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fast-export.txt---reference-excluded-parents"><a class="anchor" href="#Documentation/git-fast-export.txt---reference-excluded-parents"></a>--reference-excluded-parents </dt>
 <dd>
-<p>By default, running a command such as <code>git fast-export
-master~5..master</code> will not include the commit master~5
+<p>By default, running a command such as <span class='synopsis'><code>git</code> <code>fast-export</code>
+
+<code>master~5..master</code></span> will not include the commit master~5
 and will make master~4 no longer have master~5 as
 a parent (though both the old master~4 and new
 master~4 will have all the same files).  Use
@@ -173,7 +174,7 @@ commits.</p>
 <dt class="hdlist1" id="Documentation/git-fast-export.txt---show-original-ids"><a class="anchor" href="#Documentation/git-fast-export.txt---show-original-ids"></a>--show-original-ids </dt>
 <dd>
 <p>Add an extra directive to the output for commits and blobs,
-<code>original-oid &lt;SHA1SUM&gt;</code>.  While such directives will likely be
+<span class='synopsis'><code>original-oid</code> <em>&lt;SHA1SUM&gt;</em></span>.  While such directives will likely be
 ignored by importers such as git-fast-import, it may be useful
 for intermediary filters (e.g. for rewriting commit messages
 which refer to older commits, or for stripping blobs by id).</p>
@@ -187,7 +188,7 @@ be specified.</p>
 <dd>
 <p>A list of arguments, acceptable to <em>git rev-parse</em> and
 <em>git rev-list</em>, that specifies the specific objects and references
-to export.  For example, <code>master~10..master</code> causes the
+to export.  For example, <span class='synopsis'><code>master~10..master</code></span> causes the
 current master reference to be exported along with all objects
 added since its 10th ancestor commit and (unless the
 --reference-excluded-parents option is specified) all files
@@ -232,7 +233,7 @@ referenced by that revision range contains the string
 <h2 id="_anonymizing"><a class="anchor" href="#_anonymizing"></a>ANONYMIZING</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If the <code>--anonymize</code> option is given, git will attempt to remove all
+<p>If the <span class='synopsis'><code>--anonymize</code></span> option is given, git will attempt to remove all
 identifying information from the repository while still retaining enough
 of the original tree and history patterns to reproduce some bugs. The
 goal is that a git bug which is found on a private repository will
@@ -276,7 +277,7 @@ $ ... test your bug ...</pre>
 </div>
 <div class="paragraph">
 <p>If the anonymized repository shows the bug, it may be worth sharing
-<code>anon-stream</code> along with a regular bug report. Note that the anonymized
+<span class='synopsis'><code>anon-stream</code></span> along with a regular bug report. Note that the anonymized
 stream compresses very well, so gzipping it is encouraged. If you want
 to examine the stream to see that it does not contain any private data,
 you can peruse it directly before sending. You may also want to try:</p>

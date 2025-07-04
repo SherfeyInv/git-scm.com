@@ -29,24 +29,24 @@ strbuf API actually relies on the string being free of NULs.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The <code>buf</code> member is never NULL, so it can be used in any usual C
+<p>The <span class='synopsis'><code>buf</code></span> member is never NULL, so it can be used in any usual C
 string operations safely. strbuf&#8217;s <em>have</em> to be initialized either by
-<code>strbuf_init()</code> or by <code>= STRBUF_INIT</code> before the invariants, though.</p>
+<span class='synopsis'><code>strbuf_init</code>()</span> or by <span class='synopsis'><code>=</code> <code>STRBUF_INIT</code></span> before the invariants, though.</p>
 <div class="paragraph">
-<p>Do <strong>not</strong> assume anything on what <code>buf</code> really is (e.g. if it is
-allocated memory or not), use <code>strbuf_detach()</code> to unwrap a memory
+<p>Do <strong>not</strong> assume anything on what <span class='synopsis'><code>buf</code></span> really is (e.g. if it is
+allocated memory or not), use <span class='synopsis'><code>strbuf_detach</code>()</span> to unwrap a memory
 buffer from its strbuf shell in a safe way. That is the sole supported
-way. This will give you a malloced buffer that you can later <code>free()</code>.</p>
+way. This will give you a malloced buffer that you can later <span class='synopsis'><code>free</code>()</span>.</p>
 </div>
 <div class="paragraph">
 <p>However, it is totally safe to modify anything in the string pointed by
-the <code>buf</code> member, between the indices <code>0</code> and <code>len-1</code> (inclusive).</p>
+the <span class='synopsis'><code>buf</code></span> member, between the indices <span class='synopsis'><code>0</code></span> and <span class='synopsis'><code>len-1</code></span> (inclusive).</p>
 </div>
 </li>
 <li>
-<p>The <code>buf</code> member is a byte array that has at least <code>len + 1</code> bytes
-allocated. The extra byte is used to store a <code>'\0'</code>, allowing the
-<code>buf</code> member to be a valid C-string. Every strbuf function ensure this
+<p>The <span class='synopsis'><code>buf</code></span> member is a byte array that has at least <span class='synopsis'><code>len</code> <code>+</code> <code>1</code></span> bytes
+allocated. The extra byte is used to store a <span class='synopsis'><em>'\0'</em></span>, allowing the
+<span class='synopsis'><code>buf</code></span> member to be a valid C-string. Every strbuf function ensure this
 invariant is preserved.</p>
 <div class="admonitionblock note">
 <table>
@@ -70,9 +70,9 @@ strbuf_setlen(sb, sb-&gt;len + SOME_OTHER_SIZE);</pre>
 <div class="colist arabic">
 <ol>
 <li>
-<p>Here, the memory array starting at <code>sb-&gt;buf</code>, and of length
-<code>strbuf_avail(sb)</code> is all yours, and you can be sure that
-<code>strbuf_avail(sb)</code> is at least <code>SOME_SIZE</code>.</p>
+<p>Here, the memory array starting at <span class='synopsis'><em>sb-&gt;buf</em></span>, and of length
+<span class='synopsis'><code>strbuf_avail</code>(<code>sb</code>)</span> is all yours, and you can be sure that
+<span class='synopsis'><code>strbuf_avail</code>(<code>sb</code>)</span> is at least <span class='synopsis'><code>SOME_SIZE</code></span>.</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -80,7 +80,7 @@ strbuf_setlen(sb, sb-&gt;len + SOME_OTHER_SIZE);</pre>
 <div class="title">Note</div>
 </td>
 <td class="content">
-<code>SOME_OTHER_SIZE</code> must be smaller or equal to <code>strbuf_avail(sb)</code>.
+<span class='synopsis'><code>SOME_OTHER_SIZE</code></span> must be smaller or equal to <span class='synopsis'><code>strbuf_avail</code>(<code>sb</code>)</span>.
 </td>
 </tr>
 </table>
@@ -96,9 +96,10 @@ missing API to the strbuf module is the way to go.</p>
 <div class="title">Warning</div>
 </td>
 <td class="content">
-Do <em>not</em> assume that the area that is yours is of size <code>alloc
-- 1</code> even if it&#8217;s true in the current implementation. Alloc is somehow a
-"private" member that should not be messed with. Use <code>strbuf_avail()</code>
+Do <em>not</em> assume that the area that is yours is of size <span class='synopsis'><code>alloc</code>
+
+<code>-</code> <code>1</code></span> even if it&#8217;s true in the current implementation. Alloc is somehow a
+"private" member that should not be messed with. Use <span class='synopsis'><code>strbuf_avail</code>()</span>
 instead.
 </td>
 </tr>
@@ -118,13 +119,13 @@ instead.
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct strbuf</code></p>
+<p><span class='synopsis'><code>struct</code> <code>strbuf</code></span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This is the string buffer structure. The <code>len</code> member can be used to
-determine the current length of the string, and <code>buf</code> member provides
+<p>This is the string buffer structure. The <span class='synopsis'><code>len</code></span> member can be used to
+determine the current length of the string, and <span class='synopsis'><code>buf</code></span> member provides
 access to the string itself.</p>
 </div>
 </div>
@@ -138,23 +139,23 @@ access to the string itself.</p>
 <p>Life cycle</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufinitcode"><a id="Documentation/technical/api-strbuf.txt-strbufinit" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufinit"></a><code>strbuf_init</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufinitcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufinit" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufinit"></a><span class='synopsis'><code>strbuf_init</code></span> </dt>
 <dd>
 <p>Initialize the structure. The second parameter can be zero or a bigger
 number to allocate memory, in case you want to prevent further reallocs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufreleasecode"><a id="Documentation/technical/api-strbuf.txt-strbufrelease" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufrelease"></a><code>strbuf_release</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufreleasecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufrelease" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufrelease"></a><span class='synopsis'><code>strbuf_release</code></span> </dt>
 <dd>
 <p>Release a string buffer and the memory it used. You should not use the
 string buffer after using this function, unless you initialize it again.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufdetachcode"><a id="Documentation/technical/api-strbuf.txt-strbufdetach" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufdetach"></a><code>strbuf_detach</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufdetachcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufdetach" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufdetach"></a><span class='synopsis'><code>strbuf_detach</code></span> </dt>
 <dd>
 <p>Detach the string from the strbuf and returns it; you now own the
 storage the string occupies and it is your responsibility from then on
-to release it with <code>free(3)</code> when you are done with it.</p>
+to release it with <span class='synopsis'><code>free</code>(<code>3</code>)</span> when you are done with it.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufattachcode"><a id="Documentation/technical/api-strbuf.txt-strbufattach" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufattach"></a><code>strbuf_attach</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufattachcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufattach" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufattach"></a><span class='synopsis'><code>strbuf_attach</code></span> </dt>
 <dd>
 <p>Attach a string to a buffer. You should specify the string to attach,
 the current length of the string and the amount of allocated memory.
@@ -163,7 +164,7 @@ pass is supposed to be a NUL-terminated string.  This string <em>must</em> be
 malloc()ed, and after attaching, the pointer cannot be relied upon
 anymore, and neither be free()d directly.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufswapcode"><a id="Documentation/technical/api-strbuf.txt-strbufswap" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufswap"></a><code>strbuf_swap</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufswapcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufswap" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufswap"></a><span class='synopsis'><code>strbuf_swap</code></span> </dt>
 <dd>
 <p>Swap the contents of two string buffers.</p>
 </dd>
@@ -174,27 +175,27 @@ anymore, and neither be free()d directly.</p>
 <p>Related to the size of the buffer</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufavailcode"><a id="Documentation/technical/api-strbuf.txt-strbufavail" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufavail"></a><code>strbuf_avail</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufavailcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufavail" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufavail"></a><span class='synopsis'><code>strbuf_avail</code></span> </dt>
 <dd>
 <p>Determine the amount of allocated but unused memory.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufgrowcode"><a id="Documentation/technical/api-strbuf.txt-strbufgrow" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgrow"></a><code>strbuf_grow</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufgrowcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufgrow" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgrow"></a><span class='synopsis'><code>strbuf_grow</code></span> </dt>
 <dd>
 <p>Ensure that at least this amount of unused memory is available after
-<code>len</code>. This is used when you know a typical size for what you will add
+<span class='synopsis'><code>len</code></span>. This is used when you know a typical size for what you will add
 and want to avoid repetitive automatic resizing of the underlying buffer.
 This is never a needed operation, but can be critical for performance in
 some cases.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufsetlencode"><a id="Documentation/technical/api-strbuf.txt-strbufsetlen" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsetlen"></a><code>strbuf_setlen</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufsetlencodespan"><a id="Documentation/technical/api-strbuf.txt-strbufsetlen" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsetlen"></a><span class='synopsis'><code>strbuf_setlen</code></span> </dt>
 <dd>
 <p>Set the length of the buffer to a given value. This function does <strong>not</strong>
-allocate new memory, so you should not perform a <code>strbuf_setlen()</code> to a
-length that is larger than <code>len + strbuf_avail()</code>. <code>strbuf_setlen()</code> is
+allocate new memory, so you should not perform a <span class='synopsis'><code>strbuf_setlen</code>()</span> to a
+length that is larger than <span class='synopsis'><code>len</code> <code>+</code> <code>strbuf_avail</code>()</span>. <span class='synopsis'><code>strbuf_setlen</code>()</span> is
 just meant as a <em>please fix invariants from this strbuf I just messed
 with</em>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufresetcode"><a id="Documentation/technical/api-strbuf.txt-strbufreset" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufreset"></a><code>strbuf_reset</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufresetcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufreset" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufreset"></a><span class='synopsis'><code>strbuf_reset</code></span> </dt>
 <dd>
 <p>Empty the buffer by setting the size of it to zero.</p>
 </dd>
@@ -205,11 +206,11 @@ with</em>.</p>
 <p>Related to the contents of the buffer</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufrtrimcode"><a id="Documentation/technical/api-strbuf.txt-strbufrtrim" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufrtrim"></a><code>strbuf_rtrim</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufrtrimcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufrtrim" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufrtrim"></a><span class='synopsis'><code>strbuf_rtrim</code></span> </dt>
 <dd>
 <p>Strip whitespace from the end of a string.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufcmpcode"><a id="Documentation/technical/api-strbuf.txt-strbufcmp" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufcmp"></a><code>strbuf_cmp</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufcmpcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufcmp" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufcmp"></a><span class='synopsis'><code>strbuf_cmp</code></span> </dt>
 <dd>
 <p>Compare two buffers. Returns an integer less than, equal to, or greater
 than zero if the first buffer is found, respectively, to be less than,
@@ -232,7 +233,7 @@ to match, or be greater than the second buffer.</p>
 <td class="content">
 All of the functions in this section will grow the buffer as necessary.
 If they fail for some reason other than memory shortage and the buffer hadn&#8217;t
-been allocated before (i.e. the <code>struct strbuf</code> was set to <code>STRBUF_INIT</code>),
+been allocated before (i.e. the <span class='synopsis'><code>struct</code> <code>strbuf</code></span> was set to <span class='synopsis'><code>STRBUF_INIT</code></span>),
 then they will free() it.
 </td>
 </tr>
@@ -240,34 +241,34 @@ then they will free() it.
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddchcode"><a id="Documentation/technical/api-strbuf.txt-strbufaddch" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddch"></a><code>strbuf_addch</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddchcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufaddch" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddch"></a><span class='synopsis'><code>strbuf_addch</code></span> </dt>
 <dd>
 <p>Add a single character to the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufinsertcode"><a id="Documentation/technical/api-strbuf.txt-strbufinsert" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufinsert"></a><code>strbuf_insert</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufinsertcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufinsert" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufinsert"></a><span class='synopsis'><code>strbuf_insert</code></span> </dt>
 <dd>
 <p>Insert data to the given position of the buffer. The remaining contents
 will be shifted, not overwritten.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufremovecode"><a id="Documentation/technical/api-strbuf.txt-strbufremove" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufremove"></a><code>strbuf_remove</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufremovecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufremove" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufremove"></a><span class='synopsis'><code>strbuf_remove</code></span> </dt>
 <dd>
 <p>Remove given amount of data from a given position of the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufsplicecode"><a id="Documentation/technical/api-strbuf.txt-strbufsplice" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplice"></a><code>strbuf_splice</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufsplicecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufsplice" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplice"></a><span class='synopsis'><code>strbuf_splice</code></span> </dt>
 <dd>
-<p>Remove the bytes between <code>pos..pos+len</code> and replace it with the given
+<p>Remove the bytes between <span class='synopsis'><code>pos..pos+len</code></span> and replace it with the given
 data.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddcommentedlinescode"><a id="Documentation/technical/api-strbuf.txt-strbufaddcommentedlines" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddcommentedlines"></a><code>strbuf_add_commented_lines</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddcommentedlinescodespan"><a id="Documentation/technical/api-strbuf.txt-strbufaddcommentedlines" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddcommentedlines"></a><span class='synopsis'><code>strbuf_add_commented_lines</code></span> </dt>
 <dd>
 <p>Add a NUL-terminated string to the buffer. Each line will be prepended
 by a comment character and a blank.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddcode"><a id="Documentation/technical/api-strbuf.txt-strbufadd" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufadd"></a><code>strbuf_add</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufadd" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufadd"></a><span class='synopsis'><code>strbuf_add</code></span> </dt>
 <dd>
 <p>Add data of given length to the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddstrcode"><a id="Documentation/technical/api-strbuf.txt-strbufaddstr" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddstr"></a><code>strbuf_addstr</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddstrcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufaddstr" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddstr"></a><span class='synopsis'><code>strbuf_addstr</code></span> </dt>
 <dd>
 <p>Add a NUL-terminated string to the buffer.</p>
 <div class="admonitionblock note">
@@ -297,31 +298,31 @@ that expands to:
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddbufcode"><a id="Documentation/technical/api-strbuf.txt-strbufaddbuf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddbuf"></a><code>strbuf_addbuf</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddbufcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufaddbuf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddbuf"></a><span class='synopsis'><code>strbuf_addbuf</code></span> </dt>
 <dd>
 <p>Copy the contents of another buffer at the end of the current one.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufadddupcode"><a id="Documentation/technical/api-strbuf.txt-strbufadddup" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufadddup"></a><code>strbuf_adddup</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufadddupcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufadddup" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufadddup"></a><span class='synopsis'><code>strbuf_adddup</code></span> </dt>
 <dd>
 <p>Copy part of the buffer from a given position till a given length to the
 end of the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufexpandcode"><a id="Documentation/technical/api-strbuf.txt-strbufexpand" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufexpand"></a><code>strbuf_expand</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufexpandcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufexpand" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufexpand"></a><span class='synopsis'><code>strbuf_expand</code></span> </dt>
 <dd>
 <p>This function can be used to expand a format string containing
 placeholders. To that end, it parses the string and calls the specified
 function for every percent sign found.</p>
 <div class="paragraph">
-<p>The callback function is given a pointer to the character after the <code>%</code>
+<p>The callback function is given a pointer to the character after the <span class='synopsis'><code>%</code></span>
 and a pointer to the struct strbuf.  It is expected to add the expanded
 version of the placeholder to the strbuf, e.g. to add a newline
-character if the letter <code>n</code> appears after a <code>%</code>.  The function returns
-the length of the placeholder recognized and <code>strbuf_expand()</code> skips
+character if the letter <span class='synopsis'><code>n</code></span> appears after a <span class='synopsis'><code>%</code></span>.  The function returns
+the length of the placeholder recognized and <span class='synopsis'><code>strbuf_expand</code>()</span> skips
 over it.</p>
 </div>
 <div class="paragraph">
-<p>The format <code>%%</code> is automatically expanded to a single <code>%</code> as a quoting
-mechanism; callers do not need to handle the <code>%</code> placeholder themselves,
+<p>The format <span class='synopsis'><code>%%</code></span> is automatically expanded to a single <span class='synopsis'><code>%</code></span> as a quoting
+mechanism; callers do not need to handle the <span class='synopsis'><code>%</code></span> placeholder themselves,
 and the callback function will not be invoked for this placeholder.</p>
 </div>
 <div class="paragraph">
@@ -331,39 +332,39 @@ placeholder is unknown, then the percent sign is copied, too.</p>
 </div>
 <div class="paragraph">
 <p>In order to facilitate caching and to make it possible to give
-parameters to the callback, <code>strbuf_expand()</code> passes a context pointer,
+parameters to the callback, <span class='synopsis'><code>strbuf_expand</code>()</span> passes a context pointer,
 which can be used by the programmer of the callback as she sees fit.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufexpanddictcbcode"><a id="Documentation/technical/api-strbuf.txt-strbufexpanddictcb" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufexpanddictcb"></a><code>strbuf_expand_dict_cb</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufexpanddictcbcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufexpanddictcb" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufexpanddictcb"></a><span class='synopsis'><code>strbuf_expand_dict_cb</code></span> </dt>
 <dd>
-<p>Used as callback for <code>strbuf_expand()</code>, expects an array of
+<p>Used as callback for <span class='synopsis'><code>strbuf_expand</code>()</span>, expects an array of
 struct strbuf_expand_dict_entry as context, i.e. pairs of
 placeholder and replacement string.  The array needs to be
 terminated by an entry with placeholder set to NULL.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddbufpercentquotecode"><a id="Documentation/technical/api-strbuf.txt-strbufaddbufpercentquote" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddbufpercentquote"></a><code>strbuf_addbuf_percentquote</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddbufpercentquotecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufaddbufpercentquote" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddbufpercentquote"></a><span class='synopsis'><code>strbuf_addbuf_percentquote</code></span> </dt>
 <dd>
 <p>Append the contents of one strbuf to another, quoting any
 percent signs ("%") into double-percents ("%%") in the
 destination. This is useful for literal data to be fed to either
 strbuf_expand or to the *printf family of functions.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufhumanisebytescode"><a id="Documentation/technical/api-strbuf.txt-strbufhumanisebytes" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufhumanisebytes"></a><code>strbuf_humanise_bytes</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufhumanisebytescodespan"><a id="Documentation/technical/api-strbuf.txt-strbufhumanisebytes" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufhumanisebytes"></a><span class='synopsis'><code>strbuf_humanise_bytes</code></span> </dt>
 <dd>
 <p>Append the given byte size as a human-readable string (i.e. 12.23 KiB,
 3.50 MiB).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufaddfcode"><a id="Documentation/technical/api-strbuf.txt-strbufaddf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddf"></a><code>strbuf_addf</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufaddfcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufaddf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufaddf"></a><span class='synopsis'><code>strbuf_addf</code></span> </dt>
 <dd>
 <p>Add a formatted string to the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufcommentedaddfcode"><a id="Documentation/technical/api-strbuf.txt-strbufcommentedaddf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufcommentedaddf"></a><code>strbuf_commented_addf</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufcommentedaddfcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufcommentedaddf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufcommentedaddf"></a><span class='synopsis'><code>strbuf_commented_addf</code></span> </dt>
 <dd>
 <p>Add a formatted string prepended by a comment character and a
 blank to the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbuffreadcode"><a id="Documentation/technical/api-strbuf.txt-strbuffread" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbuffread"></a><code>strbuf_fread</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbuffreadcodespan"><a id="Documentation/technical/api-strbuf.txt-strbuffread" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbuffread"></a><span class='synopsis'><code>strbuf_fread</code></span> </dt>
 <dd>
 <p>Read a given size of data from a FILE* pointer to the buffer.</p>
 <div class="admonitionblock note">
@@ -374,72 +375,72 @@ blank to the buffer.</p>
 </td>
 <td class="content">
 The buffer is rewound if the read fails. If -1 is returned,
-<code>errno</code> must be consulted, like you would do for <code>read(3)</code>.
-<code>strbuf_read()</code>, <code>strbuf_read_file()</code> and <code>strbuf_getline()</code> has the
+<span class='synopsis'><code>errno</code></span> must be consulted, like you would do for <span class='synopsis'><code>read</code>(<code>3</code>)</span>.
+<span class='synopsis'><code>strbuf_read</code>()</span>, <span class='synopsis'><code>strbuf_read_file</code>()</span> and <span class='synopsis'><code>strbuf_getline</code>()</span> has the
 same behaviour as well.
 </td>
 </tr>
 </table>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufreadcode"><a id="Documentation/technical/api-strbuf.txt-strbufread" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufread"></a><code>strbuf_read</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufreadcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufread" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufread"></a><span class='synopsis'><code>strbuf_read</code></span> </dt>
 <dd>
 <p>Read the contents of a given file descriptor. The third argument can be
 used to give a hint about the file size, to avoid reallocs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufreadfilecode"><a id="Documentation/technical/api-strbuf.txt-strbufreadfile" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufreadfile"></a><code>strbuf_read_file</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufreadfilecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufreadfile" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufreadfile"></a><span class='synopsis'><code>strbuf_read_file</code></span> </dt>
 <dd>
 <p>Read the contents of a file, specified by its path. The third argument
 can be used to give a hint about the file size, to avoid reallocs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufreadlinkcode"><a id="Documentation/technical/api-strbuf.txt-strbufreadlink" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufreadlink"></a><code>strbuf_readlink</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufreadlinkcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufreadlink" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufreadlink"></a><span class='synopsis'><code>strbuf_readlink</code></span> </dt>
 <dd>
 <p>Read the target of a symbolic link, specified by its path.  The third
 argument can be used to give a hint about the size, to avoid reallocs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufgetlinecode"><a id="Documentation/technical/api-strbuf.txt-strbufgetline" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgetline"></a><code>strbuf_getline</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufgetlinecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufgetline" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgetline"></a><span class='synopsis'><code>strbuf_getline</code></span> </dt>
 <dd>
 <p>Read a line from a FILE *, overwriting the existing contents
 of the strbuf. The second argument specifies the line
-terminator character, typically <code>'\n'</code>.
+terminator character, typically <span class='synopsis'><em>'\n'</em></span>.
 Reading stops after the terminator or at EOF.  The terminator
 is removed from the buffer before returning.  Returns 0 unless
-there was nothing left before EOF, in which case it returns <code>EOF</code>.</p>
+there was nothing left before EOF, in which case it returns <span class='synopsis'><code>EOF</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufgetwholelinecode"><a id="Documentation/technical/api-strbuf.txt-strbufgetwholeline" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgetwholeline"></a><code>strbuf_getwholeline</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufgetwholelinecodespan"><a id="Documentation/technical/api-strbuf.txt-strbufgetwholeline" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgetwholeline"></a><span class='synopsis'><code>strbuf_getwholeline</code></span> </dt>
 <dd>
-<p>Like <code>strbuf_getline</code>, but keeps the trailing terminator (if
+<p>Like <span class='synopsis'><code>strbuf_getline</code></span>, but keeps the trailing terminator (if
 any) in the buffer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufgetwholelinefdcode"><a id="Documentation/technical/api-strbuf.txt-strbufgetwholelinefd" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgetwholelinefd"></a><code>strbuf_getwholeline_fd</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufgetwholelinefdcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufgetwholelinefd" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufgetwholelinefd"></a><span class='synopsis'><code>strbuf_getwholeline_fd</code></span> </dt>
 <dd>
-<p>Like <code>strbuf_getwholeline</code>, but operates on a file descriptor.
+<p>Like <span class='synopsis'><code>strbuf_getwholeline</code></span>, but operates on a file descriptor.
 It reads one character at a time, so it is very slow.  Do not
 use it unless you need the correct position in the file
 descriptor.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestripspacecode"><a id="Documentation/technical/api-strbuf.txt-stripspace" class="anchor" href="#Documentation/technical/api-strbuf.txt-stripspace"></a><code>stripspace</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestripspacecodespan"><a id="Documentation/technical/api-strbuf.txt-stripspace" class="anchor" href="#Documentation/technical/api-strbuf.txt-stripspace"></a><span class='synopsis'><code>stripspace</code></span> </dt>
 <dd>
 <p>Strip whitespace from a buffer. The second parameter controls if
 comments are considered contents to be removed or not.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufsplitbufcode"><a id="Documentation/technical/api-strbuf.txt-strbufsplitbuf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplitbuf"></a><code>strbuf_split_buf</code> </dt>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufsplitstrcode"><a id="Documentation/technical/api-strbuf.txt-strbufsplitstr" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplitstr"></a><code>strbuf_split_str</code> </dt>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufsplitmaxcode"><a id="Documentation/technical/api-strbuf.txt-strbufsplitmax" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplitmax"></a><code>strbuf_split_max</code> </dt>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbufsplitcode"><a id="Documentation/technical/api-strbuf.txt-strbufsplit" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplit"></a><code>strbuf_split</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufsplitbufcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufsplitbuf" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplitbuf"></a><span class='synopsis'><code>strbuf_split_buf</code></span> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufsplitstrcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufsplitstr" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplitstr"></a><span class='synopsis'><code>strbuf_split_str</code></span> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufsplitmaxcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufsplitmax" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplitmax"></a><span class='synopsis'><code>strbuf_split_max</code></span> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbufsplitcodespan"><a id="Documentation/technical/api-strbuf.txt-strbufsplit" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbufsplit"></a><span class='synopsis'><code>strbuf_split</code></span> </dt>
 <dd>
 <p>Split a string or strbuf into a list of strbufs at a specified
 terminator character.  The returned substrings include the
-terminator characters.  Some of these functions take a <code>max</code>
+terminator characters.  Some of these functions take a <span class='synopsis'><code>max</code></span>
 parameter, which, if positive, limits the output to that
 number of substrings.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codestrbuflistfreecode"><a id="Documentation/technical/api-strbuf.txt-strbuflistfree" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbuflistfree"></a><code>strbuf_list_free</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodestrbuflistfreecodespan"><a id="Documentation/technical/api-strbuf.txt-strbuflistfree" class="anchor" href="#Documentation/technical/api-strbuf.txt-strbuflistfree"></a><span class='synopsis'><code>strbuf_list_free</code></span> </dt>
 <dd>
 <p>Free a list of strbufs (for example, the return values of the
-<code>strbuf_split()</code> functions).</p>
+<span class='synopsis'><code>strbuf_split</code>()</span> functions).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-codelauncheditorcode"><a id="Documentation/technical/api-strbuf.txt-launcheditor" class="anchor" href="#Documentation/technical/api-strbuf.txt-launcheditor"></a><code>launch_editor</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-strbuf.txt-spanclasssynopsiscodelauncheditorcodespan"><a id="Documentation/technical/api-strbuf.txt-launcheditor" class="anchor" href="#Documentation/technical/api-strbuf.txt-launcheditor"></a><span class='synopsis'><code>launch_editor</code></span> </dt>
 <dd>
 <p>Launch the user preferred editor to edit a file and fill the buffer
 with the file&#8217;s contents upon the user completing their editing. The

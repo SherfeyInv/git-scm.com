@@ -39,22 +39,22 @@ message.</p>
 <div class="paragraph">
 <p>This command reads some patches or commit messages from either the
 &lt;file&gt; arguments or the standard input if no &lt;file&gt; is specified. If
-<code>--parse</code> is specified, the output consists of the parsed trailers.</p>
+<span class='synopsis'><code>--parse</code></span> is specified, the output consists of the parsed trailers.</p>
 </div>
 <div class="paragraph">
 <p>Otherwise, this command applies the arguments passed using the
-<code>--trailer</code> option, if any, to the commit message part of each input
+<span class='synopsis'><code>--trailer</code></span> option, if any, to the commit message part of each input
 file. The result is emitted on the standard output.</p>
 </div>
 <div class="paragraph">
-<p>Some configuration variables control the way the <code>--trailer</code> arguments
+<p>Some configuration variables control the way the <span class='synopsis'><code>--trailer</code></span> arguments
 are applied to each commit message and the way any existing trailer in
 the commit message is changed. They also make it possible to
 automatically add some trailers.</p>
 </div>
 <div class="paragraph">
 <p>By default, a <em>&lt;token&gt;=&lt;value&gt;</em> or <em>&lt;token&gt;:&lt;value&gt;</em> argument given
-using <code>--trailer</code> will be appended after the existing trailers only if
+using <span class='synopsis'><code>--trailer</code></span> will be appended after the existing trailers only if
 the last trailer has a different (&lt;token&gt;, &lt;value&gt;) pair (or if there
 is no existing trailer). The &lt;token&gt; and &lt;value&gt; parts will be trimmed
 to remove starting and trailing whitespace, and the resulting trimmed
@@ -67,7 +67,7 @@ to remove starting and trailing whitespace, and the resulting trimmed
 </div>
 <div class="paragraph">
 <p>This means that the trimmed &lt;token&gt; and &lt;value&gt; will be separated by
-<code>': '</code> (one colon followed by one space).</p>
+<span class='synopsis'><code>:</code> </span> (one colon followed by one space).</p>
 </div>
 <div class="paragraph">
 <p>By default the new trailer will appear at the end of all the existing
@@ -126,8 +126,8 @@ command.</p>
 <p>Specify where all new trailers will be added.  A setting
 provided with <em>--where</em> overrides all configuration variables
 and applies to all <em>--trailer</em> options until the next occurrence of
-<em>--where</em> or <em>--no-where</em>. Possible values are <code>after</code>, <code>before</code>,
-<code>end</code> or <code>start</code>.</p>
+<em>--where</em> or <em>--no-where</em>. Possible values are <span class='synopsis'><code>after</code></span>, <span class='synopsis'><code>before</code></span>,
+<span class='synopsis'><code>end</code></span> or <span class='synopsis'><code>start</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-existsltactiongt"><a id="Documentation/git-interpret-trailers.txt---if-existsaction" class="anchor" href="#Documentation/git-interpret-trailers.txt---if-existsaction"></a>--if-exists &lt;action&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-exists"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-exists"></a>--no-if-exists </dt>
@@ -136,8 +136,8 @@ and applies to all <em>--trailer</em> options until the next occurrence of
 least one trailer with the same &lt;token&gt; in the message.  A setting
 provided with <em>--if-exists</em> overrides all configuration variables
 and applies to all <em>--trailer</em> options until the next occurrence of
-<em>--if-exists</em> or <em>--no-if-exists</em>. Possible actions are <code>addIfDifferent</code>,
-<code>addIfDifferentNeighbor</code>, <code>add</code>, <code>replace</code> and <code>doNothing</code>.</p>
+<em>--if-exists</em> or <em>--no-if-exists</em>. Possible actions are <span class='synopsis'><code>addIfDifferent</code></span>,
+<span class='synopsis'><code>addIfDifferentNeighbor</code></span>, <span class='synopsis'><code>add</code></span>, <span class='synopsis'><code>replace</code></span> and <span class='synopsis'><code>doNothing</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-missingltactiongt"><a id="Documentation/git-interpret-trailers.txt---if-missingaction" class="anchor" href="#Documentation/git-interpret-trailers.txt---if-missingaction"></a>--if-missing &lt;action&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-missing"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-missing"></a>--no-if-missing </dt>
@@ -146,8 +146,8 @@ and applies to all <em>--trailer</em> options until the next occurrence of
 trailer with the same &lt;token&gt; in the message.  A setting
 provided with <em>--if-missing</em> overrides all configuration variables
 and applies to all <em>--trailer</em> options until the next occurrence of
-<em>--if-missing</em> or <em>--no-if-missing</em>. Possible actions are <code>doNothing</code>
-or <code>add</code>.</p>
+<em>--if-missing</em> or <em>--no-if-missing</em>. Possible actions are <span class='synopsis'><code>doNothing</code></span>
+or <span class='synopsis'><code>add</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-trailers"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-trailers"></a>--only-trailers </dt>
 <dd>
@@ -156,7 +156,7 @@ or <code>add</code>.</p>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-input"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-input"></a>--only-input </dt>
 <dd>
 <p>Output only trailers that exist in the input; do not add any
-from the command-line or by following configured <code>trailer.*</code>
+from the command-line or by following configured <span class='synopsis'><code>trailer.*</code></span>
 rules.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---unfold"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---unfold"></a>--unfold </dt>
@@ -166,8 +166,9 @@ trailer appears on a line by itself with its full content.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---parse"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---parse"></a>--parse </dt>
 <dd>
-<p>A convenience alias for <code>--only-trailers --only-input
---unfold</code>.</p>
+<p>A convenience alias for <span class='synopsis'><code>--only-trailers</code> <code>--only-input</code>
+
+<code>--unfold</code></span>.</p>
 </dd>
 </dl>
 </div>
@@ -202,22 +203,22 @@ the token and the value).</p>
 <dd>
 <p>This option tells where a new trailer will be added.</p>
 <div class="paragraph">
-<p>This can be <code>end</code>, which is the default, <code>start</code>, <code>after</code> or <code>before</code>.</p>
+<p>This can be <span class='synopsis'><code>end</code></span>, which is the default, <span class='synopsis'><code>start</code></span>, <span class='synopsis'><code>after</code></span> or <span class='synopsis'><code>before</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>end</code>, then each new trailer will appear at the end of the
+<p>If it is <span class='synopsis'><code>end</code></span>, then each new trailer will appear at the end of the
 existing trailers.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>start</code>, then each new trailer will appear at the start,
+<p>If it is <span class='synopsis'><code>start</code></span>, then each new trailer will appear at the start,
 instead of the end, of the existing trailers.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>after</code>, then each new trailer will appear just after the
+<p>If it is <span class='synopsis'><code>after</code></span>, then each new trailer will appear just after the
 last trailer with the same &lt;token&gt;.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>before</code>, then each new trailer will appear just before the
+<p>If it is <span class='synopsis'><code>before</code></span>, then each new trailer will appear just before the
 first trailer with the same &lt;token&gt;.</p>
 </div>
 </dd>
@@ -227,30 +228,30 @@ first trailer with the same &lt;token&gt;.</p>
 performed when there is already at least one trailer with the
 same &lt;token&gt; in the message.</p>
 <div class="paragraph">
-<p>The valid values for this option are: <code>addIfDifferentNeighbor</code> (this
-is the default), <code>addIfDifferent</code>, <code>add</code>, <code>replace</code> or <code>doNothing</code>.</p>
+<p>The valid values for this option are: <span class='synopsis'><code>addIfDifferentNeighbor</code></span> (this
+is the default), <span class='synopsis'><code>addIfDifferent</code></span>, <span class='synopsis'><code>add</code></span>, <span class='synopsis'><code>replace</code></span> or <span class='synopsis'><code>doNothing</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>With <code>addIfDifferentNeighbor</code>, a new trailer will be added only if no
+<p>With <span class='synopsis'><code>addIfDifferentNeighbor</code></span>, a new trailer will be added only if no
 trailer with the same (&lt;token&gt;, &lt;value&gt;) pair is above or below the line
 where the new trailer will be added.</p>
 </div>
 <div class="paragraph">
-<p>With <code>addIfDifferent</code>, a new trailer will be added only if no trailer
+<p>With <span class='synopsis'><code>addIfDifferent</code></span>, a new trailer will be added only if no trailer
 with the same (&lt;token&gt;, &lt;value&gt;) pair is already in the message.</p>
 </div>
 <div class="paragraph">
-<p>With <code>add</code>, a new trailer will be added, even if some trailers with
+<p>With <span class='synopsis'><code>add</code></span>, a new trailer will be added, even if some trailers with
 the same (&lt;token&gt;, &lt;value&gt;) pair are already in the message.</p>
 </div>
 <div class="paragraph">
-<p>With <code>replace</code>, an existing trailer with the same &lt;token&gt; will be
+<p>With <span class='synopsis'><code>replace</code></span>, an existing trailer with the same &lt;token&gt; will be
 deleted and the new trailer will be added. The deleted trailer will be
 the closest one (with the same &lt;token&gt;) to the place where the new one
 will be added.</p>
 </div>
 <div class="paragraph">
-<p>With <code>doNothing</code>, nothing will be done; that is no new trailer will be
+<p>With <span class='synopsis'><code>doNothing</code></span>, nothing will be done; that is no new trailer will be
 added if there is already one with the same &lt;token&gt; in the message.</p>
 </div>
 </dd>
@@ -260,22 +261,22 @@ added if there is already one with the same &lt;token&gt; in the message.</p>
 performed when there is not yet any trailer with the same
 &lt;token&gt; in the message.</p>
 <div class="paragraph">
-<p>The valid values for this option are: <code>add</code> (this is the default) and
-<code>doNothing</code>.</p>
+<p>The valid values for this option are: <span class='synopsis'><code>add</code></span> (this is the default) and
+<span class='synopsis'><code>doNothing</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>With <code>add</code>, a new trailer will be added.</p>
+<p>With <span class='synopsis'><code>add</code></span>, a new trailer will be added.</p>
 </div>
 <div class="paragraph">
-<p>With <code>doNothing</code>, nothing will be done.</p>
+<p>With <span class='synopsis'><code>doNothing</code></span>, nothing will be done.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerlttokengtkey"><a id="Documentation/git-interpret-trailers.txt-trailertokenkey" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailertokenkey"></a>trailer.&lt;token&gt;.key </dt>
 <dd>
-<p>This <code>key</code> will be used instead of &lt;token&gt; in the trailer. At
+<p>This <span class='synopsis'><code>key</code></span> will be used instead of &lt;token&gt; in the trailer. At
 the end of this key, a separator can appear and then some
 space characters. By default the only valid separator is <em>:</em>,
-but this can be changed using the <code>trailer.separators</code> config
+but this can be changed using the <span class='synopsis'><code>trailer.separators</code></span> config
 variable.</p>
 <div class="paragraph">
 <p>If there is a separator, then the key will be used instead of both the
@@ -313,7 +314,7 @@ specified command with any leading and trailing whitespace trimmed
 off.</p>
 </div>
 <div class="paragraph">
-<p>If the command contains the <code>$ARG</code> string, this string will be
+<p>If the command contains the <span class='synopsis'><code>$ARG</code></span> string, this string will be
 replaced with the &lt;value&gt; part of an existing trailer with the same
 &lt;token&gt;, if any, before the command is launched.</p>
 </div>
@@ -321,7 +322,7 @@ replaced with the &lt;value&gt; part of an existing trailer with the same
 <p>If some <em>&lt;token&gt;=&lt;value&gt;</em> arguments are also passed on the command
 line, when a <em>trailer.&lt;token&gt;.command</em> is configured, the command will
 also be executed for each of these arguments. And the &lt;value&gt; part of
-these arguments, if any, will be used to replace the <code>$ARG</code> string in
+these arguments, if any, will be used to replace the <span class='synopsis'><code>$ARG</code></span> string in
 the command.</p>
 </div>
 </dd>
@@ -355,7 +356,7 @@ Signed-off-by: Bob &lt;bob@example.com&gt;</pre>
 </div>
 </li>
 <li>
-<p>Use the <code>--in-place</code> option to edit a message file in place:</p>
+<p>Use the <span class='synopsis'><code>--in-place</code></span> option to edit a message file in place:</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ cat msg.txt

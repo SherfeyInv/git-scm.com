@@ -94,7 +94,7 @@ and rename/rename conflicts to the user;</p>
 </li>
 <li>
 <p>performing a three-way merge of corresponding files, taking
-path-specific merge drivers (specified in <code>.gitattributes</code>)
+path-specific merge drivers (specified in <span class='synopsis'><code>.gitattributes</code></span>)
 into account.</p>
 </li>
 </ul>
@@ -107,19 +107,19 @@ into account.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>mmbuffer_t</code>, <code>mmfile_t</code></p>
+<p><span class='synopsis'><code>mmbuffer_t</code></span>, <span class='synopsis'><code>mmfile_t</code></span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>These store data usable for use by the xdiff backend, for writing and
-for reading, respectively.  See <code>xdiff/xdiff.h</code> for the definitions
-and <code>diff.c</code> for examples.</p>
+for reading, respectively.  See <span class='synopsis'><code>xdiff/xdiff.h</code></span> for the definitions
+and <span class='synopsis'><code>diff.c</code></span> for examples.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct ll_merge_options</code></p>
+<p><span class='synopsis'><code>struct</code> <code>ll_merge_options</code></span></p>
 </li>
 </ul>
 </div>
@@ -129,23 +129,23 @@ the operation of a low-level (single file) merge.  Some options:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-merge.txt-codevirtualancestorcode"><a id="Documentation/technical/api-merge.txt-virtualancestor" class="anchor" href="#Documentation/technical/api-merge.txt-virtualancestor"></a><code>virtual_ancestor</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-merge.txt-spanclasssynopsiscodevirtualancestorcodespan"><a id="Documentation/technical/api-merge.txt-virtualancestor" class="anchor" href="#Documentation/technical/api-merge.txt-virtualancestor"></a><span class='synopsis'><code>virtual_ancestor</code></span> </dt>
 <dd>
 <p>Behave as though this were part of a merge between common
 ancestors in a recursive merge.
 If a helper program is specified by the
-<code>[merge "&lt;driver&gt;"] recursive</code> configuration, it will
+<span class='synopsis'>[<code>merge</code> <code>"</code><em>&lt;driver&gt;</em><code>"</code>] <code>recursive</code></span> configuration, it will
 be used (see <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-merge.txt-codevariantcode"><a id="Documentation/technical/api-merge.txt-variant" class="anchor" href="#Documentation/technical/api-merge.txt-variant"></a><code>variant</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-merge.txt-spanclasssynopsiscodevariantcodespan"><a id="Documentation/technical/api-merge.txt-variant" class="anchor" href="#Documentation/technical/api-merge.txt-variant"></a><span class='synopsis'><code>variant</code></span> </dt>
 <dd>
 <p>Resolve local conflicts automatically in favor
 of one side or the other (as in <em>git merge-file</em>
-<code>--ours</code>/<code>--theirs</code>/<code>--union</code>).  Can be <code>0</code>,
-<code>XDL_MERGE_FAVOR_OURS</code>, <code>XDL_MERGE_FAVOR_THEIRS</code>, or
-<code>XDL_MERGE_FAVOR_UNION</code>.</p>
+<span class='synopsis'><code>--ours</code></span>/<span class='synopsis'><code>--theirs</code></span>/<span class='synopsis'><code>--union</code></span>).  Can be <span class='synopsis'><code>0</code></span>,
+<span class='synopsis'><code>XDL_MERGE_FAVOR_OURS</code></span>, <span class='synopsis'><code>XDL_MERGE_FAVOR_THEIRS</code></span>, or
+<span class='synopsis'><code>XDL_MERGE_FAVOR_UNION</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-merge.txt-coderenormalizecode"><a id="Documentation/technical/api-merge.txt-renormalize" class="anchor" href="#Documentation/technical/api-merge.txt-renormalize"></a><code>renormalize</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-merge.txt-spanclasssynopsiscoderenormalizecodespan"><a id="Documentation/technical/api-merge.txt-renormalize" class="anchor" href="#Documentation/technical/api-merge.txt-renormalize"></a><span class='synopsis'><code>renormalize</code></span> </dt>
 <dd>
 <p>Resmudge and clean the "base", "theirs" and "ours" files
 before merging.  Use this when the merge is likely to have
@@ -161,12 +161,12 @@ normalization rules.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-merge.txt-codellmergecode"><a id="Documentation/technical/api-merge.txt-llmerge" class="anchor" href="#Documentation/technical/api-merge.txt-llmerge"></a><code>ll_merge</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-merge.txt-spanclasssynopsiscodellmergecodespan"><a id="Documentation/technical/api-merge.txt-llmerge" class="anchor" href="#Documentation/technical/api-merge.txt-llmerge"></a><span class='synopsis'><code>ll_merge</code></span> </dt>
 <dd>
 <p>Perform a three-way single-file merge in core.  This is
-a thin wrapper around <code>xdl_merge</code> that takes the path and
-any merge backend specified in <code>.gitattributes</code> or
-<code>.git/info/attributes</code> into account.  Returns 0 for a
+a thin wrapper around <span class='synopsis'><code>xdl_merge</code></span> that takes the path and
+any merge backend specified in <span class='synopsis'><code>.gitattributes</code></span> or
+<span class='synopsis'><code>.git/info/attributes</code></span> into account.  Returns 0 for a
 clean merge.</p>
 </dd>
 </dl>
@@ -177,38 +177,39 @@ clean merge.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Prepare a <code>struct ll_merge_options</code> to record options.
-If you have no special requests, skip this and pass <code>NULL</code>
-as the <code>opts</code> parameter to use the default options.</p>
+<p>Prepare a <span class='synopsis'><code>struct</code> <code>ll_merge_options</code></span> to record options.
+If you have no special requests, skip this and pass <span class='synopsis'><code>NULL</code></span>
+as the <span class='synopsis'><code>opts</code></span> parameter to use the default options.</p>
 </li>
 <li>
 <p>Allocate an mmbuffer_t variable for the result.</p>
 </li>
 <li>
 <p>Allocate and fill variables with the file&#8217;s original content
-and two modified versions (using <code>read_mmfile</code>, for example).</p>
+and two modified versions (using <span class='synopsis'><code>read_mmfile</code></span>, for example).</p>
 </li>
 <li>
-<p>Call <code>ll_merge()</code>.</p>
+<p>Call <span class='synopsis'><code>ll_merge</code>()</span>.</p>
 </li>
 <li>
-<p>Read the merged content from <code>result_buf.ptr</code> and <code>result_buf.size</code>.</p>
+<p>Read the merged content from <span class='synopsis'><code>result_buf.ptr</code></span> and <span class='synopsis'><code>result_buf.size</code></span>.</p>
 </li>
 <li>
 <p>Release buffers when finished.  A simple
-<code>free(ancestor.ptr); free(ours.ptr); free(theirs.ptr);
-free(result_buf.ptr);</code> will do.</p>
+<span class='synopsis'><em>free(ancestor.ptr); free(ours.ptr); free(theirs.ptr);
+</em>
+<em>free(result_buf.ptr);</em></span> will do.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>If the modifications do not merge cleanly, <code>ll_merge</code> will return a
-nonzero value and <code>result_buf</code> will generally include a description of
-the conflict bracketed by markers such as the traditional <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>
-and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</p>
+<p>If the modifications do not merge cleanly, <span class='synopsis'><code>ll_merge</code></span> will return a
+nonzero value and <span class='synopsis'><code>result_buf</code></span> will generally include a description of
+the conflict bracketed by markers such as the traditional <span class='synopsis'><em>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</em></span>
+and <span class='synopsis'><em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</em></span>.</p>
 </div>
 <div class="paragraph">
-<p>The <code>ancestor_label</code>, <code>our_label</code>, and <code>their_label</code> parameters are
+<p>The <span class='synopsis'><code>ancestor_label</code></span>, <span class='synopsis'><code>our_label</code></span>, and <span class='synopsis'><code>their_label</code></span> parameters are
 used to label the different sides of a conflict if the merge driver
 supports this.</p>
 </div>

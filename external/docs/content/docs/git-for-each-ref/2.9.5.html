@@ -35,10 +35,10 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Iterate over all refs that match <code>&lt;pattern&gt;</code> and show them
-according to the given <code>&lt;format&gt;</code>, after sorting them according
-to the given set of <code>&lt;key&gt;</code>.  If <code>&lt;count&gt;</code> is given, stop after
-showing that many refs.  The interpolated values in <code>&lt;format&gt;</code>
+<p>Iterate over all refs that match <span class='synopsis'><em>&lt;pattern&gt;</em></span> and show them
+according to the given <span class='synopsis'><em>&lt;format&gt;</em></span>, after sorting them according
+to the given set of <span class='synopsis'><em>&lt;key&gt;</em></span>.  If <span class='synopsis'><em>&lt;count&gt;</em></span> is given, stop after
+showing that many refs.  The interpolated values in <span class='synopsis'><em>&lt;format&gt;</em></span>
 can optionally be quoted as string literals in the specified
 host language allowing their direct evaluation in that language.</p>
 </div>
@@ -52,29 +52,29 @@ host language allowing their direct evaluation in that language.</p>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltcountgt"><a id="Documentation/git-for-each-ref.txt-count" class="anchor" href="#Documentation/git-for-each-ref.txt-count"></a>&lt;count&gt; </dt>
 <dd>
 <p>By default the command shows all refs that match
-<code>&lt;pattern&gt;</code>.  This option makes it stop after showing
+<span class='synopsis'><em>&lt;pattern&gt;</em></span>.  This option makes it stop after showing
 that many refs.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltkeygt"><a id="Documentation/git-for-each-ref.txt-key" class="anchor" href="#Documentation/git-for-each-ref.txt-key"></a>&lt;key&gt; </dt>
 <dd>
-<p>A field name to sort on.  Prefix <code>-</code> to sort in
+<p>A field name to sort on.  Prefix <span class='synopsis'><code>-</code></span> to sort in
 descending order of the value.  When unspecified,
-<code>refname</code> is used.  You may use the --sort=&lt;key&gt; option
+<span class='synopsis'><code>refname</code></span> is used.  You may use the --sort=&lt;key&gt; option
 multiple times, in which case the last key becomes the primary
 key.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltformatgt"><a id="Documentation/git-for-each-ref.txt-format" class="anchor" href="#Documentation/git-for-each-ref.txt-format"></a>&lt;format&gt; </dt>
 <dd>
-<p>A string that interpolates <code>%(fieldname)</code> from the
-object pointed at by a ref being shown.  If <code>fieldname</code>
-is prefixed with an asterisk (<code>*</code>) and the ref points
+<p>A string that interpolates <span class='synopsis'><code>%</code>(<code>fieldname</code>)</span> from the
+object pointed at by a ref being shown.  If <span class='synopsis'><code>fieldname</code></span>
+is prefixed with an asterisk (<span class='synopsis'><code>*</code></span>) and the ref points
 at a tag object, the value for the field in the object
 tag refers is used.  When unspecified, defaults to
-<code>%(objectname) SPC %(objecttype) TAB %(refname)</code>.
-It also interpolates <code>%%</code> to <code>%</code>, and <code>%xx</code> where <code>xx</code>
+<span class='synopsis'><code>%</code>(<code>objectname</code>) <code>SPC</code> <code>%</code>(<code>objecttype</code>) <code>TAB</code> <code>%</code>(<code>refname</code>)</span>.
+It also interpolates <span class='synopsis'><code>%%</code></span> to <span class='synopsis'><code>%</code></span>, and <span class='synopsis'><code>%xx</code></span> where <span class='synopsis'><code>xx</code></span>
 are hex digits interpolates to character with hex code
-<code>xx</code>; for example <code>%00</code> interpolates to <code>\0</code> (NUL),
-<code>%09</code> to <code>\t</code> (TAB) and <code>%0a</code> to <code>\n</code> (LF).</p>
+<span class='synopsis'><code>xx</code></span>; for example <span class='synopsis'><code>%00</code></span> interpolates to <span class='synopsis'><em>\0</em></span> (NUL),
+<span class='synopsis'><code>%09</code></span> to <span class='synopsis'><em>\t</em></span> (TAB) and <span class='synopsis'><code>%0a</code></span> to <span class='synopsis'><em>\n</em></span> (LF).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-ltpatterngt82308203"><a id="Documentation/git-for-each-ref.txt-pattern" class="anchor" href="#Documentation/git-for-each-ref.txt-pattern"></a>&lt;pattern&gt;&#8230;&#8203; </dt>
 <dd>
@@ -88,7 +88,7 @@ beginning up to a slash.</p>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt---python"><a class="anchor" href="#Documentation/git-for-each-ref.txt---python"></a>--python </dt>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt---tcl"><a class="anchor" href="#Documentation/git-for-each-ref.txt---tcl"></a>--tcl </dt>
 <dd>
-<p>If given, strings that substitute <code>%(fieldname)</code>
+<p>If given, strings that substitute <span class='synopsis'><code>%</code>(<code>fieldname</code>)</span>
 placeholders are quoted as string literals suitable for
 the specified host language.  This is meant to produce
 a scriptlet that can directly be `eval`ed.</p>
@@ -132,17 +132,17 @@ keys.</p>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-refname"><a class="anchor" href="#Documentation/git-for-each-ref.txt-refname"></a>refname </dt>
 <dd>
 <p>The name of the ref (the part after $GIT_DIR/).
-For a non-ambiguous short name of the ref append <code>:short</code>.
+For a non-ambiguous short name of the ref append <span class='synopsis'><code>:short</code></span>.
 The option core.warnAmbiguousRefs is used to select the strict
-abbreviation mode. If <code>strip=&lt;N&gt;</code> is appended, strips <code>&lt;N&gt;</code>
+abbreviation mode. If <span class='synopsis'><code>strip=</code><em>&lt;N&gt;</em></span> is appended, strips <span class='synopsis'><em>&lt;N&gt;</em></span>
 slash-separated path components from the front of the refname
-(e.g., <code>%(refname:strip=2)</code> turns <code>refs/tags/foo</code> into <code>foo</code>.
-<code>&lt;N&gt;</code> must be a positive integer.  If a displayed ref has fewer
-components than <code>&lt;N&gt;</code>, the command aborts with an error.</p>
+(e.g., <span class='synopsis'><code>%</code>(<code>refname:strip=2</code>)</span> turns <span class='synopsis'><code>refs/tags/foo</code></span> into <span class='synopsis'><code>foo</code></span>.
+<span class='synopsis'><em>&lt;N&gt;</em></span> must be a positive integer.  If a displayed ref has fewer
+components than <span class='synopsis'><em>&lt;N&gt;</em></span>, the command aborts with an error.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objecttype"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objecttype"></a>objecttype </dt>
 <dd>
-<p>The type of the object (<code>blob</code>, <code>tree</code>, <code>commit</code>, <code>tag</code>).</p>
+<p>The type of the object (<span class='synopsis'><code>blob</code></span>, <span class='synopsis'><code>tree</code></span>, <span class='synopsis'><code>commit</code></span>, <span class='synopsis'><code>tag</code></span>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectsize"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objectsize"></a>objectsize </dt>
 <dd>
@@ -151,24 +151,24 @@ components than <code>&lt;N&gt;</code>, the command aborts with an error.</p>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-objectname"><a class="anchor" href="#Documentation/git-for-each-ref.txt-objectname"></a>objectname </dt>
 <dd>
 <p>The object name (aka SHA-1).
-For a non-ambiguous abbreviation of the object name append <code>:short</code>.</p>
+For a non-ambiguous abbreviation of the object name append <span class='synopsis'><code>:short</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-upstream"><a class="anchor" href="#Documentation/git-for-each-ref.txt-upstream"></a>upstream </dt>
 <dd>
 <p>The name of a local ref which can be considered &#8220;upstream&#8221;
-from the displayed ref. Respects <code>:short</code> in the same way as
-<code>refname</code> above.  Additionally respects <code>:track</code> to show
-"[ahead N, behind M]" and <code>:trackshort</code> to show the terse
+from the displayed ref. Respects <span class='synopsis'><code>:short</code></span> in the same way as
+<span class='synopsis'><code>refname</code></span> above.  Additionally respects <span class='synopsis'><code>:track</code></span> to show
+"[ahead N, behind M]" and <span class='synopsis'><code>:trackshort</code></span> to show the terse
 version: "&gt;" (ahead), "&lt;" (behind), "&lt;&gt;" (ahead and behind),
 or "=" (in sync).  Has no effect if the ref does not have
 tracking information associated with it.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-push"><a class="anchor" href="#Documentation/git-for-each-ref.txt-push"></a>push </dt>
 <dd>
-<p>The name of a local ref which represents the <code>@{push}</code> location
-for the displayed ref. Respects <code>:short</code>, <code>:track</code>, and
-<code>:trackshort</code> options as <code>upstream</code> does. Produces an empty
-string if no <code>@{push}</code> ref is configured.</p>
+<p>The name of a local ref which represents the <span class='synopsis'><code>@{push}</code></span> location
+for the displayed ref. Respects <span class='synopsis'><code>:short</code></span>, <span class='synopsis'><code>:track</code></span>, and
+<span class='synopsis'><code>:trackshort</code></span> options as <span class='synopsis'><code>upstream</code></span> does. Produces an empty
+string if no <span class='synopsis'><code>@{push}</code></span> ref is configured.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-HEAD"><a class="anchor" href="#Documentation/git-for-each-ref.txt-HEAD"></a>HEAD </dt>
 <dd>
@@ -177,22 +177,22 @@ otherwise.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-color"><a class="anchor" href="#Documentation/git-for-each-ref.txt-color"></a>color </dt>
 <dd>
-<p>Change output color.  Followed by <code>:&lt;colorname&gt;</code>, where names
-are described in <code>color.branch.*</code>.</p>
+<p>Change output color.  Followed by <span class='synopsis'><code>:</code><em>&lt;colorname&gt;</em></span>, where names
+are described in <span class='synopsis'><code>color.branch.*</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-for-each-ref.txt-align"><a class="anchor" href="#Documentation/git-for-each-ref.txt-align"></a>align </dt>
 <dd>
 <p>Left-, middle-, or right-align the content between
 %(align:&#8230;&#8203;) and %(end). The "align:" is followed by
-<code>width=&lt;width&gt;</code> and <code>position=&lt;position&gt;</code> in any order
-separated by a comma, where the <code>&lt;position&gt;</code> is either left,
-right or middle, default being left and <code>&lt;width&gt;</code> is the total
+<span class='synopsis'><code>width=</code><em>&lt;width&gt;</em></span> and <span class='synopsis'><code>position=</code><em>&lt;position&gt;</em></span> in any order
+separated by a comma, where the <span class='synopsis'><em>&lt;position&gt;</em></span> is either left,
+right or middle, default being left and <span class='synopsis'><em>&lt;width&gt;</em></span> is the total
 length of the content with alignment. For brevity, the
 "width=" and/or "position=" prefixes may be omitted, and bare
 &lt;width&gt; and &lt;position&gt; used instead.  For instance,
-<code>%(align:&lt;width&gt;,&lt;position&gt;)</code>. If the contents length is more
+<span class='synopsis'><code>%</code>(<code>align:</code><em>&lt;width&gt;</em><code>,</code><em>&lt;position&gt;</em>)</span>. If the contents length is more
 than the width then no alignment is performed. If used with
-<code>--quote</code> everything in between %(align:&#8230;&#8203;) and %(end) is
+<span class='synopsis'><code>--quote</code></span> everything in between %(align:&#8230;&#8203;) and %(end) is
 quoted, but if nested then only the topmost level performs
 quoting.</p>
 </dd>
@@ -200,36 +200,36 @@ quoting.</p>
 </div>
 <div class="paragraph">
 <p>In addition to the above, for commit and tag objects, the header
-field names (<code>tree</code>, <code>parent</code>, <code>object</code>, <code>type</code>, and <code>tag</code>) can
+field names (<span class='synopsis'><code>tree</code></span>, <span class='synopsis'><code>parent</code></span>, <span class='synopsis'><code>object</code></span>, <span class='synopsis'><code>type</code></span>, and <span class='synopsis'><code>tag</code></span>) can
 be used to specify the value in the header field.</p>
 </div>
 <div class="paragraph">
-<p>For commit and tag objects, the special <code>creatordate</code> and <code>creator</code>
+<p>For commit and tag objects, the special <span class='synopsis'><code>creatordate</code></span> and <span class='synopsis'><code>creator</code></span>
 fields will correspond to the appropriate date or name-email-date tuple
-from the <code>committer</code> or <code>tagger</code> fields depending on the object type.
+from the <span class='synopsis'><code>committer</code></span> or <span class='synopsis'><code>tagger</code></span> fields depending on the object type.
 These are intended for working on a mix of annotated and lightweight tags.</p>
 </div>
 <div class="paragraph">
-<p>Fields that have name-email-date tuple as its value (<code>author</code>,
-<code>committer</code>, and <code>tagger</code>) can be suffixed with <code>name</code>, <code>email</code>,
-and <code>date</code> to extract the named component.</p>
+<p>Fields that have name-email-date tuple as its value (<span class='synopsis'><code>author</code></span>,
+<span class='synopsis'><code>committer</code></span>, and <span class='synopsis'><code>tagger</code></span>) can be suffixed with <span class='synopsis'><code>name</code></span>, <span class='synopsis'><code>email</code></span>,
+and <span class='synopsis'><code>date</code></span> to extract the named component.</p>
 </div>
 <div class="paragraph">
-<p>The complete message in a commit and tag object is <code>contents</code>.
-Its first line is <code>contents:subject</code>, where subject is the concatenation
+<p>The complete message in a commit and tag object is <span class='synopsis'><code>contents</code></span>.
+Its first line is <span class='synopsis'><code>contents:subject</code></span>, where subject is the concatenation
 of all lines of the commit message up to the first blank line.  The next
 line is <em>contents:body</em>, where body is all of the lines after the first
-blank line.  The optional GPG signature is <code>contents:signature</code>.  The
-first <code>N</code> lines of the message is obtained using <code>contents:lines=N</code>.</p>
+blank line.  The optional GPG signature is <span class='synopsis'><code>contents:signature</code></span>.  The
+first <span class='synopsis'><code>N</code></span> lines of the message is obtained using <span class='synopsis'><code>contents:lines=N</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>For sorting purposes, fields with numeric values sort in numeric order
-(<code>objectsize</code>, <code>authordate</code>, <code>committerdate</code>, <code>creatordate</code>, <code>taggerdate</code>).
+(<span class='synopsis'><code>objectsize</code></span>, <span class='synopsis'><code>authordate</code></span>, <span class='synopsis'><code>committerdate</code></span>, <span class='synopsis'><code>creatordate</code></span>, <span class='synopsis'><code>taggerdate</code></span>).
 All other fields are used to sort in their byte-value order.</p>
 </div>
 <div class="paragraph">
 <p>There is also an option to sort by versions, this can be done by using
-the fieldname <code>version:refname</code> or its alias <code>v:refname</code>.</p>
+the fieldname <span class='synopsis'><code>version:refname</code></span> or its alias <span class='synopsis'><code>v:refname</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>In any case, a field name that refers to a field inapplicable to
@@ -238,8 +238,8 @@ returns an empty string instead.</p>
 </div>
 <div class="paragraph">
 <p>As a special case for the date-type fields, you may specify a format for
-the date by adding <code>:</code> followed by date format name (see the
-values the <code>--date</code> option to <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a> takes).</p>
+the date by adding <span class='synopsis'><code>:</code></span> followed by date format name (see the
+values the <span class='synopsis'><code>--date</code></span> option to <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a> takes).</p>
 </div>
 </div>
 </div>

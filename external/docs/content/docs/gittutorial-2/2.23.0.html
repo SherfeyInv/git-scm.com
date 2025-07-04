@@ -234,7 +234,7 @@ the one shown above because the commit object records the time when
 it was created and the name of the person performing the commit.</p>
 </div>
 <div class="paragraph">
-<p>We can ask Git about this particular object with the <code>cat-file</code>
+<p>We can ask Git about this particular object with the <span class='synopsis'><code>cat-file</code></span>
 command. Don&#8217;t copy the 40 hex digits from this example but use those
 from your own version. Note that you can shorten it to only a few
 characters to save yourself typing all 40 hex digits:</p>
@@ -433,8 +433,9 @@ designate such an argument.</p>
 <h2 id="_the_index_file"><a class="anchor" href="#_the_index_file"></a>The index file</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The primary tool we&#8217;ve been using to create commits is <code>git-commit
--a</code>, which creates a commit including every change you&#8217;ve made to
+<p>The primary tool we&#8217;ve been using to create commits is <span class='synopsis'><code>git-commit</code>
+
+<code>-a</code></span>, which creates a commit including every change you&#8217;ve made to
 your working tree.  But what if you want to commit changes only to
 certain files?  Or only certain changes to certain files?</p>
 </div>
@@ -629,7 +630,7 @@ commit" would create a commit that added closing.txt (with its new
 contents), but that didn&#8217;t modify file.txt.</p>
 </div>
 <div class="paragraph">
-<p>Also, note that a bare <code>git diff</code> shows the changes to file.txt, but
+<p>Also, note that a bare <span class='synopsis'><code>git</code> <code>diff</code></span> shows the changes to file.txt, but
 not the addition of closing.txt, because the version of closing.txt
 in the index file is identical to the one in the working directory.</p>
 </div>

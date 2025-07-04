@@ -39,23 +39,23 @@ operations like object transfer and fsck. Beginning from a given commit, the
 list of objects is found by walking parent relationships between commits (commit
 X based on commit W) and containment relationships between objects (tree Y is
 contained within commit X, and blob Z is located within tree Y, giving our
-working tree for commit X something like <code>y/z.txt</code>).</p>
+working tree for commit X something like <span class='synopsis'><code>y/z.txt</code></span>).</p>
 </div>
 <div class="paragraph">
 <p>A related concept is the revision walk, which is focused on commit objects and
 their parent relationships and does not delve into other object types. The
-revision walk is used for operations like <code>git log</code>.</p>
+revision walk is used for operations like <span class='synopsis'><code>git</code> <code>log</code></span>.</p>
 </div>
 <div class="sect2">
 <h3 id="_related_reading"><a class="anchor" href="#_related_reading"></a>Related Reading</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><code>Documentation/user-manual.txt</code> under "Hacking Git" contains some coverage of
+<p><span class='synopsis'><code>Documentation/user-manual.txt</code></span> under "Hacking Git" contains some coverage of
 the revision walker in its various incarnations.</p>
 </li>
 <li>
-<p><code>revision.h</code></p>
+<p><span class='synopsis'><code>revision.h</code></span></p>
 </li>
 <li>
 <p><a href="https://eagain.net/articles/git-for-computer-scientists/">Git for Computer Scientists</a>
@@ -71,7 +71,7 @@ walk is really describing.</p>
 <h2 id="_setting_up"><a class="anchor" href="#_setting_up"></a>Setting Up</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Create a new branch from <code>master</code>.</p>
+<p>Create a new branch from <span class='synopsis'><code>master</code></span>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -79,8 +79,8 @@ walk is really describing.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll put our fiddling into a new command. For fun, let&#8217;s name it <code>git walken</code>.
-Open up a new file <code>builtin/walken.c</code> and set up the command handler:</p>
+<p>We&#8217;ll put our fiddling into a new command. For fun, let&#8217;s name it <span class='synopsis'><code>git</code> <code>walken</code></span>.
+Open up a new file <span class='synopsis'><code>builtin/walken.c</code></span> and set up the command handler:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -106,20 +106,20 @@ int cmd_walken(int argc, const char **argv, const char *prefix)
 <div class="title">Note</div>
 </td>
 <td class="content">
-<code>trace_printf()</code> differs from <code>printf()</code> in that it can be turned on or
-off at runtime. For the purposes of this tutorial, we will write <code>walken</code> as
+<span class='synopsis'><code>trace_printf</code>()</span> differs from <span class='synopsis'><code>printf</code>()</span> in that it can be turned on or
+off at runtime. For the purposes of this tutorial, we will write <span class='synopsis'><code>walken</code></span> as
 though it is intended for use as a "plumbing" command: that is, a command which
 is used primarily in scripts, rather than interactively by humans (a "porcelain"
-command). So we will send our debug output to <code>trace_printf()</code> instead. When
-running, enable trace output by setting the environment variable <code>GIT_TRACE</code>.
+command). So we will send our debug output to <span class='synopsis'><code>trace_printf</code>()</span> instead. When
+running, enable trace output by setting the environment variable <span class='synopsis'><code>GIT_TRACE</code></span>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Add usage text and <code>-h</code> handling, like all subcommands should consistently do
+<p>Add usage text and <span class='synopsis'><code>-h</code></span> handling, like all subcommands should consistently do
 (our test suite will notice and complain if you fail to do so).
-We&#8217;ll need to include the <code>parse-options.h</code> header.</p>
+We&#8217;ll need to include the <span class='synopsis'><code>parse-options.h</code></span> header.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -144,7 +144,7 @@ int cmd_walken(int argc, const char **argv, const char *prefix)
 </div>
 </div>
 <div class="paragraph">
-<p>Also add the relevant line in <code>builtin.h</code> near <code>cmd_whatchanged()</code>:</p>
+<p>Also add the relevant line in <span class='synopsis'><code>builtin.h</code></span> near <span class='synopsis'><code>cmd_whatchanged</code>()</span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -152,7 +152,7 @@ int cmd_walken(int argc, const char **argv, const char *prefix)
 </div>
 </div>
 <div class="paragraph">
-<p>Include the command in <code>git.c</code> in <code>commands[]</code> near the entry for <code>whatchanged</code>,
+<p>Include the command in <span class='synopsis'><code>git.c</code></span> in <span class='synopsis'><code>commands</code>[]</span> near the entry for <span class='synopsis'><code>whatchanged</code></span>,
 maintaining alphabetical ordering:</p>
 </div>
 <div class="listingblock">
@@ -161,7 +161,7 @@ maintaining alphabetical ordering:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Add it to the <code>Makefile</code> near the line for <code>builtin/worktree.o</code>:</p>
+<p>Add it to the <span class='synopsis'><code>Makefile</code></span> near the line for <span class='synopsis'><code>builtin/worktree.o</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -169,8 +169,8 @@ maintaining alphabetical ordering:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Build and test out your command, without forgetting to ensure the <code>DEVELOPER</code>
-flag is set, and with <code>GIT_TRACE</code> enabled so the debug output can be seen:</p>
+<p>Build and test out your command, without forgetting to ensure the <span class='synopsis'><code>DEVELOPER</code></span>
+flag is set, and with <span class='synopsis'><code>GIT_TRACE</code></span> enabled so the debug output can be seen:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -187,7 +187,7 @@ $ GIT_TRACE=1 ./bin-wrappers/git walken</pre>
 </td>
 <td class="content">
 For a more exhaustive overview of the new command process, take a look at
-<code>Documentation/MyFirstContribution.txt</code>.
+<span class='synopsis'><code>Documentation/MyFirstContribution.txt</code></span>.
 </td>
 </tr>
 </table>
@@ -206,53 +206,53 @@ A reference implementation can be found at
 </table>
 </div>
 <div class="sect2">
-<h3 id="_struct_rev_cmdline_info"><a class="anchor" href="#_struct_rev_cmdline_info"></a><code>struct rev_cmdline_info</code></h3>
+<h3 id="_struct_rev_cmdline_info"><a class="anchor" href="#_struct_rev_cmdline_info"></a><span class='synopsis'><code>struct</code> <code>rev_cmdline_info</code></span></h3>
 <div class="paragraph">
-<p>The definition of <code>struct rev_cmdline_info</code> can be found in <code>revision.h</code>.</p>
+<p>The definition of <span class='synopsis'><code>struct</code> <code>rev_cmdline_info</code></span> can be found in <span class='synopsis'><code>revision.h</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>This struct is contained within the <code>rev_info</code> struct and is used to reflect
+<p>This struct is contained within the <span class='synopsis'><code>rev_info</code></span> struct and is used to reflect
 parameters provided by the user over the CLI.</p>
 </div>
 <div class="paragraph">
-<p><code>nr</code> represents the number of <code>rev_cmdline_entry</code> present in the array.</p>
+<p><span class='synopsis'><code>nr</code></span> represents the number of <span class='synopsis'><code>rev_cmdline_entry</code></span> present in the array.</p>
 </div>
 <div class="paragraph">
-<p><code>alloc</code> is used by the <code>ALLOC_GROW</code> macro. Check <code>cache.h</code> - this variable is
+<p><span class='synopsis'><code>alloc</code></span> is used by the <span class='synopsis'><code>ALLOC_GROW</code></span> macro. Check <span class='synopsis'><code>cache.h</code></span> - this variable is
 used to track the allocated size of the list.</p>
 </div>
 <div class="paragraph">
 <p>Per entry, we find:</p>
 </div>
 <div class="paragraph">
-<p><code>item</code> is the object provided upon which to base the object walk. Items in Git
-can be blobs, trees, commits, or tags. (See <code>Documentation/gittutorial-2.txt</code>.)</p>
+<p><span class='synopsis'><code>item</code></span> is the object provided upon which to base the object walk. Items in Git
+can be blobs, trees, commits, or tags. (See <span class='synopsis'><code>Documentation/gittutorial-2.txt</code></span>.)</p>
 </div>
 <div class="paragraph">
-<p><code>name</code> is the object ID (OID) of the object - a hex string you may be familiar
+<p><span class='synopsis'><code>name</code></span> is the object ID (OID) of the object - a hex string you may be familiar
 with from using Git to organize your source in the past. Check the tutorial
 mentioned above towards the top for a discussion of where the OID can come
 from.</p>
 </div>
 <div class="paragraph">
-<p><code>whence</code> indicates some information about what to do with the parents of the
+<p><span class='synopsis'><code>whence</code></span> indicates some information about what to do with the parents of the
 specified object. We&#8217;ll explore this flag more later on; take a look at
-<code>Documentation/revisions.txt</code> to get an idea of what could set the <code>whence</code>
+<span class='synopsis'><code>Documentation/revisions.txt</code></span> to get an idea of what could set the <span class='synopsis'><code>whence</code></span>
 value.</p>
 </div>
 <div class="paragraph">
-<p><code>flags</code> are used to hint the beginning of the revision walk and are the first
-block under the <code>#include`s in `revision.h</code>. The most likely ones to be set in
-the <code>rev_cmdline_info</code> are <code>UNINTERESTING</code> and <code>BOTTOM</code>, but these same flags
+<p><span class='synopsis'><code>flags</code></span> are used to hint the beginning of the revision walk and are the first
+block under the <span class='synopsis'><code>#include</code><code>s</code> <code>in</code> <code>revision.h</code></span>. The most likely ones to be set in
+the <span class='synopsis'><code>rev_cmdline_info</code></span> are <span class='synopsis'><code>UNINTERESTING</code></span> and <span class='synopsis'><code>BOTTOM</code></span>, but these same flags
 can be used during the walk, as well.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_struct_rev_info"><a class="anchor" href="#_struct_rev_info"></a><code>struct rev_info</code></h3>
+<h3 id="_struct_rev_info"><a class="anchor" href="#_struct_rev_info"></a><span class='synopsis'><code>struct</code> <code>rev_info</code></span></h3>
 <div class="paragraph">
 <p>This one is quite a bit longer, and many fields are only used during the walk
-by <code>revision.c</code> - not configuration options. Most of the configurable flags in
-<code>struct rev_info</code> have a mirror in <code>Documentation/rev-list-options.txt</code>. It&#8217;s a
+by <span class='synopsis'><code>revision.c</code></span> - not configuration options. Most of the configurable flags in
+<span class='synopsis'><code>struct</code> <code>rev_info</code></span> have a mirror in <span class='synopsis'><code>Documentation/rev-list-options.txt</code></span>. It&#8217;s a
 good idea to take some time and read through that document.</p>
 </div>
 </div>
@@ -262,7 +262,7 @@ good idea to take some time and read through that document.</p>
 <h2 id="_basic_commit_walk"><a class="anchor" href="#_basic_commit_walk"></a>Basic Commit Walk</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First, let&#8217;s see if we can replicate the output of <code>git log --oneline</code>. We&#8217;ll
+<p>First, let&#8217;s see if we can replicate the output of <span class='synopsis'><code>git</code> <code>log</code> <code>--oneline</code></span>. We&#8217;ll
 refer back to the implementation frequently to discover norms when performing
 an object walk of our own.</p>
 </div>
@@ -288,13 +288,13 @@ various branches.</p>
 <p>Check configuration files for relevant settings.</p>
 </li>
 <li>
-<p>Set up the <code>rev_info</code> struct.</p>
+<p>Set up the <span class='synopsis'><code>rev_info</code></span> struct.</p>
 </li>
 <li>
-<p>Tweak the initialized <code>rev_info</code> to suit the current walk.</p>
+<p>Tweak the initialized <span class='synopsis'><code>rev_info</code></span> to suit the current walk.</p>
 </li>
 <li>
-<p>Prepare the <code>rev_info</code> for the walk.</p>
+<p>Prepare the <span class='synopsis'><code>rev_info</code></span> for the walk.</p>
 </li>
 <li>
 <p>Iterate over the objects, processing each one.</p>
@@ -307,30 +307,30 @@ various branches.</p>
 <p>Before examining configuration files which may modify command behavior, set up
 default state for switches or options your command may have. If your command
 utilizes other Git components, ask them to set up their default states as well.
-For instance, <code>git log</code> takes advantage of <code>grep</code> and <code>diff</code> functionality, so
-its <code>init_log_defaults()</code> sets its own state (<code>decoration_style</code>) and asks
-<code>grep</code> and <code>diff</code> to initialize themselves by calling each of their
+For instance, <span class='synopsis'><code>git</code> <code>log</code></span> takes advantage of <span class='synopsis'><code>grep</code></span> and <span class='synopsis'><code>diff</code></span> functionality, so
+its <span class='synopsis'><code>init_log_defaults</code>()</span> sets its own state (<span class='synopsis'><code>decoration_style</code></span>) and asks
+<span class='synopsis'><code>grep</code></span> and <span class='synopsis'><code>diff</code></span> to initialize themselves by calling each of their
 initialization functions.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_configuring_from_gitconfig"><a class="anchor" href="#_configuring_from_gitconfig"></a>Configuring From <code>.gitconfig</code></h4>
+<h4 id="_configuring_from_gitconfig"><a class="anchor" href="#_configuring_from_gitconfig"></a>Configuring From <span class='synopsis'><code>.gitconfig</code></span></h4>
 <div class="paragraph">
 <p>Next, we should have a look at any relevant configuration settings (i.e.,
-settings readable and settable from <code>git config</code>). This is done by providing a
-callback to <code>git_config()</code>; within that callback, you can also invoke methods
+settings readable and settable from <span class='synopsis'><code>git</code> <code>config</code></span>). This is done by providing a
+callback to <span class='synopsis'><code>git_config</code>()</span>; within that callback, you can also invoke methods
 from other components you may need that need to intercept these options. Your
 callback will be invoked once per each configuration value which Git knows about
 (global, local, worktree, etc.).</p>
 </div>
 <div class="paragraph">
 <p>Similarly to the default values, we don&#8217;t have anything to do here yet
-ourselves; however, we should call <code>git_default_config()</code> if we aren&#8217;t calling
+ourselves; however, we should call <span class='synopsis'><code>git_default_config</code>()</span> if we aren&#8217;t calling
 any other existing config callbacks.</p>
 </div>
 <div class="paragraph">
-<p>Add a new function to <code>builtin/walken.c</code>.
-We&#8217;ll also need to include the <code>config.h</code> header:</p>
+<p>Add a new function to <span class='synopsis'><code>builtin/walken.c</code></span>.
+We&#8217;ll also need to include the <span class='synopsis'><code>config.h</code></span> header:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -349,7 +349,7 @@ static int git_walken_config(const char *var, const char *value, void *cb)
 </div>
 </div>
 <div class="paragraph">
-<p>Make sure to invoke <code>git_config()</code> with it in your <code>cmd_walken()</code>:</p>
+<p>Make sure to invoke <span class='synopsis'><code>git_config</code>()</span> with it in your <span class='synopsis'><code>cmd_walken</code>()</span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -365,17 +365,17 @@ static int git_walken_config(const char *var, const char *value, void *cb)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_setting_up_rev_info"><a class="anchor" href="#_setting_up_rev_info"></a>Setting Up <code>rev_info</code></h4>
+<h4 id="_setting_up_rev_info"><a class="anchor" href="#_setting_up_rev_info"></a>Setting Up <span class='synopsis'><code>rev_info</code></span></h4>
 <div class="paragraph">
 <p>Now that we&#8217;ve gathered external configuration and options, it&#8217;s time to
-initialize the <code>rev_info</code> object which we will use to perform the walk. This is
-typically done by calling <code>repo_init_revisions()</code> with the repository you intend
-to target, as well as the <code>prefix</code> argument of <code>cmd_walken</code> and your <code>rev_info</code>
+initialize the <span class='synopsis'><code>rev_info</code></span> object which we will use to perform the walk. This is
+typically done by calling <span class='synopsis'><code>repo_init_revisions</code>()</span> with the repository you intend
+to target, as well as the <span class='synopsis'><code>prefix</code></span> argument of <span class='synopsis'><code>cmd_walken</code></span> and your <span class='synopsis'><code>rev_info</code></span>
 struct.</p>
 </div>
 <div class="paragraph">
-<p>Add the <code>struct rev_info</code> and the <code>repo_init_revisions()</code> call.
-We&#8217;ll also need to include the <code>revision.h</code> header:</p>
+<p>Add the <span class='synopsis'><code>struct</code> <code>rev_info</code></span> and the <span class='synopsis'><code>repo_init_revisions</code>()</span> call.
+We&#8217;ll also need to include the <span class='synopsis'><code>revision.h</code></span> header:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -398,9 +398,9 @@ int cmd_walken(int argc, const char **argv, const char *prefix)
 </div>
 </div>
 <div class="sect3">
-<h4 id="_tweaking_rev_info_for_the_walk"><a class="anchor" href="#_tweaking_rev_info_for_the_walk"></a>Tweaking <code>rev_info</code> For the Walk</h4>
+<h4 id="_tweaking_rev_info_for_the_walk"><a class="anchor" href="#_tweaking_rev_info_for_the_walk"></a>Tweaking <span class='synopsis'><code>rev_info</code></span> For the Walk</h4>
 <div class="paragraph">
-<p>We&#8217;re getting close, but we&#8217;re still not quite ready to go. Now that <code>rev</code> is
+<p>We&#8217;re getting close, but we&#8217;re still not quite ready to go. Now that <span class='synopsis'><code>rev</code></span> is
 initialized, we can modify it to fit our needs. This is usually done within a
 helper for clarity, so let&#8217;s add one:</p>
 </div>
@@ -427,7 +427,7 @@ helper for clarity, so let&#8217;s add one:</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Instead of using the shorthand <code>add_head_to_pending()</code>, you could do
+<p>Instead of using the shorthand <span class='synopsis'><code>add_head_to_pending</code>()</span>, you could do
 something like this:</p>
 </div>
 <div class="listingblock">
@@ -441,7 +441,7 @@ something like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Using a <code>setup_revision_opt</code> gives you finer control over your walk&#8217;s starting
+<p>Using a <span class='synopsis'><code>setup_revision_opt</code></span> gives you finer control over your walk&#8217;s starting
 point.</p>
 </div>
 </td>
@@ -449,8 +449,8 @@ point.</p>
 </table>
 </div>
 <div class="paragraph">
-<p>Then let&#8217;s invoke <code>final_rev_info_setup()</code> after the call to
-<code>repo_init_revisions()</code>:</p>
+<p>Then let&#8217;s invoke <span class='synopsis'><code>final_rev_info_setup</code>()</span> after the call to
+<span class='synopsis'><code>repo_init_revisions</code>()</span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -465,17 +465,17 @@ point.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Later, we may wish to add more arguments to <code>final_rev_info_setup()</code>. But for
+<p>Later, we may wish to add more arguments to <span class='synopsis'><code>final_rev_info_setup</code>()</span>. But for
 now, this is all we need.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_preparing_rev_info_for_the_walk"><a class="anchor" href="#_preparing_rev_info_for_the_walk"></a>Preparing <code>rev_info</code> For the Walk</h4>
+<h4 id="_preparing_rev_info_for_the_walk"><a class="anchor" href="#_preparing_rev_info_for_the_walk"></a>Preparing <span class='synopsis'><code>rev_info</code></span> For the Walk</h4>
 <div class="paragraph">
-<p>Now that <code>rev</code> is all initialized and configured, we&#8217;ve got one more setup step
+<p>Now that <span class='synopsis'><code>rev</code></span> is all initialized and configured, we&#8217;ve got one more setup step
 before we get rolling. We can do this in a helper, which will both prepare the
-<code>rev_info</code> for the walk, and perform the walk itself. Let&#8217;s start the helper
-with the call to <code>prepare_revision_walk()</code>, which can return an error without
+<span class='synopsis'><code>rev_info</code></span> for the walk, and perform the walk itself. Let&#8217;s start the helper
+with the call to <span class='synopsis'><code>prepare_revision_walk</code>()</span>, which can return an error without
 dying on its own:</p>
 </div>
 <div class="listingblock">
@@ -494,8 +494,8 @@ dying on its own:</p>
 <div class="title">Note</div>
 </td>
 <td class="content">
-<code>die()</code> prints to <code>stderr</code> and exits the program. Since it will print to
-<code>stderr</code> it&#8217;s likely to be seen by a human, so we will localize it.
+<span class='synopsis'><code>die</code>()</span> prints to <span class='synopsis'><code>stderr</code></span> and exits the program. Since it will print to
+<span class='synopsis'><code>stderr</code></span> it&#8217;s likely to be seen by a human, so we will localize it.
 </td>
 </tr>
 </table>
@@ -504,11 +504,11 @@ dying on its own:</p>
 <div class="sect3">
 <h4 id="_performing_the_walk"><a class="anchor" href="#_performing_the_walk"></a>Performing the Walk!</h4>
 <div class="paragraph">
-<p>Finally! We are ready to begin the walk itself. Now we can see that <code>rev_info</code>
+<p>Finally! We are ready to begin the walk itself. Now we can see that <span class='synopsis'><code>rev_info</code></span>
 can also be used as an iterator; we move to the next item in the walk by using
-<code>get_revision()</code> repeatedly. Add the listed variable declarations at the top and
-the walk loop below the <code>prepare_revision_walk()</code> call within your
-<code>walken_commit_walk()</code>:</p>
+<span class='synopsis'><code>get_revision</code>()</span> repeatedly. Add the listed variable declarations at the top and
+the walk loop below the <span class='synopsis'><code>prepare_revision_walk</code>()</span> call within your
+<span class='synopsis'><code>walken_commit_walk</code>()</span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -535,7 +535,7 @@ the walk loop below the <code>prepare_revision_walk()</code> call within your
 <div class="title">Note</div>
 </td>
 <td class="content">
-<code>puts()</code> prints a <code>char*</code> to <code>stdout</code>. Since this is the part of the
+<span class='synopsis'><code>puts</code>()</span> prints a <span class='synopsis'><code>char*</code></span> to <span class='synopsis'><code>stdout</code></span>. Since this is the part of the
 command we expect to be machine-parsed, we&#8217;re sending it directly to stdout.
 </td>
 </tr>
@@ -556,7 +556,7 @@ your tree&#8217;s history, in order, ending with the initial commit, "Initial re
 of "git", the information manager from hell". Congratulations! You&#8217;ve written
 your first revision walk. You can play with printing some additional fields
 from each commit if you&#8217;re curious; have a look at the functions available in
-<code>commit.h</code>.</p>
+<span class='synopsis'><code>commit.h</code></span>.</p>
 </div>
 </div>
 </div>
@@ -564,11 +564,11 @@ from each commit if you&#8217;re curious; have a look at the functions available
 <h3 id="_adding_a_filter"><a class="anchor" href="#_adding_a_filter"></a>Adding a Filter</h3>
 <div class="paragraph">
 <p>Next, let&#8217;s try to filter the commits we see based on their author. This is
-equivalent to running <code>git log --author=&lt;pattern&gt;</code>. We can add a filter by
-modifying <code>rev_info.grep_filter</code>, which is a <code>struct grep_opt</code>.</p>
+equivalent to running <span class='synopsis'><code>git</code> <code>log</code> <code>--author=</code><em>&lt;pattern&gt;</em></span>. We can add a filter by
+modifying <span class='synopsis'><code>rev_info.grep_filter</code></span>, which is a <span class='synopsis'><code>struct</code> <code>grep_opt</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>First some setup. Add <code>grep_config()</code> to <code>git_walken_config()</code>:</p>
+<p>First some setup. Add <span class='synopsis'><code>grep_config</code>()</span> to <span class='synopsis'><code>git_walken_config</code>()</span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -580,16 +580,16 @@ modifying <code>rev_info.grep_filter</code>, which is a <code>struct grep_opt</c
 </div>
 </div>
 <div class="paragraph">
-<p>Next, we can modify the <code>grep_filter</code>. This is done with convenience functions
-found in <code>grep.h</code>. For fun, we&#8217;re filtering to only commits from folks using a
-<code>gmail.com</code> email address - a not-very-precise guess at who may be working on
+<p>Next, we can modify the <span class='synopsis'><code>grep_filter</code></span>. This is done with convenience functions
+found in <span class='synopsis'><code>grep.h</code></span>. For fun, we&#8217;re filtering to only commits from folks using a
+<span class='synopsis'><code>gmail.com</code></span> email address - a not-very-precise guess at who may be working on
 Git as a hobby. Since we&#8217;re checking the author, which is a specific line in the
-header, we&#8217;ll use the <code>append_header_grep_pattern()</code> helper. We can use
-the <code>enum grep_header_field</code> to indicate which part of the commit header we want
+header, we&#8217;ll use the <span class='synopsis'><code>append_header_grep_pattern</code>()</span> helper. We can use
+the <span class='synopsis'><code>enum</code> <code>grep_header_field</code></span> to indicate which part of the commit header we want
 to search.</p>
 </div>
 <div class="paragraph">
-<p>In <code>final_rev_info_setup()</code>, add your filter line:</p>
+<p>In <span class='synopsis'><code>final_rev_info_setup</code>()</span>, add your filter line:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -607,8 +607,8 @@ to search.</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>append_header_grep_pattern()</code> adds your new "gmail" pattern to <code>rev_info</code>, but
-it won&#8217;t work unless we compile it with <code>compile_grep_patterns()</code>.</p>
+<p><span class='synopsis'><code>append_header_grep_pattern</code>()</span> adds your new "gmail" pattern to <span class='synopsis'><code>rev_info</code></span>, but
+it won&#8217;t work unless we compile it with <span class='synopsis'><code>compile_grep_patterns</code>()</span>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -617,9 +617,9 @@ it won&#8217;t work unless we compile it with <code>compile_grep_patterns()</cod
 <div class="title">Note</div>
 </td>
 <td class="content">
-If you are using <code>setup_revisions()</code> (for example, if you are passing a
-<code>setup_revision_opt</code> instead of using <code>add_head_to_pending()</code>), you don&#8217;t need
-to call <code>compile_grep_patterns()</code> because <code>setup_revisions()</code> calls it for you.
+If you are using <span class='synopsis'><code>setup_revisions</code>()</span> (for example, if you are passing a
+<span class='synopsis'><code>setup_revision_opt</code></span> instead of using <span class='synopsis'><code>add_head_to_pending</code>()</span>), you don&#8217;t need
+to call <span class='synopsis'><code>compile_grep_patterns</code>()</span> because <span class='synopsis'><code>setup_revisions</code>()</span> calls it for you.
 </td>
 </tr>
 </table>
@@ -631,9 +631,9 @@ to call <code>compile_grep_patterns()</code> because <code>setup_revisions()</co
 <div class="title">Note</div>
 </td>
 <td class="content">
-We could add the same filter via the <code>append_grep_pattern()</code> helper if we
-wanted to, but <code>append_header_grep_pattern()</code> adds the <code>enum grep_context</code> and
-<code>enum grep_pat_token</code> for us.
+We could add the same filter via the <span class='synopsis'><code>append_grep_pattern</code>()</span> helper if we
+wanted to, but <span class='synopsis'><code>append_header_grep_pattern</code>()</span> adds the <span class='synopsis'><code>enum</code> <code>grep_context</code></span> and
+<span class='synopsis'><code>enum</code> <code>grep_pat_token</code></span> for us.
 </td>
 </tr>
 </table>
@@ -643,18 +643,18 @@ wanted to, but <code>append_header_grep_pattern()</code> adds the <code>enum gre
 <h3 id="_changing_the_order"><a class="anchor" href="#_changing_the_order"></a>Changing the Order</h3>
 <div class="paragraph">
 <p>There are a few ways that we can change the order of the commits during a
-revision walk. Firstly, we can use the <code>enum rev_sort_order</code> to choose from some
+revision walk. Firstly, we can use the <span class='synopsis'><code>enum</code> <code>rev_sort_order</code></span> to choose from some
 typical orderings.</p>
 </div>
 <div class="paragraph">
-<p><code>topo_order</code> is the same as <code>git log --topo-order</code>: we avoid showing a parent
+<p><span class='synopsis'><code>topo_order</code></span> is the same as <span class='synopsis'><code>git</code> <code>log</code> <code>--topo-order</code></span>: we avoid showing a parent
 before all of its children have been shown, and we avoid mixing commits which
-are in different lines of history. (<code>git help log</code>'s section on <code>--topo-order</code>
+are in different lines of history. (<span class='synopsis'><code>git</code> <code>help</code> <code>log</code></span>'s section on <span class='synopsis'><code>--topo-order</code></span>
 has a very nice diagram to illustrate this.)</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s see what happens when we run with <code>REV_SORT_BY_COMMIT_DATE</code> as opposed to
-<code>REV_SORT_BY_AUTHOR_DATE</code>. Add the following:</p>
+<p>Let&#8217;s see what happens when we run with <span class='synopsis'><code>REV_SORT_BY_COMMIT_DATE</code></span> as opposed to
+<span class='synopsis'><code>REV_SORT_BY_AUTHOR_DATE</code></span>. Add the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -714,11 +714,11 @@ dates, but hopefully we get the idea.</p>
 </div>
 <div class="paragraph">
 <p>This display indicates that commits can be reordered after they&#8217;re written, for
-example with <code>git rebase</code>.</p>
+example with <span class='synopsis'><code>git</code> <code>rebase</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s try one more reordering of commits. <code>rev_info</code> exposes a <code>reverse</code> flag.
-Set that flag somewhere inside of <code>final_rev_info_setup()</code>:</p>
+<p>Let&#8217;s try one more reordering of commits. <span class='synopsis'><code>rev_info</code></span> exposes a <span class='synopsis'><code>reverse</code></span> flag.
+Set that flag somewhere inside of <span class='synopsis'><code>final_rev_info_setup</code>()</span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -750,43 +750,43 @@ that! Let&#8217;s see if we can walk <em>all</em> objects, and find out some inf
 about each one.</p>
 </div>
 <div class="paragraph">
-<p>We can base our work on an example. <code>git pack-objects</code> prepares all kinds of
+<p>We can base our work on an example. <span class='synopsis'><code>git</code> <code>pack-objects</code></span> prepares all kinds of
 objects for packing into a bitmap or packfile. The work we are interested in
-resides in <code>builtins/pack-objects.c:get_object_list()</code>; examination of that
+resides in <span class='synopsis'><code>builtins/pack-objects.c:get_object_list</code>()</span>; examination of that
 function shows that the all-object walk is being performed by
-<code>traverse_commit_list()</code> or <code>traverse_commit_list_filtered()</code>. Those two
-functions reside in <code>list-objects.c</code>; examining the source shows that, despite
+<span class='synopsis'><code>traverse_commit_list</code>()</span> or <span class='synopsis'><code>traverse_commit_list_filtered</code>()</span>. Those two
+functions reside in <span class='synopsis'><code>list-objects.c</code></span>; examining the source shows that, despite
 the name, these functions traverse all kinds of objects. Let&#8217;s have a look at
-the arguments to <code>traverse_commit_list()</code>.</p>
+the arguments to <span class='synopsis'><code>traverse_commit_list</code>()</span>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct rev_info *revs</code>: This is the <code>rev_info</code> used for the walk. If
-its <code>filter</code> member is not <code>NULL</code>, then <code>filter</code> contains information for
+<p><span class='synopsis'><code>struct</code> <code>rev_info</code> <code>*revs</code></span>: This is the <span class='synopsis'><code>rev_info</code></span> used for the walk. If
+its <span class='synopsis'><code>filter</code></span> member is not <span class='synopsis'><code>NULL</code></span>, then <span class='synopsis'><code>filter</code></span> contains information for
 how to filter the object list.</p>
 </li>
 <li>
-<p><code>show_commit_fn show_commit</code>: A callback which will be used to handle each
+<p><span class='synopsis'><code>show_commit_fn</code> <code>show_commit</code></span>: A callback which will be used to handle each
 individual commit object.</p>
 </li>
 <li>
-<p><code>show_object_fn show_object</code>: A callback which will be used to handle each
+<p><span class='synopsis'><code>show_object_fn</code> <code>show_object</code></span>: A callback which will be used to handle each
 non-commit object (so each blob, tree, or tag).</p>
 </li>
 <li>
-<p><code>void *show_data</code>: A context buffer which is passed in turn to <code>show_commit</code>
-and <code>show_object</code>.</p>
+<p><span class='synopsis'><code>void</code> <code>*show_data</code></span>: A context buffer which is passed in turn to <span class='synopsis'><code>show_commit</code></span>
+and <span class='synopsis'><code>show_object</code></span>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In addition, <code>traverse_commit_list_filtered()</code> has an additional parameter:</p>
+<p>In addition, <span class='synopsis'><code>traverse_commit_list_filtered</code>()</span> has an additional parameter:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct oidset *omitted</code>: A linked-list of object IDs which the provided
+<p><span class='synopsis'><code>struct</code> <code>oidset</code> <code>*omitted</code></span>: A linked-list of object IDs which the provided
 filter caused to be omitted.</p>
 </li>
 </ul>
@@ -797,7 +797,7 @@ to call it repeatedly ourselves. Cool! Let&#8217;s add the callbacks first.</p>
 </div>
 <div class="paragraph">
 <p>For the sake of this tutorial, we&#8217;ll simply keep track of how many of each kind
-of object we find. At file scope in <code>builtin/walken.c</code> add the following
+of object we find. At file scope in <span class='synopsis'><code>builtin/walken.c</code></span> add the following
 tracking variables:</p>
 </div>
 <div class="listingblock">
@@ -821,12 +821,12 @@ one first:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>cmt</code> argument is fairly self-explanatory. But it&#8217;s worth mentioning that
-the <code>buf</code> argument is actually the context buffer that we can provide to the
-traversal calls - <code>show_data</code>, which we mentioned a moment ago.</p>
+<p>The <span class='synopsis'><code>cmt</code></span> argument is fairly self-explanatory. But it&#8217;s worth mentioning that
+the <span class='synopsis'><code>buf</code></span> argument is actually the context buffer that we can provide to the
+traversal calls - <span class='synopsis'><code>show_data</code></span>, which we mentioned a moment ago.</p>
 </div>
 <div class="paragraph">
-<p>Since we have the <code>struct commit</code> object, we can look at all the same parts that
+<p>Since we have the <span class='synopsis'><code>struct</code> <code>commit</code></span> object, we can look at all the same parts that
 we looked at in our earlier commit-only walk. For the sake of this tutorial,
 though, we&#8217;ll just increment the commit counter and move on.</p>
 </div>
@@ -858,20 +858,20 @@ which kind of object we&#8217;re dealing with:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Again, <code>obj</code> is fairly self-explanatory, and we can guess that <code>buf</code> is the same
-context pointer that <code>walken_show_commit()</code> receives: the <code>show_data</code> argument
-to <code>traverse_commit_list()</code> and <code>traverse_commit_list_filtered()</code>. Finally,
-<code>str</code> contains the name of the object, which ends up being something like
-<code>foo.txt</code> (blob), <code>bar/baz</code> (tree), or <code>v1.2.3</code> (tag).</p>
+<p>Again, <span class='synopsis'><code>obj</code></span> is fairly self-explanatory, and we can guess that <span class='synopsis'><code>buf</code></span> is the same
+context pointer that <span class='synopsis'><code>walken_show_commit</code>()</span> receives: the <span class='synopsis'><code>show_data</code></span> argument
+to <span class='synopsis'><code>traverse_commit_list</code>()</span> and <span class='synopsis'><code>traverse_commit_list_filtered</code>()</span>. Finally,
+<span class='synopsis'><code>str</code></span> contains the name of the object, which ends up being something like
+<span class='synopsis'><code>foo.txt</code></span> (blob), <span class='synopsis'><code>bar/baz</code></span> (tree), or <span class='synopsis'><code>v1.2.3</code></span> (tag).</p>
 </div>
 <div class="paragraph">
 <p>To help assure us that we aren&#8217;t double-counting commits, we&#8217;ll include some
 complaining if a commit object is routed through our non-commit callback; we&#8217;ll
 also complain if we see an invalid object type. Since those two cases should be
 unreachable, and would only change in the event of a semantic change to the Git
-codebase, we complain by using <code>BUG()</code> - which is a signal to a developer that
+codebase, we complain by using <span class='synopsis'><code>BUG</code>()</span> - which is a signal to a developer that
 the change they made caused unintended consequences, and the rest of the
-codebase needs to be updated to understand that change. <code>BUG()</code> is not intended
+codebase needs to be updated to understand that change. <span class='synopsis'><code>BUG</code>()</span> is not intended
 to be seen by the public, so it is not localized.</p>
 </div>
 <div class="paragraph">
@@ -881,12 +881,12 @@ can perform setup which is applicable to all objects here, too, to keep separate
 from setup which is applicable to commit-only walks.</p>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll start by enabling all types of objects in the <code>struct rev_info</code>.  We&#8217;ll
-also turn on <code>tree_blobs_in_commit_order</code>, which means that we will walk a
+<p>We&#8217;ll start by enabling all types of objects in the <span class='synopsis'><code>struct</code> <code>rev_info</code></span>.  We&#8217;ll
+also turn on <span class='synopsis'><code>tree_blobs_in_commit_order</code></span>, which means that we will walk a
 commit&#8217;s tree and everything it points to immediately after we find each commit,
 as opposed to waiting for the end and walking through all trees after the commit
 history has been discovered. With the appropriate settings configured, we are
-ready to call <code>prepare_revision_walk()</code>.</p>
+ready to call <span class='synopsis'><code>prepare_revision_walk</code>()</span>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -908,8 +908,8 @@ ready to call <code>prepare_revision_walk()</code>.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s start by calling just the unfiltered walk and reporting our counts.
-Complete your implementation of <code>walken_object_walk()</code>.
-We&#8217;ll also need to include the <code>list-objects.h</code> header.</p>
+Complete your implementation of <span class='synopsis'><code>walken_object_walk</code>()</span>.
+We&#8217;ll also need to include the <span class='synopsis'><code>list-objects.h</code></span> header.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -932,19 +932,19 @@ We&#8217;ll also need to include the <code>list-objects.h</code> header.</p>
 </td>
 <td class="content">
 This output is intended to be machine-parsed. Therefore, we are not
-sending it to <code>trace_printf()</code>, and we are not localizing it - we need scripts
+sending it to <span class='synopsis'><code>trace_printf</code>()</span>, and we are not localizing it - we need scripts
 to be able to count on the formatting to be exactly the way it is shown here.
 If we were intending this output to be read by humans, we would need to localize
-it with <code>_()</code>.
+it with <span class='synopsis'><code>_</code>()</span>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Finally, we&#8217;ll ask <code>cmd_walken()</code> to use the object walk instead. Discussing
+<p>Finally, we&#8217;ll ask <span class='synopsis'><code>cmd_walken</code>()</span> to use the object walk instead. Discussing
 command line options is out of scope for this tutorial, so we&#8217;ll just hardcode
-a branch we can change at compile time. Where you call <code>final_rev_info_setup()</code>
-and <code>walken_commit_walk()</code>, instead branch like so:</p>
+a branch we can change at compile time. Where you call <span class='synopsis'><code>final_rev_info_setup</code>()</span>
+and <span class='synopsis'><code>walken_commit_walk</code>()</span>, instead branch like so:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -965,10 +965,10 @@ and <code>walken_commit_walk()</code>, instead branch like so:</p>
 </td>
 <td class="content">
 For simplicity, we&#8217;ve avoided all the filters and sorts we applied in
-<code>final_rev_info_setup()</code> and simply added <code>HEAD</code> to our pending queue. If you
+<span class='synopsis'><code>final_rev_info_setup</code>()</span> and simply added <span class='synopsis'><code>HEAD</code></span> to our pending queue. If you
 want, you can certainly use the filters we added before by moving
-<code>final_rev_info_setup()</code> out of the conditional and removing the call to
-<code>add_head_to_pending()</code>.
+<span class='synopsis'><code>final_rev_info_setup</code>()</span> out of the conditional and removing the call to
+<span class='synopsis'><code>add_head_to_pending</code>()</span>.
 </td>
 </tr>
 </table>
@@ -986,7 +986,7 @@ output should look similar to this example, but with different counts:</p>
 <div class="paragraph">
 <p>This makes sense. We have more trees than commits because the Git project has
 lots of subdirectories which can change, plus at least one tree per commit. We
-have no tags because we started on a commit (<code>HEAD</code>) and while tags can point to
+have no tags because we started on a commit (<span class='synopsis'><code>HEAD</code></span>) and while tags can point to
 commits, commits can&#8217;t point to tags.</p>
 </div>
 <div class="admonitionblock note">
@@ -1006,22 +1006,22 @@ objects grows along with the Git project.
 <h3 id="_adding_a_filter_2"><a class="anchor" href="#_adding_a_filter_2"></a>Adding a Filter</h3>
 <div class="paragraph">
 <p>There are a handful of filters that we can apply to the object walk laid out in
-<code>Documentation/rev-list-options.txt</code>. These filters are typically useful for
+<span class='synopsis'><code>Documentation/rev-list-options.txt</code></span>. These filters are typically useful for
 operations such as creating packfiles or performing a partial clone. They are
-defined in <code>list-objects-filter-options.h</code>. For the purposes of this tutorial we
+defined in <span class='synopsis'><code>list-objects-filter-options.h</code></span>. For the purposes of this tutorial we
 will use the "tree:1" filter, which causes the walk to omit all trees and blobs
 which are not directly referenced by commits reachable from the commit in
-<code>pending</code> when the walk begins. (<code>pending</code> is the list of objects which need to
+<span class='synopsis'><code>pending</code></span> when the walk begins. (<span class='synopsis'><code>pending</code></span> is the list of objects which need to
 be traversed during a walk; you can imagine a breadth-first tree traversal to
 help understand. In our case, that means we omit trees and blobs not directly
-referenced by <code>HEAD</code> or <code>HEAD</code>'s history, because we begin the walk with only
-<code>HEAD</code> in the <code>pending</code> list.)</p>
+referenced by <span class='synopsis'><code>HEAD</code></span> or <span class='synopsis'><code>HEAD</code></span>'s history, because we begin the walk with only
+<span class='synopsis'><code>HEAD</code></span> in the <span class='synopsis'><code>pending</code></span> list.)</p>
 </div>
 <div class="paragraph">
 <p>For now, we are not going to track the omitted objects, so we&#8217;ll replace those
-parameters with <code>NULL</code>. For the sake of simplicity, we&#8217;ll add a simple
+parameters with <span class='synopsis'><code>NULL</code></span>. For the sake of simplicity, we&#8217;ll add a simple
 build-time branch to use our filter or not. Preface the line calling
-<code>traverse_commit_list()</code> with the following, which will remind us which kind of
+<span class='synopsis'><code>traverse_commit_list</code>()</span> with the following, which will remind us which kind of
 walk we&#8217;ve just performed:</p>
 </div>
 <div class="listingblock">
@@ -1040,15 +1040,15 @@ walk we&#8217;ve just performed:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>rev-&gt;filter</code> member is usually built directly from a command
+<p>The <span class='synopsis'><em>rev-&gt;filter</em></span> member is usually built directly from a command
 line argument, so the module provides an easy way to build one from a string.
 Even though we aren&#8217;t taking user input right now, we can still build one with
-a hardcoded string using <code>parse_list_objects_filter()</code>.</p>
+a hardcoded string using <span class='synopsis'><code>parse_list_objects_filter</code>()</span>.</p>
 </div>
 <div class="paragraph">
 <p>With the filter spec "tree:1", we are expecting to see <em>only</em> the root tree for
 each commit; therefore, the tree object count should be less than or equal to
-the number of commits. (For an example of why that&#8217;s true: <code>git commit --revert</code>
+the number of commits. (For an example of why that&#8217;s true: <span class='synopsis'><code>git</code> <code>commit</code> <code>--revert</code></span>
 points to the same tree object as its grandparent.)</p>
 </div>
 </div>
@@ -1056,13 +1056,13 @@ points to the same tree object as its grandparent.)</p>
 <h3 id="_counting_omitted_objects"><a class="anchor" href="#_counting_omitted_objects"></a>Counting Omitted Objects</h3>
 <div class="paragraph">
 <p>We also have the capability to enumerate all objects which were omitted by a
-filter, like with <code>git log --filter=&lt;spec&gt; --filter-print-omitted</code>. Asking
-<code>traverse_commit_list_filtered()</code> to populate the <code>omitted</code> list means that our
+filter, like with <span class='synopsis'><code>git</code> <code>log</code> <code>--filter=</code><em>&lt;spec&gt;</em> <code>--filter-print-omitted</code></span>. Asking
+<span class='synopsis'><code>traverse_commit_list_filtered</code>()</span> to populate the <span class='synopsis'><code>omitted</code></span> list means that our
 object walk does not perform any better than an unfiltered object walk; all
 reachable objects are walked in order to populate the list.</p>
 </div>
 <div class="paragraph">
-<p>First, add the <code>struct oidset</code> and related items we will use to iterate it:</p>
+<p>First, add the <span class='synopsis'><code>struct</code> <code>oidset</code></span> and related items we will use to iterate it:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1079,7 +1079,7 @@ reachable objects are walked in order to populate the list.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Modify the call to <code>traverse_commit_list_filtered()</code> to include your <code>omitted</code>
+<p>Modify the call to <span class='synopsis'><code>traverse_commit_list_filtered</code>()</span> to include your <span class='synopsis'><code>omitted</code></span>
 object:</p>
 </div>
 <div class="listingblock">
@@ -1093,7 +1093,7 @@ object:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Then, after your traversal, the <code>oidset</code> traversal is pretty straightforward.
+<p>Then, after your traversal, the <span class='synopsis'><code>oidset</code></span> traversal is pretty straightforward.
 Count all the objects within and modify the print statement:</p>
 </div>
 <div class="listingblock">
@@ -1111,7 +1111,7 @@ Count all the objects within and modify the print statement:</p>
 <div class="paragraph">
 <p>By running your walk with and without the filter, you should find that the total
 object count in each case is identical. You can also time each invocation of
-the <code>walken</code> subcommand, with and without <code>omitted</code> being passed in, to confirm
+the <span class='synopsis'><code>walken</code></span> subcommand, with and without <span class='synopsis'><code>omitted</code></span> being passed in, to confirm
 to yourself the runtime impact of tracking all omitted objects.</p>
 </div>
 </div>
@@ -1120,7 +1120,7 @@ to yourself the runtime impact of tracking all omitted objects.</p>
 <div class="paragraph">
 <p>Finally, let&#8217;s demonstrate that you can also reorder walks of all objects, not
 just walks of commits. First, we&#8217;ll make our handlers chattier - modify
-<code>walken_show_commit()</code> and <code>walken_show_object()</code> to print the object as they
+<span class='synopsis'><code>walken_show_commit</code>()</span> and <span class='synopsis'><code>walken_show_object</code>()</span> to print the object as they
 go:</p>
 </div>
 <div class="listingblock">
@@ -1147,8 +1147,8 @@ static void walken_show_object(struct object *obj, const char *str, void *buf)
 </td>
 <td class="content">
 Since we will be examining this output directly as humans, we&#8217;ll use
-<code>trace_printf()</code> here. Additionally, since this change introduces a significant
-number of printed lines, using <code>trace_printf()</code> will allow us to easily silence
+<span class='synopsis'><code>trace_printf</code>()</span> here. Additionally, since this change introduces a significant
+number of printed lines, using <span class='synopsis'><code>trace_printf</code>()</span> will allow us to easily silence
 those lines without having to recompile.
 </td>
 </tr>
@@ -1166,14 +1166,14 @@ those lines without having to recompile.
 </div>
 </div>
 <div class="paragraph">
-<p>Take a look at the top commit with <code>git show</code> and the object ID you printed; it
-should be the same as the output of <code>git show HEAD</code>.</p>
+<p>Take a look at the top commit with <span class='synopsis'><code>git</code> <code>show</code></span> and the object ID you printed; it
+should be the same as the output of <span class='synopsis'><code>git</code> <code>show</code> <code>HEAD</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>Next, let&#8217;s change a setting on our <code>struct rev_info</code> within
-<code>walken_object_walk()</code>. Find where you&#8217;re changing the other settings on <code>rev</code>,
-such as <code>rev-&gt;tree_objects</code> and <code>rev-&gt;tree_blobs_in_commit_order</code>, and add the
-<code>reverse</code> setting at the bottom:</p>
+<p>Next, let&#8217;s change a setting on our <span class='synopsis'><code>struct</code> <code>rev_info</code></span> within
+<span class='synopsis'><code>walken_object_walk</code>()</span>. Find where you&#8217;re changing the other settings on <span class='synopsis'><code>rev</code></span>,
+such as <span class='synopsis'><em>rev-&gt;tree_objects</em></span> and <span class='synopsis'><em>rev-&gt;tree_blobs_in_commit_order</em></span>, and add the
+<span class='synopsis'><code>reverse</code></span> setting at the bottom:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1200,11 +1200,11 @@ $ GIT_TRACE=1 ./bin-wrappers git walken | tail -n 10</pre>
 </div>
 <div class="paragraph">
 <p>The last commit object given should have the same OID as the one we saw at the
-top before, and running <code>git show &lt;oid&gt;</code> with that OID should give you again
-the same results as <code>git show HEAD</code>. Furthermore, if you run and examine the
-first ten lines again (with <code>head</code> instead of <code>tail</code> like we did before applying
-the <code>reverse</code> setting), you should see that now the first commit printed is the
-initial commit, <code>e83c5163</code>.</p>
+top before, and running <span class='synopsis'><code>git</code> <code>show</code> <em>&lt;oid&gt;</em></span> with that OID should give you again
+the same results as <span class='synopsis'><code>git</code> <code>show</code> <code>HEAD</code></span>. Furthermore, if you run and examine the
+first ten lines again (with <span class='synopsis'><code>head</code></span> instead of <span class='synopsis'><code>tail</code></span> like we did before applying
+the <span class='synopsis'><code>reverse</code></span> setting), you should see that now the first commit printed is the
+initial commit, <span class='synopsis'><code>e83c5163</code></span>.</p>
 </div>
 </div>
 </div>

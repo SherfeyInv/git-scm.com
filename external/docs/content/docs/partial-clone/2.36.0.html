@@ -219,11 +219,11 @@ a time.</p>
 </div>
 </li>
 <li>
-<p><code>checkout</code> (and any other command using <code>unpack-trees</code>) has been taught
+<p><span class='synopsis'><code>checkout</code></span> (and any other command using <span class='synopsis'><code>unpack-trees</code></span>) has been taught
 to bulk pre-fetch all required missing blobs in a single batch.</p>
 </li>
 <li>
-<p><code>rev-list</code> has been taught to print missing objects.</p>
+<p><span class='synopsis'><code>rev-list</code></span> has been taught to print missing objects.</p>
 <div class="paragraph">
 <p>This can be used by other commands to bulk prefetch objects.
 For example, a "git log -p A..B" may internally want to first do
@@ -232,10 +232,10 @@ and prefetch those objects in bulk.</p>
 </div>
 </li>
 <li>
-<p><code>fsck</code> has been updated to be fully aware of promisor objects.</p>
+<p><span class='synopsis'><code>fsck</code></span> has been updated to be fully aware of promisor objects.</p>
 </li>
 <li>
-<p><code>repack</code> in GC has been updated to not touch promisor packfiles at all,
+<p><span class='synopsis'><code>repack</code></span> in GC has been updated to not touch promisor packfiles at all,
 and to only repack other objects.</p>
 </li>
 <li>
@@ -271,7 +271,7 @@ currently fetches all objects referred to by the requested objects, even
 though they are not necessary.</p>
 </li>
 <li>
-<p>Fetching with <code>--refetch</code> will request a complete new filtered packfile from
+<p>Fetching with <span class='synopsis'><code>--refetch</code></span> will request a complete new filtered packfile from
 the remote, which can be used to change a filter without needing to
 dynamically fetch missing objects.</p>
 </li>
@@ -288,7 +288,7 @@ dynamically fetch missing objects.</p>
 <div class="paragraph">
 <p>This allows for example a user to have multiple geographically-close
 cache servers for fetching missing blobs while continuing to do
-filtered <code>git-fetch</code> commands from the central server.</p>
+filtered <span class='synopsis'><code>git-fetch</code></span> commands from the central server.</p>
 </div>
 <div class="paragraph">
 <p>When fetching objects, promisor remotes are tried one after the other
@@ -301,19 +301,19 @@ the following configuration variables:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>extensions.partialClone = &lt;name&gt;</code></p>
+<p><span class='synopsis'><code>extensions.partialClone</code> <code>=</code> <em>&lt;name&gt;</em></span></p>
 </li>
 <li>
-<p><code>remote.&lt;name&gt;.promisor = true</code></p>
+<p><span class='synopsis'><code>remote.</code><em>&lt;name&gt;</em><code>.promisor</code> <code>=</code> <code>true</code></span></p>
 </li>
 <li>
-<p><code>remote.&lt;name&gt;.partialCloneFilter = ...</code></p>
+<p><span class='synopsis'><code>remote.</code><em>&lt;name&gt;</em><code>.partialCloneFilter</code> <code>=</code> ...</span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Only one promisor remote can be configured using the
-<code>extensions.partialClone</code> config variable. This promisor remote will
+<span class='synopsis'><code>extensions.partialClone</code></span> config variable. This promisor remote will
 be the last one tried when fetching objects.</p>
 </div>
 <div class="paragraph">

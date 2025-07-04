@@ -87,12 +87,12 @@ familiar command name for people coming from other SCM systems.</p>
 <dt class="hdlist1" id="Documentation/git-annotate.txt--b"><a class="anchor" href="#Documentation/git-annotate.txt--b"></a>-b </dt>
 <dd>
 <p>Show blank SHA-1 for boundary commits.  This can also
-be controlled via the <code>blame.blankBoundary</code> config option.</p>
+be controlled via the <span class='synopsis'><code>blame.blankBoundary</code></span> config option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---root"><a class="anchor" href="#Documentation/git-annotate.txt---root"></a>--root </dt>
 <dd>
 <p>Do not treat root commits as boundaries.  This can also be
-controlled via the <code>blame.showRoot</code> config option.</p>
+controlled via the <span class='synopsis'><code>blame.showRoot</code></span> config option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---show-stats"><a class="anchor" href="#Documentation/git-annotate.txt---show-stats"></a>--show-stats </dt>
 <dd>
@@ -105,8 +105,8 @@ controlled via the <code>blame.showRoot</code> config option.</p>
 or by the function name regex <em>&lt;funcname&gt;</em>.
 May be specified multiple times. Overlapping ranges are allowed.</p>
 <div class="paragraph">
-<p><em>&lt;start&gt;</em> and <em>&lt;end&gt;</em> are optional. <code>-L &lt;start&gt;</code> or <code>-L &lt;start&gt;,</code> spans from
-<em>&lt;start&gt;</em> to end of file. <code>-L ,&lt;end&gt;</code> spans from start of file to <em>&lt;end&gt;</em>.</p>
+<p><em>&lt;start&gt;</em> and <em>&lt;end&gt;</em> are optional. <span class='synopsis'><code>-L</code> <em>&lt;start&gt;</em></span> or <span class='synopsis'><code>-L</code> <em>&lt;start&gt;</em><code>,</code></span> spans from
+<em>&lt;start&gt;</em> to end of file. <span class='synopsis'><code>-L</code> <code>,</code><em>&lt;end&gt;</em></span> spans from start of file to <em>&lt;end&gt;</em>.</p>
 </div>
 <div class="paragraph">
 <p><em>&lt;start&gt;</em> and <em>&lt;end&gt;</em> can take one of these forms:</p>
@@ -121,12 +121,12 @@ absolute line number (lines count from 1).</p>
 </div>
 </li>
 <li>
-<p><code>/regex/</code></p>
+<p><span class='synopsis'><code>/regex/</code></span></p>
 <div class="paragraph">
 <p>This form will use the first line matching the given
 POSIX regex. If <em>&lt;start&gt;</em> is a regex, it will search from the end of
-the previous <code>-L</code> range, if any, otherwise from the start of file.
-If <em>&lt;start&gt;</em> is <code>^/regex/</code>, it will search from the start of file.
+the previous <span class='synopsis'><code>-L</code></span> range, if any, otherwise from the start of file.
+If <em>&lt;start&gt;</em> is <span class='synopsis'><code>^/regex/</code></span>, it will search from the start of file.
 If <em>&lt;end&gt;</em> is a regex, it will search
 starting at the line given by <em>&lt;start&gt;</em>.</p>
 </div>
@@ -141,12 +141,12 @@ of lines before or after the line given by <em>&lt;start&gt;</em>.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>If <code>:&lt;funcname&gt;</code> is given in place of <em>&lt;start&gt;</em> and <em>&lt;end&gt;</em>, it is a
+<p>If <span class='synopsis'><code>:</code><em>&lt;funcname&gt;</em></span> is given in place of <em>&lt;start&gt;</em> and <em>&lt;end&gt;</em>, it is a
 regular expression that denotes the range from the first funcname line
-that matches <em>&lt;funcname&gt;</em>, up to the next funcname line. <code>:&lt;funcname&gt;</code>
-searches from the end of the previous <code>-L</code> range, if any, otherwise
-from the start of file. <code>^:&lt;funcname&gt;</code> searches from the start of
-file. The function names are determined in the same way as <code>git diff</code>
+that matches <em>&lt;funcname&gt;</em>, up to the next funcname line. <span class='synopsis'><code>:</code><em>&lt;funcname&gt;</em></span>
+searches from the end of the previous <span class='synopsis'><code>-L</code></span> range, if any, otherwise
+from the start of file. <span class='synopsis'><code>^:</code><em>&lt;funcname&gt;</em></span> searches from the start of
+file. The function names are determined in the same way as <span class='synopsis'><code>git</code> <code>diff</code></span>
 works out patch hunk headers (see <em>Defining a custom hunk-header</em>
 in <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>).</p>
 </div>
@@ -169,8 +169,9 @@ in <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>).</p>
 the revision in which a line appeared, this shows the last
 revision in which a line has existed. This requires a range of
 revision like START..END where the path to blame exists in
-START.  <code>git blame --reverse START</code> is taken as <code>git blame
---reverse START..HEAD</code> for convenience.</p>
+START.  <span class='synopsis'><code>git</code> <code>blame</code> <code>--reverse</code> <code>START</code></span> is taken as <span class='synopsis'><code>git</code> <code>blame</code>
+
+<code>--reverse</code> <code>START..HEAD</code></span> for convenience.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---first-parent"><a class="anchor" href="#Documentation/git-annotate.txt---first-parent"></a>--first-parent </dt>
 <dd>
@@ -198,7 +199,7 @@ machine consumption.</p>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---encodingltencodinggt"><a id="Documentation/git-annotate.txt---encodingencoding" class="anchor" href="#Documentation/git-annotate.txt---encodingencoding"></a>--encoding=&lt;encoding&gt; </dt>
 <dd>
 <p>Specifies the encoding used to output author names
-and commit summaries. Setting it to <code>none</code> makes blame
+and commit summaries. Setting it to <span class='synopsis'><code>none</code></span> makes blame
 output unconverted data. For more information see the
 discussion about encoding in the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>
 manual page.</p>
@@ -209,7 +210,7 @@ manual page.</p>
 changes starting backwards from the working tree copy.
 This flag makes the command pretend as if the working
 tree copy has the contents of the named file (specify
-<code>-</code> to make the command read from the standard input).</p>
+<span class='synopsis'><code>-</code></span> to make the command read from the standard input).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---dateltformatgt"><a id="Documentation/git-annotate.txt---dateformat" class="anchor" href="#Documentation/git-annotate.txt---dateformat"></a>--date &lt;format&gt; </dt>
 <dd>
@@ -224,8 +225,8 @@ of the --date option at <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>.<
 <p>Progress status is reported on the standard error stream
 by default when it is attached to a terminal. This flag
 enables progress reporting even if not attached to a
-terminal. Can&#8217;t use <code>--progress</code> together with <code>--porcelain</code>
-or <code>--incremental</code>.</p>
+terminal. Can&#8217;t use <span class='synopsis'><code>--progress</code></span> together with <span class='synopsis'><code>--porcelain</code></span>
+or <span class='synopsis'><code>--incremental</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt--Mltnumgt"><a id="Documentation/git-annotate.txt--Mnum" class="anchor" href="#Documentation/git-annotate.txt--Mnum"></a>-M[&lt;num&gt;] </dt>
 <dd>
@@ -247,7 +248,7 @@ commit. The default value is 20.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt--Cltnumgt"><a id="Documentation/git-annotate.txt--Cnum" class="anchor" href="#Documentation/git-annotate.txt--Cnum"></a>-C[&lt;num&gt;] </dt>
 <dd>
-<p>In addition to <code>-M</code>, detect lines moved or copied from other
+<p>In addition to <span class='synopsis'><code>-M</code></span>, detect lines moved or copied from other
 files that were modified in the same commit.  This is
 useful when you reorganize your program and move code
 around across files.  When this option is given twice,
@@ -260,7 +261,7 @@ looks for copies from other files in any commit.</p>
 alphanumeric characters that Git must detect as moving/copying
 between files for it to associate those lines with the parent
 commit. And the default value is 40. If there are more than one
-<code>-C</code> options given, the &lt;num&gt; argument of the last <code>-C</code> will
+<span class='synopsis'><code>-C</code></span> options given, the &lt;num&gt; argument of the last <span class='synopsis'><code>-C</code></span> will
 take effect.</p>
 </div>
 </dd>
@@ -270,19 +271,19 @@ take effect.</p>
 change never happened.  Lines that were changed or added by an ignored
 commit will be blamed on the previous commit that changed that line or
 nearby lines.  This option may be specified multiple times to ignore
-more than one revision.  If the <code>blame.markIgnoredLines</code> config option
+more than one revision.  If the <span class='synopsis'><code>blame.markIgnoredLines</code></span> config option
 is set, then lines that were changed by an ignored commit and attributed to
-another commit will be marked with a <code>?</code> in the blame output.  If the
-<code>blame.markUnblamableLines</code> config option is set, then those lines touched
+another commit will be marked with a <span class='synopsis'><em>?</em></span> in the blame output.  If the
+<span class='synopsis'><code>blame.markUnblamableLines</code></span> config option is set, then those lines touched
 by an ignored commit that we could not attribute to another revision are
 marked with a <em>*</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---ignore-revs-fileltfilegt"><a id="Documentation/git-annotate.txt---ignore-revs-filefile" class="anchor" href="#Documentation/git-annotate.txt---ignore-revs-filefile"></a>--ignore-revs-file &lt;file&gt; </dt>
 <dd>
-<p>Ignore revisions listed in <code>file</code>, which must be in the same format as an
-<code>fsck.skipList</code>.  This option may be repeated, and these files will be
-processed after any files specified with the <code>blame.ignoreRevsFile</code> config
-option.  An empty file name, <code>""</code>, will clear the list of revs from
+<p>Ignore revisions listed in <span class='synopsis'><code>file</code></span>, which must be in the same format as an
+<span class='synopsis'><code>fsck.skipList</code></span>.  This option may be repeated, and these files will be
+processed after any files specified with the <span class='synopsis'><code>blame.ignoreRevsFile</code></span> config
+option.  An empty file name, <span class='synopsis'><code>""</code></span>, will clear the list of revs from
 previously processed files.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---color-lines"><a class="anchor" href="#Documentation/git-annotate.txt---color-lines"></a>--color-lines </dt>
@@ -290,12 +291,12 @@ previously processed files.</p>
 <p>Color line annotations in the default format differently if they come from
 the same commit as the preceding line. This makes it easier to distinguish
 code blocks introduced by different commits. The color defaults to cyan and
-can be adjusted using the <code>color.blame.repeatedLines</code> config option.</p>
+can be adjusted using the <span class='synopsis'><code>color.blame.repeatedLines</code></span> config option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---color-by-age"><a class="anchor" href="#Documentation/git-annotate.txt---color-by-age"></a>--color-by-age </dt>
 <dd>
 <p>Color line annotations depending on the age of the line in the default format.
-The <code>color.blame.highlightRecent</code> config option controls what color is used for
+The <span class='synopsis'><code>color.blame.highlightRecent</code></span> config option controls what color is used for
 each range of age.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt--h"><a class="anchor" href="#Documentation/git-annotate.txt--h"></a>-h </dt>

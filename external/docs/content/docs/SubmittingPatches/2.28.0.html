@@ -32,27 +32,27 @@ change is relevant to.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>A bugfix should be based on <code>maint</code> in general. If the bug is not
-present in <code>maint</code>, base it on <code>master</code>. For a bug that&#8217;s not yet
-in <code>master</code>, find the topic that introduces the regression, and
+<p>A bugfix should be based on <span class='synopsis'><code>maint</code></span> in general. If the bug is not
+present in <span class='synopsis'><code>maint</code></span>, base it on <span class='synopsis'><code>master</code></span>. For a bug that&#8217;s not yet
+in <span class='synopsis'><code>master</code></span>, find the topic that introduces the regression, and
 base your work on the tip of the topic.</p>
 </li>
 <li>
-<p>A new feature should be based on <code>master</code> in general. If the new
-feature depends on a topic that is in <code>seen</code>, but not in <code>master</code>,
+<p>A new feature should be based on <span class='synopsis'><code>master</code></span> in general. If the new
+feature depends on a topic that is in <span class='synopsis'><code>seen</code></span>, but not in <span class='synopsis'><code>master</code></span>,
 base your work on the tip of that topic.</p>
 </li>
 <li>
-<p>Corrections and enhancements to a topic not yet in <code>master</code> should
+<p>Corrections and enhancements to a topic not yet in <span class='synopsis'><code>master</code></span> should
 be based on the tip of that topic. If the topic has not been merged
-to <code>next</code>, it&#8217;s alright to add a note to squash minor corrections
+to <span class='synopsis'><code>next</code></span>, it&#8217;s alright to add a note to squash minor corrections
 into the series.</p>
 </li>
 <li>
 <p>In the exceptional case that a new feature depends on several topics
-not in <code>master</code>, start working on <code>next</code> or <code>seen</code> privately and send
+not in <span class='synopsis'><code>master</code></span>, start working on <span class='synopsis'><code>next</code></span> or <span class='synopsis'><code>seen</code></span> privately and send
 out patches for discussion. Before the final merge, you may have to
-wait until some of the dependent topics graduate to <code>master</code>, and
+wait until some of the dependent topics graduate to <span class='synopsis'><code>master</code></span>, and
 rebase your work.</p>
 </li>
 <li>
@@ -63,8 +63,9 @@ these parts should be based on their trees.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>To find the tip of a topic branch, run <code>git log --first-parent
-master..seen</code> and look for the merge commit. The second parent of this
+<p>To find the tip of a topic branch, run <span class='synopsis'><code>git</code> <code>log</code> <code>--first-parent</code>
+
+<code>master..seen</code></span> and look for the merge commit. The second parent of this
 commit is the tip of the topic branch.</p>
 </div>
 </div>
@@ -96,7 +97,7 @@ to have.</p>
 </div>
 <div class="paragraph">
 <p>Make sure that you have tests for the bug you are fixing.  See
-<code>t/README</code> for guidance.</p>
+<span class='synopsis'><code>t/README</code></span> for guidance.</p>
 </div>
 <div id="tests" class="paragraph">
 <p>When adding a new feature, make sure that you have new tests to show
@@ -131,8 +132,8 @@ patches separate from other documentation changes.</p>
 <div id="whitespace-check" class="paragraph">
 <p>Oh, another thing.  We are picky about whitespaces.  Make sure your
 changes do not trigger errors with the sample pre-commit hook shipped
-in <code>templates/hooks--pre-commit</code>.  To help ensure this does not happen,
-run <code>git diff --check</code> on your changes before you commit.</p>
+in <span class='synopsis'><code>templates/hooks--pre-commit</code></span>.  To help ensure this does not happen,
+run <span class='synopsis'><code>git</code> <code>diff</code> <code>--check</code></span> on your changes before you commit.</p>
 </div>
 </div>
 <div class="sect2">
@@ -155,7 +156,7 @@ identifier for the general area of the code being modified, e.g.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>If in doubt which identifier to use, run <code>git log --no-merges</code> on the
+<p>If in doubt which identifier to use, run <span class='synopsis'><code>git</code> <code>log</code> <code>--no-merges</code></span> on the
 files you are modifying to see the current conventions.</p>
 </div>
 <div id="summary-section" class="paragraph">
@@ -203,7 +204,7 @@ branch, use the format "abbreviated hash (subject, date)", like this:</p>
 <div class="paragraph">
 <p>The "Copy commit summary" command of gitk can be used to obtain this
 format (with the subject enclosed in a pair of double-quotes), or this
-invocation of <code>git show</code>:</p>
+invocation of <span class='synopsis'><code>git</code> <code>show</code></span>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -225,8 +226,8 @@ invocation of <code>git show</code>:</p>
 <p>Git based diff tools generate unidiff which is the preferred format.</p>
 </div>
 <div class="paragraph">
-<p>You do not have to be afraid to use <code>-M</code> option to <code>git diff</code> or
-<code>git format-patch</code>, if your patch involves file renames.  The
+<p>You do not have to be afraid to use <span class='synopsis'><code>-M</code></span> option to <span class='synopsis'><code>git</code> <code>diff</code></span> or
+<span class='synopsis'><code>git</code> <code>format-patch</code></span>, if your patch involves file renames.  The
 receiving end can handle them just fine.</p>
 </div>
 <div id="review-patch" class="paragraph">
@@ -234,7 +235,7 @@ receiving end can handle them just fine.</p>
 or include any extra files which do not relate to what your patch
 is trying to achieve. Make sure to review
 your patch after generating it, to ensure accuracy.  Before
-sending out, please make sure it cleanly applies to the <code>master</code>
+sending out, please make sure it cleanly applies to the <span class='synopsis'><code>master</code></span>
 branch head.  If you are preparing a work based on "next" branch,
 that is fine, but please mark it as such.</p>
 </div>
@@ -297,7 +298,7 @@ are often seen when you are sending an update to what you have
 previously sent.</p>
 </div>
 <div class="paragraph">
-<p>The <code>git format-patch</code> command follows the best current practice to
+<p>The <span class='synopsis'><code>git</code> <code>format-patch</code></span> command follows the best current practice to
 format the body of an e-mail message.  At the beginning of the
 patch should come your commit message, ending with the
 Signed-off-by: lines, and a line that consists of three dashes,
@@ -306,9 +307,9 @@ you are forwarding a patch from somebody else, optionally, at
 the beginning of the e-mail message just before the commit
 message starts, you can put a "From: " line to name that person.
 To change the default "[PATCH]" in the subject to "[&lt;text&gt;]", use
-<code>git format-patch --subject-prefix=&lt;text&gt;</code>.  As a shortcut, you
-can use <code>--rfc</code> instead of <code>--subject-prefix="RFC PATCH"</code>, or
-<code>-v &lt;n&gt;</code> instead of <code>--subject-prefix="PATCH v&lt;n&gt;"</code>.</p>
+<span class='synopsis'><code>git</code> <code>format-patch</code> <code>--subject-prefix=</code><em>&lt;text&gt;</em></span>.  As a shortcut, you
+can use <span class='synopsis'><code>--rfc</code></span> instead of <span class='synopsis'><code>--subject-prefix="RFC</code> <code>PATCH"</code></span>, or
+<span class='synopsis'><code>-v</code> <em>&lt;n&gt;</em></span> instead of <span class='synopsis'><code>--subject-prefix="PATCH</code> <code>v</code><em>&lt;n&gt;</em><code>"</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>You often want to add additional explanation about the patch,
@@ -317,7 +318,7 @@ material between the three-dash line and the diffstat.  For
 patches requiring multiple iterations of review and discussion,
 an explanation of changes between each iteration can be kept in
 Git-notes and inserted automatically following the three-dash
-line via <code>git format-patch --notes</code>.</p>
+line via <span class='synopsis'><code>git</code> <code>format-patch</code> <code>--notes</code></span>.</p>
 </div>
 <div id="attachment" class="paragraph">
 <p>Do not attach the patch as a MIME attachment, compressed or not.
@@ -345,7 +346,7 @@ origin that is done poorly or does incorrect things.</p>
 <div class="paragraph">
 <p>If you really really really really want to do a PGP signed
 patch, format it as "multipart/signed", not a text/plain message
-that starts with <code>-----BEGIN PGP SIGNED MESSAGE-----</code>.  That is
+that starts with <span class='synopsis'><code>-----BEGIN</code> <code>PGP</code> <code>SIGNED</code> <code>MESSAGE-----</code></span>.  That is
 not a text/plain, it&#8217;s something else.</p>
 </div>
 <div class="paragraph">
@@ -356,8 +357,9 @@ Security mailing list<sup class="footnoteref">[<a class="footnote" href="#_footn
 </div>
 <div class="paragraph">
 <p>Send your patch with "To:" set to the mailing list, with "cc:" listing
-people who are involved in the area you are touching (the <code>git
-contacts</code> command in <code>contrib/contacts/</code> can help to
+people who are involved in the area you are touching (the <span class='synopsis'><code>git</code>
+
+<code>contacts</code></span> command in <span class='synopsis'><code>contrib/contacts/</code></span> can help to
 identify them), to solicit comments and reviews.</p>
 </div>
 <div class="paragraph">
@@ -366,8 +368,8 @@ patch, re-send it with "To:" set to the maintainer<sup class="footnote">[<a id="
 list<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> for inclusion.</p>
 </div>
 <div class="paragraph">
-<p>Do not forget to add trailers such as <code>Acked-by:</code>, <code>Reviewed-by:</code> and
-<code>Tested-by:</code> lines as necessary to credit people who helped your
+<p>Do not forget to add trailers such as <span class='synopsis'><code>Acked-by:</code></span>, <span class='synopsis'><code>Reviewed-by:</code></span> and
+<span class='synopsis'><code>Tested-by:</code></span> lines as necessary to credit people who helped your
 patch.</p>
 </div>
 </div>
@@ -452,21 +454,21 @@ don&#8217;t hide your real name.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>Reported-by:</code> is used to credit someone who found the bug that
+<p><span class='synopsis'><code>Reported-by:</code></span> is used to credit someone who found the bug that
 the patch attempts to fix.</p>
 </li>
 <li>
-<p><code>Acked-by:</code> says that the person who is more familiar with the area
+<p><span class='synopsis'><code>Acked-by:</code></span> says that the person who is more familiar with the area
 the patch attempts to modify liked the patch.</p>
 </li>
 <li>
-<p><code>Reviewed-by:</code>, unlike the other tags, can only be offered by the
+<p><span class='synopsis'><code>Reviewed-by:</code></span>, unlike the other tags, can only be offered by the
 reviewer and means that she is completely satisfied that the patch
 is ready for application.  It is usually offered only after a
 detailed review.</p>
 </li>
 <li>
-<p><code>Tested-by:</code> is used to indicate that the person applied the patch
+<p><span class='synopsis'><code>Tested-by:</code></span> is used to indicate that the person applied the patch
 and found it to have the desired effect.</p>
 </li>
 </ol>
@@ -488,7 +490,7 @@ repositories.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git-gui/</code> comes from git-gui project, maintained by Pratyush Yadav:</p>
+<p><span class='synopsis'><code>git-gui/</code></span> comes from git-gui project, maintained by Pratyush Yadav:</p>
 <div class="literalblock">
 <div class="content">
 <pre>https://github.com/prati0100/git-gui.git</pre>
@@ -496,7 +498,7 @@ repositories.</p>
 </div>
 </li>
 <li>
-<p><code>gitk-git/</code> comes from Paul Mackerras&#8217;s gitk project:</p>
+<p><span class='synopsis'><code>gitk-git/</code></span> comes from Paul Mackerras&#8217;s gitk project:</p>
 <div class="literalblock">
 <div class="content">
 <pre>git://ozlabs.org/~paulus/gitk</pre>
@@ -504,7 +506,7 @@ repositories.</p>
 </div>
 </li>
 <li>
-<p><code>po/</code> comes from the localization coordinator, Jiang Xin:</p>
+<p><span class='synopsis'><code>po/</code></span> comes from the localization coordinator, Jiang Xin:</p>
 <div class="literalblock">
 <div class="content">
 <pre>https://github.com/git-l10n/git-po/</pre>
@@ -538,7 +540,7 @@ the change.</p>
 are butchering.  These people happen to be the ones who are
 most likely to be knowledgeable enough to help you, but
 they have no obligation to help you (i.e. you ask for help,
-don&#8217;t demand).  <code>git log -p &#x2d;&#x2d; <em>$area_you_are_modifying</em></code> would
+don&#8217;t demand).  <span class='synopsis'><code>git</code> <code>log</code> <code>-p</code> <code>&#x2d;&#x2d;</code> <code><em>$area_you_are_modifying</em></code></span> would
 help you find out who they are.</p>
 </div>
 </li>
@@ -555,14 +557,14 @@ spend their time to improve your patch.  Go back to step (2).</p>
 good.  Send it to the maintainer and cc the list.</p>
 </li>
 <li>
-<p>A topic branch is created with the patch and is merged to <code>next</code>,
-and cooked further and eventually graduates to <code>master</code>.</p>
+<p>A topic branch is created with the patch and is merged to <span class='synopsis'><code>next</code></span>,
+and cooked further and eventually graduates to <span class='synopsis'><code>master</code></span>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>In any time between the (2)-(3) cycle, the maintainer may pick it up
-from the list and queue it to <code>seen</code>, in order to make it easier for
+from the list and queue it to <span class='synopsis'><code>seen</code></span>, in order to make it easier for
 people play with it without having to pick up and apply the patch to
 their trees themselves.</p>
 </div>
@@ -575,10 +577,10 @@ their trees themselves.</p>
 <ul>
 <li>
 <p>You can use Git itself to find out when your patch is merged in
-master. <code>git pull --rebase</code> will automatically skip already-applied
+master. <span class='synopsis'><code>git</code> <code>pull</code> <code>--rebase</code></span> will automatically skip already-applied
 patches, and will let you know. This works only if you rebase on top
 of the branch in which your patch has been merged (i.e. it will not
-tell you if your patch is merged in <code>seen</code> if you rebase on top of
+tell you if your patch is merged in <span class='synopsis'><code>seen</code></span> if you rebase on top of
 master).</p>
 </li>
 <li>
@@ -741,11 +743,11 @@ it.</pre>
 <div class="sect2">
 <h3 id="_gnus"><a class="anchor" href="#_gnus"></a>Gnus</h3>
 <div class="paragraph">
-<p>"|" in the <code>*Summary*</code> buffer can be used to pipe the current
+<p>"|" in the <span class='synopsis'><code>*Summary*</code></span> buffer can be used to pipe the current
 message to an external program, and this is a handy way to drive
-<code>git am</code>.  However, if the message is MIME encoded, what is
+<span class='synopsis'><code>git</code> <code>am</code></span>.  However, if the message is MIME encoded, what is
 piped into the program is the representation you see in your
-<code>*Article*</code> buffer after unwrapping MIME.  This is often not what
+<span class='synopsis'><code>*Article*</code></span> buffer after unwrapping MIME.  This is often not what
 you would want for two reasons.  It tends to screw up non ASCII
 characters (most notably in people&#8217;s names), and also
 whitespaces (fatal in patches).  Running "C-u g" to display the

@@ -32,36 +32,36 @@ produces in the caller in order to process it.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-codechildprocessinitcode"><a id="Documentation/technical/api-run-command.txt-childprocessinit" class="anchor" href="#Documentation/technical/api-run-command.txt-childprocessinit"></a><code>child_process_init</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscodechildprocessinitcodespan"><a id="Documentation/technical/api-run-command.txt-childprocessinit" class="anchor" href="#Documentation/technical/api-run-command.txt-childprocessinit"></a><span class='synopsis'><code>child_process_init</code></span> </dt>
 <dd>
 <p>Initialize a struct child_process variable.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-codestartcommandcode"><a id="Documentation/technical/api-run-command.txt-startcommand" class="anchor" href="#Documentation/technical/api-run-command.txt-startcommand"></a><code>start_command</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscodestartcommandcodespan"><a id="Documentation/technical/api-run-command.txt-startcommand" class="anchor" href="#Documentation/technical/api-run-command.txt-startcommand"></a><span class='synopsis'><code>start_command</code></span> </dt>
 <dd>
-<p>Start a sub-process. Takes a pointer to a <code>struct child_process</code>
+<p>Start a sub-process. Takes a pointer to a <span class='synopsis'><code>struct</code> <code>child_process</code></span>
 that specifies the details and returns pipe FDs (if requested).
 See below for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-codefinishcommandcode"><a id="Documentation/technical/api-run-command.txt-finishcommand" class="anchor" href="#Documentation/technical/api-run-command.txt-finishcommand"></a><code>finish_command</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscodefinishcommandcodespan"><a id="Documentation/technical/api-run-command.txt-finishcommand" class="anchor" href="#Documentation/technical/api-run-command.txt-finishcommand"></a><span class='synopsis'><code>finish_command</code></span> </dt>
 <dd>
 <p>Wait for the completion of a sub-process that was started with
 start_command().</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-coderuncommandcode"><a id="Documentation/technical/api-run-command.txt-runcommand" class="anchor" href="#Documentation/technical/api-run-command.txt-runcommand"></a><code>run_command</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscoderuncommandcodespan"><a id="Documentation/technical/api-run-command.txt-runcommand" class="anchor" href="#Documentation/technical/api-run-command.txt-runcommand"></a><span class='synopsis'><code>run_command</code></span> </dt>
 <dd>
 <p>A convenience function that encapsulates a sequence of
 start_command() followed by finish_command(). Takes a pointer
-to a <code>struct child_process</code> that specifies the details.</p>
+to a <span class='synopsis'><code>struct</code> <code>child_process</code></span> that specifies the details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-coderuncommandvoptcodecoderuncommandvoptcdenvcode"><a id="Documentation/technical/api-run-command.txt-runcommandvoptruncommandvoptcdenv" class="anchor" href="#Documentation/technical/api-run-command.txt-runcommandvoptruncommandvoptcdenv"></a><code>run_command_v_opt</code>, <code>run_command_v_opt_cd_env</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscoderuncommandvoptcodespanspanclasssynopsiscoderuncommandvoptcdenvcodespan"><a id="Documentation/technical/api-run-command.txt-runcommandvoptruncommandvoptcdenv" class="anchor" href="#Documentation/technical/api-run-command.txt-runcommandvoptruncommandvoptcdenv"></a><span class='synopsis'><code>run_command_v_opt</code></span>, <span class='synopsis'><code>run_command_v_opt_cd_env</code></span> </dt>
 <dd>
 <p>Convenience functions that encapsulate a sequence of
 start_command() followed by finish_command(). The argument argv
 specifies the program and its arguments. The argument opt is zero
-or more of the flags <code>RUN_COMMAND_NO_STDIN</code>, <code>RUN_GIT_CMD</code>,
-<code>RUN_COMMAND_STDOUT_TO_STDERR</code>, or <code>RUN_SILENT_EXEC_FAILURE</code>
+or more of the flags <span class='synopsis'><code>RUN_COMMAND_NO_STDIN</code></span>, <span class='synopsis'><code>RUN_GIT_CMD</code></span>,
+<span class='synopsis'><code>RUN_COMMAND_STDOUT_TO_STDERR</code></span>, or <span class='synopsis'><code>RUN_SILENT_EXEC_FAILURE</code></span>
 that correspond to the members .no_stdin, .git_cmd,
-.stdout_to_stderr, .silent_exec_failure of <code>struct child_process</code>.
+.stdout_to_stderr, .silent_exec_failure of <span class='synopsis'><code>struct</code> <code>child_process</code></span>.
 The argument dir corresponds the member .dir. The argument env
 corresponds to the member .env.</p>
 </dd>
@@ -91,18 +91,19 @@ signal number + 128, ie. the same value that a POSIX shell&#8217;s $? would
 report.  A diagnostic is printed.</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-codestartasynccode"><a id="Documentation/technical/api-run-command.txt-startasync" class="anchor" href="#Documentation/technical/api-run-command.txt-startasync"></a><code>start_async</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscodestartasynccodespan"><a id="Documentation/technical/api-run-command.txt-startasync" class="anchor" href="#Documentation/technical/api-run-command.txt-startasync"></a><span class='synopsis'><code>start_async</code></span> </dt>
 <dd>
-<p>Run a function asynchronously. Takes a pointer to a <code>struct
-async</code> that specifies the details and returns a set of pipe FDs
+<p>Run a function asynchronously. Takes a pointer to a <span class='synopsis'><code>struct</code>
+
+<code>async</code></span> that specifies the details and returns a set of pipe FDs
 for communication with the function. See below for details.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-codefinishasynccode"><a id="Documentation/technical/api-run-command.txt-finishasync" class="anchor" href="#Documentation/technical/api-run-command.txt-finishasync"></a><code>finish_async</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscodefinishasynccodespan"><a id="Documentation/technical/api-run-command.txt-finishasync" class="anchor" href="#Documentation/technical/api-run-command.txt-finishasync"></a><span class='synopsis'><code>finish_async</code></span> </dt>
 <dd>
 <p>Wait for the completion of an asynchronous function that was
 started with start_async().</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-coderunhookcode"><a id="Documentation/technical/api-run-command.txt-runhook" class="anchor" href="#Documentation/technical/api-run-command.txt-runhook"></a><code>run_hook</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-run-command.txt-spanclasssynopsiscoderunhookcodespan"><a id="Documentation/technical/api-run-command.txt-runhook" class="anchor" href="#Documentation/technical/api-run-command.txt-runhook"></a><span class='synopsis'><code>run_hook</code></span> </dt>
 <dd>
 <p>Run a hook.
 The first argument is a pathname to an index file, or NULL
@@ -130,7 +131,7 @@ On execution, .stdout_to_stderr and .no_stdin will be set.
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct child_process</code></p>
+<p><span class='synopsis'><code>struct</code> <code>child_process</code></span></p>
 </li>
 </ul>
 </div>
@@ -172,11 +173,11 @@ the command name without the <em>git-</em> prefix and set .git_cmd = 1.</p>
 </div>
 <div class="paragraph">
 <p>Note that the ownership of the memory pointed to by .argv stays with the
-caller, but it should survive until <code>finish_command</code> completes. If the
-.argv member is NULL, <code>start_command</code> will point it at the .args
-<code>argv_array</code> (so you may use one or the other, but you must use exactly
+caller, but it should survive until <span class='synopsis'><code>finish_command</code></span> completes. If the
+.argv member is NULL, <span class='synopsis'><code>start_command</code></span> will point it at the .args
+<span class='synopsis'><code>argv_array</code></span> (so you may use one or the other, but you must use exactly
 one). The memory in .args will be cleaned up automatically during
-<code>finish_command</code> (or during <code>start_command</code> when it is unsuccessful).</p>
+<span class='synopsis'><code>finish_command</code></span> (or during <span class='synopsis'><code>start_command</code></span> when it is unsuccessful).</p>
 </div>
 <div class="paragraph">
 <p>The members .in, .out, .err are used to redirect stdin, stdout,
@@ -265,10 +266,10 @@ variable that will be removed from the child process&#8217;s environment.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>If the .env member is NULL, <code>start_command</code> will point it at the
-.env_array <code>argv_array</code> (so you may use one or the other, but not both).
+<p>If the .env member is NULL, <span class='synopsis'><code>start_command</code></span> will point it at the
+.env_array <span class='synopsis'><code>argv_array</code></span> (so you may use one or the other, but not both).
 The memory in .env_array will be cleaned up automatically during
-<code>finish_command</code> (or during <code>start_command</code> when it is unsuccessful).</p>
+<span class='synopsis'><code>finish_command</code></span> (or during <span class='synopsis'><code>start_command</code></span> when it is unsuccessful).</p>
 </div>
 <div class="paragraph">
 <p>To specify a new initial working directory for the sub-process,
@@ -283,7 +284,7 @@ special error condition.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct async</code></p>
+<p><span class='synopsis'><code>struct</code> <code>async</code></span></p>
 </li>
 </ul>
 </div>

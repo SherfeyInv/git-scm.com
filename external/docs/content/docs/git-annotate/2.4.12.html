@@ -51,12 +51,12 @@ familiar command name for people coming from other SCM systems.</p>
 <dt class="hdlist1" id="Documentation/git-annotate.txt--b"><a class="anchor" href="#Documentation/git-annotate.txt--b"></a>-b </dt>
 <dd>
 <p>Show blank SHA-1 for boundary commits.  This can also
-be controlled via the <code>blame.blankboundary</code> config option.</p>
+be controlled via the <span class='synopsis'><code>blame.blankboundary</code></span> config option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---root"><a class="anchor" href="#Documentation/git-annotate.txt---root"></a>--root </dt>
 <dd>
 <p>Do not treat root commits as boundaries.  This can also be
-controlled via the <code>blame.showRoot</code> config option.</p>
+controlled via the <span class='synopsis'><code>blame.showRoot</code></span> config option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---show-stats"><a class="anchor" href="#Documentation/git-annotate.txt---show-stats"></a>--show-stats </dt>
 <dd>
@@ -88,7 +88,7 @@ absolute line number (lines count from 1).</p>
 <div class="paragraph">
 <p>This form will use the first line matching the given
 POSIX regex. If &lt;start&gt; is a regex, it will search from the end of
-the previous <code>-L</code> range, if any, otherwise from the start of file.
+the previous <span class='synopsis'><code>-L</code></span> range, if any, otherwise from the start of file.
 If &lt;start&gt; is &#8220;^/regex/&#8221;, it will search from the start of file.
 If &lt;end&gt; is a regex, it will search
 starting at the line given by &lt;start&gt;.</p>
@@ -107,7 +107,7 @@ of lines before or after the line given by &lt;start&gt;.</p>
 <p>If &#8220;:&lt;funcname&gt;&#8221; is given in place of &lt;start&gt; and &lt;end&gt;, it is a
 regular expression that denotes the range from the first funcname line
 that matches &lt;funcname&gt;, up to the next funcname line. &#8220;:&lt;funcname&gt;&#8221;
-searches from the end of the previous <code>-L</code> range, if any, otherwise
+searches from the end of the previous <span class='synopsis'><code>-L</code></span> range, if any, otherwise
 from the start of file. &#8220;^:&lt;funcname&gt;&#8221; searches from the start of
 file.</p>
 </div>
@@ -151,7 +151,7 @@ machine consumption.</p>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---encodingltencodinggt"><a id="Documentation/git-annotate.txt---encodingencoding" class="anchor" href="#Documentation/git-annotate.txt---encodingencoding"></a>--encoding=&lt;encoding&gt; </dt>
 <dd>
 <p>Specifies the encoding used to output author names
-and commit summaries. Setting it to <code>none</code> makes blame
+and commit summaries. Setting it to <span class='synopsis'><code>none</code></span> makes blame
 output unconverted data. For more information see the
 discussion about encoding in the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>
 manual page.</p>
@@ -162,7 +162,7 @@ manual page.</p>
 changes starting backwards from the working tree copy.
 This flag makes the command pretend as if the working
 tree copy has the contents of the named file (specify
-<code>-</code> to make the command read from the standard input).</p>
+<span class='synopsis'><code>-</code></span> to make the command read from the standard input).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt---dateltformatgt"><a id="Documentation/git-annotate.txt---dateformat" class="anchor" href="#Documentation/git-annotate.txt---dateformat"></a>--date &lt;format&gt; </dt>
 <dd>
@@ -193,7 +193,7 @@ commit. The default value is 20.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-annotate.txt--Cltnumgt"><a id="Documentation/git-annotate.txt--Cnum" class="anchor" href="#Documentation/git-annotate.txt--Cnum"></a>-C|&lt;num&gt;| </dt>
 <dd>
-<p>In addition to <code>-M</code>, detect lines moved or copied from other
+<p>In addition to <span class='synopsis'><code>-M</code></span>, detect lines moved or copied from other
 files that were modified in the same commit.  This is
 useful when you reorganize your program and move code
 around across files.  When this option is given twice,
@@ -206,7 +206,7 @@ looks for copies from other files in any commit.</p>
 alphanumeric characters that Git must detect as moving/copying
 between files for it to associate those lines with the parent
 commit. And the default value is 40. If there are more than one
-<code>-C</code> options given, the &lt;num&gt; argument of the last <code>-C</code> will
+<span class='synopsis'><code>-C</code></span> options given, the &lt;num&gt; argument of the last <span class='synopsis'><code>-C</code></span> will
 take effect.</p>
 </div>
 </dd>

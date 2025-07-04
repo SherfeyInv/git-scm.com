@@ -116,7 +116,7 @@ aliases:
 <div class="paragraph">
 <p>The sparse-checkout feature allows users to focus a working directory on
 a subset of the files at HEAD. The cone mode patterns, enabled by
-<code>core.sparseCheckoutCone</code>, allow for very fast pattern matching to
+<span class='synopsis'><code>core.sparseCheckoutCone</code></span>, allow for very fast pattern matching to
 discover which files at HEAD belong in the sparse-checkout cone.</p>
 </div>
 <div class="paragraph">
@@ -125,7 +125,7 @@ discover which files at HEAD belong in the sparse-checkout cone.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>HEAD</code>: How many files are present at <code>HEAD</code>?</p>
+<p><span class='synopsis'><code>HEAD</code></span>: How many files are present at <span class='synopsis'><code>HEAD</code></span>?</p>
 </li>
 <li>
 <p>Populated: How many files are within the sparse-checkout cone.</p>
@@ -141,20 +141,20 @@ operations are in terms of these dimensions.</p>
 </div>
 <div class="paragraph">
 <p>These dimensions are ordered by their magnitude: users (typically) modify
-fewer files than are populated, and we can only populate files at <code>HEAD</code>.</p>
+fewer files than are populated, and we can only populate files at <span class='synopsis'><code>HEAD</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>Problems occur if there is an extreme imbalance in these dimensions. For
-example, if <code>HEAD</code> contains millions of paths but the populated set has
-only tens of thousands, then commands like <code>git status</code> and <code>git add</code> can
-be dominated by operations that require O(<code>HEAD</code>) operations instead of
+example, if <span class='synopsis'><code>HEAD</code></span> contains millions of paths but the populated set has
+only tens of thousands, then commands like <span class='synopsis'><code>git</code> <code>status</code></span> and <span class='synopsis'><code>git</code> <code>add</code></span> can
+be dominated by operations that require O(<span class='synopsis'><code>HEAD</code></span>) operations instead of
 O(Populated). Primarily, the cost is in parsing and rewriting the index,
-which is filled primarily with files at <code>HEAD</code> that are marked with the
-<code>SKIP_WORKTREE</code> bit.</p>
+which is filled primarily with files at <span class='synopsis'><code>HEAD</code></span> that are marked with the
+<span class='synopsis'><code>SKIP_WORKTREE</code></span> bit.</p>
 </div>
 <div class="paragraph">
 <p>The sparse-index intends to take these commands that read and modify the
-index from O(<code>HEAD</code>) to O(Populated). To do this, we need to modify the
+index from O(<span class='synopsis'><code>HEAD</code></span>) to O(Populated). To do this, we need to modify the
 index format in a significant way: add "sparse directory" entries.</p>
 </div>
 <div class="paragraph">
@@ -162,7 +162,7 @@ index format in a significant way: add "sparse directory" entries.</p>
 directory will have its contents outside of the sparse-checkout definition.
 Instead of listing all of the files it contains as individual entries, a
 sparse-index contains an entry with the directory name, referencing the
-object ID of the tree at <code>HEAD</code> and marked with the <code>SKIP_WORKTREE</code> bit.
+object ID of the tree at <span class='synopsis'><code>HEAD</code></span> and marked with the <span class='synopsis'><code>SKIP_WORKTREE</code></span> bit.
 If we need to discover the details for paths within that directory, we
 can parse trees to find that list.</p>
 </div>
@@ -195,18 +195,18 @@ users need in their daily work are dramatically improved.</p>
 <p>During this phase, Git learns to enable the sparse-index and safely parse
 one. Protections are put in place so that every consumer of the in-memory
 data structure can operate with its current assumption of every file at
-<code>HEAD</code>.</p>
+<span class='synopsis'><code>HEAD</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>At first, every index parse will call a helper method,
-<code>ensure_full_index()</code>, which scans the index for sparse-directory entries
+<span class='synopsis'><code>ensure_full_index</code>()</span>, which scans the index for sparse-directory entries
 (pointing to trees) and replaces them with the full list of paths (with
 blob contents) by parsing tree objects. This will be slower in all cases.
 The only noticeable change in behavior will be that the serialized index
 file contains sparse-directory entries.</p>
 </div>
 <div class="paragraph">
-<p>To start, we use a new required index extension, <code>sdir</code>, to allow
+<p>To start, we use a new required index extension, <span class='synopsis'><code>sdir</code></span>, to allow
 inserting sparse-directory entries into indexes with file format
 versions 2, 3, and 4. This prevents Git versions that do not understand
 the sparse-index from operating on one, while allowing tools that do not
@@ -218,10 +218,10 @@ index, as well.</p>
 </div>
 <div class="paragraph">
 <p>Next, consumers of the index will be guarded against operating on a
-sparse-index by inserting calls to <code>ensure_full_index()</code> or
-<code>expand_index_to_path()</code>. If a specific path is requested, then those will
-be protected from within the <code>index_file_exists()</code> and <code>index_name_pos()</code>
-API calls: they will call <code>ensure_full_index()</code> if necessary. The
+sparse-index by inserting calls to <span class='synopsis'><code>ensure_full_index</code>()</span> or
+<span class='synopsis'><code>expand_index_to_path</code>()</span>. If a specific path is requested, then those will
+be protected from within the <span class='synopsis'><code>index_file_exists</code>()</span> and <span class='synopsis'><code>index_name_pos</code>()</span>
+API calls: they will call <span class='synopsis'><code>ensure_full_index</code>()</span> if necessary. The
 intention here is to preserve existing behavior when interacting with a
 sparse-checkout. We don&#8217;t want a change to happen by accident, without
 tests. Many of these locations may not need any change before removing the
@@ -236,7 +236,7 @@ tested. No such behavior changes are intended during this phase.</p>
 </div>
 <div class="paragraph">
 <p>During a scan of the codebase, not every iteration of the cache entries
-needs an <code>ensure_full_index()</code> check. The basic reasons include:</p>
+needs an <span class='synopsis'><code>ensure_full_index</code>()</span> check. The basic reasons include:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -258,7 +258,7 @@ correct if and only if the sparse-directory entries are in the correct
 location.</p>
 </li>
 <li>
-<p>The loop ignores entries with the <code>SKIP_WORKTREE</code> bit set, or is
+<p>The loop ignores entries with the <span class='synopsis'><code>SKIP_WORKTREE</code></span> bit set, or is
 otherwise already aware of sparse directory entries.</p>
 </li>
 <li>
@@ -269,13 +269,13 @@ feature, so no effort is made to protect the split-index API.</p>
 </div>
 <div class="paragraph">
 <p>Even after inserting these guards, we will keep expanding sparse-indexes
-for most Git commands using the <code>command_requires_full_index</code> repository
+for most Git commands using the <span class='synopsis'><code>command_requires_full_index</code></span> repository
 setting. This setting will be on by default and disabled one builtin at a
 time until we have sufficient confidence that all of the index operations
 are properly guarded.</p>
 </div>
 <div class="paragraph">
-<p>To complete this phase, the commands <code>git status</code> and <code>git add</code> will be
+<p>To complete this phase, the commands <span class='synopsis'><code>git</code> <code>status</code></span> and <span class='synopsis'><code>git</code> <code>add</code></span> will be
 integrated with the sparse-index so that they operate with O(Populated)
 performance. They will be carefully tested for operations within and
 outside the sparse-checkout definition.</p>
@@ -291,7 +291,7 @@ well with a sparse-index. This requires significant increases to our test
 coverage, especially for operations that interact with the working
 directory outside of the sparse-checkout definition. Some of these
 behaviors may not be the desirable ones, such as some tests already
-marked for failure in <code>t1092-sparse-checkout-compatibility.sh</code>.</p>
+marked for failure in <span class='synopsis'><code>t1092-sparse-checkout-compatibility.sh</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>The index extensions that may require special integrations are:</p>
@@ -327,38 +327,38 @@ at this point:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git commit</code></p>
+<p><span class='synopsis'><code>git</code> <code>commit</code></span></p>
 </li>
 <li>
-<p><code>git checkout</code></p>
+<p><span class='synopsis'><code>git</code> <code>checkout</code></span></p>
 </li>
 <li>
-<p><code>git merge</code></p>
+<p><span class='synopsis'><code>git</code> <code>merge</code></span></p>
 </li>
 <li>
-<p><code>git rebase</code></p>
+<p><span class='synopsis'><code>git</code> <code>rebase</code></span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Hopefully, commands such as <code>git merge</code> and <code>git rebase</code> can benefit
+<p>Hopefully, commands such as <span class='synopsis'><code>git</code> <code>merge</code></span> and <span class='synopsis'><code>git</code> <code>rebase</code></span> can benefit
 instead from merge algorithms that do not use the index as a data
 structure, such as the merge-ORT strategy. As these topics mature, we
 may enable the ORT strategy by default for repositories using the
 sparse-index feature.</p>
 </div>
 <div class="paragraph">
-<p>Along with <code>git status</code> and <code>git add</code>, these commands cover the majority
+<p>Along with <span class='synopsis'><code>git</code> <code>status</code></span> and <span class='synopsis'><code>git</code> <code>add</code></span>, these commands cover the majority
 of users' interactions with the working directory. In addition, we can
 integrate with these commands:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git grep</code></p>
+<p><span class='synopsis'><code>git</code> <code>grep</code></span></p>
 </li>
 <li>
-<p><code>git rm</code></p>
+<p><span class='synopsis'><code>git</code> <code>rm</code></span></p>
 </li>
 </ul>
 </div>
@@ -382,7 +382,7 @@ much conflicts between topics.</p>
 the previous work.</p>
 </div>
 <div class="paragraph">
-<p>To start, the <code>command_requires_full_index</code> option could be removed in
+<p>To start, the <span class='synopsis'><code>command_requires_full_index</code></span> option could be removed in
 favor of expanding only when hitting an API guard.</p>
 </div>
 <div class="paragraph">
@@ -396,16 +396,16 @@ them with additional overhead when a sparse-index is present.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git sparse-checkout set</code></p>
+<p><span class='synopsis'><code>git</code> <code>sparse-checkout</code> <code>set</code></span></p>
 </li>
 <li>
-<p><code>git am</code></p>
+<p><span class='synopsis'><code>git</code> <code>am</code></span></p>
 </li>
 <li>
-<p><code>git clean</code></p>
+<p><span class='synopsis'><code>git</code> <code>clean</code></span></p>
 </li>
 <li>
-<p><code>git stash</code></p>
+<p><span class='synopsis'><code>git</code> <code>stash</code></span></p>
 </li>
 </ul>
 </div>

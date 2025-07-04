@@ -57,13 +57,13 @@ stores</p>
 </li>
 <li>
 <p>The total count of loose objects, as well as counts broken down by
-<code>.git/objects</code> subdirectory</p>
+<span class='synopsis'><code>.git/objects</code></span> subdirectory</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Additional information can be collected by selecting a different diagnostic mode
-using the <code>--mode</code> option.</p>
+using the <span class='synopsis'><code>--mode</code></span> option.</p>
 </div>
 <div class="paragraph">
 <p>This tool differs from <a href='{{< relurl "docs/git-bugreport" >}}'>git-bugreport[1]</a> in that it collects much more
@@ -80,7 +80,7 @@ of repository contents.</p>
 <dt class="hdlist1" id="Documentation/git-diagnose.txt--oltpathgt"><a id="Documentation/git-diagnose.txt--opath" class="anchor" href="#Documentation/git-diagnose.txt--opath"></a>-o &lt;path&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-diagnose.txt---output-directoryltpathgt"><a id="Documentation/git-diagnose.txt---output-directorypath" class="anchor" href="#Documentation/git-diagnose.txt---output-directorypath"></a>--output-directory &lt;path&gt; </dt>
 <dd>
-<p>Place the resulting diagnostics archive in <code>&lt;path&gt;</code> instead of the
+<p>Place the resulting diagnostics archive in <span class='synopsis'><em>&lt;path&gt;</em></span> instead of the
 current directory.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-diagnose.txt--sltformatgt"><a id="Documentation/git-diagnose.txt--sformat" class="anchor" href="#Documentation/git-diagnose.txt--sformat"></a>-s &lt;format&gt; </dt>
@@ -94,14 +94,14 @@ used.</p>
 <dt class="hdlist1" id="Documentation/git-diagnose.txt---modestatsall"><a class="anchor" href="#Documentation/git-diagnose.txt---modestatsall"></a>--mode=(stats|all) </dt>
 <dd>
 <p>Specify the type of diagnostics that should be collected. The default behavior
-of <em>git diagnose</em> is equivalent to <code>--mode=stats</code>.</p>
+of <em>git diagnose</em> is equivalent to <span class='synopsis'><code>--mode=stats</code></span>.</p>
 <div class="paragraph">
-<p>The <code>--mode=all</code> option collects everything included in <code>--mode=stats</code>, as well
-as copies of <code>.git</code>, <code>.git/hooks</code>, <code>.git/info</code>, <code>.git/logs</code>, and
-<code>.git/objects/info</code> directories. This additional information may be sensitive,
+<p>The <span class='synopsis'><code>--mode=all</code></span> option collects everything included in <span class='synopsis'><code>--mode=stats</code></span>, as well
+as copies of <span class='synopsis'><code>.git</code></span>, <span class='synopsis'><code>.git/hooks</code></span>, <span class='synopsis'><code>.git/info</code></span>, <span class='synopsis'><code>.git/logs</code></span>, and
+<span class='synopsis'><code>.git/objects/info</code></span> directories. This additional information may be sensitive,
 as it can be used to reconstruct the full contents of the diagnosed repository.
 Users should exercise caution when sharing an archive generated with
-<code>--mode=all</code>.</p>
+<span class='synopsis'><code>--mode=all</code></span>.</p>
 </div>
 </dd>
 </dl>

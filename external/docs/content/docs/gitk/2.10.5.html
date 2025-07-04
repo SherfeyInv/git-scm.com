@@ -96,8 +96,8 @@ being merged.</p>
 <dt class="hdlist1" id="Documentation/gitk.txt---left-right"><a class="anchor" href="#Documentation/gitk.txt---left-right"></a>--left-right </dt>
 <dd>
 <p>Mark which side of a symmetric difference a commit is reachable
-from.  Commits from the left side are prefixed with a <code>&lt;</code>
-symbol and those from the right with a <code>&gt;</code> symbol.</p>
+from.  Commits from the left side are prefixed with a <span class='synopsis'><em>&lt;</em></span>
+symbol and those from the right with a <span class='synopsis'><em>&gt;</em></span> symbol.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitk.txt---full-history"><a class="anchor" href="#Documentation/gitk.txt---full-history"></a>--full-history </dt>
 <dd>
@@ -107,7 +107,7 @@ for a more detailed explanation.)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitk.txt---simplify-merges"><a class="anchor" href="#Documentation/gitk.txt---simplify-merges"></a>--simplify-merges </dt>
 <dd>
-<p>Additional option to <code>--full-history</code> to remove some needless
+<p>Additional option to <span class='synopsis'><code>--full-history</code></span> to remove some needless
 merges from the resulting history, as there are no selected
 commits contributing to this merge.  (See "History
 simplification" in <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> for a more detailed
@@ -135,7 +135,7 @@ You can specify this option more than once.</p>
 <div class="paragraph">
 <p><strong>Note:</strong> gitk (unlike <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>) currently only understands
 this option if you specify it "glued together" with its argument.  Do
-<strong>not</strong> put a space after <code>-L</code>.</p>
+<strong>not</strong> put a space after <span class='synopsis'><code>-L</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>&lt;start&gt; and &lt;end&gt; can take one of these forms:</p>
@@ -154,7 +154,7 @@ absolute line number (lines count from 1).</p>
 <div class="paragraph">
 <p>This form will use the first line matching the given
 POSIX regex. If &lt;start&gt; is a regex, it will search from the end of
-the previous <code>-L</code> range, if any, otherwise from the start of file.
+the previous <span class='synopsis'><code>-L</code></span> range, if any, otherwise from the start of file.
 If &lt;start&gt; is &#8220;^/regex/&#8221;, it will search from the start of file.
 If &lt;end&gt; is a regex, it will search
 starting at the line given by &lt;start&gt;.</p>
@@ -173,7 +173,7 @@ of lines before or after the line given by &lt;start&gt;.</p>
 <p>If &#8220;:&lt;funcname&gt;&#8221; is given in place of &lt;start&gt; and &lt;end&gt;, it is a
 regular expression that denotes the range from the first funcname line
 that matches &lt;funcname&gt;, up to the next funcname line. &#8220;:&lt;funcname&gt;&#8221;
-searches from the end of the previous <code>-L</code> range, if any, otherwise
+searches from the end of the previous <span class='synopsis'><code>-L</code></span> range, if any, otherwise
 from the start of file. &#8220;^:&lt;funcname&gt;&#8221; searches from the start of
 file.</p>
 </div>

@@ -36,7 +36,7 @@ regressions, and so on.</p>
 <div class="paragraph">
 <p>Comprehensive reference documentation is available through the man
 pages, or <a href='{{< relurl "docs/git-help" >}}'>git-help[1]</a> command.  For example, for the command
-<code>git clone &lt;repo&gt;</code>, you can either use:</p>
+<span class='synopsis'><code>git</code> <code>clone</code> <em>&lt;repo&gt;</em></span>, you can either use:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -92,10 +92,10 @@ will only need to clone once.</p>
 </div>
 <div class="paragraph">
 <p>The clone command creates a new directory named after the project
-(<code>git</code> or <code>linux</code> in the examples above).  After you cd into this
+(<span class='synopsis'><code>git</code></span> or <span class='synopsis'><code>linux</code></span> in the examples above).  After you cd into this
 directory, you will see that it contains a copy of the project files,
 called the <a href="#def_working_tree">working tree</a>, together with a special
-top-level directory named <code>.git</code>, which contains all the information
+top-level directory named <span class='synopsis'><code>.git</code></span>, which contains all the information
 about the history of the project.</p>
 </div>
 </div>
@@ -234,7 +234,7 @@ did, and why.</p>
 </div>
 <div class="paragraph">
 <p>Every commit has a 40-hexdigit id, sometimes called the "object name" or the
-"SHA-1 id", shown on the first line of the <code>git show</code> output.  You can usually
+"SHA-1 id", shown on the first line of the <span class='synopsis'><code>git</code> <code>show</code></span> output.  You can usually
 refer to a commit by a shorter name, such as a tag or a branch name, but this
 longer name can also be useful.  Most importantly, it is a globally unique
 name for this commit: so if you tell somebody else the object name (for
@@ -324,46 +324,46 @@ a summary of the commands:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitbranchcode"><a id="Documentation/user-manual.txt-gitbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranch"></a><code>git branch</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodebranchcodespan"><a id="Documentation/user-manual.txt-gitbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranch"></a><span class='synopsis'><code>git</code> <code>branch</code></span> </dt>
 <dd>
 <p>list all branches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitbranchltbranchgtcode"><a id="Documentation/user-manual.txt-gitbranchbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranchbranch"></a><code>git branch &lt;branch&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodebranchcodeemltbranchgtemspan"><a id="Documentation/user-manual.txt-gitbranchbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranchbranch"></a><span class='synopsis'><code>git</code> <code>branch</code> <em>&lt;branch&gt;</em></span> </dt>
 <dd>
-<p>create a new branch named <code>&lt;branch&gt;</code>, referencing the same
+<p>create a new branch named <span class='synopsis'><em>&lt;branch&gt;</em></span>, referencing the same
 point in history as the current branch.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitbranchltbranchgtltstart-pointgtcode"><a id="Documentation/user-manual.txt-gitbranchbranchstart-point" class="anchor" href="#Documentation/user-manual.txt-gitbranchbranchstart-point"></a><code>git branch &lt;branch&gt; &lt;start-point&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodebranchcodeemltbranchgtememltstart-pointgtemspan"><a id="Documentation/user-manual.txt-gitbranchbranchstart-point" class="anchor" href="#Documentation/user-manual.txt-gitbranchbranchstart-point"></a><span class='synopsis'><code>git</code> <code>branch</code> <em>&lt;branch&gt;</em> <em>&lt;start-point&gt;</em></span> </dt>
 <dd>
-<p>create a new branch named <code>&lt;branch&gt;</code>, referencing
-<code>&lt;start-point&gt;</code>, which may be specified any way you like,
+<p>create a new branch named <span class='synopsis'><em>&lt;branch&gt;</em></span>, referencing
+<span class='synopsis'><em>&lt;start-point&gt;</em></span>, which may be specified any way you like,
 including using a branch name or a tag name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitbranch-dltbranchgtcode"><a id="Documentation/user-manual.txt-gitbranch-dbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranch-dbranch"></a><code>git branch -d &lt;branch&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodebranchcodecode-dcodeemltbranchgtemspan"><a id="Documentation/user-manual.txt-gitbranch-dbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranch-dbranch"></a><span class='synopsis'><code>git</code> <code>branch</code> <code>-d</code> <em>&lt;branch&gt;</em></span> </dt>
 <dd>
-<p>delete the branch <code>&lt;branch&gt;</code>; if the branch is not fully
+<p>delete the branch <span class='synopsis'><em>&lt;branch&gt;</em></span>; if the branch is not fully
 merged in its upstream branch or contained in the current branch,
 this command will fail with a warning.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitbranch-Dltbranchgtcode"><a id="Documentation/user-manual.txt-gitbranch-Dbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranch-Dbranch"></a><code>git branch -D &lt;branch&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodebranchcodecode-Dcodeemltbranchgtemspan"><a id="Documentation/user-manual.txt-gitbranch-Dbranch" class="anchor" href="#Documentation/user-manual.txt-gitbranch-Dbranch"></a><span class='synopsis'><code>git</code> <code>branch</code> <code>-D</code> <em>&lt;branch&gt;</em></span> </dt>
 <dd>
-<p>delete the branch <code>&lt;branch&gt;</code> irrespective of its merged status.</p>
+<p>delete the branch <span class='synopsis'><em>&lt;branch&gt;</em></span> irrespective of its merged status.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitcheckoutltbranchgtcode"><a id="Documentation/user-manual.txt-gitcheckoutbranch" class="anchor" href="#Documentation/user-manual.txt-gitcheckoutbranch"></a><code>git checkout &lt;branch&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodecheckoutcodeemltbranchgtemspan"><a id="Documentation/user-manual.txt-gitcheckoutbranch" class="anchor" href="#Documentation/user-manual.txt-gitcheckoutbranch"></a><span class='synopsis'><code>git</code> <code>checkout</code> <em>&lt;branch&gt;</em></span> </dt>
 <dd>
-<p>make the current branch <code>&lt;branch&gt;</code>, updating the working
-directory to reflect the version referenced by <code>&lt;branch&gt;</code>.</p>
+<p>make the current branch <span class='synopsis'><em>&lt;branch&gt;</em></span>, updating the working
+directory to reflect the version referenced by <span class='synopsis'><em>&lt;branch&gt;</em></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/user-manual.txt-codegitcheckout-bltnewgtltstart-pointgtcode"><a id="Documentation/user-manual.txt-gitcheckout-bnewstart-point" class="anchor" href="#Documentation/user-manual.txt-gitcheckout-bnewstart-point"></a><code>git checkout -b &lt;new&gt; &lt;start-point&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/user-manual.txt-spanclasssynopsiscodegitcodecodecheckoutcodecode-bcodeemltnewgtememltstart-pointgtemspan"><a id="Documentation/user-manual.txt-gitcheckout-bnewstart-point" class="anchor" href="#Documentation/user-manual.txt-gitcheckout-bnewstart-point"></a><span class='synopsis'><code>git</code> <code>checkout</code> <code>-b</code> <em>&lt;new&gt;</em> <em>&lt;start-point&gt;</em></span> </dt>
 <dd>
-<p>create a new branch <code>&lt;new&gt;</code> referencing <code>&lt;start-point&gt;</code>, and
+<p>create a new branch <span class='synopsis'><em>&lt;new&gt;</em></span> referencing <span class='synopsis'><em>&lt;start-point&gt;</em></span>, and
 check it out.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
 <p>The special symbol "HEAD" can always be used to refer to the current
-branch.  In fact, Git uses a file named <code>HEAD</code> in the <code>.git</code> directory
+branch.  In fact, Git uses a file named <span class='synopsis'><code>HEAD</code></span> in the <span class='synopsis'><code>.git</code></span> directory
 to remember which branch is current:</p>
 </div>
 <div class="listingblock">
@@ -378,7 +378,7 @@ ref: refs/heads/master</pre>
 <h2 id="detached-head"><a class="anchor" href="#detached-head"></a>Examining an old version without creating a new branch</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>git checkout</code> command normally expects a branch head, but will also
+<p>The <span class='synopsis'><code>git</code> <code>checkout</code></span> command normally expects a branch head, but will also
 accept an arbitrary commit; for example, you can check out the commit
 referenced by a tag:</p>
 </div>
@@ -431,7 +431,7 @@ of the HEAD in the repository that you cloned from.  That repository
 may also have had other branches, though, and your local repository
 keeps branches which track each of those remote branches, called
 remote-tracking branches, which you
-can view using the <code>-r</code> option to <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a>:</p>
+can view using the <span class='synopsis'><code>-r</code></span> option to <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -451,7 +451,7 @@ can view using the <code>-r</code> option to <a href='{{< relurl "docs/git-branc
 for short. The branches of this repository are called "remote
 branches" from our point of view. The remote-tracking branches listed
 above were created based on the remote branches at clone time and will
-be updated by <code>git fetch</code> (hence <code>git pull</code>) and <code>git push</code>. See
+be updated by <span class='synopsis'><code>git</code> <code>fetch</code></span> (hence <span class='synopsis'><code>git</code> <code>pull</code></span>) and <span class='synopsis'><code>git</code> <code>push</code></span>. See
 <a href="#Updating-a-repository-With-git-fetch">Updating a repository with git fetch</a> for details.</p>
 </div>
 <div class="paragraph">
@@ -464,7 +464,7 @@ on a branch of your own, just as you would for a tag:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also check out <code>origin/todo</code> directly to examine it or
+<p>You can also check out <span class='synopsis'><code>origin/todo</code></span> directly to examine it or
 write a one-off patch.  See <a href="#detached-head">detached head</a>.</p>
 </div>
 <div class="paragraph">
@@ -479,19 +479,19 @@ to refer to the repository that you cloned from.</p>
 <div class="paragraph">
 <p>Branches, remote-tracking branches, and tags are all references to
 commits.  All references are named with a slash-separated path name
-starting with <code>refs</code>; the names we&#8217;ve been using so far are actually
+starting with <span class='synopsis'><code>refs</code></span>; the names we&#8217;ve been using so far are actually
 shorthand:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The branch <code>test</code> is short for <code>refs/heads/test</code>.</p>
+<p>The branch <span class='synopsis'><code>test</code></span> is short for <span class='synopsis'><code>refs/heads/test</code></span>.</p>
 </li>
 <li>
-<p>The tag <code>v2.6.18</code> is short for <code>refs/tags/v2.6.18</code>.</p>
+<p>The tag <span class='synopsis'><code>v2.6.18</code></span> is short for <span class='synopsis'><code>refs/tags/v2.6.18</code></span>.</p>
 </li>
 <li>
-<p><code>origin/master</code> is short for <code>refs/remotes/origin/master</code>.</p>
+<p><span class='synopsis'><code>origin/master</code></span> is short for <span class='synopsis'><code>refs/remotes/origin/master</code></span>.</p>
 </li>
 </ul>
 </div>
@@ -500,7 +500,7 @@ shorthand:</p>
 exists a tag and a branch with the same name.</p>
 </div>
 <div class="paragraph">
-<p>(Newly created refs are actually stored in the <code>.git/refs</code> directory,
+<p>(Newly created refs are actually stored in the <span class='synopsis'><code>.git/refs</code></span> directory,
 under the path given by their name.  However, for efficiency reasons
 they may also be packed together in a single file; see
 <a href='{{< relurl "docs/git-pack-refs" >}}'>git-pack-refs[1]</a>).</p>
@@ -526,7 +526,7 @@ REVISIONS" section of <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[
 may wish to check the original repository for updates.</p>
 </div>
 <div class="paragraph">
-<p>The <code>git-fetch</code> command, with no arguments, will update all of the
+<p>The <span class='synopsis'><code>git-fetch</code></span> command, with no arguments, will update all of the
 remote-tracking branches to the latest version found in the original
 repository.  It will not touch any of your own branches&#8212;&#8203;not even the
 "master" branch that was created for you on clone.</p>
@@ -553,7 +553,7 @@ From git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/staging
 </div>
 <div class="paragraph">
 <p>New remote-tracking branches will be stored under the shorthand name
-that you gave <code>git remote add</code>, in this case <code>staging</code>:</p>
+that you gave <span class='synopsis'><code>git</code> <code>remote</code> <code>add</code></span>, in this case <span class='synopsis'><code>staging</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -566,11 +566,11 @@ that you gave <code>git remote add</code>, in this case <code>staging</code>:</p
 </div>
 </div>
 <div class="paragraph">
-<p>If you run <code>git fetch &lt;remote&gt;</code> later, the remote-tracking branches
-for the named <code>&lt;remote&gt;</code> will be updated.</p>
+<p>If you run <span class='synopsis'><code>git</code> <code>fetch</code> <em>&lt;remote&gt;</em></span> later, the remote-tracking branches
+for the named <span class='synopsis'><em>&lt;remote&gt;</em></span> will be updated.</p>
 </div>
 <div class="paragraph">
-<p>If you examine the file <code>.git/config</code>, you will see that Git has added
+<p>If you examine the file <span class='synopsis'><code>.git/config</code></span>, you will see that Git has added
 a new stanza:</p>
 </div>
 <div class="listingblock">
@@ -585,7 +585,7 @@ a new stanza:</p>
 </div>
 <div class="paragraph">
 <p>This is what causes Git to track the remote&#8217;s branches; you may modify
-or delete these configuration options by editing <code>.git/config</code> with a
+or delete these configuration options by editing <span class='synopsis'><code>.git/config</code></span> with a
 text editor.  (See the "CONFIGURATION FILE" section of
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> for details.)</p>
 </div>
@@ -630,7 +630,7 @@ Bisecting: 3537 revisions left to test after this
 </div>
 </div>
 <div class="paragraph">
-<p>If you run <code>git branch</code> at this point, you&#8217;ll see that Git has
+<p>If you run <span class='synopsis'><code>git</code> <code>branch</code></span> at this point, you&#8217;ll see that Git has
 temporarily moved you in "(no branch)". HEAD is now detached from any
 branch and points directly to a commit (with commit id 65934&#8230;&#8203;) that
 is reachable from "master" but not from v2.6.18. Compile and test it,
@@ -664,7 +664,7 @@ report with the commit id.  Finally, run</p>
 <p>to return you to the branch you were on before.</p>
 </div>
 <div class="paragraph">
-<p>Note that the version which <code>git bisect</code> checks out for you at each
+<p>Note that the version which <span class='synopsis'><code>git</code> <code>bisect</code></span> checks out for you at each
 point is just a suggestion, and you&#8217;re free to try a different
 version if you think it would be a good idea.  For example,
 occasionally you may land on a commit that broke something unrelated;
@@ -686,12 +686,13 @@ id, and check it out with:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>then test, run <code>bisect good</code> or <code>bisect bad</code> as appropriate, and
+<p>then test, run <span class='synopsis'><code>bisect</code> <code>good</code></span> or <span class='synopsis'><code>bisect</code> <code>bad</code></span> as appropriate, and
 continue.</p>
 </div>
 <div class="paragraph">
-<p>Instead of <code>git bisect visualize</code> and then <code>git reset --hard
-fb47ddb2db...</code>, you might just want to tell Git that you want to skip
+<p>Instead of <span class='synopsis'><code>git</code> <code>bisect</code> <code>visualize</code></span> and then <span class='synopsis'><code>git</code> <code>reset</code> <code>--hard</code>
+
+<code>fb47ddb2db...</code></span>, you might just want to tell Git that you want to skip
 the current commit:</p>
 </div>
 <div class="listingblock">
@@ -706,8 +707,9 @@ bad one between some first skipped commits and a later bad commit.</p>
 <div class="paragraph">
 <p>There are also ways to automate the bisecting process if you have a
 test script that can tell a good from a bad commit. See
-<a href='{{< relurl "docs/git-bisect" >}}'>git-bisect[1]</a> for more information about this and other <code>git
-bisect</code> features.</p>
+<a href='{{< relurl "docs/git-bisect" >}}'>git-bisect[1]</a> for more information about this and other <span class='synopsis'><code>git</code>
+
+<code>bisect</code></span> features.</p>
 </div>
 </div>
 </div>
@@ -752,7 +754,7 @@ $ git show HEAD~4   # the great-great-grandparent</pre>
 </div>
 <div class="paragraph">
 <p>Recall that merge commits may have more than one parent; by default,
-<code>^</code> and <code>~</code> follow the first parent listed in the commit, but you can
+<span class='synopsis'><code>^</code></span> and <span class='synopsis'><code>~</code></span> follow the first parent listed in the commit, but you can
 also choose:</p>
 </div>
 <div class="listingblock">
@@ -767,12 +769,12 @@ commits:</p>
 </div>
 <div class="paragraph">
 <p>Merges (to be discussed later), as well as operations such as
-<code>git reset</code>, which change the currently checked-out commit, generally
+<span class='synopsis'><code>git</code> <code>reset</code></span>, which change the currently checked-out commit, generally
 set ORIG_HEAD to the value HEAD had before the current operation.</p>
 </div>
 <div class="paragraph">
-<p>The <code>git fetch</code> operation always stores the head of the last fetched
-branch in FETCH_HEAD.  For example, if you run <code>git fetch</code> without
+<p>The <span class='synopsis'><code>git</code> <code>fetch</code></span> operation always stores the head of the last fetched
+branch in FETCH_HEAD.  For example, if you run <span class='synopsis'><code>git</code> <code>fetch</code></span> without
 specifying a local branch as the target of the operation</p>
 </div>
 <div class="listingblock">
@@ -814,7 +816,7 @@ running</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can use <code>stable-1</code> to refer to the commit 1b2e1d63ff.</p>
+<p>You can use <span class='synopsis'><code>stable-1</code></span> to refer to the commit 1b2e1d63ff.</p>
 </div>
 <div class="paragraph">
 <p>This creates a "lightweight" tag.  If you would also like to include a
@@ -848,7 +850,7 @@ $ git log -S'foo()'	# commits which add or remove any file data
 </div>
 <div class="paragraph">
 <p>And of course you can combine all of these; the following finds
-commits since v2.5 which touch the <code>Makefile</code> or any file under <code>fs</code>:</p>
+commits since v2.5 which touch the <span class='synopsis'><code>Makefile</code></span> or any file under <span class='synopsis'><code>fs</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -864,7 +866,7 @@ commits since v2.5 which touch the <code>Makefile</code> or any file under <code
 </div>
 </div>
 <div class="paragraph">
-<p>See the <code>--pretty</code> option in the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> man page for more
+<p>See the <span class='synopsis'><code>--pretty</code></span> option in the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> man page for more
 display options.</p>
 </div>
 <div class="paragraph">
@@ -938,8 +940,8 @@ may be any path to a file tracked by Git.</p>
 <div class="sect2">
 <h3 id="counting-commits-on-a-branch"><a class="anchor" href="#counting-commits-on-a-branch"></a>Counting the number of commits on a branch</h3>
 <div class="paragraph">
-<p>Suppose you want to know how many commits you&#8217;ve made on <code>mybranch</code>
-since it diverged from <code>origin</code>:</p>
+<p>Suppose you want to know how many commits you&#8217;ve made on <span class='synopsis'><code>mybranch</code></span>
+since it diverged from <span class='synopsis'><code>origin</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -983,7 +985,7 @@ e05db0fd4f31dde7005f075a84f96b360d05984b</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Or you could recall that the <code>...</code> operator selects all commits
+<p>Or you could recall that the <span class='synopsis'>...</span> operator selects all commits
 reachable from either one reference or the other but not
 both; so</p>
 </div>
@@ -1104,7 +1106,7 @@ and from v1.5.0-rc2, and not from v1.5.0-rc0.</p>
 <h3 id="showing-commits-unique-to-a-branch"><a class="anchor" href="#showing-commits-unique-to-a-branch"></a>Showing commits unique to a given branch</h3>
 <div class="paragraph">
 <p>Suppose you would like to see all the commits reachable from the branch
-head named <code>master</code> but not from any other head in your repository.</p>
+head named <span class='synopsis'><code>master</code></span> but not from any other head in your repository.</p>
 </div>
 <div class="paragraph">
 <p>We can list all the heads in this repository with
@@ -1121,7 +1123,7 @@ a07157ac624b2524a059a3414e99f6f44bebc1e7 refs/heads/master
 </div>
 </div>
 <div class="paragraph">
-<p>We can get just the branch-head names, and remove <code>master</code>, with
+<p>We can get just the branch-head names, and remove <span class='synopsis'><code>master</code></span>, with
 the help of the standard utilities cut and grep:</p>
 </div>
 <div class="listingblock">
@@ -1154,7 +1156,7 @@ commits reachable from some head but not from any tag in the repository:</p>
 </div>
 <div class="paragraph">
 <p>(See <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a> for explanations of commit-selecting
-syntax such as <code>--not</code>.)</p>
+syntax such as <span class='synopsis'><code>--not</code></span>.)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1170,12 +1172,12 @@ any version of a project; for example:</p>
 </div>
 <div class="paragraph">
 <p>will use HEAD to produce a gzipped tar archive in which each filename
-is preceded by <code>project/</code>.  The output file format is inferred from
+is preceded by <span class='synopsis'><code>project/</code></span>.  The output file format is inferred from
 the output file extension if possible, see <a href='{{< relurl "docs/git-archive" >}}'>git-archive[1]</a> for
 details.</p>
 </div>
 <div class="paragraph">
-<p>Versions of Git older than 1.7.7 don&#8217;t know about the <code>tar.gz</code> format,
+<p>Versions of Git older than 1.7.7 don&#8217;t know about the <span class='synopsis'><code>tar.gz</code></span> format,
 you&#8217;ll need to use gzip explicitly:</p>
 </div>
 <div class="listingblock">
@@ -1255,7 +1257,7 @@ $ git config --global user.email 'you@yourdomain.example.com'</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Which will add the following to a file named <code>.gitconfig</code> in your
+<p>Which will add the following to a file named <span class='synopsis'><code>.gitconfig</code></span> in your
 home directory:</p>
 </div>
 <div class="listingblock">
@@ -1328,7 +1330,7 @@ special staging area called "the index."</p>
 </div>
 <div class="paragraph">
 <p>At the beginning, the content of the index will be identical to
-that of the HEAD.  The command <code>git diff --cached</code>, which shows
+that of the HEAD.  The command <span class='synopsis'><code>git</code> <code>diff</code> <code>--cached</code></span>, which shows
 the difference between the HEAD and the index, should therefore
 produce no output at that point.</p>
 </div>
@@ -1372,9 +1374,9 @@ is what you&#8217;d commit if you created the commit now&#8212;&#8203;and that</
 <p>shows the difference between the working tree and the index file.</p>
 </div>
 <div class="paragraph">
-<p>Note that <code>git add</code> always adds just the current contents of a file
+<p>Note that <span class='synopsis'><code>git</code> <code>add</code></span> always adds just the current contents of a file
 to the index; further changes to the same file will be ignored unless
-you run <code>git add</code> on the file again.</p>
+you run <span class='synopsis'><code>git</code> <code>add</code></span> on the file again.</p>
 </div>
 <div class="paragraph">
 <p>When you&#8217;re ready, just run</p>
@@ -1451,14 +1453,14 @@ rest of the commit in the body.</p>
 <p>A project will often generate files that you do <em>not</em> want to track with Git.
 This typically includes files generated by a build process or temporary
 backup files made by your editor. Of course, <em>not</em> tracking files with Git
-is just a matter of <em>not</em> calling <code>git add</code> on them. But it quickly becomes
+is just a matter of <em>not</em> calling <span class='synopsis'><code>git</code> <code>add</code></span> on them. But it quickly becomes
 annoying to have these untracked files lying around; e.g. they make
-<code>git add .</code> practically useless, and they keep showing up in the output of
-<code>git status</code>.</p>
+<span class='synopsis'><code>git</code> <code>add</code> <code>.</code></span> practically useless, and they keep showing up in the output of
+<span class='synopsis'><code>git</code> <code>status</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>You can tell Git to ignore certain files by creating a file called
-<code>.gitignore</code> in the top level of your working directory, with contents
+<span class='synopsis'><code>.gitignore</code></span> in the top level of your working directory, with contents
 such as:</p>
 </div>
 <div class="listingblock">
@@ -1477,17 +1479,18 @@ foo.txt
 <div class="paragraph">
 <p>See <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a> for a detailed explanation of the syntax.  You can
 also place .gitignore files in other directories in your working tree, and they
-will apply to those directories and their subdirectories.  The <code>.gitignore</code>
-files can be added to your repository like any other files (just run <code>git add
-.gitignore</code> and <code>git commit</code>, as usual), which is convenient when the exclude
+will apply to those directories and their subdirectories.  The <span class='synopsis'><code>.gitignore</code></span>
+files can be added to your repository like any other files (just run <span class='synopsis'><code>git</code> <code>add</code>
+
+<code>.gitignore</code></span> and <span class='synopsis'><code>git</code> <code>commit</code></span>, as usual), which is convenient when the exclude
 patterns (such as patterns matching build output files) would also make sense
 for other users who clone your repository.</p>
 </div>
 <div class="paragraph">
 <p>If you wish the exclude patterns to affect only certain repositories
 (instead of every repository for a given project), you may instead put
-them in a file in your repository named <code>.git/info/exclude</code>, or in any
-file specified by the <code>core.excludesfile</code> configuration variable.
+them in a file in your repository named <span class='synopsis'><code>.git/info/exclude</code></span>, or in any
+file specified by the <span class='synopsis'><code>core.excludesfile</code></span> configuration variable.
 Some Git commands can also take exclude patterns directly on the
 command line.  See <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a> for the details.</p>
 </div>
@@ -1506,11 +1509,11 @@ command line.  See <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a> fo
 </div>
 </div>
 <div class="paragraph">
-<p>merges the development in the branch <code>branchname</code> into the current
+<p>merges the development in the branch <span class='synopsis'><code>branchname</code></span> into the current
 branch.</p>
 </div>
 <div class="paragraph">
-<p>A merge is made by combining the changes made in <code>branchname</code> and the
+<p>A merge is made by combining the changes made in <span class='synopsis'><code>branchname</code></span> and the
 changes made up to the latest commit in your current branch since
 their histories forked. The work tree is overwritten by the result of
 the merge when this combining is done cleanly, or overwritten by a
@@ -1651,7 +1654,7 @@ that part is not conflicting and is not shown.  Same for stage 3).</p>
 <div class="paragraph">
 <p>The diff above shows the differences between the working-tree version of
 file.txt and the stage 2 and stage 3 versions.  So instead of preceding
-each line by a single <code>+</code> or <code>-</code>, it now uses two columns: the first
+each line by a single <span class='synopsis'><code>+</code></span> or <span class='synopsis'><code>-</code></span>, it now uses two columns: the first
 column is used for differences between the first parent and the working
 directory copy, and the second for differences between the second parent
 and the working directory copy.  (See the "COMBINED DIFF FORMAT" section
@@ -1721,7 +1724,7 @@ unmerged files using external tools such as Emacs or kdiff3.</p>
 </div>
 <div class="paragraph">
 <p>the different stages of that file will be "collapsed", after which
-<code>git diff</code> will (by default) no longer show diffs for that file.</p>
+<span class='synopsis'><code>git</code> <code>diff</code></span> will (by default) no longer show diffs for that file.</p>
 </div>
 </div>
 </div>
@@ -1842,7 +1845,7 @@ conflicts manually, just as in the case of <a href="#resolving-a-merge">resolvin
 <div class="paragraph">
 <p>If the problematic commit is the most recent commit, and you have not
 yet made that commit public, then you may just
-<a href="#undoing-a-merge">destroy it using <code>git reset</code></a>.</p>
+<a href="#undoing-a-merge">destroy it using <span class='synopsis'><code>git</code> <code>reset</code></span></a>.</p>
 </div>
 <div class="paragraph">
 <p>Alternatively, you
@@ -1875,7 +1878,7 @@ this is an advanced topic to be left for
 <div class="paragraph">
 <p>In the process of undoing a previous bad change, you may find it
 useful to check out an older version of a particular file using
-<a href='{{< relurl "docs/git-checkout" >}}'>git-checkout[1]</a>.  We&#8217;ve used <code>git checkout</code> before to switch
+<a href='{{< relurl "docs/git-checkout" >}}'>git-checkout[1]</a>.  We&#8217;ve used <span class='synopsis'><code>git</code> <code>checkout</code></span> before to switch
 branches, but it has quite different behavior if it is given a path
 name: the command</p>
 </div>
@@ -1918,7 +1921,7 @@ work-in-progress changes.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This command will save your changes away to the <code>stash</code>, and
+<p>This command will save your changes away to the <span class='synopsis'><code>stash</code></span>, and
 reset your working tree and the index to match the tip of your
 current branch.  Then you can make your fix as usual.</p>
 </div>
@@ -1930,7 +1933,7 @@ $ git commit -a -m "blorpl: typofix"</pre>
 </div>
 <div class="paragraph">
 <p>After that, you can go back to what you were working on with
-<code>git stash pop</code>:</p>
+<span class='synopsis'><code>git</code> <code>stash</code> <code>pop</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1948,7 +1951,7 @@ $ git commit -a -m "blorpl: typofix"</pre>
 information from taking up too much space on disk or in memory.  Some
 Git commands may automatically run <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>, so you don&#8217;t
 have to worry about running it manually.  However, compressing a large
-repository may take a while, so you may want to call <code>gc</code> explicitly
+repository may take a while, so you may want to call <span class='synopsis'><code>gc</code></span> explicitly
 to avoid automatic compression kicking in when it is not convenient.</p>
 </div>
 </div>
@@ -1980,8 +1983,8 @@ dangling tree b24c2473f1fd3d91352a624795be026d64c8841f
 <div class="paragraph">
 <p>You will see informational messages on dangling objects. They are objects
 that still exist in the repository but are no longer referenced by any of
-your branches, and can (and will) be removed after a while with <code>gc</code>.
-You can run <code>git fsck --no-dangling</code> to suppress these messages, and still
+your branches, and can (and will) be removed after a while with <span class='synopsis'><code>gc</code></span>.
+You can run <span class='synopsis'><code>git</code> <code>fsck</code> <code>--no-dangling</code></span> to suppress these messages, and still
 view real errors.</p>
 </div>
 </div>
@@ -1990,7 +1993,7 @@ view real errors.</p>
 <div class="sect3">
 <h4 id="reflogs"><a class="anchor" href="#reflogs"></a>Reflogs</h4>
 <div class="paragraph">
-<p>Say you modify a branch with <a href="#fixing-mistakes"><code>git reset --hard</code></a>,
+<p>Say you modify a branch with <a href="#fixing-mistakes"><span class='synopsis'><code>git</code> <code>reset</code> <code>--hard</code></span></a>,
 and then realize that the branch was the only reference you had to
 that point in history.</p>
 </div>
@@ -2006,8 +2009,8 @@ old history using, for example,</p>
 </div>
 <div class="paragraph">
 <p>This lists the commits reachable from the previous version of the
-<code>master</code> branch head.  This syntax can be used with any Git command
-that accepts a commit, not just with <code>git log</code>.  Some other examples:</p>
+<span class='synopsis'><code>master</code></span> branch head.  This syntax can be used with any Git command
+that accepts a commit, not just with <span class='synopsis'><code>git</code> <code>log</code></span>.  Some other examples:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2051,7 +2054,7 @@ how the branches in your local repository have changed over time.</p>
 suppose you delete a branch, then realize you need the history it
 contained.  The reflog is also deleted; however, if you have not yet
 pruned the repository, then you may still be able to find the lost
-commits in the dangling objects that <code>git fsck</code> reports.  See
+commits in the dangling objects that <span class='synopsis'><code>git</code> <code>fsck</code></span> reports.  See
 <a href="#dangling-objects">Dangling objects</a> for the details.</p>
 </div>
 <div class="listingblock">
@@ -2129,8 +2132,8 @@ one step:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In fact, if you have <code>master</code> checked out, then this branch has been
-configured by <code>git clone</code> to get changes from the HEAD branch of the
+<p>In fact, if you have <span class='synopsis'><code>master</code></span> checked out, then this branch has been
+configured by <span class='synopsis'><code>git</code> <code>clone</code></span> to get changes from the HEAD branch of the
 origin repository.  So often you can
 accomplish the above with just a simple</p>
 </div>
@@ -2141,19 +2144,19 @@ accomplish the above with just a simple</p>
 </div>
 <div class="paragraph">
 <p>This command will fetch changes from the remote branches to your
-remote-tracking branches <code>origin/*</code>, and merge the default branch into
+remote-tracking branches <span class='synopsis'><code>origin/*</code></span>, and merge the default branch into
 the current branch.</p>
 </div>
 <div class="paragraph">
 <p>More generally, a branch that is created from a remote-tracking branch
 will pull
 by default from that branch.  See the descriptions of the
-<code>branch.&lt;name&gt;.remote</code> and <code>branch.&lt;name&gt;.merge</code> options in
-<a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>, and the discussion of the <code>--track</code> option in
+<span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.remote</code></span> and <span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.merge</code></span> options in
+<a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>, and the discussion of the <span class='synopsis'><code>--track</code></span> option in
 <a href='{{< relurl "docs/git-checkout" >}}'>git-checkout[1]</a>, to learn how to control these defaults.</p>
 </div>
 <div class="paragraph">
-<p>In addition to saving you keystrokes, <code>git pull</code> also helps you by
+<p>In addition to saving you keystrokes, <span class='synopsis'><code>git</code> <code>pull</code></span> also helps you by
 producing a default commit message documenting the branch and
 repository that you pulled from.</p>
 </div>
@@ -2163,7 +2166,7 @@ repository that you pulled from.</p>
 updated to point to the latest commit from the upstream branch.)</p>
 </div>
 <div class="paragraph">
-<p>The <code>git pull</code> command can also be given <code>.</code> as the "remote" repository,
+<p>The <span class='synopsis'><code>git</code> <code>pull</code></span> command can also be given <span class='synopsis'><code>.</code></span> as the "remote" repository,
 in which case it just merges in a branch from the current repository; so
 the commands</p>
 </div>
@@ -2195,14 +2198,14 @@ just be to send them as patches in email:</p>
 </div>
 <div class="paragraph">
 <p>will produce a numbered series of files in the current directory, one
-for each patch in the current branch but not in <code>origin/HEAD</code>.</p>
+for each patch in the current branch but not in <span class='synopsis'><code>origin/HEAD</code></span>.</p>
 </div>
 <div class="paragraph">
-<p><code>git format-patch</code> can include an initial "cover letter". You can insert
+<p><span class='synopsis'><code>git</code> <code>format-patch</code></span> can include an initial "cover letter". You can insert
 commentary on individual patches after the three dash line which
-<code>format-patch</code> places after the commit message but before the patch
-itself.  If you use <code>git notes</code> to track your cover letter material,
-<code>git format-patch --notes</code> will include the commit&#8217;s notes in a similar
+<span class='synopsis'><code>format-patch</code></span> places after the commit message but before the patch
+itself.  If you use <span class='synopsis'><code>git</code> <code>notes</code></span> to track your cover letter material,
+<span class='synopsis'><code>git</code> <code>format-patch</code> <code>--notes</code></span> will include the commit&#8217;s notes in a similar
 manner.</p>
 </div>
 <div class="paragraph">
@@ -2221,7 +2224,7 @@ their requirements for submitting patches.</p>
 <p>Git also provides a tool called <a href='{{< relurl "docs/git-am" >}}'>git-am[1]</a> (am stands for
 "apply mailbox"), for importing such an emailed series of patches.
 Just save all of the patch-containing messages, in order, into a
-single mailbox file, say <code>patches.mbox</code>, then run</p>
+single mailbox file, say <span class='synopsis'><code>patches.mbox</code></span>, then run</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2231,7 +2234,7 @@ single mailbox file, say <code>patches.mbox</code>, then run</p>
 <div class="paragraph">
 <p>Git will apply each patch in order; if any conflicts are found, it
 will stop, and you can fix the conflicts as described in
-"<a href="#resolving-a-merge">Resolving a merge</a>".  (The <code>-3</code> option tells
+"<a href="#resolving-a-merge">Resolving a merge</a>".  (The <span class='synopsis'><code>-3</code></span> option tells
 Git to perform a merge; if you would prefer it just to abort and
 leave your tree and index untouched, you may omit that option.)</p>
 </div>
@@ -2261,7 +2264,7 @@ taken from the message containing each patch.</p>
 <div class="paragraph">
 <p>Another way to submit changes to a project is to tell the maintainer
 of that project to pull the changes from your repository using
-<a href='{{< relurl "docs/git-pull" >}}'>git-pull[1]</a>.  In the section "<a href="#getting-updates-With-git-pull">Getting updates with <code>git pull</code></a>" we described this as a way to get
+<a href='{{< relurl "docs/git-pull" >}}'>git-pull[1]</a>.  In the section "<a href="#getting-updates-With-git-pull">Getting updates with <span class='synopsis'><code>git</code> <code>pull</code></span></a>" we described this as a way to get
 updates from the "main" repository, but it works just as well in the
 other direction.</p>
 </div>
@@ -2322,8 +2325,8 @@ like this:</p>
 <div class="sect2">
 <h3 id="setting-up-a-public-repository"><a class="anchor" href="#setting-up-a-public-repository"></a>Setting up a public repository</h3>
 <div class="paragraph">
-<p>Assume your personal repository is in the directory <code>~/proj</code>.  We
-first create a new clone of the repository and tell <code>git daemon</code> that it
+<p>Assume your personal repository is in the directory <span class='synopsis'><code>~/proj</code></span>.  We
+first create a new clone of the repository and tell <span class='synopsis'><code>git</code> <code>daemon</code></span> that it
 is meant to be public:</p>
 </div>
 <div class="listingblock">
@@ -2334,11 +2337,11 @@ $ touch proj.git/git-daemon-export-ok</pre>
 </div>
 <div class="paragraph">
 <p>The resulting directory proj.git contains a "bare" git repository&#8212;&#8203;it is
-just the contents of the <code>.git</code> directory, without any files checked out
+just the contents of the <span class='synopsis'><code>.git</code></span> directory, without any files checked out
 around it.</p>
 </div>
 <div class="paragraph">
-<p>Next, copy <code>proj.git</code> to the server where you plan to host the
+<p>Next, copy <span class='synopsis'><code>proj.git</code></span> to the server where you plan to host the
 public repository.  You can use scp, rsync, or whatever is most
 convenient.</p>
 </div>
@@ -2350,7 +2353,7 @@ convenient.</p>
 </div>
 <div class="paragraph">
 <p>If someone else administers the server, they should tell you what
-directory to put the repository in, and what <code>git://</code> URL it will
+directory to put the repository in, and what <span class='synopsis'><code>git://</code></span> URL it will
 appear at.  You can then skip to the section
 "<a href="#pushing-changes-to-a-public-repository">Pushing changes to a public
 repository</a>", below.</p>
@@ -2359,11 +2362,11 @@ repository</a>", below.</p>
 <p>Otherwise, all you need to do is start <a href='{{< relurl "docs/git-daemon" >}}'>git-daemon[1]</a>; it will
 listen on port 9418.  By default, it will allow access to any directory
 that looks like a Git directory and contains the magic file
-git-daemon-export-ok.  Passing some directory paths as <code>git daemon</code>
+git-daemon-export-ok.  Passing some directory paths as <span class='synopsis'><code>git</code> <code>daemon</code></span>
 arguments will further restrict the exports to those paths.</p>
 </div>
 <div class="paragraph">
-<p>You can also run <code>git daemon</code> as an inetd service; see the
+<p>You can also run <span class='synopsis'><code>git</code> <code>daemon</code></span> as an inetd service; see the
 <a href='{{< relurl "docs/git-daemon" >}}'>git-daemon[1]</a> man page for details.  (See especially the
 examples section.)</p>
 </div>
@@ -2392,7 +2395,7 @@ $ mv hooks/post-update.sample hooks/post-update</pre>
 <a href='{{< relurl "docs/git-update-server-info" >}}'>git-update-server-info[1]</a> and <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a>.)</p>
 </div>
 <div class="paragraph">
-<p>Advertise the URL of <code>proj.git</code>.  Anybody else should then be able to
+<p>Advertise the URL of <span class='synopsis'><code>proj.git</code></span>.  Anybody else should then be able to
 clone or pull from that URL, for example with a command line like:</p>
 </div>
 <div class="listingblock">
@@ -2418,8 +2421,8 @@ latest changes created in your private repository.</p>
 </div>
 <div class="paragraph">
 <p>The simplest way to do this is using <a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a> and ssh; to
-update the remote branch named <code>master</code> with the latest state of your
-branch named <code>master</code>, run</p>
+update the remote branch named <span class='synopsis'><code>master</code></span> with the latest state of your
+branch named <span class='synopsis'><code>master</code></span>, run</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2435,12 +2438,12 @@ branch named <code>master</code>, run</p>
 </div>
 </div>
 <div class="paragraph">
-<p>As with <code>git fetch</code>, <code>git push</code> will complain if this does not result in a
+<p>As with <span class='synopsis'><code>git</code> <code>fetch</code></span>, <span class='synopsis'><code>git</code> <code>push</code></span> will complain if this does not result in a
 <a href="#fast-forwards">fast-forward</a>; see the following section for details on
 handling this case.</p>
 </div>
 <div class="paragraph">
-<p>Note that the target of a <code>push</code> is normally a
+<p>Note that the target of a <span class='synopsis'><code>push</code></span> is normally a
 <a href="#def_bare_repository">bare</a> repository.  You can also push to a
 repository that has a checked-out working tree, but a push to update the
 currently checked-out branch is denied by default to prevent confusion.
@@ -2448,7 +2451,7 @@ See the description of the receive.denyCurrentBranch option
 in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> for details.</p>
 </div>
 <div class="paragraph">
-<p>As with <code>git fetch</code>, you may also set up configuration options to
+<p>As with <span class='synopsis'><code>git</code> <code>fetch</code></span>, you may also set up configuration options to
 save typing; so, for example:</p>
 </div>
 <div class="listingblock">
@@ -2457,7 +2460,7 @@ save typing; so, for example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>adds the following to <code>.git/config</code>:</p>
+<p>adds the following to <span class='synopsis'><code>.git/config</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2475,8 +2478,8 @@ save typing; so, for example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>See the explanations of the <code>remote.&lt;name&gt;.url</code>,
-<code>branch.&lt;name&gt;.remote</code>, and <code>remote.&lt;name&gt;.push</code> options in
+<p>See the explanations of the <span class='synopsis'><code>remote.</code><em>&lt;name&gt;</em><code>.url</code></span>,
+<span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.remote</code></span>, and <span class='synopsis'><code>remote.</code><em>&lt;name&gt;</em><code>.push</code></span> options in
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> for details.</p>
 </div>
 </div>
@@ -2500,20 +2503,20 @@ error: failed to push to 'ssh://yourserver.com/~you/proj.git'</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>use <code>git reset --hard</code> to remove already-published commits, or</p>
+<p>use <span class='synopsis'><code>git</code> <code>reset</code> <code>--hard</code></span> to remove already-published commits, or</p>
 </li>
 <li>
-<p>use <code>git commit --amend</code> to replace already-published commits
+<p>use <span class='synopsis'><code>git</code> <code>commit</code> <code>--amend</code></span> to replace already-published commits
 (as in <a href="#fixing-a-mistake-by-rewriting-history">[fixing-a-mistake-by-rewriting-history]</a>), or</p>
 </li>
 <li>
-<p>use <code>git rebase</code> to rebase any already-published commits (as
+<p>use <span class='synopsis'><code>git</code> <code>rebase</code></span> to rebase any already-published commits (as
 in <a href="#using-git-rebase">Keeping a patch series up to date using git rebase</a>).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>You may force <code>git push</code> to perform the update anyway by preceding the
+<p>You may force <span class='synopsis'><code>git</code> <code>push</code></span> to perform the update anyway by preceding the
 branch name with a plus sign:</p>
 </div>
 <div class="listingblock">
@@ -2522,8 +2525,8 @@ branch name with a plus sign:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note the addition of the <code>+</code> sign.  Alternatively, you can use the
-<code>-f</code> flag to force the remote update, as in:</p>
+<p>Note the addition of the <span class='synopsis'><code>+</code></span> sign.  Alternatively, you can use the
+<span class='synopsis'><code>-f</code></span> flag to force the remote update, as in:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2572,7 +2575,7 @@ advantages over the central shared repository:</p>
 <li>
 <p>Git&#8217;s ability to quickly import and merge patches allows a
 single maintainer to process incoming changes even at very
-high rates.  And when that becomes too much, <code>git pull</code> provides
+high rates.  And when that becomes too much, <span class='synopsis'><code>git</code> <code>pull</code></span> provides
 an easy way for that maintainer to delegate this job to other
 maintainers while still allowing optional review of incoming
 changes.</p>
@@ -2653,7 +2656,7 @@ public trees using <a href='{{< relurl "docs/git-remote" >}}'>git-remote[1]</a> 
 <div class="paragraph">
 <p>Now create the branches in which you are going to work; these start out
 at the current tip of origin/master branch, and should be set up (using
-the <code>--track</code> option to <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a>) to merge changes in from
+the <span class='synopsis'><code>--track</code></span> option to <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a>) to merge changes in from
 Linus by default.</p>
 </div>
 <div class="listingblock">
@@ -2676,7 +2679,7 @@ $ git checkout release &amp;&amp; git pull</pre>
 this merge will create a commit object in the history (with no local
 changes Git will simply do a "fast-forward" merge).  Many people dislike
 the "noise" that this creates in the Linux history, so you should avoid
-doing this capriciously in the <code>release</code> branch, as these noisy commits
+doing this capriciously in the <span class='synopsis'><code>release</code></span> branch, as these noisy commits
 will become part of the permanent history when you ask Linus to pull
 from the release branch.</p>
 </div>
@@ -2727,7 +2730,7 @@ patches), and create a new branch from a recent stable tag of
 Linus&#8217;s branch. Picking a stable base for your branch will:
 1) help you: by avoiding inclusion of unrelated and perhaps lightly
 tested changes
-2) help future bug hunters that use <code>git bisect</code> to find problems</p>
+2) help future bug hunters that use <span class='synopsis'><code>git</code> <code>bisect</code></span> to find problems</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2759,9 +2762,9 @@ spent a while on this step and had also pulled new versions from upstream.</p>
 </div>
 <div class="paragraph">
 <p>Sometime later when enough time has passed and testing done, you can pull the
-same branch into the <code>release</code> tree ready to go upstream.  This is where you
+same branch into the <span class='synopsis'><code>release</code></span> tree ready to go upstream.  This is where you
 see the value of keeping each patch (or patch series) in its own branch.  It
-means that the patches can be moved into the <code>release</code> tree in any order.</p>
+means that the patches can be moved into the <span class='synopsis'><code>release</code></span> tree in any order.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2803,7 +2806,7 @@ If it has been merged, then there will be no output.)</p>
 <div class="paragraph">
 <p>Once a patch completes the great cycle (moving from test to release,
 then pulled by Linus, and finally coming back into your local
-<code>origin/master</code> branch), the branch for this change is no longer needed.
+<span class='synopsis'><code>origin/master</code></span> branch), the branch for this change is no longer needed.
 You detect this when the output from:</p>
 </div>
 <div class="listingblock">
@@ -2822,11 +2825,11 @@ You detect this when the output from:</p>
 <div class="paragraph">
 <p>Some changes are so trivial that it is not necessary to create a separate
 branch and then merge into each of the test and release branches.  For
-these changes, just apply directly to the <code>release</code> branch, and then
-merge that into the <code>test</code> branch.</p>
+these changes, just apply directly to the <span class='synopsis'><code>release</code></span> branch, and then
+merge that into the <span class='synopsis'><code>test</code></span> branch.</p>
 </div>
 <div class="paragraph">
-<p>After pushing your work to <code>mytree</code>, you can use
+<p>After pushing your work to <span class='synopsis'><code>mytree</code></span>, you can use
 <a href='{{< relurl "docs/git-request-pull" >}}'>git-request-pull[1]</a> to prepare a "please pull" request message
 to send to Linus:</p>
 </div>
@@ -3019,8 +3022,8 @@ you are rewriting history.</p>
 <h2 id="using-git-rebase"><a class="anchor" href="#using-git-rebase"></a>Keeping a patch series up to date using git rebase</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Suppose that you create a branch <code>mywork</code> on a remote-tracking branch
-<code>origin</code>, and create some commits on top of it:</p>
+<p>Suppose that you create a branch <span class='synopsis'><code>mywork</code></span> on a remote-tracking branch
+<span class='synopsis'><code>origin</code></span>, and create some commits on top of it:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3034,7 +3037,7 @@ $ git commit
 </div>
 <div class="paragraph">
 <p>You have performed no merges into mywork, so it is just a simple linear
-sequence of patches on top of <code>origin</code>:</p>
+sequence of patches on top of <span class='synopsis'><code>origin</code></span>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -3045,7 +3048,7 @@ sequence of patches on top of <code>origin</code>:</p>
 </div>
 <div class="paragraph">
 <p>Some more interesting work has been done in the upstream project, and
-<code>origin</code> has advanced:</p>
+<span class='synopsis'><code>origin</code></span> has advanced:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -3055,7 +3058,7 @@ sequence of patches on top of <code>origin</code>:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>At this point, you could use <code>pull</code> to merge your changes back in;
+<p>At this point, you could use <span class='synopsis'><code>pull</code></span> to merge your changes back in;
 the result would create a new merge commit, like this:</p>
 </div>
 <div class="literalblock">
@@ -3078,7 +3081,7 @@ $ git rebase origin</pre>
 </div>
 <div class="paragraph">
 <p>This will remove each of your commits from mywork, temporarily saving
-them as patches (in a directory named <code>.git/rebase-apply</code>), update mywork to
+them as patches (in a directory named <span class='synopsis'><code>.git/rebase-apply</code></span>), update mywork to
 point at the latest version of origin, then apply each of the saved
 patches to the new mywork.  The result will look like:</p>
 </div>
@@ -3091,9 +3094,9 @@ patches to the new mywork.  The result will look like:</p>
 </div>
 <div class="paragraph">
 <p>In the process, it may discover conflicts.  In that case it will stop
-and allow you to fix the conflicts; after fixing conflicts, use <code>git add</code>
+and allow you to fix the conflicts; after fixing conflicts, use <span class='synopsis'><code>git</code> <code>add</code></span>
 to update the index with those contents, and then, instead of
-running <code>git commit</code>, just run</p>
+running <span class='synopsis'><code>git</code> <code>commit</code></span>, just run</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3104,7 +3107,7 @@ running <code>git commit</code>, just run</p>
 <p>and Git will continue applying the rest of the patches.</p>
 </div>
 <div class="paragraph">
-<p>At any point you may use the <code>--abort</code> option to abort this process and
+<p>At any point you may use the <span class='synopsis'><code>--abort</code></span> option to abort this process and
 return mywork to the state it had before you started the rebase:</p>
 </div>
 <div class="listingblock">
@@ -3114,7 +3117,7 @@ return mywork to the state it had before you started the rebase:</p>
 </div>
 <div class="paragraph">
 <p>If you need to reorder or edit a number of commits in a branch, it may
-be easier to use <code>git rebase -i</code>, which allows you to reorder and
+be easier to use <span class='synopsis'><code>git</code> <code>rebase</code> <code>-i</code></span>, which allows you to reorder and
 squash commits, as well as marking them for individual editing during
 the rebase.  See <a href="#interactive-rebase">Using interactive rebases</a> for details, and
 <a href="#reordering-patch-series">Reordering or selecting from a patch series</a> for alternatives.</p>
@@ -3141,7 +3144,7 @@ the patch contents of a poorly staged commit.</p>
 </div>
 <div class="paragraph">
 <p>If you need to amend commits from deeper in your history, you can
-use <a href="#interactive-rebase">interactive rebase&#8217;s <code>edit</code> instruction</a>.</p>
+use <a href="#interactive-rebase">interactive rebase&#8217;s <span class='synopsis'><code>edit</code></span> instruction</a>.</p>
 </div>
 </div>
 </div>
@@ -3150,7 +3153,7 @@ use <a href="#interactive-rebase">interactive rebase&#8217;s <code>edit</code> i
 <div class="sectionbody">
 <div class="paragraph">
 <p>Sometimes you want to edit a commit deeper in your history.  One
-approach is to use <code>git format-patch</code> to create a series of patches
+approach is to use <span class='synopsis'><code>git</code> <code>format-patch</code></span> to create a series of patches
 and then reset the state to before the patches:</p>
 </div>
 <div class="listingblock">
@@ -3176,7 +3179,7 @@ them again with <a href='{{< relurl "docs/git-am" >}}'>git-am[1]</a>:</p>
 <div class="paragraph">
 <p>You can also edit a patch series with an interactive rebase.  This is
 the same as <a href="#reordering-patch-series">reordering a patch series using
-<code>format-patch</code></a>, so use whichever interface you like best.</p>
+<span class='synopsis'><code>format-patch</code></span></a>, so use whichever interface you like best.</p>
 </div>
 <div class="paragraph">
 <p>Rebase your current HEAD on the last commit you want to retain as-is.
@@ -3223,12 +3226,13 @@ are satisfied, save the list and close your editor, and the rebase
 will begin.</p>
 </div>
 <div class="paragraph">
-<p>The rebase will stop where <code>pick</code> has been replaced with <code>edit</code> or
+<p>The rebase will stop where <span class='synopsis'><code>pick</code></span> has been replaced with <span class='synopsis'><code>edit</code></span> or
 when a step in the list fails to mechanically resolve conflicts and
 needs your help.  When you are done editing and/or resolving conflicts
-you can continue with <code>git rebase --continue</code>.  If you decide that
-things are getting too hairy, you can always bail out with <code>git rebase
---abort</code>.  Even after the rebase is complete, you can still recover
+you can continue with <span class='synopsis'><code>git</code> <code>rebase</code> <code>--continue</code></span>.  If you decide that
+things are getting too hairy, you can always bail out with <span class='synopsis'><code>git</code> <code>rebase</code>
+
+<code>--abort</code></span>.  Even after the rebase is complete, you can still recover
 the original branch by using the <a href="#reflogs">reflog</a>.</p>
 </div>
 <div class="paragraph">
@@ -3353,7 +3357,7 @@ you know is that D is bad, that Z is good, and that
 figure out that the problem is due to this change in semantics?</p>
 </div>
 <div class="paragraph">
-<p>When the result of a <code>git bisect</code> is a non-merge commit, you should
+<p>When the result of a <span class='synopsis'><code>git</code> <code>bisect</code></span> is a non-merge commit, you should
 normally be able to discover the problem by examining just that commit.
 Developers can make this easy by breaking their changes into small
 self-contained commits.  That won&#8217;t help in the case above, however,
@@ -3400,10 +3404,10 @@ arbitrary name:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The first argument, <code>origin</code>, just tells Git to fetch from the
+<p>The first argument, <span class='synopsis'><code>origin</code></span>, just tells Git to fetch from the
 repository you originally cloned from.  The second argument tells Git
-to fetch the branch named <code>todo</code> from the remote repository, and to
-store it locally under the name <code>refs/heads/my-todo-work</code>.</p>
+to fetch the branch named <span class='synopsis'><code>todo</code></span> from the remote repository, and to
+store it locally under the name <span class='synopsis'><code>refs/heads/my-todo-work</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>You can also fetch branches from other repositories; so</p>
@@ -3414,8 +3418,8 @@ store it locally under the name <code>refs/heads/my-todo-work</code>.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>will create a new branch named <code>example-master</code> and store in it the
-branch named <code>master</code> from the repository at the given URL.  If you
+<p>will create a new branch named <span class='synopsis'><code>example-master</code></span> and store in it the
+branch named <span class='synopsis'><code>master</code></span> from the repository at the given URL.  If you
 already have a branch named example-master, it will attempt to
 <a href="#fast-forwards">fast-forward</a> to the commit given by example.com&#8217;s
 master branch.  In more detail:</p>
@@ -3426,7 +3430,7 @@ master branch.  In more detail:</p>
 <h2 id="fetch-fast-forwards"><a class="anchor" href="#fetch-fast-forwards"></a>git fetch and fast-forwards</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the previous example, when updating an existing branch, <code>git fetch</code>
+<p>In the previous example, when updating an existing branch, <span class='synopsis'><code>git</code> <code>fetch</code></span>
 checks to make sure that the most recent commit on the remote
 branch is a descendant of the most recent commit on your copy of the
 branch before updating your copy of the branch to point at the new
@@ -3456,12 +3460,12 @@ resulting in a situation like:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In this case, <code>git fetch</code> will fail, and print out a warning.</p>
+<p>In this case, <span class='synopsis'><code>git</code> <code>fetch</code></span> will fail, and print out a warning.</p>
 </div>
 <div class="paragraph">
 <p>In that case, you can still force Git to update to the new head, as
 described in the following section.  However, note that in the
-situation above this may mean losing the commits labeled <code>a</code> and <code>b</code>,
+situation above this may mean losing the commits labeled <span class='synopsis'><code>a</code></span> and <span class='synopsis'><code>b</code></span>,
 unless you&#8217;ve already created a reference of your own pointing to
 them.</p>
 </div>
@@ -3480,7 +3484,7 @@ descendant of the old head, you may force the update with:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note the addition of the <code>+</code> sign.  Alternatively, you can use the <code>-f</code>
+<p>Note the addition of the <span class='synopsis'><code>+</code></span> sign.  Alternatively, you can use the <span class='synopsis'><code>-f</code></span>
 flag to force updates of all the fetched branches, as in:</p>
 </div>
 <div class="listingblock">
@@ -3498,7 +3502,7 @@ may be lost, as we saw in the previous section.</p>
 <h2 id="remote-branch-configuration"><a class="anchor" href="#remote-branch-configuration"></a>Configuring remote-tracking branches</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We saw above that <code>origin</code> is just a shortcut to refer to the
+<p>We saw above that <span class='synopsis'><code>origin</code></span> is just a shortcut to refer to the
 repository that you originally cloned from.  This information is
 stored in Git configuration variables, which you can see using
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>:</p>
@@ -3525,7 +3529,7 @@ create similar configuration options to save typing; for example,</p>
 </div>
 </div>
 <div class="paragraph">
-<p>adds the following to <code>.git/config</code>:</p>
+<p>adds the following to <span class='synopsis'><code>.git/config</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3536,7 +3540,7 @@ create similar configuration options to save typing; for example,</p>
 </div>
 <div class="paragraph">
 <p>Also note that the above configuration can be performed by directly
-editing the file <code>.git/config</code> instead of using <a href='{{< relurl "docs/git-remote" >}}'>git-remote[1]</a>.</p>
+editing the file <span class='synopsis'><code>.git/config</code></span> instead of using <a href='{{< relurl "docs/git-remote" >}}'>git-remote[1]</a>.</p>
 </div>
 <div class="paragraph">
 <p>After configuring the remote, the following three commands will do the
@@ -3641,7 +3645,7 @@ signature.</p>
 <h3 id="commit-object"><a class="anchor" href="#commit-object"></a>Commit Object</h3>
 <div class="paragraph">
 <p>The "commit" object links a physical state of a tree with a description
-of how we got there and why.  Use the <code>--pretty=raw</code> option to
+of how we got there and why.  Use the <span class='synopsis'><code>--pretty=raw</code></span> option to
 <a href='{{< relurl "docs/git-show" >}}'>git-show[1]</a> or <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> to examine your favorite
 commit:</p>
 </div>
@@ -3699,7 +3703,7 @@ of the tree referred to by this commit with the trees associated with
 its parents.  In particular, Git does not attempt to record file renames
 explicitly, though it can identify cases where the existence of the same
 file data at changing paths suggests a rename.  (See, for example, the
-<code>-M</code> option to <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>).</p>
+<span class='synopsis'><code>-M</code></span> option to <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>).</p>
 </div>
 <div class="paragraph">
 <p>A commit is usually created by <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a>, which creates a
@@ -3756,7 +3760,7 @@ attention to the executable bit.</p>
 <h3 id="blob-object"><a class="anchor" href="#blob-object"></a>Blob Object</h3>
 <div class="paragraph">
 <p>You can use <a href='{{< relurl "docs/git-show" >}}'>git-show[1]</a> to examine the contents of a blob; take,
-for example, the blob in the entry for <code>COPYING</code> from the tree above:</p>
+for example, the blob in the entry for <span class='synopsis'><code>COPYING</code></span> from the tree above:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3849,14 +3853,14 @@ nLE/L9aUXdWeTFPron96DLA=
 <p>See the <a href='{{< relurl "docs/git-tag" >}}'>git-tag[1]</a> command to learn how to create and verify tag
 objects.  (Note that <a href='{{< relurl "docs/git-tag" >}}'>git-tag[1]</a> can also be used to create
 "lightweight tags", which are not tag objects at all, but just simple
-references whose names begin with <code>refs/tags/</code>).</p>
+references whose names begin with <span class='synopsis'><code>refs/tags/</code></span>).</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="pack-files"><a class="anchor" href="#pack-files"></a>How Git stores objects efficiently: pack files</h3>
 <div class="paragraph">
 <p>Newly created objects are initially created in a file named after the
-object&#8217;s SHA-1 hash (stored in <code>.git/objects</code>).</p>
+object&#8217;s SHA-1 hash (stored in <span class='synopsis'><code>.git/objects</code></span>).</p>
 </div>
 <div class="paragraph">
 <p>Unfortunately this system becomes inefficient once a project has a
@@ -3904,9 +3908,9 @@ containing all currently unpacked objects.  You can then run</p>
 <div class="paragraph">
 <p>to remove any of the "loose" objects that are now contained in the
 pack.  This will also remove any unreferenced objects (which may be
-created when, for example, you use <code>git reset</code> to remove a commit).
+created when, for example, you use <span class='synopsis'><code>git</code> <code>reset</code></span> to remove a commit).
 You can verify that the loose objects are gone by looking at the
-<code>.git/objects</code> directory or by running</p>
+<span class='synopsis'><code>.git/objects</code></span> directory or by running</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -3938,7 +3942,7 @@ pointer itself just doesn&#8217;t, since you replaced it with another one.</p>
 </div>
 <div class="paragraph">
 <p>There are also other situations that cause dangling objects. For
-example, a "dangling blob" may arise because you did a <code>git add</code> of a
+example, a "dangling blob" may arise because you did a <span class='synopsis'><code>git</code> <code>add</code></span> of a
 file, but then, before you actually committed it and made it part of the
 bigger picture, you changed something else in that file and committed
 that <strong>updated</strong> thing&#8212;&#8203;the old state that you added originally ends up
@@ -3990,7 +3994,7 @@ them.  You can just do</p>
 </div>
 <div class="paragraph">
 <p>to show what the contents of the blob were (or, for a tree, basically
-what the <code>ls</code> for that directory was), and that may give you some idea
+what the <span class='synopsis'><code>ls</code></span> for that directory was), and that may give you some idea
 of what the operation was that left that dangling object.</p>
 </div>
 <div class="paragraph">
@@ -3998,7 +4002,7 @@ of what the operation was that left that dangling object.</p>
 almost always the result of either being a half-way mergebase (the blob
 will often even have the conflict markers from a merge in it, if you
 have had conflicting merges that you fixed up by hand), or simply
-because you interrupted a <code>git fetch</code> with ^C or something like that,
+because you interrupted a <span class='synopsis'><code>git</code> <code>fetch</code></span> with ^C or something like that,
 leaving <em>some</em> of the new objects in the object database, but just
 dangling and useless.</p>
 </div>
@@ -4012,10 +4016,10 @@ state, you can just prune all unreachable objects:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>and they&#8217;ll be gone. (You should only run <code>git prune</code> on a quiescent
+<p>and they&#8217;ll be gone. (You should only run <span class='synopsis'><code>git</code> <code>prune</code></span> on a quiescent
 repository&#8212;&#8203;it&#8217;s kind of like doing a filesystem fsck recovery: you
 don&#8217;t want to do that while the filesystem is mounted.
-<code>git prune</code> is designed not to cause any harm in such cases of concurrent
+<span class='synopsis'><code>git</code> <code>prune</code></span> is designed not to cause any harm in such cases of concurrent
 accesses to a repository but you might receive confusing or scary messages.)</p>
 </div>
 </div>
@@ -4060,7 +4064,7 @@ missing blob 4b9458b3786228369c63936db65827de3cc06200</pre>
 <p>Now you know that blob 4b9458b3 is missing, and that the tree 2d9263c6
 points to it.  If you could find just one copy of that missing blob
 object, possibly in some other repository, you could move it into
-<code>.git/objects/4b/9458b3...</code> and be done.  Suppose you can&#8217;t.  You can
+<span class='synopsis'><code>.git/objects/4b/9458b3...</code></span> and be done.  Suppose you can&#8217;t.  You can
 still examine the tree that pointed to it with <a href='{{< relurl "docs/git-ls-tree" >}}'>git-ls-tree[1]</a>,
 which might output something like:</p>
 </div>
@@ -4077,10 +4081,10 @@ which might output something like:</p>
 </div>
 <div class="paragraph">
 <p>So now you know that the missing blob was the data for a file named
-<code>myfile</code>.  And chances are you can also identify the directory&#8212;&#8203;let&#8217;s
-say it&#8217;s in <code>somedirectory</code>.  If you&#8217;re lucky the missing copy might be
+<span class='synopsis'><code>myfile</code></span>.  And chances are you can also identify the directory&#8212;&#8203;let&#8217;s
+say it&#8217;s in <span class='synopsis'><code>somedirectory</code></span>.  If you&#8217;re lucky the missing copy might be
 the same as the copy you have checked out in your working tree at
-<code>somedirectory/myfile</code>; you can test whether that&#8217;s right with
+<span class='synopsis'><code>somedirectory/myfile</code></span>; you can test whether that&#8217;s right with
 <a href='{{< relurl "docs/git-hash-object" >}}'>git-hash-object[1]</a>:</p>
 </div>
 <div class="listingblock">
@@ -4148,7 +4152,7 @@ shot at reconstructing the contents of the in-between state 4b9458b.</p>
 <p>and your repository is good again!</p>
 </div>
 <div class="paragraph">
-<p>(Btw, you could have ignored the <code>fsck</code>, and started with doing a</p>
+<p>(Btw, you could have ignored the <span class='synopsis'><code>fsck</code></span>, and started with doing a</p>
 </div>
 <div class="listingblock">
 <div class="content">

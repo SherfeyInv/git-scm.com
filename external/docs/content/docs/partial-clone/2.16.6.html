@@ -227,11 +227,11 @@ a time.</pre>
 </div>
 </li>
 <li>
-<p><code>checkout</code> (and any other command using <code>unpack-trees</code>) has been taught
+<p><span class='synopsis'><code>checkout</code></span> (and any other command using <span class='synopsis'><code>unpack-trees</code></span>) has been taught
 to bulk pre-fetch all required missing blobs in a single batch.</p>
 </li>
 <li>
-<p><code>rev-list</code> has been taught to print missing objects.</p>
+<p><span class='synopsis'><code>rev-list</code></span> has been taught to print missing objects.</p>
 <div class="literalblock">
 <div class="content">
 <pre>This can be used by other commands to bulk prefetch objects.
@@ -242,10 +242,10 @@ and prefetch those objects in bulk.</pre>
 </div>
 </li>
 <li>
-<p><code>fsck</code> has been updated to be fully aware of promisor objects.</p>
+<p><span class='synopsis'><code>fsck</code></span> has been updated to be fully aware of promisor objects.</p>
 </li>
 <li>
-<p><code>repack</code> in GC has been updated to not touch promisor packfiles at all,
+<p><span class='synopsis'><code>repack</code></span> in GC has been updated to not touch promisor packfiles at all,
 and to only repack other objects.</p>
 </li>
 <li>

@@ -35,10 +35,10 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p>a <code>.git</code> directory at the root of the working tree;</p>
+<p>a <span class='synopsis'><code>.git</code></span> directory at the root of the working tree;</p>
 </li>
 <li>
-<p>a <code>&lt;project&gt;.git</code> directory that is a <em>bare</em> repository
+<p>a <span class='synopsis'><em>&lt;project&gt;</em><code>.git</code></span> directory that is a <em>bare</em> repository
 (i.e. without its own working tree), that is typically used for
 exchanging histories with others by pushing into it and fetching
 from it.</p>
@@ -46,12 +46,12 @@ from it.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Note</strong>: Also you can have a plain text file <code>.git</code> at the root of
-your working tree, containing <code>gitdir: &lt;path&gt;</code> to point at the real
+<p><strong>Note</strong>: Also you can have a plain text file <span class='synopsis'><code>.git</code></span> at the root of
+your working tree, containing <span class='synopsis'><code>gitdir:</code> <em>&lt;path&gt;</em></span> to point at the real
 directory that has the repository.  This mechanism is often used for
 a working tree of a submodule checkout, to allow you in the
-containing superproject to <code>git checkout</code> a branch that does not
-have the submodule.  The <code>checkout</code> has to remove the entire
+containing superproject to <span class='synopsis'><code>git</code> <code>checkout</code></span> a branch that does not
+have the submodule.  The <span class='synopsis'><code>checkout</code></span> has to remove the entire
 submodule working tree, without losing the submodule repository.</p>
 </div>
 <div class="paragraph">
@@ -72,12 +72,12 @@ found in it), but there are a few ways to violate it.</p>
 by creating a shallow clone.  See <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>.</p>
 </li>
 <li>
-<p>You could be using the <code>objects/info/alternates</code> or
-<code>$GIT_ALTERNATE_OBJECT_DIRECTORIES</code> mechanisms to <em>borrow</em>
+<p>You could be using the <span class='synopsis'><code>objects/info/alternates</code></span> or
+<span class='synopsis'><code>$GIT_ALTERNATE_OBJECT_DIRECTORIES</code></span> mechanisms to <em>borrow</em>
 objects from other object stores.  A repository with this kind
 of incomplete object store is not suitable to be published for
 use with dumb transports but otherwise is OK as long as
-<code>objects/info/alternates</code> points at the object stores it
+<span class='synopsis'><code>objects/info/alternates</code></span> points at the object stores it
 borrows from.</p>
 </li>
 </ol>
@@ -88,7 +88,7 @@ borrows from.</p>
 <p>A newly created object is stored in its own file.
 The objects are splayed over 256 subdirectories using
 the first two characters of the sha1 object name to
-keep the number of directory entries in <code>objects</code>
+keep the number of directory entries in <span class='synopsis'><code>objects</code></span>
 itself to a manageable number. Objects found
 here are often called <em>unpacked</em> (or <em>loose</em>) objects.</p>
 </dd>
@@ -107,7 +107,7 @@ recorded in this directory.</p>
 <dd>
 <p>This file is to help dumb transports discover what packs
 are available in this object store.  Whenever a pack is
-added or removed, <code>git update-server-info</code> should be run
+added or removed, <span class='synopsis'><code>git</code> <code>update-server-info</code></span> should be run
 to keep this file up-to-date if the repository is
 published for dumb transports.  <em>git repack</em> does this
 by default.</p>
@@ -137,23 +137,23 @@ directory.  The <em>git prune</em> command knows to preserve
 objects reachable from refs found in this directory and
 its subdirectories.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsheadscodenamecode"><a id="Documentation/gitrepository-layout.txt-refsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsheadsname"></a>refs/heads/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsheadsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-refsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsheadsname"></a>refs/heads/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
-<p>records tip-of-the-tree commit objects of branch <code>name</code></p>
+<p>records tip-of-the-tree commit objects of branch <span class='synopsis'><code>name</code></span></p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refstagscodenamecode"><a id="Documentation/gitrepository-layout.txt-refstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refstagsname"></a>refs/tags/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refstagsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-refstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refstagsname"></a>refs/tags/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
 <p>records any object name (not necessarily a commit
 object, or a tag object that points at a commit object).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsremotescodenamecode"><a id="Documentation/gitrepository-layout.txt-refsremotesname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsremotesname"></a>refs/remotes/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsremotesspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-refsremotesname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsremotesname"></a>refs/remotes/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
 <p>records tip-of-the-tree commit objects of branches copied
 from a remote repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsreplacecodeltobj-sha1gtcode"><a id="Documentation/gitrepository-layout.txt-refsreplaceobj-sha1" class="anchor" href="#Documentation/gitrepository-layout.txt-refsreplaceobj-sha1"></a>refs/replace/<code>&lt;obj-sha1&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsreplacespanclasssynopsisemltobj-sha1gtemspan"><a id="Documentation/gitrepository-layout.txt-refsreplaceobj-sha1" class="anchor" href="#Documentation/gitrepository-layout.txt-refsreplaceobj-sha1"></a>refs/replace/<span class='synopsis'><em>&lt;obj-sha1&gt;</em></span> </dt>
 <dd>
-<p>records the SHA-1 of the object that replaces <code>&lt;obj-sha1&gt;</code>.
+<p>records the SHA-1 of the object that replaces <span class='synopsis'><em>&lt;obj-sha1&gt;</em></span>.
 This is similar to info/grafts and is internally used and
 maintained by <a href='{{< relurl "docs/git-replace" >}}'>git-replace[1]</a>. Such refs can be exchanged
 between repositories while grafts are not.</p>
@@ -166,7 +166,7 @@ and friends record in a more efficient way.  See
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-HEAD"><a class="anchor" href="#Documentation/gitrepository-layout.txt-HEAD"></a>HEAD </dt>
 <dd>
-<p>A symref (see glossary) to the <code>refs/heads/</code> namespace
+<p>A symref (see glossary) to the <span class='synopsis'><code>refs/heads/</code></span> namespace
 describing the currently active branch.  It does not mean
 much if the repository is not associated with any working tree
 (i.e. a <em>bare</em> repository), but a valid Git repository
@@ -187,7 +187,7 @@ for details.</p>
 <dd>
 <p>A slightly deprecated way to store shorthands to be used
 to specify a URL to <em>git fetch</em>, <em>git pull</em> and <em>git push</em>.
-A file can be stored as <code>branches/&lt;name&gt;</code> and then
+A file can be stored as <span class='synopsis'><code>branches/</code><em>&lt;name&gt;</em></span> and then
 <em>name</em> can be given to these commands in place of
 <em>repository</em> argument.  See the REMOTES section in
 <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a> for details.  This mechanism is legacy
@@ -198,7 +198,7 @@ and not likely to be found in modern repositories.</p>
 <p>Hooks are customization scripts used by various Git
 commands.  A handful of sample hooks are installed when
 <em>git init</em> is run, but all of them are disabled by
-default.  To enable, the <code>.sample</code> suffix has to be
+default.  To enable, the <span class='synopsis'><code>.sample</code></span> suffix has to be
 removed from the filename by renaming.
 Read <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a> for more details about
 each hook.</p>
@@ -220,7 +220,7 @@ available in this repository.  If the repository is
 published for dumb transports, this file should be
 regenerated by <em>git update-server-info</em> every time a tag
 or branch is created or modified.  This is normally done
-from the <code>hooks/update</code> hook, which is run by the
+from the <span class='synopsis'><code>hooks/update</code></span> hook, which is run by the
 <em>git-receive-pack</em> command when you <em>git push</em> into the
 repository.</p>
 </dd>
@@ -241,7 +241,7 @@ for a more flexible and robust system to do the same thing.</p>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-infoexclude"><a class="anchor" href="#Documentation/gitrepository-layout.txt-infoexclude"></a>info/exclude </dt>
 <dd>
 <p>This file, by convention among Porcelains, stores the
-exclude pattern list. <code>.gitignore</code> is the per-directory
+exclude pattern list. <span class='synopsis'><code>.gitignore</code></span> is the per-directory
 ignore file.  <em>git status</em>, <em>git add</em>, <em>git rm</em> and
 <em>git clean</em> look at it but the core Git commands do not look
 at it.  See also: <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a>.</p>
@@ -265,18 +265,18 @@ and not likely to be found in modern repositories.</p>
 directory.  See <a href='{{< relurl "docs/git-update-ref" >}}'>git-update-ref[1]</a>
 for more information.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefsheadscodenamecode"><a id="Documentation/gitrepository-layout.txt-logsrefsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefsheadsname"></a>logs/refs/heads/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefsheadsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-logsrefsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefsheadsname"></a>logs/refs/heads/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
-<p>Records all changes made to the branch tip named <code>name</code>.</p>
+<p>Records all changes made to the branch tip named <span class='synopsis'><code>name</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefstagscodenamecode"><a id="Documentation/gitrepository-layout.txt-logsrefstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefstagsname"></a>logs/refs/tags/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefstagsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-logsrefstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefstagsname"></a>logs/refs/tags/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
-<p>Records all changes made to the tag named <code>name</code>.</p>
+<p>Records all changes made to the tag named <span class='synopsis'><code>name</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-shallow"><a class="anchor" href="#Documentation/gitrepository-layout.txt-shallow"></a>shallow </dt>
 <dd>
-<p>This is similar to <code>info/grafts</code> but is internally used
-and maintained by shallow clone mechanism.  See <code>--depth</code>
+<p>This is similar to <span class='synopsis'><code>info/grafts</code></span> but is internally used
+and maintained by shallow clone mechanism.  See <span class='synopsis'><code>--depth</code></span>
 option to <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a> and <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-modules"><a class="anchor" href="#Documentation/gitrepository-layout.txt-modules"></a>modules </dt>

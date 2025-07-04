@@ -32,7 +32,7 @@ aliases:
 <div class="paragraph">
 <p>The gitweb CGI script for viewing Git repositories over the web uses a
 perl script fragment as its configuration file.  You can set variables
-using "<code>our $variable = value</code>"; text from a "#" character until the
+using "<span class='synopsis'><code>our</code> <code>$variable</code> <code>=</code> <code>value</code></span>"; text from a "#" character until the
 end of a line is ignored.  See <strong>perlsyn</strong>(1) for details.</p>
 </div>
 <div class="paragraph">
@@ -96,20 +96,20 @@ in the above sequence.</p>
 <p>Locations of the common system-wide configuration file, the fallback
 system-wide configuration file and the per-instance configuration file
 are defined at compile time using build-time Makefile configuration
-variables, respectively <code>GITWEB_CONFIG_COMMON</code>, <code>GITWEB_CONFIG_SYSTEM</code>
-and <code>GITWEB_CONFIG</code>.</p>
+variables, respectively <span class='synopsis'><code>GITWEB_CONFIG_COMMON</code></span>, <span class='synopsis'><code>GITWEB_CONFIG_SYSTEM</code></span>
+and <span class='synopsis'><code>GITWEB_CONFIG</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>You can also override locations of gitweb configuration files during
 runtime by setting the following environment variables:
-<code>GITWEB_CONFIG_COMMON</code>, <code>GITWEB_CONFIG_SYSTEM</code> and <code>GITWEB_CONFIG</code>
+<span class='synopsis'><code>GITWEB_CONFIG_COMMON</code></span>, <span class='synopsis'><code>GITWEB_CONFIG_SYSTEM</code></span> and <span class='synopsis'><code>GITWEB_CONFIG</code></span>
 to a non-empty value.</p>
 </div>
 <div class="paragraph">
 <p>The syntax of the configuration files is that of Perl, since these files are
 handled by sourcing them as fragments of Perl code (the language that
 gitweb itself is written in). Variables are typically set using the
-<code>our</code> qualifier (as in "<code>our $variable = &lt;value&gt;;</code>") to avoid syntax
+<span class='synopsis'><code>our</code></span> qualifier (as in "<span class='synopsis'><em>our $variable = &lt;value&gt;;</em></span>") to avoid syntax
 errors if a new version of gitweb no longer uses a variable and therefore
 stops declaring it.</p>
 </div>
@@ -136,7 +136,7 @@ It also handles errors in included file.</p>
 perfectly well for some installations.  Still, a configuration file is
 useful for customizing or tweaking the behavior of gitweb in many ways, and
 some optional features will not be present unless explicitly enabled using
-the configurable <code>%features</code> variable (see also "Configuring gitweb
+the configurable <span class='synopsis'><code>%features</code></span> variable (see also "Configuring gitweb
 features" section below).</p>
 </div>
 </div>
@@ -164,11 +164,11 @@ Git repositories, and how repositories are displayed and accessed.</p>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectroot"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectroot"></a>$projectroot </dt>
 <dd>
 <p>Absolute filesystem path which will be prepended to project path;
-the path to repository is <code>$projectroot/$project</code>.  Set to
-<code>$GITWEB_PROJECTROOT</code> during installation.  This variable has to be
+the path to repository is <span class='synopsis'><code>$projectroot/$project</code></span>.  Set to
+<span class='synopsis'><code>$GITWEB_PROJECTROOT</code></span> during installation.  This variable has to be
 set correctly for gitweb to find repositories.</p>
 <div class="paragraph">
-<p>For example, if <code>$projectroot</code> is set to "/srv/git" by putting the following
+<p>For example, if <span class='synopsis'><code>$projectroot</code></span> is set to "/srv/git" by putting the following
 in gitweb config file:</p>
 </div>
 <div class="listingblock">
@@ -210,18 +210,18 @@ having the following format</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The default value of this variable is determined by the <code>GITWEB_LIST</code>
+<p>The default value of this variable is determined by the <span class='synopsis'><code>GITWEB_LIST</code></span>
 makefile variable at installation time.  If this variable is empty, gitweb
-will fall back to scanning the <code>$projectroot</code> directory for repositories.</p>
+will fall back to scanning the <span class='synopsis'><code>$projectroot</code></span> directory for repositories.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectmaxdepth"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectmaxdepth"></a>$project_maxdepth </dt>
 <dd>
-<p>If <code>$projects_list</code> variable is unset, gitweb will recursively
-scan filesystem for Git repositories.  The <code>$project_maxdepth</code>
-is used to limit traversing depth, relative to <code>$projectroot</code>
+<p>If <span class='synopsis'><code>$projects_list</code></span> variable is unset, gitweb will recursively
+scan filesystem for Git repositories.  The <span class='synopsis'><code>$project_maxdepth</code></span>
+is used to limit traversing depth, relative to <span class='synopsis'><code>$projectroot</code></span>
 (starting point); it means that directories which are further
-from <code>$projectroot</code> than <code>$project_maxdepth</code> will be skipped.</p>
+from <span class='synopsis'><code>$projectroot</code></span> than <span class='synopsis'><code>$project_maxdepth</code></span> will be skipped.</p>
 <div class="paragraph">
 <p>It is purely performance optimization, originally intended for MacOS X,
 where recursive directory traversal is slow.  Gitweb follows symbolic
@@ -229,7 +229,7 @@ links, but it detects cycles, ignoring any duplicate files and directories.</p>
 </div>
 <div class="paragraph">
 <p>The default value of this variable is determined by the build-time
-configuration variable <code>GITWEB_PROJECT_MAXDEPTH</code>, which defaults to
+configuration variable <span class='synopsis'><code>GITWEB_PROJECT_MAXDEPTH</code></span>, which defaults to
 2007.</p>
 </div>
 </dd>
@@ -237,9 +237,9 @@ configuration variable <code>GITWEB_PROJECT_MAXDEPTH</code>, which defaults to
 <dd>
 <p>Show repository only if this file exists (in repository).  Only
 effective if this variable evaluates to true.  Can be set when
-building gitweb by setting <code>GITWEB_EXPORT_OK</code>.  This path is
-relative to <code>GIT_DIR</code>.  git-daemon[1] uses <em>git-daemon-export-ok</em>,
-unless started with <code>--export-all</code>.  By default this variable is
+building gitweb by setting <span class='synopsis'><code>GITWEB_EXPORT_OK</code></span>.  This path is
+relative to <span class='synopsis'><code>GIT_DIR</code></span>.  git-daemon[1] uses <em>git-daemon-export-ok</em>,
+unless started with <span class='synopsis'><code>--export-all</code></span>.  By default this variable is
 not set, which means that this feature is turned off.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-exportauthhook"><a class="anchor" href="#Documentation/gitweb.conf.txt-exportauthhook"></a>$export_auth_hook </dt>
@@ -256,7 +256,7 @@ $projects_list, and $projects_maxdepth.  Example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>though the above might be done by using <code>$export_ok</code> instead</p>
+<p>though the above might be done by using <span class='synopsis'><code>$export_ok</code></span> instead</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -274,11 +274,11 @@ subsection on <a href='{{< relurl "docs/gitweb" >}}'>gitweb[1]</a> manpage.</p>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-strictexport"><a class="anchor" href="#Documentation/gitweb.conf.txt-strictexport"></a>$strict_export </dt>
 <dd>
 <p>Only allow viewing of repositories also shown on the overview page.
-This for example makes <code>$gitweb_export_ok</code> file decide if repository is
-available and not only if it is shown.  If <code>$gitweb_list</code> points to
+This for example makes <span class='synopsis'><code>$gitweb_export_ok</code></span> file decide if repository is
+available and not only if it is shown.  If <span class='synopsis'><code>$gitweb_list</code></span> points to
 file with list of project, only those repositories listed would be
 available for gitweb.  Can be set during building gitweb via
-<code>GITWEB_STRICT_EXPORT</code>.  By default this variable is not set, which
+<span class='synopsis'><code>GITWEB_STRICT_EXPORT</code></span>.  By default this variable is not set, which
 means that you can directly access those repositories that are hidden
 from projects list page (e.g. the are not listed in the $projects_list
 file).</p>
@@ -296,8 +296,8 @@ The values of these variables are paths on the filesystem.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-GIT"><a class="anchor" href="#Documentation/gitweb.conf.txt-GIT"></a>$GIT </dt>
 <dd>
-<p>Core git executable to use.  By default set to <code>$GIT_BINDIR/git</code>, which
-in turn is by default set to <code>$(bindir)/git</code>.  If you use Git installed
+<p>Core git executable to use.  By default set to <span class='synopsis'><code>$GIT_BINDIR/git</code></span>, which
+in turn is by default set to <span class='synopsis'><code>$</code>(<code>bindir</code>)<code>/git</code></span>.  If you use Git installed
 from a binary package, you should usually set this to "/usr/bin/git".
 This can just be "git" if your web server has a sensible PATH; from
 security point of view it is better to use absolute path to git binary.
@@ -324,12 +324,12 @@ Note that <em>highlight</em> feature must be set for gitweb to actually
 use syntax highlighting.</p>
 <div class="paragraph">
 <p><strong>NOTE</strong>: if you want to add support for new file type (supported by
-"highlight" but not used by gitweb), you need to modify <code>%highlight_ext</code>
-or <code>%highlight_basename</code>, depending on whether you detect type of file
+"highlight" but not used by gitweb), you need to modify <span class='synopsis'><code>%highlight_ext</code></span>
+or <span class='synopsis'><code>%highlight_basename</code></span>, depending on whether you detect type of file
 based on extension (for example "sh") or on its basename (for example
 "Makefile").  The keys of these hashes are extension and basename,
 respectively, and value for given key is name of syntax to be passed via
-<code>--syntax &lt;syntax&gt;</code> to highlighter.</p>
+<span class='synopsis'><code>--syntax</code> <em>&lt;syntax&gt;</em></span> to highlighter.</p>
 </div>
 <div class="paragraph">
 <p>For example if repositories you are hosting use "phtml" extension for
@@ -352,7 +352,7 @@ $highlight_ext{'phtml'} = 'php';</pre>
 <p>The configuration variables described below configure some of gitweb links:
 their target and their look (text or image), and where to find page
 prerequisites (stylesheet, favicon, images, scripts).  Usually they are left
-at their default values, with the possible exception of <code>@stylesheets</code>
+at their default values, with the possible exception of <span class='synopsis'><code>@stylesheets</code></span>
 variable.</p>
 </div>
 <div class="dlist">
@@ -363,7 +363,7 @@ variable.</p>
 might specify more than one stylesheet, for example to use "gitweb.css"
 as base with site specific modifications in a separate stylesheet
 to make it easier to upgrade gitweb.  For example, you can add
-a <code>site</code> stylesheet by putting</p>
+a <span class='synopsis'><code>site</code></span> stylesheet by putting</p>
 <div class="listingblock">
 <div class="content">
 <pre>push @stylesheets, "gitweb-site.css";</pre>
@@ -375,14 +375,14 @@ relative to base URI of gitweb.</p>
 </div>
 <div class="paragraph">
 <p>This list should contain the URI of gitweb&#8217;s standard stylesheet.  The default
-URI of gitweb stylesheet can be set at build time using the <code>GITWEB_CSS</code>
+URI of gitweb stylesheet can be set at build time using the <span class='synopsis'><code>GITWEB_CSS</code></span>
 makefile variable.  Its default value is <em>static/gitweb.css</em>
-(or <em>static/gitweb.min.css</em> if the <code>CSSMIN</code> variable is defined,
+(or <em>static/gitweb.min.css</em> if the <span class='synopsis'><code>CSSMIN</code></span> variable is defined,
 i.e. if CSS minifier is used during build).</p>
 </div>
 <div class="paragraph">
-<p><strong>Note</strong>: there is also a legacy <code>$stylesheet</code> configuration variable, which was
-used by older gitweb.  If <code>$stylesheet</code> variable is defined, only CSS stylesheet
+<p><strong>Note</strong>: there is also a legacy <span class='synopsis'><code>$stylesheet</code></span> configuration variable, which was
+used by older gitweb.  If <span class='synopsis'><code>$stylesheet</code></span> variable is defined, only CSS stylesheet
 given by this variable is used by gitweb.</p>
 </div>
 </dd>
@@ -392,7 +392,7 @@ given by this variable is used by gitweb.</p>
 server, or to be more the generic URI of logo, 72x27 size).  This image
 is displayed in the top right corner of each gitweb page and used as
 a logo for the Atom feed.  Relative to the base URI of gitweb (as a path).
-Can be adjusted when building gitweb using <code>GITWEB_LOGO</code> variable
+Can be adjusted when building gitweb using <span class='synopsis'><code>GITWEB_LOGO</code></span> variable
 By default set to <em>static/git-logo.png</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-favicon"><a class="anchor" href="#Documentation/gitweb.conf.txt-favicon"></a>$favicon </dt>
@@ -402,7 +402,7 @@ server, or to be more the generic URI of favicon, which will be served
 as "image/png" type.  Web browsers that support favicons (website icons)
 may display them in the browser&#8217;s URL bar and next to the site name in
 bookmarks.  Relative to the base URI of gitweb.  Can be adjusted at
-build time using <code>GITWEB_FAVICON</code> variable.
+build time using <span class='synopsis'><code>GITWEB_FAVICON</code></span> variable.
 By default set to <em>static/git-favicon.png</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-javascript"><a class="anchor" href="#Documentation/gitweb.conf.txt-javascript"></a>$javascript </dt>
@@ -410,10 +410,10 @@ By default set to <em>static/git-favicon.png</em>.</p>
 <p>Points to the location where you put <em>gitweb.js</em> on your web server,
 or to be more generic the URI of JavaScript code used by gitweb.
 Relative to the base URI of gitweb.  Can be set at build time using
-the <code>GITWEB_JS</code> build-time configuration variable.</p>
+the <span class='synopsis'><code>GITWEB_JS</code></span> build-time configuration variable.</p>
 <div class="paragraph">
 <p>The default value is either <em>static/gitweb.js</em>, or <em>static/gitweb.min.js</em> if
-the <code>JSMIN</code> build variable was defined, i.e. if JavaScript minifier was used
+the <span class='synopsis'><code>JSMIN</code></span> build variable was defined, i.e. if JavaScript minifier was used
 at build time.  <strong>Note</strong> that this single file is generated from multiple
 individual JavaScript "modules".</p>
 </div>
@@ -422,16 +422,16 @@ individual JavaScript "modules".</p>
 <dd>
 <p>Target of the home link on the top of all pages (the first part of view
 "breadcrumbs").  By default it is set to the absolute URI of a current page
-(to the value of <code>$my_uri</code> variable, or to "/" if <code>$my_uri</code> is undefined
+(to the value of <span class='synopsis'><code>$my_uri</code></span> variable, or to "/" if <span class='synopsis'><code>$my_uri</code></span> is undefined
 or is an empty string).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-homelinkstr"><a class="anchor" href="#Documentation/gitweb.conf.txt-homelinkstr"></a>$home_link_str </dt>
 <dd>
-<p>Label for the "home link" at the top of all pages, leading to <code>$home_link</code>
+<p>Label for the "home link" at the top of all pages, leading to <span class='synopsis'><code>$home_link</code></span>
 (usually the main gitweb page, which contains the projects list).  It is
 used as the first component of gitweb&#8217;s "breadcrumb trail":
-<code>&lt;home link&gt; / &lt;project&gt; / &lt;action&gt;</code>.  Can be set at build time using
-the <code>GITWEB_HOME_LINK_STR</code> variable.  By default it is set to "projects",
+<span class='synopsis'><em>&lt;home link&gt; / &lt;project&gt; / &lt;action&gt;</em></span>.  Can be set at build time using
+the <span class='synopsis'><code>GITWEB_HOME_LINK_STR</code></span> variable.  By default it is set to "projects",
 as this link leads to the list of projects.  Another popular choice is to
 set it to the name of site.  Note that it is treated as raw HTML so it
 should not be set from untrusted sources.</p>
@@ -442,8 +442,8 @@ should not be set from untrusted sources.</p>
 the home link, to pages that are logically "above" the gitweb projects
 list, such as the organization and department which host the gitweb
 server. Each element of the list is a reference to an array, in which
-element 0 is the link text (equivalent to <code>$home_link_str</code>) and element
-1 is the target URL (equivalent to <code>$home_link</code>).</p>
+element 0 is the link text (equivalent to <span class='synopsis'><code>$home_link_str</code></span>) and element
+1 is the target URL (equivalent to <span class='synopsis'><code>$home_link</code></span>).</p>
 <div class="paragraph">
 <p>For example, the following setting produces a breadcrumb trail like
 "home / dev / projects / &#8230;&#8203;" where "projects" is the home link.</p>
@@ -486,32 +486,32 @@ pages, and add a description of this gitweb installation on its main page
 <dd>
 <p>Name of your site or organization, to appear in page titles.  Set it
 to something descriptive for clearer bookmarks etc.  If this variable
-is not set or is, then gitweb uses the value of the <code>SERVER_NAME</code>
+is not set or is, then gitweb uses the value of the <span class='synopsis'><code>SERVER_NAME</code></span>
 CGI environment variable, setting site name to "$SERVER_NAME Git",
 or "Untitled Git" if this variable is not set (e.g. if running gitweb
 as standalone script).</p>
 <div class="paragraph">
-<p>Can be set using the <code>GITWEB_SITENAME</code> at build time.  Unset by default.</p>
+<p>Can be set using the <span class='synopsis'><code>GITWEB_SITENAME</code></span> at build time.  Unset by default.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitehtmlheadstring"><a class="anchor" href="#Documentation/gitweb.conf.txt-sitehtmlheadstring"></a>$site_html_head_string </dt>
 <dd>
 <p>HTML snippet to be included in the &lt;head&gt; section of each page.
-Can be set using <code>GITWEB_SITE_HTML_HEAD_STRING</code> at build time.
+Can be set using <span class='synopsis'><code>GITWEB_SITE_HTML_HEAD_STRING</code></span> at build time.
 No default value.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-siteheader"><a class="anchor" href="#Documentation/gitweb.conf.txt-siteheader"></a>$site_header </dt>
 <dd>
 <p>Name of a file with HTML to be included at the top of each page.
 Relative to the directory containing the <em>gitweb.cgi</em> script.
-Can be set using <code>GITWEB_SITE_HEADER</code> at build time.  No default
+Can be set using <span class='synopsis'><code>GITWEB_SITE_HEADER</code></span> at build time.  No default
 value.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-sitefooter"><a class="anchor" href="#Documentation/gitweb.conf.txt-sitefooter"></a>$site_footer </dt>
 <dd>
 <p>Name of a file with HTML to be included at the bottom of each page.
 Relative to the directory containing the <em>gitweb.cgi</em> script.
-Can be set using <code>GITWEB_SITE_FOOTER</code> at build time.  No default
+Can be set using <span class='synopsis'><code>GITWEB_SITE_FOOTER</code></span> at build time.  No default
 value.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-hometext"><a class="anchor" href="#Documentation/gitweb.conf.txt-hometext"></a>$home_text </dt>
@@ -519,7 +519,7 @@ value.</p>
 <p>Name of a HTML file which, if it exists, is included on the
 gitweb projects overview page ("projects_list" view).  Relative to
 the directory containing the gitweb.cgi script.  Default value
-can be adjusted during build time using <code>GITWEB_HOMETEXT</code> variable.
+can be adjusted during build time using <span class='synopsis'><code>GITWEB_HOMETEXT</code></span> variable.
 By default set to <em>indextext.html</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectslistdescriptionwidth"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectslistdescriptionwidth"></a>$projects_list_description_width </dt>
@@ -536,7 +536,7 @@ use long project descriptions.</p>
 means the ordering used if you don&#8217;t explicitly sort projects list
 (if there is no "o" CGI query parameter in the URL).  Valid values
 are "none" (unsorted), "project" (projects are by project name,
-i.e. path to repository relative to <code>$projectroot</code>), "descr"
+i.e. path to repository relative to <span class='synopsis'><code>$projectroot</code></span>), "descr"
 (project description), "owner", and "age" (by date of most current
 commit).</p>
 <div class="paragraph">
@@ -558,7 +558,7 @@ commit).</p>
 <p>Default mimetype for the blob_plain (raw) view, if mimetype checking
 doesn&#8217;t result in some other type; by default "text/plain".
 Gitweb guesses mimetype of a file to display based on extension
-of its filename, using <code>$mimetypes_file</code> (if set and file exists)
+of its filename, using <span class='synopsis'><code>$mimetypes_file</code></span> (if set and file exists)
 and <em>/etc/mime.types</em> files (see <strong>mime.types</strong>(5) manpage; only
 filename extension rules are supported by gitweb).</p>
 </dd>
@@ -593,7 +593,7 @@ involve file copies ('-C') or criss-cross renames ('-B').</p>
 <div class="sect2">
 <h3 id="_some_optional_features_and_policies"><a class="anchor" href="#_some_optional_features_and_policies"></a>Some optional features and policies</h3>
 <div class="paragraph">
-<p>Most of features are configured via <code>%feature</code> hash; however some of extra
+<p>Most of features are configured via <span class='synopsis'><code>%feature</code></span> hash; however some of extra
 gitweb features can be turned on and configured using variables described
 below.  This list beside configuration variables that control how gitweb
 looks does contain variables configuring administrative side of gitweb
@@ -606,19 +606,19 @@ affects how "summary" pages look like, or load limiting).</p>
 <dd>
 <p>List of Git base URLs.  These URLs are used to generate URLs
 describing from where to fetch a project, which are shown on
-project summary page.  The full fetch URL is "<code>$git_base_url/$project</code>",
+project summary page.  The full fetch URL is "<span class='synopsis'><code>$git_base_url/$project</code></span>",
 for each element of this list. You can set up multiple base URLs
-(for example one for <code>git://</code> protocol, and one for <code>http://</code>
+(for example one for <span class='synopsis'><code>git://</code></span> protocol, and one for <span class='synopsis'><code>http://</code></span>
 protocol).</p>
 <div class="paragraph">
 <p>Note that per repository configuration can be set in <em>$GIT_DIR/cloneurl</em>
-file, or as values of multi-value <code>gitweb.url</code> configuration variable in
+file, or as values of multi-value <span class='synopsis'><code>gitweb.url</code></span> configuration variable in
 project config.  Per-repository configuration takes precedence over value
-composed from <code>@git_base_url_list</code> elements and project name.</p>
+composed from <span class='synopsis'><code>@git_base_url_list</code></span> elements and project name.</p>
 </div>
 <div class="paragraph">
 <p>You can setup one single value (single entry/item in this list) at build
-time by setting the <code>GITWEB_BASE_URL</code> build-time configuration variable.
+time by setting the <span class='synopsis'><code>GITWEB_BASE_URL</code></span> build-time configuration variable.
 By default it is set to (), i.e. an empty list.  This means that gitweb
 would not try to create project URL (to fetch) from project name.</p>
 </div>
@@ -627,7 +627,7 @@ would not try to create project URL (to fetch) from project name.</p>
 <dd>
 <p>Whether to enables the grouping of projects by category on the project
 list page. The category of a project is determined by the
-<code>$GIT_DIR/category</code> file or the <code>gitweb.category</code> variable in each
+<span class='synopsis'><code>$GIT_DIR/category</code></span> file or the <span class='synopsis'><code>gitweb.category</code></span> variable in each
 repository&#8217;s configuration.  Disabled by default (set to 0).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-projectlistdefaultcategory"><a class="anchor" href="#Documentation/gitweb.conf.txt-projectlistdefaultcategory"></a>$project_list_default_category </dt>
@@ -635,7 +635,7 @@ repository&#8217;s configuration.  Disabled by default (set to 0).</p>
 <p>Default category for projects for which none is specified.  If this is
 set to the empty string, such projects will remain uncategorized and
 listed at the top, above categorized projects.  Used only if project
-categories are enabled, which means if <code>$projects_list_group_categories</code>
+categories are enabled, which means if <span class='synopsis'><code>$projects_list_group_categories</code></span>
 is true.  By default set to "" (empty string).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-preventxss"><a class="anchor" href="#Documentation/gitweb.conf.txt-preventxss"></a>$prevent_xss </dt>
@@ -655,7 +655,7 @@ where it uses <em>/proc/loadavg</em>; the load there is the number of active
 tasks on the system&#8201;&#8212;&#8201;processes that are actually running&#8201;&#8212;&#8201;averaged
 over the last minute.</p>
 <div class="paragraph">
-<p>Set <code>$maxload</code> to undefined value (<code>undef</code>) to turn this feature off.
+<p>Set <span class='synopsis'><code>$maxload</code></span> to undefined value (<span class='synopsis'><code>undef</code></span>) to turn this feature off.
 The default value is 300.</p>
 </div>
 </dd>
@@ -682,13 +682,13 @@ file</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If <code>$per_request_config</code> is not a code reference, it is interpreted as boolean
+<p>If <span class='synopsis'><code>$per_request_config</code></span> is not a code reference, it is interpreted as boolean
 value.  If it is true gitweb will process config files once per request,
 and if it is false gitweb will process config files only once, each time it
 is executed.  True by default (set to 1).</p>
 </div>
 <div class="paragraph">
-<p><strong>NOTE</strong>: <code>$my_url</code>, <code>$my_uri</code>, and <code>$base_url</code> are overwritten with their default
+<p><strong>NOTE</strong>: <span class='synopsis'><code>$my_url</code></span>, <span class='synopsis'><code>$my_uri</code></span>, and <span class='synopsis'><code>$base_url</code></span> are overwritten with their default
 values before every request, so if you want to change them, be sure to set
 this variable to true or a code reference effecting the desired changes.</p>
 </div>
@@ -732,16 +732,16 @@ header.</p>
 <p>Full URL and absolute URL of the gitweb script;
 in earlier versions of gitweb you might have need to set those
 variables, but now there should be no need to do it.  See
-<code>$per_request_config</code> if you need to set them still.</p>
+<span class='synopsis'><code>$per_request_config</code></span> if you need to set them still.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-baseurl"><a class="anchor" href="#Documentation/gitweb.conf.txt-baseurl"></a>$base_url </dt>
 <dd>
 <p>Base URL for relative URLs in pages generated by gitweb,
-(e.g. <code>$logo</code>, <code>$favicon</code>, <code>@stylesheets</code> if they are relative URLs),
+(e.g. <span class='synopsis'><code>$logo</code></span>, <span class='synopsis'><code>$favicon</code></span>, <span class='synopsis'><code>@stylesheets</code></span> if they are relative URLs),
 needed and used <em>&lt;base href="$base_url"&gt;</em> only for URLs with nonempty
 PATH_INFO.  Usually gitweb sets its value correctly,
 and there is no need to set this variable, e.g. to $my_uri or "/".
-See <code>$per_request_config</code> if you need to override it anyway.</p>
+See <span class='synopsis'><code>$per_request_config</code></span> if you need to override it anyway.</p>
 </dd>
 </dl>
 </div>
@@ -753,10 +753,10 @@ See <code>$per_request_config</code> if you need to override it anyway.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Many gitweb features can be enabled (or disabled) and configured using the
-<code>%feature</code> hash.  Names of gitweb features are keys of this hash.</p>
+<span class='synopsis'><code>%feature</code></span> hash.  Names of gitweb features are keys of this hash.</p>
 </div>
 <div class="paragraph">
-<p>Each <code>%feature</code> hash element is a hash reference and has the following
+<p>Each <span class='synopsis'><code>%feature</code></span> hash element is a hash reference and has the following
 structure:</p>
 </div>
 <div class="listingblock">
@@ -770,7 +770,7 @@ structure:</p>
 </div>
 <div class="paragraph">
 <p>Some features cannot be overridden per project.  For those
-features the structure of appropriate <code>%feature</code> hash element has a simpler
+features the structure of appropriate <span class='synopsis'><code>%feature</code></span> hash element has a simpler
 form:</p>
 </div>
 <div class="listingblock">
@@ -798,13 +798,13 @@ used also to toggle (enable or disable) given feature.</p>
 <p>Note that it is currently <strong>always</strong> an array reference, even if
 feature doesn&#8217;t accept any configuration parameters, and 'default'
 is used only to turn it on or off.  In such case you turn feature on
-by setting this element to <code>[1]</code>, and torn it off by setting it to
-<code>[0]</code>.  See also the passage about the "blame" feature in the "Examples"
+by setting this element to <span class='synopsis'>[<code>1</code>]</span>, and torn it off by setting it to
+<span class='synopsis'>[<code>0</code>]</span>.  See also the passage about the "blame" feature in the "Examples"
 section.</p>
 </div>
 <div class="paragraph">
 <p>To disable features that accept parameters (are configurable), you
-need to set this element to empty list i.e. <code>[]</code>.</p>
+need to set this element to empty list i.e. <span class='synopsis'>[]</span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-override"><a class="anchor" href="#Documentation/gitweb.conf.txt-override"></a>override </dt>
@@ -813,7 +813,7 @@ need to set this element to empty list i.e. <code>[]</code>.</p>
 overridable, which means that it can be configured
 (or enabled/disabled) on a per-repository basis.</p>
 <div class="paragraph">
-<p>Usually given "&lt;feature&gt;" is configurable via the <code>gitweb.&lt;feature&gt;</code>
+<p>Usually given "&lt;feature&gt;" is configurable via the <span class='synopsis'><code>gitweb.</code><em>&lt;feature&gt;</em></span>
 config variable in the per-repository Git configuration file.</p>
 </div>
 <div class="paragraph">
@@ -832,9 +832,9 @@ given feature is not supported.</p>
 </dl>
 </div>
 <div class="sect2">
-<h3 id="_features_in_feature"><a class="anchor" href="#_features_in_feature"></a>Features in <code>%feature</code></h3>
+<h3 id="_features_in_feature"><a class="anchor" href="#_features_in_feature"></a>Features in <span class='synopsis'><code>%feature</code></span></h3>
 <div class="paragraph">
-<p>The gitweb features that are configurable via <code>%feature</code> hash are listed
+<p>The gitweb features that are configurable via <span class='synopsis'><code>%feature</code></span> hash are listed
 below.  This should be a complete list, but ultimately the authoritative
 and complete list is in gitweb.cgi source code, with features described
 in the comments.</p>
@@ -848,7 +848,7 @@ each line the last commit that modified it; see <a href='{{< relurl "docs/git-bl
 This can be very CPU-intensive and is therefore disabled by default.</p>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.blame</code> configuration variable (boolean).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.blame</code></span> configuration variable (boolean).</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-snapshot"><a class="anchor" href="#Documentation/gitweb.conf.txt-snapshot"></a>snapshot </dt>
@@ -859,14 +859,14 @@ by <a href='{{< relurl "docs/git-archive" >}}'>git-archive[1]</a> and possibly a
 This can potentially generate high traffic if you have large project.</p>
 <div class="paragraph">
 <p>The value of 'default' is a list of names of snapshot formats,
-defined in <code>%known_snapshot_formats</code> hash, that you wish to offer.
+defined in <span class='synopsis'><code>%known_snapshot_formats</code></span> hash, that you wish to offer.
 Supported formats include "tgz", "tbz2", "txz" (gzip/bzip2/xz
 compressed tar archive) and "zip"; please consult gitweb sources for
 a definitive list.  By default only "tgz" is offered.</p>
 </div>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.blame</code> configuration variable, which contains
+repository&#8217;s <span class='synopsis'><code>gitweb.blame</code></span> configuration variable, which contains
 a comma separated list of formats or "none" to disable snapshots.
 Unknown values are ignored.</p>
 </div>
@@ -878,7 +878,7 @@ tree (directory) containing the given string; see <a href='{{< relurl "docs/git-
 This can be potentially CPU-intensive, of course.  Enabled by default.</p>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.grep</code> configuration variable (boolean).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.grep</code></span> configuration variable (boolean).</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-pickaxe"><a class="anchor" href="#Documentation/gitweb.conf.txt-pickaxe"></a>pickaxe </dt>
@@ -889,23 +889,23 @@ practical and quite faster alternative to "blame" action, but it is
 still potentially CPU-intensive.  Enabled by default.</p>
 <div class="paragraph">
 <p>The pickaxe search is described in <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> (the
-description of <code>-S&lt;string&gt;</code> option, which refers to pickaxe entry in
+description of <span class='synopsis'><code>-S</code><em>&lt;string&gt;</em></span> option, which refers to pickaxe entry in
 <a href='{{< relurl "docs/gitdiffcore" >}}'>gitdiffcore[7]</a> for more details).</p>
 </div>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis by setting
-repository&#8217;s <code>gitweb.pickaxe</code> configuration variable (boolean).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.pickaxe</code></span> configuration variable (boolean).</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-show-sizes"><a class="anchor" href="#Documentation/gitweb.conf.txt-show-sizes"></a>show-sizes </dt>
 <dd>
 <p>Enable showing size of blobs (ordinary files) in a "tree" view, in a
-separate column, similar to what <code>ls -l</code> does; see description of
-<code>-l</code> option in <a href='{{< relurl "docs/git-ls-tree" >}}'>git-ls-tree[1]</a> manpage.  This costs a bit of
+separate column, similar to what <span class='synopsis'><code>ls</code> <code>-l</code></span> does; see description of
+<span class='synopsis'><code>-l</code></span> option in <a href='{{< relurl "docs/git-ls-tree" >}}'>git-ls-tree[1]</a> manpage.  This costs a bit of
 I/O.  Enabled by default.</p>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.showSizes</code> configuration variable (boolean).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.showSizes</code></span> configuration variable (boolean).</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-patches"><a class="anchor" href="#Documentation/gitweb.conf.txt-patches"></a>patches </dt>
@@ -919,7 +919,7 @@ containing a single negative number to remove any limit.
 Default value is 16.</p>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.patches</code> configuration variable (integer).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.patches</code></span> configuration variable (integer).</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-avatar"><a class="anchor" href="#Documentation/gitweb.conf.txt-avatar"></a>avatar </dt>
@@ -936,26 +936,26 @@ installed; see <em>gitweb/INSTALL</em> for more details.</p>
 </div>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.avatar</code> configuration variable.</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.avatar</code></span> configuration variable.</p>
 </div>
 <div class="paragraph">
-<p>See also <code>%avatar_size</code> with pixel sizes for icons and avatars
+<p>See also <span class='synopsis'><code>%avatar_size</code></span> with pixel sizes for icons and avatars
 ("default" is used for one-line like "log" and "shortlog", "double"
 is used for two-line like "commit", "commitdiff" or "tag").  If the
 default font sizes or lineheights are changed (e.g. via adding extra
-CSS stylesheet in <code>@stylesheets</code>), it may be appropriate to change
+CSS stylesheet in <span class='synopsis'><code>@stylesheets</code></span>), it may be appropriate to change
 these values.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-highlight"><a class="anchor" href="#Documentation/gitweb.conf.txt-highlight"></a>highlight </dt>
 <dd>
 <p>Server-side syntax highlight support in "blob" view.  It requires
-<code>$highlight_bin</code> program to be available (see the description of
+<span class='synopsis'><code>$highlight_bin</code></span> program to be available (see the description of
 this variable in the "Configuration variables" section above),
 and therefore is disabled by default.</p>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.highlight</code> configuration variable (boolean).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.highlight</code></span> configuration variable (boolean).</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitweb.conf.txt-remoteheads"><a class="anchor" href="#Documentation/gitweb.conf.txt-remoteheads"></a>remote_heads </dt>
@@ -967,7 +967,7 @@ disabled by default.  <a href='{{< relurl "docs/git-instaweb" >}}'>git-instaweb[
 to browse local repositories, enables and uses this feature.</p>
 <div class="paragraph">
 <p>This feature can be configured on a per-repository basis via
-repository&#8217;s <code>gitweb.remote_heads</code> configuration variable (boolean).</p>
+repository&#8217;s <span class='synopsis'><code>gitweb.remote_heads</code></span> configuration variable (boolean).</p>
 </div>
 </dd>
 </dl>
@@ -981,7 +981,7 @@ repository&#8217;s <code>gitweb.remote_heads</code> configuration variable (bool
 <dd>
 <p>Enable text search, which will list the commits which match author,
 committer or commit text to a given string; see the description of
-<code>--author</code>, <code>--committer</code> and <code>--grep</code> options in <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>
+<span class='synopsis'><code>--author</code></span>, <span class='synopsis'><code>--committer</code></span> and <span class='synopsis'><code>--grep</code></span> options in <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>
 manpage.  Enabled by default.</p>
 <div class="paragraph">
 <p>Project specific override is not supported.</p>
@@ -991,14 +991,14 @@ manpage.  Enabled by default.</p>
 <dd>
 <p>If this feature is enabled, gitweb considers projects in
 subdirectories of project root (basename) to be forks of existing
-projects.  For each project <code>$projname.git</code>, projects in the
-<code>$projname/</code> directory and its subdirectories will not be
+projects.  For each project <span class='synopsis'><code>$projname.git</code></span>, projects in the
+<span class='synopsis'><code>$projname/</code></span> directory and its subdirectories will not be
 shown in the main projects list.  Instead, a '+' mark is shown
 next to +$projname+, which links to a "forks" view that lists all
-the forks (all projects in <code>$projname/</code> subdirectory).  Additionally
+the forks (all projects in <span class='synopsis'><code>$projname/</code></span> subdirectory).  Additionally
 a "forks" view for a project is linked from project summary page.</p>
 <div class="paragraph">
-<p>If the project list is taken from a file (<code>$projects_list</code> points to a
+<p>If the project list is taken from a file (<span class='synopsis'><code>$projects_list</code></span> points to a
 file), forks are only recognized if they are listed after the main project
 in that file.</p>
 </div>
@@ -1012,12 +1012,12 @@ in that file.</p>
 allows you to link to third-party scripts integrating into gitweb.</p>
 <div class="paragraph">
 <p>The "default" value consists of a list of triplets in the form
-<code>("&lt;label&gt;", "&lt;link&gt;", "&lt;position&gt;")</code> where "position" is the label
-after which to insert the link, "link" is a format string where <code>%n</code>
-expands to the project name, <code>%f</code> to the project path within the
-filesystem (i.e. "$projectroot/$project"), <code>%h</code> to the current hash
-('h' gitweb parameter) and <code>%b</code> to the current hash base
-('hb' gitweb parameter); <code>%%</code> expands to '%'.</p>
+<span class='synopsis'>(<code>"</code><em>&lt;label&gt;</em><code>",</code> <code>"</code><em>&lt;link&gt;</em><code>",</code> <code>"</code><em>&lt;position&gt;</em><code>"</code>)</span> where "position" is the label
+after which to insert the link, "link" is a format string where <span class='synopsis'><code>%n</code></span>
+expands to the project name, <span class='synopsis'><code>%f</code></span> to the project path within the
+filesystem (i.e. "$projectroot/$project"), <span class='synopsis'><code>%h</code></span> to the current hash
+('h' gitweb parameter) and <span class='synopsis'><code>%b</code></span> to the current hash base
+('hb' gitweb parameter); <span class='synopsis'><code>%%</code></span> expands to '%'.</p>
 </div>
 <div class="paragraph">
 <p>For example, at the time this page was written, the <a href="http://repo.or.cz" class="bare">http://repo.or.cz</a>
@@ -1032,7 +1032,7 @@ Git hosting site set it to the following to enable graphical log
 </div>
 <div class="paragraph">
 <p>This adds a link titled "graphiclog" after the "summary" link, leading to
-<code>git-browser</code> script, passing <code>r=&lt;project&gt;</code> as a query parameter.</p>
+<span class='synopsis'><code>git-browser</code></span> script, passing <span class='synopsis'><code>r=</code><em>&lt;project&gt;</em></span> as a query parameter.</p>
 </div>
 <div class="paragraph">
 <p>Project specific override is not supported.</p>
@@ -1059,7 +1059,7 @@ views, and taggerdate in "tag" view.  Enabled by default.</p>
 hasn&#8217;t selected some other time zone and saved it in a cookie), a name of cookie
 where to store selected time zone, and a CSS class used to mark up
 dates for manipulation.  If you want to turn this feature off, set "default"
-to empty list: <code>[]</code>.</p>
+to empty list: <span class='synopsis'>[]</span>.</p>
 </div>
 <div class="paragraph">
 <p>Typical gitweb config files will only change starting (default) time zone,
@@ -1101,7 +1101,7 @@ follows:</p>
 <div class="paragraph">
 <p>This feature can be configured on per-repository basis after setting
 $feature{<em>extra-branch-refs</em>}{<em>override</em>} to true, via repository&#8217;s
-<code>gitweb.extraBranchRefs</code> configuration variable, which contains a
+<span class='synopsis'><code>gitweb.extraBranchRefs</code></span> configuration variable, which contains a
 space separated list of refs. An example:</p>
 </div>
 <div class="listingblock">
@@ -1178,7 +1178,7 @@ $known_snapshot_formats{'tgz'}{'compressor'} = ['gzip','-6'];</pre>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Debugging would be easier if the fallback configuration file
-(<code>/etc/gitweb.conf</code>) and environment variable to override its location
+(<span class='synopsis'><code>/etc/gitweb.conf</code></span>) and environment variable to override its location
 (<em>GITWEB_CONFIG_SYSTEM</em>) had names reflecting their "fallback" role.
 The current names are kept to avoid breaking working setups.</p>
 </div>

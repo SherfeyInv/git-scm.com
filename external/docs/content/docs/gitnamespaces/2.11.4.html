@@ -135,27 +135,27 @@ prevent duplication between new objects added to the repositories
 without ongoing maintenance, while namespaces do.</p>
 </div>
 <div class="paragraph">
-<p>To specify a namespace, set the <code>GIT_NAMESPACE</code> environment variable to
+<p>To specify a namespace, set the <span class='synopsis'><code>GIT_NAMESPACE</code></span> environment variable to
 the namespace.  For each ref namespace, Git stores the corresponding
-refs in a directory under <code>refs/namespaces/</code>.  For example,
-<code>GIT_NAMESPACE=foo</code> will store refs under <code>refs/namespaces/foo/</code>.  You
-can also specify namespaces via the <code>--namespace</code> option to
+refs in a directory under <span class='synopsis'><code>refs/namespaces/</code></span>.  For example,
+<span class='synopsis'><code>GIT_NAMESPACE=foo</code></span> will store refs under <span class='synopsis'><code>refs/namespaces/foo/</code></span>.  You
+can also specify namespaces via the <span class='synopsis'><code>--namespace</code></span> option to
 <a href='{{< relurl "docs/git" >}}'>git[1]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Note that namespaces which include a <code>/</code> will expand to a hierarchy of
-namespaces; for example, <code>GIT_NAMESPACE=foo/bar</code> will store refs under
-<code>refs/namespaces/foo/refs/namespaces/bar/</code>.  This makes paths in
-<code>GIT_NAMESPACE</code> behave hierarchically, so that cloning with
-<code>GIT_NAMESPACE=foo/bar</code> produces the same result as cloning with
-<code>GIT_NAMESPACE=foo</code> and cloning from that repo with <code>GIT_NAMESPACE=bar</code>.  It
-also avoids ambiguity with strange namespace paths such as <code>foo/refs/heads/</code>,
-which could otherwise generate directory/file conflicts within the <code>refs</code>
+<p>Note that namespaces which include a <span class='synopsis'><code>/</code></span> will expand to a hierarchy of
+namespaces; for example, <span class='synopsis'><code>GIT_NAMESPACE=foo/bar</code></span> will store refs under
+<span class='synopsis'><code>refs/namespaces/foo/refs/namespaces/bar/</code></span>.  This makes paths in
+<span class='synopsis'><code>GIT_NAMESPACE</code></span> behave hierarchically, so that cloning with
+<span class='synopsis'><code>GIT_NAMESPACE=foo/bar</code></span> produces the same result as cloning with
+<span class='synopsis'><code>GIT_NAMESPACE=foo</code></span> and cloning from that repo with <span class='synopsis'><code>GIT_NAMESPACE=bar</code></span>.  It
+also avoids ambiguity with strange namespace paths such as <span class='synopsis'><code>foo/refs/heads/</code></span>,
+which could otherwise generate directory/file conflicts within the <span class='synopsis'><code>refs</code></span>
 directory.</p>
 </div>
 <div class="paragraph">
 <p><a href='{{< relurl "docs/git-upload-pack" >}}'>git-upload-pack[1]</a> and <a href='{{< relurl "docs/git-receive-pack" >}}'>git-receive-pack[1]</a> rewrite the
-names of refs as specified by <code>GIT_NAMESPACE</code>.  git-upload-pack and
+names of refs as specified by <span class='synopsis'><code>GIT_NAMESPACE</code></span>.  git-upload-pack and
 git-receive-pack will ignore all references outside the specified
 namespace.</p>
 </div>

@@ -70,20 +70,20 @@ revision list.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-codeinitrevisionscode"><a id="Documentation/technical/api-revision-walking.txt-initrevisions" class="anchor" href="#Documentation/technical/api-revision-walking.txt-initrevisions"></a><code>init_revisions</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-spanclasssynopsiscodeinitrevisionscodespan"><a id="Documentation/technical/api-revision-walking.txt-initrevisions" class="anchor" href="#Documentation/technical/api-revision-walking.txt-initrevisions"></a><span class='synopsis'><code>init_revisions</code></span> </dt>
 <dd>
 <p>Initialize a rev_info structure with default values. The second
-parameter may be NULL or can be prefix path, and then the <code>.prefix</code>
+parameter may be NULL or can be prefix path, and then the <span class='synopsis'><code>.prefix</code></span>
 variable will be set to it. This is typically the first function you
 want to call when you want to deal with a revision list. After calling
 this function, you are free to customize options, like set
-<code>.ignore_merges</code> to 0 if you don&#8217;t want to ignore merges, and so on. See
-<code>revision.h</code> for a complete list of available options.</p>
+<span class='synopsis'><code>.ignore_merges</code></span> to 0 if you don&#8217;t want to ignore merges, and so on. See
+<span class='synopsis'><code>revision.h</code></span> for a complete list of available options.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-codeaddpendingobjectcode"><a id="Documentation/technical/api-revision-walking.txt-addpendingobject" class="anchor" href="#Documentation/technical/api-revision-walking.txt-addpendingobject"></a><code>add_pending_object</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-spanclasssynopsiscodeaddpendingobjectcodespan"><a id="Documentation/technical/api-revision-walking.txt-addpendingobject" class="anchor" href="#Documentation/technical/api-revision-walking.txt-addpendingobject"></a><span class='synopsis'><code>add_pending_object</code></span> </dt>
 <dd>
 <p>This function can be used if you want to add commit objects as revision
-information. You can use the <code>UNINTERESTING</code> object flag to indicate if
+information. You can use the <span class='synopsis'><code>UNINTERESTING</code></span> object flag to indicate if
 you want to include or exclude the given commit (and commits reachable
 from the given commit) from the revision list.</p>
 <div class="admonitionblock note">
@@ -101,27 +101,27 @@ function.
 </table>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-codesetuprevisionscode"><a id="Documentation/technical/api-revision-walking.txt-setuprevisions" class="anchor" href="#Documentation/technical/api-revision-walking.txt-setuprevisions"></a><code>setup_revisions</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-spanclasssynopsiscodesetuprevisionscodespan"><a id="Documentation/technical/api-revision-walking.txt-setuprevisions" class="anchor" href="#Documentation/technical/api-revision-walking.txt-setuprevisions"></a><span class='synopsis'><code>setup_revisions</code></span> </dt>
 <dd>
-<p>Parse revision information, filling in the <code>rev_info</code> structure, and
+<p>Parse revision information, filling in the <span class='synopsis'><code>rev_info</code></span> structure, and
 removing the used arguments from the argument list. Returns the number
 of arguments left that weren&#8217;t recognized, which are also moved to the
 head of the argument list. The last parameter is used in case no
 parameter given by the first two arguments.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-codepreparerevisionwalkcode"><a id="Documentation/technical/api-revision-walking.txt-preparerevisionwalk" class="anchor" href="#Documentation/technical/api-revision-walking.txt-preparerevisionwalk"></a><code>prepare_revision_walk</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-spanclasssynopsiscodepreparerevisionwalkcodespan"><a id="Documentation/technical/api-revision-walking.txt-preparerevisionwalk" class="anchor" href="#Documentation/technical/api-revision-walking.txt-preparerevisionwalk"></a><span class='synopsis'><code>prepare_revision_walk</code></span> </dt>
 <dd>
 <p>Prepares the rev_info structure for a walk. You should check if it
 returns any error (non-zero return code) and if it does not, you can
 start using get_revision() to do the iteration.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-codegetrevisioncode"><a id="Documentation/technical/api-revision-walking.txt-getrevision" class="anchor" href="#Documentation/technical/api-revision-walking.txt-getrevision"></a><code>get_revision</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-spanclasssynopsiscodegetrevisioncodespan"><a id="Documentation/technical/api-revision-walking.txt-getrevision" class="anchor" href="#Documentation/technical/api-revision-walking.txt-getrevision"></a><span class='synopsis'><code>get_revision</code></span> </dt>
 <dd>
-<p>Takes a pointer to a <code>rev_info</code> structure and iterates over it,
-returning a <code>struct commit *</code> each time you call it. The end of the
+<p>Takes a pointer to a <span class='synopsis'><code>rev_info</code></span> structure and iterates over it,
+returning a <span class='synopsis'><code>struct</code> <code>commit</code> <code>*</code></span> each time you call it. The end of the
 revision list is indicated by returning a NULL pointer.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-coderesetrevisionwalkcode"><a id="Documentation/technical/api-revision-walking.txt-resetrevisionwalk" class="anchor" href="#Documentation/technical/api-revision-walking.txt-resetrevisionwalk"></a><code>reset_revision_walk</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-revision-walking.txt-spanclasssynopsiscoderesetrevisionwalkcodespan"><a id="Documentation/technical/api-revision-walking.txt-resetrevisionwalk" class="anchor" href="#Documentation/technical/api-revision-walking.txt-resetrevisionwalk"></a><span class='synopsis'><code>reset_revision_walk</code></span> </dt>
 <dd>
 <p>Reset the flags used by the revision walking api. You can use
 this to do multiple sequential revision walks.</p>

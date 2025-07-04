@@ -41,38 +41,38 @@ returned by the iterate function.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>head_ref()</code> just iterates the head ref.</p>
+<p><span class='synopsis'><code>head_ref</code>()</span> just iterates the head ref.</p>
 </li>
 <li>
-<p><code>for_each_ref()</code> iterates all refs.</p>
+<p><span class='synopsis'><code>for_each_ref</code>()</span> iterates all refs.</p>
 </li>
 <li>
-<p><code>for_each_ref_in()</code> iterates all refs which have a defined prefix and
+<p><span class='synopsis'><code>for_each_ref_in</code>()</span> iterates all refs which have a defined prefix and
 strips that prefix from the passed variable refname.</p>
 </li>
 <li>
-<p><code>for_each_tag_ref()</code>, <code>for_each_branch_ref()</code>, <code>for_each_remote_ref()</code>,
-<code>for_each_replace_ref()</code> iterate refs from the respective area.</p>
+<p><span class='synopsis'><code>for_each_tag_ref</code>()</span>, <span class='synopsis'><code>for_each_branch_ref</code>()</span>, <span class='synopsis'><code>for_each_remote_ref</code>()</span>,
+<span class='synopsis'><code>for_each_replace_ref</code>()</span> iterate refs from the respective area.</p>
 </li>
 <li>
-<p><code>for_each_glob_ref()</code> iterates all refs that match the specified glob
+<p><span class='synopsis'><code>for_each_glob_ref</code>()</span> iterates all refs that match the specified glob
 pattern.</p>
 </li>
 <li>
-<p><code>for_each_glob_ref_in()</code> the previous and <code>for_each_ref_in()</code> combined.</p>
+<p><span class='synopsis'><code>for_each_glob_ref_in</code>()</span> the previous and <span class='synopsis'><code>for_each_ref_in</code>()</span> combined.</p>
 </li>
 <li>
-<p><code>head_ref_submodule()</code>, <code>for_each_ref_submodule()</code>,
-<code>for_each_ref_in_submodule()</code>, <code>for_each_tag_ref_submodule()</code>,
-<code>for_each_branch_ref_submodule()</code>, <code>for_each_remote_ref_submodule()</code>
+<p><span class='synopsis'><code>head_ref_submodule</code>()</span>, <span class='synopsis'><code>for_each_ref_submodule</code>()</span>,
+<span class='synopsis'><code>for_each_ref_in_submodule</code>()</span>, <span class='synopsis'><code>for_each_tag_ref_submodule</code>()</span>,
+<span class='synopsis'><code>for_each_branch_ref_submodule</code>()</span>, <span class='synopsis'><code>for_each_remote_ref_submodule</code>()</span>
 do the same as the functions described above but for a specified
 submodule.</p>
 </li>
 <li>
-<p><code>for_each_rawref()</code> can be used to learn about broken ref and symref.</p>
+<p><span class='synopsis'><code>for_each_rawref</code>()</span> can be used to learn about broken ref and symref.</p>
 </li>
 <li>
-<p><code>for_each_reflog()</code> iterates each reflog file.</p>
+<p><span class='synopsis'><code>for_each_reflog</code>()</span> iterates each reflog file.</p>
 </li>
 </ul>
 </div>
@@ -94,7 +94,7 @@ if (add_submodule_odb(path))
 </div>
 </div>
 <div class="paragraph">
-<p><code>add_submodule_odb()</code> will return zero on success. If you
+<p><span class='synopsis'><code>add_submodule_odb</code>()</span> will return zero on success. If you
 do not do this you will get an error for each ref that it does not point
 to a valid object.</p>
 </div>

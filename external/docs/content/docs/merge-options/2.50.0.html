@@ -14,86 +14,86 @@ aliases:
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--commitcode"><a id="Documentation/merge-options.txt---commit" class="anchor" href="#Documentation/merge-options.txt---commit"></a><code>--commit</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-commitcode"><a id="Documentation/merge-options.txt---no-commit" class="anchor" href="#Documentation/merge-options.txt---no-commit"></a><code>--no-commit</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--commitcodespan"><a id="Documentation/merge-options.txt---commit" class="anchor" href="#Documentation/merge-options.txt---commit"></a><span class='synopsis'><code>--commit</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-commitcodespan"><a id="Documentation/merge-options.txt---no-commit" class="anchor" href="#Documentation/merge-options.txt---no-commit"></a><span class='synopsis'><code>--no-commit</code></span> </dt>
 <dd>
 <p>Perform the merge and commit the result. This option can
-be used to override <code>--no-commit</code>.</p>
+be used to override <span class='synopsis'><code>--no-commit</code></span>.</p>
 <div class="paragraph">
-<p>With <code>--no-commit</code> perform the merge and stop just before creating
+<p>With <span class='synopsis'><code>--no-commit</code></span> perform the merge and stop just before creating
 a merge commit, to give the user a chance to inspect and further
 tweak the merge result before committing.</p>
 </div>
 <div class="paragraph">
 <p>Note that fast-forward updates do not create a merge commit and
-therefore there is no way to stop those merges with <code>--no-commit</code>.
+therefore there is no way to stop those merges with <span class='synopsis'><code>--no-commit</code></span>.
 Thus, if you want to ensure your branch is not changed or updated
-by the merge command, use <code>--no-ff</code> with <code>--no-commit</code>.</p>
+by the merge command, use <span class='synopsis'><code>--no-ff</code></span> with <span class='synopsis'><code>--no-commit</code></span>.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--editcode"><a id="Documentation/merge-options.txt---edit" class="anchor" href="#Documentation/merge-options.txt---edit"></a><code>--edit</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-ecode"><a id="Documentation/merge-options.txt--e" class="anchor" href="#Documentation/merge-options.txt--e"></a><code>-e</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-editcode"><a id="Documentation/merge-options.txt---no-edit" class="anchor" href="#Documentation/merge-options.txt---no-edit"></a><code>--no-edit</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--editcodespan"><a id="Documentation/merge-options.txt---edit" class="anchor" href="#Documentation/merge-options.txt---edit"></a><span class='synopsis'><code>--edit</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-ecodespan"><a id="Documentation/merge-options.txt--e" class="anchor" href="#Documentation/merge-options.txt--e"></a><span class='synopsis'><code>-e</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-editcodespan"><a id="Documentation/merge-options.txt---no-edit" class="anchor" href="#Documentation/merge-options.txt---no-edit"></a><span class='synopsis'><code>--no-edit</code></span> </dt>
 <dd>
 <p>	Invoke an editor before committing successful mechanical merge to
 	further edit the auto-generated merge message, so that the user
-	can explain and justify the merge. The <code>--no-edit</code> option can be
+	can explain and justify the merge. The <span class='synopsis'><code>--no-edit</code></span> option can be
 	used to accept the auto-generated message (this is generally
 	discouraged).
-The <code>--edit</code> (or <code>-e</code>) option is still useful if you are
-giving a draft message with the <code>-m</code> option from the command line
+The <span class='synopsis'><code>--edit</code></span> (or <span class='synopsis'><code>-e</code></span>) option is still useful if you are
+giving a draft message with the <span class='synopsis'><code>-m</code></span> option from the command line
 and want to edit it in the editor.</p>
 <div class="paragraph">
 <p>Older scripts may depend on the historical behaviour of not allowing the
 user to edit the merge log message. They will see an editor opened when
-they run <code>git merge</code>. To make it easier to adjust such scripts to the
-updated behaviour, the environment variable <code>GIT_MERGE_AUTOEDIT</code> can be
-set to <code>no</code> at the beginning of them.</p>
+they run <span class='synopsis'><code>git</code> <code>merge</code></span>. To make it easier to adjust such scripts to the
+updated behaviour, the environment variable <span class='synopsis'><code>GIT_MERGE_AUTOEDIT</code></span> can be
+set to <span class='synopsis'><code>no</code></span> at the beginning of them.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--cleanupltmodegtcode"><a id="Documentation/merge-options.txt---cleanupmode" class="anchor" href="#Documentation/merge-options.txt---cleanupmode"></a><code>--cleanup=&lt;mode&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--cleanupcodeemltmodegtemspan"><a id="Documentation/merge-options.txt---cleanupmode" class="anchor" href="#Documentation/merge-options.txt---cleanupmode"></a><span class='synopsis'><code>--cleanup=</code><em>&lt;mode&gt;</em></span> </dt>
 <dd>
 <p>This option determines how the merge message will be cleaned up before
 committing. See <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for more details. In addition, if
-the <em>&lt;mode&gt;</em> is given a value of <code>scissors</code>, scissors will be appended
-to <code>MERGE_MSG</code> before being passed on to the commit machinery in the
+the <em>&lt;mode&gt;</em> is given a value of <span class='synopsis'><code>scissors</code></span>, scissors will be appended
+to <span class='synopsis'><code>MERGE_MSG</code></span> before being passed on to the commit machinery in the
 case of a merge conflict.</p>
 <div class="paragraph">
-<p>With <code>--ff</code>, when possible resolve the merge as a fast-forward (only
+<p>With <span class='synopsis'><code>--ff</code></span>, when possible resolve the merge as a fast-forward (only
 update the branch pointer to match the merged branch; do not create a
 merge commit).  When not possible (when the merged-in history is not a
 descendant of the current history), create a merge commit.</p>
 </div>
 <div class="paragraph">
-<p>With <code>--no-ff</code>, create a merge commit in all cases, even when the merge
+<p>With <span class='synopsis'><code>--no-ff</code></span>, create a merge commit in all cases, even when the merge
 could instead be resolved as a fast-forward.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-Sltkey-idgtcode"><a id="Documentation/merge-options.txt--Skey-id" class="anchor" href="#Documentation/merge-options.txt--Skey-id"></a><code>-S[&lt;key-id&gt;]</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--gpg-signltkey-idgtcode"><a id="Documentation/merge-options.txt---gpg-signkey-id" class="anchor" href="#Documentation/merge-options.txt---gpg-signkey-id"></a><code>--gpg-sign[=&lt;key-id&gt;]</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-gpg-signcode"><a id="Documentation/merge-options.txt---no-gpg-sign" class="anchor" href="#Documentation/merge-options.txt---no-gpg-sign"></a><code>--no-gpg-sign</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-Scodeemltkey-idgtemspan"><a id="Documentation/merge-options.txt--Skey-id" class="anchor" href="#Documentation/merge-options.txt--Skey-id"></a><span class='synopsis'><code>-S</code>[<em>&lt;key-id&gt;</em>]</span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--gpg-signcodecodecodeemltkey-idgtemspan"><a id="Documentation/merge-options.txt---gpg-signkey-id" class="anchor" href="#Documentation/merge-options.txt---gpg-signkey-id"></a><span class='synopsis'><code>--gpg-sign</code>[<code>=</code><em>&lt;key-id&gt;</em>]</span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-gpg-signcodespan"><a id="Documentation/merge-options.txt---no-gpg-sign" class="anchor" href="#Documentation/merge-options.txt---no-gpg-sign"></a><span class='synopsis'><code>--no-gpg-sign</code></span> </dt>
 <dd>
 <p>GPG-sign the resulting merge commit. The <em>&lt;key-id&gt;</em> argument is
 optional and defaults to the committer identity; if specified,
-it must be stuck to the option without a space. <code>--no-gpg-sign</code>
-is useful to countermand both <code>commit.gpgSign</code> configuration variable,
-and earlier <code>--gpg-sign</code>.</p>
+it must be stuck to the option without a space. <span class='synopsis'><code>--no-gpg-sign</code></span>
+is useful to countermand both <span class='synopsis'><code>commit.gpgSign</code></span> configuration variable,
+and earlier <span class='synopsis'><code>--gpg-sign</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--logltngtcode"><a id="Documentation/merge-options.txt---logn" class="anchor" href="#Documentation/merge-options.txt---logn"></a><code>--log[=&lt;n&gt;]</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-logcode"><a id="Documentation/merge-options.txt---no-log" class="anchor" href="#Documentation/merge-options.txt---no-log"></a><code>--no-log</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--logcodecodecodeemltngtemspan"><a id="Documentation/merge-options.txt---logn" class="anchor" href="#Documentation/merge-options.txt---logn"></a><span class='synopsis'><code>--log</code>[<code>=</code><em>&lt;n&gt;</em>]</span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-logcodespan"><a id="Documentation/merge-options.txt---no-log" class="anchor" href="#Documentation/merge-options.txt---no-log"></a><span class='synopsis'><code>--no-log</code></span> </dt>
 <dd>
 <p>In addition to branch names, populate the log message with
 one-line descriptions from at most <em>&lt;n&gt;</em> actual commits that are being
 merged. See also <a href='{{< relurl "docs/git-fmt-merge-msg" >}}'>git-fmt-merge-msg[1]</a>.</p>
 <div class="paragraph">
-<p>With <code>--no-log</code> do not list one-line descriptions from the
+<p>With <span class='synopsis'><code>--no-log</code></span> do not list one-line descriptions from the
 actual commits being merged.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--signoffcode"><a id="Documentation/merge-options.txt---signoff" class="anchor" href="#Documentation/merge-options.txt---signoff"></a><code>--signoff</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-signoffcode"><a id="Documentation/merge-options.txt---no-signoff" class="anchor" href="#Documentation/merge-options.txt---no-signoff"></a><code>--no-signoff</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--signoffcodespan"><a id="Documentation/merge-options.txt---signoff" class="anchor" href="#Documentation/merge-options.txt---signoff"></a><span class='synopsis'><code>--signoff</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-signoffcodespan"><a id="Documentation/merge-options.txt---no-signoff" class="anchor" href="#Documentation/merge-options.txt---no-signoff"></a><span class='synopsis'><code>--no-signoff</code></span> </dt>
 <dd>
-<p>Add a <code>Signed-off-by</code> trailer by the committer at the end of the commit
+<p>Add a <span class='synopsis'><code>Signed-off-by</code></span> trailer by the committer at the end of the commit
 log message.  The meaning of a signoff depends on the project
 to which you&#8217;re committing.  For example, it may certify that
 the committer has the rights to submit the work under the
@@ -104,62 +104,62 @@ Linux kernel and Git projects.)  Consult the documentation or
 leadership of the project to which you&#8217;re contributing to
 understand how the signoffs are used in that project.</p>
 <div class="paragraph">
-<p>The <code>--no-signoff</code> option can be used to countermand an earlier <code>--signoff</code>
+<p>The <span class='synopsis'><code>--no-signoff</code></span> option can be used to countermand an earlier <span class='synopsis'><code>--signoff</code></span>
 option on the command line.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--statcode"><a id="Documentation/merge-options.txt---stat" class="anchor" href="#Documentation/merge-options.txt---stat"></a><code>--stat</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-ncode"><a id="Documentation/merge-options.txt--n" class="anchor" href="#Documentation/merge-options.txt--n"></a><code>-n</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-statcode"><a id="Documentation/merge-options.txt---no-stat" class="anchor" href="#Documentation/merge-options.txt---no-stat"></a><code>--no-stat</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--statcodespan"><a id="Documentation/merge-options.txt---stat" class="anchor" href="#Documentation/merge-options.txt---stat"></a><span class='synopsis'><code>--stat</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-ncodespan"><a id="Documentation/merge-options.txt--n" class="anchor" href="#Documentation/merge-options.txt--n"></a><span class='synopsis'><code>-n</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-statcodespan"><a id="Documentation/merge-options.txt---no-stat" class="anchor" href="#Documentation/merge-options.txt---no-stat"></a><span class='synopsis'><code>--no-stat</code></span> </dt>
 <dd>
 <p>Show a diffstat at the end of the merge. The diffstat is also
 controlled by the configuration option merge.stat.</p>
 <div class="paragraph">
-<p>With <code>-n</code> or <code>--no-stat</code> do not show a diffstat at the end of the
+<p>With <span class='synopsis'><code>-n</code></span> or <span class='synopsis'><code>--no-stat</code></span> do not show a diffstat at the end of the
 merge.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--squashcode"><a id="Documentation/merge-options.txt---squash" class="anchor" href="#Documentation/merge-options.txt---squash"></a><code>--squash</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-squashcode"><a id="Documentation/merge-options.txt---no-squash" class="anchor" href="#Documentation/merge-options.txt---no-squash"></a><code>--no-squash</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--squashcodespan"><a id="Documentation/merge-options.txt---squash" class="anchor" href="#Documentation/merge-options.txt---squash"></a><span class='synopsis'><code>--squash</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-squashcodespan"><a id="Documentation/merge-options.txt---no-squash" class="anchor" href="#Documentation/merge-options.txt---no-squash"></a><span class='synopsis'><code>--no-squash</code></span> </dt>
 <dd>
 <p>Produce the working tree and index state as if a real merge
 happened (except for the merge information), but do not actually
-make a commit, move the <code>HEAD</code>, or record <code>$GIT_DIR/MERGE_HEAD</code>
-(to cause the next <code>git commit</code> command to create a merge
+make a commit, move the <span class='synopsis'><code>HEAD</code></span>, or record <span class='synopsis'><code>$GIT_DIR/MERGE_HEAD</code></span>
+(to cause the next <span class='synopsis'><code>git</code> <code>commit</code></span> command to create a merge
 commit).  This allows you to create a single commit on top of
 the current branch whose effect is the same as merging another
 branch (or more in case of an octopus).</p>
 <div class="paragraph">
-<p>With <code>--no-squash</code> perform the merge and commit the result. This
-option can be used to override <code>--squash</code>.</p>
+<p>With <span class='synopsis'><code>--no-squash</code></span> perform the merge and commit the result. This
+option can be used to override <span class='synopsis'><code>--squash</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>With <code>--squash</code>, <code>--commit</code> is not allowed, and will fail.</p>
+<p>With <span class='synopsis'><code>--squash</code></span>, <span class='synopsis'><code>--commit</code></span> is not allowed, and will fail.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-verifycode"><a id="Documentation/merge-options.txt---no-verify" class="anchor" href="#Documentation/merge-options.txt---no-verify"></a><code>--[no-]verify</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--codecodeno-codecodeverifycodespan"><a id="Documentation/merge-options.txt---no-verify" class="anchor" href="#Documentation/merge-options.txt---no-verify"></a><span class='synopsis'><code>--</code>[<code>no-</code>]<code>verify</code></span> </dt>
 <dd>
 <p>By default, the pre-merge and commit-msg hooks are run.
-When <code>--no-verify</code> is given, these are bypassed.
+When <span class='synopsis'><code>--no-verify</code></span> is given, these are bypassed.
 See also <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-sltstrategygtcode"><a id="Documentation/merge-options.txt--sstrategy" class="anchor" href="#Documentation/merge-options.txt--sstrategy"></a><code>-s &lt;strategy&gt;</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--strategyltstrategygtcode"><a id="Documentation/merge-options.txt---strategystrategy" class="anchor" href="#Documentation/merge-options.txt---strategystrategy"></a><code>--strategy=&lt;strategy&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-scodeemltstrategygtemspan"><a id="Documentation/merge-options.txt--sstrategy" class="anchor" href="#Documentation/merge-options.txt--sstrategy"></a><span class='synopsis'><code>-s</code> <em>&lt;strategy&gt;</em></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--strategycodeemltstrategygtemspan"><a id="Documentation/merge-options.txt---strategystrategy" class="anchor" href="#Documentation/merge-options.txt---strategystrategy"></a><span class='synopsis'><code>--strategy=</code><em>&lt;strategy&gt;</em></span> </dt>
 <dd>
 <p>Use the given merge strategy; can be supplied more than
 once to specify them in the order they should be tried.
-If there is no <code>-s</code> option, a built-in list of strategies
-is used instead (<code>ort</code> when merging a single head,
-<code>octopus</code> otherwise).</p>
+If there is no <span class='synopsis'><code>-s</code></span> option, a built-in list of strategies
+is used instead (<span class='synopsis'><code>ort</code></span> when merging a single head,
+<span class='synopsis'><code>octopus</code></span> otherwise).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-Xltoptiongtcode"><a id="Documentation/merge-options.txt--Xoption" class="anchor" href="#Documentation/merge-options.txt--Xoption"></a><code>-X &lt;option&gt;</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--strategy-optionltoptiongtcode"><a id="Documentation/merge-options.txt---strategy-optionoption" class="anchor" href="#Documentation/merge-options.txt---strategy-optionoption"></a><code>--strategy-option=&lt;option&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-Xcodeemltoptiongtemspan"><a id="Documentation/merge-options.txt--Xoption" class="anchor" href="#Documentation/merge-options.txt--Xoption"></a><span class='synopsis'><code>-X</code> <em>&lt;option&gt;</em></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--strategy-optioncodeemltoptiongtemspan"><a id="Documentation/merge-options.txt---strategy-optionoption" class="anchor" href="#Documentation/merge-options.txt---strategy-optionoption"></a><span class='synopsis'><code>--strategy-option=</code><em>&lt;option&gt;</em></span> </dt>
 <dd>
 <p>Pass merge strategy specific option through to the merge
 strategy.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--verify-signaturescode"><a id="Documentation/merge-options.txt---verify-signatures" class="anchor" href="#Documentation/merge-options.txt---verify-signatures"></a><code>--verify-signatures</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-verify-signaturescode"><a id="Documentation/merge-options.txt---no-verify-signatures" class="anchor" href="#Documentation/merge-options.txt---no-verify-signatures"></a><code>--no-verify-signatures</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--verify-signaturescodespan"><a id="Documentation/merge-options.txt---verify-signatures" class="anchor" href="#Documentation/merge-options.txt---verify-signatures"></a><span class='synopsis'><code>--verify-signatures</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-verify-signaturescodespan"><a id="Documentation/merge-options.txt---no-verify-signatures" class="anchor" href="#Documentation/merge-options.txt---no-verify-signatures"></a><span class='synopsis'><code>--no-verify-signatures</code></span> </dt>
 <dd>
 <p>Verify that the tip commit of the side branch being merged is
 signed with a valid key, i.e. a key that has a valid uid: in the
@@ -167,43 +167,43 @@ default trust model, this means the signing key has been signed by
 a trusted key.  If the tip commit of the side branch is not signed
 with a valid key, the merge is aborted.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--summarycode"><a id="Documentation/merge-options.txt---summary" class="anchor" href="#Documentation/merge-options.txt---summary"></a><code>--summary</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-summarycode"><a id="Documentation/merge-options.txt---no-summary" class="anchor" href="#Documentation/merge-options.txt---no-summary"></a><code>--no-summary</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--summarycodespan"><a id="Documentation/merge-options.txt---summary" class="anchor" href="#Documentation/merge-options.txt---summary"></a><span class='synopsis'><code>--summary</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-summarycodespan"><a id="Documentation/merge-options.txt---no-summary" class="anchor" href="#Documentation/merge-options.txt---no-summary"></a><span class='synopsis'><code>--no-summary</code></span> </dt>
 <dd>
-<p>Synonyms to <code>--stat</code> and <code>--no-stat</code>; these are deprecated and will be
+<p>Synonyms to <span class='synopsis'><code>--stat</code></span> and <span class='synopsis'><code>--no-stat</code></span>; these are deprecated and will be
 removed in the future.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-qcode"><a id="Documentation/merge-options.txt--q" class="anchor" href="#Documentation/merge-options.txt--q"></a><code>-q</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--quietcode"><a id="Documentation/merge-options.txt---quiet" class="anchor" href="#Documentation/merge-options.txt---quiet"></a><code>--quiet</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-qcodespan"><a id="Documentation/merge-options.txt--q" class="anchor" href="#Documentation/merge-options.txt--q"></a><span class='synopsis'><code>-q</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--quietcodespan"><a id="Documentation/merge-options.txt---quiet" class="anchor" href="#Documentation/merge-options.txt---quiet"></a><span class='synopsis'><code>--quiet</code></span> </dt>
 <dd>
-<p>Operate quietly. Implies <code>--no-progress</code>.</p>
+<p>Operate quietly. Implies <span class='synopsis'><code>--no-progress</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code-vcode"><a id="Documentation/merge-options.txt--v" class="anchor" href="#Documentation/merge-options.txt--v"></a><code>-v</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--verbosecode"><a id="Documentation/merge-options.txt---verbose" class="anchor" href="#Documentation/merge-options.txt---verbose"></a><code>--verbose</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode-vcodespan"><a id="Documentation/merge-options.txt--v" class="anchor" href="#Documentation/merge-options.txt--v"></a><span class='synopsis'><code>-v</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--verbosecodespan"><a id="Documentation/merge-options.txt---verbose" class="anchor" href="#Documentation/merge-options.txt---verbose"></a><span class='synopsis'><code>--verbose</code></span> </dt>
 <dd>
 <p>Be verbose.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--progresscode"><a id="Documentation/merge-options.txt---progress" class="anchor" href="#Documentation/merge-options.txt---progress"></a><code>--progress</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-progresscode"><a id="Documentation/merge-options.txt---no-progress" class="anchor" href="#Documentation/merge-options.txt---no-progress"></a><code>--no-progress</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--progresscodespan"><a id="Documentation/merge-options.txt---progress" class="anchor" href="#Documentation/merge-options.txt---progress"></a><span class='synopsis'><code>--progress</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-progresscodespan"><a id="Documentation/merge-options.txt---no-progress" class="anchor" href="#Documentation/merge-options.txt---no-progress"></a><span class='synopsis'><code>--no-progress</code></span> </dt>
 <dd>
 <p>Turn progress on/off explicitly. If neither is specified,
 progress is shown if standard error is connected to a terminal.
 Note that not all merge strategies may support progress
 reporting.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--autostashcode"><a id="Documentation/merge-options.txt---autostash" class="anchor" href="#Documentation/merge-options.txt---autostash"></a><code>--autostash</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-autostashcode"><a id="Documentation/merge-options.txt---no-autostash" class="anchor" href="#Documentation/merge-options.txt---no-autostash"></a><code>--no-autostash</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--autostashcodespan"><a id="Documentation/merge-options.txt---autostash" class="anchor" href="#Documentation/merge-options.txt---autostash"></a><span class='synopsis'><code>--autostash</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-autostashcodespan"><a id="Documentation/merge-options.txt---no-autostash" class="anchor" href="#Documentation/merge-options.txt---no-autostash"></a><span class='synopsis'><code>--no-autostash</code></span> </dt>
 <dd>
 <p>Automatically create a temporary stash entry before the operation
-begins, record it in the ref <code>MERGE_AUTOSTASH</code>
+begins, record it in the ref <span class='synopsis'><code>MERGE_AUTOSTASH</code></span>
 and apply it after the operation ends.  This means
 that you can run the operation on a dirty worktree.  However, use
 with care: the final stash application after a successful
 merge might result in non-trivial conflicts.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--allow-unrelated-historiescode"><a id="Documentation/merge-options.txt---allow-unrelated-histories" class="anchor" href="#Documentation/merge-options.txt---allow-unrelated-histories"></a><code>--allow-unrelated-histories</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--allow-unrelated-historiescodespan"><a id="Documentation/merge-options.txt---allow-unrelated-histories" class="anchor" href="#Documentation/merge-options.txt---allow-unrelated-histories"></a><span class='synopsis'><code>--allow-unrelated-histories</code></span> </dt>
 <dd>
-<p>By default, <code>git merge</code> command refuses to merge histories
+<p>By default, <span class='synopsis'><code>git</code> <code>merge</code></span> command refuses to merge histories
 that do not share a common ancestor.  This option can be
 used to override this safety when merging histories of two
 projects that started their lives independently. As that is

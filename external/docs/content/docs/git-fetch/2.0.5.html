@@ -38,7 +38,7 @@ along with the objects necessary to complete them.</p>
 </div>
 <div class="paragraph">
 <p>The ref names and their object names of fetched refs are stored
-in <code>.git/FETCH_HEAD</code>.  This information is left for a later merge
+in <span class='synopsis'><code>.git/FETCH_HEAD</code></span>.  This information is left for a later merge
 operation done by <em>git merge</em>.</p>
 </div>
 <div class="paragraph">
@@ -57,7 +57,7 @@ there is a remotes.&lt;group&gt; entry in the configuration file.
 (See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 <div class="paragraph">
-<p>When no remote is specified, by default the <code>origin</code> remote will be used,
+<p>When no remote is specified, by default the <span class='synopsis'><code>origin</code></span> remote will be used,
 unless there&#8217;s an upstream branch configured for the current branch.</p>
 </div>
 </div>
@@ -75,13 +75,13 @@ unless there&#8217;s an upstream branch configured for the current branch.</p>
 <dt class="hdlist1" id="Documentation/git-fetch.txt---append"><a class="anchor" href="#Documentation/git-fetch.txt---append"></a>--append </dt>
 <dd>
 <p>Append ref names and object names of fetched refs to the
-existing contents of <code>.git/FETCH_HEAD</code>.  Without this
-option old data in <code>.git/FETCH_HEAD</code> will be overwritten.</p>
+existing contents of <span class='synopsis'><code>.git/FETCH_HEAD</code></span>.  Without this
+option old data in <span class='synopsis'><code>.git/FETCH_HEAD</code></span> will be overwritten.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fetch.txt---depthltdepthgt"><a id="Documentation/git-fetch.txt---depthdepth" class="anchor" href="#Documentation/git-fetch.txt---depthdepth"></a>--depth=&lt;depth&gt; </dt>
 <dd>
 <p>Deepen or shorten the history of a <em>shallow</em> repository created by
-<code>git clone</code> with <code>--depth=&lt;depth&gt;</code> option (see <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>)
+<span class='synopsis'><code>git</code> <code>clone</code></span> with <span class='synopsis'><code>--depth=</code><em>&lt;depth&gt;</em></span> option (see <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>)
 to the specified number of commits from the tip of each remote
 branch history. Tags for the deepened commits are not fetched.</p>
 </dd>
@@ -98,7 +98,7 @@ the current repository has the same history as the source repository.</p>
 <dt class="hdlist1" id="Documentation/git-fetch.txt---update-shallow"><a class="anchor" href="#Documentation/git-fetch.txt---update-shallow"></a>--update-shallow </dt>
 <dd>
 <p>By default when fetching from a shallow repository,
-<code>git fetch</code> refuses refs that require updating
+<span class='synopsis'><code>git</code> <code>fetch</code></span> refuses refs that require updating
 .git/shallow. This option updates .git/shallow and accept such
 refs.</p>
 </dd>
@@ -109,10 +109,10 @@ refs.</p>
 <dt class="hdlist1" id="Documentation/git-fetch.txt--f"><a class="anchor" href="#Documentation/git-fetch.txt--f"></a>-f </dt>
 <dt class="hdlist1" id="Documentation/git-fetch.txt---force"><a class="anchor" href="#Documentation/git-fetch.txt---force"></a>--force </dt>
 <dd>
-<p>When <em>git fetch</em> is used with <code>&lt;rbranch&gt;:&lt;lbranch&gt;</code>
+<p>When <em>git fetch</em> is used with <span class='synopsis'><em>&lt;rbranch&gt;</em><code>:</code><em>&lt;lbranch&gt;</em></span>
 refspec, it refuses to update the local branch
-<code>&lt;lbranch&gt;</code> unless the remote branch <code>&lt;rbranch&gt;</code> it
-fetches is a descendant of <code>&lt;lbranch&gt;</code>.  This option
+<span class='synopsis'><em>&lt;lbranch&gt;</em></span> unless the remote branch <span class='synopsis'><em>&lt;rbranch&gt;</em></span> it
+fetches is a descendant of <span class='synopsis'><em>&lt;lbranch&gt;</em></span>.  This option
 overrides that check.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fetch.txt--k"><a class="anchor" href="#Documentation/git-fetch.txt--k"></a>-k </dt>
@@ -150,7 +150,7 @@ setting. See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 <dt class="hdlist1" id="Documentation/git-fetch.txt---tags"><a class="anchor" href="#Documentation/git-fetch.txt---tags"></a>--tags </dt>
 <dd>
 <p>Fetch all tags from the remote (i.e., fetch remote tags
-<code>refs/tags/*</code> into local tags with the same name), in addition
+<span class='synopsis'><code>refs/tags/*</code></span> into local tags with the same name), in addition
 to whatever else would otherwise be fetched.  Using this
 option alone does not subject tags to pruning, even if --prune
 is used (though tags may be pruned anyway if they are also the
@@ -240,13 +240,13 @@ of remotes.&lt;group&gt; in the configuration file.
 <dt class="hdlist1" id="Documentation/git-fetch.txt-ltrefspecgt"><a id="Documentation/git-fetch.txt-refspec" class="anchor" href="#Documentation/git-fetch.txt-refspec"></a>&lt;refspec&gt; </dt>
 <dd>
 <p>The format of a &lt;refspec&gt; parameter is an optional plus
-<code>+</code>, followed by the source ref &lt;src&gt;, followed
-by a colon <code>:</code>, followed by the destination ref &lt;dst&gt;.</p>
+<span class='synopsis'><code>+</code></span>, followed by the source ref &lt;src&gt;, followed
+by a colon <span class='synopsis'><code>:</code></span>, followed by the destination ref &lt;dst&gt;.</p>
 <div class="paragraph">
 <p>The remote ref that matches &lt;src&gt;
 is fetched, and if &lt;dst&gt; is not empty string, the local
 ref that matches it is fast-forwarded using &lt;src&gt;.
-If the optional plus <code>+</code> is used, the local ref
+If the optional plus <span class='synopsis'><code>+</code></span> is used, the local ref
 is updated even if it does not result in a fast-forward
 update.</p>
 </div>
@@ -262,7 +262,7 @@ modified in non-linear ways such as being rewound and
 rebased frequently, then a pull will attempt a merge with
 an older version of itself, likely conflict, and fail.
 It is under these conditions that you would want to use
-the <code>+</code> sign to indicate non-fast-forward updates will
+the <span class='synopsis'><code>+</code></span> sign to indicate non-fast-forward updates will
 be needed.  There is currently no easy way to determine
 or declare that a branch will be made available in a
 repository with this behavior; the pulling user simply
@@ -279,16 +279,17 @@ must know this is the expected usage pattern for a branch.
 </td>
 <td class="content">
 You never do your own development on branches that appear
-on the right hand side of a &lt;refspec&gt; colon on <code>Pull:</code> lines;
+on the right hand side of a &lt;refspec&gt; colon on <span class='synopsis'><code>Pull:</code></span> lines;
 they are to be updated by <em>git fetch</em>.  If you intend to do
-development derived from a remote branch <code>B</code>, have a <code>Pull:</code>
-line to track it (i.e. <code>Pull: B:remote-B</code>), and have a separate
-branch <code>my-B</code> to do your development on top of it.  The latter
-is created by <code>git branch my-B remote-B</code> (or its equivalent <code>git
-checkout -b my-B remote-B</code>).  Run <code>git fetch</code> to keep track of
+development derived from a remote branch <span class='synopsis'><code>B</code></span>, have a <span class='synopsis'><code>Pull:</code></span>
+line to track it (i.e. <span class='synopsis'><code>Pull:</code> <code>B:remote-B</code></span>), and have a separate
+branch <span class='synopsis'><code>my-B</code></span> to do your development on top of it.  The latter
+is created by <span class='synopsis'><code>git</code> <code>branch</code> <code>my-B</code> <code>remote-B</code></span> (or its equivalent <span class='synopsis'><code>git</code>
+
+<code>checkout</code> <code>-b</code> <code>my-B</code> <code>remote-B</code></span>).  Run <span class='synopsis'><code>git</code> <code>fetch</code></span> to keep track of
 the progress of the remote side, and when you see something new
 on the remote branch, merge it into your development branch with
-<code>git pull . remote-B</code>, while you are on <code>my-B</code> branch.
+<span class='synopsis'><code>git</code> <code>pull</code> <code>.</code> <code>remote-B</code></span>, while you are on <span class='synopsis'><code>my-B</code></span> branch.
 </td>
 </tr>
 </table>
@@ -302,13 +303,13 @@ on the remote branch, merge it into your development branch with
 <td class="content">
 There is a difference between listing multiple &lt;refspec&gt;
 directly on <em>git pull</em> command line and having multiple
-<code>Pull:</code> &lt;refspec&gt; lines for a &lt;repository&gt; and running
+<span class='synopsis'><code>Pull:</code></span> &lt;refspec&gt; lines for a &lt;repository&gt; and running
 <em>git pull</em> command without any explicit &lt;refspec&gt; parameters.
 &lt;refspec&gt; listed explicitly on the command line are always
 merged into the current branch after fetching.  In other words,
 if you list more than one remote refs, you would be making
 an Octopus.  While <em>git pull</em> run without any explicit &lt;refspec&gt;
-parameter takes default &lt;refspec&gt;s from <code>Pull:</code> lines, it
+parameter takes default &lt;refspec&gt;s from <span class='synopsis'><code>Pull:</code></span> lines, it
 merges only the first &lt;refspec&gt; found into the current branch,
 after fetching all the remote refs.  This is because making an
 Octopus from remote refs is rarely done, while keeping track
@@ -324,7 +325,7 @@ is often useful.
 <div class="ulist">
 <ul>
 <li>
-<p><code>tag &lt;tag&gt;</code> means the same as <code>refs/tags/&lt;tag&gt;:refs/tags/&lt;tag&gt;</code>;
+<p><span class='synopsis'><code>tag</code> <em>&lt;tag&gt;</em></span> means the same as <span class='synopsis'><code>refs/tags/</code><em>&lt;tag&gt;</em><code>:refs/tags/</code><em>&lt;tag&gt;</em></span>;
 it requests fetching everything up to the given tag.</p>
 </li>
 <li>
@@ -392,8 +393,8 @@ should be used with caution on unsecured networks.</p>
 <div class="paragraph">
 <p>This syntax is only recognized if there are no slashes before the
 first colon. This helps differentiate a local path that contains a
-colon. For example the local path <code>foo:bar</code> could be specified as an
-absolute path or <code>./foo:bar</code> to avoid being misinterpreted as an ssh
+colon. For example the local path <span class='synopsis'><code>foo:bar</code></span> could be specified as an
+absolute path or <span class='synopsis'><code>./foo:bar</code></span> to avoid being misinterpreted as an ssh
 url.</p>
 </div>
 <div class="paragraph">
@@ -506,18 +507,18 @@ use the original URL.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The name of one of the following can be used instead
-of a URL as <code>&lt;repository&gt;</code> argument:</p>
+of a URL as <span class='synopsis'><em>&lt;repository&gt;</em></span> argument:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>a remote in the Git configuration file: <code>$GIT_DIR/config</code>,</p>
+<p>a remote in the Git configuration file: <span class='synopsis'><code>$GIT_DIR/config</code></span>,</p>
 </li>
 <li>
-<p>a file in the <code>$GIT_DIR/remotes</code> directory, or</p>
+<p>a file in the <span class='synopsis'><code>$GIT_DIR/remotes</code></span> directory, or</p>
 </li>
 <li>
-<p>a file in the <code>$GIT_DIR/branches</code> directory.</p>
+<p>a file in the <span class='synopsis'><code>$GIT_DIR/branches</code></span> directory.</p>
 </li>
 </ul>
 </div>
@@ -530,7 +531,7 @@ because they each contain a refspec which git will use by default.</p>
 <div class="paragraph">
 <p>You can choose to provide the name of a remote which you had previously
 configured using <a href='{{< relurl "docs/git-remote" >}}'>git-remote[1]</a>, <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>
-or even by a manual edit to the <code>$GIT_DIR/config</code> file.  The URL of
+or even by a manual edit to the <span class='synopsis'><code>$GIT_DIR/config</code></span> file.  The URL of
 this remote will be used to access the repository.  The refspec
 of this remote will be used by default when you do
 not provide a refspec on the command line.  The entry in the
@@ -546,15 +547,15 @@ config file would appear like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>&lt;pushurl&gt;</code> is used for pushes only. It is optional and defaults
-to <code>&lt;url&gt;</code>.</p>
+<p>The <span class='synopsis'><em>&lt;pushurl&gt;</em></span> is used for pushes only. It is optional and defaults
+to <span class='synopsis'><em>&lt;url&gt;</em></span>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_named_file_in_git_dirremotes"><a class="anchor" href="#_named_file_in_git_dirremotes"></a>Named file in <code>$GIT_DIR/remotes</code></h3>
+<h3 id="_named_file_in_git_dirremotes"><a class="anchor" href="#_named_file_in_git_dirremotes"></a>Named file in <span class='synopsis'><code>$GIT_DIR/remotes</code></span></h3>
 <div class="paragraph">
 <p>You can choose to provide the name of a
-file in <code>$GIT_DIR/remotes</code>.  The URL
+file in <span class='synopsis'><code>$GIT_DIR/remotes</code></span>.  The URL
 in this file will be used to access the repository.  The refspec
 in this file will be used as default when you do not
 provide a refspec on the command line.  This file should have the
@@ -568,17 +569,17 @@ following format:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>Push:</code> lines are used by <em>git push</em> and
-<code>Pull:</code> lines are used by <em>git pull</em> and <em>git fetch</em>.
-Multiple <code>Push:</code> and <code>Pull:</code> lines may
+<p><span class='synopsis'><code>Push:</code></span> lines are used by <em>git push</em> and
+<span class='synopsis'><code>Pull:</code></span> lines are used by <em>git pull</em> and <em>git fetch</em>.
+Multiple <span class='synopsis'><code>Push:</code></span> and <span class='synopsis'><code>Pull:</code></span> lines may
 be specified for additional branch mappings.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_named_file_in_git_dirbranches"><a class="anchor" href="#_named_file_in_git_dirbranches"></a>Named file in <code>$GIT_DIR/branches</code></h3>
+<h3 id="_named_file_in_git_dirbranches"><a class="anchor" href="#_named_file_in_git_dirbranches"></a>Named file in <span class='synopsis'><code>$GIT_DIR/branches</code></span></h3>
 <div class="paragraph">
 <p>You can choose to provide the name of a
-file in <code>$GIT_DIR/branches</code>.
+file in <span class='synopsis'><code>$GIT_DIR/branches</code></span>.
 The URL in this file will be used to access the repository.
 This file should have the following format:</p>
 </div>
@@ -588,13 +589,13 @@ This file should have the following format:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>&lt;url&gt;</code> is required; <code>#&lt;head&gt;</code> is optional.</p>
+<p><span class='synopsis'><em>&lt;url&gt;</em></span> is required; <span class='synopsis'><code>#</code><em>&lt;head&gt;</em></span> is optional.</p>
 </div>
 <div class="paragraph">
 <p>Depending on the operation, git will use one of the following
 refspecs, if you don&#8217;t provide one on the command line.
-<code>&lt;branch&gt;</code> is the name of this file in <code>$GIT_DIR/branches</code> and
-<code>&lt;head&gt;</code> defaults to <code>master</code>.</p>
+<span class='synopsis'><em>&lt;branch&gt;</em></span> is the name of this file in <span class='synopsis'><code>$GIT_DIR/branches</code></span> and
+<span class='synopsis'><em>&lt;head&gt;</em></span> defaults to <span class='synopsis'><code>master</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>git fetch uses:</p>
@@ -642,13 +643,13 @@ refspec.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This updates (or creates, as necessary) branches <code>pu</code> and <code>tmp</code> in
+<p>This updates (or creates, as necessary) branches <span class='synopsis'><code>pu</code></span> and <span class='synopsis'><code>tmp</code></span> in
 the local repository by fetching from the branches (respectively)
-<code>pu</code> and <code>maint</code> from the remote repository.</p>
+<span class='synopsis'><code>pu</code></span> and <span class='synopsis'><code>maint</code></span> from the remote repository.</p>
 </div>
 <div class="paragraph">
-<p>The <code>pu</code> branch will be updated even if it is does not fast-forward,
-because it is prefixed with a plus sign; <code>tmp</code> will not be.</p>
+<p>The <span class='synopsis'><code>pu</code></span> branch will be updated even if it is does not fast-forward,
+because it is prefixed with a plus sign; <span class='synopsis'><code>tmp</code></span> will not be.</p>
 </div>
 </li>
 </ul>

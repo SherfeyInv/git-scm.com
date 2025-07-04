@@ -25,7 +25,7 @@ same.</p>
 <h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To remove unreachable objects from your repository, Git offers <code>git repack -Ad</code>
+<p>To remove unreachable objects from your repository, Git offers <span class='synopsis'><code>git</code> <code>repack</code> <code>-Ad</code></span>
 (see <a href='{{< relurl "docs/git-repack" >}}'>git-repack[1]</a>). Quoting from the documentation:</p>
 </div>
 <div class="quoteblock">
@@ -55,7 +55,7 @@ freshened at once.</p>
 <div class="paragraph">
 <p>This can lead to undesirable situations when a repository contains many
 unreachable objects which have not yet left the grace period. Having large
-directories in the shards of <code>.git/objects</code> can lead to decreased performance in
+directories in the shards of <span class='synopsis'><code>.git/objects</code></span> can lead to decreased performance in
 the repository. But given enough unreachable objects, this can lead to inode
 starvation and degrade the performance of the whole system. Since we
 can never pack those objects, these repositories often take up a large amount of
@@ -73,11 +73,11 @@ state by including the per-object mtimes in a separate file alongside a single
 pack containing all loose objects.</p>
 </div>
 <div class="paragraph">
-<p>A cruft pack is written by <code>git repack --cruft</code> when generating a new pack.
-<a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>'s <code>--cruft</code> option. Note that <code>git repack --cruft</code>
+<p>A cruft pack is written by <span class='synopsis'><code>git</code> <code>repack</code> <code>--cruft</code></span> when generating a new pack.
+<a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>'s <span class='synopsis'><code>--cruft</code></span> option. Note that <span class='synopsis'><code>git</code> <code>repack</code> <code>--cruft</code></span>
 is a classic all-into-one repack, meaning that everything in the resulting pack is
-reachable, and everything else is unreachable. Once written, the <code>--cruft</code>
-option instructs <code>git repack</code> to generate another pack containing only objects
+reachable, and everything else is unreachable. Once written, the <span class='synopsis'><code>--cruft</code></span>
+option instructs <span class='synopsis'><code>git</code> <code>repack</code></span> to generate another pack containing only objects
 not packed in the previous step (which equates to packing all unreachable
 objects together). This progresses as follows:</p>
 </div>
@@ -93,7 +93,7 @@ tip.</p>
 step, adding every object along the way to the pack.</p>
 </li>
 <li>
-<p>Write the pack out, along with a <code>.mtimes</code> file that records the per-object
+<p>Write the pack out, along with a <span class='synopsis'><code>.mtimes</code></span> file that records the per-object
 timestamps.</p>
 </li>
 </ol>
@@ -105,9 +105,9 @@ of packs which will not be deleted by the repack; in other words, they contain
 all of the repository&#8217;s reachable objects.</p>
 </div>
 <div class="paragraph">
-<p>When a repository already has a cruft pack, <code>git repack --cruft</code> typically only
-adds objects to it. An exception to this is when <code>git repack</code> is given the
-<code>--cruft-expiration</code> option, which allows the generated cruft pack to omit
+<p>When a repository already has a cruft pack, <span class='synopsis'><code>git</code> <code>repack</code> <code>--cruft</code></span> typically only
+adds objects to it. An exception to this is when <span class='synopsis'><code>git</code> <code>repack</code></span> is given the
+<span class='synopsis'><code>--cruft-expiration</code></span> option, which allows the generated cruft pack to omit
 expired objects instead of waiting for <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a> to expire those objects
 later on.</p>
 </div>
@@ -123,9 +123,9 @@ unreachable objects.</p>
 <div class="paragraph">
 <p>Repositories that have cruft packs in them will continue to work with any older
 version of Git. Note, however, that previous versions of Git which do not
-understand the <code>.mtimes</code> file will use the cruft pack&#8217;s mtime as the mtime for
+understand the <span class='synopsis'><code>.mtimes</code></span> file will use the cruft pack&#8217;s mtime as the mtime for
 all of the objects in it. In other words, do not expect older (pre-cruft pack)
-versions of Git to interpret or even read the contents of the <code>.mtimes</code> file.</p>
+versions of Git to interpret or even read the contents of the <span class='synopsis'><code>.mtimes</code></span> file.</p>
 </div>
 <div class="paragraph">
 <p>Note that having mixed versions of Git GC-ing the same repository can lead to
@@ -151,8 +151,8 @@ result of repeatedly resetting the objects' mtimes to the present time.</p>
 </div>
 <div class="paragraph">
 <p>If you are GC-ing repositories in a mixed version environment, consider omitting
-the <code>--cruft</code> option when using <a href='{{< relurl "docs/git-repack" >}}'>git-repack[1]</a> and <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>, and
-leaving the <code>gc.cruftPacks</code> configuration unset until all writers understand
+the <span class='synopsis'><code>--cruft</code></span> option when using <a href='{{< relurl "docs/git-repack" >}}'>git-repack[1]</a> and <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>, and
+leaving the <span class='synopsis'><code>gc.cruftPacks</code></span> configuration unset until all writers understand
 cruft packs.</p>
 </div>
 </div>
@@ -175,9 +175,9 @@ cruft packs.</p>
 </div>
 <div class="paragraph">
 <p>On the location of mtime data, a new auxiliary file tied to the pack was chosen
-to avoid complicating the <code>.idx</code> format. If the <code>.idx</code> format were ever to gain
+to avoid complicating the <span class='synopsis'><code>.idx</code></span> format. If the <span class='synopsis'><code>.idx</code></span> format were ever to gain
 support for optional chunks of data, it may make sense to consolidate the
-<code>.mtimes</code> format into the <code>.idx</code> itself.</p>
+<span class='synopsis'><code>.mtimes</code></span> format into the <span class='synopsis'><code>.idx</code></span> itself.</p>
 </div>
 <div class="paragraph">
 <p>Storing unreachable objects among multiple cruft packs (e.g., creating a new

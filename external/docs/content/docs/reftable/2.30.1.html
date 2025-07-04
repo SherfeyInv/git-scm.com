@@ -43,7 +43,7 @@ storing 41 bytes (and another file for the corresponding reflog). This
 negatively affects the number of inodes available when a large number of
 repositories are stored on the same filesystem. Readers can be penalized
 due to the larger number of syscalls required to traverse and read the
-<code>$GIT_DIR/refs</code> directory.</p>
+<span class='synopsis'><code>$GIT_DIR/refs</code></span> directory.</p>
 </div>
 </div>
 <div class="sect3">
@@ -59,10 +59,10 @@ repository is cold and not in process or kernel cache.</p>
 one reference (for allow-tip-sha1-in-want).</p>
 </li>
 <li>
-<p>Efficient enumeration of an entire namespace, such as <code>refs/tags/</code>.</p>
+<p>Efficient enumeration of an entire namespace, such as <span class='synopsis'><code>refs/tags/</code></span>.</p>
 </li>
 <li>
-<p>Support atomic push with <code>O(size_of_update)</code> operations.</p>
+<p>Support atomic push with <span class='synopsis'><code>O</code>(<code>size_of_update</code>)</span> operations.</p>
 </li>
 <li>
 <p>Combine reflog storage with ref storage for small transactions.</p>
@@ -285,14 +285,14 @@ while (buf[ptr] &amp; 0x80) {
 <div class="sect3">
 <h4 id="_directoryfile_conflicts"><a class="anchor" href="#_directoryfile_conflicts"></a>Directory/file conflicts</h4>
 <div class="paragraph">
-<p>The reftable format accepts both <code>refs/heads/foo</code> and
-<code>refs/heads/foo/bar</code> as distinct references.</p>
+<p>The reftable format accepts both <span class='synopsis'><code>refs/heads/foo</code></span> and
+<span class='synopsis'><code>refs/heads/foo/bar</code></span> as distinct references.</p>
 </div>
 <div class="paragraph">
 <p>This property is useful for retaining log records in reftable, but may
-confuse versions of Git using <code>$GIT_DIR/refs</code> directory tree to maintain
-references. Users of reftable may choose to continue to reject <code>foo</code> and
-<code>foo/bar</code> type conflicts to prevent problems for peers.</p>
+confuse versions of Git using <span class='synopsis'><code>$GIT_DIR/refs</code></span> directory tree to maintain
+references. Users of reftable may choose to continue to reject <span class='synopsis'><code>foo</code></span> and
+<span class='synopsis'><code>foo/bar</code></span> type conflicts to prevent problems for peers.</p>
 </div>
 </div>
 </div>
@@ -319,8 +319,8 @@ footer</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>A log-only file omits the <code>ref_block</code>, <code>ref_index</code>, <code>obj_block</code> and
-<code>obj_index</code> sections, containing only the file header and log block:</p>
+<p>A log-only file omits the <span class='synopsis'><code>ref_block</code></span>, <span class='synopsis'><code>ref_index</code></span>, <span class='synopsis'><code>obj_block</code></span> and
+<span class='synopsis'><code>obj_index</code></span> sections, containing only the file header and log block:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -352,26 +352,26 @@ yield better compression, with a possible increased cost incurred by
 readers during access.</p>
 </div>
 <div class="paragraph">
-<p>The largest block size is <code>16777215</code> bytes (15.99 MiB).</p>
+<p>The largest block size is <span class='synopsis'><code>16777215</code></span> bytes (15.99 MiB).</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_block_alignment"><a class="anchor" href="#_block_alignment"></a>Block alignment</h4>
 <div class="paragraph">
 <p>Writers may choose to align blocks at multiples of the block size by
-including <code>padding</code> filled with NUL bytes at the end of a block to round
+including <span class='synopsis'><code>padding</code></span> filled with NUL bytes at the end of a block to round
 out to the chosen alignment. When alignment is used, writers must
-specify the alignment with the file header&#8217;s <code>block_size</code> field.</p>
+specify the alignment with the file header&#8217;s <span class='synopsis'><code>block_size</code></span> field.</p>
 </div>
 <div class="paragraph">
 <p>Block alignment is not required by the file format. Unaligned files must
-set <code>block_size = 0</code> in the file header, and omit <code>padding</code>. Unaligned
+set <span class='synopsis'><code>block_size</code> <code>=</code> <code>0</code></span> in the file header, and omit <span class='synopsis'><code>padding</code></span>. Unaligned
 files with more than one ref block must include the <a href="#Ref-index">ref
 index</a> to support fast lookup. Readers must be able to read both aligned
 and non-aligned files.</p>
 </div>
 <div class="paragraph">
-<p>Very small files (e.g. a single ref block) may omit <code>padding</code> and the ref
+<p>Very small files (e.g. a single ref block) may omit <span class='synopsis'><code>padding</code></span> and the ref
 index to reduce total file size.</p>
 </div>
 </div>
@@ -390,15 +390,15 @@ uint64( max_update_index )</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Aligned files must specify <code>block_size</code> to configure readers with the
-expected block alignment. Unaligned files must set <code>block_size = 0</code>.</p>
+<p>Aligned files must specify <span class='synopsis'><code>block_size</code></span> to configure readers with the
+expected block alignment. Unaligned files must set <span class='synopsis'><code>block_size</code> <code>=</code> <code>0</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>The <code>min_update_index</code> and <code>max_update_index</code> describe bounds for the
-<code>update_index</code> field of all log records in this file. When reftables are
+<p>The <span class='synopsis'><code>min_update_index</code></span> and <span class='synopsis'><code>max_update_index</code></span> describe bounds for the
+<span class='synopsis'><code>update_index</code></span> field of all log records in this file. When reftables are
 used in a stack for <a href="#Update-transactions">transactions</a>, these
 fields can order the files such that the prior file&#8217;s
-<code>max_update_index + 1</code> is the next file&#8217;s <code>min_update_index</code>.</p>
+<span class='synopsis'><code>max_update_index</code> <code>+</code> <code>1</code></span> is the next file&#8217;s <span class='synopsis'><code>min_update_index</code></span>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -417,7 +417,7 @@ uint32( hash_id )</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The header is identical to <code>version_number=1</code>, with the 4-byte hash ID
+<p>The header is identical to <span class='synopsis'><code>version_number=1</code></span>, with the 4-byte hash ID
 ("sha1" for SHA1 and "s256" for SHA-256) append to the header.</p>
 </div>
 <div class="paragraph">
@@ -454,39 +454,39 @@ padding?</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Blocks begin with <code>block_type = 'r'</code> and a 3-byte <code>block_len</code> which
+<p>Blocks begin with <span class='synopsis'><code>block_type</code> <code>=</code> <code>r'</code></span> and a 3-byte <span class='synopsis'><code>block_len</code></span> which
 encodes the number of bytes in the block up to, but not including the
-optional <code>padding</code>. This is always less than or equal to the file&#8217;s
-block size. In the first ref block, <code>block_len</code> includes 24 bytes for
+optional <span class='synopsis'><code>padding</code></span>. This is always less than or equal to the file&#8217;s
+block size. In the first ref block, <span class='synopsis'><code>block_len</code></span> includes 24 bytes for
 the file header.</p>
 </div>
 <div class="paragraph">
-<p>The 2-byte <code>restart_count</code> stores the number of entries in the
-<code>restart_offset</code> list, which must not be empty. Readers can use
-<code>restart_count</code> to binary search between restarts before starting a
+<p>The 2-byte <span class='synopsis'><code>restart_count</code></span> stores the number of entries in the
+<span class='synopsis'><code>restart_offset</code></span> list, which must not be empty. Readers can use
+<span class='synopsis'><code>restart_count</code></span> to binary search between restarts before starting a
 linear scan.</p>
 </div>
 <div class="paragraph">
-<p>Exactly <code>restart_count</code> 3-byte <code>restart_offset</code> values precedes the
-<code>restart_count</code>. Offsets are relative to the start of the block and
-refer to the first byte of any <code>ref_record</code> whose name has not been
-prefix compressed. Entries in the <code>restart_offset</code> list must be sorted,
+<p>Exactly <span class='synopsis'><code>restart_count</code></span> 3-byte <span class='synopsis'><code>restart_offset</code></span> values precedes the
+<span class='synopsis'><code>restart_count</code></span>. Offsets are relative to the start of the block and
+refer to the first byte of any <span class='synopsis'><code>ref_record</code></span> whose name has not been
+prefix compressed. Entries in the <span class='synopsis'><code>restart_offset</code></span> list must be sorted,
 ascending. Readers can start linear scans from any of these records.</p>
 </div>
 <div class="paragraph">
-<p>A variable number of <code>ref_record</code> fill the middle of the block,
+<p>A variable number of <span class='synopsis'><code>ref_record</code></span> fill the middle of the block,
 describing reference names and values. The format is described below.</p>
 </div>
 <div class="paragraph">
 <p>As the first ref block shares the first file block with the file header,
-all <code>restart_offset</code> in the first block are relative to the start of the
+all <span class='synopsis'><code>restart_offset</code></span> in the first block are relative to the start of the
 file (position 0), and include the file header. This forces the first
-<code>restart_offset</code> to be <code>28</code>.</p>
+<span class='synopsis'><code>restart_offset</code></span> to be <span class='synopsis'><code>28</code></span>.</p>
 </div>
 <div class="sect4">
 <h5 id="_ref_record"><a class="anchor" href="#_ref_record"></a>ref record</h5>
 <div class="paragraph">
-<p>A <code>ref_record</code> describes a single reference, storing both the name and
+<p>A <span class='synopsis'><code>ref_record</code></span> describes a single reference, storing both the name and
 its value(s). Records are formatted as:</p>
 </div>
 <div class="literalblock">
@@ -499,14 +499,14 @@ value?</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>prefix_length</code> field specifies how many leading bytes of the prior
+<p>The <span class='synopsis'><code>prefix_length</code></span> field specifies how many leading bytes of the prior
 reference record&#8217;s name should be copied to obtain this reference&#8217;s
 name. This must be 0 for the first reference in any block, and also must
-be 0 for any <code>ref_record</code> whose offset is listed in the <code>restart_offset</code>
+be 0 for any <span class='synopsis'><code>ref_record</code></span> whose offset is listed in the <span class='synopsis'><code>restart_offset</code></span>
 table at the end of the block.</p>
 </div>
 <div class="paragraph">
-<p>Recovering a reference name from any <code>ref_record</code> is a simple concat:</p>
+<p>Recovering a reference name from any <span class='synopsis'><code>ref_record</code></span> is a simple concat:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -514,40 +514,40 @@ table at the end of the block.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>suffix_length</code> value provides the number of bytes available in
-<code>suffix</code> to copy from <code>suffix</code> to complete the reference name.</p>
+<p>The <span class='synopsis'><code>suffix_length</code></span> value provides the number of bytes available in
+<span class='synopsis'><code>suffix</code></span> to copy from <span class='synopsis'><code>suffix</code></span> to complete the reference name.</p>
 </div>
 <div class="paragraph">
-<p>The <code>update_index</code> that last modified the reference can be obtained by
-adding <code>update_index_delta</code> to the <code>min_update_index</code> from the file
-header: <code>min_update_index + update_index_delta</code>.</p>
+<p>The <span class='synopsis'><code>update_index</code></span> that last modified the reference can be obtained by
+adding <span class='synopsis'><code>update_index_delta</code></span> to the <span class='synopsis'><code>min_update_index</code></span> from the file
+header: <span class='synopsis'><code>min_update_index</code> <code>+</code> <code>update_index_delta</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>The <code>value</code> follows. Its format is determined by <code>value_type</code>, one of
+<p>The <span class='synopsis'><code>value</code></span> follows. Its format is determined by <span class='synopsis'><code>value_type</code></span>, one of
 the following:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>0x0</code>: deletion; no value data (see transactions, below)</p>
+<p><span class='synopsis'><code>0x0</code></span>: deletion; no value data (see transactions, below)</p>
 </li>
 <li>
-<p><code>0x1</code>: one object name; value of the ref</p>
+<p><span class='synopsis'><code>0x1</code></span>: one object name; value of the ref</p>
 </li>
 <li>
-<p><code>0x2</code>: two object names; value of the ref, peeled target</p>
+<p><span class='synopsis'><code>0x2</code></span>: two object names; value of the ref, peeled target</p>
 </li>
 <li>
-<p><code>0x3</code>: symbolic reference: <code>varint( target_len ) target</code></p>
+<p><span class='synopsis'><code>0x3</code></span>: symbolic reference: <span class='synopsis'><code>varint</code>( <code>target_len</code> ) <code>target</code></span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Symbolic references use <code>0x3</code>, followed by the complete name of the
+<p>Symbolic references use <span class='synopsis'><code>0x3</code></span>, followed by the complete name of the
 reference target. No compression is applied to the target name.</p>
 </div>
 <div class="paragraph">
-<p>Types <code>0x4..0x7</code> are reserved for future use.</p>
+<p>Types <span class='synopsis'><code>0x4..0x7</code></span> are reserved for future use.</p>
 </div>
 </div>
 </div>
@@ -566,7 +566,7 @@ in turn point to either additional index blocks (e.g. 3rd level) or ref
 blocks (leaf level). Disk reads required to access a ref go up with
 higher index levels. Multi-level indexes may be required to ensure no
 single index block exceeds the file format&#8217;s max block size of
-<code>16777215</code> bytes (15.99 MiB). To achieve constant O(1) disk seeks for
+<span class='synopsis'><code>16777215</code></span> bytes (15.99 MiB). To achieve constant O(1) disk seeks for
 lookups the index must be a single level, which is permitted to exceed
 the file&#8217;s configured block size, but not the format&#8217;s max block size of
 15.99 MiB.</p>
@@ -599,12 +599,12 @@ padding?</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The index blocks begin with <code>block_type = 'i'</code> and a 3-byte <code>block_len</code>
+<p>The index blocks begin with <span class='synopsis'><code>block_type</code> <code>=</code> <code>i'</code></span> and a 3-byte <span class='synopsis'><code>block_len</code></span>
 which encodes the number of bytes in the block, up to but not including
-the optional <code>padding</code>.</p>
+the optional <span class='synopsis'><code>padding</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>The <code>restart_offset</code> and <code>restart_count</code> fields are identical in format,
+<p>The <span class='synopsis'><code>restart_offset</code></span> and <span class='synopsis'><code>restart_count</code></span> fields are identical in format,
 meaning and usage as in ref blocks.</p>
 </div>
 <div class="paragraph">
@@ -634,16 +634,16 @@ varint( block_position )</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Index records use prefix compression exactly like <code>ref_record</code>.</p>
+<p>Index records use prefix compression exactly like <span class='synopsis'><code>ref_record</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>Index records store <code>block_position</code> after the suffix, specifying the
+<p>Index records store <span class='synopsis'><code>block_position</code></span> after the suffix, specifying the
 absolute position in bytes (from the start of the file) of the block
-that ends with this reference. Readers can seek to <code>block_position</code> to
+that ends with this reference. Readers can seek to <span class='synopsis'><code>block_position</code></span> to
 begin reading the block header.</p>
 </div>
 <div class="paragraph">
-<p>Readers must examine the block header at <code>block_position</code> to determine
+<p>Readers must examine the block header at <span class='synopsis'><code>block_position</code></span> to determine
 if the next block is another level index block, or the leaf-level ref
 block.</p>
 </div>
@@ -652,8 +652,8 @@ block.</p>
 <h5 id="_reading_the_index"><a class="anchor" href="#_reading_the_index"></a>Reading the index</h5>
 <div class="paragraph">
 <p>Readers loading the ref index must first read the footer (below) to
-obtain <code>ref_index_position</code>. If not present, the position will be 0. The
-<code>ref_index_position</code> is for the 1st level root of the ref index.</p>
+obtain <span class='synopsis'><code>ref_index_position</code></span>. If not present, the position will be 0. The
+<span class='synopsis'><code>ref_index_position</code></span> is for the 1st level root of the ref index.</p>
 </div>
 </div>
 </div>
@@ -668,7 +668,7 @@ especially if readers will not use the object name to ref mapping.</p>
 ref blocks containing references pointing to that object directly, or as
 the peeled value of an annotated tag. Like ref blocks, object blocks use
 the file&#8217;s standard block size. The abbreviation length is available in
-the footer as <code>obj_id_len</code>.</p>
+the footer as <span class='synopsis'><code>obj_id_len</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>To save space in small files, object blocks may be omitted if the ref
@@ -703,7 +703,7 @@ match within an obj block or obj index.</p>
 <div class="sect4">
 <h5 id="_obj_record"><a class="anchor" href="#_obj_record"></a>obj record</h5>
 <div class="paragraph">
-<p>An <code>obj_record</code> describes a single object abbreviation, and the blocks
+<p>An <span class='synopsis'><code>obj_record</code></span> describes a single object abbreviation, and the blocks
 containing references using that unique abbreviation:</p>
 </div>
 <div class="literalblock">
@@ -718,32 +718,32 @@ varint( position_delta )*</pre>
 <div class="paragraph">
 <p>Like in reference blocks, abbreviations are prefix compressed within an
 obj block. On large reftables with many unique objects, higher block
-sizes (64k), and higher restart interval (128), a <code>prefix_length</code> of 2
-or 3 and <code>suffix_length</code> of 3 may be common in obj records (unique
+sizes (64k), and higher restart interval (128), a <span class='synopsis'><code>prefix_length</code></span> of 2
+or 3 and <span class='synopsis'><code>suffix_length</code></span> of 3 may be common in obj records (unique
 abbreviation of 5-6 raw bytes, 10-12 hex digits).</p>
 </div>
 <div class="paragraph">
-<p>Each record contains <code>position_count</code> number of positions for matching
-ref blocks. For 1-7 positions the count is stored in <code>cnt_3</code>. When
-<code>cnt_3 = 0</code> the actual count follows in a varint, <code>cnt_large</code>.</p>
+<p>Each record contains <span class='synopsis'><code>position_count</code></span> number of positions for matching
+ref blocks. For 1-7 positions the count is stored in <span class='synopsis'><code>cnt_3</code></span>. When
+<span class='synopsis'><code>cnt_3</code> <code>=</code> <code>0</code></span> the actual count follows in a varint, <span class='synopsis'><code>cnt_large</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>The use of <code>cnt_3</code> bets most objects are pointed to by only a single
+<p>The use of <span class='synopsis'><code>cnt_3</code></span> bets most objects are pointed to by only a single
 reference, some may be pointed to by a couple of references, and very
 few (if any) are pointed to by more than 7 references.</p>
 </div>
 <div class="paragraph">
-<p>A special case exists when <code>cnt_3 = 0</code> and <code>cnt_large = 0</code>: there are no
-<code>position_delta</code>, but at least one reference starts with this
+<p>A special case exists when <span class='synopsis'><code>cnt_3</code> <code>=</code> <code>0</code></span> and <span class='synopsis'><code>cnt_large</code> <code>=</code> <code>0</code></span>: there are no
+<span class='synopsis'><code>position_delta</code></span>, but at least one reference starts with this
 abbreviation. A reader that needs exact reference names must scan all
 references to find which specific references have the desired object.
-Writers should use this format when the <code>position_delta</code> list would have
+Writers should use this format when the <span class='synopsis'><code>position_delta</code></span> list would have
 overflowed the file&#8217;s block size due to a high number of references
 pointing to the same object.</p>
 </div>
 <div class="paragraph">
-<p>The first <code>position_delta</code> is the position from the start of the file.
-Additional <code>position_delta</code> entries are sorted ascending and relative to
+<p>The first <span class='synopsis'><code>position_delta</code></span> is the position from the start of the file.
+Additional <span class='synopsis'><code>position_delta</code></span> entries are sorted ascending and relative to
 the prior entry, e.g. a reader would perform:</p>
 </div>
 <div class="literalblock">
@@ -758,8 +758,8 @@ for (j = 1; j &lt; position_count; j++) {
 </div>
 <div class="paragraph">
 <p>With a position in hand, a reader must linearly scan the ref block,
-starting from the first <code>ref_record</code>, testing each reference&#8217;s object names
-(for <code>value_type = 0x1</code> or <code>0x2</code>) for full equality. Faster searching by
+starting from the first <span class='synopsis'><code>ref_record</code></span>, testing each reference&#8217;s object names
+(for <span class='synopsis'><code>value_type</code> <code>=</code> <code>0x1</code></span> or <span class='synopsis'><code>0x2</code></span>) for full equality. Faster searching by
 object name within a single ref block is not supported by the reftable format.
 Smaller block sizes reduce the number of candidates this step must
 consider.</p>
@@ -779,7 +779,7 @@ should only be written in larger files.</p>
 </div>
 <div class="paragraph">
 <p>Readers loading the obj index must first read the footer (below) to
-obtain <code>obj_index_position</code>. If not present, the position will be 0.</p>
+obtain <span class='synopsis'><code>obj_index_position</code></span>. If not present, the position will be 0.</p>
 </div>
 </div>
 <div class="sect3">
@@ -788,10 +788,10 @@ obtain <code>obj_index_position</code>. If not present, the position will be 0.<
 <p>Unlike ref and obj blocks, log blocks are always unaligned.</p>
 </div>
 <div class="paragraph">
-<p>Log blocks are variable in size, and do not match the <code>block_size</code>
+<p>Log blocks are variable in size, and do not match the <span class='synopsis'><code>block_size</code></span>
 specified in the file header or footer. Writers should choose an
 appropriate buffer size to prepare a log block for deflation, such as
-<code>2 * block_size</code>.</p>
+<span class='synopsis'><code>2</code> <code>*</code> <code>block_size</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>A log block is written as:</p>
@@ -808,25 +808,25 @@ zlib_deflate {
 </div>
 </div>
 <div class="paragraph">
-<p>Log blocks look similar to ref blocks, except <code>block_type = 'g'</code>.</p>
+<p>Log blocks look similar to ref blocks, except <span class='synopsis'><code>block_type</code> <code>=</code> <code>g'</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>The 4-byte block header is followed by the deflated block contents using
-zlib deflate. The <code>block_len</code> in the header is the inflated size
+zlib deflate. The <span class='synopsis'><code>block_len</code></span> in the header is the inflated size
 (including 4-byte block header), and should be used by readers to
-preallocate the inflation output buffer. A log block&#8217;s <code>block_len</code> may
+preallocate the inflation output buffer. A log block&#8217;s <span class='synopsis'><code>block_len</code></span> may
 exceed the file&#8217;s block size.</p>
 </div>
 <div class="paragraph">
-<p>Offsets within the log block (e.g. <code>restart_offset</code>) still include the
+<p>Offsets within the log block (e.g. <span class='synopsis'><code>restart_offset</code></span>) still include the
 4-byte header. Readers may prefer prefixing the inflation output buffer
 with the 4-byte header.</p>
 </div>
 <div class="paragraph">
-<p>Within the deflate container, a variable number of <code>log_record</code> describe
+<p>Within the deflate container, a variable number of <span class='synopsis'><code>log_record</code></span> describe
 reference changes. The log record format is described below. See ref
-block format (above) for a description of <code>restart_offset</code> and
-<code>restart_count</code>.</p>
+block format (above) for a description of <span class='synopsis'><code>restart_offset</code></span> and
+<span class='synopsis'><code>restart_count</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>Because log blocks have no alignment or padding between blocks, readers
@@ -844,14 +844,14 @@ next log block begins.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>update_index</code> is the unique transaction identifier. The
-<code>update_index</code> field must be unique within the scope of a <code>ref_name</code>.
+<p>where <span class='synopsis'><code>update_index</code></span> is the unique transaction identifier. The
+<span class='synopsis'><code>update_index</code></span> field must be unique within the scope of a <span class='synopsis'><code>ref_name</code></span>.
 See the update transactions section below for further details.</p>
 </div>
 <div class="paragraph">
-<p>The <code>reverse_int64</code> function inverses the value so lexicographical
+<p>The <span class='synopsis'><code>reverse_int64</code></span> function inverses the value so lexicographical
 ordering the network byte order encoding sorts the more recent records
-with higher <code>update_index</code> values first:</p>
+with higher <span class='synopsis'><code>update_index</code></span> values first:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -882,26 +882,26 @@ key described above.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Log record entries use <code>log_type</code> to indicate what follows:</p>
+<p>Log record entries use <span class='synopsis'><code>log_type</code></span> to indicate what follows:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>0x0</code>: deletion; no log data.</p>
+<p><span class='synopsis'><code>0x0</code></span>: deletion; no log data.</p>
 </li>
 <li>
-<p><code>0x1</code>: standard git reflog data using <code>log_data</code> above.</p>
+<p><span class='synopsis'><code>0x1</code></span>: standard git reflog data using <span class='synopsis'><code>log_data</code></span> above.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The <code>log_type = 0x0</code> is mostly useful for <code>git stash drop</code>, removing an
-entry from the reflog of <code>refs/stash</code> in a transaction file (below),
+<p>The <span class='synopsis'><code>log_type</code> <code>=</code> <code>0x0</code></span> is mostly useful for <span class='synopsis'><code>git</code> <code>stash</code> <code>drop</code></span>, removing an
+entry from the reflog of <span class='synopsis'><code>refs/stash</code></span> in a transaction file (below),
 without needing to rewrite larger files. Readers reading a stack of
 reflogs must treat this as a deletion.</p>
 </div>
 <div class="paragraph">
-<p>For <code>log_type = 0x1</code>, the <code>log_data</code> section follows
+<p>For <span class='synopsis'><code>log_type</code> <code>=</code> <code>0x1</code></span>, the <span class='synopsis'><code>log_data</code></span> section follows
 <a href='{{< relurl "docs/git-update-ref" >}}'>git-update-ref[1]</a> logging and includes:</p>
 </div>
 <div class="ulist">
@@ -927,16 +927,16 @@ reflogs must treat this as a deletion.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><code>tz_offset</code> is the absolute number of minutes from GMT the committer was
-at the time of the update. For example <code>GMT-0800</code> is encoded in reftable
-as <code>sint16(-480)</code> and <code>GMT+0230</code> is <code>sint16(150)</code>.</p>
+<p><span class='synopsis'><code>tz_offset</code></span> is the absolute number of minutes from GMT the committer was
+at the time of the update. For example <span class='synopsis'><code>GMT-0800</code></span> is encoded in reftable
+as <span class='synopsis'><code>sint16</code>(<code>-480</code>)</span> and <span class='synopsis'><code>GMT+0230</code></span> is <span class='synopsis'><code>sint16</code>(<code>150</code>)</span>.</p>
 </div>
 <div class="paragraph">
-<p>The committer email does not contain <code>&lt;</code> or <code>&gt;</code>, it&#8217;s the value normally
-found between the <code>&lt;&gt;</code> in a git commit object header.</p>
+<p>The committer email does not contain <span class='synopsis'><em>&lt;</em></span> or <span class='synopsis'><em>&gt;</em></span>, it&#8217;s the value normally
+found between the <span class='synopsis'><em>&lt;&gt;</em></span> in a git commit object header.</p>
 </div>
 <div class="paragraph">
-<p>The <code>message_length</code> may be 0, in which case there was no message
+<p>The <span class='synopsis'><code>message_length</code></span> may be 0, in which case there was no message
 supplied for the update.</p>
 </div>
 <div class="paragraph">
@@ -949,23 +949,23 @@ record with a zero new_id, and a creation is a log record with a zero old_id.</p
 <h5 id="_reading_the_log"><a class="anchor" href="#_reading_the_log"></a>Reading the log</h5>
 <div class="paragraph">
 <p>Readers accessing the log must first read the footer (below) to
-determine the <code>log_position</code>. The first block of the log begins at
-<code>log_position</code> bytes since the start of the file. The <code>log_position</code> is
+determine the <span class='synopsis'><code>log_position</code></span>. The first block of the log begins at
+<span class='synopsis'><code>log_position</code></span> bytes since the start of the file. The <span class='synopsis'><code>log_position</code></span> is
 not block aligned.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_importing_logs"><a class="anchor" href="#_importing_logs"></a>Importing logs</h5>
 <div class="paragraph">
-<p>When importing from <code>$GIT_DIR/logs</code> writers should globally order all
+<p>When importing from <span class='synopsis'><code>$GIT_DIR/logs</code></span> writers should globally order all
 log records roughly by timestamp while preserving file order, and assign
-unique, increasing <code>update_index</code> values for each log line. Newer log
-records get higher <code>update_index</code> values.</p>
+unique, increasing <span class='synopsis'><code>update_index</code></span> values for each log line. Newer log
+records get higher <span class='synopsis'><code>update_index</code></span> values.</p>
 </div>
 <div class="paragraph">
 <p>Although an import may write only a single reftable file, the reftable
-file must span many unique <code>update_index</code>, as each log line requires its
-own <code>update_index</code> to preserve semantics.</p>
+file must span many unique <span class='synopsis'><code>update_index</code></span>, as each log line requires its
+own <span class='synopsis'><code>update_index</code></span> to preserve semantics.</p>
 </div>
 </div>
 </div>
@@ -973,7 +973,7 @@ own <code>update_index</code> to preserve semantics.</p>
 <h4 id="_log_index"><a class="anchor" href="#_log_index"></a>Log index</h4>
 <div class="paragraph">
 <p>The log index stores the log key
-(<code>refname \0 reverse_int64(update_index)</code>) for the last log record of
+(<span class='synopsis'><em>refname \0 reverse_int64(update_index)</em></span>) for the last log record of
 every log block in the file, supporting bounded-time lookup.</p>
 </div>
 <div class="paragraph">
@@ -983,14 +983,14 @@ There is no padding used to align the log index to block alignment.</p>
 </div>
 <div class="paragraph">
 <p>Log index format is identical to ref index, except the keys are 9 bytes
-longer to include <code>'\0'</code> and the 8-byte <code>reverse_int64(update_index)</code>.
-Records use <code>block_position</code> to refer to the start of a log block.</p>
+longer to include <span class='synopsis'><em>'\0'</em></span> and the 8-byte <span class='synopsis'><code>reverse_int64</code>(<code>update_index</code>)</span>.
+Records use <span class='synopsis'><code>block_position</code></span> to refer to the start of a log block.</p>
 </div>
 <div class="sect4">
 <h5 id="_reading_the_index_2"><a class="anchor" href="#_reading_the_index_2"></a>Reading the index</h5>
 <div class="paragraph">
 <p>Readers loading the log index must first read the footer (below) to
-obtain <code>log_index_position</code>. If not present, the position will be 0.</p>
+obtain <span class='synopsis'><code>log_index_position</code></span>. If not present, the position will be 0.</p>
 </div>
 </div>
 </div>
@@ -1016,28 +1016,28 @@ like the file header, but is extended with additional data.</p>
 </div>
 <div class="paragraph">
 <p>If a section is missing (e.g. ref index) the corresponding position
-field (e.g. <code>ref_index_position</code>) will be 0.</p>
+field (e.g. <span class='synopsis'><code>ref_index_position</code></span>) will be 0.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>obj_position</code>: byte position for the first obj block.</p>
+<p><span class='synopsis'><code>obj_position</code></span>: byte position for the first obj block.</p>
 </li>
 <li>
-<p><code>obj_id_len</code>: number of bytes used to abbreviate object names in
+<p><span class='synopsis'><code>obj_id_len</code></span>: number of bytes used to abbreviate object names in
 obj blocks.</p>
 </li>
 <li>
-<p><code>log_position</code>: byte position for the first log block.</p>
+<p><span class='synopsis'><code>log_position</code></span>: byte position for the first log block.</p>
 </li>
 <li>
-<p><code>ref_index_position</code>: byte position for the start of the ref index.</p>
+<p><span class='synopsis'><code>ref_index_position</code></span>: byte position for the start of the ref index.</p>
 </li>
 <li>
-<p><code>obj_index_position</code>: byte position for the start of the obj index.</p>
+<p><span class='synopsis'><code>obj_index_position</code></span>: byte position for the start of the obj index.</p>
 </li>
 <li>
-<p><code>log_index_position</code>: byte position for the start of the log index.</p>
+<p><span class='synopsis'><code>log_index_position</code></span>: byte position for the start of the log index.</p>
 </li>
 </ul>
 </div>
@@ -1049,9 +1049,9 @@ version 2.</p>
 <h5 id="_reading_the_footer"><a class="anchor" href="#_reading_the_footer"></a>Reading the footer</h5>
 <div class="paragraph">
 <p>Readers must first read the file start to determine the version
-number. Then they seek to <code>file_length - FOOTER_LENGTH</code> to access the
-footer. A trusted external source (such as <code>stat(2)</code>) is necessary to
-obtain <code>file_length</code>. When reading the footer, readers must verify:</p>
+number. Then they seek to <span class='synopsis'><code>file_length</code> <code>-</code> <code>FOOTER_LENGTH</code></span> to access the
+footer. A trusted external source (such as <span class='synopsis'><code>stat</code>(<code>2</code>)</span>) is necessary to
+obtain <span class='synopsis'><code>file_length</code></span>. When reading the footer, readers must verify:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1082,14 +1082,14 @@ and is immediately followed by a footer.</p>
 <div class="sect3">
 <h4 id="_binary_search"><a class="anchor" href="#_binary_search"></a>Binary search</h4>
 <div class="paragraph">
-<p>Binary search within a block is supported by the <code>restart_offset</code> fields
+<p>Binary search within a block is supported by the <span class='synopsis'><code>restart_offset</code></span> fields
 at the end of the block. Readers can binary search through the restart
 table to locate between which two restart points the sought reference or
 key should appear.</p>
 </div>
 <div class="paragraph">
-<p>Each record identified by a <code>restart_offset</code> stores the complete key in
-the <code>suffix</code> field of the record, making the compare operation during
+<p>Each record identified by a <span class='synopsis'><code>restart_offset</code></span> stores the complete key in
+the <span class='synopsis'><code>suffix</code></span> field of the record, making the compare operation during
 binary search straightforward.</p>
 </div>
 <div class="paragraph">
@@ -1116,7 +1116,7 @@ decreasing overall file size, with increased penalties for readers
 walking through more records after the binary search step.</p>
 </div>
 <div class="paragraph">
-<p>A maximum of <code>65535</code> restart points per block is supported.</p>
+<p>A maximum of <span class='synopsis'><code>65535</code></span> restart points per block is supported.</p>
 </div>
 </div>
 </div>
@@ -1128,8 +1128,8 @@ walking through more records after the binary search step.</p>
 <div class="paragraph">
 <p>The reftable format assumes the vast majority of references are single
 object names valued with common prefixes, such as Gerrit Code Review&#8217;s
-<code>refs/changes/</code> namespace, GitHub&#8217;s <code>refs/pulls/</code> namespace, or many
-lightweight tags in the <code>refs/tags/</code> namespace.</p>
+<span class='synopsis'><code>refs/changes/</code></span> namespace, GitHub&#8217;s <span class='synopsis'><code>refs/pulls/</code></span> namespace, or many
+lightweight tags in the <span class='synopsis'><code>refs/tags/</code></span> namespace.</p>
 </div>
 <div class="paragraph">
 <p>Annotated tags storing the peeled object cost an additional object name per
@@ -1169,7 +1169,7 @@ containing block.</p>
 <h4 id="_scans_and_lookups_dominate"><a class="anchor" href="#_scans_and_lookups_dominate"></a>Scans and lookups dominate</h4>
 <div class="paragraph">
 <p>Scanning all references and lookup by name (or namespace such as
-<code>refs/heads/</code>) are the most common activities performed on repositories.
+<span class='synopsis'><code>refs/heads/</code></span>) are the most common activities performed on repositories.
 Object names are stored directly with references to optimize this use case.</p>
 </div>
 </div>
@@ -1189,7 +1189,7 @@ be isolated into log-only files.</p>
 <h4 id="_logs_are_read_backwards"><a class="anchor" href="#_logs_are_read_backwards"></a>Logs are read backwards</h4>
 <div class="paragraph">
 <p>Logs are frequently accessed backwards (most recent N records for master
-to answer <code>master@{4}</code>), so log records are grouped by reference, and
+to answer <span class='synopsis'><code>master@{4}</code></span>), so log records are grouped by reference, and
 sorted descending by update index.</p>
 </div>
 </div>
@@ -1199,7 +1199,7 @@ sorted descending by update index.</p>
 <div class="sect3">
 <h4 id="_version_1"><a class="anchor" href="#_version_1"></a>Version 1</h4>
 <div class="paragraph">
-<p>A repository must set its <code>$GIT_DIR/config</code> to configure reftable:</p>
+<p>A repository must set its <span class='synopsis'><code>$GIT_DIR/config</code></span> to configure reftable:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -1213,7 +1213,7 @@ sorted descending by update index.</p>
 <div class="sect3">
 <h4 id="_layout"><a class="anchor" href="#_layout"></a>Layout</h4>
 <div class="paragraph">
-<p>A collection of reftable files are stored in the <code>$GIT_DIR/reftable/</code>
+<p>A collection of reftable files are stored in the <span class='synopsis'><code>$GIT_DIR/reftable/</code></span>
 directory:</p>
 </div>
 <div class="literalblock">
@@ -1225,14 +1225,14 @@ directory:</p>
 </div>
 <div class="paragraph">
 <p>where reftable files are named by a unique name such as produced by the
-function <code>${min_update_index}-${max_update_index}.ref</code>.</p>
+function <span class='synopsis'><code>${min_update_index}-${max_update_index}.ref</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>Log-only files use the <code>.log</code> extension, while ref-only and mixed ref
-and log files use <code>.ref</code>. extension.</p>
+<p>Log-only files use the <span class='synopsis'><code>.log</code></span> extension, while ref-only and mixed ref
+and log files use <span class='synopsis'><code>.ref</code></span>. extension.</p>
 </div>
 <div class="paragraph">
-<p>The stack ordering file is <code>$GIT_DIR/reftable/tables.list</code> and lists the
+<p>The stack ordering file is <span class='synopsis'><code>$GIT_DIR/reftable/tables.list</code></span> and lists the
 current files, one per line, in order, from oldest (base) to newest
 (most recent):</p>
 </div>
@@ -1245,12 +1245,12 @@ current files, one per line, in order, from oldest (base) to newest
 </div>
 </div>
 <div class="paragraph">
-<p>Readers must read <code>$GIT_DIR/reftable/tables.list</code> to determine which
+<p>Readers must read <span class='synopsis'><code>$GIT_DIR/reftable/tables.list</code></span> to determine which
 files are relevant right now, and search through the stack in reverse
 order (last reftable is examined first).</p>
 </div>
 <div class="paragraph">
-<p>Reftable files not listed in <code>tables.list</code> may be new (and about to be
+<p>Reftable files not listed in <span class='synopsis'><code>tables.list</code></span> may be new (and about to be
 added to the stack by the active writer), or ancient and ready to be
 pruned.</p>
 </div>
@@ -1266,13 +1266,13 @@ following dummy files</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>.git/HEAD</code>, a regular file containing <code>ref: refs/heads/.invalid</code>.</p>
+<p><span class='synopsis'><code>.git/HEAD</code></span>, a regular file containing <span class='synopsis'><code>ref:</code> <code>refs/heads/.invalid</code></span>.</p>
 </li>
 <li>
-<p><code>.git/refs/</code>, a directory</p>
+<p><span class='synopsis'><code>.git/refs/</code></span>, a directory</p>
 </li>
 <li>
-<p><code>.git/refs/heads</code>, a regular file</p>
+<p><span class='synopsis'><code>.git/refs/heads</code></span>, a regular file</p>
 </li>
 </ul>
 </div>
@@ -1286,7 +1286,7 @@ following:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Open and read the <code>tables.list</code> file.</p>
+<p>Open and read the <span class='synopsis'><code>tables.list</code></span> file.</p>
 </li>
 <li>
 <p>Open each of the reftable files that it mentions.</p>
@@ -1309,40 +1309,40 @@ new reftable and atomically appending it to the stack:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Acquire <code>tables.list.lock</code>.</p>
+<p>Acquire <span class='synopsis'><code>tables.list.lock</code></span>.</p>
 </li>
 <li>
-<p>Read <code>tables.list</code> to determine current reftables.</p>
+<p>Read <span class='synopsis'><code>tables.list</code></span> to determine current reftables.</p>
 </li>
 <li>
-<p>Select <code>update_index</code> to be most recent file&#8217;s
-<code>max_update_index + 1</code>.</p>
+<p>Select <span class='synopsis'><code>update_index</code></span> to be most recent file&#8217;s
+<span class='synopsis'><code>max_update_index</code> <code>+</code> <code>1</code></span>.</p>
 </li>
 <li>
-<p>Prepare temp reftable <code>tmp_XXXXXX</code>, including log entries.</p>
+<p>Prepare temp reftable <span class='synopsis'><code>tmp_XXXXXX</code></span>, including log entries.</p>
 </li>
 <li>
-<p>Rename <code>tmp_XXXXXX</code> to <code>${update_index}-${update_index}.ref</code>.</p>
+<p>Rename <span class='synopsis'><code>tmp_XXXXXX</code></span> to <span class='synopsis'><code>${update_index}-${update_index}.ref</code></span>.</p>
 </li>
 <li>
-<p>Copy <code>tables.list</code> to <code>tables.list.lock</code>, appending file from (5).</p>
+<p>Copy <span class='synopsis'><code>tables.list</code></span> to <span class='synopsis'><code>tables.list.lock</code></span>, appending file from (5).</p>
 </li>
 <li>
-<p>Rename <code>tables.list.lock</code> to <code>tables.list</code>.</p>
+<p>Rename <span class='synopsis'><code>tables.list.lock</code></span> to <span class='synopsis'><code>tables.list</code></span>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>During step 4 the new file&#8217;s <code>min_update_index</code> and <code>max_update_index</code>
-are both set to the <code>update_index</code> selected by step 3. All log records
-for the transaction use the same <code>update_index</code> in their keys. This
+<p>During step 4 the new file&#8217;s <span class='synopsis'><code>min_update_index</code></span> and <span class='synopsis'><code>max_update_index</code></span>
+are both set to the <span class='synopsis'><code>update_index</code></span> selected by step 3. All log records
+for the transaction use the same <span class='synopsis'><code>update_index</code></span> in their keys. This
 enables later correlation of which references were updated by the same
 transaction.</p>
 </div>
 <div class="paragraph">
-<p>Because a single <code>tables.list.lock</code> file is used to manage locking, the
+<p>Because a single <span class='synopsis'><code>tables.list.lock</code></span> file is used to manage locking, the
 repository is single-threaded for writers. Writers may have to busy-spin
-(with backoff) around creating <code>tables.list.lock</code>, for up to an
+(with backoff) around creating <span class='synopsis'><code>tables.list.lock</code></span>, for up to an
 acceptable wait period, aborting if the repository is too busy to
 mutate. Application servers wrapped around repositories (e.g. Gerrit
 Code Review) can layer their own lock/wait queue to improve fairness to
@@ -1352,8 +1352,8 @@ writers.</p>
 <div class="sect3">
 <h4 id="_reference_deletions"><a class="anchor" href="#_reference_deletions"></a>Reference deletions</h4>
 <div class="paragraph">
-<p>Deletion of any reference can be explicitly stored by setting the <code>type</code>
-to <code>0x0</code> and omitting the <code>value</code> field of the <code>ref_record</code>. This serves
+<p>Deletion of any reference can be explicitly stored by setting the <span class='synopsis'><code>type</code></span>
+to <span class='synopsis'><code>0x0</code></span> and omitting the <span class='synopsis'><code>value</code></span> field of the <span class='synopsis'><code>ref_record</code></span>. This serves
 as a tombstone, overriding any assertions about the existence of the
 reference from earlier files in the stack.</p>
 </div>
@@ -1367,9 +1367,9 @@ recent value for output, and omitting deleted references that do not
 appear in remaining, lower reftables.</p>
 </div>
 <div class="paragraph">
-<p>A compacted reftable should set its <code>min_update_index</code> to the smallest
-of the input files' <code>min_update_index</code>, and its <code>max_update_index</code>
-likewise to the largest input <code>max_update_index</code>.</p>
+<p>A compacted reftable should set its <span class='synopsis'><code>min_update_index</code></span> to the smallest
+of the input files' <span class='synopsis'><code>min_update_index</code></span>, and its <span class='synopsis'><code>max_update_index</code></span>
+likewise to the largest input <span class='synopsis'><code>max_update_index</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>For sake of illustration, assume the stack currently consists of
@@ -1379,40 +1379,40 @@ going to compact B and C, leaving A and D alone.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Obtain lock <code>tables.list.lock</code> and read the <code>tables.list</code> file.</p>
+<p>Obtain lock <span class='synopsis'><code>tables.list.lock</code></span> and read the <span class='synopsis'><code>tables.list</code></span> file.</p>
 </li>
 <li>
-<p>Obtain locks <code>B.lock</code> and <code>C.lock</code>. Ownership of these locks
+<p>Obtain locks <span class='synopsis'><code>B.lock</code></span> and <span class='synopsis'><code>C.lock</code></span>. Ownership of these locks
 prevents other processes from trying to compact these files.</p>
 </li>
 <li>
-<p>Release <code>tables.list.lock</code>.</p>
+<p>Release <span class='synopsis'><code>tables.list.lock</code></span>.</p>
 </li>
 <li>
-<p>Compact <code>B</code> and <code>C</code> into a temp file
-<code>${min_update_index}-${max_update_index}_XXXXXX</code>.</p>
+<p>Compact <span class='synopsis'><code>B</code></span> and <span class='synopsis'><code>C</code></span> into a temp file
+<span class='synopsis'><code>${min_update_index}-${max_update_index}_XXXXXX</code></span>.</p>
 </li>
 <li>
-<p>Reacquire lock <code>tables.list.lock</code>.</p>
+<p>Reacquire lock <span class='synopsis'><code>tables.list.lock</code></span>.</p>
 </li>
 <li>
-<p>Verify that <code>B</code> and <code>C</code> are still in the stack, in that order. This
+<p>Verify that <span class='synopsis'><code>B</code></span> and <span class='synopsis'><code>C</code></span> are still in the stack, in that order. This
 should always be the case, assuming that other processes are adhering to
 the locking protocol.</p>
 </li>
 <li>
-<p>Rename <code>${min_update_index}-${max_update_index}_XXXXXX</code> to
-<code>${min_update_index}-${max_update_index}.ref</code>.</p>
+<p>Rename <span class='synopsis'><code>${min_update_index}-${max_update_index}_XXXXXX</code></span> to
+<span class='synopsis'><code>${min_update_index}-${max_update_index}.ref</code></span>.</p>
 </li>
 <li>
-<p>Write the new stack to <code>tables.list.lock</code>, replacing <code>B</code> and <code>C</code>
+<p>Write the new stack to <span class='synopsis'><code>tables.list.lock</code></span>, replacing <span class='synopsis'><code>B</code></span> and <span class='synopsis'><code>C</code></span>
 with the file from (4).</p>
 </li>
 <li>
-<p>Rename <code>tables.list.lock</code> to <code>tables.list</code>.</p>
+<p>Rename <span class='synopsis'><code>tables.list.lock</code></span> to <span class='synopsis'><code>tables.list</code></span>.</p>
 </li>
 <li>
-<p>Delete <code>B</code> and <code>C</code>, perhaps after a short sleep to avoid forcing
+<p>Delete <span class='synopsis'><code>B</code></span> and <span class='synopsis'><code>C</code></span>, perhaps after a short sleep to avoid forcing
 readers to backtrack.</p>
 </li>
 </ol>
@@ -1431,7 +1431,7 @@ open reftables can be cached by their name.</p>
 <div class="sect3">
 <h4 id="_bzip_packed_refs"><a class="anchor" href="#_bzip_packed_refs"></a>bzip packed-refs</h4>
 <div class="paragraph">
-<p><code>bzip2</code> can significantly shrink a large packed-refs file (e.g. 62 MiB
+<p><span class='synopsis'><code>bzip2</code></span> can significantly shrink a large packed-refs file (e.g. 62 MiB
 compresses to 23 MiB, 37%). However the bzip format does not support
 random access to a single reference. Readers must inflate and discard
 while performing a linear scan.</p>
@@ -1514,7 +1514,7 @@ references to modify a handful.</p>
 <p>Flat namespaces are not efficiently searchable in RefTree, as tree
 objects in canonical formatting cannot be binary searched. This fails
 the need to handle a large number of references in a single namespace,
-such as GitHub&#8217;s <code>refs/pulls</code>, or a project with many tags.</p>
+such as GitHub&#8217;s <span class='synopsis'><code>refs/pulls</code></span>, or a project with many tags.</p>
 </div>
 </div>
 <div class="sect3">

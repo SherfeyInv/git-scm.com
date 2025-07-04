@@ -47,7 +47,7 @@ in Git.</p>
 <p>Many concepts are currently described scattered between manual pages of
 various Git commands, including <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>,
 <a href='{{< relurl "docs/git-repack" >}}'>git-repack[1]</a>, and others, as well as <a href='{{< relurl "docs/gitformat-pack" >}}'>gitformat-pack[5]</a>,
-and parts of the <code>Documentation/technical</code> tree.</p>
+and parts of the <span class='synopsis'><code>Documentation/technical</code></span> tree.</p>
 </div>
 <div class="paragraph">
 <p>There are many aspects of packing in Git that are not covered in this
@@ -119,8 +119,8 @@ set of parents as described in the commits bitmap.</p>
 <div class="paragraph">
 <p>Pseudo-merge bitmaps can accelerate bitmap traversals when all commits
 for a given pseudo-merge are listed on either side of the traversal,
-either directly (by explicitly asking for them as part of the <code>HAVES</code>
-or <code>WANTS</code>) or indirectly (by encountering them during a fill-in
+either directly (by explicitly asking for them as part of the <span class='synopsis'><code>HAVES</code></span>
+or <span class='synopsis'><code>WANTS</code></span>) or indirectly (by encountering them during a fill-in
 traversal).</p>
 </div>
 </div>
@@ -128,13 +128,13 @@ traversal).</p>
 <h3 id="_use_cases"><a class="anchor" href="#_use_cases"></a>Use-cases</h3>
 <div class="paragraph">
 <p>For example, suppose there exists a pseudo-merge bitmap with a large
-number of commits, all of which are listed in the <code>WANTS</code> section of
+number of commits, all of which are listed in the <span class='synopsis'><code>WANTS</code></span> section of
 some bitmap traversal query. When pseudo-merge bitmaps are enabled, the
 bitmap machinery can quickly determine there is a pseudo-merge which
 satisfies some subset of the wanted objects on either side of the query.
-Then, we can inflate the EWAH-compressed bitmap, and <code>OR</code> it in to the
+Then, we can inflate the EWAH-compressed bitmap, and <span class='synopsis'><code>OR</code></span> it in to the
 resulting bitmap. By contrast, without pseudo-merge bitmaps, we would
-have to repeat the decompression and <code>OR</code>-ing step over a potentially
+have to repeat the decompression and <span class='synopsis'><code>OR</code></span>-ing step over a potentially
 large number of individual bitmaps, which can take proportionally more
 time.</p>
 </div>
@@ -144,8 +144,9 @@ of (a) a large number of references, with (b) poor bitmap coverage, and
 (c) deep, nested trees, making fill-in traversal relatively expensive.
 For example, suppose that there are a large enough number of tags where
 bitmapping each of the tags individually is infeasible. Without
-pseudo-merge bitmaps, computing the result of, say, <code>git rev-list
---use-bitmap-index --count --objects --tags</code> would likely require a
+pseudo-merge bitmaps, computing the result of, say, <span class='synopsis'><code>git</code> <code>rev-list</code>
+
+<code>--use-bitmap-index</code> <code>--count</code> <code>--objects</code> <code>--tags</code></span> would likely require a
 large amount of fill-in traversal. But when a large quantity of those
 tags are stored together in a pseudo-merge bitmap, the bitmap machinery
 can take advantage of the fact that we only care about the union of
@@ -164,14 +165,14 @@ that pattern which further partition the group.</p>
 <div class="paragraph">
 <p>Within a group, commits may be considered "stable", or "unstable"
 depending on their age. These are adjusted by setting the
-<code>bitmapPseudoMerge.&lt;name&gt;.stableThreshold</code> and
-<code>bitmapPseudoMerge.&lt;name&gt;.threshold</code> configuration values, respectively.</p>
+<span class='synopsis'><code>bitmapPseudoMerge.</code><em>&lt;name&gt;</em><code>.stableThreshold</code></span> and
+<span class='synopsis'><code>bitmapPseudoMerge.</code><em>&lt;name&gt;</em><code>.threshold</code></span> configuration values, respectively.</p>
 </div>
 <div class="paragraph">
 <p>All stable commits are grouped into pseudo-merges of equal size
-(<code>bitmapPseudoMerge.&lt;name&gt;.stableSize</code>). If the <code>stableSize</code>
+(<span class='synopsis'><code>bitmapPseudoMerge.</code><em>&lt;name&gt;</em><code>.stableSize</code></span>). If the <span class='synopsis'><code>stableSize</code></span>
 configuration is set to, say, 100, then the first 100 commits (ordered
-by committer date) which are older than the <code>stableThreshold</code> value will
+by committer date) which are older than the <span class='synopsis'><code>stableThreshold</code></span> value will
 form one group, the next 100 commits will form another group, and so on.</p>
 </div>
 <div class="paragraph">
@@ -183,8 +184,8 @@ point at a different commit than a reference whose tip commit is newer.</p>
 </div>
 <div class="paragraph">
 <p>The size of groups is determined by a power-law decay function, and the
-decay parameter roughly corresponds to "k" in <code>f(n) = C*n^(-k/100)</code>,
-where <code>f(n)</code> describes the size of the <code>n</code>-th pseudo-merge group. The
+decay parameter roughly corresponds to "k" in <span class='synopsis'><code>f</code>(<code>n</code>) <code>=</code> <code>C*n^</code>(<code>-k/100</code>)</span>,
+where <span class='synopsis'><code>f</code>(<code>n</code>)</span> describes the size of the <span class='synopsis'><code>n</code></span>-th pseudo-merge group. The
 sample rate controls what percentage of eligible commits are considered
 as candidates. The threshold parameter indicates the minimum age (so as
 to avoid including too-recent commits in a pseudo-merge group, making it
@@ -207,7 +208,7 @@ chunks of "stableSize" in order of age.</p>
 <div class="title">Note</div>
 </td>
 <td class="content">
-The configuration options in <code>bitmapPseudoMerge.*</code> are considered
+The configuration options in <span class='synopsis'><code>bitmapPseudoMerge.*</code></span> are considered
 EXPERIMENTAL and may be subject to change or be removed entirely in the
 future. For more information about the pseudo-merge bitmap feature, see
 the "Pseudo-merge bitmaps" section of <a href='{{< relurl "docs/gitpacking" >}}'>gitpacking[7]</a>.
@@ -221,8 +222,8 @@ the "Pseudo-merge bitmaps" section of <a href='{{< relurl "docs/gitpacking" >}}'
 <dd>
 <p>Regular expression used to match reference names. Commits
 pointed to by references matching this pattern (and meeting
-the below criteria, like <code>bitmapPseudoMerge.&lt;name&gt;.sampleRate</code>
-and <code>bitmapPseudoMerge.&lt;name&gt;.threshold</code>) will be considered
+the below criteria, like <span class='synopsis'><code>bitmapPseudoMerge.</code><em>&lt;name&gt;</em><code>.sampleRate</code></span>
+and <span class='synopsis'><code>bitmapPseudoMerge.</code><em>&lt;name&gt;</em><code>.threshold</code></span>) will be considered
 for inclusion in a pseudo-merge bitmap.</p>
 <div class="paragraph">
 <p>Commits are grouped into pseudo-merge groups based on whether or not
@@ -237,10 +238,10 @@ any capture groups from the regular expression, with a <em>-</em> dash in
 between.</p>
 </div>
 <div class="paragraph">
-<p>For example, if the pattern is <code>refs/tags/</code>, then all tags (provided
+<p>For example, if the pattern is <span class='synopsis'><code>refs/tags/</code></span>, then all tags (provided
 they meet the below criteria) will be considered candidates for the
 same pseudo-merge group. However, if the pattern is instead
-<code>refs/remotes/([0-9])+/tags/</code>, then tags from different remotes will
+<span class='synopsis'><code>refs/remotes/</code>([<code>0-9</code>])<code>+/tags/</code></span>, then tags from different remotes will
 be grouped into separate pseudo-merge groups, based on the remote
 number.</p>
 </div>
@@ -249,14 +250,15 @@ number.</p>
 <dd>
 <p>Determines the rate at which consecutive pseudo-merge bitmap
 groups decrease in size. Must be non-negative. This parameter
-can be thought of as <code>k</code> in the function <code>f(n) = C * n^-k</code>,
-where <code>f(n)</code> is the size of the `n`th group.</p>
+can be thought of as <span class='synopsis'><code>k</code></span> in the function <span class='synopsis'><code>f</code>(<code>n</code>) <code>=</code> <code>C</code> <code>*</code> <code>n^-k</code></span>,
+where <span class='synopsis'><code>f</code>(<code>n</code>)</span> is the size of the `n`th group.</p>
 <div class="paragraph">
-<p>Setting the decay rate equal to <code>0</code> will cause all groups to be the
-same size. Setting the decay rate equal to <code>1</code> will cause the <code>n`th
-group to be `1/n</code> the size of the initial group.  Higher values of the
+<p>Setting the decay rate equal to <span class='synopsis'><code>0</code></span> will cause all groups to be the
+same size. Setting the decay rate equal to <span class='synopsis'><code>1</code></span> will cause the <span class='synopsis'><code>n</code><code>th</code>
+
+<code>group</code> <code>to</code> <code>be</code> <code>1/n</code></span> the size of the initial group.  Higher values of the
 decay rate cause consecutive groups to shrink at an increasing rate.
-The default is <code>1</code>.</p>
+The default is <span class='synopsis'><code>1</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>If all groups are the same size, it is possible that groups containing
@@ -269,15 +271,15 @@ will be updated more often than a reference pointing at an old commit.</p>
 <dd>
 <p>Determines the proportion of non-bitmapped commits (among
 reference tips) which are selected for inclusion in an
-unstable pseudo-merge bitmap. Must be between <code>0</code> and <code>1</code>
-(inclusive). The default is <code>1</code>.</p>
+unstable pseudo-merge bitmap. Must be between <span class='synopsis'><code>0</code></span> and <span class='synopsis'><code>1</code></span>
+(inclusive). The default is <span class='synopsis'><code>1</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitpacking.txt-bitmapPseudoMergeltnamegtthreshold"><a id="Documentation/gitpacking.txt-bitmapPseudoMergenamethreshold" class="anchor" href="#Documentation/gitpacking.txt-bitmapPseudoMergenamethreshold"></a>bitmapPseudoMerge.&lt;name&gt;.threshold </dt>
 <dd>
 <p>Determines the minimum age of non-bitmapped commits (among
 reference tips, as above) which are candidates for inclusion
 in an unstable pseudo-merge bitmap. The default is
-<code>1.week.ago</code>.</p>
+<span class='synopsis'><code>1.week.ago</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitpacking.txt-bitmapPseudoMergeltnamegtmaxMerges"><a id="Documentation/gitpacking.txt-bitmapPseudoMergenamemaxMerges" class="anchor" href="#Documentation/gitpacking.txt-bitmapPseudoMergenamemaxMerges"></a>bitmapPseudoMerge.&lt;name&gt;.maxMerges </dt>
 <dd>
@@ -290,10 +292,10 @@ expression. For patterns that have one or more capture groups, this
 setting is applied for each distinct capture group.</p>
 </div>
 <div class="paragraph">
-<p>For example, if your capture group is <code>refs/tags/</code>, then this setting
-will distribute all tags into a maximum of <code>maxMerges</code> pseudo-merge
+<p>For example, if your capture group is <span class='synopsis'><code>refs/tags/</code></span>, then this setting
+will distribute all tags into a maximum of <span class='synopsis'><code>maxMerges</code></span> pseudo-merge
 commits. However, if your capture group is, say,
-<code>refs/remotes/([0-9]+)/tags/</code>, then this setting will be applied to
+<span class='synopsis'><code>refs/remotes/</code>([<code>0-9</code>]<code>+</code>)<code>/tags/</code></span>, then this setting will be applied to
 each remote&#8217;s set of tags individually.</p>
 </div>
 <div class="paragraph">
@@ -306,7 +308,7 @@ each remote&#8217;s set of tags individually.</p>
 as above, however stable commits are still considered
 candidates even when they have been covered by a bitmap) which
 are candidates for a stable a pseudo-merge bitmap. The default
-is <code>1.month.ago</code>.</p>
+is <span class='synopsis'><code>1.month.ago</code></span>.</p>
 <div class="paragraph">
 <p>Setting this threshold to a smaller value (e.g., 1.week.ago) will cause
 more stable groups to be generated (which impose a one-time generation
@@ -318,7 +320,7 @@ more useful).</p>
 <dt class="hdlist1" id="Documentation/gitpacking.txt-bitmapPseudoMergeltnamegtstableSize"><a id="Documentation/gitpacking.txt-bitmapPseudoMergenamestableSize" class="anchor" href="#Documentation/gitpacking.txt-bitmapPseudoMergenamestableSize"></a>bitmapPseudoMerge.&lt;name&gt;.stableSize </dt>
 <dd>
 <p>Determines the size (in number of commits) of a stable
-psuedo-merge bitmap. The default is <code>512</code>.</p>
+psuedo-merge bitmap. The default is <span class='synopsis'><code>512</code></span>.</p>
 </dd>
 </dl>
 </div>
@@ -328,7 +330,7 @@ psuedo-merge bitmap. The default is <code>512</code>.</p>
 <div class="paragraph">
 <p>Suppose that you have a repository with a large number of references,
 and you want a bare-bones configuration of pseudo-merge bitmaps that
-will enhance bitmap coverage of the <code>refs/</code> namespace. You may start
+will enhance bitmap coverage of the <span class='synopsis'><code>refs/</code></span> namespace. You may start
 with a configuration like so:</p>
 </div>
 <div class="listingblock">
@@ -359,7 +361,7 @@ capture group, like so:</p>
 <div class="paragraph">
 <p>Suppose instead that you are working in a fork-network repository, with
 each fork specified by some numeric ID, and whose refs reside in
-<code>refs/virtual/NNN/</code> (where <code>NNN</code> is the numeric ID corresponding to some
+<span class='synopsis'><code>refs/virtual/NNN/</code></span> (where <span class='synopsis'><code>NNN</code></span> is the numeric ID corresponding to some
 fork) in the network. In this instance, you may instead write something
 like:</p>
 </div>

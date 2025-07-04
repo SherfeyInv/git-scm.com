@@ -45,8 +45,8 @@ aliases:
 <dt class="hdlist1" id="Documentation/git-multi-pack-index.txt---object-dirltdirgt"><a id="Documentation/git-multi-pack-index.txt---object-dirdir" class="anchor" href="#Documentation/git-multi-pack-index.txt---object-dirdir"></a>--object-dir=&lt;dir&gt; </dt>
 <dd>
 <p>Use given directory for the location of Git objects. We check
-<code>&lt;dir&gt;/packs/multi-pack-index</code> for the current MIDX file, and
-<code>&lt;dir&gt;/packs</code> for the pack-files to index.</p>
+<span class='synopsis'><em>&lt;dir&gt;</em><code>/packs/multi-pack-index</code></span> for the current MIDX file, and
+<span class='synopsis'><em>&lt;dir&gt;</em><code>/packs</code></span> for the pack-files to index.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-multi-pack-index.txt---no-progress"><a class="anchor" href="#Documentation/git-multi-pack-index.txt---no-progress"></a>--[no-]progress </dt>
 <dd>
@@ -78,7 +78,7 @@ afterward to remove all references to these pack-files.</p>
 <dd>
 <p>Create a new pack-file containing objects in small pack-files
 referenced by the multi-pack-index. If the size given by the
-<code>--batch-size=&lt;size&gt;</code> argument is zero, then create a pack
+<span class='synopsis'><code>--batch-size=</code><em>&lt;size&gt;</em></span> argument is zero, then create a pack
 containing all objects referenced by the multi-pack-index. For
 a non-zero batch size, Select the pack-files by examining packs
 from oldest-to-newest, computing the "expected size" by counting
@@ -92,8 +92,8 @@ file is created, rewrite the multi-pack-index to reference the
 new pack-file. A later run of <em>git multi-pack-index expire</em> will
 delete the pack-files that were part of this batch.</p>
 <div class="paragraph">
-<p>If <code>repack.packKeptObjects</code> is <code>false</code>, then any pack-files with an
-associated <code>.keep</code> file will not be selected for the batch to repack.</p>
+<p>If <span class='synopsis'><code>repack.packKeptObjects</code></span> is <span class='synopsis'><code>false</code></span>, then any pack-files with an
+associated <span class='synopsis'><code>.keep</code></span> file will not be selected for the batch to repack.</p>
 </div>
 </dd>
 </dl>

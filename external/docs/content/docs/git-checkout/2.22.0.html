@@ -43,7 +43,7 @@ aliases:
 <div class="paragraph">
 <p>Updates files in the working tree to match the version in the index
 or the specified tree.  If no paths are given, <em>git checkout</em> will
-also update <code>HEAD</code> to set the specified branch as the current
+also update <span class='synopsis'><code>HEAD</code></span> to set the specified branch as the current
 branch.</p>
 </div>
 <div class="dlist">
@@ -67,12 +67,12 @@ equivalent to</p>
 </div>
 <div class="paragraph">
 <p>If the branch exists in multiple remotes and one of them is named by
-the <code>checkout.defaultRemote</code> configuration variable, we&#8217;ll use that
-one for the purposes of disambiguation, even if the <code>&lt;branch&gt;</code> isn&#8217;t
+the <span class='synopsis'><code>checkout.defaultRemote</code></span> configuration variable, we&#8217;ll use that
+one for the purposes of disambiguation, even if the <span class='synopsis'><em>&lt;branch&gt;</em></span> isn&#8217;t
 unique across all remotes. Set it to
-e.g. <code>checkout.defaultRemote=origin</code> to always checkout remote
-branches from there if <code>&lt;branch&gt;</code> is ambiguous but exists on the
-<em>origin</em> remote. See also <code>checkout.defaultRemote</code> in
+e.g. <span class='synopsis'><code>checkout.defaultRemote=origin</code></span> to always checkout remote
+branches from there if <span class='synopsis'><em>&lt;branch&gt;</em></span> is ambiguous but exists on the
+<em>origin</em> remote. See also <span class='synopsis'><code>checkout.defaultRemote</code></span> in
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </div>
 <div class="paragraph">
@@ -84,14 +84,14 @@ if exists, for the current branch.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt-emgitcheckoutem-b-Bltnewbranchgtltstartpointgt"><a id="Documentation/git-checkout.txt-gitcheckout-b-Bnewbranchstartpoint" class="anchor" href="#Documentation/git-checkout.txt-gitcheckout-b-Bnewbranchstartpoint"></a><em>git checkout</em> -b|-B &lt;new_branch&gt; [&lt;start point&gt;] </dt>
 <dd>
-<p>Specifying <code>-b</code> causes a new branch to be created as if
+<p>Specifying <span class='synopsis'><code>-b</code></span> causes a new branch to be created as if
 <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a> were called and then checked out.  In
-this case you can use the <code>--track</code> or <code>--no-track</code> options,
+this case you can use the <span class='synopsis'><code>--track</code></span> or <span class='synopsis'><code>--no-track</code></span> options,
 which will be passed to <em>git branch</em>.  As a convenience,
-<code>--track</code> without <code>-b</code> implies branch creation; see the
-description of <code>--track</code> below.</p>
+<span class='synopsis'><code>--track</code></span> without <span class='synopsis'><code>-b</code></span> implies branch creation; see the
+description of <span class='synopsis'><code>--track</code></span> below.</p>
 <div class="paragraph">
-<p>If <code>-B</code> is given, &lt;new_branch&gt; is created if it doesn&#8217;t exist; otherwise, it
+<p>If <span class='synopsis'><code>-B</code></span> is given, &lt;new_branch&gt; is created if it doesn&#8217;t exist; otherwise, it
 is reset. This is the transactional equivalent of</p>
 </div>
 <div class="listingblock">
@@ -115,9 +115,10 @@ in the working tree are kept, so that the resulting working
 tree will be the state recorded in the commit plus the local
 modifications.</p>
 <div class="paragraph">
-<p>When the &lt;commit&gt; argument is a branch name, the <code>--detach</code> option can
-be used to detach HEAD at the tip of the branch (<code>git checkout
-&lt;branch&gt;</code> would check out that branch without detaching HEAD).</p>
+<p>When the &lt;commit&gt; argument is a branch name, the <span class='synopsis'><code>--detach</code></span> option can
+be used to detach HEAD at the tip of the branch (<span class='synopsis'><code>git</code> <code>checkout</code>
+
+<em>&lt;branch&gt;</em></span> would check out that branch without detaching HEAD).</p>
 </div>
 <div class="paragraph">
 <p>Omitting &lt;branch&gt; detaches HEAD at the tip of the current branch.</p>
@@ -134,9 +135,9 @@ the working tree.</p>
 <p>The index may contain unmerged entries because of a previous failed merge.
 By default, if you try to check out such an entry from the index, the
 checkout operation will fail and nothing will be checked out.
-Using <code>-f</code> will ignore these unmerged entries.  The contents from a
+Using <span class='synopsis'><code>-f</code></span> will ignore these unmerged entries.  The contents from a
 specific side of the merge can be checked out of the index by
-using <code>--ours</code> or <code>--theirs</code>.  With <code>-m</code>, changes made to the working tree
+using <span class='synopsis'><code>--ours</code></span> or <span class='synopsis'><code>--theirs</code></span>.  With <span class='synopsis'><code>-m</code></span>, changes made to the working tree
 file can be discarded to re-create the original conflicted merge result.</p>
 </div>
 </dd>
@@ -146,7 +147,7 @@ file can be discarded to re-create the original conflicted merge result.</p>
 from either the index or from a tree-ish" mode described
 above, but lets you use the interactive interface to show
 the "diff" output and choose which hunks to use in the
-result.  See below for the description of <code>--patch</code> option.</p>
+result.  See below for the description of <span class='synopsis'><code>--patch</code></span> option.</p>
 </dd>
 </dl>
 </div>
@@ -165,9 +166,9 @@ result.  See below for the description of <code>--patch</code> option.</p>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---no-progress"><a class="anchor" href="#Documentation/git-checkout.txt---no-progress"></a>--[no-]progress </dt>
 <dd>
 <p>Progress status is reported on the standard error stream
-by default when it is attached to a terminal, unless <code>--quiet</code>
+by default when it is attached to a terminal, unless <span class='synopsis'><code>--quiet</code></span>
 is specified. This flag enables progress reporting even if not
-attached to a terminal, regardless of <code>--quiet</code>.</p>
+attached to a terminal, regardless of <span class='synopsis'><code>--quiet</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt--f"><a class="anchor" href="#Documentation/git-checkout.txt--f"></a>-f </dt>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---force"><a class="anchor" href="#Documentation/git-checkout.txt---force"></a>--force </dt>
@@ -186,20 +187,20 @@ entries; instead, unmerged entries are ignored.</p>
 <p>When checking out paths from the index, check out stage #2
 (<em>ours</em>) or #3 (<em>theirs</em>) for unmerged paths.</p>
 <div class="paragraph">
-<p>Note that during <code>git rebase</code> and <code>git pull --rebase</code>, <em>ours</em> and
-<em>theirs</em> may appear swapped; <code>--ours</code> gives the version from the
-branch the changes are rebased onto, while <code>--theirs</code> gives the
+<p>Note that during <span class='synopsis'><code>git</code> <code>rebase</code></span> and <span class='synopsis'><code>git</code> <code>pull</code> <code>--rebase</code></span>, <em>ours</em> and
+<em>theirs</em> may appear swapped; <span class='synopsis'><code>--ours</code></span> gives the version from the
+branch the changes are rebased onto, while <span class='synopsis'><code>--theirs</code></span> gives the
 version from the branch that holds your work that is being rebased.</p>
 </div>
 <div class="paragraph">
-<p>This is because <code>rebase</code> is used in a workflow that treats the
+<p>This is because <span class='synopsis'><code>rebase</code></span> is used in a workflow that treats the
 history at the remote as the shared canonical one, and treats the
 work done on the branch you are rebasing as the third-party work to
 be integrated, and you are temporarily assuming the role of the
 keeper of the canonical history during the rebase.  As the keeper of
 the canonical history, you need to view the history from the remote
-as <code>ours</code> (i.e. "our shared canonical history"), while what you did
-on your side branch as <code>theirs</code> (i.e. "one contributor&#8217;s work on top
+as <span class='synopsis'><code>ours</code></span> (i.e. "our shared canonical history"), while what you did
+on your side branch as <span class='synopsis'><code>theirs</code></span> (i.e. "one contributor&#8217;s work on top
 of it").</p>
 </div>
 </dd>
@@ -221,7 +222,7 @@ equivalent to running "git branch" with "-f"; see
 <p>When creating a new branch, set up "upstream" configuration. See
 "--track" in <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a> for details.</p>
 <div class="paragraph">
-<p>If no <code>-b</code> option is given, the name of the new branch will be
+<p>If no <span class='synopsis'><code>-b</code></span> option is given, the name of the new branch will be
 derived from the remote-tracking branch, by looking at the local part of
 the refspec configured for the corresponding remote, and then stripping
 the initial part up to the "*".
@@ -229,7 +230,7 @@ This would tell us to use "hack" as the local branch when branching
 off of "origin/hack" (or "remotes/origin/hack", or even
 "refs/remotes/origin/hack").  If the given name has no slash, or the above
 guessing results in an empty name, the guessing is aborted.  You can
-explicitly give a name with <code>-b</code> in such a case.</p>
+explicitly give a name with <span class='synopsis'><code>-b</code></span> in such a case.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---no-track"><a class="anchor" href="#Documentation/git-checkout.txt---no-track"></a>--no-track </dt>
@@ -281,7 +282,7 @@ working tree, by copying them from elsewhere, extracting a tarball, etc.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---ignore-skip-worktree-bits"><a class="anchor" href="#Documentation/git-checkout.txt---ignore-skip-worktree-bits"></a>--ignore-skip-worktree-bits </dt>
 <dd>
-<p>In sparse checkout mode, <code>git checkout -- &lt;paths&gt;</code> would
+<p>In sparse checkout mode, <span class='synopsis'><code>git</code> <code>checkout</code> <code>--</code> <em>&lt;paths&gt;</em></span> would
 update only entries matched by &lt;paths&gt; and sparse patterns
 in $GIT_DIR/info/sparse-checkout. This option ignores
 the sparse patterns and adds back any files in &lt;paths&gt;.</p>
@@ -300,7 +301,7 @@ is done, and you will be on the new branch.</p>
 <div class="paragraph">
 <p>When a merge conflict happens, the index entries for conflicting
 paths are left unmerged, and you need to resolve the conflicts
-and mark the resolved paths with <code>git add</code> (or <code>git rm</code> if the merge
+and mark the resolved paths with <span class='synopsis'><code>git</code> <code>add</code></span> (or <span class='synopsis'><code>git</code> <code>rm</code></span> if the merge
 should result in deletion of the path).</p>
 </div>
 <div class="paragraph">
@@ -308,7 +309,7 @@ should result in deletion of the path).</p>
 the conflicted merge in the specified paths.</p>
 </div>
 <div class="paragraph">
-<p>When switching branches with <code>--merge</code>, staged changes may be lost.</p>
+<p>When switching branches with <span class='synopsis'><code>--merge</code></span>, staged changes may be lost.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---conflictltstylegt"><a id="Documentation/git-checkout.txt---conflictstyle" class="anchor" href="#Documentation/git-checkout.txt---conflictstyle"></a>--conflict=&lt;style&gt; </dt>
@@ -327,18 +328,18 @@ merge.conflictStyle configuration variable.  Possible values are
 tree.  The chosen hunks are then applied in reverse to the
 working tree (and if a &lt;tree-ish&gt; was specified, the index).</p>
 <div class="paragraph">
-<p>This means that you can use <code>git checkout -p</code> to selectively discard
+<p>This means that you can use <span class='synopsis'><code>git</code> <code>checkout</code> <code>-p</code></span> to selectively discard
 edits from your current working tree. See the &#8220;Interactive Mode&#8221;
-section of <a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a> to learn how to operate the <code>--patch</code> mode.</p>
+section of <a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a> to learn how to operate the <span class='synopsis'><code>--patch</code></span> mode.</p>
 </div>
 <div class="paragraph">
 <p>Note that this option uses the no overlay mode by default (see also
-<code>--[no-]overlay</code>), and currently doesn&#8217;t support overlay mode.</p>
+<span class='synopsis'><code>--</code>[<code>no-</code>]<code>overlay</code></span>), and currently doesn&#8217;t support overlay mode.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---ignore-other-worktrees"><a class="anchor" href="#Documentation/git-checkout.txt---ignore-other-worktrees"></a>--ignore-other-worktrees </dt>
 <dd>
-<p><code>git checkout</code> refuses when the wanted ref is already checked
+<p><span class='synopsis'><code>git</code> <code>checkout</code></span> refuses when the wanted ref is already checked
 out by another worktree. This option makes it check the ref
 out anyway. In other words, the ref can be held by more than one
 worktree.</p>
@@ -348,7 +349,7 @@ worktree.</p>
 <p>Using --recurse-submodules will update the content of all initialized
 submodules according to the commit recorded in the superproject. If
 local modifications in a submodule would be overwritten the checkout
-will fail unless <code>-f</code> is used. If nothing (or --no-recurse-submodules)
+will fail unless <span class='synopsis'><code>-f</code></span> is used. If nothing (or --no-recurse-submodules)
 is used, the work trees of submodules will not be updated.
 Just like <a href='{{< relurl "docs/git-submodule" >}}'>git-submodule[1]</a>, this will detach the
 submodules HEAD.</p>
@@ -360,9 +361,9 @@ of the same name exists.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt---no-overlay"><a class="anchor" href="#Documentation/git-checkout.txt---no-overlay"></a>--[no-]overlay </dt>
 <dd>
-<p>In the default overlay mode, <code>git checkout</code> never
+<p>In the default overlay mode, <span class='synopsis'><code>git</code> <code>checkout</code></span> never
 removes files from the index or the working tree.  When
-specifying <code>--no-overlay</code>, files that appear in the index and
+specifying <span class='synopsis'><code>--no-overlay</code></span>, files that appear in the index and
 working tree, but not in &lt;tree-ish&gt; are removed, to make them
 match &lt;tree-ish&gt; exactly.</p>
 </dd>
@@ -374,14 +375,14 @@ branch is checked out. Otherwise, if it refers to a valid
 commit, your HEAD becomes "detached" and you are no longer on
 any branch (see below for details).</p>
 <div class="paragraph">
-<p>You can use the <code>"@{-N}"</code> syntax to refer to the N-th last
+<p>You can use the <span class='synopsis'><code>"@{-N}"</code></span> syntax to refer to the N-th last
 branch/commit checked out using "git checkout" operation. You may
-also specify <code>-</code> which is synonymous to <code>"@{-1}"</code>.</p>
+also specify <span class='synopsis'><code>-</code></span> which is synonymous to <span class='synopsis'><code>"@{-1}"</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>As a special case, you may use <code>"A...B"</code> as a shortcut for the
-merge base of <code>A</code> and <code>B</code> if there is exactly one merge base. You can
-leave out at most one of <code>A</code> and <code>B</code>, in which case it defaults to <code>HEAD</code>.</p>
+<p>As a special case, you may use <span class='synopsis'><code>"A...B"</code></span> as a shortcut for the
+merge base of <span class='synopsis'><code>A</code></span> and <span class='synopsis'><code>B</code></span> if there is exactly one merge base. You can
+leave out at most one of <span class='synopsis'><code>A</code></span> and <span class='synopsis'><code>B</code></span>, in which case it defaults to <span class='synopsis'><code>HEAD</code></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt-ltnewbranchgt"><a id="Documentation/git-checkout.txt-newbranch" class="anchor" href="#Documentation/git-checkout.txt-newbranch"></a>&lt;new_branch&gt; </dt>
@@ -393,9 +394,9 @@ leave out at most one of <code>A</code> and <code>B</code>, in which case it def
 <p>The name of a commit at which to start the new branch; see
 <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a> for details. Defaults to HEAD.</p>
 <div class="paragraph">
-<p>As a special case, you may use <code>"A...B"</code> as a shortcut for the
-merge base of <code>A</code> and <code>B</code> if there is exactly one merge base. You can
-leave out at most one of <code>A</code> and <code>B</code>, in which case it defaults to <code>HEAD</code>.</p>
+<p>As a special case, you may use <span class='synopsis'><code>"A...B"</code></span> as a shortcut for the
+merge base of <span class='synopsis'><code>A</code></span> and <span class='synopsis'><code>B</code></span> if there is exactly one merge base. You can
+leave out at most one of <span class='synopsis'><code>A</code></span> and <span class='synopsis'><code>B</code></span>, in which case it defaults to <span class='synopsis'><code>HEAD</code></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-checkout.txt-lttree-ishgt"><a id="Documentation/git-checkout.txt-tree-ish" class="anchor" href="#Documentation/git-checkout.txt-tree-ish"></a>&lt;tree-ish&gt; </dt>
@@ -572,13 +573,13 @@ $ git log -g -2 HEAD</pre>
 <h2 id="_argument_disambiguation"><a class="anchor" href="#_argument_disambiguation"></a>ARGUMENT DISAMBIGUATION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When there is only one argument given and it is not <code>--</code> (e.g. "git
-checkout abc"), and when the argument is both a valid <code>&lt;tree-ish&gt;</code>
-(e.g. a branch "abc" exists) and a valid <code>&lt;pathspec&gt;</code> (e.g. a file
+<p>When there is only one argument given and it is not <span class='synopsis'><code>--</code></span> (e.g. "git
+checkout abc"), and when the argument is both a valid <span class='synopsis'><em>&lt;tree-ish&gt;</em></span>
+(e.g. a branch "abc" exists) and a valid <span class='synopsis'><em>&lt;pathspec&gt;</em></span> (e.g. a file
 or a directory whose name is "abc" exists), Git would usually ask
 you to disambiguate.  Because checking out a branch is so common an
-operation, however, "git checkout abc" takes "abc" as a <code>&lt;tree-ish&gt;</code>
-in such a situation.  Use <code>git checkout -- &lt;pathspec&gt;</code> if you want
+operation, however, "git checkout abc" takes "abc" as a <span class='synopsis'><em>&lt;tree-ish&gt;</em></span>
+in such a situation.  Use <span class='synopsis'><code>git</code> <code>checkout</code> <code>--</code> <em>&lt;pathspec&gt;</em></span> if you want
 to checkout these paths out of the index.</p>
 </div>
 </div>
@@ -589,8 +590,8 @@ to checkout these paths out of the index.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The following sequence checks out the <code>master</code> branch, reverts
-the <code>Makefile</code> to two revisions back, deletes hello.c by
+<p>The following sequence checks out the <span class='synopsis'><code>master</code></span> branch, reverts
+the <span class='synopsis'><code>Makefile</code></span> to two revisions back, deletes hello.c by
 mistake, and gets it back from the index.</p>
 <div class="listingblock">
 <div class="content">
@@ -620,13 +621,13 @@ you can say</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note the quotes around <code>*.c</code>.  The file <code>hello.c</code> will also be
+<p>Note the quotes around <span class='synopsis'><code>*.c</code></span>.  The file <span class='synopsis'><code>hello.c</code></span> will also be
 checked out, even though it is no longer in the working tree,
 because the file globbing is used to match entries in the index
 (not in the working tree by the shell).</p>
 </div>
 <div class="paragraph">
-<p>If you have an unfortunate branch that is named <code>hello.c</code>, this
+<p>If you have an unfortunate branch that is named <span class='synopsis'><code>hello.c</code></span>, this
 step would be confused as an instruction to switch to that branch.
 You should instead write:</p>
 </div>
@@ -659,7 +660,7 @@ error: You have local changes to 'frotz'; not switching branches.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can give the <code>-m</code> flag to the command, which would try a
+<p>You can give the <span class='synopsis'><code>-m</code></span> flag to the command, which would try a
 three-way merge:</p>
 </div>
 <div class="listingblock">
@@ -670,13 +671,13 @@ Auto-merging frotz</pre>
 </div>
 <div class="paragraph">
 <p>After this three-way merge, the local modifications are <em>not</em>
-registered in your index file, so <code>git diff</code> would show you what
+registered in your index file, so <span class='synopsis'><code>git</code> <code>diff</code></span> would show you what
 changes you made since the tip of the new branch.</p>
 </div>
 </li>
 <li>
 <p>When a merge conflict happens during switching branches with
-the <code>-m</code> option, you would see something like this:</p>
+the <span class='synopsis'><code>-m</code></span> option, you would see something like this:</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ git checkout -m mytopic
@@ -686,10 +687,10 @@ fatal: merge program failed</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>At this point, <code>git diff</code> shows the changes cleanly merged as in
+<p>At this point, <span class='synopsis'><code>git</code> <code>diff</code></span> shows the changes cleanly merged as in
 the previous example, as well as the changes in the conflicted
 files.  Edit and resolve the conflict and mark it resolved with
-<code>git add</code> as usual:</p>
+<span class='synopsis'><code>git</code> <code>add</code></span> as usual:</p>
 </div>
 <div class="listingblock">
 <div class="content">

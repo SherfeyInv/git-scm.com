@@ -69,11 +69,11 @@ useful when used to read back <em>git format-patch -k</em> output.</p>
 <p>Leading and trailing whitespace.</p>
 </li>
 <li>
-<p>Leading <code>Re:</code>, <code>re:</code>, and <code>:</code>.</p>
+<p>Leading <span class='synopsis'><code>Re:</code></span>, <span class='synopsis'><code>re:</code></span>, and <span class='synopsis'><code>:</code></span>.</p>
 </li>
 <li>
-<p>Leading bracketed strings (between <code>[</code> and <code>]</code>, usually
-<code>[PATCH]</code>).</p>
+<p>Leading bracketed strings (between <span class='synopsis'>[</span> and <span class='synopsis'>]</span>, usually
+<span class='synopsis'>[<code>PATCH</code>]</span>).</p>
 </li>
 </ul>
 </div>
@@ -95,7 +95,7 @@ only the pairs whose bracketed string contains the word "PATCH".</p>
 <p>The commit log message, author name and author email are
 taken from the e-mail, and after minimally decoding MIME
 transfer encoding, re-coded in the charset specified by
-<code>i18n.commitEncoding</code> (defaulting to UTF-8) by transliterating
+<span class='synopsis'><code>i18n.commitEncoding</code></span> (defaulting to UTF-8) by transliterating
 them.  This used to be optional but now it is the default.</p>
 <div class="paragraph">
 <p>Note that the patch is always used as-is without charset
@@ -105,7 +105,7 @@ conversion, even with this flag.</p>
 <dt class="hdlist1" id="Documentation/git-mailinfo.txt---encodingltencodinggt"><a id="Documentation/git-mailinfo.txt---encodingencoding" class="anchor" href="#Documentation/git-mailinfo.txt---encodingencoding"></a>--encoding=&lt;encoding&gt; </dt>
 <dd>
 <p>Similar to -u.  But when re-coding, the charset specified here is
-used instead of the one specified by <code>i18n.commitEncoding</code> or UTF-8.</p>
+used instead of the one specified by <span class='synopsis'><code>i18n.commitEncoding</code></span> or UTF-8.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-mailinfo.txt--n"><a class="anchor" href="#Documentation/git-mailinfo.txt--n"></a>-n </dt>
 <dd>

@@ -123,15 +123,15 @@ set, as returned by "git var -l".</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-send-email.txt---in-reply-toltidentifiergt"><a id="Documentation/git-send-email.txt---in-reply-toidentifier" class="anchor" href="#Documentation/git-send-email.txt---in-reply-toidentifier"></a>--in-reply-to=&lt;identifier&gt; </dt>
 <dd>
-<p>Make the first mail (or all the mails with <code>--no-thread</code>) appear as a
+<p>Make the first mail (or all the mails with <span class='synopsis'><code>--no-thread</code></span>) appear as a
 reply to the given Message-Id, which avoids breaking threads to
 provide a new patch series.
 The second and subsequent emails will be sent as replies according to
-the <code>--[no]-chain-reply-to</code> setting.</p>
+the <span class='synopsis'><code>--</code>[<code>no</code>]<code>-chain-reply-to</code></span> setting.</p>
 <div class="paragraph">
-<p>So for example when <code>--thread</code> and <code>--no-chain-reply-to</code> are specified, the
+<p>So for example when <span class='synopsis'><code>--thread</code></span> and <span class='synopsis'><code>--no-chain-reply-to</code></span> are specified, the
 second and subsequent patches will be replies to the first one like in the
-illustration below where <code>[PATCH v2 0/3]</code> is in reply to <code>[PATCH 0/2]</code>:</p>
+illustration below where <span class='synopsis'>[<code>PATCH</code> <code>v2</code> <code>0/3</code>]</span> is in reply to <span class='synopsis'>[<code>PATCH</code> <code>0/2</code>]</span>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -229,13 +229,13 @@ a password is obtained using <em>git-credential</em>.</p>
 <dt class="hdlist1" id="Documentation/git-send-email.txt---smtp-serverlthostgt"><a id="Documentation/git-send-email.txt---smtp-serverhost" class="anchor" href="#Documentation/git-send-email.txt---smtp-serverhost"></a>--smtp-server=&lt;host&gt; </dt>
 <dd>
 <p>If set, specifies the outgoing SMTP server to use (e.g.
-<code>smtp.example.com</code> or a raw IP address).  Alternatively it can
+<span class='synopsis'><code>smtp.example.com</code></span> or a raw IP address).  Alternatively it can
 specify a full pathname of a sendmail-like program instead;
-the program must support the <code>-i</code> option.  Default value can
+the program must support the <span class='synopsis'><code>-i</code></span> option.  Default value can
 be specified by the <em>sendemail.smtpserver</em> configuration
-option; the built-in default is <code>/usr/sbin/sendmail</code> or
-<code>/usr/lib/sendmail</code> if such program is available, or
-<code>localhost</code> otherwise.</p>
+option; the built-in default is <span class='synopsis'><code>/usr/sbin/sendmail</code></span> or
+<span class='synopsis'><code>/usr/lib/sendmail</code></span> if such program is available, or
+<span class='synopsis'><code>localhost</code></span> otherwise.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-send-email.txt---smtp-server-portltportgt"><a id="Documentation/git-send-email.txt---smtp-server-portport" class="anchor" href="#Documentation/git-send-email.txt---smtp-server-portport"></a>--smtp-server-port=&lt;port&gt; </dt>
 <dd>
@@ -266,7 +266,7 @@ must be used for each option.</p>
 <p>Path to ca-certificates (either a directory or a single file).
 Set it to an empty string to disable certificate verification.
 Defaults to the value set to the <em>sendemail.smtpsslcertpath</em>
-configuration variable, if set, or <code>/etc/ssl/certs</code> otherwise.</p>
+configuration variable, if set, or <span class='synopsis'><code>/etc/ssl/certs</code></span> otherwise.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-send-email.txt---smtp-userltusergt"><a id="Documentation/git-send-email.txt---smtp-useruser" class="anchor" href="#Documentation/git-send-email.txt---smtp-useruser"></a>--smtp-user=&lt;user&gt; </dt>
 <dd>
@@ -378,8 +378,8 @@ value; if that is unspecified, default to --no-suppress-from.</p>
 <dd>
 <p>If this is set, the In-Reply-To and References headers will be
 added to each email sent.  Whether each mail refers to the
-previous email (<code>deep</code> threading per <em>git format-patch</em>
-wording) or to the first email (<code>shallow</code> threading) is
+previous email (<span class='synopsis'><code>deep</code></span> threading per <em>git format-patch</em>
+wording) or to the first email (<span class='synopsis'><code>shallow</code></span> threading) is
 governed by "--[no-]chain-reply-to".</p>
 <div class="paragraph">
 <p>If disabled with "--no-thread", those headers will not be added

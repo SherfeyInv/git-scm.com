@@ -68,7 +68,7 @@ your repository whose object name starts with dae86e.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltdescribeOutputgtemegemv1742-679-g3bee7fbem"><a id="Documentation/gitrevisions.txt-describeOutputegv1742-679-g3bee7fb" class="anchor" href="#Documentation/gitrevisions.txt-describeOutputegv1742-679-g3bee7fb"></a><em>&lt;describeOutput&gt;</em>, e.g. <em>v1.7.4.2-679-g3bee7fb</em> </dt>
 <dd>
-<p>Output from <code>git describe</code>; i.e. a closest tag, optionally
+<p>Output from <span class='synopsis'><code>git</code> <code>describe</code></span>; i.e. a closest tag, optionally
 followed by a dash and a number of commits, followed by a dash, a
 <em>g</em>, and an abbreviated object name.</p>
 </dd>
@@ -104,15 +104,15 @@ and <em>CHERRY_PICK_HEAD</em>);</p>
 <div class="paragraph">
 <p><em>HEAD</em> names the commit on which you based the changes in the working tree.
 <em>FETCH_HEAD</em> records the branch which you fetched from a remote repository
-with your last <code>git fetch</code> invocation.
+with your last <span class='synopsis'><code>git</code> <code>fetch</code></span> invocation.
 <em>ORIG_HEAD</em> is created by commands that move your <em>HEAD</em> in a drastic
 way, to record the position of the <em>HEAD</em> before their operation, so that
 you can easily change the tip of the branch back to the state before you ran
 them.
 <em>MERGE_HEAD</em> records the commit(s) which you are merging into your branch
-when you run <code>git merge</code>.
+when you run <span class='synopsis'><code>git</code> <code>merge</code></span>.
 <em>CHERRY_PICK_HEAD</em> records the commit which you are cherry-picking
-when you run <code>git cherry-pick</code>.</p>
+when you run <span class='synopsis'><code>git</code> <code>cherry-pick</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>Note that any of the <em>refs/*</em> cases above may come either from
@@ -166,8 +166,8 @@ before the current one.</p>
 <dd>
 <p>The suffix <em>@{upstream}</em> to a branchname (short form <em>&lt;branchname&gt;@{u}</em>)
 refers to the branch that the branch specified by branchname is set to build on
-top of (configured with <code>branch.&lt;name&gt;.remote</code> and
-<code>branch.&lt;name&gt;.merge</code>).  A missing branchname defaults to the
+top of (configured with <span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.remote</code></span> and
+<span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.merge</code></span>).  A missing branchname defaults to the
 current one.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrevisions.txt-emltrevgtemegemHEADv1510em"><a id="Documentation/gitrevisions.txt-revegHEADv1510" class="anchor" href="#Documentation/gitrevisions.txt-revegHEADv1510"></a><em>&lt;rev&gt;^</em>, e.g. <em>HEAD^, v1.5.1^0</em> </dt>
@@ -301,7 +301,7 @@ J = F^2  = B^3^2   = A^^3^2</pre>
 <h2 id="_specifying_ranges"><a class="anchor" href="#_specifying_ranges"></a>SPECIFYING RANGES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>History traversing commands such as <code>git log</code> operate on a set
+<p>History traversing commands such as <span class='synopsis'><code>git</code> <code>log</code></span> operate on a set
 of commits, not just a single commit.  To these commands,
 specifying a single revision with the notation described in the
 previous section means the set of commits reachable from that

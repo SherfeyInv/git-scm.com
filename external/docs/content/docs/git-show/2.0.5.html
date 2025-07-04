@@ -94,7 +94,7 @@ people using 80-column terminals.</p>
 <dt class="hdlist1" id="Documentation/git-show.txt---no-abbrev-commit"><a class="anchor" href="#Documentation/git-show.txt---no-abbrev-commit"></a>--no-abbrev-commit </dt>
 <dd>
 <p>Show the full 40-byte hexadecimal commit object name. This negates
-<code>--abbrev-commit</code> and those options which imply it such as
+<span class='synopsis'><code>--abbrev-commit</code></span> and those options which imply it such as
 "--oneline". It also overrides the <em>log.abbrevCommit</em> variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-show.txt---oneline"><a class="anchor" href="#Documentation/git-show.txt---oneline"></a>--oneline </dt>
@@ -114,8 +114,8 @@ defaults to UTF-8.</p>
 <dd>
 <p>Show the notes (see <a href='{{< relurl "docs/git-notes" >}}'>git-notes[1]</a>) that annotate the
 commit, when showing the commit log message.  This is the default
-for <code>git log</code>, <code>git show</code> and <code>git whatchanged</code> commands when
-there is no <code>--pretty</code>, <code>--format</code>, or <code>--oneline</code> option given
+for <span class='synopsis'><code>git</code> <code>log</code></span>, <span class='synopsis'><code>git</code> <code>show</code></span> and <span class='synopsis'><code>git</code> <code>whatchanged</code></span> commands when
+there is no <span class='synopsis'><code>--pretty</code></span>, <span class='synopsis'><code>--format</code></span>, or <span class='synopsis'><code>--oneline</code></span> option given
 on the command line.</p>
 <div class="paragraph">
 <p>By default, the notes shown are from the notes refs listed in the
@@ -124,7 +124,7 @@ environment overrides). See <a href='{{< relurl "docs/git-config" >}}'>git-confi
 </div>
 <div class="paragraph">
 <p>With an optional <em>&lt;ref&gt;</em> argument, show this notes ref instead of the
-default notes ref(s). The ref is taken to be in <code>refs/notes/</code> if it
+default notes ref(s). The ref is taken to be in <span class='synopsis'><code>refs/notes/</code></span> if it
 is not qualified.</p>
 </div>
 <div class="paragraph">
@@ -136,7 +136,7 @@ being displayed. Examples: "--notes=foo" will show only notes from
 </dd>
 <dt class="hdlist1" id="Documentation/git-show.txt---no-notes"><a class="anchor" href="#Documentation/git-show.txt---no-notes"></a>--no-notes </dt>
 <dd>
-<p>Do not show notes. This negates the above <code>--notes</code> option, by
+<p>Do not show notes. This negates the above <span class='synopsis'><code>--notes</code></span> option, by
 resetting the list of notes refs from which notes are shown.
 Options are parsed in the order given on the command line, so e.g.
 "--notes --notes=foo --no-notes --notes=bar" will only show notes
@@ -151,7 +151,7 @@ options instead.</p>
 <dt class="hdlist1" id="Documentation/git-show.txt---show-signature"><a class="anchor" href="#Documentation/git-show.txt---show-signature"></a>--show-signature </dt>
 <dd>
 <p>Check the validity of a signed commit object by passing the signature
-to <code>gpg --verify</code> and show the output.</p>
+to <span class='synopsis'><code>gpg</code> <code>--verify</code></span> and show the output.</p>
 </dd>
 </dl>
 </div>

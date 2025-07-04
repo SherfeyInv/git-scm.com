@@ -32,26 +32,26 @@ of remotes.&lt;group&gt; in the configuration file.
 <dd>
 <p>Specifies which refs to fetch and which local refs to update.
 When no &lt;refspec&gt;s appear on the command line, the refs to fetch
-are read from <code>remote.&lt;repository&gt;.fetch</code> variables instead
+are read from <span class='synopsis'><code>remote.</code><em>&lt;repository&gt;</em><code>.fetch</code></span> variables instead
 (see <a href="#CRTB">CONFIGURED REMOTE-TRACKING BRANCHES</a> below).</p>
 <div class="paragraph">
 <p>The format of a &lt;refspec&gt; parameter is an optional plus
-<code>+</code>, followed by the source &lt;src&gt;, followed
-by a colon <code>:</code>, followed by the destination &lt;dst&gt;.
+<span class='synopsis'><code>+</code></span>, followed by the source &lt;src&gt;, followed
+by a colon <span class='synopsis'><code>:</code></span>, followed by the destination &lt;dst&gt;.
 The colon can be omitted when &lt;dst&gt; is empty.  &lt;src&gt; is
-typically a ref, or a glob pattern with a single <code>*</code> that is used
+typically a ref, or a glob pattern with a single <span class='synopsis'><code>*</code></span> that is used
 to match a set of refs, but it can also be a fully spelled hex object
 name.</p>
 </div>
 <div class="paragraph">
-<p>A &lt;refspec&gt; may contain a <code>*</code> in its &lt;src&gt; to indicate a simple pattern
+<p>A &lt;refspec&gt; may contain a <span class='synopsis'><code>*</code></span> in its &lt;src&gt; to indicate a simple pattern
 match. Such a refspec functions like a glob that matches any ref with the
-pattern. A pattern &lt;refspec&gt; must have one and only one <code>*</code> in both the &lt;src&gt; and
-&lt;dst&gt;. It will map refs to the destination by replacing the <code>*</code> with the
+pattern. A pattern &lt;refspec&gt; must have one and only one <span class='synopsis'><code>*</code></span> in both the &lt;src&gt; and
+&lt;dst&gt;. It will map refs to the destination by replacing the <span class='synopsis'><code>*</code></span> with the
 contents matched from the source.</p>
 </div>
 <div class="paragraph">
-<p>If a refspec is prefixed by <code>^</code>, it will be interpreted as a negative
+<p>If a refspec is prefixed by <span class='synopsis'><code>^</code></span>, it will be interpreted as a negative
 refspec. Rather than specifying which refs to fetch or which local refs to
 update, such a refspec will instead specify refs to exclude. A ref will be
 considered to match if it matches at least one positive refspec, and does
@@ -62,7 +62,7 @@ contain a &lt;src&gt; and do not specify a &lt;dst&gt;. Fully spelled out hex ob
 names are also not supported.</p>
 </div>
 <div class="paragraph">
-<p><code>tag &lt;tag&gt;</code> means the same as <code>refs/tags/&lt;tag&gt;:refs/tags/&lt;tag&gt;</code>;
+<p><span class='synopsis'><code>tag</code> <em>&lt;tag&gt;</em></span> means the same as <span class='synopsis'><code>refs/tags/</code><em>&lt;tag&gt;</em><code>:refs/tags/</code><em>&lt;tag&gt;</em></span>;
 it requests fetching everything up to the given tag.</p>
 </div>
 <div class="paragraph">
@@ -71,40 +71,40 @@ is fetched, and if &lt;dst&gt; is not an empty string, an attempt
 is made to update the local ref that matches it.</p>
 </div>
 <div class="paragraph">
-<p>Whether that update is allowed without <code>--force</code> depends on the ref
+<p>Whether that update is allowed without <span class='synopsis'><code>--force</code></span> depends on the ref
 namespace it&#8217;s being fetched to, the type of object being fetched, and
 whether the update is considered to be a fast-forward. Generally, the
-same rules apply for fetching as when pushing, see the <code>&lt;refspec&gt;...</code>
+same rules apply for fetching as when pushing, see the <span class='synopsis'><em>&lt;refspec&gt;</em>...</span>
 section of <a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a> for what those are. Exceptions to those
 rules particular to <em>git fetch</em> are noted below.</p>
 </div>
 <div class="paragraph">
 <p>Until Git version 2.20, and unlike when pushing with
-<a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a>, any updates to <code>refs/tags/*</code> would be accepted
-without <code>+</code> in the refspec (or <code>--force</code>). When fetching, we promiscuously
+<a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a>, any updates to <span class='synopsis'><code>refs/tags/*</code></span> would be accepted
+without <span class='synopsis'><code>+</code></span> in the refspec (or <span class='synopsis'><code>--force</code></span>). When fetching, we promiscuously
 considered all tag updates from a remote to be forced fetches.  Since
-Git version 2.20, fetching to update <code>refs/tags/*</code> works the same way
-as when pushing. I.e. any updates will be rejected without <code>+</code> in the
-refspec (or <code>--force</code>).</p>
+Git version 2.20, fetching to update <span class='synopsis'><code>refs/tags/*</code></span> works the same way
+as when pushing. I.e. any updates will be rejected without <span class='synopsis'><code>+</code></span> in the
+refspec (or <span class='synopsis'><code>--force</code></span>).</p>
 </div>
 <div class="paragraph">
 <p>Unlike when pushing with <a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a>, any updates outside of
-<code>refs/{tags,heads}/*</code> will be accepted without <code>+</code> in the refspec (or
-<code>--force</code>), whether that&#8217;s swapping e.g. a tree object for a blob, or
+<span class='synopsis'><code>refs/{tags,heads}/*</code></span> will be accepted without <span class='synopsis'><code>+</code></span> in the refspec (or
+<span class='synopsis'><code>--force</code></span>), whether that&#8217;s swapping e.g. a tree object for a blob, or
 a commit for another commit that doesn&#8217;t have the previous commit as
 an ancestor etc.</p>
 </div>
 <div class="paragraph">
 <p>Unlike when pushing with <a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a>, there is no
 configuration which&#8217;ll amend these rules, and nothing like a
-<code>pre-fetch</code> hook analogous to the <code>pre-receive</code> hook.</p>
+<span class='synopsis'><code>pre-fetch</code></span> hook analogous to the <span class='synopsis'><code>pre-receive</code></span> hook.</p>
 </div>
 <div class="paragraph">
 <p>As with pushing with <a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a>, all of the rules described
 above about what&#8217;s not allowed as an update can be overridden by
-adding an optional leading <code>+</code> to a refspec (or using the <code>--force</code>
+adding an optional leading <span class='synopsis'><code>+</code></span> to a refspec (or using the <span class='synopsis'><code>--force</code></span>
 command line option). The only exception to this is that no amount of
-forcing will make the <code>refs/heads/*</code> namespace accept a non-commit
+forcing will make the <span class='synopsis'><code>refs/heads/*</code></span> namespace accept a non-commit
 object.</p>
 </div>
 <div class="admonitionblock note">
@@ -119,7 +119,7 @@ be rewound and rebased regularly, it is expected that
 its new tip will not be a descendant of its previous tip
 (as stored in your remote-tracking branch the last time
 you fetched).  You would want
-to use the <code>+</code> sign to indicate non-fast-forward updates
+to use the <span class='synopsis'><code>+</code></span> sign to indicate non-fast-forward updates
 will be needed for such branches.  There is no way to
 determine or declare that a branch will be made available
 in a repository with this behavior; the pulling user simply

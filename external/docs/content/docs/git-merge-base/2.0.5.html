@@ -68,7 +68,7 @@ across all the remaining commits on the command line.</p>
 <div class="paragraph">
 <p>As a consequence, the <em>merge base</em> is not necessarily contained in each of the
 commit arguments if more than two commits are specified. This is different
-from <a href='{{< relurl "docs/git-show-branch" >}}'>git-show-branch[1]</a> when used with the <code>--merge-base</code> option.</p>
+from <a href='{{< relurl "docs/git-show-branch" >}}'>git-show-branch[1]</a> when used with the <span class='synopsis'><code>--merge-base</code></span> option.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -124,7 +124,7 @@ on this mode below).</p>
 <h2 id="_discussion"><a class="anchor" href="#_discussion"></a>DISCUSSION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Given two commits <em>A</em> and <em>B</em>, <code>git merge-base A B</code> will output a commit
+<p>Given two commits <em>A</em> and <em>B</em>, <span class='synopsis'><code>git</code> <code>merge-base</code> <code>A</code> <code>B</code></span> will output a commit
 which is reachable from both <em>A</em> and <em>B</em> through the parent relationship.</p>
 </div>
 <div class="paragraph">
@@ -141,7 +141,7 @@ which is reachable from both <em>A</em> and <em>B</em> through the parent relati
 <p>the merge base between <em>A</em> and <em>B</em> is <em>1</em>.</p>
 </div>
 <div class="paragraph">
-<p>Given three commits <em>A</em>, <em>B</em> and <em>C</em>, <code>git merge-base A B C</code> will compute the
+<p>Given three commits <em>A</em>, <em>B</em> and <em>C</em>, <span class='synopsis'><code>git</code> <code>merge-base</code> <code>A</code> <code>B</code> <code>C</code></span> will compute the
 merge base between <em>A</em> and a hypothetical commit <em>M</em>, which is a merge
 between <em>B</em> and <em>C</em>.  For example, with this topology:</p>
 </div>
@@ -155,7 +155,7 @@ between <em>B</em> and <em>C</em>.  For example, with this topology:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>the result of <code>git merge-base A B C</code> is <em>1</em>.  This is because the
+<p>the result of <span class='synopsis'><code>git</code> <code>merge-base</code> <code>A</code> <code>B</code> <code>C</code></span> is <em>1</em>.  This is because the
 equivalent topology with a merge commit <em>M</em> between <em>B</em> and <em>C</em> is:</p>
 </div>
 <div class="literalblock">
@@ -168,12 +168,12 @@ equivalent topology with a merge commit <em>M</em> between <em>B</em> and <em>C<
 </div>
 </div>
 <div class="paragraph">
-<p>and the result of <code>git merge-base A M</code> is <em>1</em>.  Commit <em>2</em> is also a
+<p>and the result of <span class='synopsis'><code>git</code> <code>merge-base</code> <code>A</code> <code>M</code></span> is <em>1</em>.  Commit <em>2</em> is also a
 common ancestor between <em>A</em> and <em>M</em>, but <em>1</em> is a better common ancestor,
 because <em>2</em> is an ancestor of <em>1</em>.  Hence, <em>2</em> is not a merge base.</p>
 </div>
 <div class="paragraph">
-<p>The result of <code>git merge-base --octopus A B C</code> is <em>2</em>, because <em>2</em> is
+<p>The result of <span class='synopsis'><code>git</code> <code>merge-base</code> <code>--octopus</code> <code>A</code> <code>B</code> <code>C</code></span> is <em>2</em>, because <em>2</em> is
 the best common ancestor of all commits.</p>
 </div>
 <div class="paragraph">
@@ -191,7 +191,7 @@ the best common ancestor of all commits.</p>
 </div>
 <div class="paragraph">
 <p>both <em>1</em> and <em>2</em> are merge-bases of A and B.  Neither one is better than
-the other (both are <em>best</em> merge bases).  When the <code>--all</code> option is not given,
+the other (both are <em>best</em> merge bases).  When the <span class='synopsis'><code>--all</code></span> option is not given,
 it is unspecified which best one is output.</p>
 </div>
 <div class="paragraph">
@@ -229,9 +229,10 @@ fi</pre>
 <h2 id="_discussion_on_fork_point_mode"><a class="anchor" href="#_discussion_on_fork_point_mode"></a>Discussion on fork-point mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After working on the <code>topic</code> branch created with <code>git checkout -b
-topic origin/master</code>, the history of remote-tracking branch
-<code>origin/master</code> may have been rewound and rebuilt, leading to a
+<p>After working on the <span class='synopsis'><code>topic</code></span> branch created with <span class='synopsis'><code>git</code> <code>checkout</code> <code>-b</code>
+
+<code>topic</code> <code>origin/master</code></span>, the history of remote-tracking branch
+<span class='synopsis'><code>origin/master</code></span> may have been rewound and rebuilt, leading to a
 history of this shape:</p>
 </div>
 <div class="literalblock">
@@ -246,11 +247,11 @@ history of this shape:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>origin/master</code> used to point at commits B3, B2, B1 and now it
-points at B, and your <code>topic</code> branch was started on top of it back
-when <code>origin/master</code> was at B3. This mode uses the reflog of
-<code>origin/master</code> to find B3 as the fork point, so that the <code>topic</code>
-can be rebased on top of the updated <code>origin/master</code> by:</p>
+<p>where <span class='synopsis'><code>origin/master</code></span> used to point at commits B3, B2, B1 and now it
+points at B, and your <span class='synopsis'><code>topic</code></span> branch was started on top of it back
+when <span class='synopsis'><code>origin/master</code></span> was at B3. This mode uses the reflog of
+<span class='synopsis'><code>origin/master</code></span> to find B3 as the fork point, so that the <span class='synopsis'><code>topic</code></span>
+can be rebased on top of the updated <span class='synopsis'><code>origin/master</code></span> by:</p>
 </div>
 <div class="literalblock">
 <div class="content">

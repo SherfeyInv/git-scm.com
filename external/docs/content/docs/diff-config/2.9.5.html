@@ -19,7 +19,7 @@ aliases:
 <dd>
 <p>When using <em>git diff</em> to compare with work tree
 files, do not consider stat-only change as changed.
-Instead, silently run <code>git update-index --refresh</code> to
+Instead, silently run <span class='synopsis'><code>git</code> <code>update-index</code> <code>--refresh</code></span> to
 update the cached stat information for paths whose
 contents in the work tree match the contents in the
 index.  This option defaults to true.  Note that this
@@ -28,17 +28,17 @@ affects only <em>git diff</em> Porcelain, and not lower level
 </dd>
 <dt class="hdlist1" id="Documentation/diff-config.txt-diffdirstat"><a class="anchor" href="#Documentation/diff-config.txt-diffdirstat"></a>diff.dirstat </dt>
 <dd>
-<p>A comma separated list of <code>--dirstat</code> parameters specifying the
-default behavior of the <code>--dirstat</code> option to <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>`
+<p>A comma separated list of <span class='synopsis'><code>--dirstat</code></span> parameters specifying the
+default behavior of the <span class='synopsis'><code>--dirstat</code></span> option to <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>`
 and friends. The defaults can be overridden on the command line
-(using <code>--dirstat=&lt;param1,param2,...&gt;</code>). The fallback defaults
-(when not changed by <code>diff.dirstat</code>) are <code>changes,noncumulative,3</code>.
+(using <span class='synopsis'><em>--dirstat=&lt;param1,param2,...&gt;</em></span>). The fallback defaults
+(when not changed by <span class='synopsis'><code>diff.dirstat</code></span>) are <span class='synopsis'><code>changes,noncumulative,3</code></span>.
 The following parameters are available:</p>
 <div class="openblock">
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codechangescode"><a id="Documentation/diff-config.txt-changes" class="anchor" href="#Documentation/diff-config.txt-changes"></a><code>changes</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodechangescodespan"><a id="Documentation/diff-config.txt-changes" class="anchor" href="#Documentation/diff-config.txt-changes"></a><span class='synopsis'><code>changes</code></span> </dt>
 <dd>
 <p>Compute the dirstat numbers by counting the lines that have been
 removed from the source, or added to the destination. This ignores
@@ -46,29 +46,29 @@ the amount of pure code movements within a file.  In other words,
 rearranging lines in a file is not counted as much as other changes.
 This is the default behavior when no parameter is given.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codelinescode"><a id="Documentation/diff-config.txt-lines" class="anchor" href="#Documentation/diff-config.txt-lines"></a><code>lines</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodelinescodespan"><a id="Documentation/diff-config.txt-lines" class="anchor" href="#Documentation/diff-config.txt-lines"></a><span class='synopsis'><code>lines</code></span> </dt>
 <dd>
 <p>Compute the dirstat numbers by doing the regular line-based diff
 analysis, and summing the removed/added line counts. (For binary
 files, count 64-byte chunks instead, since binary files have no
-natural concept of lines). This is a more expensive <code>--dirstat</code>
-behavior than the <code>changes</code> behavior, but it does count rearranged
+natural concept of lines). This is a more expensive <span class='synopsis'><code>--dirstat</code></span>
+behavior than the <span class='synopsis'><code>changes</code></span> behavior, but it does count rearranged
 lines within a file as much as other changes. The resulting output
-is consistent with what you get from the other <code>--*stat</code> options.</p>
+is consistent with what you get from the other <span class='synopsis'><code>--*stat</code></span> options.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codefilescode"><a id="Documentation/diff-config.txt-files" class="anchor" href="#Documentation/diff-config.txt-files"></a><code>files</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodefilescodespan"><a id="Documentation/diff-config.txt-files" class="anchor" href="#Documentation/diff-config.txt-files"></a><span class='synopsis'><code>files</code></span> </dt>
 <dd>
 <p>Compute the dirstat numbers by counting the number of files changed.
 Each changed file counts equally in the dirstat analysis. This is
-the computationally cheapest <code>--dirstat</code> behavior, since it does
+the computationally cheapest <span class='synopsis'><code>--dirstat</code></span> behavior, since it does
 not have to look at the file contents at all.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codecumulativecode"><a id="Documentation/diff-config.txt-cumulative" class="anchor" href="#Documentation/diff-config.txt-cumulative"></a><code>cumulative</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodecumulativecodespan"><a id="Documentation/diff-config.txt-cumulative" class="anchor" href="#Documentation/diff-config.txt-cumulative"></a><span class='synopsis'><code>cumulative</code></span> </dt>
 <dd>
 <p>Count changes in a child directory for the parent directory as well.
-Note that when using <code>cumulative</code>, the sum of the percentages
+Note that when using <span class='synopsis'><code>cumulative</code></span>, the sum of the percentages
 reported may exceed 100%. The default (non-cumulative) behavior can
-be specified with the <code>noncumulative</code> parameter.</p>
+be specified with the <span class='synopsis'><code>noncumulative</code></span> parameter.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/diff-config.txt-ltlimitgt"><a id="Documentation/diff-config.txt-limit" class="anchor" href="#Documentation/diff-config.txt-limit"></a>&lt;limit&gt; </dt>
 <dd>
@@ -84,7 +84,7 @@ are not shown in the output.</p>
 <p>Example: The following will count changed files, while ignoring
 directories with less than 10% of the total amount of changed files,
 and accumulating child directory counts in the parent directories:
-<code>files,10,cumulative</code>.</p>
+<span class='synopsis'><code>files,10,cumulative</code></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/diff-config.txt-diffstatGraphWidth"><a class="anchor" href="#Documentation/diff-config.txt-diffstatGraphWidth"></a>diff.statGraphWidth </dt>
@@ -114,7 +114,7 @@ affects only <em>git diff</em> Porcelain, and not lower level <em>diff</em>
 commands such as <em>git diff-files</em>. <em>git checkout</em> also honors
 this setting when reporting uncommitted changes. Setting it to
 <em>all</em> disables the submodule summary normally shown by <em>git commit</em>
-and <em>git status</em> when <code>status.submoduleSummary</code> is set unless it is
+and <em>git status</em> when <span class='synopsis'><code>status.submoduleSummary</code></span> is set unless it is
 overridden by using the --ignore-submodules command-line option.
 The <em>git submodule</em> commands are not affected by this setting.</p>
 </dd>
@@ -126,23 +126,23 @@ this configuration is in effect, reverse diff output also swaps
 the order of the prefixes:</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffcode"><a id="Documentation/diff-config.txt-gitdiff" class="anchor" href="#Documentation/diff-config.txt-gitdiff"></a><code>git diff</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodegitcodecodediffcodespan"><a id="Documentation/diff-config.txt-gitdiff" class="anchor" href="#Documentation/diff-config.txt-gitdiff"></a><span class='synopsis'><code>git</code> <code>diff</code></span> </dt>
 <dd>
 <p>compares the (i)ndex and the (w)ork tree;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffHEADcode"><a id="Documentation/diff-config.txt-gitdiffHEAD" class="anchor" href="#Documentation/diff-config.txt-gitdiffHEAD"></a><code>git diff HEAD</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodegitcodecodediffcodecodeHEADcodespan"><a id="Documentation/diff-config.txt-gitdiffHEAD" class="anchor" href="#Documentation/diff-config.txt-gitdiffHEAD"></a><span class='synopsis'><code>git</code> <code>diff</code> <code>HEAD</code></span> </dt>
 <dd>
 <p>compares a (c)ommit and the (w)ork tree;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiff--cachedcode"><a id="Documentation/diff-config.txt-gitdiff--cached" class="anchor" href="#Documentation/diff-config.txt-gitdiff--cached"></a><code>git diff --cached</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodegitcodecodediffcodecode--cachedcodespan"><a id="Documentation/diff-config.txt-gitdiff--cached" class="anchor" href="#Documentation/diff-config.txt-gitdiff--cached"></a><span class='synopsis'><code>git</code> <code>diff</code> <code>--cached</code></span> </dt>
 <dd>
 <p>compares a (c)ommit and the (i)ndex;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiffHEADfile1file2code"><a id="Documentation/diff-config.txt-gitdiffHEADfile1file2" class="anchor" href="#Documentation/diff-config.txt-gitdiffHEADfile1file2"></a><code>git diff HEAD:file1 file2</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodegitcodecodediffcodecodeHEADfile1codecodefile2codespan"><a id="Documentation/diff-config.txt-gitdiffHEADfile1file2" class="anchor" href="#Documentation/diff-config.txt-gitdiffHEADfile1file2"></a><span class='synopsis'><code>git</code> <code>diff</code> <code>HEAD:file1</code> <code>file2</code></span> </dt>
 <dd>
 <p>compares an (o)bject and a (w)ork tree entity;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codegitdiff--no-indexabcode"><a id="Documentation/diff-config.txt-gitdiff--no-indexab" class="anchor" href="#Documentation/diff-config.txt-gitdiff--no-indexab"></a><code>git diff --no-index a b</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodegitcodecodediffcodecode--no-indexcodecodeacodecodebcodespan"><a id="Documentation/diff-config.txt-gitdiff--no-indexab" class="anchor" href="#Documentation/diff-config.txt-gitdiff--no-indexab"></a><span class='synopsis'><code>git</code> <code>diff</code> <code>--no-index</code> <code>a</code> <code>b</code></span> </dt>
 <dd>
 <p>compares two non-git things (1) and (2).</p>
 </dd>
@@ -162,7 +162,7 @@ Can be overridden by the <em>-O</em> option to <a href='{{< relurl "docs/git-dif
 <dt class="hdlist1" id="Documentation/diff-config.txt-diffrenameLimit"><a class="anchor" href="#Documentation/diff-config.txt-diffrenameLimit"></a>diff.renameLimit </dt>
 <dd>
 <p>The number of files to consider when performing the copy/rename
-detection; equivalent to the <em>git diff</em> option <code>-l</code>.</p>
+detection; equivalent to the <em>git diff</em> option <span class='synopsis'><code>-l</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/diff-config.txt-diffrenames"><a class="anchor" href="#Documentation/diff-config.txt-diffrenames"></a>diff.renames </dt>
 <dd>
@@ -183,7 +183,7 @@ before each empty output line. Defaults to false.</p>
 <dd>
 <p>Specify the format in which differences in submodules are
 shown.  The "log" format lists the commits in the range like
-<a href='{{< relurl "docs/git-submodule" >}}'>git-submodule[1]</a> <code>summary</code> does.  The "short" format
+<a href='{{< relurl "docs/git-submodule" >}}'>git-submodule[1]</a> <span class='synopsis'><code>summary</code></span> does.  The "short" format
 format just shows the names of the commits at the beginning
 and end of the range.  Defaults to short.</p>
 </dd>
@@ -231,7 +231,7 @@ conversion outputs.  See <a href='{{< relurl "docs/gitattributes" >}}'>gitattrib
 <dt class="hdlist1" id="Documentation/diff-config.txt-difftool"><a class="anchor" href="#Documentation/diff-config.txt-difftool"></a>diff.tool </dt>
 <dd>
 <p>Controls which diff tool is used by <a href='{{< relurl "docs/git-difftool" >}}'>git-difftool[1]</a>.
-This variable overrides the value configured in <code>merge.tool</code>.
+This variable overrides the value configured in <span class='synopsis'><code>merge.tool</code></span>.
 The list below shows the valid built-in values.
 Any other value is treated as a custom diff tool and requires
 that a corresponding difftool.&lt;tool&gt;.cmd variable is defined.</p>
@@ -314,7 +314,7 @@ that a corresponding difftool.&lt;tool&gt;.cmd variable is defined.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/diff-config.txt-diffcompactionHeuristic"><a class="anchor" href="#Documentation/diff-config.txt-diffcompactionHeuristic"></a>diff.compactionHeuristic </dt>
 <dd>
-<p>Set this option to <code>true</code> to enable an experimental heuristic that
+<p>Set this option to <span class='synopsis'><code>true</code></span> to enable an experimental heuristic that
 shifts the hunk boundary in an attempt to make the resulting
 patch easier to read.</p>
 </dd>
@@ -325,20 +325,20 @@ patch easier to read.</p>
 <div class="content">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codedefaultcodecodemyerscode"><a id="Documentation/diff-config.txt-defaultmyers" class="anchor" href="#Documentation/diff-config.txt-defaultmyers"></a><code>default</code>, <code>myers</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodedefaultcodespanspanclasssynopsiscodemyerscodespan"><a id="Documentation/diff-config.txt-defaultmyers" class="anchor" href="#Documentation/diff-config.txt-defaultmyers"></a><span class='synopsis'><code>default</code></span>, <span class='synopsis'><code>myers</code></span> </dt>
 <dd>
 <p>The basic greedy diff algorithm. Currently, this is the default.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codeminimalcode"><a id="Documentation/diff-config.txt-minimal" class="anchor" href="#Documentation/diff-config.txt-minimal"></a><code>minimal</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodeminimalcodespan"><a id="Documentation/diff-config.txt-minimal" class="anchor" href="#Documentation/diff-config.txt-minimal"></a><span class='synopsis'><code>minimal</code></span> </dt>
 <dd>
 <p>Spend extra time to make sure the smallest possible diff is
 produced.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codepatiencecode"><a id="Documentation/diff-config.txt-patience" class="anchor" href="#Documentation/diff-config.txt-patience"></a><code>patience</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodepatiencecodespan"><a id="Documentation/diff-config.txt-patience" class="anchor" href="#Documentation/diff-config.txt-patience"></a><span class='synopsis'><code>patience</code></span> </dt>
 <dd>
 <p>Use "patience diff" algorithm when generating patches.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-config.txt-codehistogramcode"><a id="Documentation/diff-config.txt-histogram" class="anchor" href="#Documentation/diff-config.txt-histogram"></a><code>histogram</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-config.txt-spanclasssynopsiscodehistogramcodespan"><a id="Documentation/diff-config.txt-histogram" class="anchor" href="#Documentation/diff-config.txt-histogram"></a><span class='synopsis'><code>histogram</code></span> </dt>
 <dd>
 <p>This algorithm extends the patience algorithm to "support
 low-occurrence common elements".</p>

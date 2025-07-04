@@ -93,7 +93,7 @@ really plumbing, intended to be called only by <em>git fetch</em>.</p>
 <p>A list of arguments, acceptable to <em>git rev-parse</em> and
 <em>git rev-list</em> (and containing a named ref, see SPECIFYING REFERENCES
 below), that specifies the specific objects and references
-to transport.  For example, <code>master~10..master</code> causes the
+to transport.  For example, <span class='synopsis'><code>master~10..master</code></span> causes the
 current master reference to be packaged along with all objects
 added since its 10th ancestor commit.  There is no explicit
 limit to the number of references and objects that may be
@@ -117,12 +117,12 @@ like <em>git fetch-pack</em>).</p>
 <div class="paragraph">
 <p><em>git bundle</em> will only package references that are shown by
 <em>git show-ref</em>: this includes heads, tags, and remote heads.  References
-such as <code>master~1</code> cannot be packaged, but are perfectly suitable for
+such as <span class='synopsis'><code>master~1</code></span> cannot be packaged, but are perfectly suitable for
 defining the basis.  More than one reference may be packaged, and more
 than one basis can be specified.  The objects packaged are those not
 contained in the union of the given bases.  Each basis can be
-specified explicitly (e.g. <code>^master~10</code>), or implicitly (e.g.
-<code>master~10..master</code>, <code>--since=10.days.ago master</code>).</p>
+specified explicitly (e.g. <span class='synopsis'><code>^master~10</code></span>), or implicitly (e.g.
+<span class='synopsis'><code>master~10..master</code></span>, <span class='synopsis'><code>--since=10.days.ago</code> <code>master</code></span>).</p>
 </div>
 <div class="paragraph">
 <p>It is very important that the basis used be held by the destination.
@@ -236,7 +236,7 @@ the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> command. Here are mor
 </div>
 </div>
 <div class="paragraph">
-<p>You can run <code>git-bundle verify</code> to see if you can extract from a bundle
+<p>You can run <span class='synopsis'><code>git-bundle</code> <code>verify</code></span> to see if you can extract from a bundle
 that was created with a basis:</p>
 </div>
 <div class="listingblock">

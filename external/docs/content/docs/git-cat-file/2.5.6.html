@@ -92,14 +92,14 @@ to apply the filter to the content recorded in the index at &lt;path&gt;.</p>
 <dd>
 <p>Print object information and contents for each object provided
 on stdin.  May not be combined with any other options or arguments.
-See the section <code>BATCH OUTPUT</code> below for details.</p>
+See the section <span class='synopsis'><code>BATCH</code> <code>OUTPUT</code></span> below for details.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-check"><a class="anchor" href="#Documentation/git-cat-file.txt---batch-check"></a>--batch-check </dt>
 <dt class="hdlist1" id="Documentation/git-cat-file.txt---batch-checkltformatgt"><a id="Documentation/git-cat-file.txt---batch-checkformat" class="anchor" href="#Documentation/git-cat-file.txt---batch-checkformat"></a>--batch-check=&lt;format&gt; </dt>
 <dd>
 <p>Print object information for each object provided on stdin.  May
 not be combined with any other options or arguments.  See the
-section <code>BATCH OUTPUT</code> below for details.</p>
+section <span class='synopsis'><code>BATCH</code> <code>OUTPUT</code></span> below for details.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cat-file.txt---allow-unknown-type"><a class="anchor" href="#Documentation/git-cat-file.txt---allow-unknown-type"></a>--allow-unknown-type </dt>
 <dd>
@@ -117,12 +117,12 @@ the portion of the link which is outside the tree will be
 printed.</p>
 <div class="paragraph">
 <p>This option does not (currently) work correctly when an object in the
-index is specified (e.g. <code>:link</code> instead of <code>HEAD:link</code>) rather than
+index is specified (e.g. <span class='synopsis'><code>:link</code></span> instead of <span class='synopsis'><code>HEAD:link</code></span>) rather than
 one in the tree.</p>
 </div>
 <div class="paragraph">
-<p>This option cannot (currently) be used unless <code>--batch</code> or
-<code>--batch-check</code> is used.</p>
+<p>This option cannot (currently) be used unless <span class='synopsis'><code>--batch</code></span> or
+<span class='synopsis'><code>--batch-check</code></span> is used.</p>
 </div>
 <div class="paragraph">
 <p>For example, consider a git repository containing:</p>
@@ -141,7 +141,7 @@ alink: a symlink to /etc/passwd</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For a regular file <code>f</code>, <code>echo HEAD:f | git cat-file --batch</code> would print</p>
+<p>For a regular file <span class='synopsis'><code>f</code></span>, <span class='synopsis'><code>echo</code> <code>HEAD:f</code> | <code>git</code> <code>cat-file</code> <code>--batch</code></span> would print</p>
 </div>
 <div class="openblock">
 <div class="content">
@@ -153,13 +153,13 @@ alink: a symlink to /etc/passwd</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>And <code>echo HEAD:link | git cat-file --batch --follow-symlinks</code> would
-print the same thing, as would <code>HEAD:dir/link</code>, as they both point at
-<code>HEAD:f</code>.</p>
+<p>And <span class='synopsis'><code>echo</code> <code>HEAD:link</code> | <code>git</code> <code>cat-file</code> <code>--batch</code> <code>--follow-symlinks</code></span> would
+print the same thing, as would <span class='synopsis'><code>HEAD:dir/link</code></span>, as they both point at
+<span class='synopsis'><code>HEAD:f</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>Without <code>--follow-symlinks</code>, these would print data about the symlink
-itself.  In the case of <code>HEAD:link</code>, you would see</p>
+<p>Without <span class='synopsis'><code>--follow-symlinks</code></span>, these would print data about the symlink
+itself.  In the case of <span class='synopsis'><code>HEAD:link</code></span>, you would see</p>
 </div>
 <div class="openblock">
 <div class="content">
@@ -171,7 +171,7 @@ itself.  In the case of <code>HEAD:link</code>, you would see</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Both <code>plink</code> and <code>alink</code> point outside the tree, so they would
+<p>Both <span class='synopsis'><code>plink</code></span> and <span class='synopsis'><code>alink</code></span> point outside the tree, so they would
 respectively print:</p>
 </div>
 <div class="openblock">
@@ -220,64 +220,65 @@ will be returned.</p>
 <h2 id="_batch_output"><a class="anchor" href="#_batch_output"></a>BATCH OUTPUT</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If <code>--batch</code> or <code>--batch-check</code> is given, <code>cat-file</code> will read objects
+<p>If <span class='synopsis'><code>--batch</code></span> or <span class='synopsis'><code>--batch-check</code></span> is given, <span class='synopsis'><code>cat-file</code></span> will read objects
 from stdin, one per line, and print information about them. By default,
 the whole line is considered as an object, as if it were fed to
 <a href='{{< relurl "docs/git-rev-parse" >}}'>git-rev-parse[1]</a>.</p>
 </div>
 <div class="paragraph">
 <p>You can specify the information shown for each object by using a custom
-<code>&lt;format&gt;</code>. The <code>&lt;format&gt;</code> is copied literally to stdout for each
-object, with placeholders of the form <code>%(atom)</code> expanded, followed by a
+<span class='synopsis'><em>&lt;format&gt;</em></span>. The <span class='synopsis'><em>&lt;format&gt;</em></span> is copied literally to stdout for each
+object, with placeholders of the form <span class='synopsis'><code>%</code>(<code>atom</code>)</span> expanded, followed by a
 newline. The available atoms are:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectnamecode"><a id="Documentation/git-cat-file.txt-objectname" class="anchor" href="#Documentation/git-cat-file.txt-objectname"></a><code>objectname</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-spanclasssynopsiscodeobjectnamecodespan"><a id="Documentation/git-cat-file.txt-objectname" class="anchor" href="#Documentation/git-cat-file.txt-objectname"></a><span class='synopsis'><code>objectname</code></span> </dt>
 <dd>
 <p>The 40-hex object name of the object.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjecttypecode"><a id="Documentation/git-cat-file.txt-objecttype" class="anchor" href="#Documentation/git-cat-file.txt-objecttype"></a><code>objecttype</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-spanclasssynopsiscodeobjecttypecodespan"><a id="Documentation/git-cat-file.txt-objecttype" class="anchor" href="#Documentation/git-cat-file.txt-objecttype"></a><span class='synopsis'><code>objecttype</code></span> </dt>
 <dd>
-<p>The type of of the object (the same as <code>cat-file -t</code> reports).</p>
+<p>The type of of the object (the same as <span class='synopsis'><code>cat-file</code> <code>-t</code></span> reports).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectsizecode"><a id="Documentation/git-cat-file.txt-objectsize" class="anchor" href="#Documentation/git-cat-file.txt-objectsize"></a><code>objectsize</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-spanclasssynopsiscodeobjectsizecodespan"><a id="Documentation/git-cat-file.txt-objectsize" class="anchor" href="#Documentation/git-cat-file.txt-objectsize"></a><span class='synopsis'><code>objectsize</code></span> </dt>
 <dd>
-<p>The size, in bytes, of the object (the same as <code>cat-file -s</code>
+<p>The size, in bytes, of the object (the same as <span class='synopsis'><code>cat-file</code> <code>-s</code></span>
 reports).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codeobjectsizediskcode"><a id="Documentation/git-cat-file.txt-objectsizedisk" class="anchor" href="#Documentation/git-cat-file.txt-objectsizedisk"></a><code>objectsize:disk</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-spanclasssynopsiscodeobjectsizediskcodespan"><a id="Documentation/git-cat-file.txt-objectsizedisk" class="anchor" href="#Documentation/git-cat-file.txt-objectsizedisk"></a><span class='synopsis'><code>objectsize:disk</code></span> </dt>
 <dd>
 <p>The size, in bytes, that the object takes up on disk. See the
-note about on-disk sizes in the <code>CAVEATS</code> section below.</p>
+note about on-disk sizes in the <span class='synopsis'><code>CAVEATS</code></span> section below.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-codedeltabasecode"><a id="Documentation/git-cat-file.txt-deltabase" class="anchor" href="#Documentation/git-cat-file.txt-deltabase"></a><code>deltabase</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-spanclasssynopsiscodedeltabasecodespan"><a id="Documentation/git-cat-file.txt-deltabase" class="anchor" href="#Documentation/git-cat-file.txt-deltabase"></a><span class='synopsis'><code>deltabase</code></span> </dt>
 <dd>
 <p>If the object is stored as a delta on-disk, this expands to the
 40-hex sha1 of the delta base object. Otherwise, expands to the
-null sha1 (40 zeroes). See <code>CAVEATS</code> below.</p>
+null sha1 (40 zeroes). See <span class='synopsis'><code>CAVEATS</code></span> below.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-cat-file.txt-coderestcode"><a id="Documentation/git-cat-file.txt-rest" class="anchor" href="#Documentation/git-cat-file.txt-rest"></a><code>rest</code> </dt>
+<dt class="hdlist1" id="Documentation/git-cat-file.txt-spanclasssynopsiscoderestcodespan"><a id="Documentation/git-cat-file.txt-rest" class="anchor" href="#Documentation/git-cat-file.txt-rest"></a><span class='synopsis'><code>rest</code></span> </dt>
 <dd>
 <p>If this atom is used in the output string, input lines are split
 at the first whitespace boundary. All characters before that
 whitespace are considered to be the object name; characters
 after that first run of whitespace (i.e., the "rest" of the
-line) are output in place of the <code>%(rest)</code> atom.</p>
+line) are output in place of the <span class='synopsis'><code>%</code>(<code>rest</code>)</span> atom.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>If no format is specified, the default format is <code>%(objectname)
-%(objecttype) %(objectsize)</code>.</p>
+<p>If no format is specified, the default format is <span class='synopsis'><code>%</code>(<code>objectname</code>)
+
+<code>%</code>(<code>objecttype</code>) <code>%</code>(<code>objectsize</code>)</span>.</p>
 </div>
 <div class="paragraph">
-<p>If <code>--batch</code> is specified, the object information is followed by the
-object contents (consisting of <code>%(objectsize)</code> bytes), followed by a
+<p>If <span class='synopsis'><code>--batch</code></span> is specified, the object information is followed by the
+object contents (consisting of <span class='synopsis'><code>%</code>(<code>objectsize</code>)</span> bytes), followed by a
 newline.</p>
 </div>
 <div class="paragraph">
-<p>For example, <code>--batch</code> without a custom format would produce:</p>
+<p>For example, <span class='synopsis'><code>--batch</code></span> without a custom format would produce:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -286,7 +287,7 @@ newline.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Whereas <code>--batch-check='%(objectname) %(objecttype)'</code> would produce:</p>
+<p>Whereas <span class='synopsis'><code>--batch-check='%</code>(<code>objectname</code>) <code>%</code>(<code>objecttype</code>)</span> would produce:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -295,7 +296,7 @@ newline.</p>
 </div>
 <div class="paragraph">
 <p>If a name is specified on stdin that cannot be resolved to an object in
-the repository, then <code>cat-file</code> will ignore any custom format and print:</p>
+the repository, then <span class='synopsis'><code>cat-file</code></span> will ignore any custom format and print:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -304,7 +305,7 @@ the repository, then <code>cat-file</code> will ignore any custom format and pri
 </div>
 <div class="paragraph">
 <p>If --follow-symlinks is used, and a symlink in the repository points
-outside the repository, then <code>cat-file</code> will ignore any custom format
+outside the repository, then <span class='synopsis'><code>cat-file</code></span> will ignore any custom format
 and print:</p>
 </div>
 <div class="listingblock">

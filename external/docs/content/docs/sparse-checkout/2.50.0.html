@@ -240,7 +240,7 @@ repository, but consider it a blocker for Git commands to try to operate on
 those.  If commands attempt to access paths in history outside the sparsity
 specification, then the partial clone will attempt to download additional
 blobs on demand, fail, and then fail the user&#8217;s command.  (This may be
-unavoidable in some cases, e.g. when <code>git merge</code> has non-trivial changes to
+unavoidable in some cases, e.g. when <span class='synopsis'><code>git</code> <code>merge</code></span> has non-trivial changes to
 reconcile outside the sparse specification, but we should limit how often
 users are forced to connect to the network.)</p>
 </div>
@@ -264,7 +264,7 @@ subset of behavior A users) and doing so on very large repositories.  The
 reason for yet another variant is that downloading even just the blobs
 through history within their sparse specification may be too much, so they
 only download some.  They would still like operations to succeed without
-network connectivity, though, so things like <code>git log -S${SEARCH_TERM} -p</code>
+network connectivity, though, so things like <span class='synopsis'><code>git</code> <code>log</code> <code>-S${SEARCH_TERM}</code> <code>-p</code></span>
 or `git grep ${SEARCH_TERM} OLDREV ` would need to be prepared to provide
 partial results that depend on what happens to have been downloaded.</p>
 </div>
@@ -499,7 +499,7 @@ sparsity patterns:</p>
 <p>revert</p>
 </li>
 <li>
-<p><code>am</code> and <code>apply --cached</code> should probably be in this section but
+<p><span class='synopsis'><code>am</code></span> and <span class='synopsis'><code>apply</code> <code>--cached</code></span> should probably be in this section but
 are buggy (see the "Known bugs" section below)</p>
 <div class="literalblock">
 <div class="content">
@@ -562,7 +562,7 @@ or not, and whether those paths match sparsity patterns or not):</p>
 <p>stash</p>
 </li>
 <li>
-<p>apply (without <code>--index</code> or <code>--cached</code>)</p>
+<p>apply (without <span class='synopsis'><code>--index</code></span> or <span class='synopsis'><code>--cached</code></span>)</p>
 </li>
 <li>
 <p>Commands that may slightly differ for behavior A vs. behavior B:</p>
@@ -628,10 +628,10 @@ current --[no-]ignore-skip-worktree-entries default is totally bogus.</pre>
 <p>commands for manually tweaking paths in both the index and the working tree</p>
 </li>
 <li>
-<p><code>restore</code></p>
+<p><span class='synopsis'><code>restore</code></span></p>
 </li>
 <li>
-<p>the restore-like half of <code>checkout</code></p>
+<p>the restore-like half of <span class='synopsis'><code>checkout</code></span></p>
 <div class="literalblock">
 <div class="content">
 <pre>These commands should be similar to add/rm/mv in that they should
@@ -1084,7 +1084,7 @@ desired behavior :</p>
 <p>am</p>
 </li>
 <li>
-<p>apply --index (which is kind of like an <code>am --no-commit</code>)</p>
+<p>apply --index (which is kind of like an <span class='synopsis'><code>am</code> <code>--no-commit</code></span>)</p>
 </li>
 <li>
 <p>read-tree (especially with -m or -u; is kind of like a --no-commit merge)</p>
@@ -1132,7 +1132,7 @@ because they are kind of like a merge-without-commit operation.</pre>
 <p>stash</p>
 </li>
 <li>
-<p>apply (without <code>--index</code>)</p>
+<p>apply (without <span class='synopsis'><code>--index</code></span>)</p>
 <div class="literalblock">
 <div class="content">
 <pre>These have completely different defaults and perhaps deserve the most
@@ -1337,7 +1337,7 @@ merge, reset, etc.).</p>
 </li>
 <li>
 <p>Users can also request such transient differences be corrected via
-running <code>git sparse-checkout reapply</code>.  Various places recommend
+running <span class='synopsis'><code>git</code> <code>sparse-checkout</code> <code>reapply</code></span>.  Various places recommend
 running that command.</p>
 </li>
 <li>
@@ -1349,8 +1349,8 @@ differences; we may add more in the future.</p>
 <div class="paragraph">
 <p>While we avoid dropping unstaged changes or files which have conflicts,
 we otherwise aggressively try to fix these transient differences.  If
-users want these differences to persist, they should run the <code>set</code> or
-<code>add</code> subcommands of <code>git sparse-checkout</code> to reflect their intended
+users want these differences to persist, they should run the <span class='synopsis'><code>set</code></span> or
+<span class='synopsis'><code>add</code></span> subcommands of <span class='synopsis'><code>git</code> <code>sparse-checkout</code></span> to reflect their intended
 sparse specification.</p>
 </div>
 <div class="paragraph">
@@ -1372,7 +1372,7 @@ git checkout REVISION &amp;&amp; git grep expression
 path we can consult for a SKIP_WORKTREE setting for those paths.</p>
 </li>
 <li>
-<p>Since <code>checkout</code> is one of those commands that tries to remove
+<p>Since <span class='synopsis'><code>checkout</code></span> is one of those commands that tries to remove
 transient differences in the sparse specification, it makes sense
 to use the corrected sparse specification
 (i.e. $GIT_DIR/info/sparse-checkout) rather than attempting to
@@ -1457,19 +1457,19 @@ to avoid a flag that appears to be binary.</p>
 explanatory</p>
 </li>
 <li>
-<p><code>--sparse</code>, as used in add/rm/mv, is totally backwards for
-grep/log/etc.  Changing the meaning of <code>--sparse</code> for these
+<p><span class='synopsis'><code>--sparse</code></span>, as used in add/rm/mv, is totally backwards for
+grep/log/etc.  Changing the meaning of <span class='synopsis'><code>--sparse</code></span> for these
 commands would fix the backwardness, but possibly break existing
 scripts.  Using a new name pairing would allow us to treat
-<code>--sparse</code> in these commands as a deprecated alias.</p>
+<span class='synopsis'><code>--sparse</code></span> in these commands as a deprecated alias.</p>
 </li>
 <li>
-<p>There is a different <code>--sparse</code>/<code>--dense</code> pair for commands using
+<p>There is a different <span class='synopsis'><code>--sparse</code></span>/<span class='synopsis'><code>--dense</code></span> pair for commands using
 revision machinery, so using that naming might cause confusion</p>
 </li>
 <li>
-<p>There is also a <code>--sparse</code> in both pack-objects and show-branch, which
-don&#8217;t conflict but do suggest that <code>--sparse</code> is overloaded</p>
+<p>There is also a <span class='synopsis'><code>--sparse</code></span> in both pack-objects and show-branch, which
+don&#8217;t conflict but do suggest that <span class='synopsis'><code>--sparse</code></span> is overloaded</p>
 </li>
 <li>
 <p>The name --ignore-skip-worktree-bits is a double negative, is
@@ -1490,8 +1490,8 @@ the primary difference we are focusing is just the history-querying
 commands (log/diff/grep).  Previous config suggestion here: [13]</p>
 </li>
 <li>
-<p>Is <code>--no-expand</code> a good alias for ls-files&#8217;s <code>--sparse</code> option?
-(<code>--sparse</code> does not map to either <code>--scope=sparse</code> or <code>--scope=all</code>,
+<p>Is <span class='synopsis'><code>--no-expand</code></span> a good alias for ls-files&#8217;s <span class='synopsis'><code>--sparse</code></span> option?
+(<span class='synopsis'><code>--sparse</code></span> does not map to either <span class='synopsis'><code>--scope=sparse</code></span> or <span class='synopsis'><code>--scope=all</code></span>,
 because in non-cone mode it does nothing and in cone-mode it shows the
 sparse directory entries which are technically outside the sparse
 specification)</p>
@@ -1500,21 +1500,21 @@ specification)</p>
 <p>Under Behavior A:</p>
 </li>
 <li>
-<p>Does ls-files' <code>--no-expand</code> override the default <code>--scope=all</code>, or
+<p>Does ls-files' <span class='synopsis'><code>--no-expand</code></span> override the default <span class='synopsis'><code>--scope=all</code></span>, or
 does it need an extra flag?</p>
 </li>
 <li>
-<p>Does ls-files' <code>-t</code> option imply <code>--scope=all</code>?</p>
+<p>Does ls-files' <span class='synopsis'><code>-t</code></span> option imply <span class='synopsis'><code>--scope=all</code></span>?</p>
 </li>
 <li>
-<p>Does update-index&#8217;s <code>--[no-]skip-worktree</code> option imply <code>--scope=all</code>?</p>
+<p>Does update-index&#8217;s <span class='synopsis'><code>--</code>[<code>no-</code>]<code>skip-worktree</code></span> option imply <span class='synopsis'><code>--scope=all</code></span>?</p>
 </li>
 <li>
 <p>sparse-checkout: once behavior A is fully implemented, should we take
 an interim measure to ease people into switching the default?  Namely,
 if folks are not already in a sparse checkout, then require
-<code>sparse-checkout init/set</code> to take a
-<code>--set-scope=(sparse|worktree-sparse-history-dense|dense)</code> flag (which
+<span class='synopsis'><code>sparse-checkout</code> <code>init/set</code></span> to take a
+<span class='synopsis'><code>--set-scope=</code>(<code>sparse</code>|<code>worktree-sparse-history-dense</code>|<code>dense</code>)</span> flag (which
 would set sparse.scope according to the setting given), and throw an
 error if the flag is not provided?  That error would be a great place
 to warn folks that the default may change in the future, and get them
@@ -1555,11 +1555,11 @@ request that they not trigger this bug." flag</p>
 <p>Flags &amp; Config</p>
 </li>
 <li>
-<p>Make <code>--sparse</code> in add/rm/mv a deprecated alias for <code>--scope=all</code></p>
+<p>Make <span class='synopsis'><code>--sparse</code></span> in add/rm/mv a deprecated alias for <span class='synopsis'><code>--scope=all</code></span></p>
 </li>
 <li>
-<p>Make <code>--ignore-skip-worktree-bits</code> in checkout-index/checkout/restore
-a deprecated aliases for <code>--scope=all</code></p>
+<p>Make <span class='synopsis'><code>--ignore-skip-worktree-bits</code></span> in checkout-index/checkout/restore
+a deprecated aliases for <span class='synopsis'><code>--scope=all</code></span></p>
 </li>
 <li>
 <p>Create config option (sparse.scope?), tie it to the "Cliff notes"
@@ -1780,11 +1780,11 @@ SKIP_WORKTREE bits appropriately.</pre>
     <a href="https://lore.kernel.org/git/11d46a399d26c913787b704d2b7169cafc28d639.1642175983.git.gitgitgadget@gmail.com/" class="bare">https://lore.kernel.org/git/11d46a399d26c913787b704d2b7169cafc28d639.1642175983.git.gitgitgadget@gmail.com/</a>
 [4] (Clone --no-checkout interaction)
     <a href="https://lore.kernel.org/git/pull.801.v2.git.git.1591324899170.gitgitgadget@gmail.com/" class="bare">https://lore.kernel.org/git/pull.801.v2.git.git.1591324899170.gitgitgadget@gmail.com/</a> (clone --no-checkout)
-[5] (The need for update_sparsity() and avoiding <code>read-tree -mu HEAD</code>)
+[5] (The need for update_sparsity() and avoiding <span class='synopsis'><code>read-tree</code> <code>-mu</code> <code>HEAD</code></span>)
     <a href="https://lore.kernel.org/git/3a1f084641eb47515b5a41ed4409a36128913309.1585270142.git.gitgitgadget@gmail.com/" class="bare">https://lore.kernel.org/git/3a1f084641eb47515b5a41ed4409a36128913309.1585270142.git.gitgitgadget@gmail.com/</a>
 [6] (SKIP_WORKTREE is advisory, not mandatory)
     <a href="https://lore.kernel.org/git/844306c3e86ef67591cc086decb2b760e7d710a3.1585270142.git.gitgitgadget@gmail.com/" class="bare">https://lore.kernel.org/git/844306c3e86ef67591cc086decb2b760e7d710a3.1585270142.git.gitgitgadget@gmail.com/</a>
-[7] (<code>worktree add</code> should copy sparsity settings from current worktree)
+[7] (<span class='synopsis'><code>worktree</code> <code>add</code></span> should copy sparsity settings from current worktree)
     <a href="https://lore.kernel.org/git/c51cb3714e7b1d2f8c9370fe87eca9984ff4859f.1644269584.git.gitgitgadget@gmail.com/" class="bare">https://lore.kernel.org/git/c51cb3714e7b1d2f8c9370fe87eca9984ff4859f.1644269584.git.gitgitgadget@gmail.com/</a>
 [8] (Avoid negative surprises in add, rm, and mv)
     <a href="https://lore.kernel.org/git/cover.1617914011.git.matheus.bernardino@usp.br/" class="bare">https://lore.kernel.org/git/cover.1617914011.git.matheus.bernardino@usp.br/</a>

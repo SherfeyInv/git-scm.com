@@ -33,7 +33,7 @@ aliases:
 <div class="paragraph">
 <p>Traditionally, tips of branches and tags (collectively known as
 <em>refs</em>) were stored one file per ref in a (sub)directory
-under <code>$GIT_DIR/refs</code>
+under <span class='synopsis'><code>$GIT_DIR/refs</code></span>
 directory.  While many branch tips tend to be updated often,
 most tags and some branch tips are never updated.  When a
 repository has hundreds or thousands of tags, this
@@ -43,23 +43,23 @@ performance.</p>
 <div class="paragraph">
 <p>This command is used to solve the storage and performance
 problem by storing the refs in a single file,
-<code>$GIT_DIR/packed-refs</code>.  When a ref is missing from the
-traditional <code>$GIT_DIR/refs</code> directory hierarchy, it is looked
+<span class='synopsis'><code>$GIT_DIR/packed-refs</code></span>.  When a ref is missing from the
+traditional <span class='synopsis'><code>$GIT_DIR/refs</code></span> directory hierarchy, it is looked
 up in this
 file and used if found.</p>
 </div>
 <div class="paragraph">
 <p>Subsequent updates to branches always create new files under
-<code>$GIT_DIR/refs</code> directory hierarchy.</p>
+<span class='synopsis'><code>$GIT_DIR/refs</code></span> directory hierarchy.</p>
 </div>
 <div class="paragraph">
 <p>A recommended practice to deal with a repository with too many
-refs is to pack its refs with <code>--all</code> once, and
-occasionally run <code>git pack-refs</code>.  Tags are by
+refs is to pack its refs with <span class='synopsis'><code>--all</code></span> once, and
+occasionally run <span class='synopsis'><code>git</code> <code>pack-refs</code></span>.  Tags are by
 definition stationary and are not expected to change.  Branch
-heads will be packed with the initial <code>pack-refs --all</code>, but
+heads will be packed with the initial <span class='synopsis'><code>pack-refs</code> <code>--all</code></span>, but
 only the currently active branch heads will become unpacked,
-and the next <code>pack-refs</code> (without <code>--all</code>) will leave them
+and the next <span class='synopsis'><code>pack-refs</code></span> (without <span class='synopsis'><code>--all</code></span>) will leave them
 unpacked.</p>
 </div>
 </div>
@@ -81,7 +81,7 @@ with many branches of historical interests.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-pack-refs.txt---no-prune"><a class="anchor" href="#Documentation/git-pack-refs.txt---no-prune"></a>--no-prune </dt>
 <dd>
-<p>The command usually removes loose refs under <code>$GIT_DIR/refs</code>
+<p>The command usually removes loose refs under <span class='synopsis'><code>$GIT_DIR/refs</code></span>
 hierarchy after packing them.  This option tells it not to.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-pack-refs.txt---auto"><a class="anchor" href="#Documentation/git-pack-refs.txt---auto"></a>--auto </dt>
@@ -92,7 +92,7 @@ future.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>"files": No special handling for <code>--auto</code> has been implemented.</p>
+<p>"files": No special handling for <span class='synopsis'><code>--auto</code></span> has been implemented.</p>
 </li>
 <li>
 <p>"reftable": Tables are compacted such that they form a geometric
@@ -105,26 +105,26 @@ tables that violate this property are compacted.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-pack-refs.txt---includeltpatterngt"><a id="Documentation/git-pack-refs.txt---includepattern" class="anchor" href="#Documentation/git-pack-refs.txt---includepattern"></a>--include &lt;pattern&gt; </dt>
 <dd>
-<p>Pack refs based on a <code>glob(7)</code> pattern. Repetitions of this option
-accumulate inclusion patterns. If a ref is both included in <code>--include</code> and
-<code>--exclude</code>, <code>--exclude</code> takes precedence. Using <code>--include</code> will preclude all
+<p>Pack refs based on a <span class='synopsis'><code>glob</code>(<code>7</code>)</span> pattern. Repetitions of this option
+accumulate inclusion patterns. If a ref is both included in <span class='synopsis'><code>--include</code></span> and
+<span class='synopsis'><code>--exclude</code></span>, <span class='synopsis'><code>--exclude</code></span> takes precedence. Using <span class='synopsis'><code>--include</code></span> will preclude all
 tags from being included by default. Symbolic refs and broken refs will never
-be packed. When used with <code>--all</code>, it will be a noop. Use <code>--no-include</code> to clear
+be packed. When used with <span class='synopsis'><code>--all</code></span>, it will be a noop. Use <span class='synopsis'><code>--no-include</code></span> to clear
 and reset the list of patterns.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-pack-refs.txt---excludeltpatterngt"><a id="Documentation/git-pack-refs.txt---excludepattern" class="anchor" href="#Documentation/git-pack-refs.txt---excludepattern"></a>--exclude &lt;pattern&gt; </dt>
 <dd>
-<p>Do not pack refs matching the given <code>glob(7)</code> pattern. Repetitions of this option
-accumulate exclusion patterns. Use <code>--no-exclude</code> to clear and reset the list of
-patterns. If a ref is already packed, including it with <code>--exclude</code> will not
+<p>Do not pack refs matching the given <span class='synopsis'><code>glob</code>(<code>7</code>)</span> pattern. Repetitions of this option
+accumulate exclusion patterns. Use <span class='synopsis'><code>--no-exclude</code></span> to clear and reset the list of
+patterns. If a ref is already packed, including it with <span class='synopsis'><code>--exclude</code></span> will not
 unpack it.</p>
 <div class="paragraph">
-<p>When used with <code>--all</code>, pack only loose refs which do not match any of
-the provided <code>--exclude</code> patterns.</p>
+<p>When used with <span class='synopsis'><code>--all</code></span>, pack only loose refs which do not match any of
+the provided <span class='synopsis'><code>--exclude</code></span> patterns.</p>
 </div>
 <div class="paragraph">
-<p>When used with <code>--include</code>, refs provided to <code>--include</code>, minus refs that are
-provided to <code>--exclude</code> will be packed.</p>
+<p>When used with <span class='synopsis'><code>--include</code></span>, refs provided to <span class='synopsis'><code>--include</code></span>, minus refs that are
+provided to <span class='synopsis'><code>--exclude</code></span> will be packed.</p>
 </div>
 </dd>
 </dl>

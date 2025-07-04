@@ -45,10 +45,10 @@ aliases:
 <div class="ulist">
 <ul>
 <li>
-<p>a <code>.git</code> directory at the root of the working tree;</p>
+<p>a <span class='synopsis'><code>.git</code></span> directory at the root of the working tree;</p>
 </li>
 <li>
-<p>a <code>&lt;project&gt;.git</code> directory that is a <em>bare</em> repository
+<p>a <span class='synopsis'><em>&lt;project&gt;</em><code>.git</code></span> directory that is a <em>bare</em> repository
 (i.e. without its own working tree), that is typically used for
 exchanging histories with others by pushing into it and fetching
 from it.</p>
@@ -56,12 +56,12 @@ from it.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Note</strong>: Also you can have a plain text file <code>.git</code> at the root of
-your working tree, containing <code>gitdir: &lt;path&gt;</code> to point at the real
+<p><strong>Note</strong>: Also you can have a plain text file <span class='synopsis'><code>.git</code></span> at the root of
+your working tree, containing <span class='synopsis'><code>gitdir:</code> <em>&lt;path&gt;</em></span> to point at the real
 directory that has the repository.  This mechanism is often used for
 a working tree of a submodule checkout, to allow you in the
-containing superproject to <code>git checkout</code> a branch that does not
-have the submodule.  The <code>checkout</code> has to remove the entire
+containing superproject to <span class='synopsis'><code>git</code> <code>checkout</code></span> a branch that does not
+have the submodule.  The <span class='synopsis'><code>checkout</code></span> has to remove the entire
 submodule working tree, without losing the submodule repository.</p>
 </div>
 <div class="paragraph">
@@ -82,12 +82,12 @@ found in it), but there are a few ways to violate it.</p>
 by creating a shallow clone.  See <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>.</p>
 </li>
 <li>
-<p>You could be using the <code>objects/info/alternates</code> or
-<code>$GIT_ALTERNATE_OBJECT_DIRECTORIES</code> mechanisms to <em>borrow</em>
+<p>You could be using the <span class='synopsis'><code>objects/info/alternates</code></span> or
+<span class='synopsis'><code>$GIT_ALTERNATE_OBJECT_DIRECTORIES</code></span> mechanisms to <em>borrow</em>
 objects from other object stores.  A repository with this kind
 of incomplete object store is not suitable to be published for
 use with dumb transports but otherwise is OK as long as
-<code>objects/info/alternates</code> points at the object stores it
+<span class='synopsis'><code>objects/info/alternates</code></span> points at the object stores it
 borrows from.</p>
 <div class="paragraph">
 <p>This directory is ignored if $GIT_COMMON_DIR is set and
@@ -102,7 +102,7 @@ borrows from.</p>
 <p>A newly created object is stored in its own file.
 The objects are splayed over 256 subdirectories using
 the first two characters of the sha1 object name to
-keep the number of directory entries in <code>objects</code>
+keep the number of directory entries in <span class='synopsis'><code>objects</code></span>
 itself to a manageable number. Objects found
 here are often called <em>unpacked</em> (or <em>loose</em>) objects.</p>
 </dd>
@@ -121,7 +121,7 @@ recorded in this directory.</p>
 <dd>
 <p>This file is to help dumb transports discover what packs
 are available in this object store.  Whenever a pack is
-added or removed, <code>git update-server-info</code> should be run
+added or removed, <span class='synopsis'><code>git</code> <code>update-server-info</code></span> should be run
 to keep this file up to date if the repository is
 published for dumb transports.  <em>git repack</em> does this
 by default.</p>
@@ -136,7 +136,7 @@ will usually work if you have relative paths (relative
 to the object database, not to the repository!) in your
 alternates file, but it will not work if you use absolute
 paths unless the absolute path in filesystem and web URL
-is the same. See also <code>objects/info/http-alternates</code>.</p>
+is the same. See also <span class='synopsis'><code>objects/info/http-alternates</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-objectsinfohttp-alternates"><a class="anchor" href="#Documentation/gitrepository-layout.txt-objectsinfohttp-alternates"></a>objects/info/http-alternates </dt>
 <dd>
@@ -154,23 +154,23 @@ This directory is ignored (except refs/bisect and
 refs/worktree) if $GIT_COMMON_DIR is set and
 "$GIT_COMMON_DIR/refs" will be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsheadscodenamecode"><a id="Documentation/gitrepository-layout.txt-refsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsheadsname"></a>refs/heads/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsheadsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-refsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsheadsname"></a>refs/heads/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
-<p>records tip-of-the-tree commit objects of branch <code>name</code></p>
+<p>records tip-of-the-tree commit objects of branch <span class='synopsis'><code>name</code></span></p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refstagscodenamecode"><a id="Documentation/gitrepository-layout.txt-refstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refstagsname"></a>refs/tags/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refstagsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-refstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-refstagsname"></a>refs/tags/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
 <p>records any object name (not necessarily a commit
 object, or a tag object that points at a commit object).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsremotescodenamecode"><a id="Documentation/gitrepository-layout.txt-refsremotesname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsremotesname"></a>refs/remotes/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsremotesspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-refsremotesname" class="anchor" href="#Documentation/gitrepository-layout.txt-refsremotesname"></a>refs/remotes/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
 <p>records tip-of-the-tree commit objects of branches copied
 from a remote repository.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsreplacecodeltobj-sha1gtcode"><a id="Documentation/gitrepository-layout.txt-refsreplaceobj-sha1" class="anchor" href="#Documentation/gitrepository-layout.txt-refsreplaceobj-sha1"></a>refs/replace/<code>&lt;obj-sha1&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-refsreplacespanclasssynopsisemltobj-sha1gtemspan"><a id="Documentation/gitrepository-layout.txt-refsreplaceobj-sha1" class="anchor" href="#Documentation/gitrepository-layout.txt-refsreplaceobj-sha1"></a>refs/replace/<span class='synopsis'><em>&lt;obj-sha1&gt;</em></span> </dt>
 <dd>
-<p>records the SHA-1 of the object that replaces <code>&lt;obj-sha1&gt;</code>.
+<p>records the SHA-1 of the object that replaces <span class='synopsis'><em>&lt;obj-sha1&gt;</em></span>.
 This is similar to info/grafts and is internally used and
 maintained by <a href='{{< relurl "docs/git-replace" >}}'>git-replace[1]</a>. Such refs can be exchanged
 between repositories while grafts are not.</p>
@@ -184,7 +184,7 @@ is set and "$GIT_COMMON_DIR/packed-refs" will be used instead.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-HEAD"><a class="anchor" href="#Documentation/gitrepository-layout.txt-HEAD"></a>HEAD </dt>
 <dd>
-<p>A symref (see glossary) to the <code>refs/heads/</code> namespace
+<p>A symref (see glossary) to the <span class='synopsis'><code>refs/heads/</code></span> namespace
 describing the currently active branch.  It does not mean
 much if the repository is not associated with any working tree
 (i.e. a <em>bare</em> repository), but a valid Git repository
@@ -217,7 +217,7 @@ working directory in multiple working directory setup (see
 <dd>
 <p>A slightly deprecated way to store shorthands to be used
 to specify a URL to <em>git fetch</em>, <em>git pull</em> and <em>git push</em>.
-A file can be stored as <code>branches/&lt;name&gt;</code> and then
+A file can be stored as <span class='synopsis'><code>branches/</code><em>&lt;name&gt;</em></span> and then
 <em>name</em> can be given to these commands in place of
 <em>repository</em> argument.  See the REMOTES section in
 <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a> for details.  This mechanism is legacy
@@ -230,7 +230,7 @@ directory is ignored if $GIT_COMMON_DIR is set and
 <p>Hooks are customization scripts used by various Git
 commands.  A handful of sample hooks are installed when
 <em>git init</em> is run, but all of them are disabled by
-default.  To enable, the <code>.sample</code> suffix has to be
+default.  To enable, the <span class='synopsis'><code>.sample</code></span> suffix has to be
 removed from the filename by renaming.
 Read <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a> for more details about
 each hook. This directory is ignored if $GIT_COMMON_DIR is set
@@ -266,7 +266,7 @@ available in this repository.  If the repository is
 published for dumb transports, this file should be
 regenerated by <em>git update-server-info</em> every time a tag
 or branch is created or modified.  This is normally done
-from the <code>hooks/update</code> hook, which is run by the
+from the <span class='synopsis'><code>hooks/update</code></span> hook, which is run by the
 <em>git-receive-pack</em> command when you <em>git push</em> into the
 repository.</p>
 </dd>
@@ -287,7 +287,7 @@ for a more flexible and robust system to do the same thing.</p>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-infoexclude"><a class="anchor" href="#Documentation/gitrepository-layout.txt-infoexclude"></a>info/exclude </dt>
 <dd>
 <p>This file, by convention among Porcelains, stores the
-exclude pattern list. <code>.gitignore</code> is the per-directory
+exclude pattern list. <span class='synopsis'><code>.gitignore</code></span> is the per-directory
 ignore file.  <em>git status</em>, <em>git add</em>, <em>git rm</em> and
 <em>git clean</em> look at it but the core Git commands do not look
 at it.  See also: <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a>.</p>
@@ -295,7 +295,7 @@ at it.  See also: <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a>.</p
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-infoattributes"><a class="anchor" href="#Documentation/gitrepository-layout.txt-infoattributes"></a>info/attributes </dt>
 <dd>
 <p>Defines which attributes to assign to a path, similar to per-directory
-<code>.gitattributes</code> files.   See also: <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>.</p>
+<span class='synopsis'><code>.gitattributes</code></span> files.   See also: <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-infosparse-checkout"><a class="anchor" href="#Documentation/gitrepository-layout.txt-infosparse-checkout"></a>info/sparse-checkout </dt>
 <dd>
@@ -319,18 +319,18 @@ See <a href='{{< relurl "docs/git-update-ref" >}}'>git-update-ref[1]</a> for mor
 directory is ignored if $GIT_COMMON_DIR is set and
 "$GIT_COMMON_DIR/logs" will be used instead.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefsheadscodenamecode"><a id="Documentation/gitrepository-layout.txt-logsrefsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefsheadsname"></a>logs/refs/heads/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefsheadsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-logsrefsheadsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefsheadsname"></a>logs/refs/heads/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
-<p>Records all changes made to the branch tip named <code>name</code>.</p>
+<p>Records all changes made to the branch tip named <span class='synopsis'><code>name</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefstagscodenamecode"><a id="Documentation/gitrepository-layout.txt-logsrefstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefstagsname"></a>logs/refs/tags/<code>name</code> </dt>
+<dt class="hdlist1" id="Documentation/gitrepository-layout.txt-logsrefstagsspanclasssynopsiscodenamecodespan"><a id="Documentation/gitrepository-layout.txt-logsrefstagsname" class="anchor" href="#Documentation/gitrepository-layout.txt-logsrefstagsname"></a>logs/refs/tags/<span class='synopsis'><code>name</code></span> </dt>
 <dd>
-<p>Records all changes made to the tag named <code>name</code>.</p>
+<p>Records all changes made to the tag named <span class='synopsis'><code>name</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-shallow"><a class="anchor" href="#Documentation/gitrepository-layout.txt-shallow"></a>shallow </dt>
 <dd>
-<p>This is similar to <code>info/grafts</code> but is internally used
-and maintained by shallow clone mechanism.  See <code>--depth</code>
+<p>This is similar to <span class='synopsis'><code>info/grafts</code></span> but is internally used
+and maintained by shallow clone mechanism.  See <span class='synopsis'><code>--depth</code></span>
 option to <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a> and <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a>. This
 file is ignored if $GIT_COMMON_DIR is set and
 "$GIT_COMMON_DIR/shallow" will be used instead.</p>
@@ -367,8 +367,8 @@ updated every time the linked repository is accessed.</p>
 <dd>
 <p>If this file exists, the linked working tree may be on a
 portable device and not available. The presence of this file
-prevents <code>worktrees/&lt;id&gt;</code> from being pruned either automatically
-or manually by <code>git worktree prune</code>. The file may contain a string
+prevents <span class='synopsis'><code>worktrees/</code><em>&lt;id&gt;</em></span> from being pruned either automatically
+or manually by <span class='synopsis'><code>git</code> <code>worktree</code> <code>prune</code></span>. The file may contain a string
 explaining why the repository is locked.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitrepository-layout.txt-worktreesltidgtconfigworktree"><a id="Documentation/gitrepository-layout.txt-worktreesidconfigworktree" class="anchor" href="#Documentation/gitrepository-layout.txt-worktreesidconfigworktree"></a>worktrees/&lt;id&gt;/config.worktree </dt>
@@ -384,7 +384,7 @@ explaining why the repository is locked.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Every git repository is marked with a numeric version in the
-<code>core.repositoryformatversion</code> key of its <code>config</code> file. This version
+<span class='synopsis'><code>core.repositoryformatversion</code></span> key of its <span class='synopsis'><code>config</code></span> file. This version
 specifies the rules for operating on the on-disk repository data. An
 implementation of git which does not understand a particular version
 advertised by an on-disk repository MUST NOT operate on that repository;
@@ -417,9 +417,9 @@ refs, that would require a bump of the repository format version.</p>
 </div>
 <div class="paragraph">
 <p>Note that this applies only to accessing the repository&#8217;s disk contents
-directly. An older client which understands only format <code>0</code> may still
-connect via <code>git://</code> to a repository using format <code>1</code>, as long as the
-server process understands format <code>1</code>.</p>
+directly. An older client which understands only format <span class='synopsis'><code>0</code></span> may still
+connect via <span class='synopsis'><code>git://</code></span> to a repository using format <span class='synopsis'><code>1</code></span>, as long as the
+server process understands format <span class='synopsis'><code>1</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>The preferred strategy for rolling out a version bump (whether whole
@@ -434,7 +434,7 @@ format by default.</p>
 <p>The currently defined format versions are:</p>
 </div>
 <div class="sect2">
-<h3 id="_version_0"><a class="anchor" href="#_version_0"></a>Version <code>0</code></h3>
+<h3 id="_version_0"><a class="anchor" href="#_version_0"></a>Version <span class='synopsis'><code>0</code></span></h3>
 <div class="paragraph">
 <p>This is the format defined by the initial version of git, including but
 not limited to the format of the repository directory, the repository
@@ -443,20 +443,20 @@ complete behavior of git is beyond the scope of this document.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_version_1"><a class="anchor" href="#_version_1"></a>Version <code>1</code></h3>
+<h3 id="_version_1"><a class="anchor" href="#_version_1"></a>Version <span class='synopsis'><code>1</code></span></h3>
 <div class="paragraph">
-<p>This format is identical to version <code>0</code>, with the following exceptions:</p>
+<p>This format is identical to version <span class='synopsis'><code>0</code></span>, with the following exceptions:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>When reading the <code>core.repositoryformatversion</code> variable, a git
+<p>When reading the <span class='synopsis'><code>core.repositoryformatversion</code></span> variable, a git
 implementation which supports version 1 MUST also read any
-configuration keys found in the <code>extensions</code> section of the
+configuration keys found in the <span class='synopsis'><code>extensions</code></span> section of the
 configuration file.</p>
 </li>
 <li>
-<p>If a version-1 repository specifies any <code>extensions.*</code> keys that
+<p>If a version-1 repository specifies any <span class='synopsis'><code>extensions.*</code></span> keys that
 the running git has not implemented, the operation MUST NOT
 proceed. Similarly, if the value of any known key is not understood
 by the implementation, the operation MUST NOT proceed.</p>
@@ -465,7 +465,7 @@ by the implementation, the operation MUST NOT proceed.</p>
 </div>
 <div class="paragraph">
 <p>Note that if no extensions are specified in the config file, then
-<code>core.repositoryformatversion</code> SHOULD be set to <code>0</code> (setting it to <code>1</code>
+<span class='synopsis'><code>core.repositoryformatversion</code></span> SHOULD be set to <span class='synopsis'><code>0</code></span> (setting it to <span class='synopsis'><code>1</code></span>
 provides no benefit, and makes the repository incompatible with older
 implementations of git).</p>
 </div>
@@ -478,24 +478,24 @@ it here, in order to claim the name.</p>
 <p>The defined extensions are:</p>
 </div>
 <div class="sect3">
-<h4 id="_noop"><a class="anchor" href="#_noop"></a><code>noop</code></h4>
+<h4 id="_noop"><a class="anchor" href="#_noop"></a><span class='synopsis'><code>noop</code></span></h4>
 <div class="paragraph">
 <p>This extension does not change git&#8217;s behavior at all. It is useful only
 for testing format-1 compatibility.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_preciousobjects"><a class="anchor" href="#_preciousobjects"></a><code>preciousObjects</code></h4>
+<h4 id="_preciousobjects"><a class="anchor" href="#_preciousobjects"></a><span class='synopsis'><code>preciousObjects</code></span></h4>
 <div class="paragraph">
-<p>When the config key <code>extensions.preciousObjects</code> is set to <code>true</code>,
-objects in the repository MUST NOT be deleted (e.g., by <code>git-prune</code> or
-<code>git repack -d</code>).</p>
+<p>When the config key <span class='synopsis'><code>extensions.preciousObjects</code></span> is set to <span class='synopsis'><code>true</code></span>,
+objects in the repository MUST NOT be deleted (e.g., by <span class='synopsis'><code>git-prune</code></span> or
+<span class='synopsis'><code>git</code> <code>repack</code> <code>-d</code></span>).</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_partialclone"><a class="anchor" href="#_partialclone"></a><code>partialclone</code></h4>
+<h4 id="_partialclone"><a class="anchor" href="#_partialclone"></a><span class='synopsis'><code>partialclone</code></span></h4>
 <div class="paragraph">
-<p>When the config key <code>extensions.partialclone</code> is set, it indicates
+<p>When the config key <span class='synopsis'><code>extensions.partialclone</code></span> is set, it indicates
 that the repo was created with a partial clone (or later performed
 a partial fetch) and that the remote may have omitted sending
 certain unwanted objects.  Such a remote is called a "promisor remote"
@@ -507,7 +507,7 @@ in the future.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_worktreeconfig"><a class="anchor" href="#_worktreeconfig"></a><code>worktreeConfig</code></h4>
+<h4 id="_worktreeconfig"><a class="anchor" href="#_worktreeconfig"></a><span class='synopsis'><code>worktreeConfig</code></span></h4>
 <div class="paragraph">
 <p>If set, by default "git config" reads from both "config" and
 "config.worktree" file from GIT_DIR in that order. In

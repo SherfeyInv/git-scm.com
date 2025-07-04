@@ -52,36 +52,36 @@ these ambiguities by enforcing the "options then args" rule).</p>
 </li>
 <li>
 <p>Revisions come first and then paths.
-E.g. in <code>git diff v1.0 v2.0 arch/x86 include/asm-x86</code>,
-<code>v1.0</code> and <code>v2.0</code> are revisions and <code>arch/x86</code> and <code>include/asm-x86</code>
+E.g. in <span class='synopsis'><code>git</code> <code>diff</code> <code>v1.0</code> <code>v2.0</code> <code>arch/x86</code> <code>include/asm-x86</code></span>,
+<span class='synopsis'><code>v1.0</code></span> and <span class='synopsis'><code>v2.0</code></span> are revisions and <span class='synopsis'><code>arch/x86</code></span> and <span class='synopsis'><code>include/asm-x86</code></span>
 are paths.</p>
 </li>
 <li>
 <p>When an argument can be misunderstood as either a revision or a path,
-they can be disambiguated by placing <code>--</code> between them.
-E.g. <code>git diff -- HEAD</code> is, "I have a file called HEAD in my work
+they can be disambiguated by placing <span class='synopsis'><code>--</code></span> between them.
+E.g. <span class='synopsis'><code>git</code> <code>diff</code> <code>--</code> <code>HEAD</code></span> is, "I have a file called HEAD in my work
 tree.  Please show changes between the version I staged in the index
 and what I have in the work tree for that file", not "show the difference
 between the HEAD commit and the work tree as a whole".  You can say
-<code>git diff HEAD --</code> to ask for the latter.</p>
+<span class='synopsis'><code>git</code> <code>diff</code> <code>HEAD</code> <code>--</code></span> to ask for the latter.</p>
 </li>
 <li>
-<p>Without disambiguating <code>--</code>, Git makes a reasonable guess, but errors
+<p>Without disambiguating <span class='synopsis'><code>--</code></span>, Git makes a reasonable guess, but errors
 out and asks you to disambiguate when ambiguous.  E.g. if you have a
-file called HEAD in your work tree, <code>git diff HEAD</code> is ambiguous, and
-you have to say either <code>git diff HEAD --</code> or <code>git diff -- HEAD</code> to
+file called HEAD in your work tree, <span class='synopsis'><code>git</code> <code>diff</code> <code>HEAD</code></span> is ambiguous, and
+you have to say either <span class='synopsis'><code>git</code> <code>diff</code> <code>HEAD</code> <code>--</code></span> or <span class='synopsis'><code>git</code> <code>diff</code> <code>--</code> <code>HEAD</code></span> to
 disambiguate.</p>
 </li>
 <li>
-<p>Because <code>--</code> disambiguates revisions and paths in some commands, it
+<p>Because <span class='synopsis'><code>--</code></span> disambiguates revisions and paths in some commands, it
 cannot be used for those commands to separate options and revisions.
-You can use <code>--end-of-options</code> for this (it also works for commands
+You can use <span class='synopsis'><code>--end-of-options</code></span> for this (it also works for commands
 that do not distinguish between revisions in paths, in which case it
-is simply an alias for <code>--</code>).</p>
+is simply an alias for <span class='synopsis'><code>--</code></span>).</p>
 <div class="paragraph">
 <p>When writing a script that is expected to handle random user-input, it is
 a good practice to make it explicit which arguments are which by placing
-disambiguating <code>--</code> at appropriate places.</p>
+disambiguating <span class='synopsis'><code>--</code></span> at appropriate places.</p>
 </div>
 </li>
 <li>
@@ -97,10 +97,10 @@ $ git restore \*.c</pre>
 <div class="paragraph">
 <p>The former lets your shell expand the fileglob, and you are asking
 the dot-C files in your working tree to be overwritten with the version
-in the index.  The latter passes the <code>*.c</code> to Git, and you are asking
+in the index.  The latter passes the <span class='synopsis'><code>*.c</code></span> to Git, and you are asking
 the paths in the index that match the pattern to be checked out to your
-working tree.  After running <code>git add hello.c; rm hello.c</code>, you will <em>not</em>
-see <code>hello.c</code> in your working tree with the former, but with the latter
+working tree.  After running <span class='synopsis'><em>git add hello.c; rm hello.c</em></span>, you will <em>not</em>
+see <span class='synopsis'><code>hello.c</code></span> in your working tree with the former, but with the latter
 you will.</p>
 </div>
 </li>
@@ -118,21 +118,21 @@ scripting Git:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Splitting short options to separate words (prefer <code>git foo -a -b</code>
-to <code>git foo -ab</code>, the latter may not even work).</p>
+<p>Splitting short options to separate words (prefer <span class='synopsis'><code>git</code> <code>foo</code> <code>-a</code> <code>-b</code></span>
+to <span class='synopsis'><code>git</code> <code>foo</code> <code>-ab</code></span>, the latter may not even work).</p>
 </li>
 <li>
 <p>When a command-line option takes an argument, use the <em>stuck</em> form.  In
-other words, write <code>git foo -oArg</code> instead of <code>git foo -o Arg</code> for short
-options, and <code>git foo --long-opt=Arg</code> instead of <code>git foo --long-opt Arg</code>
+other words, write <span class='synopsis'><code>git</code> <code>foo</code> <code>-oArg</code></span> instead of <span class='synopsis'><code>git</code> <code>foo</code> <code>-o</code> <code>Arg</code></span> for short
+options, and <span class='synopsis'><code>git</code> <code>foo</code> <code>--long-opt=Arg</code></span> instead of <span class='synopsis'><code>git</code> <code>foo</code> <code>--long-opt</code> <code>Arg</code></span>
 for long options.  An option that takes optional option-argument must be
 written in the <em>stuck</em> form.</p>
 </li>
 <li>
 <p>Despite the above suggestion, when Arg is a path relative to the
-home directory of a user, e.g. <code>~/directory/file</code> or <code>~u/d/f</code>, you
-may want to use the separate form, e.g. <code>git foo --file ~/mine</code>,
-not <code>git foo --file=~/mine</code>.  The shell will expand <code>~/</code> in the
+home directory of a user, e.g. <span class='synopsis'><code>~/directory/file</code></span> or <span class='synopsis'><code>~u/d/f</code></span>, you
+may want to use the separate form, e.g. <span class='synopsis'><code>git</code> <code>foo</code> <code>--file</code> <code>~/mine</code></span>,
+not <span class='synopsis'><code>git</code> <code>foo</code> <code>--file=~/mine</code></span>.  The shell will expand <span class='synopsis'><code>~/</code></span> in the
 former to your home directory, but most shells keep the tilde in
 the latter.  Some of our commands know how to tilde-expand the
 option value even when given in the stuck form, but not all of
@@ -141,16 +141,16 @@ them do.</p>
 <li>
 <p>When you give a revision parameter to a command, make sure the parameter is
 not ambiguous with a name of a file in the work tree.  E.g. do not write
-<code>git log -1 HEAD</code> but write <code>git log -1 HEAD --</code>; the former will not work
-if you happen to have a file called <code>HEAD</code> in the work tree.</p>
+<span class='synopsis'><code>git</code> <code>log</code> <code>-1</code> <code>HEAD</code></span> but write <span class='synopsis'><code>git</code> <code>log</code> <code>-1</code> <code>HEAD</code> <code>--</code></span>; the former will not work
+if you happen to have a file called <span class='synopsis'><code>HEAD</code></span> in the work tree.</p>
 </li>
 <li>
-<p>Many commands allow a long option <code>--option</code> to be abbreviated
+<p>Many commands allow a long option <span class='synopsis'><code>--option</code></span> to be abbreviated
 only to their unique prefix (e.g. if there is no other option
-whose name begins with <code>opt</code>, you may be able to spell <code>--opt</code> to
-invoke the <code>--option</code> flag), but you should fully spell them out
+whose name begins with <span class='synopsis'><code>opt</code></span>, you may be able to spell <span class='synopsis'><code>--opt</code></span> to
+invoke the <span class='synopsis'><code>--option</code></span> flag), but you should fully spell them out
 when writing your scripts; later versions of Git may introduce a
-new option whose name shares the same prefix, e.g. <code>--optimize</code>,
+new option whose name shares the same prefix, e.g. <span class='synopsis'><code>--optimize</code></span>,
 to make a short prefix that used to be unique no longer unique.</p>
 </li>
 </ul>
@@ -193,9 +193,10 @@ usage: git describe [&lt;options&gt;] &lt;commit-ish&gt;*
 </div>
 </div>
 <div class="paragraph">
-<p>Note that some subcommand (e.g. <code>git grep</code>) may behave differently
-when there are things on the command line other than <code>-h</code>, but <code>git
-subcmd -h</code> without anything else on the command line is meant to
+<p>Note that some subcommand (e.g. <span class='synopsis'><code>git</code> <code>grep</code></span>) may behave differently
+when there are things on the command line other than <span class='synopsis'><code>-h</code></span>, but <span class='synopsis'><code>git</code>
+
+<code>subcmd</code> <code>-h</code></span> without anything else on the command line is meant to
 consistently give the usage.</p>
 </div>
 </dd>
@@ -211,10 +212,10 @@ option gives the full list of options.</p>
 <div class="sect2">
 <h3 id="_negating_options"><a class="anchor" href="#_negating_options"></a>Negating options</h3>
 <div class="paragraph">
-<p>Options with long option names can be negated by prefixing <code>--no-</code>. For
-example, <code>git branch</code> has the option <code>--track</code> which is <em>on</em> by default. You
-can use <code>--no-track</code> to override that behaviour. The same goes for <code>--color</code>
-and <code>--no-color</code>.</p>
+<p>Options with long option names can be negated by prefixing <span class='synopsis'><code>--no-</code></span>. For
+example, <span class='synopsis'><code>git</code> <code>branch</code></span> has the option <span class='synopsis'><code>--track</code></span> which is <em>on</em> by default. You
+can use <span class='synopsis'><code>--no-track</code></span> to override that behaviour. The same goes for <span class='synopsis'><code>--color</code></span>
+and <span class='synopsis'><code>--no-color</code></span>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -226,12 +227,12 @@ command line option that tweaks the same, the command line option
 overrides what the configuration and/or environment variable say.</p>
 </div>
 <div class="paragraph">
-<p>For example, the <code>user.name</code> configuration variable is used to
-specify the human-readable name used by the <code>git commit</code> command to
+<p>For example, the <span class='synopsis'><code>user.name</code></span> configuration variable is used to
+specify the human-readable name used by the <span class='synopsis'><code>git</code> <code>commit</code></span> command to
 record the author and the committer name in a newly created commit.
-The <code>GIT_AUTHOR_NAME</code> environment variable, if set, takes precedence
-when deciding what author name to record.  The <code>--author=&lt;author&gt;</code>
-command line option of the <code>git commit</code> command, when given, takes
+The <span class='synopsis'><code>GIT_AUTHOR_NAME</code></span> environment variable, if set, takes precedence
+when deciding what author name to record.  The <span class='synopsis'><code>--author=</code><em>&lt;author&gt;</em></span>
+command line option of the <span class='synopsis'><code>git</code> <code>commit</code></span> command, when given, takes
 precedence over these two sources of information.</p>
 </div>
 </div>
@@ -239,8 +240,8 @@ precedence over these two sources of information.</p>
 <h3 id="_aggregating_short_options"><a class="anchor" href="#_aggregating_short_options"></a>Aggregating short options</h3>
 <div class="paragraph">
 <p>Commands that support the enhanced option parser allow you to aggregate short
-options. This means that you can for example use <code>git rm -rf</code> or
-<code>git clean -fdx</code>.</p>
+options. This means that you can for example use <span class='synopsis'><code>git</code> <code>rm</code> <code>-rf</code></span> or
+<span class='synopsis'><code>git</code> <code>clean</code> <code>-fdx</code></span>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -248,10 +249,10 @@ options. This means that you can for example use <code>git rm -rf</code> or
 <div class="paragraph">
 <p>Commands that support the enhanced option parser accepts unique
 prefix of a long option as if it is fully spelled out, but use this
-with a caution.  For example, <code>git commit --amen</code> behaves as if you
-typed <code>git commit --amend</code>, but that is true only until a later version
+with a caution.  For example, <span class='synopsis'><code>git</code> <code>commit</code> <code>--amen</code></span> behaves as if you
+typed <span class='synopsis'><code>git</code> <code>commit</code> <code>--amend</code></span>, but that is true only until a later version
 of Git introduces another option that shares the same prefix,
-e.g. <code>git commit --amenity</code> option.</p>
+e.g. <span class='synopsis'><code>git</code> <code>commit</code> <code>--amenity</code></span> option.</p>
 </div>
 </div>
 <div class="sect2">
@@ -287,7 +288,7 @@ $ git describe --abbrev 10 HEAD  # NOT WHAT YOU MEANT</pre>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Many commands that can work on files in the working tree
-and/or in the index can take <code>--cached</code> and/or <code>--index</code>
+and/or in the index can take <span class='synopsis'><code>--cached</code></span> and/or <span class='synopsis'><code>--index</code></span>
 options.  Sometimes people incorrectly think that, because
 the index was originally called cache, these two are
 synonyms.  They are <strong>not</strong>&#8201;&#8212;&#8201;these two options mean very
@@ -296,30 +297,30 @@ different things.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>--cached</code> option is used to ask a command that
+<p>The <span class='synopsis'><code>--cached</code></span> option is used to ask a command that
 usually works on files in the working tree to <strong>only</strong> work
-with the index.  For example, <code>git grep</code>, when used
+with the index.  For example, <span class='synopsis'><code>git</code> <code>grep</code></span>, when used
 without a commit to specify from which commit to look for
 strings in, usually works on files in the working tree,
-but with the <code>--cached</code> option, it looks for strings in
+but with the <span class='synopsis'><code>--cached</code></span> option, it looks for strings in
 the index.</p>
 </li>
 <li>
-<p>The <code>--index</code> option is used to ask a command that
+<p>The <span class='synopsis'><code>--index</code></span> option is used to ask a command that
 usually works on files in the working tree to <strong>also</strong>
-affect the index.  For example, <code>git stash apply</code> usually
+affect the index.  For example, <span class='synopsis'><code>git</code> <code>stash</code> <code>apply</code></span> usually
 merges changes recorded in a stash entry to the working tree,
-but with the <code>--index</code> option, it also merges changes to
+but with the <span class='synopsis'><code>--index</code></span> option, it also merges changes to
 the index as well.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><code>git apply</code> command can be used with <code>--cached</code> and
-<code>--index</code> (but not at the same time).  Usually the command
+<p><span class='synopsis'><code>git</code> <code>apply</code></span> command can be used with <span class='synopsis'><code>--cached</code></span> and
+<span class='synopsis'><code>--index</code></span> (but not at the same time).  Usually the command
 only affects the files in the working tree, but with
-<code>--index</code>, it patches both the files and their index
-entries, and with <code>--cached</code>, it modifies only the index
+<span class='synopsis'><code>--index</code></span>, it patches both the files and their index
+entries, and with <span class='synopsis'><code>--cached</code></span>, it modifies only the index
 entries.</p>
 </div>
 <div class="paragraph">
@@ -329,16 +330,16 @@ information.</p>
 </div>
 <div class="paragraph">
 <p>Some other commands that also work on files in the working tree and/or
-in the index can take <code>--staged</code> and/or <code>--worktree</code>.</p>
+in the index can take <span class='synopsis'><code>--staged</code></span> and/or <span class='synopsis'><code>--worktree</code></span>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>--staged</code> is exactly like <code>--cached</code>, which is used to ask a
+<p><span class='synopsis'><code>--staged</code></span> is exactly like <span class='synopsis'><code>--cached</code></span>, which is used to ask a
 command to only work on the index, not the working tree.</p>
 </li>
 <li>
-<p><code>--worktree</code> is the opposite, to ask a command to work on the
+<p><span class='synopsis'><code>--worktree</code></span> is the opposite, to ask a command to work on the
 working tree only, not the index.</p>
 </li>
 <li>

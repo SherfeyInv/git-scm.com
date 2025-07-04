@@ -49,8 +49,8 @@ people using 80-column terminals.</p>
 <dt class="hdlist1" id="Documentation/pretty-options.txt---no-abbrev-commit"><a class="anchor" href="#Documentation/pretty-options.txt---no-abbrev-commit"></a>--no-abbrev-commit </dt>
 <dd>
 <p>Show the full 40-byte hexadecimal commit object name. This negates
-<code>--abbrev-commit</code>, either explicit or implied by other options such
-as "--oneline". It also overrides the <code>log.abbrevCommit</code> variable.</p>
+<span class='synopsis'><code>--abbrev-commit</code></span>, either explicit or implied by other options such
+as "--oneline". It also overrides the <span class='synopsis'><code>log.abbrevCommit</code></span> variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-options.txt---oneline"><a class="anchor" href="#Documentation/pretty-options.txt---oneline"></a>--oneline </dt>
 <dd>
@@ -64,7 +64,7 @@ in their encoding header; this option can be used to tell the
 command to re-code the commit log message in the encoding
 preferred by the user.  For non plumbing commands this
 defaults to UTF-8. Note that if an object claims to be encoded
-in <code>X</code> and we are outputting in <code>X</code>, we will output the object
+in <span class='synopsis'><code>X</code></span> and we are outputting in <span class='synopsis'><code>X</code></span>, we will output the object
 verbatim; this means that invalid sequences in the original
 commit may be copied to the output.</p>
 </dd>
@@ -75,8 +75,8 @@ commit may be copied to the output.</p>
 <p>Perform a tab expansion (replace each tab with enough spaces
 to fill to the next display column that is multiple of <em>&lt;n&gt;</em>)
 in the log message before showing it in the output.
-<code>--expand-tabs</code> is a short-hand for <code>--expand-tabs=8</code>, and
-<code>--no-expand-tabs</code> is a short-hand for <code>--expand-tabs=0</code>,
+<span class='synopsis'><code>--expand-tabs</code></span> is a short-hand for <span class='synopsis'><code>--expand-tabs=8</code></span>, and
+<span class='synopsis'><code>--no-expand-tabs</code></span> is a short-hand for <span class='synopsis'><code>--expand-tabs=0</code></span>,
 which disables tab expansion.</p>
 <div class="paragraph">
 <p>By default, tabs are expanded in pretty formats that indent the log
@@ -88,19 +88,19 @@ and <em>fuller</em>).</p>
 <dd>
 <p>Show the notes (see <a href='{{< relurl "docs/git-notes" >}}'>git-notes[1]</a>) that annotate the
 commit, when showing the commit log message.  This is the default
-for <code>git log</code>, <code>git show</code> and <code>git whatchanged</code> commands when
-there is no <code>--pretty</code>, <code>--format</code>, or <code>--oneline</code> option given
+for <span class='synopsis'><code>git</code> <code>log</code></span>, <span class='synopsis'><code>git</code> <code>show</code></span> and <span class='synopsis'><code>git</code> <code>whatchanged</code></span> commands when
+there is no <span class='synopsis'><code>--pretty</code></span>, <span class='synopsis'><code>--format</code></span>, or <span class='synopsis'><code>--oneline</code></span> option given
 on the command line.</p>
 <div class="paragraph">
 <p>By default, the notes shown are from the notes refs listed in the
-<code>core.notesRef</code> and <code>notes.displayRef</code> variables (or corresponding
+<span class='synopsis'><code>core.notesRef</code></span> and <span class='synopsis'><code>notes.displayRef</code></span> variables (or corresponding
 environment overrides). See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> for more details.</p>
 </div>
 <div class="paragraph">
 <p>With an optional <em>&lt;ref&gt;</em> argument, use the ref to find the notes
 to display.  The ref can specify the full refname when it begins
-with <code>refs/notes/</code>; when it begins with <code>notes/</code>, <code>refs/</code> and otherwise
-<code>refs/notes/</code> is prefixed to form a full name of the ref.</p>
+with <span class='synopsis'><code>refs/notes/</code></span>; when it begins with <span class='synopsis'><code>notes/</code></span>, <span class='synopsis'><code>refs/</code></span> and otherwise
+<span class='synopsis'><code>refs/notes/</code></span> is prefixed to form a full name of the ref.</p>
 </div>
 <div class="paragraph">
 <p>Multiple --notes options can be combined to control which notes are
@@ -111,7 +111,7 @@ being displayed. Examples: "--notes=foo" will show only notes from
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-options.txt---no-notes"><a class="anchor" href="#Documentation/pretty-options.txt---no-notes"></a>--no-notes </dt>
 <dd>
-<p>Do not show notes. This negates the above <code>--notes</code> option, by
+<p>Do not show notes. This negates the above <span class='synopsis'><code>--notes</code></span> option, by
 resetting the list of notes refs from which notes are shown.
 Options are parsed in the order given on the command line, so e.g.
 "--notes --notes=foo --no-notes --notes=bar" will only show notes
@@ -126,7 +126,7 @@ options instead.</p>
 <dt class="hdlist1" id="Documentation/pretty-options.txt---show-signature"><a class="anchor" href="#Documentation/pretty-options.txt---show-signature"></a>--show-signature </dt>
 <dd>
 <p>Check the validity of a signed commit object by passing the signature
-to <code>gpg --verify</code> and show the output.</p>
+to <span class='synopsis'><code>gpg</code> <code>--verify</code></span> and show the output.</p>
 </dd>
 </dl>
 </div>

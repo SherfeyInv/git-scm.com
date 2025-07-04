@@ -71,8 +71,8 @@ engines, disk storage, etc.</p>
 pack everything referenced into a single pack.
 Especially useful when packing a repository that is used
 for private development. Use
-with <code>-d</code>.  This will clean up the objects that <code>git prune</code>
-leaves behind, but <code>git fsck --full --dangling</code> shows as
+with <span class='synopsis'><code>-d</code></span>.  This will clean up the objects that <span class='synopsis'><code>git</code> <code>prune</code></span>
+leaves behind, but <span class='synopsis'><code>git</code> <code>fsck</code> <code>--full</code> <code>--dangling</code></span> shows as
 dangling.</p>
 <div class="paragraph">
 <p>Note that users fetching over dumb protocols will have to fetch the
@@ -88,7 +88,7 @@ to the new separate pack will be written.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--A"><a class="anchor" href="#Documentation/git-repack.txt--A"></a>-A </dt>
 <dd>
-<p>Same as <code>-a</code>, unless <code>-d</code> is used.  Then any unreachable
+<p>Same as <span class='synopsis'><code>-a</code></span>, unless <span class='synopsis'><code>-d</code></span> is used.  Then any unreachable
 objects in a previous pack become loose, unpacked objects,
 instead of being left in the old pack.  Unreachable objects
 are never intentionally added to a pack, even when repacking.
@@ -107,23 +107,23 @@ loose object files.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--l"><a class="anchor" href="#Documentation/git-repack.txt--l"></a>-l </dt>
 <dd>
-<p>Pass the <code>--local</code> option to <em>git pack-objects</em>. See
+<p>Pass the <span class='synopsis'><code>--local</code></span> option to <em>git pack-objects</em>. See
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--f"><a class="anchor" href="#Documentation/git-repack.txt--f"></a>-f </dt>
 <dd>
-<p>Pass the <code>--no-reuse-delta</code> option to <code>git-pack-objects</code>, see
+<p>Pass the <span class='synopsis'><code>--no-reuse-delta</code></span> option to <span class='synopsis'><code>git-pack-objects</code></span>, see
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--F"><a class="anchor" href="#Documentation/git-repack.txt--F"></a>-F </dt>
 <dd>
-<p>Pass the <code>--no-reuse-object</code> option to <code>git-pack-objects</code>, see
+<p>Pass the <span class='synopsis'><code>--no-reuse-object</code></span> option to <span class='synopsis'><code>git-pack-objects</code></span>, see
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--q"><a class="anchor" href="#Documentation/git-repack.txt--q"></a>-q </dt>
 <dt class="hdlist1" id="Documentation/git-repack.txt---quiet"><a class="anchor" href="#Documentation/git-repack.txt---quiet"></a>--quiet </dt>
 <dd>
-<p>Show no progress over the standard error stream and pass the <code>-q</code>
+<p>Show no progress over the standard error stream and pass the <span class='synopsis'><code>-q</code></span>
 option to <em>git pack-objects</em>. See <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--n"><a class="anchor" href="#Documentation/git-repack.txt--n"></a>-n </dt>
@@ -140,8 +140,8 @@ over HTTP or FTP.  See <a href='{{< relurl "docs/git-update-server-info" >}}'>gi
 <p>These two options affect how the objects contained in the pack are
 stored using delta compression. The objects are first internally
 sorted by type, size and optionally names and compared against the
-other objects within <code>--window</code> to see if using delta compression saves
-space. <code>--depth</code> limits the maximum delta depth; making it too deep
+other objects within <span class='synopsis'><code>--window</code></span> to see if using delta compression saves
+space. <span class='synopsis'><code>--depth</code></span> limits the maximum delta depth; making it too deep
 affects the performance on the unpacker side, because delta data needs
 to be applied that many times to get to the necessary object.</p>
 <div class="paragraph">
@@ -151,19 +151,19 @@ depth is 4095.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt---threadsltngt"><a id="Documentation/git-repack.txt---threadsn" class="anchor" href="#Documentation/git-repack.txt---threadsn"></a>--threads=&lt;n&gt; </dt>
 <dd>
-<p>This option is passed through to <code>git pack-objects</code>.</p>
+<p>This option is passed through to <span class='synopsis'><code>git</code> <code>pack-objects</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt---window-memoryltngt"><a id="Documentation/git-repack.txt---window-memoryn" class="anchor" href="#Documentation/git-repack.txt---window-memoryn"></a>--window-memory=&lt;n&gt; </dt>
 <dd>
-<p>This option provides an additional limit on top of <code>--window</code>;
+<p>This option provides an additional limit on top of <span class='synopsis'><code>--window</code></span>;
 the window size will dynamically scale down so as to not take
 up more than <em>&lt;n&gt;</em> bytes in memory.  This is useful in
 repositories with a mix of large and small objects to not run
 out of memory with a large window, but still be able to take
 advantage of the large window for the smaller objects.  The
 size can be suffixed with "k", "m", or "g".
-<code>--window-memory=0</code> makes memory usage unlimited.  The default
-is taken from the <code>pack.windowMemory</code> configuration variable.
+<span class='synopsis'><code>--window-memory=0</code></span> makes memory usage unlimited.  The default
+is taken from the <span class='synopsis'><code>pack.windowMemory</code></span> configuration variable.
 Note that the actual memory usage will be the limit multiplied
 by the number of threads used by <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>.</p>
 </dd>
@@ -174,49 +174,49 @@ by the number of threads used by <a href='{{< relurl "docs/git-pack-objects" >}}
 If specified, multiple packfiles may be created, which also
 prevents the creation of a bitmap index.
 The default is unlimited, unless the config variable
-<code>pack.packSizeLimit</code> is set. Note that this option may result in
+<span class='synopsis'><code>pack.packSizeLimit</code></span> is set. Note that this option may result in
 a larger and slower repository; see the discussion in
-<code>pack.packSizeLimit</code>.</p>
+<span class='synopsis'><code>pack.packSizeLimit</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--b"><a class="anchor" href="#Documentation/git-repack.txt--b"></a>-b </dt>
 <dt class="hdlist1" id="Documentation/git-repack.txt---write-bitmap-index"><a class="anchor" href="#Documentation/git-repack.txt---write-bitmap-index"></a>--write-bitmap-index </dt>
 <dd>
 <p>Write a reachability bitmap index as part of the repack. This
-only makes sense when used with <code>-a</code>, <code>-A</code> or <code>-m</code>, as the bitmaps
+only makes sense when used with <span class='synopsis'><code>-a</code></span>, <span class='synopsis'><code>-A</code></span> or <span class='synopsis'><code>-m</code></span>, as the bitmaps
 must be able to refer to all reachable objects. This option
-overrides the setting of <code>repack.writeBitmaps</code>. This option
+overrides the setting of <span class='synopsis'><code>repack.writeBitmaps</code></span>. This option
 has no effect if multiple packfiles are created, unless writing a
 MIDX (in which case a multi-pack bitmap is created).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt---pack-kept-objects"><a class="anchor" href="#Documentation/git-repack.txt---pack-kept-objects"></a>--pack-kept-objects </dt>
 <dd>
-<p>Include objects in <code>.keep</code> files when repacking.  Note that we
-still do not delete <code>.keep</code> packs after <code>pack-objects</code> finishes.
+<p>Include objects in <span class='synopsis'><code>.keep</code></span> files when repacking.  Note that we
+still do not delete <span class='synopsis'><code>.keep</code></span> packs after <span class='synopsis'><code>pack-objects</code></span> finishes.
 This means that we may duplicate objects, but this makes the
 option safe to use when there are concurrent pushes or fetches.
 This option is generally only useful if you are writing bitmaps
-with <code>-b</code> or <code>repack.writeBitmaps</code>, as it ensures that the
+with <span class='synopsis'><code>-b</code></span> or <span class='synopsis'><code>repack.writeBitmaps</code></span>, as it ensures that the
 bitmapped packfile has the necessary objects.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt---keep-packltpack-namegt"><a id="Documentation/git-repack.txt---keep-packpack-name" class="anchor" href="#Documentation/git-repack.txt---keep-packpack-name"></a>--keep-pack=&lt;pack-name&gt; </dt>
 <dd>
 <p>Exclude the given pack from repacking. This is the equivalent
-of having <code>.keep</code> file on the pack. <code>&lt;pack-name&gt;</code> is the
-pack file name without leading directory (e.g. <code>pack-123.pack</code>).
+of having <span class='synopsis'><code>.keep</code></span> file on the pack. <span class='synopsis'><em>&lt;pack-name&gt;</em></span> is the
+pack file name without leading directory (e.g. <span class='synopsis'><code>pack-123.pack</code></span>).
 The option could be specified multiple times to keep multiple
 packs.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt---unpack-unreachableltwhengt"><a id="Documentation/git-repack.txt---unpack-unreachablewhen" class="anchor" href="#Documentation/git-repack.txt---unpack-unreachablewhen"></a>--unpack-unreachable=&lt;when&gt; </dt>
 <dd>
 <p>When loosening unreachable objects, do not bother loosening any
-objects older than <code>&lt;when&gt;</code>. This can be used to optimize out
+objects older than <span class='synopsis'><em>&lt;when&gt;</em></span>. This can be used to optimize out
 the write of any objects that would be immediately pruned by
-a follow-up <code>git prune</code>.</p>
+a follow-up <span class='synopsis'><code>git</code> <code>prune</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--k"><a class="anchor" href="#Documentation/git-repack.txt--k"></a>-k </dt>
 <dt class="hdlist1" id="Documentation/git-repack.txt---keep-unreachable"><a class="anchor" href="#Documentation/git-repack.txt---keep-unreachable"></a>--keep-unreachable </dt>
 <dd>
-<p>When used with <code>-ad</code>, any unreachable objects from existing
+<p>When used with <span class='synopsis'><code>-ad</code></span>, any unreachable objects from existing
 packs will be appended to the end of the packfile instead of
 being removed. In addition, any unreachable loose objects will
 be packed (and their loose counterparts removed).</p>
@@ -224,17 +224,17 @@ be packed (and their loose counterparts removed).</p>
 <dt class="hdlist1" id="Documentation/git-repack.txt--i"><a class="anchor" href="#Documentation/git-repack.txt--i"></a>-i </dt>
 <dt class="hdlist1" id="Documentation/git-repack.txt---delta-islands"><a class="anchor" href="#Documentation/git-repack.txt---delta-islands"></a>--delta-islands </dt>
 <dd>
-<p>Pass the <code>--delta-islands</code> option to <code>git-pack-objects</code>, see
+<p>Pass the <span class='synopsis'><code>--delta-islands</code></span> option to <span class='synopsis'><code>git-pack-objects</code></span>, see
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-repack.txt--gltfactorgt"><a id="Documentation/git-repack.txt--gfactor" class="anchor" href="#Documentation/git-repack.txt--gfactor"></a>-g=&lt;factor&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-repack.txt---geometricltfactorgt"><a id="Documentation/git-repack.txt---geometricfactor" class="anchor" href="#Documentation/git-repack.txt---geometricfactor"></a>--geometric=&lt;factor&gt; </dt>
 <dd>
 <p>Arrange resulting pack structure so that each successive pack
-contains at least <code>&lt;factor&gt;</code> times the number of objects as the
+contains at least <span class='synopsis'><em>&lt;factor&gt;</em></span> times the number of objects as the
 next-largest pack.</p>
 <div class="paragraph">
-<p><code>git repack</code> ensures this by determining a "cut" of packfiles that need
+<p><span class='synopsis'><code>git</code> <code>repack</code></span> ensures this by determining a "cut" of packfiles that need
 to be repacked into one in order to ensure a geometric progression. It
 picks the smallest set of packfiles such that as many of the larger
 packfiles (by count of objects contained in that pack) may be left
@@ -247,14 +247,14 @@ packs determined to need to be combined in order to restore a geometric
 progression.</p>
 </div>
 <div class="paragraph">
-<p>When <code>--unpacked</code> is specified, loose objects are implicitly included in
+<p>When <span class='synopsis'><code>--unpacked</code></span> is specified, loose objects are implicitly included in
 this "roll-up", without respect to their reachability. This is subject
 to change in the future. This option (implying a drastically different
 repack mode) is not guaranteed to work with all other combinations of
-option to <code>git repack</code>.</p>
+option to <span class='synopsis'><code>git</code> <code>repack</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>When writing a multi-pack bitmap, <code>git repack</code> selects the largest resulting
+<p>When writing a multi-pack bitmap, <span class='synopsis'><code>git</code> <code>repack</code></span> selects the largest resulting
 pack as the preferred pack for object selection by the MIDX (see
 <a href='{{< relurl "docs/git-multi-pack-index" >}}'>git-multi-pack-index[1]</a>).</p>
 </div>
@@ -277,20 +277,20 @@ containing the non-redundant packs.</p>
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> (search for "pack" and "delta").</p>
 </div>
 <div class="paragraph">
-<p>By default, the command passes <code>--delta-base-offset</code> option to
+<p>By default, the command passes <span class='synopsis'><code>--delta-base-offset</code></span> option to
 <em>git pack-objects</em>; this typically results in slightly smaller packs,
 but the generated packs are incompatible with versions of Git older than
 version 1.4.4. If you need to share your repository with such ancient Git
 versions, either directly or via the dumb http protocol, then you
-need to set the configuration variable <code>repack.UseDeltaBaseOffset</code> to
+need to set the configuration variable <span class='synopsis'><code>repack.UseDeltaBaseOffset</code></span> to
 "false" and repack. Access from old Git versions over the native protocol
 is unaffected by this option as the conversion is performed on the fly
 as needed in that case.</p>
 </div>
 <div class="paragraph">
 <p>Delta compression is not used on objects larger than the
-<code>core.bigFileThreshold</code> configuration variable and on files with the
-attribute <code>delta</code> set to false.</p>
+<span class='synopsis'><code>core.bigFileThreshold</code></span> configuration variable and on files with the
+attribute <span class='synopsis'><code>delta</code></span> set to false.</p>
 </div>
 </div>
 </div>

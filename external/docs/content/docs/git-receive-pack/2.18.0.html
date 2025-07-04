@@ -131,29 +131,29 @@ sha1-old and sha1-new should be valid objects in the repository.</p>
 <div class="paragraph">
 <p>When accepting a signed push (see <a href='{{< relurl "docs/git-push" >}}'>git-push[1]</a>), the signed
 push certificate is stored in a blob and an environment variable
-<code>GIT_PUSH_CERT</code> can be consulted for its object name.  See the
-description of <code>post-receive</code> hook for an example.  In addition, the
+<span class='synopsis'><code>GIT_PUSH_CERT</code></span> can be consulted for its object name.  See the
+description of <span class='synopsis'><code>post-receive</code></span> hook for an example.  In addition, the
 certificate is verified using GPG and the result is exported with
 the following environment variables:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeGITPUSHCERTSIGNERcode"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTSIGNER" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTSIGNER"></a><code>GIT_PUSH_CERT_SIGNER</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeGITPUSHCERTSIGNERcodespan"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTSIGNER" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTSIGNER"></a><span class='synopsis'><code>GIT_PUSH_CERT_SIGNER</code></span> </dt>
 <dd>
 <p>The name and the e-mail address of the owner of the key that
 signed the push certificate.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeGITPUSHCERTKEYcode"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTKEY" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTKEY"></a><code>GIT_PUSH_CERT_KEY</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeGITPUSHCERTKEYcodespan"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTKEY" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTKEY"></a><span class='synopsis'><code>GIT_PUSH_CERT_KEY</code></span> </dt>
 <dd>
 <p>The GPG key ID of the key that signed the push certificate.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeGITPUSHCERTSTATUScode"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTSTATUS" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTSTATUS"></a><code>GIT_PUSH_CERT_STATUS</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeGITPUSHCERTSTATUScodespan"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTSTATUS" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTSTATUS"></a><span class='synopsis'><code>GIT_PUSH_CERT_STATUS</code></span> </dt>
 <dd>
 <p>The status of GPG verification of the push certificate,
-using the same mnemonic as used in <code>%G?</code> format of <code>git log</code>
+using the same mnemonic as used in <span class='synopsis'><em>%G?</em></span> format of <span class='synopsis'><code>git</code> <code>log</code></span>
 family of commands (see <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeGITPUSHCERTNONCEcode"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTNONCE" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTNONCE"></a><code>GIT_PUSH_CERT_NONCE</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeGITPUSHCERTNONCEcodespan"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTNONCE" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTNONCE"></a><span class='synopsis'><code>GIT_PUSH_CERT_NONCE</code></span> </dt>
 <dd>
 <p>The nonce string the process asked the signer to include
 in the push certificate.  If this does not match the value
@@ -161,44 +161,44 @@ recorded on the "nonce" header in the push certificate, it
 may indicate that the certificate is a valid one that is
 being replayed from a separate "git push" session.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeGITPUSHCERTNONCESTATUScode"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTNONCESTATUS" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTNONCESTATUS"></a><code>GIT_PUSH_CERT_NONCE_STATUS</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeGITPUSHCERTNONCESTATUScodespan"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTNONCESTATUS" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTNONCESTATUS"></a><span class='synopsis'><code>GIT_PUSH_CERT_NONCE_STATUS</code></span> </dt>
 <dd>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeUNSOLICITEDcode"><a id="Documentation/git-receive-pack.txt-UNSOLICITED" class="anchor" href="#Documentation/git-receive-pack.txt-UNSOLICITED"></a><code>UNSOLICITED</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeUNSOLICITEDcodespan"><a id="Documentation/git-receive-pack.txt-UNSOLICITED" class="anchor" href="#Documentation/git-receive-pack.txt-UNSOLICITED"></a><span class='synopsis'><code>UNSOLICITED</code></span> </dt>
 <dd>
 <p>"git push --signed" sent a nonce when we did not ask it to
 send one.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeMISSINGcode"><a id="Documentation/git-receive-pack.txt-MISSING" class="anchor" href="#Documentation/git-receive-pack.txt-MISSING"></a><code>MISSING</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeMISSINGcodespan"><a id="Documentation/git-receive-pack.txt-MISSING" class="anchor" href="#Documentation/git-receive-pack.txt-MISSING"></a><span class='synopsis'><code>MISSING</code></span> </dt>
 <dd>
 <p>"git push --signed" did not send any nonce header.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeBADcode"><a id="Documentation/git-receive-pack.txt-BAD" class="anchor" href="#Documentation/git-receive-pack.txt-BAD"></a><code>BAD</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeBADcodespan"><a id="Documentation/git-receive-pack.txt-BAD" class="anchor" href="#Documentation/git-receive-pack.txt-BAD"></a><span class='synopsis'><code>BAD</code></span> </dt>
 <dd>
 <p>"git push --signed" sent a bogus nonce.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeOKcode"><a id="Documentation/git-receive-pack.txt-OK" class="anchor" href="#Documentation/git-receive-pack.txt-OK"></a><code>OK</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeOKcodespan"><a id="Documentation/git-receive-pack.txt-OK" class="anchor" href="#Documentation/git-receive-pack.txt-OK"></a><span class='synopsis'><code>OK</code></span> </dt>
 <dd>
 <p>"git push --signed" sent the nonce we asked it to send.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeSLOPcode"><a id="Documentation/git-receive-pack.txt-SLOP" class="anchor" href="#Documentation/git-receive-pack.txt-SLOP"></a><code>SLOP</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeSLOPcodespan"><a id="Documentation/git-receive-pack.txt-SLOP" class="anchor" href="#Documentation/git-receive-pack.txt-SLOP"></a><span class='synopsis'><code>SLOP</code></span> </dt>
 <dd>
 <p>"git push --signed" sent a nonce different from what we
 asked it to send now, but in a previous session.  See
-<code>GIT_PUSH_CERT_NONCE_SLOP</code> environment variable.</p>
+<span class='synopsis'><code>GIT_PUSH_CERT_NONCE_SLOP</code></span> environment variable.</p>
 </dd>
 </dl>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/git-receive-pack.txt-codeGITPUSHCERTNONCESLOPcode"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTNONCESLOP" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTNONCESLOP"></a><code>GIT_PUSH_CERT_NONCE_SLOP</code> </dt>
+<dt class="hdlist1" id="Documentation/git-receive-pack.txt-spanclasssynopsiscodeGITPUSHCERTNONCESLOPcodespan"><a id="Documentation/git-receive-pack.txt-GITPUSHCERTNONCESLOP" class="anchor" href="#Documentation/git-receive-pack.txt-GITPUSHCERTNONCESLOP"></a><span class='synopsis'><code>GIT_PUSH_CERT_NONCE_SLOP</code></span> </dt>
 <dd>
 <p>"git push --signed" sent a nonce different from what we
 asked it to send now, but in a different session whose
 starting time is different by this many seconds from the
 current session.  Only meaningful when
-<code>GIT_PUSH_CERT_NONCE_STATUS</code> says <code>SLOP</code>.
-Also read about <code>receive.certNonceSlop</code> variable in
+<span class='synopsis'><code>GIT_PUSH_CERT_NONCE_STATUS</code></span> says <span class='synopsis'><code>SLOP</code></span>.
+Also read about <span class='synopsis'><code>receive.certNonceSlop</code></span> variable in
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </dd>
 </dl>
@@ -275,8 +275,8 @@ the update.  Refs that were created will have sha1-old equal to
 the repository.</p>
 </div>
 <div class="paragraph">
-<p>The <code>GIT_PUSH_CERT*</code> environment variables can be inspected, just as
-in <code>pre-receive</code> hook, after accepting a signed push.</p>
+<p>The <span class='synopsis'><code>GIT_PUSH_CERT*</code></span> environment variables can be inspected, just as
+in <span class='synopsis'><code>pre-receive</code></span> hook, after accepting a signed push.</p>
 </div>
 <div class="paragraph">
 <p>Using this hook, it is easy to generate mails describing the updates
@@ -340,7 +340,7 @@ left for <em>git-receive-pack</em> to do at that point is to exit itself
 anyway.</p>
 </div>
 <div class="paragraph">
-<p>This hook can be used, for example, to run <code>git update-server-info</code>
+<p>This hook can be used, for example, to run <span class='synopsis'><code>git</code> <code>update-server-info</code></span>
 if the repository is packed and is served via a dumb transport.</p>
 </div>
 <div class="literalblock">
@@ -355,9 +355,9 @@ exec git update-server-info</pre>
 <h2 id="_quarantine_environment"><a class="anchor" href="#_quarantine_environment"></a>QUARANTINE ENVIRONMENT</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When <code>receive-pack</code> takes in objects, they are placed into a temporary
-"quarantine" directory within the <code>$GIT_DIR/objects</code> directory and
-migrated into the main object store only after the <code>pre-receive</code> hook
+<p>When <span class='synopsis'><code>receive-pack</code></span> takes in objects, they are placed into a temporary
+"quarantine" directory within the <span class='synopsis'><code>$GIT_DIR/objects</code></span> directory and
+migrated into the main object store only after the <span class='synopsis'><code>pre-receive</code></span> hook
 has completed. If the push fails before then, the temporary directory is
 removed entirely.</p>
 </div>
@@ -368,21 +368,21 @@ removed entirely.</p>
 <ol class="arabic">
 <li>
 <p>Pushes which fail due to problems with the incoming pack, missing
-objects, or due to the <code>pre-receive</code> hook will not leave any
+objects, or due to the <span class='synopsis'><code>pre-receive</code></span> hook will not leave any
 on-disk data. This is usually helpful to prevent repeated failed
 pushes from filling up your disk, but can make debugging more
 challenging.</p>
 </li>
 <li>
-<p>Any objects created by the <code>pre-receive</code> hook will be created in
+<p>Any objects created by the <span class='synopsis'><code>pre-receive</code></span> hook will be created in
 the quarantine directory (and migrated only if it succeeds).</p>
 </li>
 <li>
-<p>The <code>pre-receive</code> hook MUST NOT update any refs to point to
+<p>The <span class='synopsis'><code>pre-receive</code></span> hook MUST NOT update any refs to point to
 quarantined objects. Other programs accessing the repository will
 not be able to see the objects (and if the pre-receive hook fails,
 those refs would become corrupted). For safety, any ref updates
-from within <code>pre-receive</code> are automatically rejected.</p>
+from within <span class='synopsis'><code>pre-receive</code></span> are automatically rejected.</p>
 </li>
 </ol>
 </div>

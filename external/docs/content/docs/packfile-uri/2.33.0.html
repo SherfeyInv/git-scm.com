@@ -68,12 +68,12 @@ some measure of resumability to clients.</p>
 <h2 id="_protocol"><a class="anchor" href="#_protocol"></a>Protocol</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The server advertises the <code>packfile-uris</code> capability.</p>
+<p>The server advertises the <span class='synopsis'><code>packfile-uris</code></span> capability.</p>
 </div>
 <div class="paragraph">
 <p>If the client then communicates which protocols (HTTPS, etc.) it supports with
-a <code>packfile-uris</code> argument, the server MAY send a <code>packfile-uris</code> section
-directly before the <code>packfile</code> section (right after <code>wanted-refs</code> if it is
+a <span class='synopsis'><code>packfile-uris</code></span> argument, the server MAY send a <span class='synopsis'><code>packfile-uris</code></span> section
+directly before the <span class='synopsis'><code>packfile</code></span> section (right after <span class='synopsis'><code>wanted-refs</code></span> if it is
 sent) containing URIs of any of the given protocols. The URIs point to
 packfiles that use only features that the client has declared that it supports
 (e.g. ofs-delta and thin-pack). See protocol-v2.txt for the documentation of
@@ -81,7 +81,7 @@ this section.</p>
 </div>
 <div class="paragraph">
 <p>Clients should then download and index all the given URIs (in addition to
-downloading and indexing the packfile given in the <code>packfile</code> section of the
+downloading and indexing the packfile given in the <span class='synopsis'><code>packfile</code></span> section of the
 response) before performing the connectivity check.</p>
 </div>
 </div>
@@ -91,15 +91,16 @@ response) before performing the connectivity check.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The server can be trivially made compatible with the proposed protocol by
-having it advertise <code>packfile-uris</code>, tolerating the client sending
-<code>packfile-uris</code>, and never sending any <code>packfile-uris</code> section. But we should
+having it advertise <span class='synopsis'><code>packfile-uris</code></span>, tolerating the client sending
+<span class='synopsis'><code>packfile-uris</code></span>, and never sending any <span class='synopsis'><code>packfile-uris</code></span> section. But we should
 include some sort of non-trivial implementation in the Minimum Viable Product,
 at least so that we can test the client.</p>
 </div>
 <div class="paragraph">
 <p>This is the implementation: a feature, marked experimental, that allows the
-server to be configured by one or more <code>uploadpack.blobPackfileUri=
-&lt;object-hash&gt; &lt;pack-hash&gt; &lt;uri&gt;</code> entries. Whenever the list of objects to be
+server to be configured by one or more <span class='synopsis'><code>uploadpack.blobPackfileUri=</code>
+
+<em>&lt;object-hash&gt;</em> <em>&lt;pack-hash&gt;</em> <em>&lt;uri&gt;</em></span> entries. Whenever the list of objects to be
 sent is assembled, all such blobs are excluded, replaced with URIs. As noted
 in "Future work" below, the server can evolve in the future to support
 excluding other objects (or other implementations of servers could be made
@@ -113,14 +114,14 @@ single blobs.</p>
 <h2 id="_client_design"><a class="anchor" href="#_client_design"></a>Client design</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The client has a config variable <code>fetch.uriprotocols</code> that determines which
+<p>The client has a config variable <span class='synopsis'><code>fetch.uriprotocols</code></span> that determines which
 protocols the end user is willing to use. By default, this is empty.</p>
 </div>
 <div class="paragraph">
 <p>When the client downloads the given URIs, it should store them with "keep"
-files, just like it does with the packfile in the <code>packfile</code> section. These
+files, just like it does with the packfile in the <span class='synopsis'><code>packfile</code></span> section. These
 additional "keep" files can only be removed after the refs have been updated -
-just like the "keep" file for the packfile in the <code>packfile</code> section.</p>
+just like the "keep" file for the packfile in the <span class='synopsis'><code>packfile</code></span> section.</p>
 </div>
 <div class="paragraph">
 <p>The division of work (initial fetch + additional URIs) introduces convenient

@@ -53,7 +53,7 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Adds a <em>replace</em> reference in <code>refs/replace/</code> namespace.</p>
+<p>Adds a <em>replace</em> reference in <span class='synopsis'><code>refs/replace/</code></span> namespace.</p>
 </div>
 <div class="paragraph">
 <p>The name of the <em>replace</em> reference is the SHA-1 of the object that is
@@ -62,10 +62,10 @@ replacement object.</p>
 </div>
 <div class="paragraph">
 <p>The replaced object and the replacement object must be of the same type.
-This restriction can be bypassed using <code>-f</code>.</p>
+This restriction can be bypassed using <span class='synopsis'><code>-f</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>Unless <code>-f</code> is given, the <em>replace</em> reference must not yet exist.</p>
+<p>Unless <span class='synopsis'><code>-f</code></span> is given, the <em>replace</em> reference must not yet exist.</p>
 </div>
 <div class="paragraph">
 <p>There is no other restriction on the replaced and replacement objects.
@@ -78,7 +78,7 @@ fsck).</p>
 </div>
 <div class="paragraph">
 <p>It is possible to disable the use of replacement references for any
-command using the <code>--no-replace-objects</code> option just after <em>git</em>.</p>
+command using the <span class='synopsis'><code>--no-replace-objects</code></span> option just after <em>git</em>.</p>
 </div>
 <div class="paragraph">
 <p>For example if commit <em>foo</em> has been replaced by commit <em>bar</em>:</p>
@@ -100,8 +100,8 @@ command using the <code>--no-replace-objects</code> option just after <em>git</e
 <p>shows information about commit <em>bar</em>.</p>
 </div>
 <div class="paragraph">
-<p>The <code>GIT_NO_REPLACE_OBJECTS</code> environment variable can be set to
-achieve the same effect as the <code>--no-replace-objects</code> option.</p>
+<p>The <span class='synopsis'><code>GIT_NO_REPLACE_OBJECTS</code></span> environment variable can be set to
+achieve the same effect as the <span class='synopsis'><code>--no-replace-objects</code></span> option.</p>
 </div>
 </div>
 </div>
@@ -146,12 +146,12 @@ your editor to cleanly read and write binary data.</p>
 content as &lt;commit&gt; except that its parents will be
 [&lt;parent&gt;&#8230;&#8203;] instead of &lt;commit&gt;'s parents. A replacement ref
 is then created to replace &lt;commit&gt; with the newly created
-commit. Use <code>--convert-graft-file</code> to convert a
-<code>$GIT_DIR/info/grafts</code> file and use replace refs instead.</p>
+commit. Use <span class='synopsis'><code>--convert-graft-file</code></span> to convert a
+<span class='synopsis'><code>$GIT_DIR/info/grafts</code></span> file and use replace refs instead.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-replace.txt---convert-graft-file"><a class="anchor" href="#Documentation/git-replace.txt---convert-graft-file"></a>--convert-graft-file </dt>
 <dd>
-<p>Creates graft commits for all entries in <code>$GIT_DIR/info/grafts</code>
+<p>Creates graft commits for all entries in <span class='synopsis'><code>$GIT_DIR/info/grafts</code></span>
 and deletes that file upon success. The purpose is to help users
 with transitioning off of the now-deprecated graft file.</p>
 </dd>
@@ -203,7 +203,7 @@ defaults to <em>short</em>.</p>
 <div class="paragraph">
 <p><a href='{{< relurl "docs/git-hash-object" >}}'>git-hash-object[1]</a>, <a href='{{< relurl "docs/git-rebase" >}}'>git-rebase[1]</a>, and
 <a href="https://github.com/newren/git-filter-repo">git-filter-repo</a>, among other git commands, can be used to
-create replacement objects from existing objects. The <code>--edit</code> option
+create replacement objects from existing objects. The <span class='synopsis'><code>--edit</code></span> option
 can also be used with <em>git replace</em> to create a replacement object by
 editing an existing object.</p>
 </div>
@@ -221,7 +221,7 @@ of commits.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Comparing blobs or trees that have been replaced with those that
-replace them will not work properly. And using <code>git reset --hard</code> to
+replace them will not work properly. And using <span class='synopsis'><code>git</code> <code>reset</code> <code>--hard</code></span> to
 go back to a replaced commit will move the branch to the replacement
 commit instead of the replaced commit.</p>
 </div>

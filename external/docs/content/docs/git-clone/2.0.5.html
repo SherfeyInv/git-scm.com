@@ -40,21 +40,21 @@ aliases:
 <div class="paragraph">
 <p>Clones a repository into a newly created directory, creates
 remote-tracking branches for each branch in the cloned repository
-(visible using <code>git branch -r</code>), and creates and checks out an
+(visible using <span class='synopsis'><code>git</code> <code>branch</code> <code>-r</code></span>), and creates and checks out an
 initial branch that is forked from the cloned repository&#8217;s
 currently active branch.</p>
 </div>
 <div class="paragraph">
-<p>After the clone, a plain <code>git fetch</code> without arguments will update
-all the remote-tracking branches, and a <code>git pull</code> without
+<p>After the clone, a plain <span class='synopsis'><code>git</code> <code>fetch</code></span> without arguments will update
+all the remote-tracking branches, and a <span class='synopsis'><code>git</code> <code>pull</code></span> without
 arguments will in addition merge the remote master branch into the
 current master branch, if any (this is untrue when "--single-branch"
 is given; see below).</p>
 </div>
 <div class="paragraph">
 <p>This default configuration is achieved by creating references to
-the remote branch heads under <code>refs/remotes/origin</code> and
-by initializing <code>remote.origin.url</code> and <code>remote.origin.fetch</code>
+the remote branch heads under <span class='synopsis'><code>refs/remotes/origin</code></span> and
+by initializing <span class='synopsis'><code>remote.origin.url</code></span> and <span class='synopsis'><code>remote.origin.fetch</code></span>
 configuration variables.</p>
 </div>
 </div>
@@ -71,21 +71,21 @@ configuration variables.</p>
 this flag bypasses the normal "Git aware" transport
 mechanism and clones the repository by making a copy of
 HEAD and everything under objects and refs directories.
-The files under <code>.git/objects/</code> directory are hardlinked
+The files under <span class='synopsis'><code>.git/objects/</code></span> directory are hardlinked
 to save space when possible.</p>
 <div class="paragraph">
-<p>If the repository is specified as a local path (e.g., <code>/path/to/repo</code>),
+<p>If the repository is specified as a local path (e.g., <span class='synopsis'><code>/path/to/repo</code></span>),
 this is the default, and --local is essentially a no-op.  If the
 repository is specified as a URL, then this flag is ignored (and we
-never use the local optimizations).  Specifying <code>--no-local</code> will
-override the default when <code>/path/to/repo</code> is given, using the regular
+never use the local optimizations).  Specifying <span class='synopsis'><code>--no-local</code></span> will
+override the default when <span class='synopsis'><code>/path/to/repo</code></span> is given, using the regular
 Git transport instead.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---no-hardlinks"><a class="anchor" href="#Documentation/git-clone.txt---no-hardlinks"></a>--no-hardlinks </dt>
 <dd>
 <p>Force the cloning process from a repository on a local
-filesystem to copy the files under the <code>.git/objects</code>
+filesystem to copy the files under the <span class='synopsis'><code>.git/objects</code></span>
 directory instead of using hardlinks. This may be desirable
 if you are trying to make a back-up of your repository.</p>
 </dd>
@@ -94,7 +94,7 @@ if you are trying to make a back-up of your repository.</p>
 <dd>
 <p>When the repository to clone is on the local machine,
 instead of using hard links, automatically setup
-<code>.git/objects/info/alternates</code> to share the objects
+<span class='synopsis'><code>.git/objects/info/alternates</code></span> to share the objects
 with the source repository.  The resulting repository
 starts out without any object of its own.</p>
 <div class="paragraph">
@@ -103,34 +103,34 @@ it unless you understand what it does. If you clone your
 repository using this option and then delete branches (or use any
 other Git command that makes any existing commit unreferenced) in the
 source repository, some objects may become unreferenced (or dangling).
-These objects may be removed by normal Git operations (such as <code>git commit</code>)
-which automatically call <code>git gc --auto</code>. (See <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>.)
+These objects may be removed by normal Git operations (such as <span class='synopsis'><code>git</code> <code>commit</code></span>)
+which automatically call <span class='synopsis'><code>git</code> <code>gc</code> <code>--auto</code></span>. (See <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>.)
 If these objects are removed and were referenced by the cloned repository,
 then the cloned repository will become corrupt.</p>
 </div>
 <div class="paragraph">
-<p>Note that running <code>git repack</code> without the <code>-l</code> option in a repository
-cloned with <code>-s</code> will copy objects from the source repository into a pack
-in the cloned repository, removing the disk space savings of <code>clone -s</code>.
-It is safe, however, to run <code>git gc</code>, which uses the <code>-l</code> option by
+<p>Note that running <span class='synopsis'><code>git</code> <code>repack</code></span> without the <span class='synopsis'><code>-l</code></span> option in a repository
+cloned with <span class='synopsis'><code>-s</code></span> will copy objects from the source repository into a pack
+in the cloned repository, removing the disk space savings of <span class='synopsis'><code>clone</code> <code>-s</code></span>.
+It is safe, however, to run <span class='synopsis'><code>git</code> <code>gc</code></span>, which uses the <span class='synopsis'><code>-l</code></span> option by
 default.</p>
 </div>
 <div class="paragraph">
-<p>If you want to break the dependency of a repository cloned with <code>-s</code> on
-its source repository, you can simply run <code>git repack -a</code> to copy all
+<p>If you want to break the dependency of a repository cloned with <span class='synopsis'><code>-s</code></span> on
+its source repository, you can simply run <span class='synopsis'><code>git</code> <code>repack</code> <code>-a</code></span> to copy all
 objects from the source repository into a pack in the cloned repository.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---referenceltrepositorygt"><a id="Documentation/git-clone.txt---referencerepository" class="anchor" href="#Documentation/git-clone.txt---referencerepository"></a>--reference &lt;repository&gt; </dt>
 <dd>
 <p>If the reference repository is on the local machine,
-automatically setup <code>.git/objects/info/alternates</code> to
+automatically setup <span class='synopsis'><code>.git/objects/info/alternates</code></span> to
 obtain objects from the reference repository.  Using
 an already existing repository as an alternate will
 require fewer objects to be copied from the repository
 being cloned, reducing network and local storage costs.</p>
 <div class="paragraph">
-<p><strong>NOTE</strong>: see the NOTE for the <code>--shared</code> option.</p>
+<p><strong>NOTE</strong>: see the NOTE for the <span class='synopsis'><code>--shared</code></span> option.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---quiet"><a class="anchor" href="#Documentation/git-clone.txt---quiet"></a>--quiet </dt>
@@ -161,39 +161,39 @@ standard error stream is not directed to a terminal.</p>
 <dt class="hdlist1" id="Documentation/git-clone.txt---bare"><a class="anchor" href="#Documentation/git-clone.txt---bare"></a>--bare </dt>
 <dd>
 <p>Make a <em>bare</em> Git repository.  That is, instead of
-creating <code>&lt;directory&gt;</code> and placing the administrative
-files in <code>&lt;directory&gt;/.git</code>, make the <code>&lt;directory&gt;</code>
-itself the <code>$GIT_DIR</code>. This obviously implies the <code>-n</code>
+creating <span class='synopsis'><em>&lt;directory&gt;</em></span> and placing the administrative
+files in <span class='synopsis'><em>&lt;directory&gt;</em><code>/.git</code></span>, make the <span class='synopsis'><em>&lt;directory&gt;</em></span>
+itself the <span class='synopsis'><code>$GIT_DIR</code></span>. This obviously implies the <span class='synopsis'><code>-n</code></span>
 because there is nowhere to check out the working tree.
 Also the branch heads at the remote are copied directly
 to corresponding local branch heads, without mapping
-them to <code>refs/remotes/origin/</code>.  When this option is
+them to <span class='synopsis'><code>refs/remotes/origin/</code></span>.  When this option is
 used, neither remote-tracking branches nor the related
 configuration variables are created.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---mirror"><a class="anchor" href="#Documentation/git-clone.txt---mirror"></a>--mirror </dt>
 <dd>
-<p>Set up a mirror of the source repository.  This implies <code>--bare</code>.
-Compared to <code>--bare</code>, <code>--mirror</code> not only maps local branches of the
+<p>Set up a mirror of the source repository.  This implies <span class='synopsis'><code>--bare</code></span>.
+Compared to <span class='synopsis'><code>--bare</code></span>, <span class='synopsis'><code>--mirror</code></span> not only maps local branches of the
 source to local branches of the target, it maps all refs (including
 remote-tracking branches, notes etc.) and sets up a refspec configuration such
-that all these refs are overwritten by a <code>git remote update</code> in the
+that all these refs are overwritten by a <span class='synopsis'><code>git</code> <code>remote</code> <code>update</code></span> in the
 target repository.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---originltnamegt"><a id="Documentation/git-clone.txt---originname" class="anchor" href="#Documentation/git-clone.txt---originname"></a>--origin &lt;name&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-clone.txt--oltnamegt"><a id="Documentation/git-clone.txt--oname" class="anchor" href="#Documentation/git-clone.txt--oname"></a>-o &lt;name&gt; </dt>
 <dd>
-<p>Instead of using the remote name <code>origin</code> to keep track
-of the upstream repository, use <code>&lt;name&gt;</code>.</p>
+<p>Instead of using the remote name <span class='synopsis'><code>origin</code></span> to keep track
+of the upstream repository, use <span class='synopsis'><em>&lt;name&gt;</em></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---branchltnamegt"><a id="Documentation/git-clone.txt---branchname" class="anchor" href="#Documentation/git-clone.txt---branchname"></a>--branch &lt;name&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-clone.txt--bltnamegt"><a id="Documentation/git-clone.txt--bname" class="anchor" href="#Documentation/git-clone.txt--bname"></a>-b &lt;name&gt; </dt>
 <dd>
 <p>Instead of pointing the newly created HEAD to the branch pointed
-to by the cloned repository&#8217;s HEAD, point to <code>&lt;name&gt;</code> branch
+to by the cloned repository&#8217;s HEAD, point to <span class='synopsis'><em>&lt;name&gt;</em></span> branch
 instead. In a non-bare repository, this is the branch that will
 be checked out.
-<code>--branch</code> can also take tags and detaches the HEAD at that commit
+<span class='synopsis'><code>--branch</code></span> can also take tags and detaches the HEAD at that commit
 in the resulting repository.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---upload-packltupload-packgt"><a id="Documentation/git-clone.txt---upload-packupload-pack" class="anchor" href="#Documentation/git-clone.txt---upload-packupload-pack"></a>--upload-pack &lt;upload-pack&gt; </dt>
@@ -215,7 +215,7 @@ run on the other end.</p>
 this takes effect immediately after the repository is
 initialized, but before the remote history is fetched or any
 files checked out.  The key is in the same format as expected by
-<a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> (e.g., <code>core.eol=true</code>). If multiple
+<a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> (e.g., <span class='synopsis'><code>core.eol=true</code></span>). If multiple
 values are given for the same key, each value will be written to
 the config file. This makes it safe, for example, to add
 additional fetch refspecs to the origin remote.</p>
@@ -228,15 +228,15 @@ specified number of revisions.</p>
 <dt class="hdlist1" id="Documentation/git-clone.txt---no-single-branch"><a class="anchor" href="#Documentation/git-clone.txt---no-single-branch"></a>--[no-]single-branch </dt>
 <dd>
 <p>Clone only the history leading to the tip of a single branch,
-either specified by the <code>--branch</code> option or the primary
-branch remote&#8217;s <code>HEAD</code> points at. When creating a shallow
-clone with the <code>--depth</code> option, this is the default, unless
-<code>--no-single-branch</code> is given to fetch the histories near the
+either specified by the <span class='synopsis'><code>--branch</code></span> option or the primary
+branch remote&#8217;s <span class='synopsis'><code>HEAD</code></span> points at. When creating a shallow
+clone with the <span class='synopsis'><code>--depth</code></span> option, this is the default, unless
+<span class='synopsis'><code>--no-single-branch</code></span> is given to fetch the histories near the
 tips of all branches.
 Further fetches into the resulting repository will only update the
 remote-tracking branch for the branch this option was used for the
 initial cloning.  If the HEAD at the remote did not point at any
-branch when <code>--single-branch</code> clone was made, no remote-tracking
+branch when <span class='synopsis'><code>--single-branch</code></span> clone was made, no remote-tracking
 branch is created.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---recursive"><a class="anchor" href="#Documentation/git-clone.txt---recursive"></a>--recursive </dt>
@@ -244,10 +244,10 @@ branch is created.</p>
 <dd>
 <p>After the clone is created, initialize all submodules within,
 using their default settings. This is equivalent to running
-<code>git submodule update --init --recursive</code> immediately after
+<span class='synopsis'><code>git</code> <code>submodule</code> <code>update</code> <code>--init</code> <code>--recursive</code></span> immediately after
 the clone is finished. This option is ignored if the cloned
 repository does not have a worktree/checkout (i.e. if any of
-<code>--no-checkout</code>/<code>-n</code>, <code>--bare</code>, or <code>--mirror</code> is given)</p>
+<span class='synopsis'><code>--no-checkout</code></span>/<span class='synopsis'><code>-n</code></span>, <span class='synopsis'><code>--bare</code></span>, or <span class='synopsis'><code>--mirror</code></span> is given)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clone.txt---separate-git-dirltgitdirgt"><a id="Documentation/git-clone.txt---separate-git-dirgitdir" class="anchor" href="#Documentation/git-clone.txt---separate-git-dirgitdir"></a>--separate-git-dir=&lt;git dir&gt; </dt>
 <dd>
@@ -267,8 +267,8 @@ repositories.</p>
 <dd>
 <p>The name of a new directory to clone into.  The "humanish"
 part of the source repository is used if no directory is
-explicitly given (<code>repo</code> for <code>/path/to/repo.git</code> and <code>foo</code>
-for <code>host.xz:foo/.git</code>).  Cloning into an existing directory
+explicitly given (<span class='synopsis'><code>repo</code></span> for <span class='synopsis'><code>/path/to/repo.git</code></span> and <span class='synopsis'><code>foo</code></span>
+for <span class='synopsis'><code>host.xz:foo/.git</code></span>).  Cloning into an existing directory
 is only allowed if the directory is empty.</p>
 </dd>
 </dl>
@@ -329,8 +329,8 @@ should be used with caution on unsecured networks.</p>
 <div class="paragraph">
 <p>This syntax is only recognized if there are no slashes before the
 first colon. This helps differentiate a local path that contains a
-colon. For example the local path <code>foo:bar</code> could be specified as an
-absolute path or <code>./foo:bar</code> to avoid being misinterpreted as an ssh
+colon. For example the local path <span class='synopsis'><code>foo:bar</code></span> could be specified as an
+absolute path or <span class='synopsis'><code>./foo:bar</code></span> to avoid being misinterpreted as an ssh
 url.</p>
 </div>
 <div class="paragraph">

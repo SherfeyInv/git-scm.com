@@ -231,7 +231,7 @@ so a future change of hash algorithm does not require a change in format.</p>
 <li>
 <p>Commit grafts and replace objects can change the shape of the commit
 history. The latter can also be enabled/disabled on the fly using
-<code>--no-replace-objects</code>. This leads to difficultly storing both possible
+<span class='synopsis'><code>--no-replace-objects</code></span>. This leads to difficultly storing both possible
 interpretations of a commit id, especially when computing generation
 numbers. The commit-graph will not be read or written when
 replace-objects or grafts are present.</p>
@@ -267,14 +267,14 @@ history&#8201;&#8212;&#8201;at least, most of the time.</p>
 <div class="paragraph">
 <p>A commit-graph chain uses multiple files, and we use a fixed naming convention
 to organize these files. Each commit-graph file has a name
-<code>$OBJDIR/info/commit-graphs/graph-{hash}.graph</code> where <code>{hash}</code> is the hex-
+<span class='synopsis'><code>$OBJDIR/info/commit-graphs/graph-{hash}.graph</code></span> where <span class='synopsis'><code>{hash}</code></span> is the hex-
 valued hash stored in the footer of that file (which is a hash of the file&#8217;s
 contents before that hash). For a chain of commit-graph files, a plain-text
-file at <code>$OBJDIR/info/commit-graphs/commit-graph-chain</code> contains the
+file at <span class='synopsis'><code>$OBJDIR/info/commit-graphs/commit-graph-chain</code></span> contains the
 hashes for the files in order from "lowest" to "highest".</p>
 </div>
 <div class="paragraph">
-<p>For example, if the <code>commit-graph-chain</code> file contains the lines</p>
+<p>For example, if the <span class='synopsis'><code>commit-graph-chain</code></span> file contains the lines</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -310,21 +310,21 @@ hashes for the files in order from "lowest" to "highest".</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Let X0 be the number of commits in <code>graph-{hash0}.graph</code>, X1 be the number of
-commits in <code>graph-{hash1}.graph</code>, and X2 be the number of commits in
-<code>graph-{hash2}.graph</code>. If a commit appears in position i in <code>graph-{hash2}.graph</code>,
+<p>Let X0 be the number of commits in <span class='synopsis'><code>graph-{hash0}.graph</code></span>, X1 be the number of
+commits in <span class='synopsis'><code>graph-{hash1}.graph</code></span>, and X2 be the number of commits in
+<span class='synopsis'><code>graph-{hash2}.graph</code></span>. If a commit appears in position i in <span class='synopsis'><code>graph-{hash2}.graph</code></span>,
 then we interpret this as being the commit in position (X0 + X1 + i), and that
-will be used as its "graph position". The commits in <code>graph-{hash2}.graph</code> use these
-positions to refer to their parents, which may be in <code>graph-{hash1}.graph</code> or
-<code>graph-{hash0}.graph</code>. We can navigate to an arbitrary commit in position j by checking
+will be used as its "graph position". The commits in <span class='synopsis'><code>graph-{hash2}.graph</code></span> use these
+positions to refer to their parents, which may be in <span class='synopsis'><code>graph-{hash1}.graph</code></span> or
+<span class='synopsis'><code>graph-{hash0}.graph</code></span>. We can navigate to an arbitrary commit in position j by checking
 its containment in the intervals [0, X0), [X0, X0 + X1), [X0 + X1, X0 + X1<br>
 X2).</p>
 </div>
 <div class="paragraph">
-<p>Each commit-graph file (except the base, <code>graph-{hash0}.graph</code>) contains data
+<p>Each commit-graph file (except the base, <span class='synopsis'><code>graph-{hash0}.graph</code></span>) contains data
 specifying the hashes of all files in the lower layers. In the above example,
-<code>graph-{hash1}.graph</code> contains <code>{hash0}</code> while <code>graph-{hash2}.graph</code> contains
-<code>{hash0}</code> and <code>{hash1}</code>.</p>
+<span class='synopsis'><code>graph-{hash1}.graph</code></span> contains <span class='synopsis'><code>{hash0}</code></span> while <span class='synopsis'><code>graph-{hash2}.graph</code></span> contains
+<span class='synopsis'><code>{hash0}</code></span> and <span class='synopsis'><code>{hash1}</code></span>.</p>
 </div>
 </div>
 </div>
@@ -339,8 +339,8 @@ strategy to decide when the stack should collapse some number of levels.</p>
 <div class="paragraph">
 <p>The diagram below shows such a collapse. As a set of new commits are added, it
 is determined by the merge strategy that the files should collapse to
-<code>graph-{hash1}</code>. Thus, the new commits, the commits in <code>graph-{hash2}</code> and
-the commits in <code>graph-{hash1}</code> should be combined into a new <code>graph-{hash3}</code>
+<span class='synopsis'><code>graph-{hash1}</code></span>. Thus, the new commits, the commits in <span class='synopsis'><code>graph-{hash2}</code></span> and
+the commits in <span class='synopsis'><code>graph-{hash1}</code></span> should be combined into a new <span class='synopsis'><code>graph-{hash3}</code></span>
 file.</p>
 </div>
 <div class="literalblock">
@@ -374,10 +374,10 @@ file.</p>
 </div>
 <div class="paragraph">
 <p>During this process, the commits to write are combined, sorted and we write the
-contents to a temporary file, all while holding a <code>commit-graph-chain.lock</code>
-lock-file.  When the file is flushed, we rename it to <code>graph-{hash3}</code>
-according to the computed <code>{hash3}</code>. Finally, we write the new chain data to
-<code>commit-graph-chain.lock</code>:</p>
+contents to a temporary file, all while holding a <span class='synopsis'><code>commit-graph-chain.lock</code></span>
+lock-file.  When the file is flushed, we rename it to <span class='synopsis'><code>graph-{hash3}</code></span>
+according to the computed <span class='synopsis'><code>{hash3}</code></span>. Finally, we write the new chain data to
+<span class='synopsis'><code>commit-graph-chain.lock</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -401,11 +401,11 @@ merge with the Nth level if one of two conditions hold:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>--size-multiple=&lt;X&gt;</code> is specified or X = 2, and the number of commits in
+<p><span class='synopsis'><code>--size-multiple=</code><em>&lt;X&gt;</em></span> is specified or X = 2, and the number of commits in
 level N is less than X times the number of commits in level N + 1.</p>
 </li>
 <li>
-<p><code>--max-commits=&lt;C&gt;</code> is specified with non-zero C and the number of commits
+<p><span class='synopsis'><code>--max-commits=</code><em>&lt;C&gt;</em></span> is specified with non-zero C and the number of commits
 in level N + 1 is more than C commits.</p>
 </li>
 </ol>
@@ -417,7 +417,7 @@ set of commits that then compares to the next level.</p>
 <div class="paragraph">
 <p>The first condition bounds the number of levels to be logarithmic in the total
 number of commits.  The second condition bounds the total number of commits in
-a <code>graph-{hashN}</code> file and not in the <code>commit-graph</code> file, preventing
+a <span class='synopsis'><code>graph-{hashN}</code></span> file and not in the <span class='synopsis'><code>commit-graph</code></span> file, preventing
 significant performance issues when the stack merges and another process only
 partially reads the previous stack.</p>
 </div>
@@ -467,7 +467,7 @@ layer below the new layer has corrected commit dates.</p>
 <div class="paragraph">
 <p>While writing or merging layers, if the new layer is the only layer, it will
 have corrected commit dates when written by compatible versions of Git. Thus,
-rewriting split commit-graph as a single file (<code>--split=replace</code>) creates a
+rewriting split commit-graph as a single file (<span class='synopsis'><code>--split=replace</code></span>) creates a
 single layer with corrected commit dates.</p>
 </div>
 </div>
@@ -476,16 +476,16 @@ single layer with corrected commit dates.</p>
 <h2 id="_deleting_graph_hash_files"><a class="anchor" href="#_deleting_graph_hash_files"></a>Deleting graph-{hash} files</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>After a new tip file is written, some <code>graph-{hash}</code> files may no longer
+<p>After a new tip file is written, some <span class='synopsis'><code>graph-{hash}</code></span> files may no longer
 be part of a chain. It is important to remove these files from disk, eventually.
 The main reason to delay removal is that another process could read the
-<code>commit-graph-chain</code> file before it is rewritten, but then look for the
-<code>graph-{hash}</code> files after they are deleted.</p>
+<span class='synopsis'><code>commit-graph-chain</code></span> file before it is rewritten, but then look for the
+<span class='synopsis'><code>graph-{hash}</code></span> files after they are deleted.</p>
 </div>
 <div class="paragraph">
 <p>To allow holding old split commit-graphs for a while after they are unreferenced,
 we update the modified times of the files when they become unreferenced. Then,
-we scan the <code>$OBJDIR/info/commit-graphs/</code> directory for <code>graph-{hash}</code>
+we scan the <span class='synopsis'><code>$OBJDIR/info/commit-graphs/</code></span> directory for <span class='synopsis'><code>graph-{hash}</code></span>
 files whose modified times are older than a given expiry window. This window
 defaults to zero, but can be changed using command-line arguments or a config
 setting.</p>
@@ -496,10 +496,10 @@ setting.</p>
 <h2 id="_chains_across_multiple_object_directories"><a class="anchor" href="#_chains_across_multiple_object_directories"></a>Chains across multiple object directories</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In a repo with alternates, we look for the <code>commit-graph-chain</code> file starting
+<p>In a repo with alternates, we look for the <span class='synopsis'><code>commit-graph-chain</code></span> file starting
 in the local object directory and then in each alternate. The first file that
-exists defines our chain. As we look for the <code>graph-{hash}</code> files for
-each <code>{hash}</code> in the chain file, we follow the same pattern for the host
+exists defines our chain. As we look for the <span class='synopsis'><code>graph-{hash}</code></span> files for
+each <span class='synopsis'><code>{hash}</code></span> in the chain file, we follow the same pattern for the host
 directories.</p>
 </div>
 <div class="paragraph">
@@ -510,15 +510,15 @@ The typical case is a large "base" repo with many smaller forks.</p>
 <p>As the base repo advances, it will likely update and merge its commit-graph
 chain more frequently than the forks. If a fork updates their commit-graph after
 the base repo, then it should "reparent" the commit-graph chain onto the new
-chain in the base repo. When reading each <code>graph-{hash}</code> file, we track
+chain in the base repo. When reading each <span class='synopsis'><code>graph-{hash}</code></span> file, we track
 the object directory containing it. During a write of a new commit-graph file,
 we check for any changes in the source object directory and read the
-<code>commit-graph-chain</code> file for that source and create a new file based on those
+<span class='synopsis'><code>commit-graph-chain</code></span> file for that source and create a new file based on those
 files. During this "reparent" operation, we necessarily need to collapse all
 levels in the fork, as all of the files are invalid against the new base file.</p>
 </div>
 <div class="paragraph">
-<p>It is crucial to be careful when cleaning up "unreferenced" <code>graph-{hash}.graph</code>
+<p>It is crucial to be careful when cleaning up "unreferenced" <span class='synopsis'><code>graph-{hash}.graph</code></span>
 files in this scenario. It falls to the user to define the proper settings for
 their custom environment:</p>
 </div>

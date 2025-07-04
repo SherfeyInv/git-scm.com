@@ -136,13 +136,13 @@ commit IDs.</p>
 <p>Limit to only refs/heads and refs/tags, respectively.
 These options are <em>not</em> mutually exclusive; when given
 both, references stored in refs/heads and refs/tags are
-displayed.  Note that <code>git ls-remote -h</code> used without
+displayed.  Note that <span class='synopsis'><code>git</code> <code>ls-remote</code> <code>-h</code></span> used without
 anything else on the command line gives help, consistent
 with other git subcommands.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt---refs"><a class="anchor" href="#Documentation/git-ls-remote.txt---refs"></a>--refs </dt>
 <dd>
-<p>Do not show peeled tags or pseudorefs like <code>HEAD</code> in the output.</p>
+<p>Do not show peeled tags or pseudorefs like <span class='synopsis'><code>HEAD</code></span> in the output.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt--q"><a class="anchor" href="#Documentation/git-ls-remote.txt--q"></a>-q </dt>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt---quiet"><a class="anchor" href="#Documentation/git-ls-remote.txt---quiet"></a>--quiet </dt>
@@ -178,14 +178,14 @@ one shown by ls-remote.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt---sortltkeygt"><a id="Documentation/git-ls-remote.txt---sortkey" class="anchor" href="#Documentation/git-ls-remote.txt---sortkey"></a>--sort=&lt;key&gt; </dt>
 <dd>
-<p>Sort based on the key given. Prefix <code>-</code> to sort in descending order
+<p>Sort based on the key given. Prefix <span class='synopsis'><code>-</code></span> to sort in descending order
 of the value. Supports "version:refname" or "v:refname" (tag names
 are treated as versions). The "version:refname" sort order can also
 be affected by the "versionsort.suffix" configuration variable.
 See <a href='{{< relurl "docs/git-for-each-ref" >}}'>git-for-each-ref[1]</a> for more sort options, but be aware
-keys like <code>committerdate</code> that require access to the objects
+keys like <span class='synopsis'><code>committerdate</code></span> that require access to the objects
 themselves will not work for refs whose objects have not yet been
-fetched from the remote, and will give a <code>missing object</code> error.</p>
+fetched from the remote, and will give a <span class='synopsis'><code>missing</code> <code>object</code></span> error.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt--oltoptiongt"><a id="Documentation/git-ls-remote.txt--ooption" class="anchor" href="#Documentation/git-ls-remote.txt--ooption"></a>-o &lt;option&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt---server-optionltoptiongt"><a id="Documentation/git-ls-remote.txt---server-optionoption" class="anchor" href="#Documentation/git-ls-remote.txt---server-optionoption"></a>--server-option=&lt;option&gt; </dt>
@@ -193,7 +193,7 @@ fetched from the remote, and will give a <code>missing object</code> error.</p>
 <p>Transmit the given string to the server when communicating using
 protocol version 2.  The given string must not contain a NUL or LF
 character.
-When multiple <code>--server-option=&lt;option&gt;</code> are given, they are all
+When multiple <span class='synopsis'><code>--server-option=</code><em>&lt;option&gt;</em></span> are given, they are all
 sent to the other side in the order listed on the command line.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-remote.txt-ltrepositorygt"><a id="Documentation/git-ls-remote.txt-repository" class="anchor" href="#Documentation/git-ls-remote.txt-repository"></a>&lt;repository&gt; </dt>

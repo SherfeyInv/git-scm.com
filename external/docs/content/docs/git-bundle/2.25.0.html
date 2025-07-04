@@ -106,7 +106,7 @@ really plumbing, intended to be called only by <em>git fetch</em>.</p>
 <p>A list of arguments, acceptable to <em>git rev-parse</em> and
 <em>git rev-list</em> (and containing a named ref, see SPECIFYING REFERENCES
 below), that specifies the specific objects and references
-to transport.  For example, <code>master~10..master</code> causes the
+to transport.  For example, <span class='synopsis'><code>master~10..master</code></span> causes the
 current master reference to be packaged along with all objects
 added since its 10th ancestor commit.  There is no explicit
 limit to the number of references and objects that may be
@@ -161,12 +161,12 @@ on the standard error stream.</p>
 <div class="paragraph">
 <p><em>git bundle</em> will only package references that are shown by
 <em>git show-ref</em>: this includes heads, tags, and remote heads.  References
-such as <code>master~1</code> cannot be packaged, but are perfectly suitable for
+such as <span class='synopsis'><code>master~1</code></span> cannot be packaged, but are perfectly suitable for
 defining the basis.  More than one reference may be packaged, and more
 than one basis can be specified.  The objects packaged are those not
 contained in the union of the given bases.  Each basis can be
-specified explicitly (e.g. <code>^master~10</code>), or implicitly (e.g.
-<code>master~10..master</code>, <code>--since=10.days.ago master</code>).</p>
+specified explicitly (e.g. <span class='synopsis'><code>^master~10</code></span>), or implicitly (e.g.
+<span class='synopsis'><code>master~10..master</code></span>, <span class='synopsis'><code>--since=10.days.ago</code> <code>master</code></span>).</p>
 </div>
 <div class="paragraph">
 <p>It is very important that the basis used be held by the destination.
@@ -175,13 +175,13 @@ to contain objects already in the destination, as these are ignored
 when unpacking at the destination.</p>
 </div>
 <div class="paragraph">
-<p><code>git clone</code> can use any bundle created without negative refspecs
-(e.g., <code>new</code>, but not <code>old..new</code>).
-If you want to match <code>git clone --mirror</code>, which would include your
-refs such as <code>refs/remotes/*</code>, use <code>--all</code>.
+<p><span class='synopsis'><code>git</code> <code>clone</code></span> can use any bundle created without negative refspecs
+(e.g., <span class='synopsis'><code>new</code></span>, but not <span class='synopsis'><code>old..new</code></span>).
+If you want to match <span class='synopsis'><code>git</code> <code>clone</code> <code>--mirror</code></span>, which would include your
+refs such as <span class='synopsis'><code>refs/remotes/*</code></span>, use <span class='synopsis'><code>--all</code></span>.
 If you want to provide the same set of refs that a clone directly
-from the source repository would get, use <code>--branches --tags</code> for
-the <code>&lt;git-rev-list-args&gt;</code>.</p>
+from the source repository would get, use <span class='synopsis'><code>--branches</code> <code>--tags</code></span> for
+the <span class='synopsis'><em>&lt;git-rev-list-args&gt;</em></span>.</p>
 </div>
 </div>
 </div>
@@ -289,7 +289,7 @@ the <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a> command. Here are mor
 </div>
 </div>
 <div class="paragraph">
-<p>You can run <code>git-bundle verify</code> to see if you can extract from a bundle
+<p>You can run <span class='synopsis'><code>git-bundle</code> <code>verify</code></span> to see if you can extract from a bundle
 that was created with a basis:</p>
 </div>
 <div class="listingblock">

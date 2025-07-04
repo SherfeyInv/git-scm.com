@@ -93,7 +93,7 @@ in the current working directory.  Note that:</p>
 <li>
 <p>the behaviour is slightly different from that of "/bin/ls" in that the
 <em>&lt;path&gt;</em> denotes just a list of patterns to match, e.g. so specifying
-directory name (without <code>-r</code>) will behave differently, and order of the
+directory name (without <span class='synopsis'><code>-r</code></span>) will behave differently, and order of the
 arguments does not matter.</p>
 </li>
 <li>
@@ -101,9 +101,9 @@ arguments does not matter.</p>
 taken as relative to the current working directory.  E.g. when you are
 in a directory <em>sub</em> that has a directory <em>dir</em>, you can run <em>git
 ls-tree -r HEAD dir</em> to list the contents of the tree (that is
-<code>sub/dir</code> in <code>HEAD</code>).  You don&#8217;t want to give a tree that is not at the
-root level (e.g. <code>git ls-tree -r HEAD:sub dir</code>) in this case, as that
-would result in asking for <code>sub/sub/dir</code> in the <code>HEAD</code> commit.
+<span class='synopsis'><code>sub/dir</code></span> in <span class='synopsis'><code>HEAD</code></span>).  You don&#8217;t want to give a tree that is not at the
+root level (e.g. <span class='synopsis'><code>git</code> <code>ls-tree</code> <code>-r</code> <code>HEAD:sub</code> <code>dir</code></span>) in this case, as that
+would result in asking for <span class='synopsis'><code>sub/sub/dir</code></span> in the <span class='synopsis'><code>HEAD</code></span> commit.
 However, the current working directory can be ignored by passing
 --full-tree option.</p>
 </li>
@@ -131,7 +131,7 @@ However, the current working directory can be ignored by passing
 <dt class="hdlist1" id="Documentation/git-ls-tree.txt--t"><a class="anchor" href="#Documentation/git-ls-tree.txt--t"></a>-t </dt>
 <dd>
 <p>Show tree entries even when going to recurse them. Has no effect
-if <code>-r</code> was not passed. <code>-d</code> implies <code>-t</code>.</p>
+if <span class='synopsis'><code>-r</code></span> was not passed. <span class='synopsis'><code>-d</code></span> implies <span class='synopsis'><code>-t</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-tree.txt--l"><a class="anchor" href="#Documentation/git-ls-tree.txt--l"></a>-l </dt>
 <dt class="hdlist1" id="Documentation/git-ls-tree.txt---long"><a class="anchor" href="#Documentation/git-ls-tree.txt---long"></a>--long </dt>
@@ -184,11 +184,11 @@ implicitly uses the root level of the tree as the sole path argument.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This output format is compatible with what <code>--index-info --stdin</code> of
+<p>This output format is compatible with what <span class='synopsis'><code>--index-info</code> <code>--stdin</code></span> of
 <em>git update-index</em> expects.</p>
 </div>
 <div class="paragraph">
-<p>When the <code>-l</code> option is used, format changes to</p>
+<p>When the <span class='synopsis'><code>-l</code></span> option is used, format changes to</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -198,12 +198,12 @@ implicitly uses the root level of the tree as the sole path argument.</p>
 <div class="paragraph">
 <p>Object size identified by &lt;object&gt; is given in bytes, and right-justified
 with minimum width of 7 characters.  Object size is given only for blobs
-(file) entries; for other entries <code>-</code> character is used in place of size.</p>
+(file) entries; for other entries <span class='synopsis'><code>-</code></span> character is used in place of size.</p>
 </div>
 <div class="paragraph">
-<p>Without the <code>-z</code> option, pathnames with "unusual" characters are
-quoted as explained for the configuration variable <code>core.quotePath</code>
-(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  Using <code>-z</code> the filename is output
+<p>Without the <span class='synopsis'><code>-z</code></span> option, pathnames with "unusual" characters are
+quoted as explained for the configuration variable <span class='synopsis'><code>core.quotePath</code></span>
+(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  Using <span class='synopsis'><code>-z</code></span> the filename is output
 verbatim and the line is terminated by a NUL byte.</p>
 </div>
 </div>

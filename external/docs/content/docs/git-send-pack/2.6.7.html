@@ -109,11 +109,11 @@ refs.</p>
 <dd>
 <p>GPG-sign the push request to update refs on the receiving
 side, to allow it to be checked by the hooks and/or be
-logged.  If <code>false</code> or <code>--no-signed</code>, no signing will be
-attempted.  If <code>true</code> or <code>--signed</code>, the push will fail if the
-server does not support signed pushes.  If set to <code>if-asked</code>,
+logged.  If <span class='synopsis'><code>false</code></span> or <span class='synopsis'><code>--no-signed</code></span>, no signing will be
+attempted.  If <span class='synopsis'><code>true</code></span> or <span class='synopsis'><code>--signed</code></span>, the push will fail if the
+server does not support signed pushes.  If set to <span class='synopsis'><code>if-asked</code></span>,
 sign if and only if the server supports signed pushes.  The push
-will also fail if the actual call to <code>gpg --sign</code> fails.  See
+will also fail if the actual call to <span class='synopsis'><code>gpg</code> <code>--sign</code></span> fails.  See
 <a href='{{< relurl "docs/git-receive-pack" >}}'>git-receive-pack[1]</a> for the details on the receiving end.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-send-pack.txt-lthostgt"><a id="Documentation/git-send-pack.txt-host" class="anchor" href="#Documentation/git-send-pack.txt-host"></a>&lt;host&gt; </dt>
@@ -152,7 +152,7 @@ both on the local side and on the remote side are updated.</p>
 </div>
 <div class="paragraph">
 <p>When one or more <em>&lt;ref&gt;</em> are specified explicitly (whether on the
-command line or via <code>--stdin</code>), it can be either a
+command line or via <span class='synopsis'><code>--stdin</code></span>), it can be either a
 single pattern, or a pair of such pattern separated by a colon
 ":" (this means that a ref name cannot have a colon in it).  A
 single pattern <em>&lt;name&gt;</em> is just a shorthand for <em>&lt;name&gt;:&lt;name&gt;</em>.</p>

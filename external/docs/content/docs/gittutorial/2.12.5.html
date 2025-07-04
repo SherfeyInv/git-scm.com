@@ -42,7 +42,7 @@ the first two chapters of <a href="{{< relurl "docs/user-manual" >}}">The Git Us
 </div>
 <div class="paragraph">
 <p>First, note that you can get documentation for a command such as
-<code>git log --graph</code> with:</p>
+<span class='synopsis'><code>git</code> <code>log</code> <code>--graph</code></span> with:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -204,8 +204,8 @@ rest of the commit in the body.</p>
 <h2 id="_git_tracks_content_not_files"><a class="anchor" href="#_git_tracks_content_not_files"></a>Git tracks content not files</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Many revision control systems provide an <code>add</code> command that tells the
-system to start tracking changes to a new file.  Git&#8217;s <code>add</code> command
+<p>Many revision control systems provide an <span class='synopsis'><code>add</code></span> command that tells the
+system to start tracking changes to a new file.  Git&#8217;s <span class='synopsis'><code>add</code></span> command
 does something simpler and more powerful: <em>git add</em> is used both for new
 and newly modified files, and in both cases it takes a snapshot of the
 given files and stages that content in the index, ready for inclusion in
@@ -512,7 +512,7 @@ branch, using:</p>
 <p>Unlike the longhand form, when Alice fetches from Bob using a
 remote repository shorthand set up with <em>git remote</em>, what was
 fetched is stored in a remote-tracking branch, in this case
-<code>bob/master</code>.  So after this:</p>
+<span class='synopsis'><code>bob/master</code></span>.  So after this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -533,7 +533,7 @@ could merge the changes into her master branch:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This <code>merge</code> can also be done by <em>pulling from her own remote-tracking
+<p>This <span class='synopsis'><code>merge</code></span> can also be done by <em>pulling from her own remote-tracking
 branch</em>, like this:</p>
 </div>
 <div class="listingblock">
@@ -567,7 +567,7 @@ used for pulls:</p>
 </div>
 <div class="paragraph">
 <p>(The complete configuration created by <em>git clone</em> is visible using
-<code>git config -l</code>, and the <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> man page
+<span class='synopsis'><code>git</code> <code>config</code> <code>-l</code></span>, and the <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> man page
 explains the meaning of each option.)</p>
 </div>
 <div class="paragraph">

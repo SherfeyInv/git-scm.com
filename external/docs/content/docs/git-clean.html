@@ -35,12 +35,12 @@ aliases:
 under version control, starting from the current directory.</p>
 </div>
 <div class="paragraph">
-<p>Normally, only files unknown to Git are removed, but if the <code>-x</code>
+<p>Normally, only files unknown to Git are removed, but if the <span class='synopsis'><code>-x</code></span>
 option is specified, ignored files are also removed. This can, for
 example, be useful to remove all build products.</p>
 </div>
 <div class="paragraph">
-<p>If any optional <code>&lt;pathspec&gt;...</code> arguments are given, only those paths
+<p>If any optional <span class='synopsis'><em>&lt;pathspec&gt;</em>...</span> arguments are given, only those paths
 that match the pathspec are affected.</p>
 </div>
 </div>
@@ -57,7 +57,7 @@ recurse into untracked directories to avoid removing too much.
 Specify -d to have it recurse into such directories as well.
 If a &lt;pathspec&gt; is specified, -d is irrelevant; all untracked
 files matching the specified paths (with exceptions for nested
-git directories mentioned under <code>--force</code>) will be removed.</p>
+git directories mentioned under <span class='synopsis'><code>--force</code></span>) will be removed.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clean.txt--f"><a class="anchor" href="#Documentation/git-clean.txt--f"></a>-f </dt>
 <dt class="hdlist1" id="Documentation/git-clean.txt---force"><a class="anchor" href="#Documentation/git-clean.txt---force"></a>--force </dt>
@@ -73,14 +73,14 @@ unless a second -f is given.</p>
 <dd>
 <p>Show what would be done and clean files interactively. See
 &#8220;Interactive mode&#8221; for details.
-Configuration variable <code>clean.requireForce</code> is ignored, as
+Configuration variable <span class='synopsis'><code>clean.requireForce</code></span> is ignored, as
 this mode gives its own safety protection by going interactive.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clean.txt--n"><a class="anchor" href="#Documentation/git-clean.txt--n"></a>-n </dt>
 <dt class="hdlist1" id="Documentation/git-clean.txt---dry-run"><a class="anchor" href="#Documentation/git-clean.txt---dry-run"></a>--dry-run </dt>
 <dd>
 <p>Don&#8217;t actually remove anything, just show what would be done.
-Configuration variable <code>clean.requireForce</code> is ignored, as
+Configuration variable <span class='synopsis'><code>clean.requireForce</code></span> is ignored, as
 nothing will be deleted anyway.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-clean.txt--q"><a class="anchor" href="#Documentation/git-clean.txt--q"></a>-q </dt>
@@ -98,7 +98,7 @@ successfully removed.</p>
 <dt class="hdlist1" id="Documentation/git-clean.txt--x"><a class="anchor" href="#Documentation/git-clean.txt--x"></a>-x </dt>
 <dd>
 <p>Don&#8217;t use the standard ignore rules (see <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a>), but
-still use the ignore rules given with <code>-e</code> options from the command
+still use the ignore rules given with <span class='synopsis'><code>-e</code></span> options from the command
 line.  This allows removing all untracked
 files, including build products.  This can be used (possibly in
 conjunction with <em>git restore</em> or <em>git reset</em>) to create a pristine
@@ -136,7 +136,7 @@ and type return, like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You also could say <code>c</code> or <code>clean</code> above as long as the choice is unique.</p>
+<p>You also could say <span class='synopsis'><code>c</code></span> or <span class='synopsis'><code>clean</code></span> above as long as the choice is unique.</p>
 </div>
 <div class="paragraph">
 <p>The main command loop has 6 subcommands.</p>

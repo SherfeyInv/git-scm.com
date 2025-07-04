@@ -42,27 +42,27 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Use <code>git stash</code> when you want to record the current state of the
+<p>Use <span class='synopsis'><code>git</code> <code>stash</code></span> when you want to record the current state of the
 working directory and the index, but want to go back to a clean
 working directory.  The command saves your local modifications away
-and reverts the working directory to match the <code>HEAD</code> commit.</p>
+and reverts the working directory to match the <span class='synopsis'><code>HEAD</code></span> commit.</p>
 </div>
 <div class="paragraph">
 <p>The modifications stashed away by this command can be listed with
-<code>git stash list</code>, inspected with <code>git stash show</code>, and restored
-(potentially on top of a different commit) with <code>git stash apply</code>.
-Calling <code>git stash</code> without any arguments is equivalent to <code>git stash save</code>.
+<span class='synopsis'><code>git</code> <code>stash</code> <code>list</code></span>, inspected with <span class='synopsis'><code>git</code> <code>stash</code> <code>show</code></span>, and restored
+(potentially on top of a different commit) with <span class='synopsis'><code>git</code> <code>stash</code> <code>apply</code></span>.
+Calling <span class='synopsis'><code>git</code> <code>stash</code></span> without any arguments is equivalent to <span class='synopsis'><code>git</code> <code>stash</code> <code>save</code></span>.
 A stash is by default listed as "WIP on <em>branchname</em> &#8230;&#8203;", but
 you can give a more descriptive message on the command line when
 you create one.</p>
 </div>
 <div class="paragraph">
-<p>The latest stash you created is stored in <code>refs/stash</code>; older
+<p>The latest stash you created is stored in <span class='synopsis'><code>refs/stash</code></span>; older
 stashes are found in the reflog of this reference and can be named using
-the usual reflog syntax (e.g. <code>stash@{0}</code> is the most recently
-created stash, <code>stash@{1}</code> is the one before it, <code>stash@{2.hours.ago}</code>
+the usual reflog syntax (e.g. <span class='synopsis'><code>stash@{0}</code></span> is the most recently
+created stash, <span class='synopsis'><code>stash@{1}</code></span> is the one before it, <span class='synopsis'><code>stash@{2.hours.ago}</code></span>
 is also possible). Stashes may also be referenced by specifying just the
-stash index (e.g. the integer <code>n</code> is equivalent to <code>stash@{n}</code>).</p>
+stash index (e.g. the integer <span class='synopsis'><code>n</code></span> is equivalent to <span class='synopsis'><code>stash@{n}</code></span>).</p>
 </div>
 </div>
 </div>
@@ -82,8 +82,8 @@ the description along with the stashed state.</p>
 <p>For quickly making a snapshot, you can omit "push".  In this mode,
 non-option arguments are not allowed to prevent a misspelled
 subcommand from making an unwanted stash.  The two exceptions to this
-are <code>stash -p</code> which acts as alias for <code>stash push -p</code> and pathspecs,
-which are allowed after a double hyphen <code>--</code> for disambiguation.</p>
+are <span class='synopsis'><code>stash</code> <code>-p</code></span> which acts as alias for <span class='synopsis'><code>stash</code> <code>push</code> <code>-p</code></span> and pathspecs,
+which are allowed after a double hyphen <span class='synopsis'><code>--</code></span> for disambiguation.</p>
 </div>
 <div class="paragraph">
 <p>When pathspec is given to <em>git stash push</em>, the new stash records the
@@ -93,33 +93,33 @@ HEAD only for these files, too, leaving files that do not match the
 pathspec intact.</p>
 </div>
 <div class="paragraph">
-<p>If the <code>--keep-index</code> option is used, all changes already added to the
+<p>If the <span class='synopsis'><code>--keep-index</code></span> option is used, all changes already added to the
 index are left intact.</p>
 </div>
 <div class="paragraph">
-<p>If the <code>--include-untracked</code> option is used, all untracked files are also
-stashed and then cleaned up with <code>git clean</code>, leaving the working directory
-in a very clean state. If the <code>--all</code> option is used instead then the
+<p>If the <span class='synopsis'><code>--include-untracked</code></span> option is used, all untracked files are also
+stashed and then cleaned up with <span class='synopsis'><code>git</code> <code>clean</code></span>, leaving the working directory
+in a very clean state. If the <span class='synopsis'><code>--all</code></span> option is used instead then the
 ignored files are stashed and cleaned in addition to the untracked files.</p>
 </div>
 <div class="paragraph">
-<p>With <code>--patch</code>, you can interactively select hunks from the diff
+<p>With <span class='synopsis'><code>--patch</code></span>, you can interactively select hunks from the diff
 between HEAD and the working tree to be stashed.  The stash entry is
 constructed such that its index state is the same as the index state
 of your repository, and its worktree contains only the changes you
 selected interactively.  The selected changes are then rolled back
 from your worktree. See the &#8220;Interactive Mode&#8221; section of
-<a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a> to learn how to operate the <code>--patch</code> mode.</p>
+<a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a> to learn how to operate the <span class='synopsis'><code>--patch</code></span> mode.</p>
 </div>
 <div class="paragraph">
-<p>The <code>--patch</code> option implies <code>--keep-index</code>.  You can use
-<code>--no-keep-index</code> to override this.</p>
+<p>The <span class='synopsis'><code>--patch</code></span> option implies <span class='synopsis'><code>--keep-index</code></span>.  You can use
+<span class='synopsis'><code>--no-keep-index</code></span> to override this.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-stash.txt-listltoptionsgt"><a id="Documentation/git-stash.txt-listoptions" class="anchor" href="#Documentation/git-stash.txt-listoptions"></a>list [&lt;options&gt;] </dt>
 <dd>
 <p>List the stashes that you currently have.  Each <em>stash</em> is listed
-with its name (e.g. <code>stash@{0}</code> is the latest stash, <code>stash@{1}</code> is
+with its name (e.g. <span class='synopsis'><code>stash@{0}</code></span> is the latest stash, <span class='synopsis'><code>stash@{1}</code></span> is
 the one before, etc.), the name of the branch that was current when the
 stash was made, and a short description of the commit the stash was
 based on.</p>
@@ -137,10 +137,11 @@ command to control what is shown and how. See <a href='{{< relurl "docs/git-log"
 <dt class="hdlist1" id="Documentation/git-stash.txt-showltstashgt"><a id="Documentation/git-stash.txt-showstash" class="anchor" href="#Documentation/git-stash.txt-showstash"></a>show [&lt;stash&gt;] </dt>
 <dd>
 <p>Show the changes recorded in the stash as a diff between the
-stashed state and its original parent. When no <code>&lt;stash&gt;</code> is given,
+stashed state and its original parent. When no <span class='synopsis'><em>&lt;stash&gt;</em></span> is given,
 shows the latest one. By default, the command shows the diffstat, but
-it will accept any format known to <em>git diff</em> (e.g., <code>git stash show
--p stash@{1}</code> to view the second most recent stash in patch form).
+it will accept any format known to <em>git diff</em> (e.g., <span class='synopsis'><code>git</code> <code>stash</code> <code>show</code>
+
+<code>-p</code> <code>stash@{1}</code></span> to view the second most recent stash in patch form).
 You can use stash.showStat and/or stash.showPatch config variables
 to change the default behavior.</p>
 </dd>
@@ -148,43 +149,43 @@ to change the default behavior.</p>
 <dd>
 <p>Remove a single stashed state from the stash list and apply it
 on top of the current working tree state, i.e., do the inverse
-operation of <code>git stash save</code>. The working directory must
+operation of <span class='synopsis'><code>git</code> <code>stash</code> <code>save</code></span>. The working directory must
 match the index.</p>
 <div class="paragraph">
 <p>Applying the state can fail with conflicts; in this case, it is not
 removed from the stash list. You need to resolve the conflicts by hand
-and call <code>git stash drop</code> manually afterwards.</p>
+and call <span class='synopsis'><code>git</code> <code>stash</code> <code>drop</code></span> manually afterwards.</p>
 </div>
 <div class="paragraph">
-<p>If the <code>--index</code> option is used, then tries to reinstate not only the working
+<p>If the <span class='synopsis'><code>--index</code></span> option is used, then tries to reinstate not only the working
 tree&#8217;s changes, but also the index&#8217;s ones. However, this can fail, when you
 have conflicts (which are stored in the index, where you therefore can no
 longer apply the changes as they were originally).</p>
 </div>
 <div class="paragraph">
-<p>When no <code>&lt;stash&gt;</code> is given, <code>stash@{0}</code> is assumed, otherwise <code>&lt;stash&gt;</code> must
-be a reference of the form <code>stash@{&lt;revision&gt;}</code>.</p>
+<p>When no <span class='synopsis'><em>&lt;stash&gt;</em></span> is given, <span class='synopsis'><code>stash@{0}</code></span> is assumed, otherwise <span class='synopsis'><em>&lt;stash&gt;</em></span> must
+be a reference of the form <span class='synopsis'><code>stash@{</code><em>&lt;revision&gt;</em><code>}</code></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-stash.txt-apply--index-q--quietltstashgt"><a id="Documentation/git-stash.txt-apply--index-q--quietstash" class="anchor" href="#Documentation/git-stash.txt-apply--index-q--quietstash"></a>apply [--index] [-q|--quiet] [&lt;stash&gt;] </dt>
 <dd>
-<p>Like <code>pop</code>, but do not remove the state from the stash list. Unlike <code>pop</code>,
-<code>&lt;stash&gt;</code> may be any commit that looks like a commit created by
-<code>stash save</code> or <code>stash create</code>.</p>
+<p>Like <span class='synopsis'><code>pop</code></span>, but do not remove the state from the stash list. Unlike <span class='synopsis'><code>pop</code></span>,
+<span class='synopsis'><em>&lt;stash&gt;</em></span> may be any commit that looks like a commit created by
+<span class='synopsis'><code>stash</code> <code>save</code></span> or <span class='synopsis'><code>stash</code> <code>create</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-stash.txt-branchltbranchnamegtltstashgt"><a id="Documentation/git-stash.txt-branchbranchnamestash" class="anchor" href="#Documentation/git-stash.txt-branchbranchnamestash"></a>branch &lt;branchname&gt; [&lt;stash&gt;] </dt>
 <dd>
-<p>Creates and checks out a new branch named <code>&lt;branchname&gt;</code> starting from
-the commit at which the <code>&lt;stash&gt;</code> was originally created, applies the
-changes recorded in <code>&lt;stash&gt;</code> to the new working tree and index.
-If that succeeds, and <code>&lt;stash&gt;</code> is a reference of the form
-<code>stash@{&lt;revision&gt;}</code>, it then drops the <code>&lt;stash&gt;</code>. When no <code>&lt;stash&gt;</code>
+<p>Creates and checks out a new branch named <span class='synopsis'><em>&lt;branchname&gt;</em></span> starting from
+the commit at which the <span class='synopsis'><em>&lt;stash&gt;</em></span> was originally created, applies the
+changes recorded in <span class='synopsis'><em>&lt;stash&gt;</em></span> to the new working tree and index.
+If that succeeds, and <span class='synopsis'><em>&lt;stash&gt;</em></span> is a reference of the form
+<span class='synopsis'><code>stash@{</code><em>&lt;revision&gt;</em><code>}</code></span>, it then drops the <span class='synopsis'><em>&lt;stash&gt;</em></span>. When no <span class='synopsis'><em>&lt;stash&gt;</em></span>
 is given, applies the latest one.</p>
 <div class="paragraph">
-<p>This is useful if the branch on which you ran <code>git stash save</code> has
-changed enough that <code>git stash apply</code> fails due to conflicts. Since
+<p>This is useful if the branch on which you ran <span class='synopsis'><code>git</code> <code>stash</code> <code>save</code></span> has
+changed enough that <span class='synopsis'><code>git</code> <code>stash</code> <code>apply</code></span> fails due to conflicts. Since
 the stash is applied on top of the commit that was HEAD at the time
-<code>git stash</code> was run, it restores the originally stashed state with
+<span class='synopsis'><code>git</code> <code>stash</code></span> was run, it restores the originally stashed state with
 no conflicts.</p>
 </div>
 </dd>
@@ -196,10 +197,10 @@ be subject to pruning, and may be impossible to recover (see
 </dd>
 <dt class="hdlist1" id="Documentation/git-stash.txt-drop-q--quietltstashgt"><a id="Documentation/git-stash.txt-drop-q--quietstash" class="anchor" href="#Documentation/git-stash.txt-drop-q--quietstash"></a>drop [-q|--quiet] [&lt;stash&gt;] </dt>
 <dd>
-<p>Remove a single stashed state from the stash list. When no <code>&lt;stash&gt;</code>
-is given, it removes the latest one. i.e. <code>stash@{0}</code>, otherwise
-<code>&lt;stash&gt;</code> must be a valid stash log reference of the form
-<code>stash@{&lt;revision&gt;}</code>.</p>
+<p>Remove a single stashed state from the stash list. When no <span class='synopsis'><em>&lt;stash&gt;</em></span>
+is given, it removes the latest one. i.e. <span class='synopsis'><code>stash@{0}</code></span>, otherwise
+<span class='synopsis'><em>&lt;stash&gt;</em></span> must be a valid stash log reference of the form
+<span class='synopsis'><code>stash@{</code><em>&lt;revision&gt;</em><code>}</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-stash.txt-create"><a class="anchor" href="#Documentation/git-stash.txt-create"></a>create </dt>
 <dd>
@@ -224,10 +225,10 @@ probably not the command you want to use; see "save" above.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A stash is represented as a commit whose tree records the state of the
-working directory, and its first parent is the commit at <code>HEAD</code> when
+working directory, and its first parent is the commit at <span class='synopsis'><code>HEAD</code></span> when
 the stash was created.  The tree of the second parent records the
 state of the index when the stash is made, and it is made a child of
-the <code>HEAD</code> commit.  The ancestry graph looks like this:</p>
+the <span class='synopsis'><code>HEAD</code></span> commit.  The ancestry graph looks like this:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -237,8 +238,8 @@ the <code>HEAD</code> commit.  The ancestry graph looks like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>H</code> is the <code>HEAD</code> commit, <code>I</code> is a commit that records the state
-of the index, and <code>W</code> is a commit that records the state of the working
+<p>where <span class='synopsis'><code>H</code></span> is the <span class='synopsis'><code>HEAD</code></span> commit, <span class='synopsis'><code>I</code></span> is a commit that records the state
+of the index, and <span class='synopsis'><code>W</code></span> is a commit that records the state of the working
 tree.</p>
 </div>
 </div>
@@ -253,10 +254,10 @@ tree.</p>
 <p>When you are in the middle of something, you learn that there are
 upstream changes that are possibly relevant to what you are
 doing.  When your local changes do not conflict with the changes in
-the upstream, a simple <code>git pull</code> will let you move forward.</p>
+the upstream, a simple <span class='synopsis'><code>git</code> <code>pull</code></span> will let you move forward.</p>
 <div class="paragraph">
 <p>However, there are cases in which your local changes do conflict with
-the upstream changes, and <code>git pull</code> refuses to overwrite your
+the upstream changes, and <span class='synopsis'><code>git</code> <code>pull</code></span> refuses to overwrite your
 changes.  In such a case, you can stash your changes away,
 perform a pull, and then unstash, like this:</p>
 </div>
@@ -306,7 +307,7 @@ $ git stash pop
 </dd>
 <dt class="hdlist1" id="Documentation/git-stash.txt-Testingpartialcommits"><a class="anchor" href="#Documentation/git-stash.txt-Testingpartialcommits"></a>Testing partial commits </dt>
 <dd>
-<p>You can use <code>git stash save --keep-index</code> when you want to make two or
+<p>You can use <span class='synopsis'><code>git</code> <code>stash</code> <code>save</code> <code>--keep-index</code></span> when you want to make two or
 more commits out of the changes in the work tree, and you want to test
 each change before committing:</p>
 <div class="listingblock">

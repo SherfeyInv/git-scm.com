@@ -29,8 +29,8 @@ aliases:
 <dt class="hdlist1" id="Documentation/fetch-options.txt---append"><a class="anchor" href="#Documentation/fetch-options.txt---append"></a>--append </dt>
 <dd>
 <p>Append ref names and object names of fetched refs to the
-existing contents of <code>.git/FETCH_HEAD</code>.  Without this
-option old data in <code>.git/FETCH_HEAD</code> will be overwritten.</p>
+existing contents of <span class='synopsis'><code>.git/FETCH_HEAD</code></span>.  Without this
+option old data in <span class='synopsis'><code>.git/FETCH_HEAD</code></span> will be overwritten.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---atomic"><a class="anchor" href="#Documentation/fetch-options.txt---atomic"></a>--atomic </dt>
 <dd>
@@ -41,7 +41,7 @@ updated, or on error, no refs are updated.</p>
 <dd>
 <p>Limit fetching to the specified number of commits from the tip of
 each remote branch history. If fetching to a <em>shallow</em> repository
-created by <code>git clone</code> with <code>--depth=&lt;depth&gt;</code> option (see
+created by <span class='synopsis'><code>git</code> <code>clone</code></span> with <span class='synopsis'><code>--depth=</code><em>&lt;depth&gt;</em></span> option (see
 <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>), deepen or shorten the history to the specified
 number of commits. Tags for the deepened commits are not fetched.</p>
 </dd>
@@ -75,7 +75,7 @@ the current repository has the same history as the source repository.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---update-shallow"><a class="anchor" href="#Documentation/fetch-options.txt---update-shallow"></a>--update-shallow </dt>
 <dd>
 <p>By default when fetching from a shallow repository,
-<code>git fetch</code> refuses refs that require updating
+<span class='synopsis'><code>git</code> <code>fetch</code></span> refuses refs that require updating
 .git/shallow. This option updates .git/shallow and accept such
 refs.</p>
 </dd>
@@ -98,7 +98,7 @@ abbreviated) SHA-1 of a commit. Specifying a glob is equivalent to specifying
 this option multiple times, one for each matching ref name.</p>
 </div>
 <div class="paragraph">
-<p>See also the <code>fetch.negotiationAlgorithm</code> configuration variable
+<p>See also the <span class='synopsis'><code>fetch.negotiationAlgorithm</code></span> configuration variable
 documented in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </div>
 </dd>
@@ -108,18 +108,18 @@ documented in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---no-write-fetch-head"><a class="anchor" href="#Documentation/fetch-options.txt---no-write-fetch-head"></a>--[no-]write-fetch-head </dt>
 <dd>
-<p>Write the list of remote refs fetched in the <code>FETCH_HEAD</code>
-file directly under <code>$GIT_DIR</code>.  This is the default.
-Passing <code>--no-write-fetch-head</code> from the command line tells
-Git not to write the file.  Under <code>--dry-run</code> option, the
+<p>Write the list of remote refs fetched in the <span class='synopsis'><code>FETCH_HEAD</code></span>
+file directly under <span class='synopsis'><code>$GIT_DIR</code></span>.  This is the default.
+Passing <span class='synopsis'><code>--no-write-fetch-head</code></span> from the command line tells
+Git not to write the file.  Under <span class='synopsis'><code>--dry-run</code></span> option, the
 file is never written.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--f"><a class="anchor" href="#Documentation/fetch-options.txt--f"></a>-f </dt>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---force"><a class="anchor" href="#Documentation/fetch-options.txt---force"></a>--force </dt>
 <dd>
-<p>When <em>git fetch</em> is used with <code>&lt;src&gt;:&lt;dst&gt;</code> refspec it may
+<p>When <em>git fetch</em> is used with <span class='synopsis'><em>&lt;src&gt;</em><code>:</code><em>&lt;dst&gt;</em></span> refspec it may
 refuse to update the local branch as discussed
-in the <code>&lt;refspec&gt;</code> part below.
+in the <span class='synopsis'><em>&lt;refspec&gt;</em></span> part below.
 This option overrides that check.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--k"><a class="anchor" href="#Documentation/fetch-options.txt--k"></a>-k </dt>
@@ -135,19 +135,19 @@ specified. No &lt;refspec&gt;s may be specified.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---no-auto-maintenance"><a class="anchor" href="#Documentation/fetch-options.txt---no-auto-maintenance"></a>--[no-]auto-maintenance </dt>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---no-auto-gc"><a class="anchor" href="#Documentation/fetch-options.txt---no-auto-gc"></a>--[no-]auto-gc </dt>
 <dd>
-<p>Run <code>git maintenance run --auto</code> at the end to perform automatic
-repository maintenance if needed. (<code>--[no-]auto-gc</code> is a synonym.)
+<p>Run <span class='synopsis'><code>git</code> <code>maintenance</code> <code>run</code> <code>--auto</code></span> at the end to perform automatic
+repository maintenance if needed. (<span class='synopsis'><code>--</code>[<code>no-</code>]<code>auto-gc</code></span> is a synonym.)
 This is enabled by default.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---no-write-commit-graph"><a class="anchor" href="#Documentation/fetch-options.txt---no-write-commit-graph"></a>--[no-]write-commit-graph </dt>
 <dd>
 <p>Write a commit-graph after fetching. This overrides the config
-setting <code>fetch.writeCommitGraph</code>.</p>
+setting <span class='synopsis'><code>fetch.writeCommitGraph</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---prefetch"><a class="anchor" href="#Documentation/fetch-options.txt---prefetch"></a>--prefetch </dt>
 <dd>
 <p>Modify the configured refspec to place all refs into the
-<code>refs/prefetch/</code> namespace. See the <code>prefetch</code> task in
+<span class='synopsis'><code>refs/prefetch/</code></span> namespace. See the <span class='synopsis'><code>prefetch</code></span> task in
 <a href='{{< relurl "docs/git-maintenance" >}}'>git-maintenance[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--p"><a class="anchor" href="#Documentation/fetch-options.txt--p"></a>-p </dt>
@@ -160,7 +160,7 @@ auto-following or due to a --tags option.  However, if tags
 are fetched due to an explicit refspec (either on the command
 line or in the remote configuration, for example if the remote
 was cloned with the --mirror option), then they are also
-subject to pruning. Supplying <code>--prune-tags</code> is a shorthand for
+subject to pruning. Supplying <span class='synopsis'><code>--prune-tags</code></span> is a shorthand for
 providing the tag refspec.</p>
 <div class="paragraph">
 <p>See the PRUNING section below for more details.</p>
@@ -170,11 +170,11 @@ providing the tag refspec.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---prune-tags"><a class="anchor" href="#Documentation/fetch-options.txt---prune-tags"></a>--prune-tags </dt>
 <dd>
 <p>Before fetching, remove any local tags that no longer exist on
-the remote if <code>--prune</code> is enabled. This option should be used
-more carefully, unlike <code>--prune</code> it will remove any local
+the remote if <span class='synopsis'><code>--prune</code></span> is enabled. This option should be used
+more carefully, unlike <span class='synopsis'><code>--prune</code></span> it will remove any local
 references (local tags) that have been created. This option is
 a shorthand for providing the explicit tag refspec along with
-<code>--prune</code>, see the discussion about that in its documentation.</p>
+<span class='synopsis'><code>--prune</code></span>, see the discussion about that in its documentation.</p>
 <div class="paragraph">
 <p>See the PRUNING section below for more details.</p>
 </div>
@@ -193,9 +193,9 @@ setting. See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 <p>When fetching refs listed on the command line, use the
 specified refspec (can be given more than once) to map the
 refs to remote-tracking branches, instead of the values of
-<code>remote.*.fetch</code> configuration variables for the remote
-repository.  Providing an empty <code>&lt;refspec&gt;</code> to the
-<code>--refmap</code> option causes Git to ignore the configured
+<span class='synopsis'><code>remote.*.fetch</code></span> configuration variables for the remote
+repository.  Providing an empty <span class='synopsis'><em>&lt;refspec&gt;</em></span> to the
+<span class='synopsis'><code>--refmap</code></span> option causes Git to ignore the configured
 refspecs and rely entirely on the refspecs supplied as
 command-line arguments. See section on "Configured Remote-tracking
 Branches" for details.</p>
@@ -204,11 +204,11 @@ Branches" for details.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---tags"><a class="anchor" href="#Documentation/fetch-options.txt---tags"></a>--tags </dt>
 <dd>
 <p>Fetch all tags from the remote (i.e., fetch remote tags
-<code>refs/tags/*</code> into local tags with the same name), in addition
+<span class='synopsis'><code>refs/tags/*</code></span> into local tags with the same name), in addition
 to whatever else would otherwise be fetched.  Using this
 option alone does not subject tags to pruning, even if --prune
 is used (though tags may be pruned anyway if they are also the
-destination of an explicit refspec; see <code>--prune</code>).</p>
+destination of an explicit refspec; see <span class='synopsis'><code>--prune</code></span>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---recurse-submodulesyeson-demandno"><a class="anchor" href="#Documentation/fetch-options.txt---recurse-submodulesyeson-demandno"></a>--recurse-submodules[=yes|on-demand|no] </dt>
 <dd>
@@ -221,17 +221,17 @@ value. Use <em>on-demand</em> to only recurse into a populated submodule
 when the superproject retrieves a commit that updates the submodule&#8217;s
 reference to a commit that isn&#8217;t already in the local submodule
 clone. By default, <em>on-demand</em> is used, unless
-<code>fetch.recurseSubmodules</code> is set (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
+<span class='synopsis'><code>fetch.recurseSubmodules</code></span> is set (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--j"><a class="anchor" href="#Documentation/fetch-options.txt--j"></a>-j </dt>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---jobsltngt"><a id="Documentation/fetch-options.txt---jobsn" class="anchor" href="#Documentation/fetch-options.txt---jobsn"></a>--jobs=&lt;n&gt; </dt>
 <dd>
 <p>Number of parallel children to be used for all forms of fetching.</p>
 <div class="paragraph">
-<p>If the <code>--multiple</code> option was specified, the different remotes will be fetched
+<p>If the <span class='synopsis'><code>--multiple</code></span> option was specified, the different remotes will be fetched
 in parallel. If multiple submodules are fetched, they will be fetched in
 parallel. To control them independently, use the config settings
-<code>fetch.parallel</code> and <code>submodule.fetchJobs</code> (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
+<span class='synopsis'><code>fetch.parallel</code></span> and <span class='synopsis'><code>submodule.fetchJobs</code></span> (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 <div class="paragraph">
 <p>Typically, parallel recursive and multi-remote fetches will be faster. By
@@ -241,14 +241,14 @@ default fetches are performed sequentially, not in parallel.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---no-recurse-submodules"><a class="anchor" href="#Documentation/fetch-options.txt---no-recurse-submodules"></a>--no-recurse-submodules </dt>
 <dd>
 <p>Disable recursive fetching of submodules (this has the same effect as
-using the <code>--recurse-submodules=no</code> option).</p>
+using the <span class='synopsis'><code>--recurse-submodules=no</code></span> option).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---set-upstream"><a class="anchor" href="#Documentation/fetch-options.txt---set-upstream"></a>--set-upstream </dt>
 <dd>
 <p>If the remote is fetched successfully, add upstream
 (tracking) reference, used by argument-less
 <a href='{{< relurl "docs/git-pull" >}}'>git-pull[1]</a> and other commands. For more information,
-see <code>branch.&lt;name&gt;.merge</code> and <code>branch.&lt;name&gt;.remote</code> in
+see <span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.merge</code></span> and <span class='synopsis'><code>branch.</code><em>&lt;name&gt;</em><code>.remote</code></span> in
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---submodule-prefixltpathgt"><a id="Documentation/fetch-options.txt---submodule-prefixpath" class="anchor" href="#Documentation/fetch-options.txt---submodule-prefixpath"></a>--submodule-prefix=&lt;path&gt; </dt>
@@ -279,7 +279,7 @@ use it.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---upload-packltupload-packgt"><a id="Documentation/fetch-options.txt---upload-packupload-pack" class="anchor" href="#Documentation/fetch-options.txt---upload-packupload-pack"></a>--upload-pack &lt;upload-pack&gt; </dt>
 <dd>
 <p>When given, and the repository to fetch from is handled
-by <em>git fetch-pack</em>, <code>--exec=&lt;upload-pack&gt;</code> is passed to
+by <em>git fetch-pack</em>, <span class='synopsis'><code>--exec=</code><em>&lt;upload-pack&gt;</em></span> is passed to
 the command to specify non-default path for the command
 run on the other end.</p>
 </dd>
@@ -309,7 +309,7 @@ standard error stream is not directed to a terminal.</p>
 protocol version 2.  The given string must not contain a NUL or LF
 character.  The server&#8217;s handling of server options, including
 unknown ones, is server-specific.
-When multiple <code>--server-option=&lt;option&gt;</code> are given, they are all
+When multiple <span class='synopsis'><code>--server-option=</code><em>&lt;option&gt;</em></span> are given, they are all
 sent to the other side in the order listed on the command line.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---show-forced-updates"><a class="anchor" href="#Documentation/fetch-options.txt---show-forced-updates"></a>--show-forced-updates </dt>

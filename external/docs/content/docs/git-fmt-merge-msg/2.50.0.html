@@ -51,7 +51,7 @@ automatically invoking <em>git merge</em>.</p>
 <p>In addition to branch names, populate the log message with
 one-line descriptions from the actual commits that are being
 merged.  At most &lt;n&gt; commits from each merge parent will be
-used (20 if &lt;n&gt; is omitted).  This overrides the <code>merge.log</code>
+used (20 if &lt;n&gt; is omitted).  This overrides the <span class='synopsis'><code>merge.log</code></span>
 configuration variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt---no-log"><a class="anchor" href="#Documentation/git-fmt-merge-msg.txt---no-log"></a>--no-log </dt>
@@ -68,11 +68,11 @@ removed in the future.</p>
 <dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt---messageltmessagegt"><a id="Documentation/git-fmt-merge-msg.txt---messagemessage" class="anchor" href="#Documentation/git-fmt-merge-msg.txt---messagemessage"></a>--message &lt;message&gt; </dt>
 <dd>
 <p>Use &lt;message&gt; instead of the branch names for the first line
-of the log message.  For use with <code>--log</code>.</p>
+of the log message.  For use with <span class='synopsis'><code>--log</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt---into-nameltbranchgt"><a id="Documentation/git-fmt-merge-msg.txt---into-namebranch" class="anchor" href="#Documentation/git-fmt-merge-msg.txt---into-namebranch"></a>--into-name &lt;branch&gt; </dt>
 <dd>
-<p>Prepare the merge message as if merging to the branch <code>&lt;branch&gt;</code>,
+<p>Prepare the merge message as if merging to the branch <span class='synopsis'><em>&lt;branch&gt;</em></span>,
 instead of the name of the real branch to which the merge is made.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt--Fltfilegt"><a id="Documentation/git-fmt-merge-msg.txt--Ffile" class="anchor" href="#Documentation/git-fmt-merge-msg.txt--Ffile"></a>-F &lt;file&gt; </dt>
@@ -90,20 +90,20 @@ stdin.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-codemergebranchdesccode"><a id="Documentation/git-fmt-merge-msg.txt-mergebranchdesc" class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergebranchdesc"></a><code>merge.branchdesc</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-spanclasssynopsiscodemergebranchdesccodespan"><a id="Documentation/git-fmt-merge-msg.txt-mergebranchdesc" class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergebranchdesc"></a><span class='synopsis'><code>merge.branchdesc</code></span> </dt>
 <dd>
 <p>In addition to branch names, populate the log message with
 the branch description text associated with them.  Defaults
 to false.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-codemergelogcode"><a id="Documentation/git-fmt-merge-msg.txt-mergelog" class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergelog"></a><code>merge.log</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-spanclasssynopsiscodemergelogcodespan"><a id="Documentation/git-fmt-merge-msg.txt-mergelog" class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergelog"></a><span class='synopsis'><code>merge.log</code></span> </dt>
 <dd>
 <p>In addition to branch names, populate the log message with at
 most the specified number of one-line descriptions from the
 actual commits that are being merged.  Defaults to false, and
 true is a synonym for 20.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-codemergesuppressDestcode"><a id="Documentation/git-fmt-merge-msg.txt-mergesuppressDest" class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergesuppressDest"></a><code>merge.suppressDest</code> </dt>
+<dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-spanclasssynopsiscodemergesuppressDestcodespan"><a id="Documentation/git-fmt-merge-msg.txt-mergesuppressDest" class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergesuppressDest"></a><span class='synopsis'><code>merge.suppressDest</code></span> </dt>
 <dd>
 <p>By adding a glob that matches the names of integration
 branches to this multi-valued configuration variable, the
@@ -113,13 +113,13 @@ its title.</p>
 <div class="paragraph">
 <p>An element with an empty value can be used to clear the list
 of globs accumulated from previous configuration entries.
-When there is no <code>merge.suppressDest</code> variable defined, the
-default value of <code>master</code> is used for backward compatibility.</p>
+When there is no <span class='synopsis'><code>merge.suppressDest</code></span> variable defined, the
+default value of <span class='synopsis'><code>master</code></span> is used for backward compatibility.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-fmt-merge-msg.txt-mergesummary"><a class="anchor" href="#Documentation/git-fmt-merge-msg.txt-mergesummary"></a>merge.summary </dt>
 <dd>
-<p>Synonym to <code>merge.log</code>; this is deprecated and will be removed in
+<p>Synonym to <span class='synopsis'><code>merge.log</code></span>; this is deprecated and will be removed in
 the future.</p>
 </dd>
 </dl>

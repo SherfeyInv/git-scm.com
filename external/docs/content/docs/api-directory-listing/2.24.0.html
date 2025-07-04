@@ -18,7 +18,7 @@ aliases:
 <div class="sectionbody">
 <div class="paragraph">
 <p>The directory listing API is used to enumerate paths in the work tree,
-optionally taking <code>.git/info/exclude</code> and <code>.gitignore</code> files per
+optionally taking <span class='synopsis'><code>.git/info/exclude</code></span> and <span class='synopsis'><code>.gitignore</code></span> files per
 directory into account.</p>
 </div>
 </div>
@@ -27,9 +27,9 @@ directory into account.</p>
 <h2 id="_data_structure"><a class="anchor" href="#_data_structure"></a>Data structure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>struct dir_struct</code> structure is used to pass directory traversal
+<p><span class='synopsis'><code>struct</code> <code>dir_struct</code></span> structure is used to pass directory traversal
 options to the library and to record the paths discovered.  A single
-<code>struct dir_struct</code> is used regardless of whether or not the traversal
+<span class='synopsis'><code>struct</code> <code>dir_struct</code></span> is used regardless of whether or not the traversal
 recursively descends into subdirectories.</p>
 </div>
 <div class="paragraph">
@@ -37,38 +37,38 @@ recursively descends into subdirectories.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeexcludeperdircode"><a id="Documentation/technical/api-directory-listing.txt-excludeperdir" class="anchor" href="#Documentation/technical/api-directory-listing.txt-excludeperdir"></a><code>exclude_per_dir</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeexcludeperdircodespan"><a id="Documentation/technical/api-directory-listing.txt-excludeperdir" class="anchor" href="#Documentation/technical/api-directory-listing.txt-excludeperdir"></a><span class='synopsis'><code>exclude_per_dir</code></span> </dt>
 <dd>
 <p>The name of the file to be read in each directory for excluded
-files (typically <code>.gitignore</code>).</p>
+files (typically <span class='synopsis'><code>.gitignore</code></span>).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeflagscode"><a id="Documentation/technical/api-directory-listing.txt-flags" class="anchor" href="#Documentation/technical/api-directory-listing.txt-flags"></a><code>flags</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeflagscodespan"><a id="Documentation/technical/api-directory-listing.txt-flags" class="anchor" href="#Documentation/technical/api-directory-listing.txt-flags"></a><span class='synopsis'><code>flags</code></span> </dt>
 <dd>
 <p>A bit-field of options:</p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRSHOWIGNOREDcode"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWIGNORED" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWIGNORED"></a><code>DIR_SHOW_IGNORED</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRSHOWIGNOREDcodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWIGNORED" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWIGNORED"></a><span class='synopsis'><code>DIR_SHOW_IGNORED</code></span> </dt>
 <dd>
-<p>Return just ignored files in <code>entries[]</code>, not untracked
+<p>Return just ignored files in <span class='synopsis'><code>entries</code>[]</span>, not untracked
 files. This flag is mutually exclusive with
-<code>DIR_SHOW_IGNORED_TOO</code>.</p>
+<span class='synopsis'><code>DIR_SHOW_IGNORED_TOO</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRSHOWIGNOREDTOOcode"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOO" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOO"></a><code>DIR_SHOW_IGNORED_TOO</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRSHOWIGNOREDTOOcodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOO" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOO"></a><span class='synopsis'><code>DIR_SHOW_IGNORED_TOO</code></span> </dt>
 <dd>
-<p>Similar to <code>DIR_SHOW_IGNORED</code>, but return ignored files in
-<code>ignored[]</code> in addition to untracked files in
-<code>entries[]</code>. This flag is mutually exclusive with
-<code>DIR_SHOW_IGNORED</code>.</p>
+<p>Similar to <span class='synopsis'><code>DIR_SHOW_IGNORED</code></span>, but return ignored files in
+<span class='synopsis'><code>ignored</code>[]</span> in addition to untracked files in
+<span class='synopsis'><code>entries</code>[]</span>. This flag is mutually exclusive with
+<span class='synopsis'><code>DIR_SHOW_IGNORED</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRKEEPUNTRACKEDCONTENTScode"><a id="Documentation/technical/api-directory-listing.txt-DIRKEEPUNTRACKEDCONTENTS" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRKEEPUNTRACKEDCONTENTS"></a><code>DIR_KEEP_UNTRACKED_CONTENTS</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRKEEPUNTRACKEDCONTENTScodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRKEEPUNTRACKEDCONTENTS" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRKEEPUNTRACKEDCONTENTS"></a><span class='synopsis'><code>DIR_KEEP_UNTRACKED_CONTENTS</code></span> </dt>
 <dd>
-<p>Only has meaning if <code>DIR_SHOW_IGNORED_TOO</code> is also set; if this is set, the
+<p>Only has meaning if <span class='synopsis'><code>DIR_SHOW_IGNORED_TOO</code></span> is also set; if this is set, the
 untracked contents of untracked directories are also returned in
-<code>entries[]</code>.</p>
+<span class='synopsis'><code>entries</code>[]</span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRSHOWIGNOREDTOOMODEMATCHINGcode"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOOMODEMATCHING" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOOMODEMATCHING"></a><code>DIR_SHOW_IGNORED_TOO_MODE_MATCHING</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRSHOWIGNOREDTOOMODEMATCHINGcodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOOMODEMATCHING" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWIGNOREDTOOMODEMATCHING"></a><span class='synopsis'><code>DIR_SHOW_IGNORED_TOO_MODE_MATCHING</code></span> </dt>
 <dd>
-<p>Only has meaning if <code>DIR_SHOW_IGNORED_TOO</code> is also set; if
+<p>Only has meaning if <span class='synopsis'><code>DIR_SHOW_IGNORED_TOO</code></span> is also set; if
 this is set, returns ignored files and directories that match
 an exclude pattern. If a directory matches an exclude pattern,
 then the directory is returned and the contained paths are
@@ -82,22 +82,22 @@ do not match an ignore pattern, but whose contents are all ignored)
 are not reported, instead all of the contents are reported.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRCOLLECTIGNOREDcode"><a id="Documentation/technical/api-directory-listing.txt-DIRCOLLECTIGNORED" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRCOLLECTIGNORED"></a><code>DIR_COLLECT_IGNORED</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRCOLLECTIGNOREDcodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRCOLLECTIGNORED" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRCOLLECTIGNORED"></a><span class='synopsis'><code>DIR_COLLECT_IGNORED</code></span> </dt>
 <dd>
-<p>Special mode for git-add. Return ignored files in <code>ignored[]</code> and
-untracked files in <code>entries[]</code>. Only returns ignored files that match
+<p>Special mode for git-add. Return ignored files in <span class='synopsis'><code>ignored</code>[]</span> and
+untracked files in <span class='synopsis'><code>entries</code>[]</span>. Only returns ignored files that match
 pathspec exactly (no wildcards). Does not recurse into ignored
 directories.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRSHOWOTHERDIRECTORIEScode"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWOTHERDIRECTORIES" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWOTHERDIRECTORIES"></a><code>DIR_SHOW_OTHER_DIRECTORIES</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRSHOWOTHERDIRECTORIEScodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRSHOWOTHERDIRECTORIES" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRSHOWOTHERDIRECTORIES"></a><span class='synopsis'><code>DIR_SHOW_OTHER_DIRECTORIES</code></span> </dt>
 <dd>
 <p>Include a directory that is not tracked.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRHIDEEMPTYDIRECTORIEScode"><a id="Documentation/technical/api-directory-listing.txt-DIRHIDEEMPTYDIRECTORIES" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRHIDEEMPTYDIRECTORIES"></a><code>DIR_HIDE_EMPTY_DIRECTORIES</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRHIDEEMPTYDIRECTORIEScodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRHIDEEMPTYDIRECTORIES" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRHIDEEMPTYDIRECTORIES"></a><span class='synopsis'><code>DIR_HIDE_EMPTY_DIRECTORIES</code></span> </dt>
 <dd>
 <p>Do not include a directory that is not tracked and is empty.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeDIRNOGITLINKScode"><a id="Documentation/technical/api-directory-listing.txt-DIRNOGITLINKS" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRNOGITLINKS"></a><code>DIR_NO_GITLINKS</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeDIRNOGITLINKScodespan"><a id="Documentation/technical/api-directory-listing.txt-DIRNOGITLINKS" class="anchor" href="#Documentation/technical/api-directory-listing.txt-DIRNOGITLINKS"></a><span class='synopsis'><code>DIR_NO_GITLINKS</code></span> </dt>
 <dd>
 <p>If set, recurse into a directory that looks like a Git
 directory.  Otherwise it is shown as a directory.</p>
@@ -112,27 +112,27 @@ directory.  Otherwise it is shown as a directory.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeentriescode"><a id="Documentation/technical/api-directory-listing.txt-entries" class="anchor" href="#Documentation/technical/api-directory-listing.txt-entries"></a><code>entries[]</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeentriescodespan"><a id="Documentation/technical/api-directory-listing.txt-entries" class="anchor" href="#Documentation/technical/api-directory-listing.txt-entries"></a><span class='synopsis'><code>entries</code>[]</span> </dt>
 <dd>
-<p>An array of <code>struct dir_entry</code>, each element of which describes
+<p>An array of <span class='synopsis'><code>struct</code> <code>dir_entry</code></span>, each element of which describes
 a path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codenrcode"><a id="Documentation/technical/api-directory-listing.txt-nr" class="anchor" href="#Documentation/technical/api-directory-listing.txt-nr"></a><code>nr</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodenrcodespan"><a id="Documentation/technical/api-directory-listing.txt-nr" class="anchor" href="#Documentation/technical/api-directory-listing.txt-nr"></a><span class='synopsis'><code>nr</code></span> </dt>
 <dd>
-<p>The number of members in <code>entries[]</code> array.</p>
+<p>The number of members in <span class='synopsis'><code>entries</code>[]</span> array.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codealloccode"><a id="Documentation/technical/api-directory-listing.txt-alloc" class="anchor" href="#Documentation/technical/api-directory-listing.txt-alloc"></a><code>alloc</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodealloccodespan"><a id="Documentation/technical/api-directory-listing.txt-alloc" class="anchor" href="#Documentation/technical/api-directory-listing.txt-alloc"></a><span class='synopsis'><code>alloc</code></span> </dt>
 <dd>
-<p>Internal use; keeps track of allocation of <code>entries[]</code> array.</p>
+<p>Internal use; keeps track of allocation of <span class='synopsis'><code>entries</code>[]</span> array.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeignoredcode"><a id="Documentation/technical/api-directory-listing.txt-ignored" class="anchor" href="#Documentation/technical/api-directory-listing.txt-ignored"></a><code>ignored[]</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeignoredcodespan"><a id="Documentation/technical/api-directory-listing.txt-ignored" class="anchor" href="#Documentation/technical/api-directory-listing.txt-ignored"></a><span class='synopsis'><code>ignored</code>[]</span> </dt>
 <dd>
-<p>An array of <code>struct dir_entry</code>, used for ignored paths with the
-<code>DIR_SHOW_IGNORED_TOO</code> and <code>DIR_COLLECT_IGNORED</code> flags.</p>
+<p>An array of <span class='synopsis'><code>struct</code> <code>dir_entry</code></span>, used for ignored paths with the
+<span class='synopsis'><code>DIR_SHOW_IGNORED_TOO</code></span> and <span class='synopsis'><code>DIR_COLLECT_IGNORED</code></span> flags.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-codeignorednrcode"><a id="Documentation/technical/api-directory-listing.txt-ignorednr" class="anchor" href="#Documentation/technical/api-directory-listing.txt-ignorednr"></a><code>ignored_nr</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-directory-listing.txt-spanclasssynopsiscodeignorednrcodespan"><a id="Documentation/technical/api-directory-listing.txt-ignorednr" class="anchor" href="#Documentation/technical/api-directory-listing.txt-ignorednr"></a><span class='synopsis'><code>ignored_nr</code></span> </dt>
 <dd>
-<p>The number of members in <code>ignored[]</code> array.</p>
+<p>The number of members in <span class='synopsis'><code>ignored</code>[]</span> array.</p>
 </dd>
 </dl>
 </div>
@@ -148,30 +148,31 @@ marked. If you to exclude files, make sure you have loaded index first.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Prepare <code>struct dir_struct dir</code> and clear it with <code>memset(&amp;dir, 0,
-sizeof(dir))</code>.</p>
+<p>Prepare <span class='synopsis'><code>struct</code> <code>dir_struct</code> <code>dir</code></span> and clear it with <span class='synopsis'><em>memset(&amp;dir, 0,
+</em>
+<em>sizeof(dir))</em></span>.</p>
 </li>
 <li>
-<p>To add single exclude pattern, call <code>add_pattern_list()</code> and then
-<code>add_pattern()</code>.</p>
+<p>To add single exclude pattern, call <span class='synopsis'><code>add_pattern_list</code>()</span> and then
+<span class='synopsis'><code>add_pattern</code>()</span>.</p>
 </li>
 <li>
-<p>To add patterns from a file (e.g. <code>.git/info/exclude</code>), call
-<code>add_patterns_from_file()</code> , and/or set <code>dir.exclude_per_dir</code>.  A
-short-hand function <code>setup_standard_excludes()</code> can be used to set
+<p>To add patterns from a file (e.g. <span class='synopsis'><code>.git/info/exclude</code></span>), call
+<span class='synopsis'><code>add_patterns_from_file</code>()</span> , and/or set <span class='synopsis'><code>dir.exclude_per_dir</code></span>.  A
+short-hand function <span class='synopsis'><code>setup_standard_excludes</code>()</span> can be used to set
 up the standard set of exclude settings.</p>
 </li>
 <li>
 <p>Set options described in the Data Structure section above.</p>
 </li>
 <li>
-<p>Call <code>read_directory()</code>.</p>
+<p>Call <span class='synopsis'><code>read_directory</code>()</span>.</p>
 </li>
 <li>
-<p>Use <code>dir.entries[]</code>.</p>
+<p>Use <span class='synopsis'><code>dir.entries</code>[]</span>.</p>
 </li>
 <li>
-<p>Call <code>clear_directory()</code> when none of the contained elements are no longer in use.</p>
+<p>Call <span class='synopsis'><code>clear_directory</code>()</span> when none of the contained elements are no longer in use.</p>
 </li>
 </ul>
 </div>

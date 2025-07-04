@@ -33,9 +33,9 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The examples in this FAQ assume a standard POSIX shell, like <code>bash</code> or <code>dash</code>,
-and a user, A U Thor, who has the account <code>author</code> on the hosting provider
-<code>git.example.org</code>.</p>
+<p>The examples in this FAQ assume a standard POSIX shell, like <span class='synopsis'><code>bash</code></span> or <span class='synopsis'><code>dash</code></span>,
+and a user, A U Thor, who has the account <span class='synopsis'><code>author</code></span> on the hosting provider
+<span class='synopsis'><code>git.example.org</code></span>.</p>
 </div>
 </div>
 </div>
@@ -44,7 +44,7 @@ and a user, A U Thor, who has the account <code>author</code> on the hosting pro
 <div class="sectionbody">
 <div id="user-name" class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitfaq.txt-WhatshouldIputincodeusernamecode"><a id="Documentation/gitfaq.txt-WhatshouldIputinusername" class="anchor" href="#Documentation/gitfaq.txt-WhatshouldIputinusername"></a>What should I put in <code>user.name</code>? </dt>
+<dt class="hdlist1" id="Documentation/gitfaq.txt-WhatshouldIputinspanclasssynopsiscodeusernamecodespan"><a id="Documentation/gitfaq.txt-WhatshouldIputinusername" class="anchor" href="#Documentation/gitfaq.txt-WhatshouldIputinusername"></a>What should I put in <span class='synopsis'><code>user.name</code></span>? </dt>
 <dd>
 <p>You should put your personal name, generally a form using a given name
 and family name.  For example, the current maintainer of Git uses "Junio
@@ -52,14 +52,14 @@ C Hamano".  This will be the name portion that is stored in every commit
 you make.</p>
 <div class="paragraph">
 <p>This configuration doesn&#8217;t have any effect on authenticating to remote services;
-for that, see <code>credential.username</code> in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
+for that, see <span class='synopsis'><code>credential.username</code></span> in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </div>
 </dd>
 </dl>
 </div>
 <div id="http-postbuffer" class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitfaq.txt-WhatdoescodehttppostBuffercodereallydo"><a id="Documentation/gitfaq.txt-WhatdoeshttppostBufferreallydo" class="anchor" href="#Documentation/gitfaq.txt-WhatdoeshttppostBufferreallydo"></a>What does <code>http.postBuffer</code> really do? </dt>
+<dt class="hdlist1" id="Documentation/gitfaq.txt-WhatdoesspanclasssynopsiscodehttppostBuffercodespanreallydo"><a id="Documentation/gitfaq.txt-WhatdoeshttppostBufferreallydo" class="anchor" href="#Documentation/gitfaq.txt-WhatdoeshttppostBufferreallydo"></a>What does <span class='synopsis'><code>http.postBuffer</code></span> really do? </dt>
 <dd>
 <p>This option changes the size of the buffer that Git uses when pushing
 data to a remote over HTTP or HTTPS.  If the data is larger than this
@@ -90,15 +90,15 @@ default unless you are sure you need a different value.</p>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-HowdoIconfigureadifferenteditor"><a class="anchor" href="#Documentation/gitfaq.txt-HowdoIconfigureadifferenteditor"></a>How do I configure a different editor? </dt>
 <dd>
 <p>If you haven&#8217;t specified an editor specifically for Git, it will by default
-use the editor you&#8217;ve configured using the <code>VISUAL</code> or <code>EDITOR</code> environment
+use the editor you&#8217;ve configured using the <span class='synopsis'><code>VISUAL</code></span> or <span class='synopsis'><code>EDITOR</code></span> environment
 variables, or if neither is specified, the system default (which is usually
-<code>vi</code>).  Since some people find <code>vi</code> difficult to use or prefer a different
+<span class='synopsis'><code>vi</code></span>).  Since some people find <span class='synopsis'><code>vi</code></span> difficult to use or prefer a different
 editor, it may be desirable to change the editor used.</p>
 <div class="paragraph">
 <p>If you want to configure a general editor for most programs which need one, you
-can edit your shell configuration (e.g., <code>~/.bashrc</code> or <code>~/.zshenv</code>) to contain
-a line setting the <code>EDITOR</code> or <code>VISUAL</code> environment variable to an appropriate
-value.  For example, if you prefer the editor <code>nano</code>, then you could write the
+can edit your shell configuration (e.g., <span class='synopsis'><code>~/.bashrc</code></span> or <span class='synopsis'><code>~/.zshenv</code></span>) to contain
+a line setting the <span class='synopsis'><code>EDITOR</code></span> or <span class='synopsis'><code>VISUAL</code></span> environment variable to an appropriate
+value.  For example, if you prefer the editor <span class='synopsis'><code>nano</code></span>, then you could write the
 following:</p>
 </div>
 <div class="listingblock">
@@ -108,7 +108,7 @@ following:</p>
 </div>
 <div class="paragraph">
 <p>If you want to configure an editor specifically for Git, you can either set the
-<code>core.editor</code> configuration value or the <code>GIT_EDITOR</code> environment variable.  You
+<span class='synopsis'><code>core.editor</code></span> configuration value or the <span class='synopsis'><code>GIT_EDITOR</code></span> environment variable.  You
 can see <a href='{{< relurl "docs/git-var" >}}'>git-var[1]</a> for details on the order in which these options are
 consulted.</p>
 </div>
@@ -118,8 +118,8 @@ arguments containing spaces should be appropriately quoted.  Additionally, if
 your editor normally detaches from the terminal when invoked, you should specify
 it with an argument that makes it not do that, or else Git will not see any
 changes.  An example of a configuration addressing both of these issues on
-Windows would be the configuration <code>"C:\Program Files\Vim\gvim.exe" --nofork</code>,
-which quotes the filename with spaces and specifies the <code>--nofork</code> option to
+Windows would be the configuration <span class='synopsis'><em>"C:\Program Files\Vim\gvim.exe" --nofork</em></span>,
+which quotes the filename with spaces and specifies the <span class='synopsis'><code>--nofork</code></span> option to
 avoid backgrounding the process.</p>
 </div>
 </dd>
@@ -135,16 +135,16 @@ avoid backgrounding the process.</p>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-HowdoIspecifymycredentialswhenpushingoverHTTP"><a class="anchor" href="#Documentation/gitfaq.txt-HowdoIspecifymycredentialswhenpushingoverHTTP"></a>How do I specify my credentials when pushing over HTTP? </dt>
 <dd>
 <p>The easiest way to do this is to use a credential helper via the
-<code>credential.helper</code> configuration.  Most systems provide a standard
+<span class='synopsis'><code>credential.helper</code></span> configuration.  Most systems provide a standard
 choice to integrate with the system credential manager.  For example,
-Git for Windows provides the <code>wincred</code> credential manager, macOS has the
-<code>osxkeychain</code> credential manager, and Unix systems with a standard
-desktop environment can use the <code>libsecret</code> credential manager.  All of
+Git for Windows provides the <span class='synopsis'><code>wincred</code></span> credential manager, macOS has the
+<span class='synopsis'><code>osxkeychain</code></span> credential manager, and Unix systems with a standard
+desktop environment can use the <span class='synopsis'><code>libsecret</code></span> credential manager.  All of
 these store credentials in an encrypted store to keep your passwords or
 tokens secure.</p>
 <div class="paragraph">
-<p>In addition, you can use the <code>store</code> credential manager which stores in a file
-in your home directory, or the <code>cache</code> credential manager, which does not
+<p>In addition, you can use the <span class='synopsis'><code>store</code></span> credential manager which stores in a file
+in your home directory, or the <span class='synopsis'><code>cache</code></span> credential manager, which does not
 permanently store your credentials, but does prevent you from being prompted for
 them for a certain period of time.</p>
 </div>
@@ -161,12 +161,12 @@ not recommended.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-HowdoIreadapasswordortokenfromanenvironmentvariable"><a class="anchor" href="#Documentation/gitfaq.txt-HowdoIreadapasswordortokenfromanenvironmentvariable"></a>How do I read a password or token from an environment variable? </dt>
 <dd>
-<p>The <code>credential.helper</code> configuration option can also take an arbitrary
+<p>The <span class='synopsis'><code>credential.helper</code></span> configuration option can also take an arbitrary
 shell command that produces the credential protocol on standard output.
 This is useful when passing credentials into a container, for example.</p>
 <div class="paragraph">
 <p>Such a shell command can be specified by starting the option value with an
-exclamation point.  If your password or token were stored in the <code>GIT_TOKEN</code>,
+exclamation point.  If your password or token were stored in the <span class='synopsis'><code>GIT_TOKEN</code></span>,
 you could run the following command to set your credential helper:</p>
 </div>
 <div class="listingblock">
@@ -201,14 +201,15 @@ and the hostname):</p>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-HowdoIusemultipleaccountswiththesamehostingproviderusingHTTP"><a class="anchor" href="#Documentation/gitfaq.txt-HowdoIusemultipleaccountswiththesamehostingproviderusingHTTP"></a>How do I use multiple accounts with the same hosting provider using HTTP? </dt>
 <dd>
 <p>Usually the easiest way to distinguish between these accounts is to use
-the username in the URL.  For example, if you have the accounts <code>author</code>
-and <code>committer</code> on <code>git.example.org</code>, you can use the URLs
+the username in the URL.  For example, if you have the accounts <span class='synopsis'><code>author</code></span>
+and <span class='synopsis'><code>committer</code></span> on <span class='synopsis'><code>git.example.org</code></span>, you can use the URLs
 <a href="https://author@git.example.org/org1/project1.git" class="bare">https://author@git.example.org/org1/project1.git</a> and
 <a href="https://committer@git.example.org/org2/project2.git" class="bare">https://committer@git.example.org/org2/project2.git</a>.  This way, when you
 use a credential helper, it will automatically try to look up the
 correct credentials for your account.  If you already have a remote set
-up, you can change the URL with something like <code>git remote set-url
-origin https://author@git.example.org/org1/project1.git</code> (see
+up, you can change the URL with something like <span class='synopsis'><code>git</code> <code>remote</code> <code>set-url</code>
+
+<code>origin</code> <code>https://author@git.example.org/org1/project1.git</code></span> (see
 <a href='{{< relurl "docs/git-remote" >}}'>git-remote[1]</a> for details).</p>
 </dd>
 </dl>
@@ -221,15 +222,15 @@ origin https://author@git.example.org/org1/project1.git</code> (see
 identifies a user.  Therefore, to use multiple accounts, it&#8217;s necessary
 to create a key pair for each account.  If you&#8217;re using a reasonably
 modern OpenSSH version, you can create a new key pair with something
-like <code>ssh-keygen -t ed25519 -f ~/.ssh/id_committer</code>.  You can then
-register the public key (in this case, <code>~/.ssh/id_committer.pub</code>; note
-the <code>.pub</code>) with the hosting provider.</p>
+like <span class='synopsis'><code>ssh-keygen</code> <code>-t</code> <code>ed25519</code> <code>-f</code> <code>~/.ssh/id_committer</code></span>.  You can then
+register the public key (in this case, <span class='synopsis'><code>~/.ssh/id_committer.pub</code></span>; note
+the <span class='synopsis'><code>.pub</code></span>) with the hosting provider.</p>
 <div class="paragraph">
 <p>Most hosting providers use a single SSH account for pushing; that is, all users
-push to the <code>git</code> account (e.g., <code>git@git.example.org</code>).  If that&#8217;s the case for
+push to the <span class='synopsis'><code>git</code></span> account (e.g., <span class='synopsis'><code>git@git.example.org</code></span>).  If that&#8217;s the case for
 your provider, you can set up multiple aliases in SSH to make it clear which key
 pair to use.  For example, you could write something like the following in
-<code>~/.ssh/config</code>, substituting the proper private key file:</p>
+<span class='synopsis'><code>~/.ssh/config</code></span>, substituting the proper private key file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -250,9 +251,10 @@ Host example_committer
 </div>
 </div>
 <div class="paragraph">
-<p>Then, you can adjust your push URL to use <code>git@example_author</code> or
-<code>git@example_committer</code> instead of <code>git@example.org</code> (e.g., <code>git remote set-url
-git@example_author:org1/project1.git</code>).</p>
+<p>Then, you can adjust your push URL to use <span class='synopsis'><code>git@example_author</code></span> or
+<span class='synopsis'><code>git@example_committer</code></span> instead of <span class='synopsis'><code>git@example.org</code></span> (e.g., <span class='synopsis'><code>git</code> <code>remote</code> <code>set-url</code>
+
+<code>git@example_author:org1/project1.git</code></span>).</p>
 </div>
 </dd>
 </dl>
@@ -266,12 +268,15 @@ git@example_author:org1/project1.git</code>).</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-I8217vemadeamistakeinthelastcommitHowdoIchangeit"><a id="Documentation/gitfaq.txt-IvemadeamistakeinthelastcommitHowdoIchangeit" class="anchor" href="#Documentation/gitfaq.txt-IvemadeamistakeinthelastcommitHowdoIchangeit"></a>I&#8217;ve made a mistake in the last commit.  How do I change it? </dt>
 <dd>
-<p>You can make the appropriate change to your working tree, run <code>git add
-&lt;file&gt;</code> or <code>git rm &lt;file&gt;</code>, as appropriate, to stage it, and then <code>git
-commit --amend</code>.  Your change will be included in the commit, and you&#8217;ll
+<p>You can make the appropriate change to your working tree, run <span class='synopsis'><code>git</code> <code>add</code>
+
+<em>&lt;file&gt;</em></span> or <span class='synopsis'><code>git</code> <code>rm</code> <em>&lt;file&gt;</em></span>, as appropriate, to stage it, and then <span class='synopsis'><code>git</code>
+
+<code>commit</code> <code>--amend</code></span>.  Your change will be included in the commit, and you&#8217;ll
 be prompted to edit the commit message again; if you wish to use the
-original message verbatim, you can use the <code>--no-edit</code> option to <code>git
-commit</code> in addition, or just save and quit when your editor opens.</p>
+original message verbatim, you can use the <span class='synopsis'><code>--no-edit</code></span> option to <span class='synopsis'><code>git</code>
+
+<code>commit</code></span> in addition, or just save and quit when your editor opens.</p>
 </dd>
 </dl>
 </div>
@@ -279,7 +284,7 @@ commit</code> in addition, or just save and quit when your editor opens.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-I8217vemadeachangewithabugandit8217sbeenincludedinthemainbranchHowshouldIundoit"><a id="Documentation/gitfaq.txt-IvemadeachangewithabuganditsbeenincludedinthemainbranchHowshouldIundoit" class="anchor" href="#Documentation/gitfaq.txt-IvemadeachangewithabuganditsbeenincludedinthemainbranchHowshouldIundoit"></a>I&#8217;ve made a change with a bug and it&#8217;s been included in the main branch.  How should I undo it? </dt>
 <dd>
-<p>The usual way to deal with this is to use <code>git revert</code>.  This preserves
+<p>The usual way to deal with this is to use <span class='synopsis'><code>git</code> <code>revert</code></span>.  This preserves
 the history that the original change was made and was a valuable
 contribution, but also introduces a new commit that undoes those changes
 because the original had a problem.  The commit message of the revert
@@ -298,7 +303,7 @@ whether the changes to the file are precious and should be kept, or
 whether they are irrelevant and can safely be destroyed.  Therefore, it
 has to take the safe route and always preserve them.</p>
 <div class="paragraph">
-<p>It&#8217;s tempting to try to use certain features of <code>git update-index</code>, namely the
+<p>It&#8217;s tempting to try to use certain features of <span class='synopsis'><code>git</code> <code>update-index</code></span>, namely the
 assume-unchanged and skip-worktree bits, but these don&#8217;t work properly for this
 purpose and shouldn&#8217;t be used this way.</p>
 </div>
@@ -315,12 +320,12 @@ file is usually ignored to prevent accidentally committing it.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitfaq.txt-IaskedGittoignorevariousfilesyettheyarestilltracked"><a class="anchor" href="#Documentation/gitfaq.txt-IaskedGittoignorevariousfilesyettheyarestilltracked"></a>I asked Git to ignore various files, yet they are still tracked </dt>
 <dd>
-<p>A <code>gitignore</code> file ensures that certain file(s) which are not
+<p>A <span class='synopsis'><code>gitignore</code></span> file ensures that certain file(s) which are not
 tracked by Git remain untracked.  However, sometimes particular
 file(s) may have been tracked before adding them into the
-<code>.gitignore</code>, hence they still remain tracked.  To untrack and
-ignore files/patterns, use <code>git rm --cached &lt;file/pattern&gt;</code>
-and add a pattern to <code>.gitignore</code> that matches the &lt;file&gt;.
+<span class='synopsis'><code>.gitignore</code></span>, hence they still remain tracked.  To untrack and
+ignore files/patterns, use <span class='synopsis'><em>git rm --cached &lt;file/pattern&gt;</em></span>
+and add a pattern to <span class='synopsis'><code>.gitignore</code></span> that matches the &lt;file&gt;.
 See <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a> for details.</p>
 </dd>
 </dl>
@@ -347,20 +352,20 @@ immediately by either a merge or rebase.  See <a href='{{< relurl "docs/git-pull
 <dt class="hdlist1" id="Documentation/gitfaq.txt-HowdoIusehookstopreventusersfrommakingcertainchanges"><a class="anchor" href="#Documentation/gitfaq.txt-HowdoIusehookstopreventusersfrommakingcertainchanges"></a>How do I use hooks to prevent users from making certain changes? </dt>
 <dd>
 <p>The only safe place to make these changes is on the remote repository
-(i.e., the Git server), usually in the <code>pre-receive</code> hook or in a
+(i.e., the Git server), usually in the <span class='synopsis'><code>pre-receive</code></span> hook or in a
 continuous integration (CI) system.  These are the locations in which
 policy can be enforced effectively.</p>
 <div class="paragraph">
-<p>It&#8217;s common to try to use <code>pre-commit</code> hooks (or, for commit messages,
-<code>commit-msg</code> hooks) to check these things, which is great if you&#8217;re working as a
+<p>It&#8217;s common to try to use <span class='synopsis'><code>pre-commit</code></span> hooks (or, for commit messages,
+<span class='synopsis'><code>commit-msg</code></span> hooks) to check these things, which is great if you&#8217;re working as a
 solo developer and want the tooling to help you.  However, using hooks on a
 developer machine is not effective as a policy control because a user can bypass
-these hooks with <code>--no-verify</code> without being noticed (among various other ways).
+these hooks with <span class='synopsis'><code>--no-verify</code></span> without being noticed (among various other ways).
 Git assumes that the user is in control of their local repositories and doesn&#8217;t
 try to prevent this or tattle on the user.</p>
 </div>
 <div class="paragraph">
-<p>In addition, some advanced users find <code>pre-commit</code> hooks to be an impediment to
+<p>In addition, some advanced users find <span class='synopsis'><code>pre-commit</code></span> hooks to be an impediment to
 workflows that use temporary commits to stage work in progress or that create
 fixup commits, so it&#8217;s better to push these kinds of checks to the server
 anyway.</p>
@@ -387,7 +392,7 @@ storing these files as UTF-8 in the repository.  This allows tools like
 to work.</p>
 <div class="paragraph">
 <p>To do so, you can specify a <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> pattern with the
-<code>working-tree-encoding</code> attribute.  For example, the following pattern sets all
+<span class='synopsis'><code>working-tree-encoding</code></span> attribute.  For example, the following pattern sets all
 C files to use UTF-16LE-BOM, which is a common encoding on Windows:</p>
 </div>
 <div class="listingblock">
@@ -396,10 +401,10 @@ C files to use UTF-16LE-BOM, which is a common encoding on Windows:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You will need to run <code>git add --renormalize</code> to have this take effect.  Note
+<p>You will need to run <span class='synopsis'><code>git</code> <code>add</code> <code>--renormalize</code></span> to have this take effect.  Note
 that if you are making these changes on a project that is used across platforms,
 you&#8217;ll probably want to make it in a per-user configuration file or in the one
-in <code>$GIT_DIR/info/attributes</code>, since making it in a <code>.gitattributes</code> file in the
+in <span class='synopsis'><code>$GIT_DIR/info/attributes</code></span>, since making it in a <span class='synopsis'><code>.gitattributes</code></span> file in the
 repository will apply to all users of the repository.</p>
 </div>
 <div class="paragraph">
@@ -411,20 +416,20 @@ and see <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for m
 </div>
 <div id="windows-diff-control-m" class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/gitfaq.txt-I8217monWindowsandgitdiffshowsmyfilesashavingacodeMcodeattheend"><a id="Documentation/gitfaq.txt-ImonWindowsandgitdiffshowsmyfilesashavingaMattheend" class="anchor" href="#Documentation/gitfaq.txt-ImonWindowsandgitdiffshowsmyfilesashavingaMattheend"></a>I&#8217;m on Windows and git diff shows my files as having a <code>^M</code> at the end. </dt>
+<dt class="hdlist1" id="Documentation/gitfaq.txt-I8217monWindowsandgitdiffshowsmyfilesashavingaspanclasssynopsiscodeMcodespanattheend"><a id="Documentation/gitfaq.txt-ImonWindowsandgitdiffshowsmyfilesashavingaMattheend" class="anchor" href="#Documentation/gitfaq.txt-ImonWindowsandgitdiffshowsmyfilesashavingaMattheend"></a>I&#8217;m on Windows and git diff shows my files as having a <span class='synopsis'><code>^M</code></span> at the end. </dt>
 <dd>
 <p>By default, Git expects files to be stored with Unix line endings.  As such,
-the carriage return (<code>^M</code>) that is part of a Windows line ending is shown
+the carriage return (<span class='synopsis'><code>^M</code></span>) that is part of a Windows line ending is shown
 because it is considered to be trailing whitespace.  Git defaults to showing
 trailing whitespace only on new lines, not existing ones.</p>
 <div class="paragraph">
 <p>You can store the files in the repository with Unix line endings and convert
 them automatically to your platform&#8217;s line endings.  To do that, set the
-configuration option <code>core.eol</code> to <code>native</code> and see the following entry for
+configuration option <span class='synopsis'><code>core.eol</code></span> to <span class='synopsis'><code>native</code></span> and see the following entry for
 information about how to configure files as text or binary.</p>
 </div>
 <div class="paragraph">
-<p>You can also control this behavior with the <code>core.whitespace</code> setting if you
+<p>You can also control this behavior with the <span class='synopsis'><code>core.whitespace</code></span> setting if you
 don&#8217;t wish to remove the carriage returns from your line endings.</p>
 </div>
 </dd>
@@ -439,7 +444,7 @@ settings that work better than others.  In general, we recommend that
 text files be stored in UTF-8 without a byte-order mark (BOM) with LF
 (Unix-style) endings.  We also recommend the use of UTF-8 (again,
 without BOM) in commit messages.  These are the settings that work best
-across platforms and with tools such as <code>git diff</code> and <code>git merge</code>.</p>
+across platforms and with tools such as <span class='synopsis'><code>git</code> <code>diff</code></span> and <span class='synopsis'><code>git</code> <code>merge</code></span>.</p>
 <div class="paragraph">
 <p>Additionally, if you have a choice between storage formats that are text based
 or non-text based, we recommend storing files in the text format and, if
@@ -458,7 +463,7 @@ references, URLs, and hashes stored in the repository.</p>
 <div class="paragraph">
 <p>We also recommend setting a <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> file to explicitly mark
 which files are text and which are binary.  If you want Git to guess, you can
-set the attribute <code>text=auto</code>.  For example, the following might be appropriate
+set the attribute <span class='synopsis'><code>text=auto</code></span>.  For example, the following might be appropriate
 in some projects:</p>
 </div>
 <div class="listingblock">

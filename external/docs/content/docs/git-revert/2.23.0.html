@@ -59,9 +59,9 @@ from the HEAD commit).</p>
 <p>Note: <em>git revert</em> is used to record some new commits to reverse the
 effect of some earlier commits (often only a faulty one).  If you want to
 throw away all uncommitted changes in your working directory, you
-should see <a href='{{< relurl "docs/git-reset" >}}'>git-reset[1]</a>, particularly the <code>--hard</code> option.  If
+should see <a href='{{< relurl "docs/git-reset" >}}'>git-reset[1]</a>, particularly the <span class='synopsis'><code>--hard</code></span> option.  If
 you want to extract specific files as they were in another commit, you
-should see <a href='{{< relurl "docs/git-restore" >}}'>git-restore[1]</a>, specifically the <code>--source</code>
+should see <a href='{{< relurl "docs/git-restore" >}}'>git-restore[1]</a>, specifically the <span class='synopsis'><code>--source</code></span>
 option. Take care with these alternatives as
 both will discard uncommitted changes in your working directory.</p>
 </div>
@@ -82,7 +82,7 @@ between the three commands.</p>
 For a more complete list of ways to spell commit names, see
 <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a>.
 Sets of commits can also be given but no traversal is done by
-default, see <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a> and its <code>--no-walk</code>
+default, see <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a> and its <span class='synopsis'><code>--no-walk</code></span>
 option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-revert.txt--e"><a class="anchor" href="#Documentation/git-revert.txt--e"></a>-e </dt>
@@ -120,8 +120,8 @@ message editor.</p>
 <dd>
 <p>This option determines how the commit message will be cleaned up before
 being passed on to the commit machinery. See <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for more
-details. In particular, if the <em>&lt;mode&gt;</em> is given a value of <code>scissors</code>,
-scissors will be appended to <code>MERGE_MSG</code> before being passed on in the case
+details. In particular, if the <em>&lt;mode&gt;</em> is given a value of <span class='synopsis'><code>scissors</code></span>,
+scissors will be appended to <span class='synopsis'><code>MERGE_MSG</code></span> before being passed on in the case
 of a conflict.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-revert.txt--n"><a class="anchor" href="#Documentation/git-revert.txt--n"></a>-n </dt>
@@ -143,7 +143,7 @@ effect to your index in a row.</p>
 <dt class="hdlist1" id="Documentation/git-revert.txt--Sltkeyidgt"><a id="Documentation/git-revert.txt--Skeyid" class="anchor" href="#Documentation/git-revert.txt--Skeyid"></a>-S[&lt;keyid&gt;] </dt>
 <dt class="hdlist1" id="Documentation/git-revert.txt---gpg-signltkeyidgt"><a id="Documentation/git-revert.txt---gpg-signkeyid" class="anchor" href="#Documentation/git-revert.txt---gpg-signkeyid"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
 <dd>
-<p>GPG-sign commits. The <code>keyid</code> argument is optional and
+<p>GPG-sign commits. The <span class='synopsis'><code>keyid</code></span> argument is optional and
 defaults to the committer identity; if specified, it must be
 stuck to the option without a space.</p>
 </dd>
@@ -183,7 +183,7 @@ result of auto-conflict resolution if possible.</p>
 <dt class="hdlist1" id="Documentation/git-revert.txt---continue"><a class="anchor" href="#Documentation/git-revert.txt---continue"></a>--continue </dt>
 <dd>
 <p>Continue the operation in progress using the information in
-<code>.git/sequencer</code>.  Can be used to continue after resolving
+<span class='synopsis'><code>.git/sequencer</code></span>.  Can be used to continue after resolving
 conflicts in a failed cherry-pick or revert.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-revert.txt---skip"><a class="anchor" href="#Documentation/git-revert.txt---skip"></a>--skip </dt>
@@ -210,12 +210,12 @@ revert.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-revert.txt-codegitrevertHEAD3code"><a id="Documentation/git-revert.txt-gitrevertHEAD3" class="anchor" href="#Documentation/git-revert.txt-gitrevertHEAD3"></a><code>git revert HEAD~3</code> </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt-spanclasssynopsiscodegitcodecoderevertcodecodeHEAD3codespan"><a id="Documentation/git-revert.txt-gitrevertHEAD3" class="anchor" href="#Documentation/git-revert.txt-gitrevertHEAD3"></a><span class='synopsis'><code>git</code> <code>revert</code> <code>HEAD~3</code></span> </dt>
 <dd>
 <p>Revert the changes specified by the fourth last commit in HEAD
 and create a new commit with the reverted changes.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-revert.txt-codegitrevert-nmaster5master2code"><a id="Documentation/git-revert.txt-gitrevert-nmaster5master2" class="anchor" href="#Documentation/git-revert.txt-gitrevert-nmaster5master2"></a><code>git revert -n master~5..master~2</code> </dt>
+<dt class="hdlist1" id="Documentation/git-revert.txt-spanclasssynopsiscodegitcodecoderevertcodecode-ncodecodemaster5master2codespan"><a id="Documentation/git-revert.txt-gitrevert-nmaster5master2" class="anchor" href="#Documentation/git-revert.txt-gitrevert-nmaster5master2"></a><span class='synopsis'><code>git</code> <code>revert</code> <code>-n</code> <code>master~5..master~2</code></span> </dt>
 <dd>
 <p>Revert the changes done by commits from the fifth last commit
 in master (included) to the third last commit in master

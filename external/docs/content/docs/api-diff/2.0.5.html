@@ -59,8 +59,8 @@ called diffcore, and is responsible for two things.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>finding total rewrites (<code>-B</code>), renames (<code>-M</code>) and copies (<code>-C</code>), and
-changes that touch a string (<code>-S</code>), as specified by the caller.</p>
+<p>finding total rewrites (<span class='synopsis'><code>-B</code></span>), renames (<span class='synopsis'><code>-M</code></span>) and copies (<span class='synopsis'><code>-C</code></span>), and
+changes that touch a string (<span class='synopsis'><code>-S</code></span>), as specified by the caller.</p>
 </li>
 <li>
 <p>outputting the differences in various formats, as specified by the
@@ -76,35 +76,35 @@ caller.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Prepare <code>struct diff_options</code> to record the set of diff options, and
-then call <code>diff_setup()</code> to initialize this structure.  This sets up
+<p>Prepare <span class='synopsis'><code>struct</code> <code>diff_options</code></span> to record the set of diff options, and
+then call <span class='synopsis'><code>diff_setup</code>()</span> to initialize this structure.  This sets up
 the vanilla default.</p>
 </li>
 <li>
 <p>Fill in the options structure to specify desired output format, rename
-detection, etc.  <code>diff_opt_parse()</code> can be used to parse options given
+detection, etc.  <span class='synopsis'><code>diff_opt_parse</code>()</span> can be used to parse options given
 from the command line in a way consistent with existing git-diff
 family of programs.</p>
 </li>
 <li>
-<p>Call <code>diff_setup_done()</code>; this inspects the options set up so far for
+<p>Call <span class='synopsis'><code>diff_setup_done</code>()</span>; this inspects the options set up so far for
 internal consistency and make necessary tweaking to it (e.g. if
 textual patch output was asked, recursive behaviour is turned on);
 the callback set_default in diff_options can be used to tweak this more.</p>
 </li>
 <li>
-<p>As you find different pairs of files, call <code>diff_change()</code> to feed
-modified files, <code>diff_addremove()</code> to feed created or deleted files,
-or <code>diff_unmerge()</code> to feed a file whose state is <em>unmerged</em> to the
-API.  These are thin wrappers to a lower-level <code>diff_queue()</code> function
+<p>As you find different pairs of files, call <span class='synopsis'><code>diff_change</code>()</span> to feed
+modified files, <span class='synopsis'><code>diff_addremove</code>()</span> to feed created or deleted files,
+or <span class='synopsis'><code>diff_unmerge</code>()</span> to feed a file whose state is <em>unmerged</em> to the
+API.  These are thin wrappers to a lower-level <span class='synopsis'><code>diff_queue</code>()</span> function
 that is flexible enough to record any of these kinds of changes.</p>
 </li>
 <li>
-<p>Once you finish feeding the pairs of files, call <code>diffcore_std()</code>.
+<p>Once you finish feeding the pairs of files, call <span class='synopsis'><code>diffcore_std</code>()</span>.
 This will tell the diffcore library to go ahead and do its work.</p>
 </li>
 <li>
-<p>Calling <code>diff_flush()</code> will produce the output.</p>
+<p>Calling <span class='synopsis'><code>diff_flush</code>()</span> will produce the output.</p>
 </li>
 </ul>
 </div>
@@ -116,7 +116,7 @@ This will tell the diffcore library to go ahead and do its work.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct diff_filespec</code></p>
+<p><span class='synopsis'><code>struct</code> <code>diff_filespec</code></span></p>
 </li>
 </ul>
 </div>
@@ -124,33 +124,33 @@ This will tell the diffcore library to go ahead and do its work.</p>
 <p>This is the internal representation for a single file (blob).  It
 records the blob object name (if known&#8201;&#8212;&#8201;for a work tree file it
 typically is a NUL SHA-1), filemode and pathname.  This is what the
-<code>diff_addremove()</code>, <code>diff_change()</code> and <code>diff_unmerge()</code> synthesize and
-feed <code>diff_queue()</code> function with.</p>
+<span class='synopsis'><code>diff_addremove</code>()</span>, <span class='synopsis'><code>diff_change</code>()</span> and <span class='synopsis'><code>diff_unmerge</code>()</span> synthesize and
+feed <span class='synopsis'><code>diff_queue</code>()</span> function with.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct diff_filepair</code></p>
+<p><span class='synopsis'><code>struct</code> <code>diff_filepair</code></span></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This records a pair of <code>struct diff_filespec</code>; the filespec for a file
-in the "old" set (i.e. preimage) is called <code>one</code>, and the filespec for a
-file in the "new" set (i.e. postimage) is called <code>two</code>.  A change that
-represents file creation has NULL in <code>one</code>, and file deletion has NULL
-in <code>two</code>.</p>
+<p>This records a pair of <span class='synopsis'><code>struct</code> <code>diff_filespec</code></span>; the filespec for a file
+in the "old" set (i.e. preimage) is called <span class='synopsis'><code>one</code></span>, and the filespec for a
+file in the "new" set (i.e. postimage) is called <span class='synopsis'><code>two</code></span>.  A change that
+represents file creation has NULL in <span class='synopsis'><code>one</code></span>, and file deletion has NULL
+in <span class='synopsis'><code>two</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>A <code>filepair</code> starts pointing at <code>one</code> and <code>two</code> that are from the same
-filename, but <code>diffcore_std()</code> can break pairs and match component
+<p>A <span class='synopsis'><code>filepair</code></span> starts pointing at <span class='synopsis'><code>one</code></span> and <span class='synopsis'><code>two</code></span> that are from the same
+filename, but <span class='synopsis'><code>diffcore_std</code>()</span> can break pairs and match component
 filespecs with other filespecs from a different filepair to form new
 filepair.  This is called <em>rename detection</em>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct diff_queue</code></p>
+<p><span class='synopsis'><code>struct</code> <code>diff_queue</code></span></p>
 </li>
 </ul>
 </div>
@@ -159,22 +159,22 @@ filepair.  This is called <em>rename detection</em>.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codequeuecode"><a id="Documentation/technical/api-diff.txt-queue" class="anchor" href="#Documentation/technical/api-diff.txt-queue"></a><code>queue</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodequeuecodespan"><a id="Documentation/technical/api-diff.txt-queue" class="anchor" href="#Documentation/technical/api-diff.txt-queue"></a><span class='synopsis'><code>queue</code></span> </dt>
 <dd>
-<p>An array of pointers to <code>struct diff_filepair</code>.  This
+<p>An array of pointers to <span class='synopsis'><code>struct</code> <code>diff_filepair</code></span>.  This
 dynamically grows as you add filepairs;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codealloccode"><a id="Documentation/technical/api-diff.txt-alloc" class="anchor" href="#Documentation/technical/api-diff.txt-alloc"></a><code>alloc</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodealloccodespan"><a id="Documentation/technical/api-diff.txt-alloc" class="anchor" href="#Documentation/technical/api-diff.txt-alloc"></a><span class='synopsis'><code>alloc</code></span> </dt>
 <dd>
-<p>The allocated size of the <code>queue</code> array;</p>
+<p>The allocated size of the <span class='synopsis'><code>queue</code></span> array;</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codenrcode"><a id="Documentation/technical/api-diff.txt-nr" class="anchor" href="#Documentation/technical/api-diff.txt-nr"></a><code>nr</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodenrcodespan"><a id="Documentation/technical/api-diff.txt-nr" class="anchor" href="#Documentation/technical/api-diff.txt-nr"></a><span class='synopsis'><code>nr</code></span> </dt>
 <dd>
-<p>The number of elements in the <code>queue</code> array.</p>
+<p>The number of elements in the <span class='synopsis'><code>queue</code></span> array.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>struct diff_options</code></p>
+<p><span class='synopsis'><code>struct</code> <code>diff_options</code></span></p>
 </li>
 </ul>
 </div>
@@ -190,42 +190,42 @@ the operation of diffcore library with.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codeoutputformatcode"><a id="Documentation/technical/api-diff.txt-outputformat" class="anchor" href="#Documentation/technical/api-diff.txt-outputformat"></a><code>output_format</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodeoutputformatcodespan"><a id="Documentation/technical/api-diff.txt-outputformat" class="anchor" href="#Documentation/technical/api-diff.txt-outputformat"></a><span class='synopsis'><code>output_format</code></span> </dt>
 <dd>
-<p>The output format used when <code>diff_flush()</code> is run.</p>
+<p>The output format used when <span class='synopsis'><code>diff_flush</code>()</span> is run.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codecontextcode"><a id="Documentation/technical/api-diff.txt-context" class="anchor" href="#Documentation/technical/api-diff.txt-context"></a><code>context</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodecontextcodespan"><a id="Documentation/technical/api-diff.txt-context" class="anchor" href="#Documentation/technical/api-diff.txt-context"></a><span class='synopsis'><code>context</code></span> </dt>
 <dd>
 <p>Number of context lines to generate in patch output.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codebreakoptcodecodedetectrenamecodecoderename-scorecodecoderenamelimitcode"><a id="Documentation/technical/api-diff.txt-breakoptdetectrenamerename-scorerenamelimit" class="anchor" href="#Documentation/technical/api-diff.txt-breakoptdetectrenamerename-scorerenamelimit"></a><code>break_opt</code>, <code>detect_rename</code>, <code>rename-score</code>, <code>rename_limit</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodebreakoptcodespanspanclasssynopsiscodedetectrenamecodespanspanclasssynopsiscoderename-scorecodespanspanclasssynopsiscoderenamelimitcodespan"><a id="Documentation/technical/api-diff.txt-breakoptdetectrenamerename-scorerenamelimit" class="anchor" href="#Documentation/technical/api-diff.txt-breakoptdetectrenamerename-scorerenamelimit"></a><span class='synopsis'><code>break_opt</code></span>, <span class='synopsis'><code>detect_rename</code></span>, <span class='synopsis'><code>rename-score</code></span>, <span class='synopsis'><code>rename_limit</code></span> </dt>
 <dd>
 <p>Affects the way detection logic for complete rewrites, renames
 and copies.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codeabbrevcode"><a id="Documentation/technical/api-diff.txt-abbrev" class="anchor" href="#Documentation/technical/api-diff.txt-abbrev"></a><code>abbrev</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodeabbrevcodespan"><a id="Documentation/technical/api-diff.txt-abbrev" class="anchor" href="#Documentation/technical/api-diff.txt-abbrev"></a><span class='synopsis'><code>abbrev</code></span> </dt>
 <dd>
 <p>Number of hexdigits to abbreviate raw format output to.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codepickaxecode"><a id="Documentation/technical/api-diff.txt-pickaxe" class="anchor" href="#Documentation/technical/api-diff.txt-pickaxe"></a><code>pickaxe</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodepickaxecodespan"><a id="Documentation/technical/api-diff.txt-pickaxe" class="anchor" href="#Documentation/technical/api-diff.txt-pickaxe"></a><span class='synopsis'><code>pickaxe</code></span> </dt>
 <dd>
 <p>A constant string (can and typically does contain newlines to
 look for a block of text, not just a single line) to filter out
 the filepairs that do not change the number of strings contained
 in its preimage and postimage of the diff_queue.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codeflagscode"><a id="Documentation/technical/api-diff.txt-flags" class="anchor" href="#Documentation/technical/api-diff.txt-flags"></a><code>flags</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodeflagscodespan"><a id="Documentation/technical/api-diff.txt-flags" class="anchor" href="#Documentation/technical/api-diff.txt-flags"></a><span class='synopsis'><code>flags</code></span> </dt>
 <dd>
 <p>This is mostly a collection of boolean options that affects the
 operation, but some do not have anything to do with the diffcore
 library.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codetouchedflagscode"><a id="Documentation/technical/api-diff.txt-touchedflags" class="anchor" href="#Documentation/technical/api-diff.txt-touchedflags"></a><code>touched_flags</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodetouchedflagscodespan"><a id="Documentation/technical/api-diff.txt-touchedflags" class="anchor" href="#Documentation/technical/api-diff.txt-touchedflags"></a><span class='synopsis'><code>touched_flags</code></span> </dt>
 <dd>
 <p>Records whether a flag has been changed due to user request
 (rather than just set/unset by default).</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-diff.txt-codesetdefaultcode"><a id="Documentation/technical/api-diff.txt-setdefault" class="anchor" href="#Documentation/technical/api-diff.txt-setdefault"></a><code>set_default</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-diff.txt-spanclasssynopsiscodesetdefaultcodespan"><a id="Documentation/technical/api-diff.txt-setdefault" class="anchor" href="#Documentation/technical/api-diff.txt-setdefault"></a><span class='synopsis'><code>set_default</code></span> </dt>
 <dd>
 <p>Callback which allows tweaking the options in diff_setup_done().</p>
 <div class="dlist">
@@ -269,7 +269,7 @@ output routine.  Plumbing disables this to ensure stable output.</p>
 <dt class="hdlist1" id="Documentation/technical/api-diff.txt-REVERSEDIFF"><a class="anchor" href="#Documentation/technical/api-diff.txt-REVERSEDIFF"></a>REVERSE_DIFF </dt>
 <dd>
 <p>Tells the library that the calling program is feeding the
-filepairs reversed; <code>one</code> is two, and <code>two</code> is one.</p>
+filepairs reversed; <span class='synopsis'><code>one</code></span> is two, and <span class='synopsis'><code>two</code></span> is one.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/technical/api-diff.txt-EXITWITHSTATUS"><a class="anchor" href="#Documentation/technical/api-diff.txt-EXITWITHSTATUS"></a>EXIT_WITH_STATUS </dt>
 <dd>

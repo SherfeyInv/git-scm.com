@@ -238,9 +238,9 @@ Porcelain-ish scripts and/or are writing new ones.</p>
 </div>
 <div class="paragraph">
 <p>The 'git sh-i18n scriptlet is designed to be sourced (using
-<code>.</code>) by Git&#8217;s porcelain programs implemented in shell
-script. It provides wrappers for the GNU <code>gettext</code> and
-<code>eval_gettext</code> functions accessible through the <code>gettext.sh</code>
+<span class='synopsis'><code>.</code></span>) by Git&#8217;s porcelain programs implemented in shell
+script. It provides wrappers for the GNU <span class='synopsis'><code>gettext</code></span> and
+<span class='synopsis'><code>eval_gettext</code></span> functions accessible through the <span class='synopsis'><code>gettext.sh</code></span>
 script, and provides pass-through fallbacks on systems
 without GNU gettext.</p>
 </div>
@@ -254,13 +254,13 @@ without GNU gettext.</p>
 <dt class="hdlist1" id="Documentation/git-sh-i18n.txt-gettext"><a class="anchor" href="#Documentation/git-sh-i18n.txt-gettext"></a>gettext </dt>
 <dd>
 <p>Currently a dummy fall-through function implemented as a wrapper
-around <code>printf(1)</code>. Will be replaced by a real gettext
+around <span class='synopsis'><code>printf</code>(<code>1</code>)</span>. Will be replaced by a real gettext
 implementation in a later version.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-sh-i18n.txt-evalgettext"><a class="anchor" href="#Documentation/git-sh-i18n.txt-evalgettext"></a>eval_gettext </dt>
 <dd>
 <p>Currently a dummy fall-through function implemented as a wrapper
-around <code>printf(1)</code> with variables expanded by the
+around <span class='synopsis'><code>printf</code>(<code>1</code>)</span> with variables expanded by the
 <a href='{{< relurl "docs/git-sh-i18n--envsubst" >}}'>git-sh-i18n&#x2d;&#x2d;envsubst[1]</a> helper. Will be replaced by a
 real gettext implementation in a later version.</p>
 </dd>

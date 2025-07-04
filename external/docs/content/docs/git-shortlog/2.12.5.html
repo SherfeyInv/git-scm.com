@@ -81,7 +81,7 @@ of author alphabetic order.</p>
 <dd>
 <p>Instead of the commit subject, use some other information to
 describe each commit.  <em>&lt;format&gt;</em> can be any string accepted
-by the <code>--format</code> option of <em>git log</em>, such as <em>* [%h] %s</em>.
+by the <span class='synopsis'><code>--format</code></span> option of <em>git log</em>, such as <em>* [%h] %s</em>.
 (See the "PRETTY FORMATS" section of <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>.)</p>
 <div class="literalblock">
 <div class="content">
@@ -96,22 +96,22 @@ by the <code>--format</code> option of <em>git log</em>, such as <em>* [%h] %s</
 </dd>
 <dt class="hdlist1" id="Documentation/git-shortlog.txt--wltwidthgtltindent1gtltindent2gt"><a id="Documentation/git-shortlog.txt--wwidthindent1indent2" class="anchor" href="#Documentation/git-shortlog.txt--wwidthindent1indent2"></a>-w[&lt;width&gt;[,&lt;indent1&gt;[,&lt;indent2&gt;]]] </dt>
 <dd>
-<p>Linewrap the output by wrapping each line at <code>width</code>.  The first
-line of each entry is indented by <code>indent1</code> spaces, and the second
-and subsequent lines are indented by <code>indent2</code> spaces. <code>width</code>,
-<code>indent1</code>, and <code>indent2</code> default to 76, 6 and 9 respectively.</p>
+<p>Linewrap the output by wrapping each line at <span class='synopsis'><code>width</code></span>.  The first
+line of each entry is indented by <span class='synopsis'><code>indent1</code></span> spaces, and the second
+and subsequent lines are indented by <span class='synopsis'><code>indent2</code></span> spaces. <span class='synopsis'><code>width</code></span>,
+<span class='synopsis'><code>indent1</code></span>, and <span class='synopsis'><code>indent2</code></span> default to 76, 6 and 9 respectively.</p>
 <div class="paragraph">
-<p>If width is <code>0</code> (zero) then indent the lines of the output without wrapping
+<p>If width is <span class='synopsis'><code>0</code></span> (zero) then indent the lines of the output without wrapping
 them.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-shortlog.txt-ltrevisionrangegt"><a id="Documentation/git-shortlog.txt-revisionrange" class="anchor" href="#Documentation/git-shortlog.txt-revisionrange"></a>&lt;revision range&gt; </dt>
 <dd>
 <p>Show only commits in the specified revision range.  When no
-&lt;revision range&gt; is specified, it defaults to <code>HEAD</code> (i.e. the
-whole history leading to the current commit).  <code>origin..HEAD</code>
+&lt;revision range&gt; is specified, it defaults to <span class='synopsis'><code>HEAD</code></span> (i.e. the
+whole history leading to the current commit).  <span class='synopsis'><code>origin..HEAD</code></span>
 specifies all the commits reachable from the current commit
-(i.e. <code>HEAD</code>), but not from <code>origin</code>. For a complete list of
+(i.e. <span class='synopsis'><code>HEAD</code></span>), but not from <span class='synopsis'><code>origin</code></span>. For a complete list of
 ways to spell &lt;revision range&gt;, see the "Specifying Ranges"
 section of <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a>.</p>
 </dd>
@@ -132,12 +132,12 @@ options or the revision range, when confusion arises.</p>
 <h2 id="_mapping_authors"><a class="anchor" href="#_mapping_authors"></a>MAPPING AUTHORS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>.mailmap</code> feature is used to coalesce together commits by the same
+<p>The <span class='synopsis'><code>.mailmap</code></span> feature is used to coalesce together commits by the same
 person in the shortlog, where their name and/or email address was
 spelled differently.</p>
 </div>
 <div class="paragraph">
-<p>If the file <code>.mailmap</code> exists at the toplevel of the repository, or at
+<p>If the file <span class='synopsis'><code>.mailmap</code></span> exists at the toplevel of the repository, or at
 the location pointed to by the mailmap.file or mailmap.blob
 configuration options, it
 is used to map author and committer names and email addresses to
@@ -213,7 +213,7 @@ Jane D. &lt;jane@desktop.(none)&gt;</pre>
 </div>
 <div class="paragraph">
 <p>Now suppose that Joe wants his middle name initial used, and Jane
-prefers her family name fully spelled out. A proper <code>.mailmap</code> file
+prefers her family name fully spelled out. A proper <span class='synopsis'><code>.mailmap</code></span> file
 would look like:</p>
 </div>
 <div class="listingblock">
@@ -223,7 +223,7 @@ Joe R. Developer &lt;joe@example.com&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Note how there is no need for an entry for <code>&lt;jane@laptop.(none)&gt;</code>, because the
+<p>Note how there is no need for an entry for <span class='synopsis'><em>&lt;jane@laptop.(none)&gt;</em></span>, because the
 real name of that author is already correct.</p>
 </div>
 <div class="paragraph">
@@ -241,7 +241,7 @@ CTO &lt;cto@coompany.xx&gt;</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Then you might want a <code>.mailmap</code> file that looks like:</p>
+<p>Then you might want a <span class='synopsis'><code>.mailmap</code></span> file that looks like:</p>
 </div>
 <div class="listingblock">
 <div class="content">

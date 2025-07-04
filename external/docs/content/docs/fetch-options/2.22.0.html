@@ -27,14 +27,14 @@ aliases:
 <dt class="hdlist1" id="Documentation/fetch-options.txt---append"><a class="anchor" href="#Documentation/fetch-options.txt---append"></a>--append </dt>
 <dd>
 <p>Append ref names and object names of fetched refs to the
-existing contents of <code>.git/FETCH_HEAD</code>.  Without this
-option old data in <code>.git/FETCH_HEAD</code> will be overwritten.</p>
+existing contents of <span class='synopsis'><code>.git/FETCH_HEAD</code></span>.  Without this
+option old data in <span class='synopsis'><code>.git/FETCH_HEAD</code></span> will be overwritten.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---depthltdepthgt"><a id="Documentation/fetch-options.txt---depthdepth" class="anchor" href="#Documentation/fetch-options.txt---depthdepth"></a>--depth=&lt;depth&gt; </dt>
 <dd>
 <p>Limit fetching to the specified number of commits from the tip of
 each remote branch history. If fetching to a <em>shallow</em> repository
-created by <code>git clone</code> with <code>--depth=&lt;depth&gt;</code> option (see
+created by <span class='synopsis'><code>git</code> <code>clone</code></span> with <span class='synopsis'><code>--depth=</code><em>&lt;depth&gt;</em></span> option (see
 <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>), deepen or shorten the history to the specified
 number of commits. Tags for the deepened commits are not fetched.</p>
 </dd>
@@ -68,7 +68,7 @@ the current repository has the same history as the source repository.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---update-shallow"><a class="anchor" href="#Documentation/fetch-options.txt---update-shallow"></a>--update-shallow </dt>
 <dd>
 <p>By default when fetching from a shallow repository,
-<code>git fetch</code> refuses refs that require updating
+<span class='synopsis'><code>git</code> <code>fetch</code></span> refuses refs that require updating
 .git/shallow. This option updates .git/shallow and accept such
 refs.</p>
 </dd>
@@ -91,7 +91,7 @@ abbreviated) SHA-1 of a commit. Specifying a glob is equivalent to specifying
 this option multiple times, one for each matching ref name.</p>
 </div>
 <div class="paragraph">
-<p>See also the <code>fetch.negotiationAlgorithm</code> configuration variable
+<p>See also the <span class='synopsis'><code>fetch.negotiationAlgorithm</code></span> configuration variable
 documented in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </div>
 </dd>
@@ -102,9 +102,9 @@ documented in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--f"><a class="anchor" href="#Documentation/fetch-options.txt--f"></a>-f </dt>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---force"><a class="anchor" href="#Documentation/fetch-options.txt---force"></a>--force </dt>
 <dd>
-<p>When <em>git fetch</em> is used with <code>&lt;src&gt;:&lt;dst&gt;</code> refspec it may
+<p>When <em>git fetch</em> is used with <span class='synopsis'><em>&lt;src&gt;</em><code>:</code><em>&lt;dst&gt;</em></span> refspec it may
 refuse to update the local branch as discussed
-in the <code>&lt;refspec&gt;</code> part below.
+in the <span class='synopsis'><em>&lt;refspec&gt;</em></span> part below.
 This option overrides that check.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--k"><a class="anchor" href="#Documentation/fetch-options.txt--k"></a>-k </dt>
@@ -127,7 +127,7 @@ auto-following or due to a --tags option.  However, if tags
 are fetched due to an explicit refspec (either on the command
 line or in the remote configuration, for example if the remote
 was cloned with the --mirror option), then they are also
-subject to pruning. Supplying <code>--prune-tags</code> is a shorthand for
+subject to pruning. Supplying <span class='synopsis'><code>--prune-tags</code></span> is a shorthand for
 providing the tag refspec.</p>
 <div class="paragraph">
 <p>See the PRUNING section below for more details.</p>
@@ -137,11 +137,11 @@ providing the tag refspec.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---prune-tags"><a class="anchor" href="#Documentation/fetch-options.txt---prune-tags"></a>--prune-tags </dt>
 <dd>
 <p>Before fetching, remove any local tags that no longer exist on
-the remote if <code>--prune</code> is enabled. This option should be used
-more carefully, unlike <code>--prune</code> it will remove any local
+the remote if <span class='synopsis'><code>--prune</code></span> is enabled. This option should be used
+more carefully, unlike <span class='synopsis'><code>--prune</code></span> it will remove any local
 references (local tags) that have been created. This option is
 a shorthand for providing the explicit tag refspec along with
-<code>--prune</code>, see the discussion about that in its documentation.</p>
+<span class='synopsis'><code>--prune</code></span>, see the discussion about that in its documentation.</p>
 <div class="paragraph">
 <p>See the PRUNING section below for more details.</p>
 </div>
@@ -160,7 +160,7 @@ setting. See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 <p>When fetching refs listed on the command line, use the
 specified refspec (can be given more than once) to map the
 refs to remote-tracking branches, instead of the values of
-<code>remote.*.fetch</code> configuration variables for the remote
+<span class='synopsis'><code>remote.*.fetch</code></span> configuration variables for the remote
 repository.  See section on "Configured Remote-tracking
 Branches" for details.</p>
 </dd>
@@ -168,11 +168,11 @@ Branches" for details.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---tags"><a class="anchor" href="#Documentation/fetch-options.txt---tags"></a>--tags </dt>
 <dd>
 <p>Fetch all tags from the remote (i.e., fetch remote tags
-<code>refs/tags/*</code> into local tags with the same name), in addition
+<span class='synopsis'><code>refs/tags/*</code></span> into local tags with the same name), in addition
 to whatever else would otherwise be fetched.  Using this
 option alone does not subject tags to pruning, even if --prune
 is used (though tags may be pruned anyway if they are also the
-destination of an explicit refspec; see <code>--prune</code>).</p>
+destination of an explicit refspec; see <span class='synopsis'><code>--prune</code></span>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---recurse-submodulesyeson-demandno"><a class="anchor" href="#Documentation/fetch-options.txt---recurse-submodulesyeson-demandno"></a>--recurse-submodules[=yes|on-demand|no] </dt>
 <dd>
@@ -197,7 +197,7 @@ one at a time.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---no-recurse-submodules"><a class="anchor" href="#Documentation/fetch-options.txt---no-recurse-submodules"></a>--no-recurse-submodules </dt>
 <dd>
 <p>Disable recursive fetching of submodules (this has the same effect as
-using the <code>--recurse-submodules=no</code> option).</p>
+using the <span class='synopsis'><code>--recurse-submodules=no</code></span> option).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---submodule-prefixltpathgt"><a id="Documentation/fetch-options.txt---submodule-prefixpath" class="anchor" href="#Documentation/fetch-options.txt---submodule-prefixpath"></a>--submodule-prefix=&lt;path&gt; </dt>
 <dd>
@@ -227,7 +227,7 @@ use it.</p>
 <dt class="hdlist1" id="Documentation/fetch-options.txt---upload-packltupload-packgt"><a id="Documentation/fetch-options.txt---upload-packupload-pack" class="anchor" href="#Documentation/fetch-options.txt---upload-packupload-pack"></a>--upload-pack &lt;upload-pack&gt; </dt>
 <dd>
 <p>When given, and the repository to fetch from is handled
-by <em>git fetch-pack</em>, <code>--exec=&lt;upload-pack&gt;</code> is passed to
+by <em>git fetch-pack</em>, <span class='synopsis'><code>--exec=</code><em>&lt;upload-pack&gt;</em></span> is passed to
 the command to specify non-default path for the command
 run on the other end.</p>
 </dd>
@@ -257,7 +257,7 @@ standard error stream is not directed to a terminal.</p>
 protocol version 2.  The given string must not contain a NUL or LF
 character.  The server&#8217;s handling of server options, including
 unknown ones, is server-specific.
-When multiple <code>--server-option=&lt;option&gt;</code> are given, they are all
+When multiple <span class='synopsis'><code>--server-option=</code><em>&lt;option&gt;</em></span> are given, they are all
 sent to the other side in the order listed on the command line.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/fetch-options.txt--4"><a class="anchor" href="#Documentation/fetch-options.txt--4"></a>-4 </dt>

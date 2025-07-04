@@ -37,19 +37,19 @@ The program supports clients fetching using both the smart HTTP protocol
 and the backwards-compatible dumb HTTP protocol, as well as clients
 pushing using the smart HTTP protocol. It also supports Git&#8217;s
 more-efficient "v2" protocol if properly configured; see the
-discussion of <code>GIT_PROTOCOL</code> in the ENVIRONMENT section below.</p>
+discussion of <span class='synopsis'><code>GIT_PROTOCOL</code></span> in the ENVIRONMENT section below.</p>
 </div>
 <div class="paragraph">
 <p>It verifies that the directory has the magic file
 "git-daemon-export-ok", and it will refuse to export any Git directory
 that hasn&#8217;t explicitly been marked for export this way (unless the
-<code>GIT_HTTP_EXPORT_ALL</code> environment variable is set).</p>
+<span class='synopsis'><code>GIT_HTTP_EXPORT_ALL</code></span> environment variable is set).</p>
 </div>
 <div class="paragraph">
-<p>By default, only the <code>upload-pack</code> service is enabled, which serves
+<p>By default, only the <span class='synopsis'><code>upload-pack</code></span> service is enabled, which serves
 <em>git fetch-pack</em> and <em>git ls-remote</em> clients, which are invoked from
 <em>git fetch</em>, <em>git pull</em>, and <em>git clone</em>.  If the client is authenticated,
-the <code>receive-pack</code> service is enabled, which serves <em>git send-pack</em>
+the <span class='synopsis'><code>receive-pack</code></span> service is enabled, which serves <em>git send-pack</em>
 clients, which is invoked from <em>git push</em>.</p>
 </div>
 </div>
@@ -70,21 +70,21 @@ upload pack service.  When enabled, clients are able to read
 any file within the repository, including objects that are
 no longer reachable from a branch but are still present.
 It is enabled by default, but a repository can disable it
-by setting this configuration value to <code>false</code>.</p>
+by setting this configuration value to <span class='synopsis'><code>false</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadpack"><a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadpack"></a>http.uploadpack </dt>
 <dd>
 <p>This serves <em>git fetch-pack</em> and <em>git ls-remote</em> clients.
 It is enabled by default, but a repository can disable it
-by setting this configuration value to <code>false</code>.</p>
+by setting this configuration value to <span class='synopsis'><code>false</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-http-backend.txt-httpreceivepack"><a class="anchor" href="#Documentation/git-http-backend.txt-httpreceivepack"></a>http.receivepack </dt>
 <dd>
 <p>This serves <em>git send-pack</em> clients, allowing push.  It is
 disabled by default for anonymous users, and enabled by
 default for users authenticated by the web server.  It can be
-disabled by setting this item to <code>false</code>, or enabled for all
-users, including anonymous users, by setting it to <code>true</code>.</p>
+disabled by setting this item to <span class='synopsis'><code>false</code></span>, or enabled for all
+users, including anonymous users, by setting it to <span class='synopsis'><code>true</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-http-backend.txt-httpuploadarchive"><a class="anchor" href="#Documentation/git-http-backend.txt-httpuploadarchive"></a>http.uploadarchive </dt>
 <dd>
@@ -112,8 +112,8 @@ automatically by the web server.</p>
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>EXAMPLES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>All of the following examples map <code>http://$hostname/git/foo/bar.git</code>
-to <code>/var/www/git/foo/bar.git</code>.</p>
+<p>All of the following examples map <span class='synopsis'><code>http://$hostname/git/foo/bar.git</code></span>
+to <span class='synopsis'><code>/var/www/git/foo/bar.git</code></span>.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -166,8 +166,8 @@ RewriteRule ^/git/ - [E=AUTHREQUIRED:yes]
 </div>
 </div>
 <div class="paragraph">
-<p>If you do not have <code>mod_rewrite</code> available to match against the query
-string, it is sufficient to just protect <code>git-receive-pack</code> itself,
+<p>If you do not have <span class='synopsis'><code>mod_rewrite</code></span> available to match against the query
+string, it is sufficient to just protect <span class='synopsis'><code>git-receive-pack</code></span> itself,
 like:</p>
 </div>
 <div class="listingblock">
@@ -184,10 +184,10 @@ like:</p>
 <p>In this mode, the server will not request authentication until the
 client actually starts the object negotiation phase of the push, rather
 than during the initial contact.  For this reason, you must also enable
-the <code>http.receivepack</code> config option in any repositories that should
-accept a push. The default behavior, if <code>http.receivepack</code> is not set,
+the <span class='synopsis'><code>http.receivepack</code></span> config option in any repositories that should
+accept a push. The default behavior, if <span class='synopsis'><code>http.receivepack</code></span> is not set,
 is to reject any pushes by unauthenticated users; the initial request
-will therefore report <code>403 Forbidden</code> to the client, without even giving
+will therefore report <span class='synopsis'><code>403</code> <code>Forbidden</code></span> to the client, without even giving
 an opportunity for authentication.</p>
 </div>
 <div class="paragraph">
@@ -270,8 +270,8 @@ ScriptAlias /git/ /var/www/cgi-bin/gitweb.cgi/</pre>
 </dd>
 <dt class="hdlist1" id="Documentation/git-http-backend.txt-Lighttpd"><a class="anchor" href="#Documentation/git-http-backend.txt-Lighttpd"></a>Lighttpd </dt>
 <dd>
-<p>Ensure that <code>mod_cgi</code>, <code>mod_alias</code>, <code>mod_auth</code>, <code>mod_setenv</code> are
-loaded, then set <code>GIT_PROJECT_ROOT</code> appropriately and redirect
+<p>Ensure that <span class='synopsis'><code>mod_cgi</code></span>, <span class='synopsis'><code>mod_alias</code></span>, <span class='synopsis'><code>mod_auth</code></span>, <span class='synopsis'><code>mod_setenv</code></span> are
+loaded, then set <span class='synopsis'><code>GIT_PROJECT_ROOT</code></span> appropriately and redirect
 all requests to the CGI:</p>
 <div class="listingblock">
 <div class="content">
@@ -299,7 +299,7 @@ $HTTP["url"] =~ "^/git/.*/git-receive-pack$" {
 </div>
 </div>
 <div class="paragraph">
-<p>where <code>git-auth.conf</code> looks something like:</p>
+<p>where <span class='synopsis'><code>git-auth.conf</code></span> looks something like:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -332,7 +332,7 @@ $HTTP["url"] =~ "^/git/.*/git-receive-pack$" {
 <h2 id="_environment"><a class="anchor" href="#_environment"></a>ENVIRONMENT</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>git http-backend</em> relies upon the <code>CGI</code> environment variables set
+<p><em>git http-backend</em> relies upon the <span class='synopsis'><code>CGI</code></span> environment variables set
 by the invoking web server, including:</p>
 </div>
 <div class="ulist">
@@ -358,29 +358,29 @@ by the invoking web server, including:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The <code>GIT_HTTP_EXPORT_ALL</code> environment variable may be passed to
+<p>The <span class='synopsis'><code>GIT_HTTP_EXPORT_ALL</code></span> environment variable may be passed to
 <em>git-http-backend</em> to bypass the check for the "git-daemon-export-ok"
 file in each repository before allowing export of that repository.</p>
 </div>
 <div class="paragraph">
-<p>The <code>GIT_HTTP_MAX_REQUEST_BUFFER</code> environment variable (or the
-<code>http.maxRequestBuffer</code> config option) may be set to change the
+<p>The <span class='synopsis'><code>GIT_HTTP_MAX_REQUEST_BUFFER</code></span> environment variable (or the
+<span class='synopsis'><code>http.maxRequestBuffer</code></span> config option) may be set to change the
 largest ref negotiation request that git will handle during a fetch; any
 fetch requiring a larger buffer will not succeed.  This value should not
 normally need to be changed, but may be helpful if you are fetching from
 a repository with an extremely large number of refs.  The value can be
-specified with a unit (e.g., <code>100M</code> for 100 megabytes). The default is
+specified with a unit (e.g., <span class='synopsis'><code>100M</code></span> for 100 megabytes). The default is
 10 megabytes.</p>
 </div>
 <div class="paragraph">
 <p>Clients may probe for optional protocol capabilities (like the v2
-protocol) using the <code>Git-Protocol</code> HTTP header. In order to support
-these, the contents of that header must appear in the <code>GIT_PROTOCOL</code>
+protocol) using the <span class='synopsis'><code>Git-Protocol</code></span> HTTP header. In order to support
+these, the contents of that header must appear in the <span class='synopsis'><code>GIT_PROTOCOL</code></span>
 environment variable. Most webservers will pass this header to the CGI
-via the <code>HTTP_GIT_PROTOCOL</code> variable, and <code>git-http-backend</code> will
-automatically copy that to <code>GIT_PROTOCOL</code>. However, some webservers may
+via the <span class='synopsis'><code>HTTP_GIT_PROTOCOL</code></span> variable, and <span class='synopsis'><code>git-http-backend</code></span> will
+automatically copy that to <span class='synopsis'><code>GIT_PROTOCOL</code></span>. However, some webservers may
 be more selective about which headers they&#8217;ll pass, in which case they
-need to be configured explicitly (see the mention of <code>Git-Protocol</code> in
+need to be configured explicitly (see the mention of <span class='synopsis'><code>Git-Protocol</code></span> in
 the Apache config from the earlier EXAMPLES section).</p>
 </div>
 <div class="paragraph">
@@ -390,7 +390,7 @@ ensuring that any reflogs created by <em>git-receive-pack</em> contain some
 identifying information of the remote user who performed the push.</p>
 </div>
 <div class="paragraph">
-<p>All <code>CGI</code> environment variables are available to each of the hooks
+<p>All <span class='synopsis'><code>CGI</code></span> environment variables are available to each of the hooks
 invoked by the <em>git-receive-pack</em>.</p>
 </div>
 </div>

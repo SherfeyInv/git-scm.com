@@ -45,12 +45,12 @@ source, it will be removed to match the source.</p>
 </div>
 <div class="paragraph">
 <p>The command can also be used to restore the content in the index with
-<code>--staged</code>, or restore both the working tree and the index with
-<code>--staged --worktree</code>.</p>
+<span class='synopsis'><code>--staged</code></span>, or restore both the working tree and the index with
+<span class='synopsis'><code>--staged</code> <code>--worktree</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>By default, if <code>--staged</code> is given, the contents are restored from <code>HEAD</code>,
-otherwise from the index. Use <code>--source</code> to restore from a different commit.</p>
+<p>By default, if <span class='synopsis'><code>--staged</code></span> is given, the contents are restored from <span class='synopsis'><code>HEAD</code></span>,
+otherwise from the index. Use <span class='synopsis'><code>--source</code></span> to restore from a different commit.</p>
 </div>
 <div class="paragraph">
 <p>See "Reset, restore and revert" in <a href='{{< relurl "docs/git" >}}'>git[1]</a> for the differences
@@ -73,7 +73,7 @@ between the three commands.</p>
 tree. It is common to specify the source tree by naming a
 commit, branch or tag associated with it.</p>
 <div class="paragraph">
-<p>If not specified, the contents are restored from <code>HEAD</code> if <code>--staged</code> is
+<p>If not specified, the contents are restored from <span class='synopsis'><code>HEAD</code></span> if <span class='synopsis'><code>--staged</code></span> is
 given, otherwise from the index.</p>
 </div>
 </dd>
@@ -83,9 +83,9 @@ given, otherwise from the index.</p>
 <p>Interactively select hunks in the difference between the
 restore source and the restore location. See the &#8220;Interactive
 Mode&#8221; section of <a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a> to learn how to operate
-the <code>--patch</code> mode.</p>
+the <span class='synopsis'><code>--patch</code></span> mode.</p>
 <div class="paragraph">
-<p>Note that <code>--patch</code> can accept no pathspec and will prompt to restore
+<p>Note that <span class='synopsis'><code>--patch</code></span> can accept no pathspec and will prompt to restore
 all modified paths.</p>
 </div>
 </dd>
@@ -95,21 +95,21 @@ all modified paths.</p>
 <dt class="hdlist1" id="Documentation/git-restore.txt---staged"><a class="anchor" href="#Documentation/git-restore.txt---staged"></a>--staged </dt>
 <dd>
 <p>Specify the restore location. If neither option is specified,
-by default the working tree is restored. Specifying <code>--staged</code>
+by default the working tree is restored. Specifying <span class='synopsis'><code>--staged</code></span>
 will only restore the index. Specifying both restores both.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt--q"><a class="anchor" href="#Documentation/git-restore.txt--q"></a>-q </dt>
 <dt class="hdlist1" id="Documentation/git-restore.txt---quiet"><a class="anchor" href="#Documentation/git-restore.txt---quiet"></a>--quiet </dt>
 <dd>
-<p>Quiet, suppress feedback messages. Implies <code>--no-progress</code>.</p>
+<p>Quiet, suppress feedback messages. Implies <span class='synopsis'><code>--no-progress</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---progress"><a class="anchor" href="#Documentation/git-restore.txt---progress"></a>--progress </dt>
 <dt class="hdlist1" id="Documentation/git-restore.txt---no-progress"><a class="anchor" href="#Documentation/git-restore.txt---no-progress"></a>--no-progress </dt>
 <dd>
 <p>Progress status is reported on the standard error stream
-by default when it is attached to a terminal, unless <code>--quiet</code>
+by default when it is attached to a terminal, unless <span class='synopsis'><code>--quiet</code></span>
 is specified. This flag enables progress reporting even if not
-attached to a terminal, regardless of <code>--quiet</code>.</p>
+attached to a terminal, regardless of <span class='synopsis'><code>--quiet</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---ours"><a class="anchor" href="#Documentation/git-restore.txt---ours"></a>--ours </dt>
 <dt class="hdlist1" id="Documentation/git-restore.txt---theirs"><a class="anchor" href="#Documentation/git-restore.txt---theirs"></a>--theirs </dt>
@@ -117,7 +117,7 @@ attached to a terminal, regardless of <code>--quiet</code>.</p>
 <p>When restoring files in the working tree from the index, use
 stage #2 (<em>ours</em>) or #3 (<em>theirs</em>) for unmerged paths.</p>
 <div class="paragraph">
-<p>Note that during <code>git rebase</code> and <code>git pull --rebase</code>, <em>ours</em> and
+<p>Note that during <span class='synopsis'><code>git</code> <code>rebase</code></span> and <span class='synopsis'><code>git</code> <code>pull</code> <code>--rebase</code></span>, <em>ours</em> and
 <em>theirs</em> may appear swapped. See the explanation of the same options
 in <a href='{{< relurl "docs/git-checkout" >}}'>git-checkout[1]</a> for details.</p>
 </div>
@@ -130,9 +130,9 @@ recreate the conflicted merge in the unmerged paths.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---conflictltstylegt"><a id="Documentation/git-restore.txt---conflictstyle" class="anchor" href="#Documentation/git-restore.txt---conflictstyle"></a>--conflict=&lt;style&gt; </dt>
 <dd>
-<p>The same as <code>--merge</code> option above, but changes the way the
+<p>The same as <span class='synopsis'><code>--merge</code></span> option above, but changes the way the
 conflicting hunks are presented, overriding the
-<code>merge.conflictStyle</code> configuration variable.  Possible values
+<span class='synopsis'><code>merge.conflictStyle</code></span> configuration variable.  Possible values
 are "merge" (default) and "diff3" (in addition to what is
 shown by "merge" style, shows the original contents).</p>
 </dd>
@@ -140,49 +140,49 @@ shown by "merge" style, shows the original contents).</p>
 <dd>
 <p>When restoring files on the working tree from the index, do
 not abort the operation if there are unmerged entries and
-neither <code>--ours</code>, <code>--theirs</code>, <code>--merge</code> or <code>--conflict</code> is
+neither <span class='synopsis'><code>--ours</code></span>, <span class='synopsis'><code>--theirs</code></span>, <span class='synopsis'><code>--merge</code></span> or <span class='synopsis'><code>--conflict</code></span> is
 specified. Unmerged paths on the working tree are left alone.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---ignore-skip-worktree-bits"><a class="anchor" href="#Documentation/git-restore.txt---ignore-skip-worktree-bits"></a>--ignore-skip-worktree-bits </dt>
 <dd>
 <p>In sparse checkout mode, by default is to only update entries
-matched by <code>&lt;pathspec&gt;</code> and sparse patterns in
+matched by <span class='synopsis'><em>&lt;pathspec&gt;</em></span> and sparse patterns in
 $GIT_DIR/info/sparse-checkout. This option ignores the sparse
 patterns and unconditionally restores any files in
-<code>&lt;pathspec&gt;</code>.</p>
+<span class='synopsis'><em>&lt;pathspec&gt;</em></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---recurse-submodules"><a class="anchor" href="#Documentation/git-restore.txt---recurse-submodules"></a>--recurse-submodules </dt>
 <dt class="hdlist1" id="Documentation/git-restore.txt---no-recurse-submodules"><a class="anchor" href="#Documentation/git-restore.txt---no-recurse-submodules"></a>--no-recurse-submodules </dt>
 <dd>
-<p>If <code>&lt;pathspec&gt;</code> names an active submodule and the restore location
+<p>If <span class='synopsis'><em>&lt;pathspec&gt;</em></span> names an active submodule and the restore location
 includes the working tree, the submodule will only be updated if
 this option is given, in which case its working tree will be
 restored to the commit recorded in the superproject, and any local
 modifications overwritten. If nothing (or
-<code>--no-recurse-submodules</code>) is used, submodules working trees will
+<span class='synopsis'><code>--no-recurse-submodules</code></span>) is used, submodules working trees will
 not be updated. Just like <a href='{{< relurl "docs/git-checkout" >}}'>git-checkout[1]</a>, this will detach
-<code>HEAD</code> of the submodule.</p>
+<span class='synopsis'><code>HEAD</code></span> of the submodule.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---overlay"><a class="anchor" href="#Documentation/git-restore.txt---overlay"></a>--overlay </dt>
 <dt class="hdlist1" id="Documentation/git-restore.txt---no-overlay"><a class="anchor" href="#Documentation/git-restore.txt---no-overlay"></a>--no-overlay </dt>
 <dd>
 <p>In overlay mode, the command never removes files when
 restoring. In no-overlay mode, tracked files that do not
-appear in the <code>--source</code> tree are removed, to make them match
-<code>&lt;tree&gt;</code> exactly. The default is no-overlay mode.</p>
+appear in the <span class='synopsis'><code>--source</code></span> tree are removed, to make them match
+<span class='synopsis'><em>&lt;tree&gt;</em></span> exactly. The default is no-overlay mode.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---pathspec-from-fileltfilegt"><a id="Documentation/git-restore.txt---pathspec-from-filefile" class="anchor" href="#Documentation/git-restore.txt---pathspec-from-filefile"></a>--pathspec-from-file=&lt;file&gt; </dt>
 <dd>
-<p>Pathspec is passed in <code>&lt;file&gt;</code> instead of commandline args. If
-<code>&lt;file&gt;</code> is exactly <code>-</code> then standard input is used. Pathspec
+<p>Pathspec is passed in <span class='synopsis'><em>&lt;file&gt;</em></span> instead of commandline args. If
+<span class='synopsis'><em>&lt;file&gt;</em></span> is exactly <span class='synopsis'><code>-</code></span> then standard input is used. Pathspec
 elements are separated by LF or CR/LF. Pathspec elements can be
-quoted as explained for the configuration variable <code>core.quotePath</code>
-(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>). See also <code>--pathspec-file-nul</code> and
-global <code>--literal-pathspecs</code>.</p>
+quoted as explained for the configuration variable <span class='synopsis'><code>core.quotePath</code></span>
+(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>). See also <span class='synopsis'><code>--pathspec-file-nul</code></span> and
+global <span class='synopsis'><code>--literal-pathspecs</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-restore.txt---pathspec-file-nul"><a class="anchor" href="#Documentation/git-restore.txt---pathspec-file-nul"></a>--pathspec-file-nul </dt>
 <dd>
-<p>Only meaningful with <code>--pathspec-from-file</code>. Pathspec elements are
+<p>Only meaningful with <span class='synopsis'><code>--pathspec-from-file</code></span>. Pathspec elements are
 separated with NUL character and all other characters are taken
 literally (including newlines and quotes).</p>
 </dd>
@@ -205,8 +205,8 @@ literally (including newlines and quotes).</p>
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>EXAMPLES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following sequence switches to the <code>master</code> branch, reverts the
-<code>Makefile</code> to two revisions back, deletes hello.c by mistake, and gets
+<p>The following sequence switches to the <span class='synopsis'><code>master</code></span> branch, reverts the
+<span class='synopsis'><code>Makefile</code></span> to two revisions back, deletes hello.c by mistake, and gets
 it back from the index.</p>
 </div>
 <div class="listingblock">
@@ -237,7 +237,7 @@ the index, you can say</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note the quotes around <code>*.c</code>.  The file <code>hello.c</code> will also be
+<p>Note the quotes around <span class='synopsis'><code>*.c</code></span>.  The file <span class='synopsis'><code>hello.c</code></span> will also be
 restored, even though it is no longer in the working tree, because the
 file globbing is used to match entries in the index (not in the
 working tree by the shell).</p>
@@ -260,7 +260,7 @@ working tree by the shell).</p>
 </div>
 </div>
 <div class="paragraph">
-<p>To restore a file in the index to match the version in <code>HEAD</code> (this is
+<p>To restore a file in the index to match the version in <span class='synopsis'><code>HEAD</code></span> (this is
 the same as using <a href='{{< relurl "docs/git-reset" >}}'>git-reset[1]</a>)</p>
 </div>
 <div class="listingblock">

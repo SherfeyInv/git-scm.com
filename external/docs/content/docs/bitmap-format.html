@@ -30,7 +30,7 @@ it exists). A repository may have at most one bitmap.</p>
 <ul>
 <li>
 <p>If the bitmap belongs to a packfile, the <em>n</em>th bit corresponds to
-the <em>n</em>th object in pack order. For a function <code>offset</code> which maps
+the <em>n</em>th object in pack order. For a function <span class='synopsis'><code>offset</code></span> which maps
 objects to their byte offset within a pack, pack order is defined as
 follows:</p>
 <div class="literalblock">
@@ -41,7 +41,7 @@ follows:</p>
 </li>
 <li>
 <p>If the bitmap belongs to a MIDX, the <em>n</em>th bit corresponds to the
-<em>n</em>th object in MIDX order. With an additional function <code>pack</code> which
+<em>n</em>th object in MIDX order. With an additional function <span class='synopsis'><code>pack</code></span> which
 maps objects to the pack they were selected from by the MIDX, MIDX order
 is defined as follows:</p>
 <div class="literalblock">
@@ -116,7 +116,7 @@ implementation.</p>
 <dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTHASHCACHE0x4"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTHASHCACHE0x4"></a>BITMAP_OPT_HASH_CACHE (0x4):  </dt>
 <dd>
 <p>If present, the end of the bitmap file contains
-<code>N</code> 32-bit name-hash values, one per object in the
+<span class='synopsis'><code>N</code></span> 32-bit name-hash values, one per object in the
 pack/MIDX. The format and meaning of the name-hash is
 described below.</p>
 </dd>
@@ -130,7 +130,7 @@ described below.</p>
 <dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-BITMAPOPTLOOKUPTABLE0x10"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-BITMAPOPTLOOKUPTABLE0x10"></a>BITMAP_OPT_LOOKUP_TABLE (0x10):  </dt>
 <dd>
 <p>If present, the end of the bitmap file contains a table
-containing a list of <code>N</code> &lt;commit_pos, offset, xor_row&gt;
+containing a list of <span class='synopsis'><code>N</code></span> &lt;commit_pos, offset, xor_row&gt;
 triplets. The format and meaning of the table is described
 below.</p>
 <div class="admonitionblock note">
@@ -141,7 +141,7 @@ below.</p>
 </td>
 <td class="content">
 Unlike the xor_offset used to compress an individual bitmap,
-<code>xor_row</code> stores an <strong>absolute</strong> index into the lookup table, not a location
+<span class='synopsis'><code>xor_row</code></span> stores an <strong>absolute</strong> index into the lookup table, not a location
 relative to the current entry.
 </td>
 </tr>
@@ -206,7 +206,7 @@ result in an empty bitmap (no bits set).</p>
 <li>
 <p>N entries with compressed bitmaps, one for each indexed commit</p>
 <div class="paragraph">
-<p>Where <code>N</code> is the total number of entries in this bitmap index.
+<p>Where <span class='synopsis'><code>N</code></span> is the total number of entries in this bitmap index.
 Each entry contains the following:</p>
 </div>
 <div class="ulist">
@@ -231,10 +231,10 @@ found.</p>
 <dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-1-byteXOR-offset"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-1-byteXOR-offset"></a>1-byte XOR-offset:  </dt>
 <dd>
 <p>The xor offset used to compress this bitmap. For an entry
-in position <code>x</code>, an XOR offset of <code>y</code> means that the actual
+in position <span class='synopsis'><code>x</code></span>, an XOR offset of <span class='synopsis'><code>y</code></span> means that the actual
 bitmap representing this commit is composed by XORing the
-bitmap for this entry with the bitmap in entry <code>x-y</code> (i.e.
-the bitmap <code>y</code> entries before this one).</p>
+bitmap for this entry with the bitmap in entry <span class='synopsis'><code>x-y</code></span> (i.e.
+the bitmap <span class='synopsis'><code>y</code></span> entries before this one).</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -266,7 +266,7 @@ in the index.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-1-byteflagsforthisbitmap"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-1-byteflagsforthisbitmap"></a>1-byte flags for this bitmap:  </dt>
 <dd>
-<p>At the moment the only available flag is <code>0x1</code>, which hints
+<p>At the moment the only available flag is <span class='synopsis'><code>0x1</code></span>, which hints
 that this bitmap can be re-used when rebuilding bitmap indexes
 for the repository.</p>
 </dd>
@@ -362,14 +362,14 @@ order bits):</p>
 <p>K repetitions of B</p>
 </li>
 <li>
-<p>The bits stored in <code>L_1</code> through <code>L_M</code>.  Within a word, bits at
+<p>The bits stored in <span class='synopsis'><code>L_1</code></span> through <span class='synopsis'><code>L_M</code></span>.  Within a word, bits at
 lower order come earlier in the stream than those at higher
 order.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The next word after <code>L_M</code> (if any) must again be a RLW, for the next
+<p>The next word after <span class='synopsis'><code>L_M</code></span> (if any) must again be a RLW, for the next
 chunk.  For efficient appending to the bitstream, the EWAH stores a
 pointer to the last RLW in the stream.</p>
 </div>
@@ -379,7 +379,7 @@ pointer to the last RLW in the stream.</p>
 <h2 id="_appendix_b_optional_bitmap_sections"><a class="anchor" href="#_appendix_b_optional_bitmap_sections"></a>Appendix B: Optional Bitmap Sections</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>These sections may or may not be present in the <code>.bitmap</code> file; their
+<p>These sections may or may not be present in the <span class='synopsis'><code>.bitmap</code></span> file; their
 presence is indicated by the header flags section described above.</p>
 </div>
 </div>
@@ -390,7 +390,7 @@ presence is indicated by the header flags section described above.</p>
 <div class="paragraph">
 <p>If the BITMAP_OPT_HASH_CACHE flag is set, the end of the bitmap contains
 a cache of 32-bit values, one per object in the pack/MIDX. The value at
-position <code>i</code> is the hash of the pathname at which the `i`th object
+position <span class='synopsis'><code>i</code></span> is the hash of the pathname at which the `i`th object
 (counting in index or multi-pack index order) in the pack/MIDX can be found.
 This can be fed into the delta heuristics to compare objects with similar
 pathnames.</p>
@@ -418,16 +418,16 @@ hashes made under two different schemes would be pointless).</p>
 <h2 id="_commit_lookup_table"><a class="anchor" href="#_commit_lookup_table"></a>Commit lookup table</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If the BITMAP_OPT_LOOKUP_TABLE flag is set, the last <code>N * (4 + 8 + 4)</code>
-bytes (preceding the name-hash cache and trailing hash) of the <code>.bitmap</code>
+<p>If the BITMAP_OPT_LOOKUP_TABLE flag is set, the last <span class='synopsis'><code>N</code> <code>*</code> (<code>4</code> <code>+</code> <code>8</code> <code>+</code> <code>4</code>)</span>
+bytes (preceding the name-hash cache and trailing hash) of the <span class='synopsis'><code>.bitmap</code></span>
 file contains a lookup table specifying the information needed to get
 the desired bitmap from the entries without parsing previous unnecessary
 bitmaps.</p>
 </div>
 <div class="paragraph">
-<p>For a <code>.bitmap</code> containing <code>nr_entries</code> reachability bitmaps, the table
-contains a list of <code>nr_entries</code> &lt;commit_pos, offset, xor_row&gt; triplets
-(sorted in the ascending order of <code>commit_pos</code>). The content of the i&#8217;th
+<p>For a <span class='synopsis'><code>.bitmap</code></span> containing <span class='synopsis'><code>nr_entries</code></span> reachability bitmaps, the table
+contains a list of <span class='synopsis'><code>nr_entries</code></span> &lt;commit_pos, offset, xor_row&gt; triplets
+(sorted in the ascending order of <span class='synopsis'><code>commit_pos</code></span>). The content of the i&#8217;th
 triplet is -</p>
 </div>
 <div class="ulist">
@@ -462,7 +462,7 @@ index).</p>
 <dt class="hdlist1" id="Documentation/technical/bitmap-format.txt-xorrow4byteintegernetworkbyteorder"><a class="anchor" href="#Documentation/technical/bitmap-format.txt-xorrow4byteintegernetworkbyteorder"></a>xor_row (4 byte integer, network byte order):  </dt>
 <dd>
 <p>The position of the triplet whose bitmap is used to compress
-this one, or <code>0xffffffff</code> if no such bitmap exists.</p>
+this one, or <span class='synopsis'><code>0xffffffff</code></span> if no such bitmap exists.</p>
 </dd>
 </dl>
 </div>
@@ -475,9 +475,9 @@ this one, or <code>0xffffffff</code> if no such bitmap exists.</p>
 <h2 id="_pseudo_merge_bitmaps"><a class="anchor" href="#_pseudo_merge_bitmaps"></a>Pseudo-merge bitmaps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If the <code>BITMAP_OPT_PSEUDO_MERGES</code> flag is set, a variable number of
+<p>If the <span class='synopsis'><code>BITMAP_OPT_PSEUDO_MERGES</code></span> flag is set, a variable number of
 bytes (preceding the name-hash cache, commit lookup table, and trailing
-checksum) of the <code>.bitmap</code> file is used to store pseudo-merge bitmaps.</p>
+checksum) of the <span class='synopsis'><code>.bitmap</code></span> file is used to store pseudo-merge bitmaps.</p>
 </div>
 <div class="paragraph">
 <p>For more information on what pseudo-merges are, why they are useful, and
@@ -487,7 +487,7 @@ how to configure them, see the information in <a href='{{< relurl "docs/gitpacki
 <h3 id="_file_format"><a class="anchor" href="#_file_format"></a>File format</h3>
 <div class="paragraph">
 <p>If enabled, pseudo-merge bitmaps are stored in an optional section at
-the end of a <code>.bitmap</code> file. The format is as follows:</p>
+the end of a <span class='synopsis'><code>.bitmap</code></span> file. The format is as follows:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -561,13 +561,13 @@ the end of a <code>.bitmap</code> file. The format is as follows:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>commits_bitmap</code>, an EWAH-compressed bitmap describing the set of
+<p><span class='synopsis'><code>commits_bitmap</code></span>, an EWAH-compressed bitmap describing the set of
 commits included in the this psuedo-merge.</p>
 </li>
 <li>
-<p><code>merge_bitmap</code>, an EWAH-compressed bitmap describing the union of
+<p><span class='synopsis'><code>merge_bitmap</code></span>, an EWAH-compressed bitmap describing the union of
 the set of objects reachable from all commits listed in the
-<code>commits_bitmap</code>.</p>
+<span class='synopsis'><code>commits_bitmap</code></span>.</p>
 </li>
 </ul>
 </div>
@@ -580,24 +580,24 @@ following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>commit_pos</code>, a 4-byte unsigned value (in network byte-order)
+<p><span class='synopsis'><code>commit_pos</code></span>, a 4-byte unsigned value (in network byte-order)
 containing the bit position for this commit.</p>
 </li>
 <li>
-<p><code>offset</code>, an 8-byte unsigned value (also in network byte-order)
+<p><span class='synopsis'><code>offset</code></span>, an 8-byte unsigned value (also in network byte-order)
 containing either one of two possible offsets, depending on whether or
 not the most-significant bit is set.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>If unset (i.e. <code>offset &amp; ((uint64_t)1&lt;&lt;63) == 0</code>), the offset
-(relative to the beginning of the <code>.bitmap</code> file) at which the
+<p>If unset (i.e. <span class='synopsis'><em>offset &amp; ((uint64_t)1&lt;&lt;63) == 0</em></span>), the offset
+(relative to the beginning of the <span class='synopsis'><code>.bitmap</code></span> file) at which the
 pseudo-merge bitmap for this commit can be read. This indicates
 only a single pseudo-merge bitmap contains this commit.</p>
 </li>
 <li>
-<p>If set (i.e. <code>offset &amp; ((uint64_t)1&lt;&lt;63) != 0</code>), the offset
-(again relative to the beginning of the <code>.bitmap</code> file) at which
+<p>If set (i.e. <span class='synopsis'><em>offset &amp; ((uint64_t)1&lt;&lt;63) != 0</em></span>), the offset
+(again relative to the beginning of the <span class='synopsis'><code>.bitmap</code></span> file) at which
 the extended offset table can be located describing the set of
 pseudo-merge bitmaps which contain this commit. This indicates
 that multiple pseudo-merge bitmaps contain this commit.</p>
@@ -616,13 +616,13 @@ pseudo-merges. Each entry contains the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>N</code>, a 4-byte unsigned value equal to the number of pseudo-merges
+<p><span class='synopsis'><code>N</code></span>, a 4-byte unsigned value equal to the number of pseudo-merges
 which contain a given commit.</p>
 </li>
 <li>
-<p>An array of <code>N</code> 8-byte unsigned values, each of which is
+<p>An array of <span class='synopsis'><code>N</code></span> 8-byte unsigned values, each of which is
 interpreted as an offset (relative to the beginning of the
-<code>.bitmap</code> file) at which a pseudo-merge bitmap for this commit can
+<span class='synopsis'><code>.bitmap</code></span> file) at which a pseudo-merge bitmap for this commit can
 be read. These values occur in no particular order.</p>
 </li>
 </ul>
@@ -631,7 +631,7 @@ be read. These values occur in no particular order.</p>
 <li>
 <p>Positions for all pseudo-merges, each stored as an 8-byte unsigned
 value (in network byte-order) containing the offset (relative to the
-beginning of the <code>.bitmap</code> file) of each consecutive pseudo-merge.</p>
+beginning of the <span class='synopsis'><code>.bitmap</code></span> file) of each consecutive pseudo-merge.</p>
 </li>
 <li>
 <p>A 4-byte unsigned value (in network byte-order) equal to the number of

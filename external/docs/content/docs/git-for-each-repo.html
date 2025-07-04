@@ -32,7 +32,7 @@ aliases:
 <div class="sectionbody">
 <div class="paragraph">
 <p>Run a Git command on a list of repositories. The arguments after the
-known options or <code>--</code> indicator are used as the arguments for the Git
+known options or <span class='synopsis'><code>--</code></span> indicator are used as the arguments for the Git
 subprocess.</p>
 </div>
 <div class="paragraph">
@@ -40,7 +40,7 @@ subprocess.</p>
 </div>
 <div class="paragraph">
 <p>For example, we could run maintenance on each of a list of repositories
-stored in a <code>maintenance.repo</code> config variable using</p>
+stored in a <span class='synopsis'><code>maintenance.repo</code></span> config variable using</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -48,8 +48,8 @@ stored in a <code>maintenance.repo</code> config variable using</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This will run <code>git -C &lt;repo&gt; maintenance run</code> for each value <code>&lt;repo&gt;</code>
-in the multi-valued config variable <code>maintenance.repo</code>.</p>
+<p>This will run <span class='synopsis'><code>git</code> <code>-C</code> <em>&lt;repo&gt;</em> <code>maintenance</code> <code>run</code></span> for each value <span class='synopsis'><em>&lt;repo&gt;</em></span>
+in the multi-valued config variable <span class='synopsis'><code>maintenance.repo</code></span>.</p>
 </div>
 </div>
 </div>
@@ -65,7 +65,7 @@ absolute path names. Iterate on that list of paths to run
 the given arguments.</p>
 <div class="paragraph">
 <p>These config values are loaded from system, global, and local Git config,
-as available. If <code>git for-each-repo</code> is run in a directory that is not a
+as available. If <span class='synopsis'><code>git</code> <code>for-each-repo</code></span> is run in a directory that is not a
 Git repository, then only the system and global config is used.</p>
 </div>
 </dd>
@@ -76,7 +76,7 @@ on a repository. The exit code will still indicate that the
 overall operation was not successful.</p>
 <div class="paragraph">
 <p>Note that the exact exit code of the failing command is not passed
-through as the exit code of the <code>for-each-repo</code> command: If the command
+through as the exit code of the <span class='synopsis'><code>for-each-repo</code></span> command: If the command
 failed in any of the specified repositories, the overall exit code will
 be 1.</p>
 </div>
@@ -89,13 +89,13 @@ be 1.</p>
 <h2 id="_subprocess_behavior"><a class="anchor" href="#_subprocess_behavior"></a>SUBPROCESS BEHAVIOR</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If any <code>git -C &lt;repo&gt; &lt;arguments&gt;</code> subprocess returns a non-zero exit code,
-then the <code>git for-each-repo</code> process returns that exit code without running
+<p>If any <span class='synopsis'><code>git</code> <code>-C</code> <em>&lt;repo&gt;</em> <em>&lt;arguments&gt;</em></span> subprocess returns a non-zero exit code,
+then the <span class='synopsis'><code>git</code> <code>for-each-repo</code></span> process returns that exit code without running
 more subprocesses.</p>
 </div>
 <div class="paragraph">
-<p>Each <code>git -C &lt;repo&gt; &lt;arguments&gt;</code> subprocess inherits the standard file
-descriptors <code>stdin</code>, <code>stdout</code>, and <code>stderr</code>.</p>
+<p>Each <span class='synopsis'><code>git</code> <code>-C</code> <em>&lt;repo&gt;</em> <em>&lt;arguments&gt;</em></span> subprocess inherits the standard file
+descriptors <span class='synopsis'><code>stdin</code></span>, <span class='synopsis'><code>stdout</code></span>, and <span class='synopsis'><code>stderr</code></span>.</p>
 </div>
 </div>
 </div>

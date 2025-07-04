@@ -54,26 +54,26 @@ remove paths that do not exist in the working tree anymore.</p>
 <p>The "index" holds a snapshot of the content of the working tree, and it
 is this snapshot that is taken as the contents of the next commit.  Thus
 after making any changes to the working tree, and before running
-the commit command, you must use the <code>add</code> command to add any new or
+the commit command, you must use the <span class='synopsis'><code>add</code></span> command to add any new or
 modified files to the index.</p>
 </div>
 <div class="paragraph">
 <p>This command can be performed multiple times before a commit.  It only
 adds the content of the specified file(s) at the time the add command is
 run; if you want subsequent changes included in the next commit, then
-you must run <code>git add</code> again to add the new content to the index.</p>
+you must run <span class='synopsis'><code>git</code> <code>add</code></span> again to add the new content to the index.</p>
 </div>
 <div class="paragraph">
-<p>The <code>git status</code> command can be used to obtain a summary of which
+<p>The <span class='synopsis'><code>git</code> <code>status</code></span> command can be used to obtain a summary of which
 files have changes that are staged for the next commit.</p>
 </div>
 <div class="paragraph">
-<p>The <code>git add</code> command will not add ignored files by default.  If any
-ignored files were explicitly specified on the command line, <code>git add</code>
+<p>The <span class='synopsis'><code>git</code> <code>add</code></span> command will not add ignored files by default.  If any
+ignored files were explicitly specified on the command line, <span class='synopsis'><code>git</code> <code>add</code></span>
 will fail with a list of ignored files.  Ignored files reached by
 directory recursion or filename globbing performed by Git (quote your
 globs before the shell) will be silently ignored.  The <em>git add</em> command can
-be used to add ignored files with the <code>-f</code> (force) option.</p>
+be used to add ignored files with the <span class='synopsis'><code>-f</code></span> (force) option.</p>
 </div>
 <div class="paragraph">
 <p>Please see <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for alternative ways to add content to a
@@ -88,16 +88,16 @@ commit.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/git-add.txt-ltpathspecgt82308203"><a id="Documentation/git-add.txt-pathspec" class="anchor" href="#Documentation/git-add.txt-pathspec"></a>&lt;pathspec&gt;&#8230;&#8203; </dt>
 <dd>
-<p>Files to add content from.  Fileglobs (e.g. <code>*.c</code>) can
+<p>Files to add content from.  Fileglobs (e.g. <span class='synopsis'><code>*.c</code></span>) can
 be given to add all matching files.  Also a
-leading directory name (e.g. <code>dir</code> to add <code>dir/file1</code>
-and <code>dir/file2</code>) can be given to update the index to
+leading directory name (e.g. <span class='synopsis'><code>dir</code></span> to add <span class='synopsis'><code>dir/file1</code></span>
+and <span class='synopsis'><code>dir/file2</code></span>) can be given to update the index to
 match the current state of the directory as a whole (e.g.
-specifying <code>dir</code> will record not just a file <code>dir/file1</code>
-modified in the working tree, a file <code>dir/file2</code> added to
-the working tree, but also a file <code>dir/file3</code> removed from
+specifying <span class='synopsis'><code>dir</code></span> will record not just a file <span class='synopsis'><code>dir/file1</code></span>
+modified in the working tree, a file <span class='synopsis'><code>dir/file2</code></span> added to
+the working tree, but also a file <span class='synopsis'><code>dir/file3</code></span> removed from
 the working tree). Note that older versions of Git used
-to ignore removed files; use <code>--no-all</code> option if you want
+to ignore removed files; use <span class='synopsis'><code>--no-all</code></span> option if you want
 to add modified or new files but ignore removed ones.</p>
 <div class="paragraph">
 <p>For more details about the &lt;pathspec&gt; syntax, see the <em>pathspec</em> entry
@@ -123,7 +123,7 @@ be ignored.</p>
 <dt class="hdlist1" id="Documentation/git-add.txt---sparse"><a class="anchor" href="#Documentation/git-add.txt---sparse"></a>--sparse </dt>
 <dd>
 <p>Allow updating index entries outside of the sparse-checkout cone.
-Normally, <code>git add</code> refuses to update index entries whose paths do
+Normally, <span class='synopsis'><code>git</code> <code>add</code></span> refuses to update index entries whose paths do
 not fit within the sparse-checkout cone, since those files might
 be removed from the working tree without warning. See
 <a href='{{< relurl "docs/git-sparse-checkout" >}}'>git-sparse-checkout[1]</a> for more details.</p>
@@ -144,8 +144,8 @@ work tree and add them to the index. This gives the user a chance
 to review the difference before adding modified contents to the
 index.</p>
 <div class="paragraph">
-<p>This effectively runs <code>add --interactive</code>, but bypasses the
-initial command menu and directly jumps to the <code>patch</code> subcommand.
+<p>This effectively runs <span class='synopsis'><code>add</code> <code>--interactive</code></span>, but bypasses the
+initial command menu and directly jumps to the <span class='synopsis'><code>patch</code></span> subcommand.
 See &#8220;Interactive mode&#8221; for details.</p>
 </div>
 </dd>
@@ -170,7 +170,7 @@ apply to the index. See EDITING PATCHES below.</p>
 &lt;pathspec&gt;.  This removes as well as modifies index entries to
 match the working tree, but adds no new files.</p>
 <div class="paragraph">
-<p>If no &lt;pathspec&gt; is given when <code>-u</code> option is used, all
+<p>If no &lt;pathspec&gt; is given when <span class='synopsis'><code>-u</code></span> option is used, all
 tracked files in the entire working tree are updated (old versions
 of Git used to limit the update to the current directory and its
 subdirectories).</p>
@@ -185,7 +185,7 @@ matching &lt;pathspec&gt; but also where the index already has an
 entry. This adds, modifies, and removes index entries to
 match the working tree.</p>
 <div class="paragraph">
-<p>If no &lt;pathspec&gt; is given when <code>-A</code> option is used, all
+<p>If no &lt;pathspec&gt; is given when <span class='synopsis'><code>-A</code></span> option is used, all
 files in the entire working tree are updated (old versions
 of Git used to limit the update to the current directory and its
 subdirectories).</p>
@@ -210,8 +210,9 @@ for "git add --no-all &lt;pathspec&gt;&#8230;&#8203;", i.e. ignored removed file
 <p>Record only the fact that the path will be added later. An entry
 for the path is placed in the index with no content. This is
 useful for, among other things, showing the unstaged content of
-such files with <code>git diff</code> and committing them with <code>git commit
--a</code>.</p>
+such files with <span class='synopsis'><code>git</code> <code>diff</code></span> and committing them with <span class='synopsis'><code>git</code> <code>commit</code>
+
+<code>-a</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-add.txt---refresh"><a class="anchor" href="#Documentation/git-add.txt---refresh"></a>--refresh </dt>
 <dd>
@@ -223,7 +224,7 @@ information in the index.</p>
 <p>If some files could not be added because of errors indexing
 them, do not abort the operation, but continue adding the
 others. The command shall still exit with non-zero status.
-The configuration variable <code>add.ignoreErrors</code> can be set to
+The configuration variable <span class='synopsis'><code>add.ignoreErrors</code></span> can be set to
 true to make this the default behaviour.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-add.txt---ignore-missing"><a class="anchor" href="#Documentation/git-add.txt---ignore-missing"></a>--ignore-missing </dt>
@@ -235,9 +236,9 @@ tree or not.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-add.txt---no-warn-embedded-repo"><a class="anchor" href="#Documentation/git-add.txt---no-warn-embedded-repo"></a>--no-warn-embedded-repo </dt>
 <dd>
-<p>By default, <code>git add</code> will warn when adding an embedded
-repository to the index without using <code>git submodule add</code> to
-create an entry in <code>.gitmodules</code>. This option will suppress the
+<p>By default, <span class='synopsis'><code>git</code> <code>add</code></span> will warn when adding an embedded
+repository to the index without using <span class='synopsis'><code>git</code> <code>submodule</code> <code>add</code></span> to
+create an entry in <span class='synopsis'><code>.gitmodules</code></span>. This option will suppress the
 warning (e.g., if you are manually performing operations on
 submodules).</p>
 </dd>
@@ -245,9 +246,9 @@ submodules).</p>
 <dd>
 <p>Apply the "clean" process freshly to all tracked files to
 forcibly add them again to the index.  This is useful after
-changing <code>core.autocrlf</code> configuration or the <code>text</code> attribute
+changing <span class='synopsis'><code>core.autocrlf</code></span> configuration or the <span class='synopsis'><code>text</code></span> attribute
 in order to correct files added with wrong CRLF/LF line endings.
-This option implies <code>-u</code>. Lone CR characters are untouched, thus
+This option implies <span class='synopsis'><code>-u</code></span>. Lone CR characters are untouched, thus
 while a CRLF cleans to LF, a CRCRLF sequence is only partially
 cleaned to CRLF.</p>
 </dd>
@@ -259,16 +260,16 @@ unchanged.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-add.txt---pathspec-from-fileltfilegt"><a id="Documentation/git-add.txt---pathspec-from-filefile" class="anchor" href="#Documentation/git-add.txt---pathspec-from-filefile"></a>--pathspec-from-file=&lt;file&gt; </dt>
 <dd>
-<p>Pathspec is passed in <code>&lt;file&gt;</code> instead of commandline args. If
-<code>&lt;file&gt;</code> is exactly <code>-</code> then standard input is used. Pathspec
+<p>Pathspec is passed in <span class='synopsis'><em>&lt;file&gt;</em></span> instead of commandline args. If
+<span class='synopsis'><em>&lt;file&gt;</em></span> is exactly <span class='synopsis'><code>-</code></span> then standard input is used. Pathspec
 elements are separated by LF or CR/LF. Pathspec elements can be
-quoted as explained for the configuration variable <code>core.quotePath</code>
-(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>). See also <code>--pathspec-file-nul</code> and
-global <code>--literal-pathspecs</code>.</p>
+quoted as explained for the configuration variable <span class='synopsis'><code>core.quotePath</code></span>
+(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>). See also <span class='synopsis'><code>--pathspec-file-nul</code></span> and
+global <span class='synopsis'><code>--literal-pathspecs</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-add.txt---pathspec-file-nul"><a class="anchor" href="#Documentation/git-add.txt---pathspec-file-nul"></a>--pathspec-file-nul </dt>
 <dd>
-<p>Only meaningful with <code>--pathspec-from-file</code>. Pathspec elements are
+<p>Only meaningful with <span class='synopsis'><code>--pathspec-from-file</code></span>. Pathspec elements are
 separated with NUL character and all other characters are taken
 literally (including newlines and quotes).</p>
 </dd>
@@ -288,7 +289,7 @@ for command-line options).</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Adds content from all <code>*.txt</code> files under <code>Documentation</code> directory
+<p>Adds content from all <span class='synopsis'><code>*.txt</code></span> files under <span class='synopsis'><code>Documentation</code></span> directory
 and its subdirectories:</p>
 <div class="listingblock">
 <div class="content">
@@ -296,9 +297,9 @@ and its subdirectories:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that the asterisk <code>*</code> is quoted from the shell in this
+<p>Note that the asterisk <span class='synopsis'><code>*</code></span> is quoted from the shell in this
 example; this lets the command include the files from
-subdirectories of <code>Documentation/</code> directory.</p>
+subdirectories of <span class='synopsis'><code>Documentation/</code></span> directory.</p>
 </div>
 </li>
 <li>
@@ -311,7 +312,7 @@ subdirectories of <code>Documentation/</code> directory.</p>
 <div class="paragraph">
 <p>Because this example lets the shell expand the asterisk (i.e. you are
 listing the files explicitly), it does not consider
-<code>subdir/git-foo.sh</code>.</p>
+<span class='synopsis'><code>subdir/git-foo.sh</code></span>.</p>
 </div>
 </li>
 </ul>
@@ -341,7 +342,7 @@ and type return, like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You also could say <code>s</code> or <code>sta</code> or <code>status</code> above as long as the
+<p>You also could say <span class='synopsis'><code>s</code></span> or <span class='synopsis'><code>sta</code></span> or <span class='synopsis'><code>status</code></span> above as long as the
 choice is unique.</p>
 </div>
 <div class="paragraph">
@@ -352,9 +353,9 @@ choice is unique.</p>
 <dt class="hdlist1" id="Documentation/git-add.txt-status"><a class="anchor" href="#Documentation/git-add.txt-status"></a>status </dt>
 <dd>
 <p>This shows the change between HEAD and index (i.e. what will be
-committed if you say <code>git commit</code>), and between index and
+committed if you say <span class='synopsis'><code>git</code> <code>commit</code></span>), and between index and
 working tree files (i.e. what you could stage further before
-<code>git commit</code> using <code>git add</code>) for each path.  A sample output
+<span class='synopsis'><code>git</code> <code>commit</code></span> using <span class='synopsis'><code>git</code> <code>add</code></span>) for each path.  A sample output
 looks like this:</p>
 <div class="listingblock">
 <div class="content">
@@ -396,7 +397,7 @@ like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>To remove selection, prefix the input with <code>-</code>
+<p>To remove selection, prefix the input with <span class='synopsis'><code>-</code></span>
 like this:</p>
 </div>
 <div class="listingblock">
@@ -451,7 +452,7 @@ that was chosen, the index is updated with the selected hunks.</p>
 </div>
 <div class="paragraph">
 <p>You can omit having to type return here, by setting the configuration
-variable <code>interactive.singleKey</code> to <code>true</code>.</p>
+variable <span class='synopsis'><code>interactive.singleKey</code></span> to <span class='synopsis'><code>true</code></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-add.txt-diff"><a class="anchor" href="#Documentation/git-add.txt-diff"></a>diff </dt>
@@ -467,7 +468,7 @@ HEAD and index).</p>
 <h2 id="_editing_patches"><a class="anchor" href="#_editing_patches"></a>EDITING PATCHES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Invoking <code>git add -e</code> or selecting <code>e</code> from the interactive hunk
+<p>Invoking <span class='synopsis'><code>git</code> <code>add</code> <code>-e</code></span> or selecting <span class='synopsis'><code>e</code></span> from the interactive hunk
 selector will open a patch in your editor; after the editor exits, the
 result is applied to the index. You are free to make arbitrary changes
 to the patch, but note that some changes may have confusing results, or
@@ -575,8 +576,8 @@ as what&#8217;s found there:</p>
 <dt class="hdlist1" id="Documentation/git-add.txt-addignore-errorsdeprecated"><a class="anchor" href="#Documentation/git-add.txt-addignore-errorsdeprecated"></a>add.ignore-errors (deprecated) </dt>
 <dd>
 <p>Tells <em>git add</em> to continue adding files when some files cannot be
-added due to indexing errors. Equivalent to the <code>--ignore-errors</code>
-option of <a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a>.  <code>add.ignore-errors</code> is deprecated,
+added due to indexing errors. Equivalent to the <span class='synopsis'><code>--ignore-errors</code></span>
+option of <a href='{{< relurl "docs/git-add" >}}'>git-add[1]</a>.  <span class='synopsis'><code>add.ignore-errors</code></span> is deprecated,
 as it does not follow the usual naming convention for configuration
 variables.</p>
 </dd>

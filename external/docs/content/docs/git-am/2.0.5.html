@@ -58,24 +58,24 @@ If you supply directories, they will be treated as Maildirs.</p>
 <dt class="hdlist1" id="Documentation/git-am.txt--s"><a class="anchor" href="#Documentation/git-am.txt--s"></a>-s </dt>
 <dt class="hdlist1" id="Documentation/git-am.txt---signoff"><a class="anchor" href="#Documentation/git-am.txt---signoff"></a>--signoff </dt>
 <dd>
-<p>Add a <code>Signed-off-by:</code> line to the commit message, using
+<p>Add a <span class='synopsis'><code>Signed-off-by:</code></span> line to the commit message, using
 the committer identity of yourself.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt--k"><a class="anchor" href="#Documentation/git-am.txt--k"></a>-k </dt>
 <dt class="hdlist1" id="Documentation/git-am.txt---keep"><a class="anchor" href="#Documentation/git-am.txt---keep"></a>--keep </dt>
 <dd>
-<p>Pass <code>-k</code> flag to <em>git mailinfo</em> (see <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).</p>
+<p>Pass <span class='synopsis'><code>-k</code></span> flag to <em>git mailinfo</em> (see <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt---keep-non-patch"><a class="anchor" href="#Documentation/git-am.txt---keep-non-patch"></a>--keep-non-patch </dt>
 <dd>
-<p>Pass <code>-b</code> flag to <em>git mailinfo</em> (see <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).</p>
+<p>Pass <span class='synopsis'><code>-b</code></span> flag to <em>git mailinfo</em> (see <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt---no-keep-cr"><a class="anchor" href="#Documentation/git-am.txt---no-keep-cr"></a>--[no-]keep-cr </dt>
 <dd>
-<p>With <code>--keep-cr</code>, call <em>git mailsplit</em> (see <a href='{{< relurl "docs/git-mailsplit" >}}'>git-mailsplit[1]</a>)
+<p>With <span class='synopsis'><code>--keep-cr</code></span>, call <em>git mailsplit</em> (see <a href='{{< relurl "docs/git-mailsplit" >}}'>git-mailsplit[1]</a>)
 with the same option, to prevent it from stripping CR at the end of
-lines. <code>am.keepcr</code> configuration variable can be used to specify the
-default behaviour.  <code>--no-keep-cr</code> is useful to override <code>am.keepcr</code>.</p>
+lines. <span class='synopsis'><code>am.keepcr</code></span> configuration variable can be used to specify the
+default behaviour.  <span class='synopsis'><code>--no-keep-cr</code></span> is useful to override <span class='synopsis'><code>am.keepcr</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt--c"><a class="anchor" href="#Documentation/git-am.txt--c"></a>-c </dt>
 <dt class="hdlist1" id="Documentation/git-am.txt---scissors"><a class="anchor" href="#Documentation/git-am.txt---scissors"></a>--scissors </dt>
@@ -95,19 +95,19 @@ default behaviour.  <code>--no-keep-cr</code> is useful to override <code>am.kee
 <dt class="hdlist1" id="Documentation/git-am.txt--u"><a class="anchor" href="#Documentation/git-am.txt--u"></a>-u </dt>
 <dt class="hdlist1" id="Documentation/git-am.txt---utf8"><a class="anchor" href="#Documentation/git-am.txt---utf8"></a>--utf8 </dt>
 <dd>
-<p>Pass <code>-u</code> flag to <em>git mailinfo</em> (see <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).
+<p>Pass <span class='synopsis'><code>-u</code></span> flag to <em>git mailinfo</em> (see <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).
 The proposed commit log message taken from the e-mail
 is re-coded into UTF-8 encoding (configuration variable
-<code>i18n.commitencoding</code> can be used to specify project&#8217;s
+<span class='synopsis'><code>i18n.commitencoding</code></span> can be used to specify project&#8217;s
 preferred encoding if it is not UTF-8).</p>
 <div class="paragraph">
 <p>This was optional in prior versions of git, but now it is the
-default.   You can use <code>--no-utf8</code> to override this.</p>
+default.   You can use <span class='synopsis'><code>--no-utf8</code></span> to override this.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt---no-utf8"><a class="anchor" href="#Documentation/git-am.txt---no-utf8"></a>--no-utf8 </dt>
 <dd>
-<p>Pass <code>-n</code> flag to <em>git mailinfo</em> (see
+<p>Pass <span class='synopsis'><code>-n</code></span> flag to <em>git mailinfo</em> (see
 <a href='{{< relurl "docs/git-mailinfo" >}}'>git-mailinfo[1]</a>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt--3"><a class="anchor" href="#Documentation/git-am.txt--3"></a>-3 </dt>
@@ -186,8 +186,8 @@ file, and continue.</p>
 <dd>
 <p>When a patch failure occurs, &lt;msg&gt; will be printed
 to the screen before exiting.  This overrides the
-standard message informing you to use <code>--continue</code>
-or <code>--skip</code> to handle the failure.  This is solely
+standard message informing you to use <span class='synopsis'><code>--continue</code></span>
+or <span class='synopsis'><code>--skip</code></span> to handle the failure.  This is solely
 for internal use between <em>git rebase</em> and <em>git am</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-am.txt---abort"><a class="anchor" href="#Documentation/git-am.txt---abort"></a>--abort </dt>
@@ -241,7 +241,7 @@ message.  Any line that is of the form:</p>
 is terminated before the first occurrence of such a line.</p>
 </div>
 <div class="paragraph">
-<p>When initially invoking <code>git am</code>, you give it the names of the mailboxes
+<p>When initially invoking <span class='synopsis'><code>git</code> <code>am</code></span>, you give it the names of the mailboxes
 to process.  Upon seeing the first patch that does not apply, it
 aborts in the middle.  You can recover from this in one of two ways:</p>
 </div>
@@ -261,7 +261,7 @@ have produced.  Then run the command with the <em>--continue</em> option.</p>
 <div class="paragraph">
 <p>The command refuses to process new mailboxes until the current
 operation is finished, so if you decide to start over from scratch,
-run <code>git am --abort</code> before running the command with mailbox
+run <span class='synopsis'><code>git</code> <code>am</code> <code>--abort</code></span> before running the command with mailbox
 names.</p>
 </div>
 <div class="paragraph">
@@ -277,8 +277,8 @@ errors in the "From:" lines).</p>
 <h2 id="_hooks"><a class="anchor" href="#_hooks"></a>HOOKS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This command can run <code>applypatch-msg</code>, <code>pre-applypatch</code>,
-and <code>post-applypatch</code> hooks.  See <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a> for more
+<p>This command can run <span class='synopsis'><code>applypatch-msg</code></span>, <span class='synopsis'><code>pre-applypatch</code></span>,
+and <span class='synopsis'><code>post-applypatch</code></span> hooks.  See <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a> for more
 information.</p>
 </div>
 </div>

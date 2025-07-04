@@ -57,7 +57,7 @@ aliases:
 changes using platform-specific file system notification facilities.</p>
 </div>
 <div class="paragraph">
-<p>This daemon communicates directly with commands like <code>git status</code>
+<p>This daemon communicates directly with commands like <span class='synopsis'><code>git</code> <code>status</code></span>
 using the <a href="{{< relurl "docs/api-simple-ipc" >}}">simple IPC</a> interface
 instead of the slower <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a> interface.</p>
 </div>
@@ -100,13 +100,13 @@ current working directory.</p>
 <div class="paragraph">
 <p>This daemon is a long running process used to watch a single working
 directory and maintain a list of the recently changed files and
-directories.  Performance of commands such as <code>git status</code> can be
+directories.  Performance of commands such as <span class='synopsis'><code>git</code> <code>status</code></span> can be
 increased if they just ask for a summary of changes to the working
 directory and can avoid scanning the disk.</p>
 </div>
 <div class="paragraph">
-<p>When <code>core.fsmonitor</code> is set to <code>true</code> (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>)
-commands, such as <code>git status</code>, will ask the daemon for changes and
+<p>When <span class='synopsis'><code>core.fsmonitor</code></span> is set to <span class='synopsis'><code>true</code></span> (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>)
+commands, such as <span class='synopsis'><code>git</code> <code>status</code></span>, will ask the daemon for changes and
 automatically start it (if necessary).</p>
 </div>
 <div class="paragraph">

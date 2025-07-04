@@ -45,13 +45,13 @@ explicitly enabled by enabling one or more Trace2 Targets.</p>
 </div>
 <div class="paragraph">
 <p>The Trace2 API is intended to replace the existing (Trace1)
-<code>printf()</code>-style tracing provided by the existing <code>GIT_TRACE</code> and
-<code>GIT_TRACE_PERFORMANCE</code> facilities.  During initial implementation,
+<span class='synopsis'><code>printf</code>()</span>-style tracing provided by the existing <span class='synopsis'><code>GIT_TRACE</code></span> and
+<span class='synopsis'><code>GIT_TRACE_PERFORMANCE</code></span> facilities.  During initial implementation,
 Trace2 and Trace1 may operate in parallel.</p>
 </div>
 <div class="paragraph">
 <p>The Trace2 API defines a set of high-level messages with known fields,
-such as (<code>start</code>: <code>argv</code>) and (<code>exit</code>: {<code>exit-code</code>, <code>elapsed-time</code>}).</p>
+such as (<span class='synopsis'><code>start</code></span>: <span class='synopsis'><code>argv</code></span>) and (<span class='synopsis'><code>exit</code></span>: {<span class='synopsis'><code>exit-code</code></span>, <span class='synopsis'><code>elapsed-time</code></span>}).</p>
 </div>
 <div class="paragraph">
 <p>Trace2 instrumentation throughout the Git code base sends Trace2
@@ -66,10 +66,10 @@ formats in the future.  This might be used to define a binary format,
 for example.</p>
 </div>
 <div class="paragraph">
-<p>Trace2 is controlled using <code>trace2.*</code> config values in the system and
-global config files and <code>GIT_TRACE2*</code> environment variables.  Trace2 does
+<p>Trace2 is controlled using <span class='synopsis'><code>trace2.*</code></span> config values in the system and
+global config files and <span class='synopsis'><code>GIT_TRACE2*</code></span> environment variables.  Trace2 does
 not read from repo local or worktree config files, nor does it respect
-<code>-c</code> command line config settings.</p>
+<span class='synopsis'><code>-c</code></span> command line config settings.</p>
 </div>
 </div>
 </div>
@@ -83,9 +83,9 @@ Format details are given in a later section.</p>
 <div class="sect2">
 <h3 id="_the_normal_format_target"><a class="anchor" href="#_the_normal_format_target"></a>The Normal Format Target</h3>
 <div class="paragraph">
-<p>The normal format target is a traditional <code>printf()</code> format and similar
-to the <code>GIT_TRACE</code> format.  This format is enabled with the <code>GIT_TRACE2</code>
-environment variable or the <code>trace2.normalTarget</code> system or global
+<p>The normal format target is a traditional <span class='synopsis'><code>printf</code>()</span> format and similar
+to the <span class='synopsis'><code>GIT_TRACE</code></span> format.  This format is enabled with the <span class='synopsis'><code>GIT_TRACE2</code></span>
+environment variable or the <span class='synopsis'><code>trace2.normalTarget</code></span> system or global
 config setting.</p>
 </div>
 <div class="paragraph">
@@ -126,10 +126,10 @@ git version 2.20.1.155.g426c96fcdb</pre>
 <h3 id="_the_performance_format_target"><a class="anchor" href="#_the_performance_format_target"></a>The Performance Format Target</h3>
 <div class="paragraph">
 <p>The performance format target (PERF) is a column-based format to
-replace <code>GIT_TRACE_PERFORMANCE</code> and is suitable for development and
-testing, possibly to complement tools like <code>gprof</code>.  This format is
-enabled with the <code>GIT_TRACE2_PERF</code> environment variable or the
-<code>trace2.perfTarget</code> system or global config setting.</p>
+replace <span class='synopsis'><code>GIT_TRACE_PERFORMANCE</code></span> and is suitable for development and
+testing, possibly to complement tools like <span class='synopsis'><code>gprof</code></span>.  This format is
+enabled with the <span class='synopsis'><code>GIT_TRACE2_PERF</code></span> environment variable or the
+<span class='synopsis'><code>trace2.perfTarget</code></span> system or global config setting.</p>
 </div>
 <div class="paragraph">
 <p>For example</p>
@@ -169,8 +169,8 @@ git version 2.20.1.155.g426c96fcdb</pre>
 <h3 id="_the_event_format_target"><a class="anchor" href="#_the_event_format_target"></a>The Event Format Target</h3>
 <div class="paragraph">
 <p>The event format target is a JSON-based format of event data suitable
-for telemetry analysis.  This format is enabled with the <code>GIT_TRACE2_EVENT</code>
-environment variable or the <code>trace2.eventTarget</code> system or global config
+for telemetry analysis.  This format is enabled with the <span class='synopsis'><code>GIT_TRACE2_EVENT</code></span>
+environment variable or the <span class='synopsis'><code>trace2.eventTarget</code></span> system or global config
 setting.</p>
 </div>
 <div class="paragraph">
@@ -218,23 +218,23 @@ system or global config value to one of the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>0</code> or <code>false</code> - Disables the target.</p>
+<p><span class='synopsis'><code>0</code></span> or <span class='synopsis'><code>false</code></span> - Disables the target.</p>
 </li>
 <li>
-<p><code>1</code> or <code>true</code> - Writes to <code>STDERR</code>.</p>
+<p><span class='synopsis'><code>1</code></span> or <span class='synopsis'><code>true</code></span> - Writes to <span class='synopsis'><code>STDERR</code></span>.</p>
 </li>
 <li>
-<p><code>[2-9]</code> - Writes to the already opened file descriptor.</p>
+<p><span class='synopsis'>[<code>2-9</code>]</span> - Writes to the already opened file descriptor.</p>
 </li>
 <li>
-<p><code>&lt;absolute-pathname&gt;</code> - Writes to the file in append mode. If the target
+<p><span class='synopsis'><em>&lt;absolute-pathname&gt;</em></span> - Writes to the file in append mode. If the target
 already exists and is a directory, the traces will be written to files (one
 per process) underneath the given directory.</p>
 </li>
 <li>
-<p><code>af_unix:[&lt;socket_type&gt;:]&lt;absolute-pathname&gt;</code> - Write to a
+<p><span class='synopsis'><code>af_unix:</code>[<em>&lt;socket_type&gt;</em><code>:</code>]<em>&lt;absolute-pathname&gt;</em></span> - Write to a
 Unix DomainSocket (on platforms that support them).  Socket
-type can be either <code>stream</code> or <code>dgram</code>; if omitted Git will
+type can be either <span class='synopsis'><code>stream</code></span> or <span class='synopsis'><code>dgram</code></span>; if omitted Git will
 try both.</p>
 </li>
 </ul>
@@ -253,32 +253,32 @@ filename collisions).</p>
 <h2 id="_trace2_api"><a class="anchor" href="#_trace2_api"></a>Trace2 API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Trace2 public API is defined and documented in <code>trace2.h</code>; refer to it for
+<p>The Trace2 public API is defined and documented in <span class='synopsis'><code>trace2.h</code></span>; refer to it for
 more information.  All public functions and macros are prefixed
-with <code>trace2_</code> and are implemented in <code>trace2.c</code>.</p>
+with <span class='synopsis'><code>trace2_</code></span> and are implemented in <span class='synopsis'><code>trace2.c</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>There are no public Trace2 data structures.</p>
 </div>
 <div class="paragraph">
 <p>The Trace2 code also defines a set of private functions and data types
-in the <code>trace2/</code> directory.  These symbols are prefixed with <code>tr2_</code>
-and should only be used by functions in <code>trace2.c</code> (or other private
-source files in <code>trace2/</code>).</p>
+in the <span class='synopsis'><code>trace2/</code></span> directory.  These symbols are prefixed with <span class='synopsis'><code>tr2_</code></span>
+and should only be used by functions in <span class='synopsis'><code>trace2.c</code></span> (or other private
+source files in <span class='synopsis'><code>trace2/</code></span>).</p>
 </div>
 <div class="sect2">
 <h3 id="_conventions_for_public_functions_and_macros"><a class="anchor" href="#_conventions_for_public_functions_and_macros"></a>Conventions for Public Functions and Macros</h3>
 <div class="paragraph">
-<p>Some functions have a <code>_fl()</code> suffix to indicate that they take <code>file</code>
-and <code>line-number</code> arguments.</p>
+<p>Some functions have a <span class='synopsis'><code>_fl</code>()</span> suffix to indicate that they take <span class='synopsis'><code>file</code></span>
+and <span class='synopsis'><code>line-number</code></span> arguments.</p>
 </div>
 <div class="paragraph">
-<p>Some functions have a <code>_va_fl()</code> suffix to indicate that they also
-take a <code>va_list</code> argument.</p>
+<p>Some functions have a <span class='synopsis'><code>_va_fl</code>()</span> suffix to indicate that they also
+take a <span class='synopsis'><code>va_list</code></span> argument.</p>
 </div>
 <div class="paragraph">
-<p>Some functions have a <code>_printf_fl()</code> suffix to indicate that they also
-take a <code>printf()</code> style format with a variable number of arguments.</p>
+<p>Some functions have a <span class='synopsis'><code>_printf_fl</code>()</span> suffix to indicate that they also
+take a <span class='synopsis'><code>printf</code>()</span> style format with a variable number of arguments.</p>
 </div>
 <div class="paragraph">
 <p>CPP wrapper macros are defined to hide most of these details.</p>
@@ -301,13 +301,13 @@ take a <code>printf()</code> style format with a variable number of arguments.</
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltevent-namegtcode"><a id="Documentation/technical/api-trace2.txt-event-name" class="anchor" href="#Documentation/technical/api-trace2.txt-event-name"></a><code>&lt;event-name&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltevent-namegtemspan"><a id="Documentation/technical/api-trace2.txt-event-name" class="anchor" href="#Documentation/technical/api-trace2.txt-event-name"></a><span class='synopsis'><em>&lt;event-name&gt;</em></span> </dt>
 <dd>
 <p>is the event name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltevent-messagegtcode"><a id="Documentation/technical/api-trace2.txt-event-message" class="anchor" href="#Documentation/technical/api-trace2.txt-event-message"></a><code>&lt;event-message&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltevent-messagegtemspan"><a id="Documentation/technical/api-trace2.txt-event-message" class="anchor" href="#Documentation/technical/api-trace2.txt-event-message"></a><span class='synopsis'><em>&lt;event-message&gt;</em></span> </dt>
 <dd>
-<p>is a free-form <code>printf()</code> message intended for human consumption.</p>
+<p>is a free-form <span class='synopsis'><code>printf</code>()</span> message intended for human consumption.</p>
 <div class="paragraph">
 <p>Note that this may contain embedded LF or CRLF characters that are
 not escaped, so the event may spill across multiple lines.</p>
@@ -316,8 +316,8 @@ not escaped, so the event may spill across multiple lines.</p>
 </dl>
 </div>
 <div class="paragraph">
-<p>If <code>GIT_TRACE2_BRIEF</code> or <code>trace2.normalBrief</code> is true, the <code>time</code>, <code>filename</code>,
-and <code>line</code> fields are omitted.</p>
+<p>If <span class='synopsis'><code>GIT_TRACE2_BRIEF</code></span> or <span class='synopsis'><code>trace2.normalBrief</code></span> is true, the <span class='synopsis'><code>time</code></span>, <span class='synopsis'><code>filename</code></span>,
+and <span class='synopsis'><code>line</code></span> fields are omitted.</p>
 </div>
 <div class="paragraph">
 <p>This target is intended to be more of a summary (like GIT_TRACE) and
@@ -346,27 +346,27 @@ data messages, for example.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltdepthgtcode"><a id="Documentation/technical/api-trace2.txt-depth" class="anchor" href="#Documentation/technical/api-trace2.txt-depth"></a><code>&lt;depth&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltdepthgtemspan"><a id="Documentation/technical/api-trace2.txt-depth" class="anchor" href="#Documentation/technical/api-trace2.txt-depth"></a><span class='synopsis'><em>&lt;depth&gt;</em></span> </dt>
 <dd>
 <p>is the git process depth.  This is the number of parent
 git processes.  A top-level git command has depth value "d0".
 A child of it has depth value "d1".  A second level child
 has depth value "d2" and so on.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltthread-namegtcode"><a id="Documentation/technical/api-trace2.txt-thread-name" class="anchor" href="#Documentation/technical/api-trace2.txt-thread-name"></a><code>&lt;thread-name&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltthread-namegtemspan"><a id="Documentation/technical/api-trace2.txt-thread-name" class="anchor" href="#Documentation/technical/api-trace2.txt-thread-name"></a><span class='synopsis'><em>&lt;thread-name&gt;</em></span> </dt>
 <dd>
 <p>is a unique name for the thread.  The primary thread
 is called "main".  Other thread names are of the form "th%d:%s"
 and include a unique number and the name of the thread-proc.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltevent-namegtcode-1"><a id="Documentation/technical/api-trace2.txt-event-name-1" class="anchor" href="#Documentation/technical/api-trace2.txt-event-name-1"></a><code>&lt;event-name&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltevent-namegtemspan-1"><a id="Documentation/technical/api-trace2.txt-event-name-1" class="anchor" href="#Documentation/technical/api-trace2.txt-event-name-1"></a><span class='synopsis'><em>&lt;event-name&gt;</em></span> </dt>
 <dd>
 <p>is the event name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltrepo-idgtcode"><a id="Documentation/technical/api-trace2.txt-repo-id" class="anchor" href="#Documentation/technical/api-trace2.txt-repo-id"></a><code>&lt;repo-id&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltrepo-idgtemspan"><a id="Documentation/technical/api-trace2.txt-repo-id" class="anchor" href="#Documentation/technical/api-trace2.txt-repo-id"></a><span class='synopsis'><em>&lt;repo-id&gt;</em></span> </dt>
 <dd>
 <p>when present, is a number indicating the repository
-in use.  A <code>def_repo</code> event is emitted when a repository is
+in use.  A <span class='synopsis'><code>def_repo</code></span> event is emitted when a repository is
 opened.  This defines the repo-id and associated worktree.
 Subsequent repo-specific events will reference this repo-id.</p>
 <div class="paragraph">
@@ -374,25 +374,25 @@ Subsequent repo-specific events will reference this repo-id.</p>
 This field is in anticipation of in-proc submodules in the future.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codelttabsgtcode"><a id="Documentation/technical/api-trace2.txt-tabs" class="anchor" href="#Documentation/technical/api-trace2.txt-tabs"></a><code>&lt;t_abs&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemlttabsgtemspan"><a id="Documentation/technical/api-trace2.txt-tabs" class="anchor" href="#Documentation/technical/api-trace2.txt-tabs"></a><span class='synopsis'><em>&lt;t_abs&gt;</em></span> </dt>
 <dd>
 <p>when present, is the absolute time in seconds since the
 program started.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codelttrelgtcode"><a id="Documentation/technical/api-trace2.txt-trel" class="anchor" href="#Documentation/technical/api-trace2.txt-trel"></a><code>&lt;t_rel&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemlttrelgtemspan"><a id="Documentation/technical/api-trace2.txt-trel" class="anchor" href="#Documentation/technical/api-trace2.txt-trel"></a><span class='synopsis'><em>&lt;t_rel&gt;</em></span> </dt>
 <dd>
 <p>when present, is time in seconds relative to the start of
 the current region.  For a thread-exit event, it is the elapsed
 time of the thread.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltcategorygtcode"><a id="Documentation/technical/api-trace2.txt-category" class="anchor" href="#Documentation/technical/api-trace2.txt-category"></a><code>&lt;category&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltcategorygtemspan"><a id="Documentation/technical/api-trace2.txt-category" class="anchor" href="#Documentation/technical/api-trace2.txt-category"></a><span class='synopsis'><em>&lt;category&gt;</em></span> </dt>
 <dd>
 <p>is present on region and data events and is used to
 indicate a broad category, such as "index" or "status".</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeltperf-event-messagegtcode"><a id="Documentation/technical/api-trace2.txt-perf-event-message" class="anchor" href="#Documentation/technical/api-trace2.txt-perf-event-message"></a><code>&lt;perf-event-message&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsisemltperf-event-messagegtemspan"><a id="Documentation/technical/api-trace2.txt-perf-event-message" class="anchor" href="#Documentation/technical/api-trace2.txt-perf-event-message"></a><span class='synopsis'><em>&lt;perf-event-message&gt;</em></span> </dt>
 <dd>
-<p>is a free-form <code>printf()</code> message intended for human consumption.</p>
+<p>is a free-form <span class='synopsis'><code>printf</code>()</span> message intended for human consumption.</p>
 </dd>
 </dl>
 </div>
@@ -403,8 +403,8 @@ indicate a broad category, such as "index" or "status".</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If <code>GIT_TRACE2_PERF_BRIEF</code> or <code>trace2.perfBrief</code> is true, the <code>time</code>, <code>file</code>,
-and <code>line</code> fields are omitted.</p>
+<p>If <span class='synopsis'><code>GIT_TRACE2_PERF_BRIEF</code></span> or <span class='synopsis'><code>trace2.perfBrief</code></span> is true, the <span class='synopsis'><code>time</code></span>, <span class='synopsis'><code>file</code></span>,
+and <span class='synopsis'><code>line</code></span> fields are omitted.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -451,11 +451,11 @@ event-specific.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeeventlteventgtcode"><a id="Documentation/technical/api-trace2.txt-eventevent" class="anchor" href="#Documentation/technical/api-trace2.txt-eventevent"></a><code>"event":&lt;event&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeeventcodeemlteventgtemspan"><a id="Documentation/technical/api-trace2.txt-eventevent" class="anchor" href="#Documentation/technical/api-trace2.txt-eventevent"></a><span class='synopsis'><code>"event":</code><em>&lt;event&gt;</em></span> </dt>
 <dd>
 <p>is the event name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codesidltsidgtcode"><a id="Documentation/technical/api-trace2.txt-sidsid" class="anchor" href="#Documentation/technical/api-trace2.txt-sidsid"></a><code>"sid":&lt;sid&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodesidcodeemltsidgtemspan"><a id="Documentation/technical/api-trace2.txt-sidsid" class="anchor" href="#Documentation/technical/api-trace2.txt-sidsid"></a><span class='synopsis'><code>"sid":</code><em>&lt;sid&gt;</em></span> </dt>
 <dd>
 <p>is the session-id.  This is a unique string to identify the
 process instance to allow all events emitted by a process to
@@ -465,31 +465,31 @@ session-id is prepended with the session-id of the parent git
 process to allow parent-child relationships to be identified
 during post-processing.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codethreadltthreadgtcode"><a id="Documentation/technical/api-trace2.txt-threadthread" class="anchor" href="#Documentation/technical/api-trace2.txt-threadthread"></a><code>"thread":&lt;thread&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodethreadcodeemltthreadgtemspan"><a id="Documentation/technical/api-trace2.txt-threadthread" class="anchor" href="#Documentation/technical/api-trace2.txt-threadthread"></a><span class='synopsis'><code>"thread":</code><em>&lt;thread&gt;</em></span> </dt>
 <dd>
 <p>is the thread name.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codetimelttimegtcode"><a id="Documentation/technical/api-trace2.txt-timetime" class="anchor" href="#Documentation/technical/api-trace2.txt-timetime"></a><code>"time":&lt;time&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodetimecodeemlttimegtemspan"><a id="Documentation/technical/api-trace2.txt-timetime" class="anchor" href="#Documentation/technical/api-trace2.txt-timetime"></a><span class='synopsis'><code>"time":</code><em>&lt;time&gt;</em></span> </dt>
 <dd>
 <p>is the UTC time of the event.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codefileltfilenamegtcode"><a id="Documentation/technical/api-trace2.txt-filefilename" class="anchor" href="#Documentation/technical/api-trace2.txt-filefilename"></a><code>"file":&lt;filename&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodefilecodeemltfilenamegtemspan"><a id="Documentation/technical/api-trace2.txt-filefilename" class="anchor" href="#Documentation/technical/api-trace2.txt-filefilename"></a><span class='synopsis'><code>"file":</code><em>&lt;filename&gt;</em></span> </dt>
 <dd>
 <p>is source file generating the event.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codelineltline-numbergtcode"><a id="Documentation/technical/api-trace2.txt-lineline-number" class="anchor" href="#Documentation/technical/api-trace2.txt-lineline-number"></a><code>"line":&lt;line-number&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodelinecodeemltline-numbergtemspan"><a id="Documentation/technical/api-trace2.txt-lineline-number" class="anchor" href="#Documentation/technical/api-trace2.txt-lineline-number"></a><span class='synopsis'><code>"line":</code><em>&lt;line-number&gt;</em></span> </dt>
 <dd>
 <p>is the integer source line number generating the event.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-coderepoltrepo-idgtcode"><a id="Documentation/technical/api-trace2.txt-reporepo-id" class="anchor" href="#Documentation/technical/api-trace2.txt-reporepo-id"></a><code>"repo":&lt;repo-id&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscoderepocodeemltrepo-idgtemspan"><a id="Documentation/technical/api-trace2.txt-reporepo-id" class="anchor" href="#Documentation/technical/api-trace2.txt-reporepo-id"></a><span class='synopsis'><code>"repo":</code><em>&lt;repo-id&gt;</em></span> </dt>
 <dd>
 <p>when present, is the integer repo-id as described previously.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>If <code>GIT_TRACE2_EVENT_BRIEF</code> or <code>trace2.eventBrief</code> is true, the <code>file</code>
-and <code>line</code> fields are omitted from all events and the <code>time</code> field is
+<p>If <span class='synopsis'><code>GIT_TRACE2_EVENT_BRIEF</code></span> or <span class='synopsis'><code>trace2.eventBrief</code></span> is true, the <span class='synopsis'><code>file</code></span>
+and <span class='synopsis'><code>line</code></span> fields are omitted from all events and the <span class='synopsis'><code>time</code></span> field is
 only present on the "start" and "atexit" events.</p>
 </div>
 </div>
@@ -497,7 +497,7 @@ only present on the "start" and "atexit" events.</p>
 <h4 id="_event_specific_keyvalue_pairs"><a class="anchor" href="#_event_specific_keyvalue_pairs"></a>Event-Specific Key/Value Pairs</h4>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeversioncode"><a id="Documentation/technical/api-trace2.txt-version" class="anchor" href="#Documentation/technical/api-trace2.txt-version"></a><code>"version"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeversioncodespan"><a id="Documentation/technical/api-trace2.txt-version" class="anchor" href="#Documentation/technical/api-trace2.txt-version"></a><span class='synopsis'><code>"version"</code></span> </dt>
 <dd>
 <p>This event gives the version of the executable and the EVENT format. It
 should always be the first event in a trace session. The EVENT format
@@ -517,7 +517,7 @@ to the EVENT format version.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codetoomanyfilescode"><a id="Documentation/technical/api-trace2.txt-toomanyfiles" class="anchor" href="#Documentation/technical/api-trace2.txt-toomanyfiles"></a><code>"too_many_files"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodetoomanyfilescodespan"><a id="Documentation/technical/api-trace2.txt-toomanyfiles" class="anchor" href="#Documentation/technical/api-trace2.txt-toomanyfiles"></a><span class='synopsis'><code>"too_many_files"</code></span> </dt>
 <dd>
 <p>This event is written to the git-trace2-discard sentinel file if there
 are too many files in the target trace directory (see the
@@ -531,7 +531,7 @@ trace2.maxFiles config option).</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codestartcode"><a id="Documentation/technical/api-trace2.txt-start" class="anchor" href="#Documentation/technical/api-trace2.txt-start"></a><code>"start"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodestartcodespan"><a id="Documentation/technical/api-trace2.txt-start" class="anchor" href="#Documentation/technical/api-trace2.txt-start"></a><span class='synopsis'><code>"start"</code></span> </dt>
 <dd>
 <p>This event contains the complete argv received by main().</p>
 <div class="listingblock">
@@ -545,9 +545,9 @@ trace2.maxFiles config option).</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeexitcode"><a id="Documentation/technical/api-trace2.txt-exit" class="anchor" href="#Documentation/technical/api-trace2.txt-exit"></a><code>"exit"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeexitcodespan"><a id="Documentation/technical/api-trace2.txt-exit" class="anchor" href="#Documentation/technical/api-trace2.txt-exit"></a><span class='synopsis'><code>"exit"</code></span> </dt>
 <dd>
-<p>This event is emitted when git calls <code>exit()</code>.</p>
+<p>This event is emitted when git calls <span class='synopsis'><code>exit</code>()</span>.</p>
 <div class="listingblock">
 <div class="content">
 <pre>{
@@ -559,9 +559,9 @@ trace2.maxFiles config option).</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeatexitcode"><a id="Documentation/technical/api-trace2.txt-atexit" class="anchor" href="#Documentation/technical/api-trace2.txt-atexit"></a><code>"atexit"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeatexitcodespan"><a id="Documentation/technical/api-trace2.txt-atexit" class="anchor" href="#Documentation/technical/api-trace2.txt-atexit"></a><span class='synopsis'><code>"atexit"</code></span> </dt>
 <dd>
-<p>This event is emitted by the Trace2 <code>atexit</code> routine during
+<p>This event is emitted by the Trace2 <span class='synopsis'><code>atexit</code></span> routine during
 final shutdown.  It should be the last event emitted by the
 process.</p>
 <div class="paragraph">
@@ -580,7 +580,7 @@ completed.)</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codesignalcode"><a id="Documentation/technical/api-trace2.txt-signal" class="anchor" href="#Documentation/technical/api-trace2.txt-signal"></a><code>"signal"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodesignalcodespan"><a id="Documentation/technical/api-trace2.txt-signal" class="anchor" href="#Documentation/technical/api-trace2.txt-signal"></a><span class='synopsis'><code>"signal"</code></span> </dt>
 <dd>
 <p>This event is emitted when the program is terminated by a user
 signal.  Depending on the platform, the signal event may
@@ -596,10 +596,10 @@ prevent the "atexit" event from being generated.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeerrorcode"><a id="Documentation/technical/api-trace2.txt-error" class="anchor" href="#Documentation/technical/api-trace2.txt-error"></a><code>"error"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeerrorcodespan"><a id="Documentation/technical/api-trace2.txt-error" class="anchor" href="#Documentation/technical/api-trace2.txt-error"></a><span class='synopsis'><code>"error"</code></span> </dt>
 <dd>
-<p>This event is emitted when one of the <code>BUG()</code>, <code>bug()</code>, <code>error()</code>,
-<code>die()</code>, <code>warning()</code>, or <code>usage()</code> functions are called.</p>
+<p>This event is emitted when one of the <span class='synopsis'><code>BUG</code>()</span>, <span class='synopsis'><code>bug</code>()</span>, <span class='synopsis'><code>error</code>()</span>,
+<span class='synopsis'><code>die</code>()</span>, <span class='synopsis'><code>warning</code>()</span>, or <span class='synopsis'><code>usage</code>()</span> functions are called.</p>
 <div class="listingblock">
 <div class="content">
 <pre>{
@@ -616,7 +616,7 @@ allows post-processors to group errors by type without worrying
 about specific error arguments.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codecmdpathcode"><a id="Documentation/technical/api-trace2.txt-cmdpath" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdpath"></a><code>"cmd_path"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodecmdpathcodespan"><a id="Documentation/technical/api-trace2.txt-cmdpath" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdpath"></a><span class='synopsis'><code>"cmd_path"</code></span> </dt>
 <dd>
 <p>This event contains the discovered full path of the git
 executable (on platforms that are configured to resolve it).</p>
@@ -630,7 +630,7 @@ executable (on platforms that are configured to resolve it).</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codecmdancestrycode"><a id="Documentation/technical/api-trace2.txt-cmdancestry" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdancestry"></a><code>"cmd_ancestry"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodecmdancestrycodespan"><a id="Documentation/technical/api-trace2.txt-cmdancestry" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdancestry"></a><span class='synopsis'><code>"cmd_ancestry"</code></span> </dt>
 <dd>
 <p>This event contains the text command name for the parent (and earlier
 generations of parents) of the current process, in an array ordered from
@@ -646,7 +646,7 @@ on all platforms.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codecmdnamecode"><a id="Documentation/technical/api-trace2.txt-cmdname" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdname"></a><code>"cmd_name"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodecmdnamecodespan"><a id="Documentation/technical/api-trace2.txt-cmdname" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdname"></a><span class='synopsis'><code>"cmd_name"</code></span> </dt>
 <dd>
 <p>This event contains the command name for this git process
 and the hierarchy of commands from parent git processes.</p>
@@ -675,7 +675,7 @@ these special values are used:</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codecmdmodecode"><a id="Documentation/technical/api-trace2.txt-cmdmode" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdmode"></a><code>"cmd_mode"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodecmdmodecodespan"><a id="Documentation/technical/api-trace2.txt-cmdmode" class="anchor" href="#Documentation/technical/api-trace2.txt-cmdmode"></a><span class='synopsis'><code>"cmd_mode"</code></span> </dt>
 <dd>
 <p>This event, when present, describes the command variant. This
 event may be emitted more than once.</p>
@@ -695,7 +695,7 @@ And these variations typically have different performance
 characteristics that are not comparable.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codealiascode"><a id="Documentation/technical/api-trace2.txt-alias" class="anchor" href="#Documentation/technical/api-trace2.txt-alias"></a><code>"alias"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodealiascodespan"><a id="Documentation/technical/api-trace2.txt-alias" class="anchor" href="#Documentation/technical/api-trace2.txt-alias"></a><span class='synopsis'><code>"alias"</code></span> </dt>
 <dd>
 <p>This event is present when an alias is expanded.</p>
 <div class="listingblock">
@@ -709,7 +709,7 @@ characteristics that are not comparable.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codechildstartcode"><a id="Documentation/technical/api-trace2.txt-childstart" class="anchor" href="#Documentation/technical/api-trace2.txt-childstart"></a><code>"child_start"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodechildstartcodespan"><a id="Documentation/technical/api-trace2.txt-childstart" class="anchor" href="#Documentation/technical/api-trace2.txt-childstart"></a><span class='synopsis'><code>"child_start"</code></span> </dt>
 <dd>
 <p>This event describes a child process that is about to be
 spawned.</p>
@@ -738,10 +738,10 @@ corresponding child_exit event.</p>
 with "?".</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codechildexitcode"><a id="Documentation/technical/api-trace2.txt-childexit" class="anchor" href="#Documentation/technical/api-trace2.txt-childexit"></a><code>"child_exit"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodechildexitcodespan"><a id="Documentation/technical/api-trace2.txt-childexit" class="anchor" href="#Documentation/technical/api-trace2.txt-childexit"></a><span class='synopsis'><code>"child_exit"</code></span> </dt>
 <dd>
 <p>This event is generated after the current process has returned
-from the <code>waitpid()</code> and collected the exit information from the
+from the <span class='synopsis'><code>waitpid</code>()</span> and collected the exit information from the
 child.</p>
 <div class="listingblock">
 <div class="content">
@@ -762,14 +762,14 @@ a hint for post-processing.  (But it is only a hint because the child
 process may be a shell script which doesn&#8217;t have a session-id.)</p>
 </div>
 <div class="paragraph">
-<p>Note that the <code>t_rel</code> field contains the observed run time in seconds
+<p>Note that the <span class='synopsis'><code>t_rel</code></span> field contains the observed run time in seconds
 for the child process (starting before the fork/exec/spawn and
-stopping after the <code>waitpid()</code> and includes OS process creation overhead).
+stopping after the <span class='synopsis'><code>waitpid</code>()</span> and includes OS process creation overhead).
 So this time will be slightly larger than the atexit time reported by
 the child process itself.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codechildreadycode"><a id="Documentation/technical/api-trace2.txt-childready" class="anchor" href="#Documentation/technical/api-trace2.txt-childready"></a><code>"child_ready"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodechildreadycodespan"><a id="Documentation/technical/api-trace2.txt-childready" class="anchor" href="#Documentation/technical/api-trace2.txt-childready"></a><span class='synopsis'><code>"child_ready"</code></span> </dt>
 <dd>
 <p>This event is generated after the current process has started
 a background process and released all handles to it.</p>
@@ -808,16 +808,16 @@ daemon.  So even if the child does eventually finish booting up,
 the parent will not emit an updated event.</p>
 </div>
 <div class="paragraph">
-<p>Note that the <code>t_rel</code> field contains the observed run time in seconds
+<p>Note that the <span class='synopsis'><code>t_rel</code></span> field contains the observed run time in seconds
 when the parent released the child process into the background.
 The child is assumed to be a long-running daemon process and may
 outlive the parent process.  So the parent&#8217;s child event times should
 not be compared to the child&#8217;s atexit times.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeexeccode"><a id="Documentation/technical/api-trace2.txt-exec" class="anchor" href="#Documentation/technical/api-trace2.txt-exec"></a><code>"exec"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeexeccodespan"><a id="Documentation/technical/api-trace2.txt-exec" class="anchor" href="#Documentation/technical/api-trace2.txt-exec"></a><span class='synopsis'><code>"exec"</code></span> </dt>
 <dd>
-<p>This event is generated before git attempts to <code>exec()</code>
+<p>This event is generated before git attempts to <span class='synopsis'><code>exec</code>()</span>
 another command rather than starting a child process.</p>
 <div class="listingblock">
 <div class="content">
@@ -832,12 +832,12 @@ another command rather than starting a child process.</p>
 </div>
 <div class="paragraph">
 <p>The "exec_id" field is a command-unique id and is only useful if the
-<code>exec()</code> fails and a corresponding exec_result event is generated.</p>
+<span class='synopsis'><code>exec</code>()</span> fails and a corresponding exec_result event is generated.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codeexecresultcode"><a id="Documentation/technical/api-trace2.txt-execresult" class="anchor" href="#Documentation/technical/api-trace2.txt-execresult"></a><code>"exec_result"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodeexecresultcodespan"><a id="Documentation/technical/api-trace2.txt-execresult" class="anchor" href="#Documentation/technical/api-trace2.txt-execresult"></a><span class='synopsis'><code>"exec_result"</code></span> </dt>
 <dd>
-<p>This event is generated if the <code>exec()</code> fails and control
+<p>This event is generated if the <span class='synopsis'><code>exec</code>()</span> fails and control
 returns to the current git command.</p>
 <div class="listingblock">
 <div class="content">
@@ -850,7 +850,7 @@ returns to the current git command.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codethreadstartcode"><a id="Documentation/technical/api-trace2.txt-threadstart" class="anchor" href="#Documentation/technical/api-trace2.txt-threadstart"></a><code>"thread_start"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodethreadstartcodespan"><a id="Documentation/technical/api-trace2.txt-threadstart" class="anchor" href="#Documentation/technical/api-trace2.txt-threadstart"></a><span class='synopsis'><code>"thread_start"</code></span> </dt>
 <dd>
 <p>This event is generated when a thread is started.  It is
 generated from <strong>within</strong> the new thread&#8217;s thread-proc (because
@@ -865,7 +865,7 @@ it needs to access data in the thread&#8217;s thread-local storage).</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codethreadexitcode"><a id="Documentation/technical/api-trace2.txt-threadexit" class="anchor" href="#Documentation/technical/api-trace2.txt-threadexit"></a><code>"thread_exit"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodethreadexitcodespan"><a id="Documentation/technical/api-trace2.txt-threadexit" class="anchor" href="#Documentation/technical/api-trace2.txt-threadexit"></a><span class='synopsis'><code>"thread_exit"</code></span> </dt>
 <dd>
 <p>This event is generated when a thread exits.  It is generated
 from <strong>within</strong> the thread&#8217;s thread-proc.</p>
@@ -880,7 +880,7 @@ from <strong>within</strong> the thread&#8217;s thread-proc.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codedefparamcode"><a id="Documentation/technical/api-trace2.txt-defparam" class="anchor" href="#Documentation/technical/api-trace2.txt-defparam"></a><code>"def_param"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodedefparamcodespan"><a id="Documentation/technical/api-trace2.txt-defparam" class="anchor" href="#Documentation/technical/api-trace2.txt-defparam"></a><span class='synopsis'><code>"def_param"</code></span> </dt>
 <dd>
 <p>This event is generated to log a global parameter, such as a config
 setting, command-line flag, or environment variable.</p>
@@ -896,7 +896,7 @@ setting, command-line flag, or environment variable.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codedefrepocode"><a id="Documentation/technical/api-trace2.txt-defrepo" class="anchor" href="#Documentation/technical/api-trace2.txt-defrepo"></a><code>"def_repo"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodedefrepocodespan"><a id="Documentation/technical/api-trace2.txt-defrepo" class="anchor" href="#Documentation/technical/api-trace2.txt-defrepo"></a><span class='synopsis'><code>"def_repo"</code></span> </dt>
 <dd>
 <p>This event defines a repo-id and associates it with the root
 of the worktree.</p>
@@ -917,7 +917,7 @@ supported, a def_repo event should be emitted for each submodule
 visited.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-coderegionentercode"><a id="Documentation/technical/api-trace2.txt-regionenter" class="anchor" href="#Documentation/technical/api-trace2.txt-regionenter"></a><code>"region_enter"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscoderegionentercodespan"><a id="Documentation/technical/api-trace2.txt-regionenter" class="anchor" href="#Documentation/technical/api-trace2.txt-regionenter"></a><span class='synopsis'><code>"region_enter"</code></span> </dt>
 <dd>
 <p>This event is generated when entering a region.</p>
 <div class="listingblock">
@@ -934,15 +934,15 @@ visited.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>category</code> field may be used in a future enhancement to
+<p>The <span class='synopsis'><code>category</code></span> field may be used in a future enhancement to
 do category-based filtering.</p>
 </div>
 <div class="paragraph">
-<p><code>GIT_TRACE2_EVENT_NESTING</code> or <code>trace2.eventNesting</code> can be used to
+<p><span class='synopsis'><code>GIT_TRACE2_EVENT_NESTING</code></span> or <span class='synopsis'><code>trace2.eventNesting</code></span> can be used to
 filter deeply nested regions and data events.  It defaults to "2".</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-coderegionleavecode"><a id="Documentation/technical/api-trace2.txt-regionleave" class="anchor" href="#Documentation/technical/api-trace2.txt-regionleave"></a><code>"region_leave"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscoderegionleavecodespan"><a id="Documentation/technical/api-trace2.txt-regionleave" class="anchor" href="#Documentation/technical/api-trace2.txt-regionleave"></a><span class='synopsis'><code>"region_leave"</code></span> </dt>
 <dd>
 <p>This event is generated when leaving a region.</p>
 <div class="listingblock">
@@ -960,7 +960,7 @@ filter deeply nested regions and data events.  It defaults to "2".</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codedatacode"><a id="Documentation/technical/api-trace2.txt-data" class="anchor" href="#Documentation/technical/api-trace2.txt-data"></a><code>"data"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodedatacodespan"><a id="Documentation/technical/api-trace2.txt-data" class="anchor" href="#Documentation/technical/api-trace2.txt-data"></a><span class='synopsis'><code>"data"</code></span> </dt>
 <dd>
 <p>This event is generated to log a thread- and region-local
 key/value pair.</p>
@@ -983,7 +983,7 @@ key/value pair.</p>
 <p>The "value" field may be an integer or a string.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codedata-jsoncode"><a id="Documentation/technical/api-trace2.txt-data-json" class="anchor" href="#Documentation/technical/api-trace2.txt-data-json"></a><code>"data-json"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodedata-jsoncodespan"><a id="Documentation/technical/api-trace2.txt-data-json" class="anchor" href="#Documentation/technical/api-trace2.txt-data-json"></a><span class='synopsis'><code>"data-json"</code></span> </dt>
 <dd>
 <p>This event is generated to log a pre-formatted JSON string
 containing structured data.</p>
@@ -1003,7 +1003,7 @@ containing structured data.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codethtimercode"><a id="Documentation/technical/api-trace2.txt-thtimer" class="anchor" href="#Documentation/technical/api-trace2.txt-thtimer"></a><code>"th_timer"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodethtimercodespan"><a id="Documentation/technical/api-trace2.txt-thtimer" class="anchor" href="#Documentation/technical/api-trace2.txt-thtimer"></a><span class='synopsis'><code>"th_timer"</code></span> </dt>
 <dd>
 <p>This event logs the amount of time that a stopwatch timer was
 running in the thread.  This event is generated when a thread
@@ -1023,7 +1023,7 @@ exits for timers that requested per-thread events.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codetimercode"><a id="Documentation/technical/api-trace2.txt-timer" class="anchor" href="#Documentation/technical/api-trace2.txt-timer"></a><code>"timer"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodetimercodespan"><a id="Documentation/technical/api-trace2.txt-timer" class="anchor" href="#Documentation/technical/api-trace2.txt-timer"></a><span class='synopsis'><code>"timer"</code></span> </dt>
 <dd>
 <p>This event logs the amount of time that a stopwatch timer was
 running aggregated across all threads.  This event is generated
@@ -1043,7 +1043,7 @@ when the process exits.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codethcountercode"><a id="Documentation/technical/api-trace2.txt-thcounter" class="anchor" href="#Documentation/technical/api-trace2.txt-thcounter"></a><code>"th_counter"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodethcountercodespan"><a id="Documentation/technical/api-trace2.txt-thcounter" class="anchor" href="#Documentation/technical/api-trace2.txt-thcounter"></a><span class='synopsis'><code>"th_counter"</code></span> </dt>
 <dd>
 <p>This event logs the value of a counter variable in a thread.
 This event is generated when a thread exits for counters that
@@ -1060,7 +1060,7 @@ requested per-thread events.</p>
 </div>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-codecountercode"><a id="Documentation/technical/api-trace2.txt-counter" class="anchor" href="#Documentation/technical/api-trace2.txt-counter"></a><code>"counter"</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-trace2.txt-spanclasssynopsiscodecountercodespan"><a id="Documentation/technical/api-trace2.txt-counter" class="anchor" href="#Documentation/technical/api-trace2.txt-counter"></a><span class='synopsis'><code>"counter"</code></span> </dt>
 <dd>
 <p>This event logs the value of a counter variable across all threads.
 This event is generated when the process exits.  The total value
@@ -1094,8 +1094,8 @@ usage (without worrying about the actual Git details).</p>
 <dl>
 <dt class="hdlist1" id="Documentation/technical/api-trace2.txt-Initialization"><a class="anchor" href="#Documentation/technical/api-trace2.txt-Initialization"></a>Initialization </dt>
 <dd>
-<p>Initialization happens in <code>main()</code>.  Behind the scenes, an
-<code>atexit</code> and <code>signal</code> handler are registered.</p>
+<p>Initialization happens in <span class='synopsis'><code>main</code>()</span>.  Behind the scenes, an
+<span class='synopsis'><code>atexit</code></span> and <span class='synopsis'><code>signal</code></span> handler are registered.</p>
 <div class="listingblock">
 <div class="content">
 <pre>int main(int argc, const char **argv)
@@ -1439,9 +1439,9 @@ void preload_index(struct index_state *index,
 </div>
 </div>
 <div class="paragraph">
-<p>In this example preload_index() was executed by the <code>main</code> thread
-and started the <code>preload</code> region.  Seven threads, named
-<code>th01:preload_thread</code> through <code>th07:preload_thread</code>, were started.
+<p>In this example preload_index() was executed by the <span class='synopsis'><code>main</code></span> thread
+and started the <span class='synopsis'><code>preload</code></span> region.  Seven threads, named
+<span class='synopsis'><code>th01:preload_thread</code></span> through <span class='synopsis'><code>th07:preload_thread</code></span>, were started.
 Events from each thread are atomically appended to the shared target
 stream as they occur so they may appear in random order with respect
 other threads. Finally, the main thread waits for the threads to
@@ -1511,7 +1511,7 @@ as each thread starts.</p>
 <p>Dump "interesting" config values to trace2 log.</p>
 <div class="paragraph">
 <p>We can optionally emit configuration events, see
-<code>trace2.configparams</code> in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> for how to enable
+<span class='synopsis'><code>trace2.configparams</code></span> in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a> for how to enable
 it.</p>
 </div>
 <div class="listingblock">
@@ -1526,8 +1526,8 @@ local   color.ui=auto</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Then, mark the config <code>color.ui</code> as "interesting" config with
-<code>GIT_TRACE2_CONFIG_PARAMS</code>:</p>
+<p>Then, mark the config <span class='synopsis'><code>color.ui</code></span> as "interesting" config with
+<span class='synopsis'><code>GIT_TRACE2_CONFIG_PARAMS</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1586,7 +1586,7 @@ static int ut_100timer(int argc, const char **argv)
 </div>
 <div class="paragraph">
 <p>In this example, we measure the total time spent in
-<code>expensive_function()</code> regardless of when it is called
+<span class='synopsis'><code>expensive_function</code>()</span> regardless of when it is called
 in the overall flow of the program.</p>
 </div>
 <div class="listingblock">
@@ -1621,14 +1621,14 @@ switch to Trace2.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Updating existing tests that assume <code>GIT_TRACE</code> format messages.</p>
+<p>Updating existing tests that assume <span class='synopsis'><code>GIT_TRACE</code></span> format messages.</p>
 </li>
 <li>
-<p>How to best handle custom <code>GIT_TRACE_&lt;key&gt;</code> messages?</p>
+<p>How to best handle custom <span class='synopsis'><code>GIT_TRACE_</code><em>&lt;key&gt;</em></span> messages?</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <code>GIT_TRACE_&lt;key&gt;</code> mechanism allows each &lt;key&gt; to write to a
+<p>The <span class='synopsis'><code>GIT_TRACE_</code><em>&lt;key&gt;</em></span> mechanism allows each &lt;key&gt; to write to a
 different file (in addition to just stderr).</p>
 </li>
 <li>

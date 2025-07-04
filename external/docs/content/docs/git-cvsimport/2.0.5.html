@@ -35,7 +35,7 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>WARNING:</strong> <code>git cvsimport</code> uses cvsps version 2, which is considered
+<p><strong>WARNING:</strong> <span class='synopsis'><code>git</code> <code>cvsimport</code></span> uses cvsps version 2, which is considered
 deprecated; it does not work with cvsps version 3 and later.  If you are
 performing a one-shot import of a CVS repository consider using
 <a href="http://cvs2svn.tigris.org/cvs2git.html">cvs2git</a> or
@@ -84,14 +84,14 @@ See <a href='{{< relurl "docs/gitcvs-migration" >}}'>gitcvs-migration[7]</a>.</p
 <p>The root of the CVS archive. May be local (a simple path) or remote;
 currently, only the :local:, :ext: and :pserver: access methods
 are supported. If not given, <em>git cvsimport</em> will try to read it
-from <code>CVS/Root</code>. If no such file exists, it checks for the
-<code>CVSROOT</code> environment variable.</p>
+from <span class='synopsis'><code>CVS/Root</code></span>. If no such file exists, it checks for the
+<span class='synopsis'><code>CVSROOT</code></span> environment variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsimport.txt-ltCVSmodulegt"><a id="Documentation/git-cvsimport.txt-CVSmodule" class="anchor" href="#Documentation/git-cvsimport.txt-CVSmodule"></a>&lt;CVS_module&gt; </dt>
 <dd>
 <p>The CVS module you want to import. Relative to &lt;CVSROOT&gt;.
 If not given, <em>git cvsimport</em> tries to read it from
-<code>CVS/Repository</code>.</p>
+<span class='synopsis'><code>CVS/Repository</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsimport.txt--Clttarget-dirgt"><a id="Documentation/git-cvsimport.txt--Ctarget-dir" class="anchor" href="#Documentation/git-cvsimport.txt--Ctarget-dir"></a>-C &lt;target-dir&gt; </dt>
 <dd>
@@ -207,7 +207,7 @@ all along.  If a time zone is specified, GIT_AUTHOR_DATE will
 have the corresponding offset applied.</p>
 </div>
 <div class="paragraph">
-<p>For convenience, this data is saved to <code>$GIT_DIR/cvs-authors</code>
+<p>For convenience, this data is saved to <span class='synopsis'><code>$GIT_DIR/cvs-authors</code></span>
 each time the <em>-A</em> option is provided and read from that same
 file each time <em>git cvsimport</em> is run.</p>
 </div>
@@ -219,7 +219,7 @@ export changes back to CVS again later with
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsimport.txt--R"><a class="anchor" href="#Documentation/git-cvsimport.txt--R"></a>-R </dt>
 <dd>
-<p>Generate a <code>$GIT_DIR/cvs-revisions</code> file containing a mapping from CVS
+<p>Generate a <span class='synopsis'><code>$GIT_DIR/cvs-revisions</code></span> file containing a mapping from CVS
 revision numbers to newly-created Git commit IDs.  The generated file
 will contain one line for each (filename, revision) pair imported;
 each line will look like</p>
@@ -317,7 +317,7 @@ want to imort, consider using cvs2git:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>cvs2git (part of cvs2svn), <code>http://subversion.apache.org/</code></p>
+<p>cvs2git (part of cvs2svn), <span class='synopsis'><code>http://subversion.apache.org/</code></span></p>
 </li>
 </ul>
 </div>

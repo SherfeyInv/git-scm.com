@@ -50,26 +50,26 @@ is meant to be used to get an archive from a remote repository.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In order to protect the privacy of objects that have been removed from
-history but may not yet have been pruned, <code>git-upload-archive</code> avoids
+history but may not yet have been pruned, <span class='synopsis'><code>git-upload-archive</code></span> avoids
 serving archives for commits and trees that are not reachable from the
 repository&#8217;s refs.  However, because calculating object reachability is
-computationally expensive, <code>git-upload-archive</code> implements a stricter
+computationally expensive, <span class='synopsis'><code>git-upload-archive</code></span> implements a stricter
 but easier-to-check set of rules:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Clients may request a commit or tree that is pointed to directly by
-a ref. E.g., <code>git archive --remote=origin v1.0</code>.</p>
+a ref. E.g., <span class='synopsis'><code>git</code> <code>archive</code> <code>--remote=origin</code> <code>v1.0</code></span>.</p>
 </li>
 <li>
 <p>Clients may request a sub-tree within a commit or tree using the
-<code>ref:path</code> syntax. E.g., <code>git archive --remote=origin v1.0:Documentation</code>.</p>
+<span class='synopsis'><code>ref:path</code></span> syntax. E.g., <span class='synopsis'><code>git</code> <code>archive</code> <code>--remote=origin</code> <code>v1.0:Documentation</code></span>.</p>
 </li>
 <li>
 <p>Clients may <em>not</em> use other sha1 expressions, even if the end
-result is reachable. E.g., neither a relative commit like <code>master^</code>
-nor a literal sha1 like <code>abcd1234</code> is allowed, even if the result
+result is reachable. E.g., neither a relative commit like <span class='synopsis'><code>master^</code></span>
+nor a literal sha1 like <span class='synopsis'><code>abcd1234</code></span> is allowed, even if the result
 is reachable from the refs.</p>
 </li>
 </ol>
@@ -77,11 +77,11 @@ is reachable from the refs.</p>
 <div class="paragraph">
 <p>Note that rule 3 disallows many cases that do not have any privacy
 implications. These rules are subject to change in future versions of
-git, and the server accessed by <code>git archive --remote</code> may or may not
+git, and the server accessed by <span class='synopsis'><code>git</code> <code>archive</code> <code>--remote</code></span> may or may not
 follow these exact rules.</p>
 </div>
 <div class="paragraph">
-<p>If the config option <code>uploadArchive.allowUnreachable</code> is true, these
+<p>If the config option <span class='synopsis'><code>uploadArchive.allowUnreachable</code></span> is true, these
 rules are ignored, and clients may use arbitrary sha1 expressions.
 This is useful if you do not care about the privacy of unreachable
 objects, or if your object database is already publicly available for

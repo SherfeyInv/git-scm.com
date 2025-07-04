@@ -58,7 +58,7 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Read the <code>.idx</code> file for a Git packfile (created with
+<p>Read the <span class='synopsis'><code>.idx</code></span> file for a Git packfile (created with
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a> or <a href='{{< relurl "docs/git-index-pack" >}}'>git-index-pack[1]</a>) from the
 standard input, and dump its contents. The output consists of one object
 per line, with each line containing two or three space-separated
@@ -100,7 +100,7 @@ index file itself, it&#8217;s both faster and more flexible.</p>
 <dd>
 <p>Specify the given object format (hash algorithm) for the index file.  The
 valid values are <em>sha1</em> and (if enabled) <em>sha256</em>.  The default is the
-algorithm for the current repository (set by <code>extensions.objectFormat</code>), or
+algorithm for the current repository (set by <span class='synopsis'><code>extensions.objectFormat</code></span>), or
 <em>sha1</em> if no value is set or outside a repository..</p>
 <div class="paragraph">
 <p>Note: At present, there is no interoperability between SHA-256

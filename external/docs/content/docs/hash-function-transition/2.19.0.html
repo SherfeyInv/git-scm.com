@@ -249,9 +249,9 @@ aware of the hash function the client is using.</p>
 <div class="sect2">
 <h3 id="_repository_format_extension"><a class="anchor" href="#_repository_format_extension"></a>Repository format extension</h3>
 <div class="paragraph">
-<p>A SHA-256 repository uses repository format version <code>1</code> (see
+<p>A SHA-256 repository uses repository format version <span class='synopsis'><code>1</code></span> (see
 Documentation/technical/repository-version.txt) with extensions
-<code>objectFormat</code> and <code>compatObjectFormat</code>:</p>
+<span class='synopsis'><code>objectFormat</code></span> and <span class='synopsis'><code>compatObjectFormat</code></span>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -263,9 +263,9 @@ Documentation/technical/repository-version.txt) with extensions
 </div>
 </div>
 <div class="paragraph">
-<p>The combination of setting <code>core.repositoryFormatVersion=1</code> and
-populating <code>extensions.*</code> ensures that all versions of Git later than
-<code>v0.99.9l</code> will die instead of trying to operate on the SHA-256
+<p>The combination of setting <span class='synopsis'><code>core.repositoryFormatVersion=1</code></span> and
+populating <span class='synopsis'><code>extensions.*</code></span> ensures that all versions of Git later than
+<span class='synopsis'><code>v0.99.9l</code></span> will die instead of trying to operate on the SHA-256
 repository, instead producing an error message.</p>
 </div>
 <div class="literalblock">

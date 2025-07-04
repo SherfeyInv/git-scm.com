@@ -76,9 +76,9 @@ will be fixed in a later release:</p>
 <ul>
 <li>
 <p>You should send a bug report as soon as you notice the breakage on your
-platform. The sooner you notice, the better; watching <code>seen</code> means you can
+platform. The sooner you notice, the better; watching <span class='synopsis'><code>seen</code></span> means you can
 notice problems before they are considered "done with review"; whereas
-watching <code>master</code> means the stable branch could break for your platform, but
+watching <span class='synopsis'><code>master</code></span> means the stable branch could break for your platform, but
 you have a decent chance of avoiding a tagged release breaking you. See "The
 Policy" in <a href="{{< relurl "docs/howto/maintain-git" >}}">"How to maintain Git"</a> for an
 overview of which branches are used in the Git project, and how.</p>
@@ -118,24 +118,24 @@ problems</a> when they&#8217;re noticed.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_compatible_on_master_and_releases"><a class="anchor" href="#_compatible_on_master_and_releases"></a>Compatible on <code>master</code> and releases</h2>
+<h2 id="_compatible_on_master_and_releases"><a class="anchor" href="#_compatible_on_master_and_releases"></a>Compatible on <span class='synopsis'><code>master</code></span> and releases</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To make sure all stable builds and regular releases work for your platform the
-first time, help us avoid breaking <code>master</code> for your platform:</p>
+first time, help us avoid breaking <span class='synopsis'><code>master</code></span> for your platform:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>You should run regular tests against the <code>next</code> branch and
+<p>You should run regular tests against the <span class='synopsis'><code>next</code></span> branch and
 publish breakage reports to the mailing list immediately when they happen.</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Ideally, these tests should run daily. They must run more often than
-weekly, as topics generally spend at least 7 days in <code>next</code> before graduating
-to <code>master</code>, and it takes time to put the brakes on a patch once it lands in
-<code>next</code>.</p>
+weekly, as topics generally spend at least 7 days in <span class='synopsis'><code>next</code></span> before graduating
+to <span class='synopsis'><code>master</code></span>, and it takes time to put the brakes on a patch once it lands in
+<span class='synopsis'><code>next</code></span>.</p>
 </li>
 <li>
 <p>You may want to ask to join the <a href="mailto:git-security@googlegroups.com">security
@@ -187,13 +187,13 @@ provides a build farm and runs tests against release candidates.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_compatible_on_next"><a class="anchor" href="#_compatible_on_next"></a>Compatible on <code>next</code></h2>
+<h2 id="_compatible_on_next"><a class="anchor" href="#_compatible_on_next"></a>Compatible on <span class='synopsis'><code>next</code></span></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To avoid reactive debugging and fixing when changes hit a release or stable, you
-can aim to ensure <code>next</code> always works for your platform. (See "The Policy" in
+can aim to ensure <span class='synopsis'><code>next</code></span> always works for your platform. (See "The Policy" in
 <a href="{{< relurl "docs/howto/maintain-git" >}}">"How to maintain Git"</a> for an overview of how
-<code>next</code> is used in the Git project.) To do that:</p>
+<span class='synopsis'><code>next</code></span> is used in the Git project.) To do that:</p>
 </div>
 <div class="ulist">
 <ul>

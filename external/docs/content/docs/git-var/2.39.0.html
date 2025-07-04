@@ -49,7 +49,7 @@ aliases:
 <p>Cause the logical variables to be listed. In addition, all the
 variables of the Git configuration file .git/config are listed
 as well. (However, the configuration variables listing functionality
-is deprecated in favor of <code>git config -l</code>.)</p>
+is deprecated in favor of <span class='synopsis'><code>git</code> <code>config</code> <code>-l</code></span>.)</p>
 </dd>
 </dl>
 </div>
@@ -82,19 +82,20 @@ Eric W. Biederman &lt;ebiederm@lnxi.com&gt; 1121223278 -0600</pre>
 <dt class="hdlist1" id="Documentation/git-var.txt-GITEDITOR"><a class="anchor" href="#Documentation/git-var.txt-GITEDITOR"></a>GIT_EDITOR </dt>
 <dd>
 <p>Text editor for use by Git commands.  The value is meant to be
-interpreted by the shell when it is used.  Examples: <code>~/bin/vi</code>,
-<code>$SOME_ENVIRONMENT_VARIABLE</code>, <code>"C:\Program Files\Vim\gvim.exe"
---nofork</code>.  The order of preference is the <code>$GIT_EDITOR</code>
-environment variable, then <code>core.editor</code> configuration, then
-<code>$VISUAL</code>, then <code>$EDITOR</code>, and then the default chosen at compile
+interpreted by the shell when it is used.  Examples: <span class='synopsis'><code>~/bin/vi</code></span>,
+<span class='synopsis'><code>$SOME_ENVIRONMENT_VARIABLE</code></span>, <span class='synopsis'><em>"C:\Program Files\Vim\gvim.exe"
+</em>
+<em>--nofork</em></span>.  The order of preference is the <span class='synopsis'><code>$GIT_EDITOR</code></span>
+environment variable, then <span class='synopsis'><code>core.editor</code></span> configuration, then
+<span class='synopsis'><code>$VISUAL</code></span>, then <span class='synopsis'><code>$EDITOR</code></span>, and then the default chosen at compile
 time, which is usually <em>vi</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-var.txt-GITPAGER"><a class="anchor" href="#Documentation/git-var.txt-GITPAGER"></a>GIT_PAGER </dt>
 <dd>
 <p>Text viewer for use by Git commands (e.g., <em>less</em>).  The value
 is meant to be interpreted by the shell.  The order of preference
-is the <code>$GIT_PAGER</code> environment variable, then <code>core.pager</code>
-configuration, then <code>$PAGER</code>, and then the default chosen at
+is the <span class='synopsis'><code>$GIT_PAGER</code></span> environment variable, then <span class='synopsis'><code>core.pager</code></span>
+configuration, then <span class='synopsis'><code>$PAGER</code></span>, and then the default chosen at
 compile time (usually <em>less</em>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-var.txt-GITDEFAULTBRANCH"><a class="anchor" href="#Documentation/git-var.txt-GITDEFAULTBRANCH"></a>GIT_DEFAULT_BRANCH </dt>

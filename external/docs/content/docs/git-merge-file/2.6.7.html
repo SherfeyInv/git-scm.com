@@ -152,15 +152,15 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>git merge-file</em> incorporates all changes that lead from the <code>&lt;base-file&gt;</code>
-to <code>&lt;other-file&gt;</code> into <code>&lt;current-file&gt;</code>. The result ordinarily goes into
-<code>&lt;current-file&gt;</code>. <em>git merge-file</em> is useful for combining separate changes
-to an original. Suppose <code>&lt;base-file&gt;</code> is the original, and both
-<code>&lt;current-file&gt;</code> and <code>&lt;other-file&gt;</code> are modifications of <code>&lt;base-file&gt;</code>,
+<p><em>git merge-file</em> incorporates all changes that lead from the <span class='synopsis'><em>&lt;base-file&gt;</em></span>
+to <span class='synopsis'><em>&lt;other-file&gt;</em></span> into <span class='synopsis'><em>&lt;current-file&gt;</em></span>. The result ordinarily goes into
+<span class='synopsis'><em>&lt;current-file&gt;</em></span>. <em>git merge-file</em> is useful for combining separate changes
+to an original. Suppose <span class='synopsis'><em>&lt;base-file&gt;</em></span> is the original, and both
+<span class='synopsis'><em>&lt;current-file&gt;</em></span> and <span class='synopsis'><em>&lt;other-file&gt;</em></span> are modifications of <span class='synopsis'><em>&lt;base-file&gt;</em></span>,
 then <em>git merge-file</em> combines both changes.</p>
 </div>
 <div class="paragraph">
-<p>A conflict occurs if both <code>&lt;current-file&gt;</code> and <code>&lt;other-file&gt;</code> have changes
+<p>A conflict occurs if both <span class='synopsis'><em>&lt;current-file&gt;</em></span> and <span class='synopsis'><em>&lt;other-file&gt;</em></span> have changes
 in a common segment of lines. If a conflict is found, <em>git merge-file</em>
 normally outputs a warning and brackets the conflict with lines containing
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; and &gt;&gt;&gt;&gt;&gt;&gt;&gt; markers. A typical conflict will look like this:</p>
@@ -176,10 +176,10 @@ lines in file B
 </div>
 <div class="paragraph">
 <p>If there are conflicts, the user should edit the result and delete one of
-the alternatives.  When <code>--ours</code>, <code>--theirs</code>, or <code>--union</code> option is in effect,
-however, these conflicts are resolved favouring lines from <code>&lt;current-file&gt;</code>,
-lines from <code>&lt;other-file&gt;</code>, or lines from both respectively.  The length of the
-conflict markers can be given with the <code>--marker-size</code> option.</p>
+the alternatives.  When <span class='synopsis'><code>--ours</code></span>, <span class='synopsis'><code>--theirs</code></span>, or <span class='synopsis'><code>--union</code></span> option is in effect,
+however, these conflicts are resolved favouring lines from <span class='synopsis'><em>&lt;current-file&gt;</em></span>,
+lines from <span class='synopsis'><em>&lt;other-file&gt;</em></span>, or lines from both respectively.  The length of the
+conflict markers can be given with the <span class='synopsis'><code>--marker-size</code></span> option.</p>
 </div>
 <div class="paragraph">
 <p>The exit value of this program is negative on error, and the number of
@@ -203,14 +203,14 @@ implements all of RCS <em>merge</em>'s functionality which is needed by
 <p>This option may be given up to three times, and
 specifies labels to be used in place of the
 corresponding file names in conflict reports. That is,
-<code>git merge-file -L x -L y -L z a b c</code> generates output that
+<span class='synopsis'><code>git</code> <code>merge-file</code> <code>-L</code> <code>x</code> <code>-L</code> <code>y</code> <code>-L</code> <code>z</code> <code>a</code> <code>b</code> <code>c</code></span> generates output that
 looks like it came from files x, y and z instead of
 from files a, b and c.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge-file.txt--p"><a class="anchor" href="#Documentation/git-merge-file.txt--p"></a>-p </dt>
 <dd>
 <p>Send results to standard output instead of overwriting
-<code>&lt;current-file&gt;</code>.</p>
+<span class='synopsis'><em>&lt;current-file&gt;</em></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge-file.txt--q"><a class="anchor" href="#Documentation/git-merge-file.txt--q"></a>-q </dt>
 <dd>
@@ -236,15 +236,15 @@ favouring our (or their or both) side of the lines.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-fileREADMEmyREADMEREADMEupstreamcode"><a id="Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream"></a><code>git merge-file README.my README README.upstream</code> </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt-spanclasssynopsiscodegitcodecodemerge-filecodecodeREADMEmycodecodeREADMEcodecodeREADMEupstreamcodespan"><a id="Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-fileREADMEmyREADMEREADMEupstream"></a><span class='synopsis'><code>git</code> <code>merge-file</code> <code>README.my</code> <code>README</code> <code>README.upstream</code></span> </dt>
 <dd>
 <p>combines the changes of README.my and README.upstream since README,
 tries to merge them and writes the result into README.my.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-merge-file.txt-codegitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345code"><a id="Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345"></a><code>git merge-file -L a -L b -L c tmp/a123 tmp/b234 tmp/c345</code> </dt>
+<dt class="hdlist1" id="Documentation/git-merge-file.txt-spanclasssynopsiscodegitcodecodemerge-filecodecode-Lcodecodeacodecode-Lcodecodebcodecode-Lcodecodeccodecodetmpa123codecodetmpb234codecodetmpc345codespan"><a id="Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345" class="anchor" href="#Documentation/git-merge-file.txt-gitmerge-file-La-Lb-Lctmpa123tmpb234tmpc345"></a><span class='synopsis'><code>git</code> <code>merge-file</code> <code>-L</code> <code>a</code> <code>-L</code> <code>b</code> <code>-L</code> <code>c</code> <code>tmp/a123</code> <code>tmp/b234</code> <code>tmp/c345</code></span> </dt>
 <dd>
 <p>merges tmp/a123 and tmp/c345 with the base tmp/b234, but uses labels
-<code>a</code> and <code>c</code> instead of <code>tmp/a123</code> and <code>tmp/c345</code>.</p>
+<span class='synopsis'><code>a</code></span> and <span class='synopsis'><code>c</code></span> instead of <span class='synopsis'><code>tmp/a123</code></span> and <span class='synopsis'><code>tmp/c345</code></span>.</p>
 </dd>
 </dl>
 </div>

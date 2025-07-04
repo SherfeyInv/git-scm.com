@@ -63,23 +63,23 @@ the packfiles are expected to be in &lt;dir&gt;/pack.</p>
 <dd>
 <p>Write a commit graph file based on the commits found in packfiles.</p>
 <div class="paragraph">
-<p>With the <code>--stdin-packs</code> option, generate the new commit graph by
+<p>With the <span class='synopsis'><code>--stdin-packs</code></span> option, generate the new commit graph by
 walking objects only in the specified pack-indexes. (Cannot be combined
-with <code>--stdin-commits</code> or <code>--reachable</code>.)</p>
+with <span class='synopsis'><code>--stdin-commits</code></span> or <span class='synopsis'><code>--reachable</code></span>.)</p>
 </div>
 <div class="paragraph">
-<p>With the <code>--stdin-commits</code> option, generate the new commit graph by
+<p>With the <span class='synopsis'><code>--stdin-commits</code></span> option, generate the new commit graph by
 walking commits starting at the commits specified in stdin as a list
 of OIDs in hex, one OID per line. (Cannot be combined with
-<code>--stdin-packs</code> or <code>--reachable</code>.)</p>
+<span class='synopsis'><code>--stdin-packs</code></span> or <span class='synopsis'><code>--reachable</code></span>.)</p>
 </div>
 <div class="paragraph">
-<p>With the <code>--reachable</code> option, generate the new commit graph by walking
-commits starting at all refs. (Cannot be combined with <code>--stdin-commits</code>
-or <code>--stdin-packs</code>.)</p>
+<p>With the <span class='synopsis'><code>--reachable</code></span> option, generate the new commit graph by walking
+commits starting at all refs. (Cannot be combined with <span class='synopsis'><code>--stdin-commits</code></span>
+or <span class='synopsis'><code>--stdin-packs</code></span>.)</p>
 </div>
 <div class="paragraph">
-<p>With the <code>--append</code> option, include all commits that are present in the
+<p>With the <span class='synopsis'><code>--append</code></span> option, include all commits that are present in the
 existing commit-graph file.</p>
 </div>
 </dd>

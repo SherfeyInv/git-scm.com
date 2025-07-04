@@ -83,7 +83,7 @@ input set of filepairs included:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>but the command invocation was <code>git diff-files myfile</code>, then the
+<p>but the command invocation was <span class='synopsis'><code>git</code> <code>diff-files</code> <code>myfile</code></span>, then the
 junkfile entry would be removed from the list because only "myfile"
 is under consideration.</p>
 </div>
@@ -236,11 +236,11 @@ number after the "-M" or "-C" option (e.g. "-M8" to tell it to use
 8/10 = 80%).</p>
 </div>
 <div class="paragraph">
-<p>Note.  When the "-C" option is used with <code>--find-copies-harder</code>
+<p>Note.  When the "-C" option is used with <span class='synopsis'><code>--find-copies-harder</code></span>
 option, <em>git diff-*</em> commands feed unmodified filepairs to
 diffcore mechanism as well as modified ones.  This lets the copy
 detector consider unmodified files as copy source candidates at
-the expense of making it slower.  Without <code>--find-copies-harder</code>,
+the expense of making it slower.  Without <span class='synopsis'><code>--find-copies-harder</code></span>,
 <em>git diff-*</em> commands can detect copies only if the file that was
 copied happened to have been modified in the same changeset.</p>
 </div>
@@ -313,9 +313,9 @@ specify different ways these strings are sought.</p>
 have different number of occurrences of the specified block of text.
 By definition, it will not detect in-file moves.  Also, when a
 changeset moves a file wholesale without affecting the interesting
-string, diffcore-rename kicks in as usual, and <code>-S</code> omits the filepair
+string, diffcore-rename kicks in as usual, and <span class='synopsis'><code>-S</code></span> omits the filepair
 (since the number of occurrences of that string didn&#8217;t change in that
-rename-detected filepair).  When used with <code>--pickaxe-regex</code>, treat
+rename-detected filepair).  When used with <span class='synopsis'><code>--pickaxe-regex</code></span>, treat
 the &lt;block of text&gt; as an extended POSIX regular expression to match,
 instead of a literal string.</p>
 </div>
@@ -328,9 +328,9 @@ implementation runs diff twice and greps, and this can be quite
 expensive.</p>
 </div>
 <div class="paragraph">
-<p>When <code>-S</code> or <code>-G</code> are used without <code>--pickaxe-all</code>, only filepairs
+<p>When <span class='synopsis'><code>-S</code></span> or <span class='synopsis'><code>-G</code></span> are used without <span class='synopsis'><code>--pickaxe-all</code></span>, only filepairs
 that match their respective criterion are kept in the output.  When
-<code>--pickaxe-all</code> is used, if even one filepair matches their respective
+<span class='synopsis'><code>--pickaxe-all</code></span> is used, if even one filepair matches their respective
 criterion in a changeset, the entire changeset is kept.  This behavior
 is designed to make reviewing changes in the context of the whole
 changeset easier.</p>

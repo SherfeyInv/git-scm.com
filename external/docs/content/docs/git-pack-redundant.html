@@ -31,16 +31,16 @@ aliases:
 <h2 id="_warning"><a class="anchor" href="#_warning"></a>WARNING</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>git pack-redundant</code> has been deprecated and is scheduled for removal in
+<p><span class='synopsis'><code>git</code> <code>pack-redundant</code></span> has been deprecated and is scheduled for removal in
 a future version of Git. Because it can only remove entire duplicate
 packs and not individual duplicate objects, it is generally not a useful
-tool for reducing repository size. You are better off using <code>git gc</code> to
+tool for reducing repository size. You are better off using <span class='synopsis'><code>git</code> <code>gc</code></span> to
 do so, which will put objects into a new pack, removing duplicates.</p>
 </div>
 <div class="paragraph">
-<p>Running <code>pack-redundant</code> without the <code>--i-still-use-this</code> flag will fail
+<p>Running <span class='synopsis'><code>pack-redundant</code></span> without the <span class='synopsis'><code>--i-still-use-this</code></span> flag will fail
 in this release. If you believe you have a use case for which
-<code>pack-redundant</code> is better suited and oppose this removal, please
+<span class='synopsis'><code>pack-redundant</code></span> is better suited and oppose this removal, please
 contact the Git mailing list at <a href="mailto:git@vger.kernel.org">git@vger.kernel.org</a>. More information
 about the list is available at <a href="https://git-scm.com/community" class="bare">https://git-scm.com/community</a>.</p>
 </div>
@@ -52,7 +52,7 @@ about the list is available at <a href="https://git-scm.com/community" class="ba
 <div class="paragraph">
 <p>This program computes which packs in your repository
 are redundant. The output is suitable for piping to
-<code>xargs rm</code> if you are in the root of the repository.</p>
+<span class='synopsis'><code>xargs</code> <code>rm</code></span> if you are in the root of the repository.</p>
 </div>
 <div class="paragraph">
 <p><em>git pack-redundant</em> accepts a list of objects on standard input. Any objects

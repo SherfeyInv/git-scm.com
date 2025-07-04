@@ -35,18 +35,18 @@ attributes to set of paths.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-codestructgitattrcode"><a id="Documentation/technical/api-gitattributes.txt-structgitattr" class="anchor" href="#Documentation/technical/api-gitattributes.txt-structgitattr"></a><code>struct git_attr</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-spanclasssynopsiscodestructcodecodegitattrcodespan"><a id="Documentation/technical/api-gitattributes.txt-structgitattr" class="anchor" href="#Documentation/technical/api-gitattributes.txt-structgitattr"></a><span class='synopsis'><code>struct</code> <code>git_attr</code></span> </dt>
 <dd>
 <p>An attribute is an opaque object that is identified by its name.
-Pass the name to <code>git_attr()</code> function to obtain the object of
+Pass the name to <span class='synopsis'><code>git_attr</code>()</span> function to obtain the object of
 this type.  The internal representation of this structure is
 of no interest to the calling programs.  The name of the
-attribute can be retrieved by calling <code>git_attr_name()</code>.</p>
+attribute can be retrieved by calling <span class='synopsis'><code>git_attr_name</code>()</span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-codestructgitattrcheckcode"><a id="Documentation/technical/api-gitattributes.txt-structgitattrcheck" class="anchor" href="#Documentation/technical/api-gitattributes.txt-structgitattrcheck"></a><code>struct git_attr_check</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-spanclasssynopsiscodestructcodecodegitattrcheckcodespan"><a id="Documentation/technical/api-gitattributes.txt-structgitattrcheck" class="anchor" href="#Documentation/technical/api-gitattributes.txt-structgitattrcheck"></a><span class='synopsis'><code>struct</code> <code>git_attr_check</code></span> </dt>
 <dd>
 <p>This structure represents a set of attributes to check in a call
-to <code>git_check_attr()</code> function, and receives the results.</p>
+to <span class='synopsis'><code>git_check_attr</code>()</span> function, and receives the results.</p>
 </dd>
 </dl>
 </div>
@@ -57,27 +57,28 @@ to <code>git_check_attr()</code> function, and receives the results.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An attribute for a path can be in one of four states: Set, Unset,
-Unspecified or set to a string, and <code>.value</code> member of <code>struct
-git_attr_check</code> records it.  There are three macros to check these:</p>
+Unspecified or set to a string, and <span class='synopsis'><code>.value</code></span> member of <span class='synopsis'><code>struct</code>
+
+<code>git_attr_check</code></span> records it.  There are three macros to check these:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-codeATTRTRUEcode"><a id="Documentation/technical/api-gitattributes.txt-ATTRTRUE" class="anchor" href="#Documentation/technical/api-gitattributes.txt-ATTRTRUE"></a><code>ATTR_TRUE()</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-spanclasssynopsiscodeATTRTRUEcodespan"><a id="Documentation/technical/api-gitattributes.txt-ATTRTRUE" class="anchor" href="#Documentation/technical/api-gitattributes.txt-ATTRTRUE"></a><span class='synopsis'><code>ATTR_TRUE</code>()</span> </dt>
 <dd>
 <p>Returns true if the attribute is Set for the path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-codeATTRFALSEcode"><a id="Documentation/technical/api-gitattributes.txt-ATTRFALSE" class="anchor" href="#Documentation/technical/api-gitattributes.txt-ATTRFALSE"></a><code>ATTR_FALSE()</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-spanclasssynopsiscodeATTRFALSEcodespan"><a id="Documentation/technical/api-gitattributes.txt-ATTRFALSE" class="anchor" href="#Documentation/technical/api-gitattributes.txt-ATTRFALSE"></a><span class='synopsis'><code>ATTR_FALSE</code>()</span> </dt>
 <dd>
 <p>Returns true if the attribute is Unset for the path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-codeATTRUNSETcode"><a id="Documentation/technical/api-gitattributes.txt-ATTRUNSET" class="anchor" href="#Documentation/technical/api-gitattributes.txt-ATTRUNSET"></a><code>ATTR_UNSET()</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-gitattributes.txt-spanclasssynopsiscodeATTRUNSETcodespan"><a id="Documentation/technical/api-gitattributes.txt-ATTRUNSET" class="anchor" href="#Documentation/technical/api-gitattributes.txt-ATTRUNSET"></a><span class='synopsis'><code>ATTR_UNSET</code>()</span> </dt>
 <dd>
 <p>Returns true if the attribute is Unspecified for the path.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>If none of the above returns true, <code>.value</code> member points at a string
+<p>If none of the above returns true, <span class='synopsis'><code>.value</code></span> member points at a string
 value of the attribute for the path.</p>
 </div>
 </div>
@@ -88,15 +89,15 @@ value of the attribute for the path.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Prepare an array of <code>struct git_attr_check</code> to define the list of
+<p>Prepare an array of <span class='synopsis'><code>struct</code> <code>git_attr_check</code></span> to define the list of
 attributes you would want to check.  To populate this array, you would
-need to define necessary attributes by calling <code>git_attr()</code> function.</p>
+need to define necessary attributes by calling <span class='synopsis'><code>git_attr</code>()</span> function.</p>
 </li>
 <li>
-<p>Call <code>git_check_attr()</code> to check the attributes for the path.</p>
+<p>Call <span class='synopsis'><code>git_check_attr</code>()</span> to check the attributes for the path.</p>
 </li>
 <li>
-<p>Inspect <code>git_attr_check</code> structure to see how each of the attribute in
+<p>Inspect <span class='synopsis'><code>git_attr_check</code></span> structure to see how each of the attribute in
 the array is defined for the path.</p>
 </li>
 </ul>
@@ -112,9 +113,9 @@ the array is defined for the path.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Prepare an array of <code>struct git_attr_check</code> with two elements (because
-we are checking two attributes).  Initialize their <code>attr</code> member with
-pointers to <code>struct git_attr</code> obtained by calling <code>git_attr()</code>:</p>
+<p>Prepare an array of <span class='synopsis'><code>struct</code> <code>git_attr_check</code></span> with two elements (because
+we are checking two attributes).  Initialize their <span class='synopsis'><code>attr</code></span> member with
+pointers to <span class='synopsis'><code>struct</code> <code>git_attr</code></span> obtained by calling <span class='synopsis'><code>git_attr</code>()</span>:</p>
 </li>
 </ol>
 </div>
@@ -133,7 +134,7 @@ static void setup_check(void)
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Call <code>git_check_attr()</code> with the prepared array of <code>struct git_attr_check</code>:</p>
+<p>Call <span class='synopsis'><code>git_check_attr</code>()</span> with the prepared array of <span class='synopsis'><code>struct</code> <code>git_attr_check</code></span>:</p>
 </li>
 </ol>
 </div>
@@ -148,7 +149,7 @@ static void setup_check(void)
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Act on <code>.value</code> member of the result, left in <code>check[]</code>:</p>
+<p>Act on <span class='synopsis'><code>.value</code></span> member of the result, left in <span class='synopsis'><code>check</code>[]</span>:</p>
 </li>
 </ol>
 </div>
@@ -184,19 +185,19 @@ static void setup_check(void)
 <div class="ulist">
 <ul>
 <li>
-<p>Call <code>git_all_attrs()</code>, which returns an array of <code>git_attr_check</code>
+<p>Call <span class='synopsis'><code>git_all_attrs</code>()</span>, which returns an array of <span class='synopsis'><code>git_attr_check</code></span>
 structures.</p>
 </li>
 <li>
-<p>Iterate over the <code>git_attr_check</code> array to examine the attribute
+<p>Iterate over the <span class='synopsis'><code>git_attr_check</code></span> array to examine the attribute
 names and values.  The name of the attribute described by a
-<code>git_attr_check</code> object can be retrieved via
-<code>git_attr_name(check[i].attr)</code>.  (Please note that no items will be
-returned for unset attributes, so <code>ATTR_UNSET()</code> will return false
-for all returned <code>git_array_check</code> objects.)</p>
+<span class='synopsis'><code>git_attr_check</code></span> object can be retrieved via
+<span class='synopsis'><code>git_attr_name</code>(<code>check</code>[<code>i</code>]<code>.attr</code>)</span>.  (Please note that no items will be
+returned for unset attributes, so <span class='synopsis'><code>ATTR_UNSET</code>()</span> will return false
+for all returned <span class='synopsis'><code>git_array_check</code></span> objects.)</p>
 </li>
 <li>
-<p>Free the <code>git_array_check</code> array.</p>
+<p>Free the <span class='synopsis'><code>git_array_check</code></span> array.</p>
 </li>
 </ul>
 </div>

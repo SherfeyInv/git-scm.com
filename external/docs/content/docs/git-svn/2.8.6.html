@@ -109,8 +109,8 @@ section of this manpage before using this option.</p>
 <dd>
 <p>For transports that SVN handles authentication for (http,
 https, and plain svn), specify the username.  For other
-transports (e.g. <code>svn+ssh://</code>), you must include the username in
-the URL, e.g. <code>svn+ssh://foo@svn.bar.com/project</code></p>
+transports (e.g. <span class='synopsis'><code>svn+ssh://</code></span>), you must include the username in
+the URL, e.g. <span class='synopsis'><code>svn+ssh://foo@svn.bar.com/project</code></span></p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-svn.txt---prefixltprefixgt"><a id="Documentation/git-svn.txt---prefixprefix" class="anchor" href="#Documentation/git-svn.txt---prefixprefix"></a>--prefix=&lt;prefix&gt; </dt>
 <dd>
@@ -139,7 +139,7 @@ Before Git v2.0, the default prefix was "" (no prefix). This
 meant that SVN-tracking refs were put at "refs/remotes/*", which is
 incompatible with how Git&#8217;s own remote-tracking refs are organized.
 If you still want the old default, you can get it by passing
-<code>--prefix ""</code> on the command line (<code>--prefix=""</code> may not work if
+<span class='synopsis'><code>--prefix</code> <code>""</code></span> on the command line (<span class='synopsis'><code>--prefix=""</code></span> may not work if
 your Perl&#8217;s Getopt::Long is &lt; v2.37).
 </td>
 </tr>
@@ -190,7 +190,7 @@ command-line argument.</p>
 <dd>
 <p>Store Git commit times in the local time zone instead of UTC.  This
 makes <em>git log</em> (even without --date=local) show the same times
-that <code>svn log</code> would in the local time zone.</p>
+that <span class='synopsis'><code>svn</code> <code>log</code></span> would in the local time zone.</p>
 <div class="paragraph">
 <p>This doesn&#8217;t interfere with interoperating with the Subversion
 repository you cloned from, but if you wish for your local Git
@@ -302,7 +302,7 @@ Default: ".gitignore"</p>
 <p>This fetches revisions from the SVN parent of the current HEAD
 and rebases the current (uncommitted to SVN) work against it.</p>
 <div class="paragraph">
-<p>This works similarly to <code>svn update</code> or <em>git pull</em> except that
+<p>This works similarly to <span class='synopsis'><code>svn</code> <code>update</code></span> or <em>git pull</em> except that
 it preserves linear history with <em>git rebase</em> instead of
 <em>git merge</em> for ease of dcommitting with <em>git svn</em>.</p>
 </div>
@@ -354,9 +354,9 @@ branch, not on the current branch.</p>
 <dd>
 <p>Commit to this SVN URL (the full path).  This is intended to
 allow existing <em>git svn</em> repositories created with one transport
-method (e.g. <code>svn://</code> or <code>http://</code> for anonymous read) to be
+method (e.g. <span class='synopsis'><code>svn://</code></span> or <span class='synopsis'><code>http://</code></span> for anonymous read) to be
 reused if a user is later given access to an alternate transport
-method (e.g. <code>svn+ssh://</code> or <code>https://</code>) for commit.</p>
+method (e.g. <span class='synopsis'><code>svn+ssh://</code></span> or <span class='synopsis'><code>https://</code></span>) for commit.</p>
 <div class="verseblock">
 <pre class="content">config key: svn-remote.&lt;name&gt;.commiturl
 config key: svn.commiturl (overwrites all svn-remote.&lt;name&gt;.commiturl options)</pre>
@@ -374,11 +374,11 @@ discouraged.</p>
 <dt class="hdlist1" id="Documentation/git-svn.txt---mergeinfoltmergeinfogt"><a id="Documentation/git-svn.txt---mergeinfomergeinfo" class="anchor" href="#Documentation/git-svn.txt---mergeinfomergeinfo"></a>--mergeinfo=&lt;mergeinfo&gt; </dt>
 <dd>
 <p>Add the given merge information during the dcommit
-(e.g. <code>--mergeinfo="/branches/foo:1-10"</code>). All svn server versions can
+(e.g. <span class='synopsis'><code>--mergeinfo="/branches/foo:1-10"</code></span>). All svn server versions can
 store this information (as a property), and svn clients starting from
 version 1.5 can make use of it. To specify merge information from multiple
 branches, use a single space character between the branches
-(<code>--mergeinfo="/branches/foo:1-10 /branches/bar:3,5-6,8"</code>)</p>
+(<span class='synopsis'><code>--mergeinfo="/branches/foo:1-10</code> <code>/branches/bar:3,5-6,8"</code></span>)</p>
 <div class="verseblock">
 <pre class="content">config key: svn.pushmergeinfo</pre>
 </div>
@@ -623,12 +623,13 @@ more information.)</p>
 <dt class="hdlist1" id="Documentation/git-svn.txt-emcommit-diffem"><a id="Documentation/git-svn.txt-commit-diff" class="anchor" href="#Documentation/git-svn.txt-commit-diff"></a><em>commit-diff</em> </dt>
 <dd>
 <p>Commits the diff of two tree-ish arguments from the
-command-line.  This command does not rely on being inside an <code>git svn
-init</code>-ed repository.  This command takes three arguments, (a) the
+command-line.  This command does not rely on being inside an <span class='synopsis'><code>git</code> <code>svn</code>
+
+<code>init</code></span>-ed repository.  This command takes three arguments, (a) the
 original tree to diff against, (b) the new tree result, (c) the
 URL of the target Subversion repository.  The final argument
 (URL) may be omitted if you are working from a <em>git svn</em>-aware
-repository (that has been <code>init</code>-ed with <em>git svn</em>).
+repository (that has been <span class='synopsis'><code>init</code></span>-ed with <em>git svn</em>).
 The -r&lt;revision&gt; option is required for this.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-svn.txt-eminfoem"><a id="Documentation/git-svn.txt-info" class="anchor" href="#Documentation/git-svn.txt-info"></a><em>info</em> </dt>
@@ -883,15 +884,15 @@ creating the branch or tag.</p>
 <dt class="hdlist1" id="Documentation/git-svn.txt---use-log-author"><a class="anchor" href="#Documentation/git-svn.txt---use-log-author"></a>--use-log-author </dt>
 <dd>
 <p>When retrieving svn commits into Git (as part of <em>fetch</em>, <em>rebase</em>, or
-<em>dcommit</em> operations), look for the first <code>From:</code> or <code>Signed-off-by:</code> line
+<em>dcommit</em> operations), look for the first <span class='synopsis'><code>From:</code></span> or <span class='synopsis'><code>Signed-off-by:</code></span> line
 in the log message and use that as the author string.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-svn.txt---add-author-from"><a class="anchor" href="#Documentation/git-svn.txt---add-author-from"></a>--add-author-from </dt>
 <dd>
 <p>When committing to svn from Git (as part of <em>commit-diff</em>, <em>set-tree</em> or <em>dcommit</em>
 operations), if the existing log message doesn&#8217;t already have a
-<code>From:</code> or <code>Signed-off-by:</code> line, append a <code>From:</code> line based on the
-Git commit&#8217;s author string.  If you use this, then <code>--use-log-author</code>
+<span class='synopsis'><code>From:</code></span> or <span class='synopsis'><code>Signed-off-by:</code></span> line, append a <span class='synopsis'><code>From:</code></span> line based on the
+Git commit&#8217;s author string.  If you use this, then <span class='synopsis'><code>--use-log-author</code></span>
 will retrieve a valid author string for all commits.</p>
 </dd>
 </dl>
@@ -1154,9 +1155,9 @@ respect to the upstream SVN repository and allow the use of the preferred
 <div class="paragraph">
 <p>Originally, <em>git svn</em> recommended that developers pulled or merged from
 the <em>git svn</em> branch.  This was because the author favored
-<code>git svn set-tree B</code> to commit a single head rather than the
-<code>git svn set-tree A..B</code> notation to commit multiple commits. Use of
-<em>git pull</em> or <em>git merge</em> with <code>git svn set-tree A..B</code> will cause non-linear
+<span class='synopsis'><code>git</code> <code>svn</code> <code>set-tree</code> <code>B</code></span> to commit a single head rather than the
+<span class='synopsis'><code>git</code> <code>svn</code> <code>set-tree</code> <code>A..B</code></span> notation to commit multiple commits. Use of
+<em>git pull</em> or <em>git merge</em> with <span class='synopsis'><code>git</code> <code>svn</code> <code>set-tree</code> <code>A..B</code></span> will cause non-linear
 history to be flattened when committing into SVN and this can lead to merge
 commits unexpectedly reversing previous commits in SVN.</p>
 </div>

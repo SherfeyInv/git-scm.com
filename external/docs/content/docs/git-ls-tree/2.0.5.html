@@ -57,7 +57,7 @@ taken as relative to the current working directory.  E.g. when you are
 in a directory <em>sub</em> that has a directory <em>dir</em>, you can run <em>git
 ls-tree -r HEAD dir</em> to list the contents of the tree (that is
 <em>sub/dir</em> in <em>HEAD</em>).  You don&#8217;t want to give a tree that is not at the
-root level (e.g. <code>git ls-tree -r HEAD:sub dir</code>) in this case, as that
+root level (e.g. <span class='synopsis'><code>git</code> <code>ls-tree</code> <code>-r</code> <code>HEAD:sub</code> <code>dir</code></span>) in this case, as that
 would result in asking for <em>sub/sub/dir</em> in the <em>HEAD</em> commit.
 However, the current working directory can be ignored by passing
 --full-tree option.</p>
@@ -137,13 +137,13 @@ implicitly uses the root level of the tree as the sole path argument.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Unless the <code>-z</code> option is used, TAB, LF, and backslash characters
-in pathnames are represented as <code>\t</code>, <code>\n</code>, and <code>\\</code>, respectively.
-This output format is compatible with what <code>--index-info --stdin</code> of
+<p>Unless the <span class='synopsis'><code>-z</code></span> option is used, TAB, LF, and backslash characters
+in pathnames are represented as <span class='synopsis'><em>\t</em></span>, <span class='synopsis'><em>\n</em></span>, and <span class='synopsis'><em>\\</em></span>, respectively.
+This output format is compatible with what <span class='synopsis'><code>--index-info</code> <code>--stdin</code></span> of
 <em>git update-index</em> expects.</p>
 </div>
 <div class="paragraph">
-<p>When the <code>-l</code> option is used, format changes to</p>
+<p>When the <span class='synopsis'><code>-l</code></span> option is used, format changes to</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -153,7 +153,7 @@ This output format is compatible with what <code>--index-info --stdin</code> of
 <div class="paragraph">
 <p>Object size identified by &lt;object&gt; is given in bytes, and right-justified
 with minimum width of 7 characters.  Object size is given only for blobs
-(file) entries; for other entries <code>-</code> character is used in place of size.</p>
+(file) entries; for other entries <span class='synopsis'><code>-</code></span> character is used in place of size.</p>
 </div>
 </div>
 </div>

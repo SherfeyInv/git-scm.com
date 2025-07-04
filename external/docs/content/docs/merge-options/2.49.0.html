@@ -37,35 +37,35 @@ by the merge command, use --no-ff with --no-commit.</p>
 <dd>
 <p>	Invoke an editor before committing successful mechanical merge to
 	further edit the auto-generated merge message, so that the user
-	can explain and justify the merge. The <code>--no-edit</code> option can be
+	can explain and justify the merge. The <span class='synopsis'><code>--no-edit</code></span> option can be
 	used to accept the auto-generated message (this is generally
 	discouraged).
-The <code>--edit</code> (or <code>-e</code>) option is still useful if you are
-giving a draft message with the <code>-m</code> option from the command line
+The <span class='synopsis'><code>--edit</code></span> (or <span class='synopsis'><code>-e</code></span>) option is still useful if you are
+giving a draft message with the <span class='synopsis'><code>-m</code></span> option from the command line
 and want to edit it in the editor.</p>
 <div class="paragraph">
 <p>Older scripts may depend on the historical behaviour of not allowing the
 user to edit the merge log message. They will see an editor opened when
-they run <code>git merge</code>. To make it easier to adjust such scripts to the
-updated behaviour, the environment variable <code>GIT_MERGE_AUTOEDIT</code> can be
-set to <code>no</code> at the beginning of them.</p>
+they run <span class='synopsis'><code>git</code> <code>merge</code></span>. To make it easier to adjust such scripts to the
+updated behaviour, the environment variable <span class='synopsis'><code>GIT_MERGE_AUTOEDIT</code></span> can be
+set to <span class='synopsis'><code>no</code></span> at the beginning of them.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-options.txt---cleanupltmodegt"><a id="Documentation/merge-options.txt---cleanupmode" class="anchor" href="#Documentation/merge-options.txt---cleanupmode"></a>--cleanup=&lt;mode&gt; </dt>
 <dd>
 <p>This option determines how the merge message will be cleaned up before
 committing. See <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for more details. In addition, if
-the <em>&lt;mode&gt;</em> is given a value of <code>scissors</code>, scissors will be appended
-to <code>MERGE_MSG</code> before being passed on to the commit machinery in the
+the <em>&lt;mode&gt;</em> is given a value of <span class='synopsis'><code>scissors</code></span>, scissors will be appended
+to <span class='synopsis'><code>MERGE_MSG</code></span> before being passed on to the commit machinery in the
 case of a merge conflict.</p>
 <div class="paragraph">
-<p>With <code>--ff</code>, when possible resolve the merge as a fast-forward (only
+<p>With <span class='synopsis'><code>--ff</code></span>, when possible resolve the merge as a fast-forward (only
 update the branch pointer to match the merged branch; do not create a
 merge commit).  When not possible (when the merged-in history is not a
 descendant of the current history), create a merge commit.</p>
 </div>
 <div class="paragraph">
-<p>With <code>--no-ff</code>, create a merge commit in all cases, even when the merge
+<p>With <span class='synopsis'><code>--no-ff</code></span>, create a merge commit in all cases, even when the merge
 could instead be resolved as a fast-forward.</p>
 </div>
 </dd>
@@ -73,11 +73,11 @@ could instead be resolved as a fast-forward.</p>
 <dt class="hdlist1" id="Documentation/merge-options.txt---gpg-signltkeyidgt"><a id="Documentation/merge-options.txt---gpg-signkeyid" class="anchor" href="#Documentation/merge-options.txt---gpg-signkeyid"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
 <dt class="hdlist1" id="Documentation/merge-options.txt---no-gpg-sign"><a class="anchor" href="#Documentation/merge-options.txt---no-gpg-sign"></a>--no-gpg-sign </dt>
 <dd>
-<p>GPG-sign the resulting merge commit. The <code>keyid</code> argument is
+<p>GPG-sign the resulting merge commit. The <span class='synopsis'><code>keyid</code></span> argument is
 optional and defaults to the committer identity; if specified,
-it must be stuck to the option without a space. <code>--no-gpg-sign</code>
-is useful to countermand both <code>commit.gpgSign</code> configuration variable,
-and earlier <code>--gpg-sign</code>.</p>
+it must be stuck to the option without a space. <span class='synopsis'><code>--no-gpg-sign</code></span>
+is useful to countermand both <span class='synopsis'><code>commit.gpgSign</code></span> configuration variable,
+and earlier <span class='synopsis'><code>--gpg-sign</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-options.txt---logltngt"><a id="Documentation/merge-options.txt---logn" class="anchor" href="#Documentation/merge-options.txt---logn"></a>--log[=&lt;n&gt;] </dt>
 <dt class="hdlist1" id="Documentation/merge-options.txt---no-log"><a class="anchor" href="#Documentation/merge-options.txt---no-log"></a>--no-log </dt>
@@ -90,10 +90,10 @@ merged. See also <a href='{{< relurl "docs/git-fmt-merge-msg" >}}'>git-fmt-merge
 actual commits being merged.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--signoffcode"><a id="Documentation/merge-options.txt---signoff" class="anchor" href="#Documentation/merge-options.txt---signoff"></a><code>--signoff</code> </dt>
-<dt class="hdlist1" id="Documentation/merge-options.txt-code--no-signoffcode"><a id="Documentation/merge-options.txt---no-signoff" class="anchor" href="#Documentation/merge-options.txt---no-signoff"></a><code>--no-signoff</code> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--signoffcodespan"><a id="Documentation/merge-options.txt---signoff" class="anchor" href="#Documentation/merge-options.txt---signoff"></a><span class='synopsis'><code>--signoff</code></span> </dt>
+<dt class="hdlist1" id="Documentation/merge-options.txt-spanclasssynopsiscode--no-signoffcodespan"><a id="Documentation/merge-options.txt---no-signoff" class="anchor" href="#Documentation/merge-options.txt---no-signoff"></a><span class='synopsis'><code>--no-signoff</code></span> </dt>
 <dd>
-<p>Add a <code>Signed-off-by</code> trailer by the committer at the end of the commit
+<p>Add a <span class='synopsis'><code>Signed-off-by</code></span> trailer by the committer at the end of the commit
 log message.  The meaning of a signoff depends on the project
 to which you&#8217;re committing.  For example, it may certify that
 the committer has the rights to submit the work under the
@@ -104,7 +104,7 @@ Linux kernel and Git projects.)  Consult the documentation or
 leadership of the project to which you&#8217;re contributing to
 understand how the signoffs are used in that project.</p>
 <div class="paragraph">
-<p>The <code>--no-signoff</code> option can be used to countermand an earlier <code>--signoff</code>
+<p>The <span class='synopsis'><code>--no-signoff</code></span> option can be used to countermand an earlier <span class='synopsis'><code>--signoff</code></span>
 option on the command line.</p>
 </div>
 </dd>
@@ -124,8 +124,8 @@ merge.</p>
 <dd>
 <p>Produce the working tree and index state as if a real merge
 happened (except for the merge information), but do not actually
-make a commit, move the <code>HEAD</code>, or record <code>$GIT_DIR/MERGE_HEAD</code>
-(to cause the next <code>git commit</code> command to create a merge
+make a commit, move the <span class='synopsis'><code>HEAD</code></span>, or record <span class='synopsis'><code>$GIT_DIR/MERGE_HEAD</code></span>
+(to cause the next <span class='synopsis'><code>git</code> <code>commit</code></span> command to create a merge
 commit).  This allows you to create a single commit on top of
 the current branch whose effect is the same as merging another
 branch (or more in case of an octopus).</p>
@@ -140,7 +140,7 @@ option can be used to override --squash.</p>
 <dt class="hdlist1" id="Documentation/merge-options.txt---no-verify"><a class="anchor" href="#Documentation/merge-options.txt---no-verify"></a>--[no-]verify </dt>
 <dd>
 <p>By default, the pre-merge and commit-msg hooks are run.
-When <code>--no-verify</code> is given, these are bypassed.
+When <span class='synopsis'><code>--no-verify</code></span> is given, these are bypassed.
 See also <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-options.txt--sltstrategygt"><a id="Documentation/merge-options.txt--sstrategy" class="anchor" href="#Documentation/merge-options.txt--sstrategy"></a>-s &lt;strategy&gt; </dt>
@@ -148,9 +148,9 @@ See also <a href='{{< relurl "docs/githooks" >}}'>githooks[5]</a>.</p>
 <dd>
 <p>Use the given merge strategy; can be supplied more than
 once to specify them in the order they should be tried.
-If there is no <code>-s</code> option, a built-in list of strategies
-is used instead (<code>ort</code> when merging a single head,
-<code>octopus</code> otherwise).</p>
+If there is no <span class='synopsis'><code>-s</code></span> option, a built-in list of strategies
+is used instead (<span class='synopsis'><code>ort</code></span> when merging a single head,
+<span class='synopsis'><code>octopus</code></span> otherwise).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-options.txt--Xltoptiongt"><a id="Documentation/merge-options.txt--Xoption" class="anchor" href="#Documentation/merge-options.txt--Xoption"></a>-X &lt;option&gt; </dt>
 <dt class="hdlist1" id="Documentation/merge-options.txt---strategy-optionltoptiongt"><a id="Documentation/merge-options.txt---strategy-optionoption" class="anchor" href="#Documentation/merge-options.txt---strategy-optionoption"></a>--strategy-option=&lt;option&gt; </dt>
@@ -195,7 +195,7 @@ reporting.</p>
 <dt class="hdlist1" id="Documentation/merge-options.txt---no-autostash"><a class="anchor" href="#Documentation/merge-options.txt---no-autostash"></a>--no-autostash </dt>
 <dd>
 <p>Automatically create a temporary stash entry before the operation
-begins, record it in the ref <code>MERGE_AUTOSTASH</code>
+begins, record it in the ref <span class='synopsis'><code>MERGE_AUTOSTASH</code></span>
 and apply it after the operation ends.  This means
 that you can run the operation on a dirty worktree.  However, use
 with care: the final stash application after a successful
@@ -203,7 +203,7 @@ merge might result in non-trivial conflicts.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-options.txt---allow-unrelated-histories"><a class="anchor" href="#Documentation/merge-options.txt---allow-unrelated-histories"></a>--allow-unrelated-histories </dt>
 <dd>
-<p>By default, <code>git merge</code> command refuses to merge histories
+<p>By default, <span class='synopsis'><code>git</code> <code>merge</code></span> command refuses to merge histories
 that do not share a common ancestor.  This option can be
 used to override this safety when merging histories of two
 projects that started their lives independently. As that is

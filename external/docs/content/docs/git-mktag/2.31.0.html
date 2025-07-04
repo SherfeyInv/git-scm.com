@@ -42,7 +42,7 @@ aliases:
 <dt class="hdlist1" id="Documentation/git-mktag.txt---strict"><a class="anchor" href="#Documentation/git-mktag.txt---strict"></a>--strict </dt>
 <dd>
 <p>By default mktag turns on the equivalent of
-<a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> <code>--strict</code> mode. Use <code>--no-strict</code> to
+<a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> <span class='synopsis'><code>--strict</code></span> mode. Use <span class='synopsis'><code>--no-strict</code></span> to
 disable it.</p>
 </dd>
 </dl>
@@ -58,8 +58,8 @@ output is the new tag&#8217;s &lt;object&gt; identifier.</p>
 </div>
 <div class="paragraph">
 <p>This command is mostly equivalent to <a href='{{< relurl "docs/git-hash-object" >}}'>git-hash-object[1]</a>
-invoked with <code>-t tag -w --stdin</code>. I.e. both of these will create and
-write a tag found in <code>my-tag</code>:</p>
+invoked with <span class='synopsis'><code>-t</code> <code>tag</code> <code>-w</code> <code>--stdin</code></span>. I.e. both of these will create and
+write a tag found in <span class='synopsis'><code>my-tag</code></span>:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -73,13 +73,13 @@ tag doesn&#8217;t pass a <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a
 </div>
 <div class="paragraph">
 <p>The "fsck" check done mktag is stricter than what <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a>
-would run by default in that all <code>fsck.&lt;msg-id&gt;</code> messages are promoted
+would run by default in that all <span class='synopsis'><code>fsck.</code><em>&lt;msg-id&gt;</em></span> messages are promoted
 from warnings to errors (so e.g. a missing "tagger" line is an error).</p>
 </div>
 <div class="paragraph">
 <p>Extra headers in the object are also an error under mktag, but ignored
 by <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a>. This extra check can be turned off by setting
-the appropriate <code>fsck.&lt;msg-id&gt;</code> varible:</p>
+the appropriate <span class='synopsis'><code>fsck.</code><em>&lt;msg-id&gt;</em></span> varible:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -105,7 +105,7 @@ tagger &lt;tagger&gt;</pre>
 </div>
 <div class="paragraph">
 <p>followed by some <em>optional</em> free-form message (some tags created
-by older Git may not have <code>tagger</code> line).  The message, when it
+by older Git may not have <span class='synopsis'><code>tagger</code></span> line).  The message, when it
 exists, is separated by a blank line from the header.  The
 message part may contain a signature that Git itself doesn&#8217;t
 care about, but that can be verified with gpg.</p>

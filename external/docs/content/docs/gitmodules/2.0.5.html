@@ -32,7 +32,7 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>.gitmodules</code> file, located in the top-level directory of a Git
+<p>The <span class='synopsis'><code>.gitmodules</code></span> file, located in the top-level directory of a Git
 working tree, is a text file with a syntax matching the requirements
 of <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.</p>
 </div>
@@ -49,7 +49,7 @@ following required keys:</p>
 <dd>
 <p>Defines the path, relative to the top-level directory of the Git
 working tree, where the submodule is expected to be checked out.
-The path name must not end with a <code>/</code>. All submodule paths must
+The path name must not end with a <span class='synopsis'><code>/</code></span>. All submodule paths must
 be unique within the .gitmodules file.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitmodules.txt-submoduleltnamegturl"><a id="Documentation/gitmodules.txt-submodulenameurl" class="anchor" href="#Documentation/gitmodules.txt-submodulenameurl"></a>submodule.&lt;name&gt;.url </dt>
@@ -75,7 +75,7 @@ If <em>rebase</em>, the current branch of the submodule will be rebased onto
 the commit specified in the superproject. If <em>merge</em>, the commit
 specified in the superproject will be merged into the current branch
 in the submodule.
-If <em>none</em>, the submodule with name <code>$name</code> will not be updated
+If <em>none</em>, the submodule with name <span class='synopsis'><code>$name</code></span> will not be updated
 by default.</p>
 <div class="literalblock">
 <div class="content">
@@ -88,7 +88,7 @@ the '--merge', '--rebase' or '--checkout' options.</pre>
 <dd>
 <p>A remote branch name for tracking updates in the upstream submodule.
 If the option is not specified, it defaults to <em>master</em>.  See the
-<code>--remote</code> documentation in <a href='{{< relurl "docs/git-submodule" >}}'>git-submodule[1]</a> for details.</p>
+<span class='synopsis'><code>--remote</code></span> documentation in <a href='{{< relurl "docs/git-submodule" >}}'>git-submodule[1]</a> for details.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitmodules.txt-submoduleltnamegtfetchRecurseSubmodules"><a id="Documentation/gitmodules.txt-submodulenamefetchRecurseSubmodules" class="anchor" href="#Documentation/gitmodules.txt-submodulenamefetchRecurseSubmodules"></a>submodule.&lt;name&gt;.fetchRecurseSubmodules </dt>
 <dd>
@@ -143,7 +143,7 @@ affected by this setting.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This defines two submodules, <code>libfoo</code> and <code>libbar</code>. These are expected to
+<p>This defines two submodules, <span class='synopsis'><code>libfoo</code></span> and <span class='synopsis'><code>libbar</code></span>. These are expected to
 be checked out in the paths <em>include/foo</em> and <em>include/bar</em>, and for both
 submodules a URL is specified which can be used for cloning the submodules.</p>
 </div>

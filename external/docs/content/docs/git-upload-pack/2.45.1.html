@@ -77,7 +77,7 @@ a program may read the request, write a response, and must exit.</p>
 <dt class="hdlist1" id="Documentation/git-upload-pack.txt---http-backend-info-refs"><a class="anchor" href="#Documentation/git-upload-pack.txt---http-backend-info-refs"></a>--http-backend-info-refs </dt>
 <dd>
 <p>Used by <a href='{{< relurl "docs/git-http-backend" >}}'>git-http-backend[1]</a> to serve up
-<code>$GIT_URL/info/refs?service=git-upload-pack</code> requests. See
+<span class='synopsis'><em>$GIT_URL/info/refs?service=git-upload-pack</em></span> requests. See
 "Smart Clients" in <a href='{{< relurl "docs/gitprotocol-http" >}}'>gitprotocol-http[5]</a> and "HTTP
 Transport" in the <a href='{{< relurl "docs/gitprotocol-v2" >}}'>gitprotocol-v2[5]</a>
 documentation. Also understood by
@@ -96,28 +96,28 @@ documentation. Also understood by
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/git-upload-pack.txt-codeGITPROTOCOLcode"><a id="Documentation/git-upload-pack.txt-GITPROTOCOL" class="anchor" href="#Documentation/git-upload-pack.txt-GITPROTOCOL"></a><code>GIT_PROTOCOL</code> </dt>
+<dt class="hdlist1" id="Documentation/git-upload-pack.txt-spanclasssynopsiscodeGITPROTOCOLcodespan"><a id="Documentation/git-upload-pack.txt-GITPROTOCOL" class="anchor" href="#Documentation/git-upload-pack.txt-GITPROTOCOL"></a><span class='synopsis'><code>GIT_PROTOCOL</code></span> </dt>
 <dd>
 <p>Internal variable used for handshaking the wire protocol. Server
 admins may need to configure some transports to allow this
 variable to be passed. See the discussion in <a href='{{< relurl "docs/git" >}}'>git[1]</a>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/git-upload-pack.txt-codeGITNOLAZYFETCHcode"><a id="Documentation/git-upload-pack.txt-GITNOLAZYFETCH" class="anchor" href="#Documentation/git-upload-pack.txt-GITNOLAZYFETCH"></a><code>GIT_NO_LAZY_FETCH</code> </dt>
+<dt class="hdlist1" id="Documentation/git-upload-pack.txt-spanclasssynopsiscodeGITNOLAZYFETCHcodespan"><a id="Documentation/git-upload-pack.txt-GITNOLAZYFETCH" class="anchor" href="#Documentation/git-upload-pack.txt-GITNOLAZYFETCH"></a><span class='synopsis'><code>GIT_NO_LAZY_FETCH</code></span> </dt>
 <dd>
 <p>When cloning or fetching from a partial repository (i.e., one
-itself cloned with <code>--filter</code>), the server-side <code>upload-pack</code>
+itself cloned with <span class='synopsis'><code>--filter</code></span>), the server-side <span class='synopsis'><code>upload-pack</code></span>
 may need to fetch extra objects from its upstream in order to
-complete the request. By default, <code>upload-pack</code> will refuse to
-perform such a lazy fetch, because <code>git fetch</code> may run arbitrary
+complete the request. By default, <span class='synopsis'><code>upload-pack</code></span> will refuse to
+perform such a lazy fetch, because <span class='synopsis'><code>git</code> <code>fetch</code></span> may run arbitrary
 commands specified in configuration and hooks of the source
-repository (and <code>upload-pack</code> tries to be safe to run even in
-untrusted <code>.git</code> directories).</p>
+repository (and <span class='synopsis'><code>upload-pack</code></span> tries to be safe to run even in
+untrusted <span class='synopsis'><code>.git</code></span> directories).</p>
 <div class="paragraph">
-<p>This is implemented by having <code>upload-pack</code> internally set the
-<code>GIT_NO_LAZY_FETCH</code> variable to <code>1</code>. If you want to override it
+<p>This is implemented by having <span class='synopsis'><code>upload-pack</code></span> internally set the
+<span class='synopsis'><code>GIT_NO_LAZY_FETCH</code></span> variable to <span class='synopsis'><code>1</code></span>. If you want to override it
 (because you are fetching from a partial clone, and you are sure
-you trust it), you can explicitly set <code>GIT_NO_LAZY_FETCH</code> to
-<code>0</code>.</p>
+you trust it), you can explicitly set <span class='synopsis'><code>GIT_NO_LAZY_FETCH</code></span> to
+<span class='synopsis'><code>0</code></span>.</p>
 </div>
 </dd>
 </dl>
@@ -128,14 +128,14 @@ you trust it), you can explicitly set <code>GIT_NO_LAZY_FETCH</code> to
 <h2 id="_security"><a class="anchor" href="#_security"></a>SECURITY</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Most Git commands should not be run in an untrusted <code>.git</code> directory
-(see the section <code>SECURITY</code> in <a href='{{< relurl "docs/git" >}}'>git[1]</a>). <code>upload-pack</code> tries to
+<p>Most Git commands should not be run in an untrusted <span class='synopsis'><code>.git</code></span> directory
+(see the section <span class='synopsis'><code>SECURITY</code></span> in <a href='{{< relurl "docs/git" >}}'>git[1]</a>). <span class='synopsis'><code>upload-pack</code></span> tries to
 avoid any dangerous configuration options or hooks from the repository
 it&#8217;s serving, making it safe to clone an untrusted directory and run
 commands on the resulting clone.</p>
 </div>
 <div class="paragraph">
-<p>For an extra level of safety, you may be able to run <code>upload-pack</code> as an
+<p>For an extra level of safety, you may be able to run <span class='synopsis'><code>upload-pack</code></span> as an
 alternate user. The details will be platform dependent, but on many
 systems you can run:</p>
 </div>

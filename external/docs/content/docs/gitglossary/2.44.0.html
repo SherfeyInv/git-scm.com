@@ -47,12 +47,12 @@ from another object database, which is called an "alternate".</p>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefbarerepositoryabarerepository"><a id="Documentation/gitglossary.txt-barerepository" class="anchor" href="#Documentation/gitglossary.txt-barerepository"></a><a id="def_bare_repository"></a>bare repository </dt>
 <dd>
 <p>A bare repository is normally an appropriately
-named <a href="#def_directory">directory</a> with a <code>.git</code> suffix that does not
+named <a href="#def_directory">directory</a> with a <span class='synopsis'><code>.git</code></span> suffix that does not
 have a locally checked-out copy of any of the files under
 revision control. That is, all of the Git
 administrative and control files that would normally be present in the
-hidden <code>.git</code> sub-directory are directly present in the
-<code>repository.git</code> directory instead,
+hidden <span class='synopsis'><code>.git</code></span> sub-directory are directly present in the
+<span class='synopsis'><code>repository.git</code></span> directory instead,
 and no other files are present and checked out. Usually publishers of
 public repositories make bare repositories available.</p>
 </dd>
@@ -218,11 +218,12 @@ particular branch.  The HEAD in such a state is called
 "detached".</p>
 <div class="paragraph">
 <p>Note that commands that operate on the history of the current branch
-(e.g. <code>git commit</code> to build a new history on top of it) still work
+(e.g. <span class='synopsis'><code>git</code> <code>commit</code></span> to build a new history on top of it) still work
 while the HEAD is detached. They update the HEAD to point at the tip
 of the updated history without affecting any branch.  Commands that
-update or inquire information <em>about</em> the current branch (e.g. <code>git
-branch --set-upstream-to</code> that sets what remote-tracking branch the
+update or inquire information <em>about</em> the current branch (e.g. <span class='synopsis'><code>git</code>
+
+<code>branch</code> <code>--set-upstream-to</code></span> that sets what remote-tracking branch the
 current branch integrates with) obviously do not work, as there is no
 (real) current branch to ask about in this state.</p>
 </div>
@@ -273,7 +274,7 @@ efficiency and speed of Git.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefgitfileagitfile"><a id="Documentation/gitglossary.txt-gitfile" class="anchor" href="#Documentation/gitglossary.txt-gitfile"></a><a id="def_gitfile"></a>gitfile </dt>
 <dd>
-<p>A plain file <code>.git</code> at the root of a working tree that
+<p>A plain file <span class='synopsis'><code>.git</code></span> at the root of a working tree that
 points at the directory that is the real repository.
 For proper use see <a href='{{< relurl "docs/git-worktree" >}}'>git-worktree[1]</a> or <a href='{{< relurl "docs/git-submodule" >}}'>git-submodule[1]</a>.
 For syntax see <a href='{{< relurl "docs/gitrepository-layout" >}}'>gitrepository-layout[5]</a>.</p>
@@ -284,7 +285,7 @@ For syntax see <a href='{{< relurl "docs/gitrepository-layout" >}}'>gitrepositor
 together by recording fake ancestry information for commits. This way
 you can make Git pretend the set of <a href="#def_parent">parents</a> a <a href="#def_commit">commit</a> has
 is different from what was recorded when the commit was
-created. Configured via the <code>.git/info/grafts</code> file.</p>
+created. Configured via the <span class='synopsis'><code>.git/info/grafts</code></span> file.</p>
 <div class="paragraph">
 <p>Note that the grafts mechanism is outdated and can lead to problems
 transferring objects between repositories; see <a href='{{< relurl "docs/git-replace" >}}'>git-replace[1]</a>
@@ -299,7 +300,7 @@ for a more flexible and robust system to do the same thing.</p>
 <dd>
 <p>A <a href="#def_ref">named reference</a> to the <a href="#def_commit">commit</a> at the tip of a
 <a href="#def_branch">branch</a>.  Heads are stored in a file in
-<code>$GIT_DIR/refs/heads/</code> directory, except when using packed refs. (See
+<span class='synopsis'><code>$GIT_DIR/refs/heads/</code></span> directory, except when using packed refs. (See
 <a href='{{< relurl "docs/git-pack-refs" >}}'>git-pack-refs[1]</a>.)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefHEADaHEAD"><a id="Documentation/gitglossary.txt-HEAD" class="anchor" href="#Documentation/gitglossary.txt-HEAD"></a><a id="def_HEAD"></a>HEAD </dt>
@@ -321,8 +322,8 @@ to optional scripts that allow a developer to add functionality or
 checking. Typically, the hooks allow for a command to be pre-verified
 and potentially aborted, and allow for a post-notification after the
 operation is done. The hook scripts are found in the
-<code>$GIT_DIR/hooks/</code> directory, and are enabled by simply
-removing the <code>.sample</code> suffix from the filename. In earlier versions
+<span class='synopsis'><code>$GIT_DIR/hooks/</code></span> directory, and are enabled by simply
+removing the <span class='synopsis'><code>.sample</code></span> suffix from the filename. In earlier versions
 of Git you had to make them executable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefindexaindex"><a id="Documentation/gitglossary.txt-index" class="anchor" href="#Documentation/gitglossary.txt-index"></a><a id="def_index"></a>index </dt>
@@ -381,7 +382,7 @@ object cannot be changed.</p>
 <dd>
 <p>Stores a set of "objects", and an individual <a href="#def_object">object</a> is
 identified by its <a href="#def_object_name">object name</a>. The objects usually
-live in <code>$GIT_DIR/objects/</code>.</p>
+live in <span class='synopsis'><code>$GIT_DIR/objects/</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefobjectidentifieraobjectidentifieroid"><a id="Documentation/gitglossary.txt-objectidentifieroid" class="anchor" href="#Documentation/gitglossary.txt-objectidentifieroid"></a><a id="def_object_identifier"></a>object identifier (oid) </dt>
 <dd>
@@ -418,7 +419,7 @@ at least one upstream project which they track. By default
 <em>origin</em> is used for that purpose. New upstream updates
 will be fetched into <a href="#def_remote_tracking_branch">remote-tracking branches</a> named
 origin/name-of-upstream-branch, which you can see using
-<code>git branch -r</code>.</p>
+<span class='synopsis'><code>git</code> <code>branch</code> <code>-r</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefoverlayaoverlay"><a id="Documentation/gitglossary.txt-overlay" class="anchor" href="#Documentation/gitglossary.txt-overlay"></a><a id="def_overlay"></a>overlay </dt>
 <dd>
@@ -481,9 +482,9 @@ in the Documentation subtree,
 including Documentation/chapter_1/figure_1.jpg.</p>
 </div>
 <div class="paragraph">
-<p>A pathspec that begins with a colon <code>:</code> has special meaning.  In the
-short form, the leading colon <code>:</code> is followed by zero or more "magic
-signature" letters (which optionally is terminated by another colon <code>:</code>),
+<p>A pathspec that begins with a colon <span class='synopsis'><code>:</code></span> has special meaning.  In the
+short form, the leading colon <span class='synopsis'><code>:</code></span> is followed by zero or more "magic
+signature" letters (which optionally is terminated by another colon <span class='synopsis'><code>:</code></span>),
 and the remainder is the pattern to match against the path.
 The "magic signature" consists of ASCII symbols that are neither
 alphanumeric, glob, regex special characters nor colon.
@@ -492,9 +493,9 @@ omitted if the pattern begins with a character that does not belong to
 "magic signature" symbol set and is not a colon.</p>
 </div>
 <div class="paragraph">
-<p>In the long form, the leading colon <code>:</code> is followed by an open
-parenthesis <code>(</code>, a comma-separated list of zero or more "magic words",
-and a close parentheses <code>)</code>, and the remainder is the pattern to match
+<p>In the long form, the leading colon <span class='synopsis'><code>:</code></span> is followed by an open
+parenthesis <span class='synopsis'>(</span>, a comma-separated list of zero or more "magic words",
+and a close parentheses <span class='synopsis'>)</span>, and the remainder is the pattern to match
 against the path.</p>
 </div>
 <div class="paragraph">
@@ -507,13 +508,13 @@ should not be combined with other pathspec.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-top"><a class="anchor" href="#Documentation/gitglossary.txt-top"></a>top </dt>
 <dd>
-<p>The magic word <code>top</code> (magic signature: <code>/</code>) makes the pattern
+<p>The magic word <span class='synopsis'><code>top</code></span> (magic signature: <span class='synopsis'><code>/</code></span>) makes the pattern
 match from the root of the working tree, even when you are
 running the command from inside a subdirectory.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-literal"><a class="anchor" href="#Documentation/gitglossary.txt-literal"></a>literal </dt>
 <dd>
-<p>Wildcards in the pattern such as <code>*</code> or <code>?</code> are treated
+<p>Wildcards in the pattern such as <span class='synopsis'><code>*</code></span> or <span class='synopsis'><em>?</em></span> are treated
 as literal characters.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-icase"><a class="anchor" href="#Documentation/gitglossary.txt-icase"></a>icase </dt>
@@ -529,27 +530,27 @@ For example, "Documentation/*.html" matches
 "Documentation/git.html" but not "Documentation/ppc/ppc.html"
 or "tools/perf/Documentation/perf.html".</p>
 <div class="paragraph">
-<p>Two consecutive asterisks ("<code>**</code>") in patterns matched against
+<p>Two consecutive asterisks ("<span class='synopsis'><code>**</code></span>") in patterns matched against
 full pathname may have special meaning:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A leading "<code>**</code>" followed by a slash means match in all
-directories. For example, "<code>**/foo</code>" matches file or directory
-"<code>foo</code>" anywhere, the same as pattern "<code>foo</code>". "<code>**/foo/bar</code>"
-matches file or directory "<code>bar</code>" anywhere that is directly
-under directory "<code>foo</code>".</p>
+<p>A leading "<span class='synopsis'><code>**</code></span>" followed by a slash means match in all
+directories. For example, "<span class='synopsis'><code>**/foo</code></span>" matches file or directory
+"<span class='synopsis'><code>foo</code></span>" anywhere, the same as pattern "<span class='synopsis'><code>foo</code></span>". "<span class='synopsis'><code>**/foo/bar</code></span>"
+matches file or directory "<span class='synopsis'><code>bar</code></span>" anywhere that is directly
+under directory "<span class='synopsis'><code>foo</code></span>".</p>
 </li>
 <li>
-<p>A trailing "<code>/**</code>" matches everything inside. For example,
-"<code>abc/**</code>" matches all files inside directory "abc", relative
-to the location of the <code>.gitignore</code> file, with infinite depth.</p>
+<p>A trailing "<span class='synopsis'><code>/**</code></span>" matches everything inside. For example,
+"<span class='synopsis'><code>abc/**</code></span>" matches all files inside directory "abc", relative
+to the location of the <span class='synopsis'><code>.gitignore</code></span> file, with infinite depth.</p>
 </li>
 <li>
 <p>A slash followed by two consecutive asterisks then a slash
-matches zero or more directories. For example, "<code>a/**/b</code>"
-matches "<code>a/b</code>", "<code>a/x/b</code>", "<code>a/x/y/b</code>" and so on.</p>
+matches zero or more directories. For example, "<span class='synopsis'><code>a/**/b</code></span>"
+matches "<span class='synopsis'><code>a/b</code></span>", "<span class='synopsis'><code>a/x/b</code></span>", "<span class='synopsis'><code>a/x/y/b</code></span>" and so on.</p>
 </li>
 <li>
 <p>Other consecutive asterisks are considered invalid.</p>
@@ -562,7 +563,7 @@ matches "<code>a/b</code>", "<code>a/x/b</code>", "<code>a/x/y/b</code>" and so 
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-attr"><a class="anchor" href="#Documentation/gitglossary.txt-attr"></a>attr </dt>
 <dd>
-<p>After <code>attr:</code> comes a space separated list of "attribute
+<p>After <span class='synopsis'><code>attr:</code></span> comes a space separated list of "attribute
 requirements", all of which must be met in order for the
 path to be considered a match; this is in addition to the
 usual non-magic pathspec pattern matching.
@@ -574,17 +575,17 @@ these forms:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>"<code>ATTR</code>" requires that the attribute <code>ATTR</code> be set.</p>
+<p>"<span class='synopsis'><code>ATTR</code></span>" requires that the attribute <span class='synopsis'><code>ATTR</code></span> be set.</p>
 </li>
 <li>
-<p>"<code>-ATTR</code>" requires that the attribute <code>ATTR</code> be unset.</p>
+<p>"<span class='synopsis'><code>-ATTR</code></span>" requires that the attribute <span class='synopsis'><code>ATTR</code></span> be unset.</p>
 </li>
 <li>
-<p>"<code>ATTR=VALUE</code>" requires that the attribute <code>ATTR</code> be
-set to the string <code>VALUE</code>.</p>
+<p>"<span class='synopsis'><code>ATTR=VALUE</code></span>" requires that the attribute <span class='synopsis'><code>ATTR</code></span> be
+set to the string <span class='synopsis'><code>VALUE</code></span>.</p>
 </li>
 <li>
-<p>"<code>!ATTR</code>" requires that the attribute <code>ATTR</code> be
+<p>"<span class='synopsis'><code>!ATTR</code></span>" requires that the attribute <span class='synopsis'><code>ATTR</code></span> be
 unspecified.</p>
 <div class="paragraph">
 <p>Note that when matching against a tree object, attributes are still
@@ -597,8 +598,8 @@ obtained from working tree, not from the given tree object.</p>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-exclude"><a class="anchor" href="#Documentation/gitglossary.txt-exclude"></a>exclude </dt>
 <dd>
 <p>After a path matches any non-exclude pathspec, it will be run
-through all exclude pathspecs (magic signature: <code>!</code> or its
-synonym <code>^</code>). If it matches, the path is ignored.  When there
+through all exclude pathspecs (magic signature: <span class='synopsis'><code>!</code></span> or its
+synonym <span class='synopsis'><code>^</code></span>). If it matches, the path is ignored.  When there
 is no non-exclude pathspec, the exclusion is applied to the
 result set as if invoked without any pathspec.</p>
 </dd>
@@ -622,7 +623,7 @@ parents.</p>
 <dd>
 <p>The term <a href="#def_pickaxe">pickaxe</a> refers to an option to the diffcore
 routines that help select changes that add or delete a given text
-string. With the <code>--pickaxe-all</code> option, it can be used to view the full
+string. With the <span class='synopsis'><code>--pickaxe-all</code></span> option, it can be used to view the full
 <a href="#def_changeset">changeset</a> that introduced or removed, say, a
 particular line of text. See <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>.</p>
 </dd>
@@ -641,25 +642,26 @@ interface than the <a href="#def_plumbing">plumbing</a>.</p>
 <dd>
 <p>Refs that are per-<a href="#def_worktree">worktree</a>, rather than
 global.  This is presently only <a href="#def_HEAD">HEAD</a> and any refs
-that start with <code>refs/bisect/</code>, but might later include other
+that start with <span class='synopsis'><code>refs/bisect/</code></span>, but might later include other
 unusual refs.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefpseudorefapseudoref"><a id="Documentation/gitglossary.txt-pseudoref" class="anchor" href="#Documentation/gitglossary.txt-pseudoref"></a><a id="def_pseudoref"></a>pseudoref </dt>
 <dd>
-<p>Pseudorefs are a class of files under <code>$GIT_DIR</code> which behave
+<p>Pseudorefs are a class of files under <span class='synopsis'><code>$GIT_DIR</code></span> which behave
 like refs for the purposes of rev-parse, but which are treated
 specially by git.  Pseudorefs both have names that are all-caps,
 and always start with a line consisting of a
 <a href="#def_SHA1">SHA-1</a> followed by whitespace.  So, HEAD is not a
 pseudoref, because it is sometimes a symbolic ref.  They might
-optionally contain some additional data.  <code>MERGE_HEAD</code> and
-<code>CHERRY_PICK_HEAD</code> are examples.  Unlike
+optionally contain some additional data.  <span class='synopsis'><code>MERGE_HEAD</code></span> and
+<span class='synopsis'><code>CHERRY_PICK_HEAD</code></span> are examples.  Unlike
 <a href="#def_per_worktree_ref">per-worktree refs</a>, these files cannot
 be symbolic refs, and never have reflogs.  They also cannot be
 updated through the normal ref update machinery.  Instead,
 they are updated by directly writing to the files.  However,
-they can be read as if they were refs, so <code>git rev-parse
-MERGE_HEAD</code> will work.</p>
+they can be read as if they were refs, so <span class='synopsis'><code>git</code> <code>rev-parse</code>
+
+<code>MERGE_HEAD</code></span> will work.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefpullapull"><a id="Documentation/gitglossary.txt-pull" class="anchor" href="#Documentation/gitglossary.txt-pull"></a><a id="def_pull"></a>pull </dt>
 <dd>
@@ -707,7 +709,7 @@ to the result.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefrefaref"><a id="Documentation/gitglossary.txt-ref" class="anchor" href="#Documentation/gitglossary.txt-ref"></a><a id="def_ref"></a>ref </dt>
 <dd>
-<p>A name that begins with <code>refs/</code> (e.g. <code>refs/heads/master</code>)
+<p>A name that begins with <span class='synopsis'><code>refs/</code></span> (e.g. <span class='synopsis'><code>refs/heads/master</code></span>)
 that points to an <a href="#def_object_name">object name</a> or another
 ref (the latter is called a <a href="#def_symref">symbolic ref</a>).
 For convenience, a ref can sometimes be abbreviated when used
@@ -717,11 +719,11 @@ Refs are stored in the <a href="#def_repository">repository</a>.</p>
 <div class="paragraph">
 <p>The ref namespace is hierarchical.
 Different subhierarchies are used for different purposes (e.g. the
-<code>refs/heads/</code> hierarchy is used to represent local branches).</p>
+<span class='synopsis'><code>refs/heads/</code></span> hierarchy is used to represent local branches).</p>
 </div>
 <div class="paragraph">
-<p>There are a few special-purpose refs that do not begin with <code>refs/</code>.
-The most notable example is <code>HEAD</code>.</p>
+<p>There are a few special-purpose refs that do not begin with <span class='synopsis'><code>refs/</code></span>.
+The most notable example is <span class='synopsis'><code>HEAD</code></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefreflogareflog"><a id="Documentation/gitglossary.txt-reflog" class="anchor" href="#Documentation/gitglossary.txt-reflog"></a><a id="def_reflog"></a>reflog </dt>
@@ -789,7 +791,7 @@ In the context of Git used as a synonym for <a href="#def_object_name">object na
 <dd>
 <p>Mostly a synonym to <a href="#def_shallow_repository">shallow repository</a>
 but the phrase makes it more explicit that it was created by
-running <code>git clone --depth=...</code> command.</p>
+running <span class='synopsis'><code>git</code> <code>clone</code> <code>--depth=...</code></span> command.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefshallowrepositoryashallowrepository"><a id="Documentation/gitglossary.txt-shallowrepository" class="anchor" href="#Documentation/gitglossary.txt-shallowrepository"></a><a id="def_shallow_repository"></a>shallow repository </dt>
 <dd>
@@ -800,7 +802,7 @@ parents, even though they are recorded in the <a href="#def_commit_object">commi
 object</a>). This is sometimes useful when you are interested only in the
 recent history of a project even though the real history recorded in the
 upstream is much larger. A shallow repository
-is created by giving the <code>--depth</code> option to <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>, and
+is created by giving the <span class='synopsis'><code>--depth</code></span> option to <a href='{{< relurl "docs/git-clone" >}}'>git-clone[1]</a>, and
 its history can be later deepened with <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddefstashastashentry"><a id="Documentation/gitglossary.txt-stashentry" class="anchor" href="#Documentation/gitglossary.txt-stashentry"></a><a id="def_stash"></a>stash entry </dt>
@@ -819,12 +821,12 @@ normal ref in some cases.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>"<code>FETCH_HEAD</code>" is written by <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a> or <a href='{{< relurl "docs/git-pull" >}}'>git-pull[1]</a>. It
+<p>"<span class='synopsis'><code>FETCH_HEAD</code></span>" is written by <a href='{{< relurl "docs/git-fetch" >}}'>git-fetch[1]</a> or <a href='{{< relurl "docs/git-pull" >}}'>git-pull[1]</a>. It
 may refer to multiple object IDs. Each object ID is annotated with metadata
 indicating where it was fetched from and its fetch status.</p>
 </li>
 <li>
-<p>"<code>MERGE_HEAD</code>" is written by <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> when resolving merge
+<p>"<span class='synopsis'><code>MERGE_HEAD</code></span>" is written by <a href='{{< relurl "docs/git-merge" >}}'>git-merge[1]</a> when resolving merge
 conflicts. It contains all commit IDs which are being merged.</p>
 </li>
 </ul>
@@ -853,11 +855,11 @@ are manipulated with the <a href='{{< relurl "docs/git-symbolic-ref" >}}'>git-sy
 </dd>
 <dt class="hdlist1" id="Documentation/gitglossary.txt-aiddeftagatag"><a id="Documentation/gitglossary.txt-tag" class="anchor" href="#Documentation/gitglossary.txt-tag"></a><a id="def_tag"></a>tag </dt>
 <dd>
-<p>A <a href="#def_ref">ref</a> under <code>refs/tags/</code> namespace that points to an
+<p>A <a href="#def_ref">ref</a> under <span class='synopsis'><code>refs/tags/</code></span> namespace that points to an
 object of an arbitrary type (typically a tag points to either a
 <a href="#def_tag_object">tag</a> or a <a href="#def_commit_object">commit object</a>).
 In contrast to a <a href="#def_head">head</a>, a tag is not updated by
-the <code>commit</code> command. A Git tag has nothing to do with a Lisp
+the <span class='synopsis'><code>commit</code></span> command. A Git tag has nothing to do with a Lisp
 tag (which would be called an <a href="#def_object_type">object type</a>
 in Git&#8217;s context). A tag is most typically used to mark a particular
 point in the commit ancestry <a href="#def_chain">chain</a>.</p>

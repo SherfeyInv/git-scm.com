@@ -27,15 +27,15 @@ submodule path or name.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To initialize the cache with configurations from the worktree the caller
-typically first calls <code>gitmodules_config()</code> to read values from the
+typically first calls <span class='synopsis'><code>gitmodules_config</code>()</span> to read values from the
 worktree .gitmodules and then to overlay the local git config values
-<code>parse_submodule_config_option()</code> from the config parsing
+<span class='synopsis'><code>parse_submodule_config_option</code>()</span> from the config parsing
 infrastructure.</p>
 </div>
 <div class="paragraph">
 <p>The caller can look up information about submodules by using the
-<code>submodule_from_path()</code> or <code>submodule_from_name()</code> functions. They return
-a <code>struct submodule</code> which contains the values. The API automatically
+<span class='synopsis'><code>submodule_from_path</code>()</span> or <span class='synopsis'><code>submodule_from_name</code>()</span> functions. They return
+a <span class='synopsis'><code>struct</code> <code>submodule</code></span> which contains the values. The API automatically
 initializes and allocates the needed infrastructure on-demand. If the
 caller does only want to lookup values from revisions the initialization
 can be skipped.</p>
@@ -51,7 +51,7 @@ the API, all internally cached values can be freed with submodule_free().</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-codestructsubmodulecode"><a id="Documentation/technical/api-submodule-config.txt-structsubmodule" class="anchor" href="#Documentation/technical/api-submodule-config.txt-structsubmodule"></a><code>struct submodule</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-spanclasssynopsiscodestructcodecodesubmodulecodespan"><a id="Documentation/technical/api-submodule-config.txt-structsubmodule" class="anchor" href="#Documentation/technical/api-submodule-config.txt-structsubmodule"></a><span class='synopsis'><code>struct</code> <code>submodule</code></span> </dt>
 <dd>
 <p>This structure is used to return the information about one
 submodule for a certain revision. It is returned by the lookup
@@ -66,29 +66,29 @@ functions.</p>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-codevoidsubmodulefreestructrepositoryrcode"><a id="Documentation/technical/api-submodule-config.txt-voidsubmodulefreestructrepositoryr" class="anchor" href="#Documentation/technical/api-submodule-config.txt-voidsubmodulefreestructrepositoryr"></a><code>void submodule_free(struct repository *r)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-spanclasssynopsiscodevoidcodecodesubmodulefreecodecodestructcodecoderepositorycodecodercodespan"><a id="Documentation/technical/api-submodule-config.txt-voidsubmodulefreestructrepositoryr" class="anchor" href="#Documentation/technical/api-submodule-config.txt-voidsubmodulefreestructrepositoryr"></a><span class='synopsis'><code>void</code> <code>submodule_free</code>(<code>struct</code> <code>repository</code> <code>*r</code>)</span> </dt>
 <dd>
 <p>Use these to free the internally cached values.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-codeintparsesubmoduleconfigoptionconstcharvarconstcharvaluecode"><a id="Documentation/technical/api-submodule-config.txt-intparsesubmoduleconfigoptionconstcharvarconstcharvalue" class="anchor" href="#Documentation/technical/api-submodule-config.txt-intparsesubmoduleconfigoptionconstcharvarconstcharvalue"></a><code>int parse_submodule_config_option(const char *var, const char *value)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-spanclasssynopsiscodeintcodecodeparsesubmoduleconfigoptioncodecodeconstcodecodecharcodecodevarcodecodeconstcodecodecharcodecodevaluecodespan"><a id="Documentation/technical/api-submodule-config.txt-intparsesubmoduleconfigoptionconstcharvarconstcharvalue" class="anchor" href="#Documentation/technical/api-submodule-config.txt-intparsesubmoduleconfigoptionconstcharvarconstcharvalue"></a><span class='synopsis'><code>int</code> <code>parse_submodule_config_option</code>(<code>const</code> <code>char</code> <code>*var,</code> <code>const</code> <code>char</code> <code>*value</code>)</span> </dt>
 <dd>
 <p>Can be passed to the config parsing infrastructure to parse
 local (worktree) submodule configurations.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-codeconststructsubmodulesubmodulefrompathconstunsignedchartreeishnameconstcharpathcode"><a id="Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefrompathconstunsignedchartreeishnameconstcharpath" class="anchor" href="#Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefrompathconstunsignedchartreeishnameconstcharpath"></a><code>const struct submodule *submodule_from_path(const unsigned char *treeish_name, const char *path)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-spanclasssynopsiscodeconstcodecodestructcodecodesubmodulecodecodesubmodulefrompathcodecodeconstcodecodeunsignedcodecodecharcodecodetreeishnamecodecodeconstcodecodecharcodecodepathcodespan"><a id="Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefrompathconstunsignedchartreeishnameconstcharpath" class="anchor" href="#Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefrompathconstunsignedchartreeishnameconstcharpath"></a><span class='synopsis'><code>const</code> <code>struct</code> <code>submodule</code> <code>*submodule_from_path</code>(<code>const</code> <code>unsigned</code> <code>char</code> <code>*treeish_name,</code> <code>const</code> <code>char</code> <code>*path</code>)</span> </dt>
 <dd>
 <p>Given a tree-ish in the superproject and a path, return the
 submodule that is bound at the path in the named tree.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-codeconststructsubmodulesubmodulefromnameconstunsignedchartreeishnameconstcharnamecode"><a id="Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefromnameconstunsignedchartreeishnameconstcharname" class="anchor" href="#Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefromnameconstunsignedchartreeishnameconstcharname"></a><code>const struct submodule *submodule_from_name(const unsigned char *treeish_name, const char *name)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-submodule-config.txt-spanclasssynopsiscodeconstcodecodestructcodecodesubmodulecodecodesubmodulefromnamecodecodeconstcodecodeunsignedcodecodecharcodecodetreeishnamecodecodeconstcodecodecharcodecodenamecodespan"><a id="Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefromnameconstunsignedchartreeishnameconstcharname" class="anchor" href="#Documentation/technical/api-submodule-config.txt-conststructsubmodulesubmodulefromnameconstunsignedchartreeishnameconstcharname"></a><span class='synopsis'><code>const</code> <code>struct</code> <code>submodule</code> <code>*submodule_from_name</code>(<code>const</code> <code>unsigned</code> <code>char</code> <code>*treeish_name,</code> <code>const</code> <code>char</code> <code>*name</code>)</span> </dt>
 <dd>
 <p>The same as above but lookup by name.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>Whenever a submodule configuration is parsed in <code>parse_submodule_config_option</code>
-via e.g. <code>gitmodules_config()</code>, it will overwrite the null_sha1 entry.
+<p>Whenever a submodule configuration is parsed in <span class='synopsis'><code>parse_submodule_config_option</code></span>
+via e.g. <span class='synopsis'><code>gitmodules_config</code>()</span>, it will overwrite the null_sha1 entry.
 So in the normal case, when HEAD:.gitmodules is parsed first and then overlayed
 with the repository configuration, the null_sha1 entry contains the local
 configuration of a submodule (e.g. consolidated values from local git

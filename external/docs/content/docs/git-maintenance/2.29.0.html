@@ -37,14 +37,14 @@ aliases:
 and reducing storage requirements for the repository.</p>
 </div>
 <div class="paragraph">
-<p>Git commands that add repository data, such as <code>git add</code> or <code>git fetch</code>,
+<p>Git commands that add repository data, such as <span class='synopsis'><code>git</code> <code>add</code></span> or <span class='synopsis'><code>git</code> <code>fetch</code></span>,
 are optimized for a responsive user experience. These commands do not take
 time to optimize the Git data, since such optimizations scale with the full
 size of the repository while these user commands each perform a relatively
 small action.</p>
 </div>
 <div class="paragraph">
-<p>The <code>git maintenance</code> command provides flexibility for how to optimize the
+<p>The <span class='synopsis'><code>git</code> <code>maintenance</code></span> command provides flexibility for how to optimize the
 Git repository.</p>
 </div>
 </div>
@@ -56,10 +56,10 @@ Git repository.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/git-maintenance.txt-run"><a class="anchor" href="#Documentation/git-maintenance.txt-run"></a>run </dt>
 <dd>
-<p>Run one or more maintenance tasks. If one or more <code>--task</code> options
+<p>Run one or more maintenance tasks. If one or more <span class='synopsis'><code>--task</code></span> options
 are specified, then those tasks are run in that order. Otherwise,
-the tasks are determined by which <code>maintenance.&lt;task&gt;.enabled</code>
-config options are true. By default, only <code>maintenance.gc.enabled</code>
+the tasks are determined by which <span class='synopsis'><code>maintenance.</code><em>&lt;task&gt;</em><code>.enabled</code></span>
+config options are true. By default, only <span class='synopsis'><code>maintenance.gc.enabled</code></span>
 is true.</p>
 </dd>
 </dl>
@@ -73,11 +73,11 @@ is true.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/git-maintenance.txt-commit-graph"><a class="anchor" href="#Documentation/git-maintenance.txt-commit-graph"></a>commit-graph </dt>
 <dd>
-<p>The <code>commit-graph</code> job updates the <code>commit-graph</code> files incrementally,
+<p>The <span class='synopsis'><code>commit-graph</code></span> job updates the <span class='synopsis'><code>commit-graph</code></span> files incrementally,
 then verifies that the written data is correct. The incremental
 write is safe to run alongside concurrent Git processes since it
-will not expire <code>.graph</code> files that were in the previous
-<code>commit-graph-chain</code> file. They will be deleted by a later run based
+will not expire <span class='synopsis'><code>.graph</code></span> files that were in the previous
+<span class='synopsis'><code>commit-graph-chain</code></span> file. They will be deleted by a later run based
 on the expiration delay.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-maintenance.txt-gc"><a class="anchor" href="#Documentation/git-maintenance.txt-gc"></a>gc </dt>
@@ -100,23 +100,23 @@ be disruptive in some situations, as it deletes stale data. See
 <dl>
 <dt class="hdlist1" id="Documentation/git-maintenance.txt---auto"><a class="anchor" href="#Documentation/git-maintenance.txt---auto"></a>--auto </dt>
 <dd>
-<p>When combined with the <code>run</code> subcommand, run maintenance tasks
-only if certain thresholds are met. For example, the <code>gc</code> task
+<p>When combined with the <span class='synopsis'><code>run</code></span> subcommand, run maintenance tasks
+only if certain thresholds are met. For example, the <span class='synopsis'><code>gc</code></span> task
 runs when the number of loose objects exceeds the number stored
-in the <code>gc.auto</code> config setting, or when the number of pack-files
-exceeds the <code>gc.autoPackLimit</code> config setting.</p>
+in the <span class='synopsis'><code>gc.auto</code></span> config setting, or when the number of pack-files
+exceeds the <span class='synopsis'><code>gc.autoPackLimit</code></span> config setting.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-maintenance.txt---quiet"><a class="anchor" href="#Documentation/git-maintenance.txt---quiet"></a>--quiet </dt>
 <dd>
-<p>Do not report progress or other information over <code>stderr</code>.</p>
+<p>Do not report progress or other information over <span class='synopsis'><code>stderr</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-maintenance.txt---tasklttaskgt"><a id="Documentation/git-maintenance.txt---tasktask" class="anchor" href="#Documentation/git-maintenance.txt---tasktask"></a>--task=&lt;task&gt; </dt>
 <dd>
 <p>If this option is specified one or more times, then only run the
-specified tasks in the specified order. If no <code>--task=&lt;task&gt;</code>
+specified tasks in the specified order. If no <span class='synopsis'><code>--task=</code><em>&lt;task&gt;</em></span>
 arguments are specified, then only the tasks with
-<code>maintenance.&lt;task&gt;.enabled</code> configured as <code>true</code> are considered.
-See the <em>TASKS</em> section for the list of accepted <code>&lt;task&gt;</code> values.</p>
+<span class='synopsis'><code>maintenance.</code><em>&lt;task&gt;</em><code>.enabled</code></span> configured as <span class='synopsis'><code>true</code></span> are considered.
+See the <em>TASKS</em> section for the list of accepted <span class='synopsis'><em>&lt;task&gt;</em></span> values.</p>
 </dd>
 </dl>
 </div>

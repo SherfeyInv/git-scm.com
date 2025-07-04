@@ -44,7 +44,7 @@ picking out different variables useful to themselves.</p>
 <p>the name of the parsed variable. This is in canonical "flat" form: the
 section, subsection, and variable segments will be separated by dots,
 and the section and variable segments will be all lowercase. E.g.,
-<code>core.ignorecase</code>, <code>diff.SomeType.textconv</code>.</p>
+<span class='synopsis'><code>core.ignorecase</code></span>, <span class='synopsis'><code>diff.SomeType.textconv</code></span>.</p>
 </li>
 <li>
 <p>the value of the found variable, as a string. If the variable had no
@@ -69,44 +69,44 @@ could not be parsed properly.</p>
 <div class="paragraph">
 <p>Most programs will simply want to look up variables in all config files
 that Git knows about, using the normal precedence rules. To do this,
-call <code>git_config</code> with a callback function and void data pointer.</p>
+call <span class='synopsis'><code>git_config</code></span> with a callback function and void data pointer.</p>
 </div>
 <div class="paragraph">
-<p><code>git_config</code> will read all config sources in order of increasing
+<p><span class='synopsis'><code>git_config</code></span> will read all config sources in order of increasing
 priority. Thus a callback should typically overwrite previously-seen
-entries with new ones (e.g., if both the user-wide <code>~/.gitconfig</code> and
-repo-specific <code>.git/config</code> contain <code>color.ui</code>, the config machinery
+entries with new ones (e.g., if both the user-wide <span class='synopsis'><code>~/.gitconfig</code></span> and
+repo-specific <span class='synopsis'><code>.git/config</code></span> contain <span class='synopsis'><code>color.ui</code></span>, the config machinery
 will first feed the user-wide one to the callback, and then the
 repo-specific one; by overwriting, the higher-priority repo-specific
 value is left at the end).</p>
 </div>
 <div class="paragraph">
-<p>The <code>git_config_with_options</code> function lets the caller examine config
-while adjusting some of the default behavior of <code>git_config</code>. It should
+<p>The <span class='synopsis'><code>git_config_with_options</code></span> function lets the caller examine config
+while adjusting some of the default behavior of <span class='synopsis'><code>git_config</code></span>. It should
 almost never be used by "regular" Git code that is looking up
 configuration variables. It is intended for advanced callers like
-<code>git-config</code>, which are intentionally tweaking the normal config-lookup
+<span class='synopsis'><code>git-config</code></span>, which are intentionally tweaking the normal config-lookup
 process. It takes two extra parameters:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codefilenamecode"><a id="Documentation/technical/api-config.txt-filename" class="anchor" href="#Documentation/technical/api-config.txt-filename"></a><code>filename</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodefilenamecodespan"><a id="Documentation/technical/api-config.txt-filename" class="anchor" href="#Documentation/technical/api-config.txt-filename"></a><span class='synopsis'><code>filename</code></span> </dt>
 <dd>
 <p>If this parameter is non-NULL, it specifies the name of a file to
 parse for configuration, rather than looking in the usual files. Regular
-<code>git_config</code> defaults to <code>NULL</code>.</p>
+<span class='synopsis'><code>git_config</code></span> defaults to <span class='synopsis'><code>NULL</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-coderespectincludescode"><a id="Documentation/technical/api-config.txt-respectincludes" class="anchor" href="#Documentation/technical/api-config.txt-respectincludes"></a><code>respect_includes</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscoderespectincludescodespan"><a id="Documentation/technical/api-config.txt-respectincludes" class="anchor" href="#Documentation/technical/api-config.txt-respectincludes"></a><span class='synopsis'><code>respect_includes</code></span> </dt>
 <dd>
 <p>Specify whether include directives should be followed in parsed files.
-Regular <code>git_config</code> defaults to <code>1</code>.</p>
+Regular <span class='synopsis'><code>git_config</code></span> defaults to <span class='synopsis'><code>1</code></span>.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>There is a special version of <code>git_config</code> called <code>git_config_early</code>.
+<p>There is a special version of <span class='synopsis'><code>git_config</code></span> called <span class='synopsis'><code>git_config_early</code></span>.
 This version takes an additional parameter to specify the repository
-config, instead of having it looked up via <code>git_path</code>. This is useful
+config, instead of having it looked up via <span class='synopsis'><code>git_path</code></span>. This is useful
 early in a Git program before the repository has been found. Unless
 you&#8217;re working with early setup code, you probably don&#8217;t want to use
 this.</p>
@@ -118,8 +118,8 @@ this.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To read a specific file in git-config format, use
-<code>git_config_from_file</code>. This takes the same callback and data parameters
-as <code>git_config</code>.</p>
+<span class='synopsis'><code>git_config_from_file</code></span>. This takes the same callback and data parameters
+as <span class='synopsis'><code>git_config</code></span>.</p>
 </div>
 </div>
 </div>
@@ -128,28 +128,28 @@ as <code>git_config</code>.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For programs wanting to query for specific variables in a non-callback
-manner, the config API provides two functions <code>git_config_get_value</code>
-and <code>git_config_get_value_multi</code>. They both read values from an internal
+manner, the config API provides two functions <span class='synopsis'><code>git_config_get_value</code></span>
+and <span class='synopsis'><code>git_config_get_value_multi</code></span>. They both read values from an internal
 cache generated previously from reading the config files.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetvalueconstcharkeyconstcharvaluecode"><a id="Documentation/technical/api-config.txt-intgitconfiggetvalueconstcharkeyconstcharvalue" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetvalueconstcharkeyconstcharvalue"></a><code>int git_config_get_value(const char *key, const char **value)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetvaluecodecodeconstcodecodecharcodecodekeycodecodeconstcodecodecharcodecodevaluecodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetvalueconstcharkeyconstcharvalue" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetvalueconstcharkeyconstcharvalue"></a><span class='synopsis'><code>int</code> <code>git_config_get_value</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>const</code> <code>char</code> <code>**value</code>)</span> </dt>
 <dd>
-<p>Finds the highest-priority value for the configuration variable <code>key</code>,
-stores the pointer to it in <code>value</code> and returns 0. When the
-configuration variable <code>key</code> is not found, returns 1 without touching
-<code>value</code>. The caller should not free or modify <code>value</code>, as it is owned
+<p>Finds the highest-priority value for the configuration variable <span class='synopsis'><code>key</code></span>,
+stores the pointer to it in <span class='synopsis'><code>value</code></span> and returns 0. When the
+configuration variable <span class='synopsis'><code>key</code></span> is not found, returns 1 without touching
+<span class='synopsis'><code>value</code></span>. The caller should not free or modify <span class='synopsis'><code>value</code></span>, as it is owned
 by the cache.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeconststructstringlistgitconfiggetvaluemulticonstcharkeycode"><a id="Documentation/technical/api-config.txt-conststructstringlistgitconfiggetvaluemulticonstcharkey" class="anchor" href="#Documentation/technical/api-config.txt-conststructstringlistgitconfiggetvaluemulticonstcharkey"></a><code>const struct string_list *git_config_get_value_multi(const char *key)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeconstcodecodestructcodecodestringlistcodecodegitconfiggetvaluemulticodecodeconstcodecodecharcodecodekeycodespan"><a id="Documentation/technical/api-config.txt-conststructstringlistgitconfiggetvaluemulticonstcharkey" class="anchor" href="#Documentation/technical/api-config.txt-conststructstringlistgitconfiggetvaluemulticonstcharkey"></a><span class='synopsis'><code>const</code> <code>struct</code> <code>string_list</code> <code>*git_config_get_value_multi</code>(<code>const</code> <code>char</code> <code>*key</code>)</span> </dt>
 <dd>
 <p>Finds and returns the value list, sorted in order of increasing priority
-for the configuration variable <code>key</code>. When the configuration variable
-<code>key</code> is not found, returns NULL. The caller should not free or modify
+for the configuration variable <span class='synopsis'><code>key</code></span>. When the configuration variable
+<span class='synopsis'><code>key</code></span> is not found, returns NULL. The caller should not free or modify
 the returned pointer, as it is owned by the cache.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codevoidgitconfigclearvoidcode"><a id="Documentation/technical/api-config.txt-voidgitconfigclearvoid" class="anchor" href="#Documentation/technical/api-config.txt-voidgitconfigclearvoid"></a><code>void git_config_clear(void)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodevoidcodecodegitconfigclearcodecodevoidcodespan"><a id="Documentation/technical/api-config.txt-voidgitconfigclearvoid" class="anchor" href="#Documentation/technical/api-config.txt-voidgitconfigclearvoid"></a><span class='synopsis'><code>void</code> <code>git_config_clear</code>(<code>void</code>)</span> </dt>
 <dd>
 <p>Resets and invalidates the config cache.</p>
 </dd>
@@ -161,65 +161,65 @@ as well as retrieval for the queried variable, including:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetintconstcharkeyintdestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetintconstcharkeyintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetintconstcharkeyintdest"></a><code>int git_config_get_int(const char *key, int *dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetintcodecodeconstcodecodecharcodecodekeycodecodeintcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetintconstcharkeyintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetintconstcharkeyintdest"></a><span class='synopsis'><code>int</code> <code>git_config_get_int</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>int</code> <code>*dest</code>)</span> </dt>
 <dd>
 <p>Finds and parses the value to an integer for the configuration variable
-<code>key</code>. Dies on error; otherwise, stores the value of the parsed integer in
-<code>dest</code> and returns 0. When the configuration variable <code>key</code> is not found,
-returns 1 without touching <code>dest</code>.</p>
+<span class='synopsis'><code>key</code></span>. Dies on error; otherwise, stores the value of the parsed integer in
+<span class='synopsis'><code>dest</code></span> and returns 0. When the configuration variable <span class='synopsis'><code>key</code></span> is not found,
+returns 1 without touching <span class='synopsis'><code>dest</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetulongconstcharkeyunsignedlongdestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetulongconstcharkeyunsignedlongdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetulongconstcharkeyunsignedlongdest"></a><code>int git_config_get_ulong(const char *key, unsigned long *dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetulongcodecodeconstcodecodecharcodecodekeycodecodeunsignedcodecodelongcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetulongconstcharkeyunsignedlongdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetulongconstcharkeyunsignedlongdest"></a><span class='synopsis'><code>int</code> <code>git_config_get_ulong</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>unsigned</code> <code>long</code> <code>*dest</code>)</span> </dt>
 <dd>
-<p>Similar to <code>git_config_get_int</code> but for unsigned longs.</p>
+<p>Similar to <span class='synopsis'><code>git_config_get_int</code></span> but for unsigned longs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetboolconstcharkeyintdestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetboolconstcharkeyintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetboolconstcharkeyintdest"></a><code>int git_config_get_bool(const char *key, int *dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetboolcodecodeconstcodecodecharcodecodekeycodecodeintcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetboolconstcharkeyintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetboolconstcharkeyintdest"></a><span class='synopsis'><code>int</code> <code>git_config_get_bool</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>int</code> <code>*dest</code>)</span> </dt>
 <dd>
 <p>Finds and parses the value into a boolean value, for the configuration
-variable <code>key</code> respecting keywords like "true" and "false". Integer
+variable <span class='synopsis'><code>key</code></span> respecting keywords like "true" and "false". Integer
 values are converted into true/false values (when they are non-zero or
 zero, respectively). Other values cause a die(). If parsing is successful,
-stores the value of the parsed result in <code>dest</code> and returns 0. When the
-configuration variable <code>key</code> is not found, returns 1 without touching
-<code>dest</code>.</p>
+stores the value of the parsed result in <span class='synopsis'><code>dest</code></span> and returns 0. When the
+configuration variable <span class='synopsis'><code>key</code></span> is not found, returns 1 without touching
+<span class='synopsis'><code>dest</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetboolorintconstcharkeyintisboolintdestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetboolorintconstcharkeyintisboolintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetboolorintconstcharkeyintisboolintdest"></a><code>int git_config_get_bool_or_int(const char *key, int *is_bool, int *dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetboolorintcodecodeconstcodecodecharcodecodekeycodecodeintcodecodeisboolcodecodeintcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetboolorintconstcharkeyintisboolintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetboolorintconstcharkeyintisboolintdest"></a><span class='synopsis'><code>int</code> <code>git_config_get_bool_or_int</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>int</code> <code>*is_bool,</code> <code>int</code> <code>*dest</code>)</span> </dt>
 <dd>
-<p>Similar to <code>git_config_get_bool</code>, except that integers are copied as-is,
-and <code>is_bool</code> flag is unset.</p>
+<p>Similar to <span class='synopsis'><code>git_config_get_bool</code></span>, except that integers are copied as-is,
+and <span class='synopsis'><code>is_bool</code></span> flag is unset.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetmaybeboolconstcharkeyintdestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetmaybeboolconstcharkeyintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetmaybeboolconstcharkeyintdest"></a><code>int git_config_get_maybe_bool(const char *key, int *dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetmaybeboolcodecodeconstcodecodecharcodecodekeycodecodeintcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetmaybeboolconstcharkeyintdest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetmaybeboolconstcharkeyintdest"></a><span class='synopsis'><code>int</code> <code>git_config_get_maybe_bool</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>int</code> <code>*dest</code>)</span> </dt>
 <dd>
-<p>Similar to <code>git_config_get_bool</code>, except that it returns -1 on error
+<p>Similar to <span class='synopsis'><code>git_config_get_bool</code></span>, except that it returns -1 on error
 rather than dying.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetstringconstconstcharkeyconstchardestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetstringconstconstcharkeyconstchardest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetstringconstconstcharkeyconstchardest"></a><code>int git_config_get_string_const(const char *key, const char **dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetstringconstcodecodeconstcodecodecharcodecodekeycodecodeconstcodecodecharcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetstringconstconstcharkeyconstchardest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetstringconstconstcharkeyconstchardest"></a><span class='synopsis'><code>int</code> <code>git_config_get_string_const</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>const</code> <code>char</code> <code>**dest</code>)</span> </dt>
 <dd>
-<p>Allocates and copies the retrieved string into the <code>dest</code> parameter for
-the configuration variable <code>key</code>; if NULL string is given, prints an
-error message and returns -1. When the configuration variable <code>key</code> is
-not found, returns 1 without touching <code>dest</code>.</p>
+<p>Allocates and copies the retrieved string into the <span class='synopsis'><code>dest</code></span> parameter for
+the configuration variable <span class='synopsis'><code>key</code></span>; if NULL string is given, prints an
+error message and returns -1. When the configuration variable <span class='synopsis'><code>key</code></span> is
+not found, returns 1 without touching <span class='synopsis'><code>dest</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetstringconstcharkeychardestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetstringconstcharkeychardest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetstringconstcharkeychardest"></a><code>int git_config_get_string(const char *key, char **dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetstringcodecodeconstcodecodecharcodecodekeycodecodecharcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetstringconstcharkeychardest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetstringconstcharkeychardest"></a><span class='synopsis'><code>int</code> <code>git_config_get_string</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>char</code> <code>**dest</code>)</span> </dt>
 <dd>
-<p>Similar to <code>git_config_get_string_const</code>, except that retrieved value
-copied into the <code>dest</code> parameter is a mutable string.</p>
+<p>Similar to <span class='synopsis'><code>git_config_get_string_const</code></span>, except that retrieved value
+copied into the <span class='synopsis'><code>dest</code></span> parameter is a mutable string.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codeintgitconfiggetpathnameconstcharkeyconstchardestcode"><a id="Documentation/technical/api-config.txt-intgitconfiggetpathnameconstcharkeyconstchardest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetpathnameconstcharkeyconstchardest"></a><code>int git_config_get_pathname(const char *key, const char **dest)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodeintcodecodegitconfiggetpathnamecodecodeconstcodecodecharcodecodekeycodecodeconstcodecodecharcodecodedestcodespan"><a id="Documentation/technical/api-config.txt-intgitconfiggetpathnameconstcharkeyconstchardest" class="anchor" href="#Documentation/technical/api-config.txt-intgitconfiggetpathnameconstcharkeyconstchardest"></a><span class='synopsis'><code>int</code> <code>git_config_get_pathname</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>const</code> <code>char</code> <code>**dest</code>)</span> </dt>
 <dd>
-<p>Similar to <code>git_config_get_string</code>, but expands <code>~</code> or <code>~user</code> into
+<p>Similar to <span class='synopsis'><code>git_config_get_string</code></span>, but expands <span class='synopsis'><code>~</code></span> or <span class='synopsis'><code>~user</code></span> into
 the user&#8217;s home directory when found at the beginning of the path.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitdieconfigconstcharkeyconstcharerrcode"><a id="Documentation/technical/api-config.txt-gitdieconfigconstcharkeyconstcharerr" class="anchor" href="#Documentation/technical/api-config.txt-gitdieconfigconstcharkeyconstcharerr"></a><code>git_die_config(const char *key, const char *err, ...)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitdieconfigcodecodeconstcodecodecharcodecodekeycodecodeconstcodecodecharcodecodeerrcodecodecodespan"><a id="Documentation/technical/api-config.txt-gitdieconfigconstcharkeyconstcharerr" class="anchor" href="#Documentation/technical/api-config.txt-gitdieconfigconstcharkeyconstcharerr"></a><span class='synopsis'><code>git_die_config</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>const</code> <code>char</code> <code>*err,</code> <code>...</code>)</span> </dt>
 <dd>
-<p>First prints the error message specified by the caller in <code>err</code> and then
+<p>First prints the error message specified by the caller in <span class='synopsis'><code>err</code></span> and then
 dies printing the line number and the file name of the highest priority
-value for the configuration variable <code>key</code>.</p>
+value for the configuration variable <span class='synopsis'><code>key</code></span>.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codevoidgitdieconfiglinenrconstcharkeyconstcharfilenameintlinenrcode"><a id="Documentation/technical/api-config.txt-voidgitdieconfiglinenrconstcharkeyconstcharfilenameintlinenr" class="anchor" href="#Documentation/technical/api-config.txt-voidgitdieconfiglinenrconstcharkeyconstcharfilenameintlinenr"></a><code>void git_die_config_linenr(const char *key, const char *filename, int linenr)</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodevoidcodecodegitdieconfiglinenrcodecodeconstcodecodecharcodecodekeycodecodeconstcodecodecharcodecodefilenamecodecodeintcodecodelinenrcodespan"><a id="Documentation/technical/api-config.txt-voidgitdieconfiglinenrconstcharkeyconstcharfilenameintlinenr" class="anchor" href="#Documentation/technical/api-config.txt-voidgitdieconfiglinenrconstcharkeyconstcharfilenameintlinenr"></a><span class='synopsis'><code>void</code> <code>git_die_config_linenr</code>(<code>const</code> <code>char</code> <code>*key,</code> <code>const</code> <code>char</code> <code>*filename,</code> <code>int</code> <code>linenr</code>)</span> </dt>
 <dd>
 <p>Helper function which formats the die error message according to the
-parameters entered. Used by <code>git_die_config()</code>. It can be used by callers
-handling <code>git_config_get_value_multi()</code> to print the correct error message
+parameters entered. Used by <span class='synopsis'><code>git_die_config</code>()</span>. It can be used by callers
+handling <span class='synopsis'><code>git_config_get_value_multi</code>()</span> to print the correct error message
 for the desired value.</p>
 </dd>
 </dl>
@@ -238,40 +238,40 @@ a number of helper functions, including:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigintcode"><a id="Documentation/technical/api-config.txt-gitconfigint" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigint"></a><code>git_config_int</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigintcodespan"><a id="Documentation/technical/api-config.txt-gitconfigint" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigint"></a><span class='synopsis'><code>git_config_int</code></span> </dt>
 <dd>
 <p>Parse the string to an integer, including unit factors. Dies on error;
 otherwise, returns the parsed result.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigulongcode"><a id="Documentation/technical/api-config.txt-gitconfigulong" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigulong"></a><code>git_config_ulong</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigulongcodespan"><a id="Documentation/technical/api-config.txt-gitconfigulong" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigulong"></a><span class='synopsis'><code>git_config_ulong</code></span> </dt>
 <dd>
-<p>Identical to <code>git_config_int</code>, but for unsigned longs.</p>
+<p>Identical to <span class='synopsis'><code>git_config_int</code></span>, but for unsigned longs.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigboolcode"><a id="Documentation/technical/api-config.txt-gitconfigbool" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigbool"></a><code>git_config_bool</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigboolcodespan"><a id="Documentation/technical/api-config.txt-gitconfigbool" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigbool"></a><span class='synopsis'><code>git_config_bool</code></span> </dt>
 <dd>
 <p>Parse a string into a boolean value, respecting keywords like "true" and
 "false". Integer values are converted into true/false values (when they
 are non-zero or zero, respectively). Other values cause a die(). If
 parsing is successful, the return value is the result.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigboolorintcode"><a id="Documentation/technical/api-config.txt-gitconfigboolorint" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigboolorint"></a><code>git_config_bool_or_int</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigboolorintcodespan"><a id="Documentation/technical/api-config.txt-gitconfigboolorint" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigboolorint"></a><span class='synopsis'><code>git_config_bool_or_int</code></span> </dt>
 <dd>
-<p>Same as <code>git_config_bool</code>, except that integers are returned as-is, and
-an <code>is_bool</code> flag is unset.</p>
+<p>Same as <span class='synopsis'><code>git_config_bool</code></span>, except that integers are returned as-is, and
+an <span class='synopsis'><code>is_bool</code></span> flag is unset.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigmaybeboolcode"><a id="Documentation/technical/api-config.txt-gitconfigmaybebool" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigmaybebool"></a><code>git_config_maybe_bool</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigmaybeboolcodespan"><a id="Documentation/technical/api-config.txt-gitconfigmaybebool" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigmaybebool"></a><span class='synopsis'><code>git_config_maybe_bool</code></span> </dt>
 <dd>
-<p>Same as <code>git_config_bool</code>, except that it returns -1 on error rather
+<p>Same as <span class='synopsis'><code>git_config_bool</code></span>, except that it returns -1 on error rather
 than dying.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigstringcode"><a id="Documentation/technical/api-config.txt-gitconfigstring" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigstring"></a><code>git_config_string</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigstringcodespan"><a id="Documentation/technical/api-config.txt-gitconfigstring" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigstring"></a><span class='synopsis'><code>git_config_string</code></span> </dt>
 <dd>
-<p>Allocates and copies the value string into the <code>dest</code> parameter; if no
+<p>Allocates and copies the value string into the <span class='synopsis'><code>dest</code></span> parameter; if no
 string is given, prints an error message and returns -1.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-config.txt-codegitconfigpathnamecode"><a id="Documentation/technical/api-config.txt-gitconfigpathname" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigpathname"></a><code>git_config_pathname</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-config.txt-spanclasssynopsiscodegitconfigpathnamecodespan"><a id="Documentation/technical/api-config.txt-gitconfigpathname" class="anchor" href="#Documentation/technical/api-config.txt-gitconfigpathname"></a><span class='synopsis'><code>git_config_pathname</code></span> </dt>
 <dd>
-<p>Similar to <code>git_config_string</code>, but expands <code>~</code> or <code>~user</code> into the
+<p>Similar to <span class='synopsis'><code>git_config_string</code></span>, but expands <span class='synopsis'><code>~</code></span> or <span class='synopsis'><code>~user</code></span> into the
 user&#8217;s home directory when found at the beginning of the path.</p>
 </dd>
 </dl>
@@ -283,9 +283,9 @@ user&#8217;s home directory when found at the beginning of the path.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>By default, the config parser does not respect include directives.
-However, a caller can use the special <code>git_config_include</code> wrapper
+However, a caller can use the special <span class='synopsis'><code>git_config_include</code></span> wrapper
 callback to support them. To do so, you simply wrap your "real" callback
-function and data pointer in a <code>struct config_include_data</code>, and pass
+function and data pointer in a <span class='synopsis'><code>struct</code> <code>config_include_data</code></span>, and pass
 the wrapper to the regular config-reading functions. For example:</p>
 </div>
 <div class="listingblock">
@@ -300,8 +300,8 @@ the wrapper to the regular config-reading functions. For example:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><code>git_config</code> respects includes automatically. The lower-level
-<code>git_config_from_file</code> does not.</p>
+<p><span class='synopsis'><code>git_config</code></span> respects includes automatically. The lower-level
+<span class='synopsis'><code>git_config_from_file</code></span> does not.</p>
 </div>
 </div>
 </div>
@@ -309,9 +309,9 @@ the wrapper to the regular config-reading functions. For example:</p>
 <h2 id="_custom_configsets"><a class="anchor" href="#_custom_configsets"></a>Custom Configsets</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <code>config_set</code> can be used to construct an in-memory cache for
-config-like files that the caller specifies (i.e., files like <code>.gitmodules</code>,
-<code>~/.gitconfig</code> etc.). For example,</p>
+<p>A <span class='synopsis'><code>config_set</code></span> can be used to construct an in-memory cache for
+config-like files that the caller specifies (i.e., files like <span class='synopsis'><code>.gitmodules</code></span>,
+<span class='synopsis'><code>~/.gitconfig</code></span> etc.). For example,</p>
 </div>
 <div class="listingblock">
 <div class="content">

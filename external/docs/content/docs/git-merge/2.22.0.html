@@ -43,7 +43,7 @@ from one branch into another.</p>
 </div>
 <div class="paragraph">
 <p>Assume the following history exists and the current branch is
-"<code>master</code>":</p>
+"<span class='synopsis'><code>master</code></span>":</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -53,9 +53,9 @@ from one branch into another.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Then "<code>git merge topic</code>" will replay the changes made on the
-<code>topic</code> branch since it diverged from <code>master</code> (i.e., <code>E</code>) until
-its current commit (<code>C</code>) on top of <code>master</code>, and record the result
+<p>Then "<span class='synopsis'><code>git</code> <code>merge</code> <code>topic</code></span>" will replay the changes made on the
+<span class='synopsis'><code>topic</code></span> branch since it diverged from <span class='synopsis'><code>master</code></span> (i.e., <span class='synopsis'><code>E</code></span>) until
+its current commit (<span class='synopsis'><code>C</code></span>) on top of <span class='synopsis'><code>master</code></span>, and record the result
 in a new commit along with the names of the two parent commits and
 a log message from the user describing the changes.</p>
 </div>
@@ -67,7 +67,7 @@ a log message from the user describing the changes.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The second syntax ("<code>git merge --abort</code>") can only be run after the
+<p>The second syntax ("<span class='synopsis'><code>git</code> <code>merge</code> <code>--abort</code></span>") can only be run after the
 merge has resulted in conflicts. <em>git merge --abort</em> will abort the
 merge process and try to reconstruct the pre-merge state. However,
 if there were uncommitted changes when the merge started (and
@@ -81,7 +81,7 @@ discouraged: while possible, it may leave you in a state that is hard to
 back out of in the case of a conflict.</p>
 </div>
 <div class="paragraph">
-<p>The third syntax ("<code>git merge --continue</code>") can only be run after the
+<p>The third syntax ("<span class='synopsis'><code>git</code> <code>merge</code> <code>--continue</code></span>") can only be run after the
 merge has resulted in conflicts.</p>
 </div>
 </div>
@@ -114,26 +114,26 @@ by the merge command, use --no-ff with --no-commit.</p>
 <dd>
 <p>	Invoke an editor before committing successful mechanical merge to
 	further edit the auto-generated merge message, so that the user
-	can explain and justify the merge. The <code>--no-edit</code> option can be
+	can explain and justify the merge. The <span class='synopsis'><code>--no-edit</code></span> option can be
 	used to accept the auto-generated message (this is generally
 	discouraged).
-The <code>--edit</code> (or <code>-e</code>) option is still useful if you are
-giving a draft message with the <code>-m</code> option from the command line
+The <span class='synopsis'><code>--edit</code></span> (or <span class='synopsis'><code>-e</code></span>) option is still useful if you are
+giving a draft message with the <span class='synopsis'><code>-m</code></span> option from the command line
 and want to edit it in the editor.</p>
 <div class="paragraph">
 <p>Older scripts may depend on the historical behaviour of not allowing the
 user to edit the merge log message. They will see an editor opened when
-they run <code>git merge</code>. To make it easier to adjust such scripts to the
-updated behaviour, the environment variable <code>GIT_MERGE_AUTOEDIT</code> can be
-set to <code>no</code> at the beginning of them.</p>
+they run <span class='synopsis'><code>git</code> <code>merge</code></span>. To make it easier to adjust such scripts to the
+updated behaviour, the environment variable <span class='synopsis'><code>GIT_MERGE_AUTOEDIT</code></span> can be
+set to <span class='synopsis'><code>no</code></span> at the beginning of them.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt---cleanupltmodegt"><a id="Documentation/git-merge.txt---cleanupmode" class="anchor" href="#Documentation/git-merge.txt---cleanupmode"></a>--cleanup=&lt;mode&gt; </dt>
 <dd>
 <p>This option determines how the merge message will be cleaned up before
 commiting. See <a href='{{< relurl "docs/git-commit" >}}'>git-commit[1]</a> for more details. In addition, if
-the <em>&lt;mode&gt;</em> is given a value of <code>scissors</code>, scissors will be appended
-to <code>MERGE_MSG</code> before being passed on to the commit machinery in the
+the <em>&lt;mode&gt;</em> is given a value of <span class='synopsis'><code>scissors</code></span>, scissors will be appended
+to <span class='synopsis'><code>MERGE_MSG</code></span> before being passed on to the commit machinery in the
 case of a merge conflict.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt---ff"><a class="anchor" href="#Documentation/git-merge.txt---ff"></a>--ff </dt>
@@ -152,13 +152,13 @@ its natural place in <em>refs/tags/</em> hierarchy.</p>
 <dt class="hdlist1" id="Documentation/git-merge.txt---ff-only"><a class="anchor" href="#Documentation/git-merge.txt---ff-only"></a>--ff-only </dt>
 <dd>
 <p>Refuse to merge and exit with a non-zero status unless the
-current <code>HEAD</code> is already up to date or the merge can be
+current <span class='synopsis'><code>HEAD</code></span> is already up to date or the merge can be
 resolved as a fast-forward.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt--Sltkeyidgt"><a id="Documentation/git-merge.txt--Skeyid" class="anchor" href="#Documentation/git-merge.txt--Skeyid"></a>-S[&lt;keyid&gt;] </dt>
 <dt class="hdlist1" id="Documentation/git-merge.txt---gpg-signltkeyidgt"><a id="Documentation/git-merge.txt---gpg-signkeyid" class="anchor" href="#Documentation/git-merge.txt---gpg-signkeyid"></a>--gpg-sign[=&lt;keyid&gt;] </dt>
 <dd>
-<p>GPG-sign the resulting merge commit. The <code>keyid</code> argument is
+<p>GPG-sign the resulting merge commit. The <span class='synopsis'><code>keyid</code></span> argument is
 optional and defaults to the committer identity; if specified,
 it must be stuck to the option without a space.</p>
 </dd>
@@ -202,8 +202,8 @@ merge.</p>
 <dd>
 <p>Produce the working tree and index state as if a real merge
 happened (except for the merge information), but do not actually
-make a commit, move the <code>HEAD</code>, or record <code>$GIT_DIR/MERGE_HEAD</code>
-(to cause the next <code>git commit</code> command to create a merge
+make a commit, move the <span class='synopsis'><code>HEAD</code></span>, or record <span class='synopsis'><code>$GIT_DIR/MERGE_HEAD</code></span>
+(to cause the next <span class='synopsis'><code>git</code> <code>commit</code></span> command to create a merge
 commit).  This allows you to create a single commit on top of
 the current branch whose effect is the same as merging another
 branch (or more in case of an octopus).</p>
@@ -217,7 +217,7 @@ option can be used to override --squash.</p>
 <dd>
 <p>Use the given merge strategy; can be supplied more than
 once to specify them in the order they should be tried.
-If there is no <code>-s</code> option, a built-in list of strategies
+If there is no <span class='synopsis'><code>-s</code></span> option, a built-in list of strategies
 is used instead (<em>git merge-recursive</em> when merging a single
 head, <em>git merge-octopus</em> otherwise).</p>
 </dd>
@@ -262,7 +262,7 @@ reporting.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt---allow-unrelated-histories"><a class="anchor" href="#Documentation/git-merge.txt---allow-unrelated-histories"></a>--allow-unrelated-histories </dt>
 <dd>
-<p>By default, <code>git merge</code> command refuses to merge histories
+<p>By default, <span class='synopsis'><code>git</code> <code>merge</code></span> command refuses to merge histories
 that do not share a common ancestor.  This option can be
 used to override this safety when merging histories of two
 projects that started their lives independently. As that is
@@ -274,7 +274,7 @@ this by default exists and will not be added.</p>
 <p>Set the commit message to be used for the merge commit (in
 case one is created).</p>
 <div class="paragraph">
-<p>If <code>--log</code> is specified, a shortlog of the commits being merged
+<p>If <span class='synopsis'><code>--log</code></span> is specified, a shortlog of the commits being merged
 will be appended to the specified message.</p>
 </div>
 <div class="paragraph">
@@ -289,7 +289,7 @@ invocations. The automated message can include the branch description.</p>
 <p>Read the commit message to be used for the merge commit (in
 case one is created).</p>
 <div class="paragraph">
-<p>If <code>--log</code> is specified, a shortlog of the commits being merged
+<p>If <span class='synopsis'><code>--log</code></span> is specified, a shortlog of the commits being merged
 will be appended to the specified message.</p>
 </div>
 </dd>
@@ -311,7 +311,7 @@ commit or stash your changes before running <em>git merge</em>.</p>
 </div>
 <div class="paragraph">
 <p><em>git merge --abort</em> is equivalent to <em>git reset --merge</em> when
-<code>MERGE_HEAD</code> is present.</p>
+<span class='synopsis'><code>MERGE_HEAD</code></span> is present.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt---continue"><a class="anchor" href="#Documentation/git-merge.txt---continue"></a>--continue </dt>
@@ -331,9 +331,9 @@ branches that the current branch is configured to use as its upstream.
 See also the configuration section of this manual page.</p>
 </div>
 <div class="paragraph">
-<p>When <code>FETCH_HEAD</code> (and no other commit) is specified, the branches
-recorded in the <code>.git/FETCH_HEAD</code> file by the previous invocation
-of <code>git fetch</code> for merging are merged to the current branch.</p>
+<p>When <span class='synopsis'><code>FETCH_HEAD</code></span> (and no other commit) is specified, the branches
+recorded in the <span class='synopsis'><code>.git/FETCH_HEAD</code></span> file by the previous invocation
+of <span class='synopsis'><code>git</code> <code>fetch</code></span> for merging are merged to the current branch.</p>
 </div>
 </dd>
 </dl>
@@ -354,12 +354,12 @@ merge</em> may need to update.</p>
 <div class="paragraph">
 <p>To avoid recording unrelated changes in the merge commit,
 <em>git pull</em> and <em>git merge</em> will also abort if there are any changes
-registered in the index relative to the <code>HEAD</code> commit.  (Special
+registered in the index relative to the <span class='synopsis'><code>HEAD</code></span> commit.  (Special
 narrow exceptions to this rule may exist depending on which merge
 strategy is in use, but generally, the index must match HEAD.)</p>
 </div>
 <div class="paragraph">
-<p>If all named commits are already ancestors of <code>HEAD</code>, <em>git merge</em>
+<p>If all named commits are already ancestors of <span class='synopsis'><code>HEAD</code></span>, <em>git merge</em>
 will exit early with the message "Already up to date."</p>
 </div>
 </div>
@@ -373,12 +373,12 @@ This is the most common case especially when invoked from <em>git
 pull</em>: you are tracking an upstream repository, you have committed
 no local changes, and now you want to update to a newer upstream
 revision.  In this case, a new commit is not needed to store the
-combined history; instead, the <code>HEAD</code> (along with the index) is
+combined history; instead, the <span class='synopsis'><code>HEAD</code></span> (along with the index) is
 updated to point at the named commit, without creating an extra
 merge commit.</p>
 </div>
 <div class="paragraph">
-<p>This behavior can be suppressed with the <code>--no-ff</code> option.</p>
+<p>This behavior can be suppressed with the <span class='synopsis'><code>--no-ff</code></span> option.</p>
 </div>
 </div>
 </div>
@@ -392,7 +392,7 @@ as its parents.</p>
 </div>
 <div class="paragraph">
 <p>A merged version reconciling the changes from all branches to be
-merged is committed, and your <code>HEAD</code>, index, and working tree are
+merged is committed, and your <span class='synopsis'><code>HEAD</code></span>, index, and working tree are
 updated to it.  It is possible to have modifications in the working
 tree as long as they do not overlap; the update will preserve them.</p>
 </div>
@@ -403,10 +403,10 @@ happens:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The <code>HEAD</code> pointer stays the same.</p>
+<p>The <span class='synopsis'><code>HEAD</code></span> pointer stays the same.</p>
 </li>
 <li>
-<p>The <code>MERGE_HEAD</code> ref is set to point to the other branch head.</p>
+<p>The <span class='synopsis'><code>MERGE_HEAD</code></span> ref is set to point to the other branch head.</p>
 </li>
 <li>
 <p>Paths that merged cleanly are updated both in the index file and
@@ -415,22 +415,22 @@ in your working tree.</p>
 <li>
 <p>For conflicting paths, the index file records up to three
 versions: stage 1 stores the version from the common ancestor,
-stage 2 from <code>HEAD</code>, and stage 3 from <code>MERGE_HEAD</code> (you
-can inspect the stages with <code>git ls-files -u</code>).  The working
+stage 2 from <span class='synopsis'><code>HEAD</code></span>, and stage 3 from <span class='synopsis'><code>MERGE_HEAD</code></span> (you
+can inspect the stages with <span class='synopsis'><code>git</code> <code>ls-files</code> <code>-u</code></span>).  The working
 tree files contain the result of the "merge" program; i.e. 3-way
-merge results with familiar conflict markers <code>&lt;&lt;&lt;</code> <code>===</code> <code>&gt;&gt;&gt;</code>.</p>
+merge results with familiar conflict markers <span class='synopsis'><em>&lt;&lt;&lt;</em></span> <span class='synopsis'><code>===</code></span> <span class='synopsis'><em>&gt;&gt;&gt;</em></span>.</p>
 </li>
 <li>
 <p>No other changes are made.  In particular, the local
 modifications you had before you started merge will stay the
 same and the index entries for them stay as they were,
-i.e. matching <code>HEAD</code>.</p>
+i.e. matching <span class='synopsis'><code>HEAD</code></span>.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>If you tried a merge which resulted in complex conflicts and
-want to start over, you can recover with <code>git merge --abort</code>.</p>
+want to start over, you can recover with <span class='synopsis'><code>git</code> <code>merge</code> <code>--abort</code></span>.</p>
 </div>
 </div>
 </div>
@@ -451,7 +451,7 @@ release point, you may not want to make an unnecessary merge commit.</p>
 </div>
 <div class="paragraph">
 <p>In such a case, you can "unwrap" the tag yourself before feeding it
-to <code>git merge</code>, or pass <code>--ff-only</code> when you do not have any work on
+to <span class='synopsis'><code>git</code> <code>merge</code></span>, or pass <span class='synopsis'><code>--ff-only</code></span> when you do not have any work on
 your own. e.g.</p>
 </div>
 <div class="listingblock">
@@ -494,7 +494,7 @@ And here is another line that is cleanly resolved or unmodified.</pre>
 </div>
 <div class="paragraph">
 <p>The area where a pair of conflicting changes happened is marked with markers
-<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.  The part before the <code>=======</code>
+<span class='synopsis'><em>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</em></span>, <span class='synopsis'><code>=======</code></span>, and <span class='synopsis'><em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</em></span>.  The part before the <span class='synopsis'><code>=======</code></span>
 is typically your side, and the part afterwards is typically their side.</p>
 </div>
 <div class="paragraph">
@@ -525,8 +525,8 @@ And here is another line that is cleanly resolved or unmodified.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In addition to the <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers, it uses
-another <code>|||||||</code> marker that is followed by the original text.  You can
+<p>In addition to the <span class='synopsis'><em>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</em></span>, <span class='synopsis'><code>=======</code></span>, and <span class='synopsis'><em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</em></span> markers, it uses
+another <span class='synopsis'>|||||||</span> marker that is followed by the original text.  You can
 tell that the original just stated a fact, and your side simply gave in to
 that statement and gave up, while the other side tried to have a more
 positive attitude.  You can sometimes come up with a better resolution by
@@ -544,8 +544,8 @@ viewing the original.</p>
 <ul>
 <li>
 <p>Decide not to merge.  The only clean-ups you need are to reset
-the index file to the <code>HEAD</code> commit to reverse 2. and to clean
-up working tree changes made by 2. and 3.; <code>git merge --abort</code>
+the index file to the <span class='synopsis'><code>HEAD</code></span> commit to reverse 2. and to clean
+up working tree changes made by 2. and 3.; <span class='synopsis'><code>git</code> <code>merge</code> <code>--abort</code></span>
 can be used for this.</p>
 </li>
 <li>
@@ -564,23 +564,23 @@ before calling <em>git commit</em>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Use a mergetool.  <code>git mergetool</code> to launch a graphical
+<p>Use a mergetool.  <span class='synopsis'><code>git</code> <code>mergetool</code></span> to launch a graphical
 mergetool which will work you through the merge.</p>
 </li>
 <li>
-<p>Look at the diffs.  <code>git diff</code> will show a three-way diff,
-highlighting changes from both the <code>HEAD</code> and <code>MERGE_HEAD</code>
+<p>Look at the diffs.  <span class='synopsis'><code>git</code> <code>diff</code></span> will show a three-way diff,
+highlighting changes from both the <span class='synopsis'><code>HEAD</code></span> and <span class='synopsis'><code>MERGE_HEAD</code></span>
 versions.</p>
 </li>
 <li>
-<p>Look at the diffs from each branch. <code>git log --merge -p &lt;path&gt;</code>
-will show diffs first for the <code>HEAD</code> version and then the
-<code>MERGE_HEAD</code> version.</p>
+<p>Look at the diffs from each branch. <span class='synopsis'><code>git</code> <code>log</code> <code>--merge</code> <code>-p</code> <em>&lt;path&gt;</em></span>
+will show diffs first for the <span class='synopsis'><code>HEAD</code></span> version and then the
+<span class='synopsis'><code>MERGE_HEAD</code></span> version.</p>
 </li>
 <li>
-<p>Look at the originals.  <code>git show :1:filename</code> shows the
-common ancestor, <code>git show :2:filename</code> shows the <code>HEAD</code>
-version, and <code>git show :3:filename</code> shows the <code>MERGE_HEAD</code>
+<p>Look at the originals.  <span class='synopsis'><code>git</code> <code>show</code> <code>:1:filename</code></span> shows the
+common ancestor, <span class='synopsis'><code>git</code> <code>show</code> <code>:2:filename</code></span> shows the <span class='synopsis'><code>HEAD</code></span>
+version, and <span class='synopsis'><code>git</code> <code>show</code> <code>:3:filename</code></span> shows the <span class='synopsis'><code>MERGE_HEAD</code></span>
 version.</p>
 </li>
 </ul>
@@ -593,7 +593,7 @@ version.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Merge branches <code>fixes</code> and <code>enhancements</code> on top of
+<p>Merge branches <span class='synopsis'><code>fixes</code></span> and <span class='synopsis'><code>enhancements</code></span> on top of
 the current branch, making an octopus merge:</p>
 <div class="listingblock">
 <div class="content">
@@ -602,7 +602,7 @@ the current branch, making an octopus merge:</p>
 </div>
 </li>
 <li>
-<p>Merge branch <code>obsolete</code> into the current branch, using <code>ours</code>
+<p>Merge branch <span class='synopsis'><code>obsolete</code></span> into the current branch, using <span class='synopsis'><code>ours</code></span>
 merge strategy:</p>
 <div class="listingblock">
 <div class="content">
@@ -611,7 +611,7 @@ merge strategy:</p>
 </div>
 </li>
 <li>
-<p>Merge branch <code>maint</code> into the current branch, but do not make
+<p>Merge branch <span class='synopsis'><code>maint</code></span> into the current branch, but do not make
 a new commit automatically:</p>
 <div class="listingblock">
 <div class="content">
@@ -636,10 +636,10 @@ release/version name would be acceptable.</p>
 <h2 id="_merge_strategies"><a class="anchor" href="#_merge_strategies"></a>MERGE STRATEGIES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The merge mechanism (<code>git merge</code> and <code>git pull</code> commands) allows the
-backend <em>merge strategies</em> to be chosen with <code>-s</code> option.  Some strategies
-can also take their own options, which can be passed by giving <code>-X&lt;option&gt;</code>
-arguments to <code>git merge</code> and/or <code>git pull</code>.</p>
+<p>The merge mechanism (<span class='synopsis'><code>git</code> <code>merge</code></span> and <span class='synopsis'><code>git</code> <code>pull</code></span> commands) allows the
+backend <em>merge strategies</em> to be chosen with <span class='synopsis'><code>-s</code></span> option.  Some strategies
+can also take their own options, which can be passed by giving <span class='synopsis'><code>-X</code><em>&lt;option&gt;</em></span>
+arguments to <span class='synopsis'><code>git</code> <code>merge</code></span> and/or <span class='synopsis'><code>git</code> <code>pull</code></span>.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -693,14 +693,14 @@ no <em>theirs</em> merge strategy to confuse this merge option with.</p>
 to avoid mismerges that sometimes occur due to unimportant
 matching lines (e.g., braces from distinct functions).  Use
 this when the branches to be merged have diverged wildly.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--patience</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--patience</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-diff-algorithmpatienceminimalhistogrammyers"><a class="anchor" href="#Documentation/git-merge.txt-diff-algorithmpatienceminimalhistogrammyers"></a>diff-algorithm=[patience|minimal|histogram|myers] </dt>
 <dd>
 <p>Tells <em>merge-recursive</em> to use a different diff algorithm, which
 can help avoid mismerges that occur due to unimportant matching
 lines (such as braces from distinct functions).  See also
-<a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--diff-algorithm</code>.</p>
+<a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--diff-algorithm</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-ignore-space-change"><a class="anchor" href="#Documentation/git-merge.txt-ignore-space-change"></a>ignore-space-change </dt>
 <dt class="hdlist1" id="Documentation/git-merge.txt-ignore-all-space"><a class="anchor" href="#Documentation/git-merge.txt-ignore-all-space"></a>ignore-all-space </dt>
@@ -710,8 +710,8 @@ lines (such as braces from distinct functions).  See also
 <p>Treats lines with the indicated type of whitespace change as
 unchanged for the sake of a three-way merge.  Whitespace
 changes mixed with other changes to a line are not ignored.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>-b</code>, <code>-w</code>,
-<code>--ignore-space-at-eol</code>, and <code>--ignore-cr-at-eol</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>-b</code></span>, <span class='synopsis'><code>-w</code></span>,
+<span class='synopsis'><code>--ignore-space-at-eol</code></span>, and <span class='synopsis'><code>--ignore-cr-at-eol</code></span>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -739,25 +739,25 @@ branches with differing checkin/checkout attributes" in
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-no-renormalize"><a class="anchor" href="#Documentation/git-merge.txt-no-renormalize"></a>no-renormalize </dt>
 <dd>
-<p>Disables the <code>renormalize</code> option.  This overrides the
-<code>merge.renormalize</code> configuration variable.</p>
+<p>Disables the <span class='synopsis'><code>renormalize</code></span> option.  This overrides the
+<span class='synopsis'><code>merge.renormalize</code></span> configuration variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-no-renames"><a class="anchor" href="#Documentation/git-merge.txt-no-renames"></a>no-renames </dt>
 <dd>
-<p>Turn off rename detection. This overrides the <code>merge.renames</code>
+<p>Turn off rename detection. This overrides the <span class='synopsis'><code>merge.renames</code></span>
 configuration variable.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--no-renames</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--no-renames</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-find-renamesltngt"><a id="Documentation/git-merge.txt-find-renamesn" class="anchor" href="#Documentation/git-merge.txt-find-renamesn"></a>find-renames[=&lt;n&gt;] </dt>
 <dd>
 <p>Turn on rename detection, optionally setting the similarity
 threshold.  This is the default. This overrides the
 <em>merge.renames</em> configuration variable.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--find-renames</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--find-renames</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-rename-thresholdltngt"><a id="Documentation/git-merge.txt-rename-thresholdn" class="anchor" href="#Documentation/git-merge.txt-rename-thresholdn"></a>rename-threshold=&lt;n&gt; </dt>
 <dd>
-<p>Deprecated synonym for <code>find-renames=&lt;n&gt;</code>.</p>
+<p>Deprecated synonym for <span class='synopsis'><code>find-renames=</code><em>&lt;n&gt;</em></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-subtreeltpathgt"><a id="Documentation/git-merge.txt-subtreepath" class="anchor" href="#Documentation/git-merge.txt-subtreepath"></a>subtree[=&lt;path&gt;] </dt>
 <dd>
@@ -817,19 +817,19 @@ substitutes the changed version instead.</p>
 <dd>
 <p>Specify the style in which conflicted hunks are written out to
 working tree files upon merge.  The default is "merge", which
-shows a <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> conflict marker, changes made by one side,
-a <code>=======</code> marker, changes made by the other side, and then
-a <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marker.  An alternate style, "diff3", adds a <code>|||||||</code>
-marker and the original text before the <code>=======</code> marker.</p>
+shows a <span class='synopsis'><em>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</em></span> conflict marker, changes made by one side,
+a <span class='synopsis'><code>=======</code></span> marker, changes made by the other side, and then
+a <span class='synopsis'><em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</em></span> marker.  An alternate style, "diff3", adds a <span class='synopsis'>|||||||</span>
+marker and the original text before the <span class='synopsis'><code>=======</code></span> marker.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-mergedefaultToUpstream"><a class="anchor" href="#Documentation/git-merge.txt-mergedefaultToUpstream"></a>merge.defaultToUpstream </dt>
 <dd>
 <p>If merge is called without any commit argument, merge the upstream
 branches configured for the current branch by using their last
 observed values stored in their remote-tracking branches.
-The values of the <code>branch.&lt;current branch&gt;.merge</code> that name the
-branches at the remote named by <code>branch.&lt;current branch&gt;.remote</code>
-are consulted, and then they are mapped via <code>remote.&lt;remote&gt;.fetch</code>
+The values of the <span class='synopsis'><em>branch.&lt;current branch&gt;.merge</em></span> that name the
+branches at the remote named by <span class='synopsis'><em>branch.&lt;current branch&gt;.remote</em></span>
+are consulted, and then they are mapped via <span class='synopsis'><code>remote.</code><em>&lt;remote&gt;</em><code>.fetch</code></span>
 to their corresponding remote-tracking branches, and the tips of
 these tracking branches are merged.</p>
 </dd>
@@ -837,11 +837,11 @@ these tracking branches are merged.</p>
 <dd>
 <p>By default, Git does not create an extra merge commit when merging
 a commit that is a descendant of the current commit. Instead, the
-tip of the current branch is fast-forwarded. When set to <code>false</code>,
+tip of the current branch is fast-forwarded. When set to <span class='synopsis'><code>false</code></span>,
 this variable tells Git to create an extra merge commit in such
-a case (equivalent to giving the <code>--no-ff</code> option from the command
-line). When set to <code>only</code>, only such fast-forward merges are
-allowed (equivalent to giving the <code>--ff-only</code> option from the
+a case (equivalent to giving the <span class='synopsis'><code>--no-ff</code></span> option from the command
+line). When set to <span class='synopsis'><code>only</code></span>, only such fast-forward merges are
+allowed (equivalent to giving the <span class='synopsis'><code>--ff-only</code></span> option from the
 command line).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-mergeverifySignatures"><a class="anchor" href="#Documentation/git-merge.txt-mergeverifySignatures"></a>merge.verifySignatures </dt>
@@ -1008,7 +1008,7 @@ strategy.  Level 0 outputs nothing except a final error
 message if conflicts were detected. Level 1 outputs only
 conflicts, 2 outputs conflicts and file changes.  Level 5 and
 above outputs debugging information.  The default is level 2.
-Can be overridden by the <code>GIT_MERGE_VERBOSITY</code> environment variable.</p>
+Can be overridden by the <span class='synopsis'><code>GIT_MERGE_VERBOSITY</code></span> environment variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-merge.txt-mergeltdrivergtname"><a id="Documentation/git-merge.txt-mergedrivername" class="anchor" href="#Documentation/git-merge.txt-mergedrivername"></a>merge.&lt;driver&gt;.name </dt>
 <dd>

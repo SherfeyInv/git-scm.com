@@ -19,10 +19,10 @@ aliases:
 <h2 id="_merge_strategies"><a class="anchor" href="#_merge_strategies"></a>MERGE STRATEGIES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The merge mechanism (<code>git merge</code> and <code>git pull</code> commands) allows the
-backend <em>merge strategies</em> to be chosen with <code>-s</code> option.  Some strategies
-can also take their own options, which can be passed by giving <code>-X&lt;option&gt;</code>
-arguments to <code>git merge</code> and/or <code>git pull</code>.</p>
+<p>The merge mechanism (<span class='synopsis'><code>git</code> <code>merge</code></span> and <span class='synopsis'><code>git</code> <code>pull</code></span> commands) allows the
+backend <em>merge strategies</em> to be chosen with <span class='synopsis'><code>-s</code></span> option.  Some strategies
+can also take their own options, which can be passed by giving <span class='synopsis'><code>-X</code><em>&lt;option&gt;</em></span>
+arguments to <span class='synopsis'><code>git</code> <code>merge</code></span> and/or <span class='synopsis'><code>git</code> <code>pull</code></span>.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -74,14 +74,14 @@ the other tree did, declaring <em>our</em> history contains all that happened in
 to avoid mismerges that sometimes occur due to unimportant
 matching lines (e.g., braces from distinct functions).  Use
 this when the branches to be merged have diverged wildly.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--patience</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--patience</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-diff-algorithmpatienceminimalhistogrammyers"><a class="anchor" href="#Documentation/merge-strategies.txt-diff-algorithmpatienceminimalhistogrammyers"></a>diff-algorithm=[patience|minimal|histogram|myers] </dt>
 <dd>
 <p>Tells <em>merge-recursive</em> to use a different diff algorithm, which
 can help avoid mismerges that occur due to unimportant matching
 lines (such as braces from distinct functions).  See also
-<a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--diff-algorithm</code>.</p>
+<a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--diff-algorithm</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-space-change"><a class="anchor" href="#Documentation/merge-strategies.txt-ignore-space-change"></a>ignore-space-change </dt>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-ignore-all-space"><a class="anchor" href="#Documentation/merge-strategies.txt-ignore-all-space"></a>ignore-all-space </dt>
@@ -90,8 +90,8 @@ lines (such as braces from distinct functions).  See also
 <p>Treats lines with the indicated type of whitespace change as
 unchanged for the sake of a three-way merge.  Whitespace
 changes mixed with other changes to a line are not ignored.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>-b</code>, <code>-w</code>, and
-<code>--ignore-space-at-eol</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>-b</code></span>, <span class='synopsis'><code>-w</code></span>, and
+<span class='synopsis'><code>--ignore-space-at-eol</code></span>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -119,23 +119,23 @@ branches with differing checkin/checkout attributes" in
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-no-renormalize"><a class="anchor" href="#Documentation/merge-strategies.txt-no-renormalize"></a>no-renormalize </dt>
 <dd>
-<p>Disables the <code>renormalize</code> option.  This overrides the
-<code>merge.renormalize</code> configuration variable.</p>
+<p>Disables the <span class='synopsis'><code>renormalize</code></span> option.  This overrides the
+<span class='synopsis'><code>merge.renormalize</code></span> configuration variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-no-renames"><a class="anchor" href="#Documentation/merge-strategies.txt-no-renames"></a>no-renames </dt>
 <dd>
 <p>Turn off rename detection.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--no-renames</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--no-renames</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-find-renamesltngt"><a id="Documentation/merge-strategies.txt-find-renamesn" class="anchor" href="#Documentation/merge-strategies.txt-find-renamesn"></a>find-renames[=&lt;n&gt;] </dt>
 <dd>
 <p>Turn on rename detection, optionally setting the similarity
 threshold.  This is the default.
-See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <code>--find-renames</code>.</p>
+See also <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> <span class='synopsis'><code>--find-renames</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-rename-thresholdltngt"><a id="Documentation/merge-strategies.txt-rename-thresholdn" class="anchor" href="#Documentation/merge-strategies.txt-rename-thresholdn"></a>rename-threshold=&lt;n&gt; </dt>
 <dd>
-<p>Deprecated synonym for <code>find-renames=&lt;n&gt;</code>.</p>
+<p>Deprecated synonym for <span class='synopsis'><code>find-renames=</code><em>&lt;n&gt;</em></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-strategies.txt-subtreeltpathgt"><a id="Documentation/merge-strategies.txt-subtreepath" class="anchor" href="#Documentation/merge-strategies.txt-subtreepath"></a>subtree[=&lt;path&gt;] </dt>
 <dd>

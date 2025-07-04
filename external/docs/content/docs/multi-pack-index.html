@@ -84,7 +84,7 @@ same directory.</p>
 </li>
 <li>
 <p>The core.multiPackIndex config setting must be on (which is the
-default) to consume MIDX files.  Setting it to <code>false</code> prevents
+default) to consume MIDX files.  Setting it to <span class='synopsis'><code>false</code></span> prevents
 Git from reading a MIDX file, even if one exists.</p>
 </li>
 <li>
@@ -100,8 +100,8 @@ modified packfile.</p>
 </li>
 <li>
 <p>If there exist packfiles in the pack directory not registered in
-the MIDX, then those packfiles are loaded into the <code>packed_git</code>
-list and <code>packed_git_mru</code> cache.</p>
+the MIDX, then those packfiles are loaded into the <span class='synopsis'><code>packed_git</code></span>
+list and <span class='synopsis'><code>packed_git_mru</code></span> cache.</p>
 </li>
 <li>
 <p>The pack-indexes (.idx files) remain in the pack directory so we
@@ -144,7 +144,7 @@ important components:</p>
 <p>The ability to rewrite earlier portions of the MIDX chain (i.e., to
 "compact" some collection of adjacent MIDX layers into a single
 MIDX). At present the only supported way of shrinking a MIDX chain
-is to rewrite the entire chain from scratch without the <code>--split</code>
+is to rewrite the entire chain from scratch without the <span class='synopsis'><code>--split</code></span>
 flag.</p>
 <div class="paragraph">
 <p>There are no fundamental limitations that stand in the way of being able
@@ -170,13 +170,13 @@ feature, the concept of the pseudo-pack order is extended across each
 layer of the incremental MIDX chain to form a concatenated pseudo-pack
 order. This concatenation takes place in the same order as the chain
 itself (in other words, the concatenated pseudo-pack order for a chain
-<code>{$H1, $H2, $H3}</code> would be the pseudo-pack order for <code>$H1</code>, followed by
-the pseudo-pack order for <code>$H2</code>, followed by the pseudo-pack order for
-<code>$H3</code>).</p>
+<span class='synopsis'><code>{$H1,</code> <code>$H2,</code> <code>$H3}</code></span> would be the pseudo-pack order for <span class='synopsis'><code>$H1</code></span>, followed by
+the pseudo-pack order for <span class='synopsis'><code>$H2</code></span>, followed by the pseudo-pack order for
+<span class='synopsis'><code>$H3</code></span>).</p>
 </div>
 <div class="paragraph">
 <p>The layout will then be extended so that each layer of the incremental
-MIDX chain can write a <code>*.bitmap</code>. The objects in each layer&#8217;s bitmap
+MIDX chain can write a <span class='synopsis'><code>*.bitmap</code></span>. The objects in each layer&#8217;s bitmap
 are offset by the number of objects in the previous layers of the chain.</p>
 </div>
 </li>
@@ -186,8 +186,8 @@ are offset by the number of objects in the previous layers of the chain.</p>
 <div class="sect2">
 <h3 id="_file_layout"><a class="anchor" href="#_file_layout"></a>File layout</h3>
 <div class="paragraph">
-<p>Instead of storing a single <code>multi-pack-index</code> file (with an optional
-<code>.rev</code> and <code>.bitmap</code> extension) in <code>$GIT_DIR/objects/pack</code>, incremental
+<p>Instead of storing a single <span class='synopsis'><code>multi-pack-index</code></span> file (with an optional
+<span class='synopsis'><code>.rev</code></span> and <span class='synopsis'><code>.bitmap</code></span> extension) in <span class='synopsis'><code>$GIT_DIR/objects/pack</code></span>, incremental
 MIDXs are stored in the following layout:</p>
 </div>
 <div class="listingblock">
@@ -200,9 +200,9 @@ $GIT_DIR/objects/pack/multi-pack-index.d/multi-pack-index-$H3.midx</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>multi-pack-index-chain</code> file contains a list of the incremental
+<p>The <span class='synopsis'><code>multi-pack-index-chain</code></span> file contains a list of the incremental
 MIDX files in the chain, in order. The above example shows a chain whose
-<code>multi-pack-index-chain</code> file would contain the following lines:</p>
+<span class='synopsis'><code>multi-pack-index-chain</code></span> file would contain the following lines:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -212,8 +212,8 @@ $H3</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>multi-pack-index-$H1.midx</code> file contains the first layer of the
-multi-pack-index chain. The <code>multi-pack-index-$H2.midx</code> file contains
+<p>The <span class='synopsis'><code>multi-pack-index-$H1.midx</code></span> file contains the first layer of the
+multi-pack-index chain. The <span class='synopsis'><code>multi-pack-index-$H2.midx</code></span> file contains
 the second layer of the chain, and so on.</p>
 </div>
 <div class="paragraph">
@@ -231,9 +231,9 @@ to objects via their index into a concatenated lexicographic ordering
 among each component in the MIDX chain.</p>
 </div>
 <div class="paragraph">
-<p>If <code>objects_nr()</code> is a function that returns the number of objects in a
+<p>If <span class='synopsis'><code>objects_nr</code>()</span> is a function that returns the number of objects in a
 given MIDX layer, then the index of an object at lexicographic position
-<code>i</code> within, say, $H3 is defined as:</p>
+<span class='synopsis'><code>i</code></span> within, say, $H3 is defined as:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -241,8 +241,9 @@ given MIDX layer, then the index of an object at lexicographic position
 </div>
 </div>
 <div class="paragraph">
-<p>(in the C implementation, this is often computed as <code>i +
-m-&gt;num_objects_in_base</code>).</p>
+<p>(in the C implementation, this is often computed as <span class='synopsis'><em>i +
+</em>
+<em>m-&gt;num_objects_in_base</em></span>).</p>
 </div>
 </div>
 <div class="sect2">
@@ -266,27 +267,27 @@ packs arranged in MIDX order (with the preferred pack coming first).</p>
 objects from multiple layers of the MIDX chain. The pseudo-pack order
 for incremental MIDXs is determined by concatenating the pseudo-pack
 ordering for each layer of the MIDX chain in order. Formally two objects
-<code>o1</code> and <code>o2</code> are compared as follows:</p>
+<span class='synopsis'><code>o1</code></span> and <span class='synopsis'><code>o2</code></span> are compared as follows:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>If <code>o1</code> appears in an earlier layer of the MIDX chain than <code>o2</code>, then
-<code>o1</code> sorts ahead of <code>o2</code>.</p>
+<p>If <span class='synopsis'><code>o1</code></span> appears in an earlier layer of the MIDX chain than <span class='synopsis'><code>o2</code></span>, then
+<span class='synopsis'><code>o1</code></span> sorts ahead of <span class='synopsis'><code>o2</code></span>.</p>
 </li>
 <li>
-<p>Otherwise, if <code>o1</code> and <code>o2</code> appear in the same MIDX layer, and that
-MIDX layer has no base, then if one of <code>pack(o1)</code> and <code>pack(o2)</code> is
+<p>Otherwise, if <span class='synopsis'><code>o1</code></span> and <span class='synopsis'><code>o2</code></span> appear in the same MIDX layer, and that
+MIDX layer has no base, then if one of <span class='synopsis'><code>pack</code>(<code>o1</code>)</span> and <span class='synopsis'><code>pack</code>(<code>o2</code>)</span> is
 preferred and the other is not, then the preferred one sorts ahead of
 the non-preferred one. If there is a base layer (i.e. the MIDX layer
-is not the first layer in the chain), then if <code>pack(o1)</code> appears
-earlier in that MIDX layer&#8217;s pack order, then <code>o1</code> sorts ahead of
-<code>o2</code>. Likewise if <code>pack(o2)</code> appears earlier, then the opposite is
+is not the first layer in the chain), then if <span class='synopsis'><code>pack</code>(<code>o1</code>)</span> appears
+earlier in that MIDX layer&#8217;s pack order, then <span class='synopsis'><code>o1</code></span> sorts ahead of
+<span class='synopsis'><code>o2</code></span>. Likewise if <span class='synopsis'><code>pack</code>(<code>o2</code>)</span> appears earlier, then the opposite is
 true.</p>
 </li>
 <li>
-<p>Otherwise, <code>o1</code> and <code>o2</code> appear in the same pack, and thus in the
-same MIDX layer. Sort <code>o1</code> and <code>o2</code> by their offset within their
+<p>Otherwise, <span class='synopsis'><code>o1</code></span> and <span class='synopsis'><code>o2</code></span> appear in the same pack, and thus in the
+same MIDX layer. Sort <span class='synopsis'><code>o1</code></span> and <span class='synopsis'><code>o2</code></span> by their offset within their
 containing packfile.</p>
 </li>
 </ol>
@@ -303,10 +304,10 @@ perform multi-pack reuse across the set of packs in a MIDX.</p>
 <div class="paragraph">
 <p>Each layer of an incremental MIDX chain may have its objects (and the
 objects from any previous layer in the same MIDX chain) represented in
-its own <code>*.bitmap</code> file.</p>
+its own <span class='synopsis'><code>*.bitmap</code></span> file.</p>
 </div>
 <div class="paragraph">
-<p>The structure of a <code>*.bitmap</code> file belonging to an incremental MIDX
+<p>The structure of a <span class='synopsis'><code>*.bitmap</code></span> file belonging to an incremental MIDX
 chain is identical to that of a non-incremental MIDX bitmap, or a
 classic single-pack bitmap. Since objects are added to the end of the
 incremental MIDX&#8217;s pseudo-pack order (see above), it is possible to
@@ -314,13 +315,13 @@ extend a bitmap when appending to the end of a MIDX chain.</p>
 </div>
 <div class="paragraph">
 <p>(Note: it is possible likewise to compress a contiguous sequence of MIDX
-incremental layers, and their <code>*.bitmap</code> files into a single layer and
-<code>*.bitmap</code>, but this is not yet implemented.)</p>
+incremental layers, and their <span class='synopsis'><code>*.bitmap</code></span> files into a single layer and
+<span class='synopsis'><code>*.bitmap</code></span>, but this is not yet implemented.)</p>
 </div>
 <div class="paragraph">
 <p>The object positions used are global within the pseudo-pack order, so
-subsequent layers will have, for example, <code>m-&gt;num_objects_in_base</code>
-number of <code>0</code> bits in each of their four type bitmaps. This follows from
+subsequent layers will have, for example, <span class='synopsis'><em>m-&gt;num_objects_in_base</em></span>
+number of <span class='synopsis'><code>0</code></span> bits in each of their four type bitmaps. This follows from
 the fact that we only write type bitmap entries for objects present in
 the layer immediately corresponding to the bitmap).</p>
 </div>

@@ -38,7 +38,7 @@ of data to send in order to fully update one or the other.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The descriptions below build on the pkt-line format described in
-protocol-common.txt. When the grammar indicate <code>PKT-LINE(...)</code>, unless
+protocol-common.txt. When the grammar indicate <span class='synopsis'><code>PKT-LINE</code>(<code>...</code>)</span>, unless
 otherwise noted the usual pkt-line LF rules apply: the sender SHOULD
 include a LF, but the receiver MUST NOT complain if it is not present.</p>
 </div>
@@ -51,7 +51,7 @@ include a LF, but the receiver MUST NOT complain if it is not present.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Throughout the protocol, where <code>PKT-LINE(...)</code> is expected, an error packet MAY
+<p>Throughout the protocol, where <span class='synopsis'><code>PKT-LINE</code>(<code>...</code>)</span> is expected, an error packet MAY
 be sent. Once this packet is sent by a client or a server, the data transfer
 process defined in this protocol is terminated.</p>
 </div>
@@ -89,7 +89,7 @@ information in its first message to the server. These are called "Extra
 Parameters", and are supported by the Git, SSH, and HTTP protocols.</p>
 </div>
 <div class="paragraph">
-<p>Each Extra Parameter takes the form of <code>&lt;key&gt;=&lt;value&gt;</code> or <code>&lt;key&gt;</code>.</p>
+<p>Each Extra Parameter takes the form of <span class='synopsis'><em>&lt;key&gt;</em><code>=</code><em>&lt;value&gt;</em></span> or <span class='synopsis'><em>&lt;key&gt;</em></span>.</p>
 </div>
 <div class="paragraph">
 <p>Servers that receive any such Extra Parameters MUST ignore all
@@ -214,10 +214,10 @@ ssh user@example.com "git-upload-pack '~alice/project.git'"</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Depending on the value of the <code>protocol.version</code> configuration variable,
+<p>Depending on the value of the <span class='synopsis'><code>protocol.version</code></span> configuration variable,
 Git may attempt to send Extra Parameters as a colon-separated string in
 the GIT_PROTOCOL environment variable. This is done only if
-the <code>ssh.variant</code> configuration variable indicates that the ssh command
+the <span class='synopsis'><code>ssh.variant</code></span> configuration variable indicates that the ssh command
 supports passing environment variables as an argument.</p>
 </div>
 <div class="paragraph">
@@ -393,7 +393,7 @@ information is sent back to the client in the next step.</p>
 objects from the packfile using one of several filtering techniques.
 These are intended for use with partial clone and partial fetch
 operations. An object that does not meet a filter-spec value is
-omitted unless explicitly requested in a <em>want</em> line. See <code>rev-list</code>
+omitted unless explicitly requested in a <em>want</em> line. See <span class='synopsis'><code>rev-list</code></span>
 for possible filter-spec values.</p>
 </div>
 <div class="paragraph">
@@ -782,18 +782,18 @@ optional; it must be present.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/pack-protocol.txt-codepushercodeident"><a id="Documentation/technical/pack-protocol.txt-pusherident" class="anchor" href="#Documentation/technical/pack-protocol.txt-pusherident"></a><code>pusher</code> ident </dt>
+<dt class="hdlist1" id="Documentation/technical/pack-protocol.txt-spanclasssynopsiscodepushercodespanident"><a id="Documentation/technical/pack-protocol.txt-pusherident" class="anchor" href="#Documentation/technical/pack-protocol.txt-pusherident"></a><span class='synopsis'><code>pusher</code></span> ident </dt>
 <dd>
 <p>Identify the GPG key in "Human Readable Name &lt;email@address&gt;"
 format.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/pack-protocol.txt-codepusheecodeurl"><a id="Documentation/technical/pack-protocol.txt-pusheeurl" class="anchor" href="#Documentation/technical/pack-protocol.txt-pusheeurl"></a><code>pushee</code> url </dt>
+<dt class="hdlist1" id="Documentation/technical/pack-protocol.txt-spanclasssynopsiscodepusheecodespanurl"><a id="Documentation/technical/pack-protocol.txt-pusheeurl" class="anchor" href="#Documentation/technical/pack-protocol.txt-pusheeurl"></a><span class='synopsis'><code>pushee</code></span> url </dt>
 <dd>
 <p>The repository URL (anonymized, if the URL contains
-authentication material) the user who ran <code>git push</code>
+authentication material) the user who ran <span class='synopsis'><code>git</code> <code>push</code></span>
 intended to push into.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/pack-protocol.txt-codenoncecodenonce"><a id="Documentation/technical/pack-protocol.txt-noncenonce" class="anchor" href="#Documentation/technical/pack-protocol.txt-noncenonce"></a><code>nonce</code> nonce </dt>
+<dt class="hdlist1" id="Documentation/technical/pack-protocol.txt-spanclasssynopsiscodenoncecodespannonce"><a id="Documentation/technical/pack-protocol.txt-noncenonce" class="anchor" href="#Documentation/technical/pack-protocol.txt-noncenonce"></a><span class='synopsis'><code>nonce</code></span> nonce </dt>
 <dd>
 <p>The <em>nonce</em> string the receiving repository asked the
 pushing user to include in the certificate, to prevent

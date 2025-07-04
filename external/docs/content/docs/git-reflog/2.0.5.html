@@ -48,29 +48,29 @@ updated.  This command is to manage the information recorded in it.</p>
 </div>
 <div class="paragraph">
 <p>The subcommand "expire" is used to prune older reflog entries.
-Entries older than <code>expire</code> time, or entries older than
-<code>expire-unreachable</code> time and not reachable from the current
+Entries older than <span class='synopsis'><code>expire</code></span> time, or entries older than
+<span class='synopsis'><code>expire-unreachable</code></span> time and not reachable from the current
 tip, are removed from the reflog.  This is typically not used
 directly by the end users&#8201;&#8212;&#8201;instead, see <a href='{{< relurl "docs/git-gc" >}}'>git-gc[1]</a>.</p>
 </div>
 <div class="paragraph">
 <p>The subcommand "show" (which is also the default, in the absence of any
 subcommands) will take all the normal log options, and show the log of
-the reference provided in the command-line (or <code>HEAD</code>, by default).
+the reference provided in the command-line (or <span class='synopsis'><code>HEAD</code></span>, by default).
 The reflog will cover all recent actions (HEAD reflog records branch switching
-as well).  It is an alias for <code>git log -g --abbrev-commit --pretty=oneline</code>;
+as well).  It is an alias for <span class='synopsis'><code>git</code> <code>log</code> <code>-g</code> <code>--abbrev-commit</code> <code>--pretty=oneline</code></span>;
 see <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>.</p>
 </div>
 <div class="paragraph">
 <p>The reflog is useful in various Git commands, to specify the old value
-of a reference. For example, <code>HEAD@{2}</code> means "where HEAD used to be
-two moves ago", <code>master@{one.week.ago}</code> means "where master used to
+of a reference. For example, <span class='synopsis'><code>HEAD@{2}</code></span> means "where HEAD used to be
+two moves ago", <span class='synopsis'><code>master@{one.week.ago}</code></span> means "where master used to
 point to one week ago", and so on. See <a href='{{< relurl "docs/gitrevisions" >}}'>gitrevisions[7]</a> for
 more details.</p>
 </div>
 <div class="paragraph">
 <p>To delete single entries from the reflog, use the subcommand "delete"
-and specify the <em>exact</em> entry (e.g. "<code>git reflog delete master@{2}</code>").</p>
+and specify the <em>exact</em> entry (e.g. "<span class='synopsis'><code>git</code> <code>reflog</code> <code>delete</code> <code>master@{2}</code></span>").</p>
 </div>
 </div>
 </div>
@@ -97,7 +97,7 @@ them.</p>
 <dt class="hdlist1" id="Documentation/git-reflog.txt---expirelttimegt"><a id="Documentation/git-reflog.txt---expiretime" class="anchor" href="#Documentation/git-reflog.txt---expiretime"></a>--expire=&lt;time&gt; </dt>
 <dd>
 <p>Entries older than this time are pruned.  Without the
-option it is taken from configuration <code>gc.reflogExpire</code>,
+option it is taken from configuration <span class='synopsis'><code>gc.reflogExpire</code></span>,
 which in turn defaults to 90 days.  --expire=all prunes
 entries regardless of their age; --expire=never turns off
 pruning of reachable entries (but see --expire-unreachable).</p>
@@ -107,7 +107,7 @@ pruning of reachable entries (but see --expire-unreachable).</p>
 <p>Entries older than this time and not reachable from
 the current tip of the branch are pruned.  Without the
 option it is taken from configuration
-<code>gc.reflogExpireUnreachable</code>, which in turn defaults to
+<span class='synopsis'><code>gc.reflogExpireUnreachable</code></span>, which in turn defaults to
 30 days.  --expire-unreachable=all prunes unreachable
 entries regardless of their age; --expire-unreachable=never
 turns off early pruning of unreachable entries (but see
@@ -125,7 +125,7 @@ turns off early pruning of unreachable entries (but see
 <dt class="hdlist1" id="Documentation/git-reflog.txt---rewrite"><a class="anchor" href="#Documentation/git-reflog.txt---rewrite"></a>--rewrite </dt>
 <dd>
 <p>While expiring or deleting, adjust each reflog entry to ensure
-that the <code>old</code> sha1 field points to the <code>new</code> sha1 field of the
+that the <span class='synopsis'><code>old</code></span> sha1 field points to the <span class='synopsis'><code>new</code></span> sha1 field of the
 previous entry.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-reflog.txt---verbose"><a class="anchor" href="#Documentation/git-reflog.txt---verbose"></a>--verbose </dt>

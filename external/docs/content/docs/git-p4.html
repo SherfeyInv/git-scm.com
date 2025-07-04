@@ -162,7 +162,7 @@ $ git p4 sync //path/in/your/perforce/depot</pre>
 <div class="paragraph">
 <p>This imports the specified depot into
 <em>refs/remotes/p4/master</em> in an existing Git repository.  The
-<code>--branch</code> option can be used to specify a different branch to
+<span class='synopsis'><code>--branch</code></span> option can be used to specify a different branch to
 be used for the p4 content.</p>
 </div>
 <div class="paragraph">
@@ -174,7 +174,7 @@ from a Git remote, this can be useful in a multi-developer environment.</p>
 <div class="paragraph">
 <p>If there are multiple branches, doing <em>git p4 sync</em> will automatically
 use the "BRANCH DETECTION" algorithm to try to partition new changes
-into the right branch.  This can be overridden with the <code>--branch</code>
+into the right branch.  This can be overridden with the <span class='synopsis'><code>--branch</code></span>
 option to specify just a single branch to update.</p>
 </div>
 </div>
@@ -198,7 +198,7 @@ local commits on top of updated p4 changes.</p>
 <div class="paragraph">
 <p>Submitting changes from a Git repository back to the p4 repository
 requires a separate p4 client workspace.  This should be specified
-using the <code>P4CLIENT</code> environment variable or the Git configuration
+using the <span class='synopsis'><code>P4CLIENT</code></span> environment variable or the Git configuration
 variable <em>git-p4.client</em>.  The p4 client must exist, but the client root
 will be created and populated if it does not already exist.</p>
 </div>
@@ -230,16 +230,16 @@ $ git p4 submit --commit &lt;sha1..sha1&gt;</pre>
 </div>
 <div class="paragraph">
 <p>The upstream reference is generally <em>refs/remotes/p4/master</em>, but can
-be overridden using the <code>--origin=</code> command-line option.</p>
+be overridden using the <span class='synopsis'><code>--origin=</code></span> command-line option.</p>
 </div>
 <div class="paragraph">
 <p>The p4 changes will be created as the user invoking <em>git p4 submit</em>. The
-<code>--preserve-user</code> option will cause ownership to be modified
+<span class='synopsis'><code>--preserve-user</code></span> option will cause ownership to be modified
 according to the author of the Git commit.  This option requires admin
 privileges in p4, which can be granted using <em>p4 protect</em>.</p>
 </div>
 <div class="paragraph">
-<p>To shelve changes instead of submitting, use <code>--shelve</code> and <code>--update-shelve</code>:</p>
+<p>To shelve changes instead of submitting, use <span class='synopsis'><code>--shelve</code></span> and <span class='synopsis'><code>--update-shelve</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -291,7 +291,7 @@ $ git p4 unshelve 12345
 <dl>
 <dt class="hdlist1" id="Documentation/git-p4.txt---git-dirltdirgt"><a id="Documentation/git-p4.txt---git-dirdir" class="anchor" href="#Documentation/git-p4.txt---git-dirdir"></a>--git-dir &lt;dir&gt; </dt>
 <dd>
-<p>Set the <code>GIT_DIR</code> environment variable.  See <a href='{{< relurl "docs/git" >}}'>git[1]</a>.</p>
+<p>Set the <span class='synopsis'><code>GIT_DIR</code></span> environment variable.  See <a href='{{< relurl "docs/git" >}}'>git[1]</a>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt--v"><a class="anchor" href="#Documentation/git-p4.txt--v"></a>-v </dt>
 <dt class="hdlist1" id="Documentation/git-p4.txt---verbose"><a class="anchor" href="#Documentation/git-p4.txt---verbose"></a>--verbose </dt>
@@ -364,7 +364,7 @@ associated with new changelists. Deprecated.</p>
 where they will be treated as remote-tracking branches by
 <a href='{{< relurl "docs/git-branch" >}}'>git-branch[1]</a> and other commands.  This option instead
 puts p4 branches in <em>refs/heads/p4/</em>.  Note that future
-sync operations must specify <code>--import-local</code> as well so that
+sync operations must specify <span class='synopsis'><code>--import-local</code></span> as well so that
 they can find the p4 branches in refs/heads.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt---max-changesltngt"><a id="Documentation/git-p4.txt---max-changesn" class="anchor" href="#Documentation/git-p4.txt---max-changesn"></a>--max-changes &lt;n&gt; </dt>
@@ -391,7 +391,7 @@ is 500, which should usually be suitable.</p>
 default, involves removing the entire depot path.  With this
 option, the full p4 depot path is retained in Git.  For example,
 path <em>//depot/main/foo/bar.c</em>, when imported from
-<em>//depot/main/</em>, becomes <em>foo/bar.c</em>.  With <code>--keep-path</code>, the
+<em>//depot/main/</em>, becomes <em>foo/bar.c</em>.  With <span class='synopsis'><code>--keep-path</code></span>, the
 Git path is instead <em>depot/main/foo/bar.c</em>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt---use-client-spec"><a class="anchor" href="#Documentation/git-p4.txt---use-client-spec"></a>--use-client-spec </dt>
@@ -438,7 +438,7 @@ directory.</p>
 <dd>
 <p>Upstream location from which commits are identified to submit to
 p4.  By default, this is the most recent p4 commit reachable
-from <code>HEAD</code>.</p>
+from <span class='synopsis'><code>HEAD</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt--M"><a class="anchor" href="#Documentation/git-p4.txt--M"></a>-M </dt>
 <dd>
@@ -523,10 +523,10 @@ git-p4.disableP4Sync. Sync with origin/master still goes ahead if possible.</p>
 <div class="sect2">
 <h3 id="_p4_pre_submit"><a class="anchor" href="#_p4_pre_submit"></a>p4-pre-submit</h3>
 <div class="paragraph">
-<p>The <code>p4-pre-submit</code> hook is executed if it exists and is executable.
+<p>The <span class='synopsis'><code>p4-pre-submit</code></span> hook is executed if it exists and is executable.
 The hook takes no parameters and nothing from standard input. Exiting with
-non-zero status from this script prevents <code>git-p4 submit</code> from launching.
-It can be bypassed with the <code>--no-verify</code> command line option.</p>
+non-zero status from this script prevents <span class='synopsis'><code>git-p4</code> <code>submit</code></span> from launching.
+It can be bypassed with the <span class='synopsis'><code>--no-verify</code></span> command line option.</p>
 </div>
 <div class="paragraph">
 <p>One usage scenario is to run unit tests in the hook.</p>
@@ -535,7 +535,7 @@ It can be bypassed with the <code>--no-verify</code> command line option.</p>
 <div class="sect2">
 <h3 id="_p4_prepare_changelist"><a class="anchor" href="#_p4_prepare_changelist"></a>p4-prepare-changelist</h3>
 <div class="paragraph">
-<p>The <code>p4-prepare-changelist</code> hook is executed right after preparing
+<p>The <span class='synopsis'><code>p4-prepare-changelist</code></span> hook is executed right after preparing
 the default changelist message and before the editor is started.
 It takes one parameter, the name of the file that contains the
 changelist text. Exiting with a non-zero status from the script
@@ -543,16 +543,16 @@ will abort the process.</p>
 </div>
 <div class="paragraph">
 <p>The purpose of the hook is to edit the message file in place,
-and it is not suppressed by the <code>--no-verify</code> option. This hook
-is called even if <code>--prepare-p4-only</code> is set.</p>
+and it is not suppressed by the <span class='synopsis'><code>--no-verify</code></span> option. This hook
+is called even if <span class='synopsis'><code>--prepare-p4-only</code></span> is set.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_p4_changelist"><a class="anchor" href="#_p4_changelist"></a>p4-changelist</h3>
 <div class="paragraph">
-<p>The <code>p4-changelist</code> hook is executed after the changelist
+<p>The <span class='synopsis'><code>p4-changelist</code></span> hook is executed after the changelist
 message has been edited by the user. It can be bypassed with the
-<code>--no-verify</code> option. It takes a single parameter, the name
+<span class='synopsis'><code>--no-verify</code></span> option. It takes a single parameter, the name
 of the file that holds the proposed changelist text. Exiting
 with a non-zero status causes the command to abort.</p>
 </div>
@@ -565,7 +565,7 @@ also be used to refuse the Submit after inspect the message file.</p>
 <div class="sect2">
 <h3 id="_p4_post_changelist"><a class="anchor" href="#_p4_post_changelist"></a>p4-post-changelist</h3>
 <div class="paragraph">
-<p>The <code>p4-post-changelist</code> hook is invoked after the submit has
+<p>The <span class='synopsis'><code>p4-post-changelist</code></span> hook is invoked after the submit has
 successfully occurred in P4. It takes no parameters and is meant
 primarily for notification and cannot affect the outcome of the
 git p4 submit action.</p>
@@ -626,7 +626,7 @@ p4 revision specifier on the end:</p>
 <p>Import all changes from both named depot paths into a single
 repository.  Only files below these directories are included.
 There is not a subdirectory in Git for each "proj1" and "proj2".
-You must use the <code>--destination</code> option when specifying more
+You must use the <span class='synopsis'><code>--destination</code></span> option when specifying more
 than one depot path.  The revision specifier must be specified
 identically on each depot path.  If there are files in the
 depot paths with the same name, the path with the most recently
@@ -646,7 +646,7 @@ updated version of the file is the one that appears in Git.</p>
 <p>The p4 client specification is maintained with the <em>p4 client</em> command
 and contains among other fields, a View that specifies how the depot
 is mapped into the client repository.  The <em>clone</em> and <em>sync</em> commands
-can consult the client spec when given the <code>--use-client-spec</code> option or
+can consult the client spec when given the <span class='synopsis'><code>--use-client-spec</code></span> option or
 when the useClientSpec variable is true.  After <em>git p4 clone</em>, the
 useClientSpec variable is automatically set in the repository
 configuration file.  This allows future <em>git p4 submit</em> commands to
@@ -671,7 +671,7 @@ dedicating a client spec just for <em>git p4</em>.</p>
 <p>The name of the client can be given to <em>git p4</em> in multiple ways.  The
 variable <em>git-p4.client</em> takes precedence if it exists.  Otherwise,
 normal p4 mechanisms of determining the client are used:  environment
-variable <code>P4CLIENT</code>, a file referenced by <code>P4CONFIG</code>, or the local host name.</p>
+variable <span class='synopsis'><code>P4CLIENT</code></span>, a file referenced by <span class='synopsis'><code>P4CONFIG</code></span>, or the local host name.</p>
 </div>
 </div>
 </div>
@@ -688,7 +688,7 @@ can use these mappings to determine branch relationships.</p>
 </div>
 <div class="paragraph">
 <p>If you have a repository where all the branches of interest exist as
-subdirectories of a single depot path, you can use <code>--detect-branches</code>
+subdirectories of a single depot path, you can use <span class='synopsis'><code>--detect-branches</code></span>
 when cloning or syncing to have <em>git p4</em> automatically find
 subdirectories in p4, and to generate these as branches in Git.</p>
 </div>
@@ -767,25 +767,25 @@ They all are in the <em>git-p4</em> section.</p>
 <dt class="hdlist1" id="Documentation/git-p4.txt-git-p4user"><a class="anchor" href="#Documentation/git-p4.txt-git-p4user"></a>git-p4.user </dt>
 <dd>
 <p>User specified as an option to all p4 commands, with <em>-u &lt;user&gt;</em>.
-The environment variable <code>P4USER</code> can be used instead.</p>
+The environment variable <span class='synopsis'><code>P4USER</code></span> can be used instead.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt-git-p4password"><a class="anchor" href="#Documentation/git-p4.txt-git-p4password"></a>git-p4.password </dt>
 <dd>
 <p>Password specified as an option to all p4 commands, with
 <em>-P &lt;password&gt;</em>.
-The environment variable <code>P4PASS</code> can be used instead.</p>
+The environment variable <span class='synopsis'><code>P4PASS</code></span> can be used instead.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt-git-p4port"><a class="anchor" href="#Documentation/git-p4.txt-git-p4port"></a>git-p4.port </dt>
 <dd>
 <p>Port specified as an option to all p4 commands, with
 <em>-p &lt;port&gt;</em>.
-The environment variable <code>P4PORT</code> can be used instead.</p>
+The environment variable <span class='synopsis'><code>P4PORT</code></span> can be used instead.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt-git-p4host"><a class="anchor" href="#Documentation/git-p4.txt-git-p4host"></a>git-p4.host </dt>
 <dd>
 <p>Host specified as an option to all p4 commands, with
 <em>-h &lt;host&gt;</em>.
-The environment variable <code>P4HOST</code> can be used instead.</p>
+The environment variable <span class='synopsis'><code>P4HOST</code></span> can be used instead.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt-git-p4client"><a class="anchor" href="#Documentation/git-p4.txt-git-p4client"></a>git-p4.client </dt>
 <dd>
@@ -852,7 +852,7 @@ default value is <em>[a-zA-Z0-9_\-.]+$</em>.</p>
 <dd>
 <p>Specify that the p4 client spec should be used to identify p4
 depot paths of interest.  This is equivalent to specifying the
-option <code>--use-client-spec</code>.  See the "CLIENT SPEC" section above.
+option <span class='synopsis'><code>--use-client-spec</code></span>.  See the "CLIENT SPEC" section above.
 This variable is a boolean, not the name of a p4 client.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-p4.txt-git-p4pathEncoding"><a class="anchor" href="#Documentation/git-p4.txt-git-p4pathEncoding"></a>git-p4.pathEncoding </dt>

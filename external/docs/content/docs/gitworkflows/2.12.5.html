@@ -34,7 +34,7 @@ aliases:
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document attempts to write down and motivate some of the workflow
-elements used for <code>git.git</code> itself.  Many ideas apply in general,
+elements used for <span class='synopsis'><code>git.git</code></span> itself.  Many ideas apply in general,
 though the full workflow is rarely required for smaller projects with
 fewer people involved.</p>
 </div>
@@ -62,8 +62,8 @@ useful for later inspection and analysis, for example with
 beginning. It is always easier to squash a few commits together than
 to split one big commit into several.  Don&#8217;t be afraid of making too
 small or imperfect steps along the way. You can always go back later
-and edit the commits with <code>git rebase --interactive</code> before you
-publish them.  You can use <code>git stash save --keep-index</code> to run the
+and edit the commits with <span class='synopsis'><code>git</code> <code>rebase</code> <code>--interactive</code></span> before you
+publish them.  You can use <span class='synopsis'><code>git</code> <code>stash</code> <code>save</code> <code>--keep-index</code></span> to run the
 test suite independent of other uncommitted changes; see the EXAMPLES
 section of <a href='{{< relurl "docs/git-stash" >}}'>git-stash[1]</a>.</p>
 </div>
@@ -100,7 +100,7 @@ management.  The following subsections discuss the important points.</p>
 <div class="paragraph">
 <p>As a given feature goes from experimental to stable, it also
 "graduates" between the corresponding branches of the software.
-<code>git.git</code> uses the following <em>integration branches</em>:</p>
+<span class='synopsis'><code>git.git</code></span> uses the following <em>integration branches</em>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -271,7 +271,7 @@ throw-away branch.  You must never base any work on such a branch!</p>
 <p>If you make it (very) clear that this branch is going to be deleted
 right after the testing, you can even publish this branch, for example
 to give the testers a chance to work with it, or other developers a
-chance to see if their in-progress work will be compatible.  <code>git.git</code>
+chance to see if their in-progress work will be compatible.  <span class='synopsis'><code>git.git</code></span>
 has such an official throw-away integration branch called <em>pu</em>.</p>
 </div>
 </div>
@@ -299,7 +299,7 @@ will therefore not be included in your feature release.</p>
 <div class="title">Recipe: Verify <em>master</em> is a superset of <em>maint</em></div>
 <div class="content">
 <div class="paragraph">
-<p><code>git log master..maint</code></p>
+<p><span class='synopsis'><code>git</code> <code>log</code> <code>master..maint</code></span></p>
 </div>
 </div>
 </div>
@@ -315,7 +315,7 @@ tag to the tip of <em>master</em> indicating the release version:</p>
 <div class="title">Recipe: Release tagging</div>
 <div class="content">
 <div class="paragraph">
-<p><code>git tag -s -m "Git X.Y.Z" vX.Y.Z master</code></p>
+<p><span class='synopsis'><code>git</code> <code>tag</code> <code>-s</code> <code>-m</code> <code>"Git</code> <code>X.Y.Z"</code> <code>vX.Y.Z</code> <code>master</code></span></p>
 </div>
 </div>
 </div>
@@ -351,7 +351,7 @@ where X.Y.Z is the current release).</p>
 <div class="title">Recipe: Copy maint</div>
 <div class="content">
 <div class="paragraph">
-<p><code>git branch maint-X.Y.(Z-1) maint</code></p>
+<p><span class='synopsis'><code>git</code> <code>branch</code> <code>maint-X.Y.</code>(<code>Z-1</code>) <code>maint</code></span></p>
 </div>
 </div>
 </div>
@@ -365,10 +365,10 @@ code so that maintenance fixes can be tracked for the current release:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git checkout maint</code></p>
+<p><span class='synopsis'><code>git</code> <code>checkout</code> <code>maint</code></span></p>
 </li>
 <li>
-<p><code>git merge --ff-only master</code></p>
+<p><span class='synopsis'><code>git</code> <code>merge</code> <code>--ff-only</code> <code>master</code></span></p>
 </li>
 </ul>
 </div>
@@ -394,16 +394,16 @@ topics on <em>next</em>:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git checkout next</code></p>
+<p><span class='synopsis'><code>git</code> <code>checkout</code> <code>next</code></span></p>
 </li>
 <li>
-<p><code>git reset --hard master</code></p>
+<p><span class='synopsis'><code>git</code> <code>reset</code> <code>--hard</code> <code>master</code></span></p>
 </li>
 <li>
-<p><code>git merge ai/topic_in_next1</code></p>
+<p><span class='synopsis'><code>git</code> <code>merge</code> <code>ai/topic_in_next1</code></span></p>
 </li>
 <li>
-<p><code>git merge ai/topic_in_next2</code></p>
+<p><span class='synopsis'><code>git</code> <code>merge</code> <code>ai/topic_in_next2</code></span></p>
 </li>
 <li>
 <p>&#8230;&#8203;</p>
@@ -446,7 +446,7 @@ you will have to share your work.</p>
 <p>Roughly speaking, there are two important workflows: merge and patch.
 The important difference is that the merge workflow can propagate full
 history, including merges, while patches cannot.  Both workflows can
-be used in parallel: in <code>git.git</code>, only subsystem maintainers use
+be used in parallel: in <span class='synopsis'><code>git.git</code></span>, only subsystem maintainers use
 the merge workflow, while everyone else sends patches.</p>
 </div>
 <div class="paragraph">
@@ -491,7 +491,7 @@ to merge the remote branch.</p>
 <div class="title">Recipe: Push/pull: Publishing branches/topics</div>
 <div class="content">
 <div class="paragraph">
-<p><code>git push &lt;remote&gt; &lt;branch&gt;</code> and tell everyone where they can fetch
+<p><span class='synopsis'><code>git</code> <code>push</code> <em>&lt;remote&gt;</em> <em>&lt;branch&gt;</em></span> and tell everyone where they can fetch
 from.</p>
 </div>
 </div>
@@ -509,7 +509,7 @@ staying up to date is easy too:</p>
 <div class="title">Recipe: Push/pull: Staying up to date</div>
 <div class="content">
 <div class="paragraph">
-<p>Use <code>git fetch &lt;remote&gt;</code> or <code>git remote update</code> to stay up to date.</p>
+<p>Use <span class='synopsis'><code>git</code> <code>fetch</code> <em>&lt;remote&gt;</em></span> or <span class='synopsis'><code>git</code> <code>remote</code> <code>update</code></span> to stay up to date.</p>
 </div>
 </div>
 </div>
@@ -536,7 +536,7 @@ follows.</p>
 <div class="title">Recipe: Push/pull: Merging remote topics</div>
 <div class="content">
 <div class="paragraph">
-<p><code>git pull &lt;url&gt; &lt;branch&gt;</code></p>
+<p><span class='synopsis'><code>git</code> <code>pull</code> <em>&lt;url&gt;</em> <em>&lt;branch&gt;</em></span></p>
 </div>
 </div>
 </div>
@@ -563,11 +563,11 @@ maintainer&#8217;s life easier).</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>git format-patch -M upstream..topic</code> to turn them into preformatted
+<p><span class='synopsis'><code>git</code> <code>format-patch</code> <code>-M</code> <code>upstream..topic</code></span> to turn them into preformatted
 patch files</p>
 </li>
 <li>
-<p><code>git send-email --to=&lt;recipient&gt; &lt;patches&gt;</code></p>
+<p><span class='synopsis'><code>git</code> <code>send-email</code> <code>--to=</code><em>&lt;recipient&gt;</em> <em>&lt;patches&gt;</em></span></p>
 </li>
 </ul>
 </div>
@@ -586,7 +586,7 @@ merge because you cannot format-patch merges):</p>
 <div class="title">Recipe: format-patch/am: Keeping topics up to date</div>
 <div class="content">
 <div class="paragraph">
-<p><code>git pull --rebase &lt;url&gt; &lt;branch&gt;</code></p>
+<p><span class='synopsis'><code>git</code> <code>pull</code> <code>--rebase</code> <em>&lt;url&gt;</em> <em>&lt;branch&gt;</em></span></p>
 </div>
 </div>
 </div>
@@ -604,13 +604,13 @@ create a new topic branch and use <em>git am</em> to import the commits:</p>
 <div class="title">Recipe: format-patch/am: Importing patches</div>
 <div class="content">
 <div class="paragraph">
-<p><code>git am &lt; patch</code></p>
+<p><span class='synopsis'><em>git am &lt; patch</em></span></p>
 </div>
 </div>
 </div>
 <div class="paragraph">
 <p>One feature worth pointing out is the three-way merge, which can help
-if you get conflicts: <code>git am -3</code> will use index information contained
+if you get conflicts: <span class='synopsis'><code>git</code> <code>am</code> <code>-3</code></span> will use index information contained
 in patches to figure out the merge base.  See <a href='{{< relurl "docs/git-am" >}}'>git-am[1]</a> for
 other options.</p>
 </div>

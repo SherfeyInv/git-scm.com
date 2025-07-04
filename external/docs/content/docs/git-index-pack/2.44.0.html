@@ -75,10 +75,10 @@ with .pack).</p>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---no-rev-index"><a class="anchor" href="#Documentation/git-index-pack.txt---no-rev-index"></a>--[no-]rev-index </dt>
 <dd>
 <p>When this flag is provided, generate a reverse index
-(a <code>.rev</code> file) corresponding to the given pack. If
-<code>--verify</code> is given, ensure that the existing
+(a <span class='synopsis'><code>.rev</code></span> file) corresponding to the given pack. If
+<span class='synopsis'><code>--verify</code></span> is given, ensure that the existing
 reverse index is correct. Takes precedence over
-<code>pack.writeReverseIndex</code>.</p>
+<span class='synopsis'><code>pack.writeReverseIndex</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---stdin"><a class="anchor" href="#Documentation/git-index-pack.txt---stdin"></a>--stdin </dt>
 <dd>
@@ -93,7 +93,7 @@ prevent a race condition between this process and
 </dd>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---fix-thin"><a class="anchor" href="#Documentation/git-index-pack.txt---fix-thin"></a>--fix-thin </dt>
 <dd>
-<p>Fix a "thin" pack produced by <code>git pack-objects --thin</code> (see
+<p>Fix a "thin" pack produced by <span class='synopsis'><code>git</code> <code>pack-objects</code> <code>--thin</code></span> (see
 <a href='{{< relurl "docs/git-pack-objects" >}}'>git-pack-objects[1]</a> for details) by adding the
 excluded objects the deltified objects are based on to the
 pack. This option only makes sense in conjunction with --stdin.</p>
@@ -124,18 +124,18 @@ to force the version for the generated pack index, and to force
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---strictltmsg-idgtltseveritygt82308203"><a id="Documentation/git-index-pack.txt---strictmsg-idseverity" class="anchor" href="#Documentation/git-index-pack.txt---strictmsg-idseverity"></a>--strict[=&lt;msg-id&gt;=&lt;severity&gt;&#8230;&#8203;] </dt>
 <dd>
 <p>Die, if the pack contains broken objects or links. An optional
-comma-separated list of <code>&lt;msg-id&gt;=&lt;severity&gt;</code> can be passed to change
+comma-separated list of <span class='synopsis'><em>&lt;msg-id&gt;</em><code>=</code><em>&lt;severity&gt;</em></span> can be passed to change
 the severity of some possible issues, e.g.,
- <code>--strict="missingEmail=ignore,badTagName=error"</code>. See the entry for the
-<code>fsck.&lt;msg-id&gt;</code> configuration options in <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> for more
-information on the possible values of <code>&lt;msg-id&gt;</code> and <code>&lt;severity&gt;</code>.</p>
+ <span class='synopsis'><code>--strict="missingEmail=ignore,badTagName=error"</code></span>. See the entry for the
+<span class='synopsis'><code>fsck.</code><em>&lt;msg-id&gt;</em></span> configuration options in <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> for more
+information on the possible values of <span class='synopsis'><em>&lt;msg-id&gt;</em></span> and <span class='synopsis'><em>&lt;severity&gt;</em></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---progress-title"><a class="anchor" href="#Documentation/git-index-pack.txt---progress-title"></a>--progress-title </dt>
 <dd>
 <p>For internal use only.</p>
 <div class="paragraph">
 <p>Set the title of the progress bar. The title is "Receiving objects" by
-default and "Indexing objects" when <code>--stdin</code> is specified.</p>
+default and "Indexing objects" when <span class='synopsis'><code>--stdin</code></span> is specified.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---check-self-contained-and-connected"><a class="anchor" href="#Documentation/git-index-pack.txt---check-self-contained-and-connected"></a>--check-self-contained-and-connected </dt>
@@ -144,17 +144,17 @@ default and "Indexing objects" when <code>--stdin</code> is specified.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---fsck-objectsltmsg-idgtltseveritygt82308203"><a id="Documentation/git-index-pack.txt---fsck-objectsmsg-idseverity" class="anchor" href="#Documentation/git-index-pack.txt---fsck-objectsmsg-idseverity"></a>--fsck-objects[=&lt;msg-id&gt;=&lt;severity&gt;&#8230;&#8203;] </dt>
 <dd>
-<p>Die if the pack contains broken objects, but unlike <code>--strict</code>, don&#8217;t
+<p>Die if the pack contains broken objects, but unlike <span class='synopsis'><code>--strict</code></span>, don&#8217;t
 choke on broken links. If the pack contains a tree pointing to a
 .gitmodules blob that does not exist, prints the hash of that blob
 (for the caller to check) after the hash that goes into the name of the
 pack/idx file (see "Notes").</p>
 <div class="paragraph">
-<p>An optional comma-separated list of <code>&lt;msg-id&gt;=&lt;severity&gt;</code> can be passed to
+<p>An optional comma-separated list of <span class='synopsis'><em>&lt;msg-id&gt;</em><code>=</code><em>&lt;severity&gt;</em></span> can be passed to
 change the severity of some possible issues, e.g.,
-<code>--fsck-objects="missingEmail=ignore,badTagName=ignore"</code>. See the entry for the
-<code>fsck.&lt;msg-id&gt;</code> configuration options in <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> for more
-information on the possible values of <code>&lt;msg-id&gt;</code> and <code>&lt;severity&gt;</code>.</p>
+<span class='synopsis'><code>--fsck-objects="missingEmail=ignore,badTagName=ignore"</code></span>. See the entry for the
+<span class='synopsis'><code>fsck.</code><em>&lt;msg-id&gt;</em></span> configuration options in <a href='{{< relurl "docs/git-fsck" >}}'>git-fsck[1]</a> for more
+information on the possible values of <span class='synopsis'><em>&lt;msg-id&gt;</em></span> and <span class='synopsis'><em>&lt;severity&gt;</em></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-index-pack.txt---threadsltngt"><a id="Documentation/git-index-pack.txt---threadsn" class="anchor" href="#Documentation/git-index-pack.txt---threadsn"></a>--threads=&lt;n&gt; </dt>
@@ -176,7 +176,7 @@ and use maximum 3 threads.</p>
 <dd>
 <p>Specify the given object format (hash algorithm) for the pack.  The valid
 values are <em>sha1</em> and (if enabled) <em>sha256</em>.  The default is the algorithm for
-the current repository (set by <code>extensions.objectFormat</code>), or <em>sha1</em> if no
+the current repository (set by <span class='synopsis'><code>extensions.objectFormat</code></span>), or <em>sha1</em> if no
 value is set or outside a repository.</p>
 <div class="paragraph">
 <p>This option cannot be used with --stdin.</p>
@@ -203,7 +203,7 @@ without data loss.</p>
 <p>Before committing the pack-index, create a .promisor file for this
 pack. Particularly helpful when writing a promisor pack with --fix-thin
 since the name of the pack is not final until the pack has been fully
-written. If a <code>&lt;message&gt;</code> is provided, then that content will be
+written. If a <span class='synopsis'><em>&lt;message&gt;</em></span> is provided, then that content will be
 written to the .promisor file for future reference. See
 <a href="{{< relurl "docs/partial-clone" >}}">partial clone</a> for more information.</p>
 </dd>

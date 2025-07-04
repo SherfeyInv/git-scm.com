@@ -55,7 +55,7 @@ conflicts before writing them to the rerere database.</p>
 <div class="paragraph">
 <p>Different conflict styles and branch names are normalized by stripping
 the labels from the conflict markers, and removing the common ancestor
-version from the <code>diff3</code> or <code>zdiff3</code> conflict styles.  Branches that
+version from the <span class='synopsis'><code>diff3</code></span> or <span class='synopsis'><code>zdiff3</code></span> conflict styles.  Branches that
 are merged in different order are normalized by sorting the conflict
 hunks.  More on each of those steps in the following sections.</p>
 </div>
@@ -279,7 +279,7 @@ the hunks, the conflict would look as follows:</p>
 </div>
 <div class="paragraph">
 <p>and finally the conflict ID would be calculated as:
-<code>sha1('1&lt;NUL&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;\n3\n=======\n2\n&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;NUL&gt;')</code></p>
+<span class='synopsis'><em>sha1('1&lt;NUL&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;\n3\n=======\n2\n&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;NUL&gt;')</em></span></p>
 </div>
 </div>
 </div>

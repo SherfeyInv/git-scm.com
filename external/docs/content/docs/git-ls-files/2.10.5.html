@@ -145,16 +145,16 @@ error (return 1).</p>
 &lt;file&gt; (i.e. path pattern) arguments to paths, pretend
 that paths which were removed in the index since the
 named &lt;tree-ish&gt; are still present.  Using this option
-with <code>-s</code> or <code>-u</code> options does not make any sense.</p>
+with <span class='synopsis'><code>-s</code></span> or <span class='synopsis'><code>-u</code></span> options does not make any sense.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-files.txt--t"><a class="anchor" href="#Documentation/git-ls-files.txt--t"></a>-t </dt>
 <dd>
 <p>This feature is semi-deprecated. For scripting purpose,
-<a href='{{< relurl "docs/git-status" >}}'>git-status[1]</a> <code>--porcelain</code> and
-<a href='{{< relurl "docs/git-diff-files" >}}'>git-diff-files[1]</a> <code>--name-status</code> are almost always
+<a href='{{< relurl "docs/git-status" >}}'>git-status[1]</a> <span class='synopsis'><code>--porcelain</code></span> and
+<a href='{{< relurl "docs/git-diff-files" >}}'>git-diff-files[1]</a> <span class='synopsis'><code>--name-status</code></span> are almost always
 superior alternatives, and users should look at
-<a href='{{< relurl "docs/git-status" >}}'>git-status[1]</a> <code>--short</code> or <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>
-<code>--name-status</code> for more user-friendly alternatives.</p>
+<a href='{{< relurl "docs/git-status" >}}'>git-status[1]</a> <span class='synopsis'><code>--short</code></span> or <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a>
+<span class='synopsis'><code>--name-status</code></span> for more user-friendly alternatives.</p>
 <div class="paragraph">
 <p>This option identifies the file status with the following tags (followed by
 a space) at the start of each line:</p>
@@ -190,7 +190,7 @@ a space) at the start of each line:</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-ls-files.txt--v"><a class="anchor" href="#Documentation/git-ls-files.txt--v"></a>-v </dt>
 <dd>
-<p>Similar to <code>-t</code>, but use lowercase letters for files
+<p>Similar to <span class='synopsis'><code>-t</code></span>, but use lowercase letters for files
 that are marked as <em>assume unchanged</em> (see
 <a href='{{< relurl "docs/git-update-index" >}}'>git-update-index[1]</a>).</p>
 </dd>
@@ -252,7 +252,7 @@ specified criteria are shown.</p>
 <h2 id="_output"><a class="anchor" href="#_output"></a>Output</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>git ls-files</em> just outputs the filenames unless <code>--stage</code> is specified in
+<p><em>git ls-files</em> just outputs the filenames unless <span class='synopsis'><code>--stage</code></span> is specified in
 which case it outputs:</p>
 </div>
 <div class="literalblock">
@@ -276,8 +276,8 @@ the user (or the porcelain) to see what should eventually be recorded at the
 path. (see <a href='{{< relurl "docs/git-read-tree" >}}'>git-read-tree[1]</a> for more information on state)</p>
 </div>
 <div class="paragraph">
-<p>When <code>-z</code> option is not used, TAB, LF, and backslash characters
-in pathnames are represented as <code>\t</code>, <code>\n</code>, and <code>\\</code>,
+<p>When <span class='synopsis'><code>-z</code></span> option is not used, TAB, LF, and backslash characters
+in pathnames are represented as <span class='synopsis'><em>\t</em></span>, <span class='synopsis'><em>\n</em></span>, and <span class='synopsis'><em>\\</em></span>,
 respectively.</p>
 </div>
 </div>
@@ -309,7 +309,7 @@ in the same order they appear in the file.</p>
 <li>
 <p>The command-line flag --exclude-per-directory=&lt;name&gt; specifies
 a name of the file in each directory <em>git ls-files</em>
-examines, normally <code>.gitignore</code>.  Files in deeper
+examines, normally <span class='synopsis'><code>.gitignore</code></span>.  Files in deeper
 directories take precedence.  Patterns are ordered in the
 same order they appear in the files.</p>
 </li>

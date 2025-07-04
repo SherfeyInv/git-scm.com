@@ -55,7 +55,7 @@ Git programs.</p>
 <div class="paragraph">
 <p>You probably don&#8217;t want to invoke this command directly; it is meant to
 be used as a credential helper by other parts of git. See
-<a href='{{< relurl "docs/gitcredentials" >}}'>gitcredentials[7]</a> or <code>EXAMPLES</code> below.</p>
+<a href='{{< relurl "docs/gitcredentials" >}}'>gitcredentials[7]</a> or <span class='synopsis'><code>EXAMPLES</code></span> below.</p>
 </div>
 </div>
 </div>
@@ -66,10 +66,10 @@ be used as a credential helper by other parts of git. See
 <dl>
 <dt class="hdlist1" id="Documentation/git-credential-store.txt---fileltpathgt"><a id="Documentation/git-credential-store.txt---filepath" class="anchor" href="#Documentation/git-credential-store.txt---filepath"></a>--file=&lt;path&gt; </dt>
 <dd>
-<p>Use <code>&lt;path&gt;</code> to store credentials. The file will have its
+<p>Use <span class='synopsis'><em>&lt;path&gt;</em></span> to store credentials. The file will have its
 filesystem permissions set to prevent other users on the system
 from reading it, but will not be encrypted or otherwise
-protected. Defaults to <code>~/.git-credentials</code>.</p>
+protected. Defaults to <span class='synopsis'><code>~/.git-credentials</code></span>.</p>
 </dd>
 </dl>
 </div>
@@ -100,7 +100,7 @@ $ git push http://example.com/repo.git
 <h2 id="_storage_format"><a class="anchor" href="#_storage_format"></a>STORAGE FORMAT</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>.git-credentials</code> file is stored in plaintext. Each credential is
+<p>The <span class='synopsis'><code>.git-credentials</code></span> file is stored in plaintext. Each credential is
 stored on its own line as a URL like:</p>
 </div>
 <div class="listingblock">

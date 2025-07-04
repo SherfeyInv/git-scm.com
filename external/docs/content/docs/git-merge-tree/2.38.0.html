@@ -36,10 +36,10 @@ aliases:
 <h2 id="NEWMERGE"><a class="anchor" href="#NEWMERGE"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This command has a modern <code>--write-tree</code> mode and a deprecated
-<code>--trivial-merge</code> mode.  With the exception of the
+<p>This command has a modern <span class='synopsis'><code>--write-tree</code></span> mode and a deprecated
+<span class='synopsis'><code>--trivial-merge</code></span> mode.  With the exception of the
 <a href="#DEPMERGE">DEPRECATED DESCRIPTION</a> section at the end, the rest of
-this documentation describes modern <code>--write-tree</code> mode.</p>
+this documentation describes modern <span class='synopsis'><code>--write-tree</code></span> mode.</p>
 </div>
 <div class="paragraph">
 <p>Performs a merge, but does not make any new commits and does not read
@@ -71,7 +71,7 @@ merge base, creating a virtual merge base by merging the merge bases)</p>
 </div>
 <div class="paragraph">
 <p>After the merge completes, a new toplevel tree object is created.  See
-<code>OUTPUT</code> below for details.</p>
+<span class='synopsis'><code>OUTPUT</code></span> below for details.</p>
 </div>
 </div>
 </div>
@@ -141,9 +141,9 @@ line:</p>
 <h3 id="OIDTLT"><a class="anchor" href="#OIDTLT"></a>OID of toplevel tree</h3>
 <div class="paragraph">
 <p>This is a tree object that represents what would be checked out in the
-working tree at the end of <code>git merge</code>.  If there were conflicts, then
+working tree at the end of <span class='synopsis'><code>git</code> <code>merge</code></span>.  If there were conflicts, then
 files within this tree may have embedded conflict markers.  This section
-is always followed by a newline (or NUL if <code>-z</code> is passed).</p>
+is always followed by a newline (or NUL if <span class='synopsis'><code>-z</code></span> is passed).</p>
 </div>
 </div>
 <div class="sect2">
@@ -158,16 +158,16 @@ is always followed by a newline (or NUL if <code>-z</code> is passed).</p>
 </div>
 <div class="paragraph">
 <p>The filename will be quoted as explained for the configuration
-variable <code>core.quotePath</code> (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  However, if
-the <code>--name-only</code> option is passed, the mode, object, and stage will
-be omitted.  If <code>-z</code> is passed, the "lines" are terminated by a NUL
+variable <span class='synopsis'><code>core.quotePath</code></span> (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  However, if
+the <span class='synopsis'><code>--name-only</code></span> option is passed, the mode, object, and stage will
+be omitted.  If <span class='synopsis'><code>-z</code></span> is passed, the "lines" are terminated by a NUL
 character instead of a newline character.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="IM"><a class="anchor" href="#IM"></a>Informational messages</h3>
 <div class="paragraph">
-<p>This always starts with a blank line (or NUL if <code>-z</code> is passed) to
+<p>This always starts with a blank line (or NUL if <span class='synopsis'><code>-z</code></span> is passed) to
 separate it from the previous sections, and then has free-form
 messages about the merge, such as:</p>
 </div>
@@ -225,7 +225,7 @@ git update-ref $BRANCH1 $NEWCOMMIT</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that when the exit status is non-zero, <code>NEWTREE</code> in this sequence
+<p>Note that when the exit status is non-zero, <span class='synopsis'><code>NEWTREE</code></span> in this sequence
 will contain a lot more output than just a tree.</p>
 </div>
 <div class="paragraph">
@@ -316,11 +316,11 @@ be losing information that might help the user resolve the conflict.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Per the <a href="#NEWMERGE">DESCRIPTION</a> and unlike the rest of this
-documentation, this section describes the deprecated <code>--trivial-merge</code>
+documentation, this section describes the deprecated <span class='synopsis'><code>--trivial-merge</code></span>
 mode.</p>
 </div>
 <div class="paragraph">
-<p>Other than the optional <code>--trivial-merge</code>, this mode accepts no
+<p>Other than the optional <span class='synopsis'><code>--trivial-merge</code></span>, this mode accepts no
 options.</p>
 </div>
 <div class="paragraph">

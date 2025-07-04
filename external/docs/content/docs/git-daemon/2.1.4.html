@@ -61,7 +61,7 @@ pass some directory paths as <em>git daemon</em> arguments, you can further rest
 the offers to a whitelist comprising of those.</p>
 </div>
 <div class="paragraph">
-<p>By default, only <code>upload-pack</code> service is enabled, which serves
+<p>By default, only <span class='synopsis'><code>upload-pack</code></span> service is enabled, which serves
 <em>git fetch-pack</em> and <em>git ls-remote</em> clients, which are invoked
 from <em>git fetch</em>, <em>git pull</em>, and <em>git clone</em>.</p>
 </div>
@@ -70,7 +70,7 @@ from <em>git fetch</em>, <em>git pull</em>, and <em>git clone</em>.</p>
 Git repositories.</p>
 </div>
 <div class="paragraph">
-<p>An <code>upload-archive</code> also exists to serve <em>git archive</em>.</p>
+<p>An <span class='synopsis'><code>upload-archive</code></span> also exists to serve <em>git archive</em>.</p>
 </div>
 </div>
 </div>
@@ -165,10 +165,10 @@ zero for no limit.</p>
 <p>Allow ~user notation to be used in requests.  When
 specified with no parameter, requests to
 git://host/~alice/foo is taken as a request to access
-<em>foo</em> repository in the home directory of user <code>alice</code>.
-If <code>--user-path=path</code> is specified, the same request is
-taken as a request to access <code>path/foo</code> repository in
-the home directory of user <code>alice</code>.</p>
+<em>foo</em> repository in the home directory of user <span class='synopsis'><code>alice</code></span>.
+If <span class='synopsis'><code>--user-path=path</code></span> is specified, the same request is
+taken as a request to access <span class='synopsis'><code>path/foo</code></span> repository in
+the home directory of user <span class='synopsis'><code>alice</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-daemon.txt---verbose"><a class="anchor" href="#Documentation/git-daemon.txt---verbose"></a>--verbose </dt>
 <dd>
@@ -187,28 +187,28 @@ old connections to time out.</p>
 <dt class="hdlist1" id="Documentation/git-daemon.txt---pid-fileltfilegt"><a id="Documentation/git-daemon.txt---pid-filefile" class="anchor" href="#Documentation/git-daemon.txt---pid-filefile"></a>--pid-file=&lt;file&gt; </dt>
 <dd>
 <p>Save the process id in <em>file</em>.  Ignored when the daemon
-is run under <code>--inetd</code>.</p>
+is run under <span class='synopsis'><code>--inetd</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-daemon.txt---userltusergt"><a id="Documentation/git-daemon.txt---useruser" class="anchor" href="#Documentation/git-daemon.txt---useruser"></a>--user=&lt;user&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-daemon.txt---groupltgroupgt"><a id="Documentation/git-daemon.txt---groupgroup" class="anchor" href="#Documentation/git-daemon.txt---groupgroup"></a>--group=&lt;group&gt; </dt>
 <dd>
 <p>Change daemon&#8217;s uid and gid before entering the service loop.
-When only <code>--user</code> is given without <code>--group</code>, the
+When only <span class='synopsis'><code>--user</code></span> is given without <span class='synopsis'><code>--group</code></span>, the
 primary group ID for the user is used.  The values of
-the option are given to <code>getpwnam(3)</code> and <code>getgrnam(3)</code>
+the option are given to <span class='synopsis'><code>getpwnam</code>(<code>3</code>)</span> and <span class='synopsis'><code>getgrnam</code>(<code>3</code>)</span>
 and numeric IDs are not supported.</p>
 <div class="paragraph">
-<p>Giving these options is an error when used with <code>--inetd</code>; use
+<p>Giving these options is an error when used with <span class='synopsis'><code>--inetd</code></span>; use
 the facility of inet daemon to achieve the same before spawning
 <em>git daemon</em> if needed.</p>
 </div>
 <div class="paragraph">
 <p>Like many programs that switch user id, the daemon does not reset
-environment variables such as <code>$HOME</code> when it runs git programs,
-e.g. <code>upload-pack</code> and <code>receive-pack</code>. When using this option, you
-may also want to set and export <code>HOME</code> to point at the home
-directory of <code>&lt;user&gt;</code> before starting the daemon, and make sure any
-Git configuration files in that directory are readable by <code>&lt;user&gt;</code>.</p>
+environment variables such as <span class='synopsis'><code>$HOME</code></span> when it runs git programs,
+e.g. <span class='synopsis'><code>upload-pack</code></span> and <span class='synopsis'><code>receive-pack</code></span>. When using this option, you
+may also want to set and export <span class='synopsis'><code>HOME</code></span> to point at the home
+directory of <span class='synopsis'><em>&lt;user&gt;</em></span> before starting the daemon, and make sure any
+Git configuration files in that directory are readable by <span class='synopsis'><em>&lt;user&gt;</em></span>.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-daemon.txt---enableltservicegt"><a id="Documentation/git-daemon.txt---enableservice" class="anchor" href="#Documentation/git-daemon.txt---enableservice"></a>--enable=&lt;service&gt; </dt>
@@ -281,14 +281,14 @@ disable them.</p>
 <dd>
 <p>This serves <em>git fetch-pack</em> and <em>git ls-remote</em>
 clients.  It is enabled by default, but a repository can
-disable it by setting <code>daemon.uploadpack</code> configuration
-item to <code>false</code>.</p>
+disable it by setting <span class='synopsis'><code>daemon.uploadpack</code></span> configuration
+item to <span class='synopsis'><code>false</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-daemon.txt-upload-archive"><a class="anchor" href="#Documentation/git-daemon.txt-upload-archive"></a>upload-archive </dt>
 <dd>
 <p>This serves <em>git archive --remote</em>.  It is disabled by
 default, but a repository can enable it by setting
-<code>daemon.uploadarch</code> configuration item to <code>true</code>.</p>
+<span class='synopsis'><code>daemon.uploadarch</code></span> configuration item to <span class='synopsis'><code>true</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-daemon.txt-receive-pack"><a class="anchor" href="#Documentation/git-daemon.txt-receive-pack"></a>receive-pack </dt>
 <dd>
@@ -298,8 +298,8 @@ authentication in the protocol (in other words, anybody
 can push anything into the repository, including removal
 of refs).  This is solely meant for a closed LAN setting
 where everybody is friendly.  This service can be
-enabled by setting <code>daemon.receivepack</code> configuration item to
-<code>true</code>.</p>
+enabled by setting <span class='synopsis'><code>daemon.receivepack</code></span> configuration item to
+<span class='synopsis'><code>true</code></span>.</p>
 </dd>
 </dl>
 </div>
@@ -336,9 +336,9 @@ and /pub/bar, place an entry like the following into
 <dt class="hdlist1" id="Documentation/git-daemon.txt-emgitdaemonemasinetdserverforvirtualhosts"><a id="Documentation/git-daemon.txt-gitdaemonasinetdserverforvirtualhosts" class="anchor" href="#Documentation/git-daemon.txt-gitdaemonasinetdserverforvirtualhosts"></a><em>git daemon</em> as inetd server for virtual hosts </dt>
 <dd>
 <p>To set up <em>git daemon</em> as an inetd service that handles
-repositories for different virtual hosts, <code>www.example.com</code>
-and <code>www.example.org</code>, place an entry like the following into
-<code>/etc/inetd</code> all on one line:</p>
+repositories for different virtual hosts, <span class='synopsis'><code>www.example.com</code></span>
+and <span class='synopsis'><code>www.example.org</code></span>, place an entry like the following into
+<span class='synopsis'><code>/etc/inetd</code></span> all on one line:</p>
 <div class="listingblock">
 <div class="content">
 <pre>	git stream tcp nowait nobody /usr/bin/git
@@ -350,11 +350,11 @@ and <code>www.example.org</code>, place an entry like the following into
 </div>
 </div>
 <div class="paragraph">
-<p>In this example, the root-level directory <code>/pub</code> will contain
+<p>In this example, the root-level directory <span class='synopsis'><code>/pub</code></span> will contain
 a subdirectory for each virtual host name supported.
 Further, both hosts advertise repositories simply as
-<code>git://www.example.com/software/repo.git</code>.  For pre-1.4.0
-clients, a symlink from <code>/software</code> into the appropriate
+<span class='synopsis'><code>git://www.example.com/software/repo.git</code></span>.  For pre-1.4.0
+clients, a symlink from <span class='synopsis'><code>/software</code></span> into the appropriate
 default repository could be made as well.</p>
 </div>
 </dd>
@@ -372,7 +372,7 @@ their IP addresses, start the daemon like this:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>In this example, the root-level directory <code>/pub</code> will contain
+<p>In this example, the root-level directory <span class='synopsis'><code>/pub</code></span> will contain
 a subdirectory for each virtual host IP address supported.
 Repositories can still be accessed by hostname though, assuming
 they correspond to these IP addresses.</p>

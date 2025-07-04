@@ -117,7 +117,7 @@ protocol), while in others it indicates the end of input.</p>
 <div class="paragraph">
 <p>Each remote helper is expected to support only a subset of commands.
 The operations a helper supports are declared to Git in the response
-to the <code>capabilities</code> command (see COMMANDS, below).</p>
+to the <span class='synopsis'><code>capabilities</code></span> command (see COMMANDS, below).</p>
 </div>
 <div class="paragraph">
 <p>In the following, we list all defined capabilities and for
@@ -225,8 +225,8 @@ Other frontends may have some other order of preference.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitremote-helpers.txt-emoptionem"><a id="Documentation/gitremote-helpers.txt-option" class="anchor" href="#Documentation/gitremote-helpers.txt-option"></a><em>option</em> </dt>
 <dd>
-<p>For specifying settings like <code>verbosity</code> (how much output to
-write to stderr) and <code>depth</code> (how much history is wanted in the
+<p>For specifying settings like <span class='synopsis'><code>verbosity</code></span> (how much output to
+write to stderr) and <span class='synopsis'><code>depth</code></span> (how much history is wanted in the
 case of a shallow clone) that affect how other commands are
 carried out.</p>
 </dd>
@@ -239,9 +239,9 @@ It is recommended that all importers providing the <em>import</em>
 capability use this. It&#8217;s mandatory for <em>export</em>.</p>
 <div class="paragraph">
 <p>A helper advertising the capability
-<code>refspec refs/heads/*:refs/svn/origin/branches/*</code>
-is saying that, when it is asked to <code>import refs/heads/topic</code>, the
-stream it outputs will update the <code>refs/svn/origin/branches/topic</code>
+<span class='synopsis'><code>refspec</code> <code>refs/heads/*:refs/svn/origin/branches/*</code></span>
+is saying that, when it is asked to <span class='synopsis'><code>import</code> <code>refs/heads/topic</code></span>, the
+stream it outputs will update the <span class='synopsis'><code>refs/svn/origin/branches/topic</code></span>
 ref.</p>
 </div>
 <div class="paragraph">
@@ -249,7 +249,7 @@ ref.</p>
 applicable refspec takes precedence.  The left-hand of refspecs
 advertised with this capability must cover all refs reported by
 the list command.  If no <em>refspec</em> capability is advertised,
-there is an implied <code>refspec *:*</code>.</p>
+there is an implied <span class='synopsis'><code>refspec</code> <code>*:*</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>When writing remote-helpers for decentralized version control

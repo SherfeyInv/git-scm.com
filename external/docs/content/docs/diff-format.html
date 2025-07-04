@@ -15,8 +15,8 @@ aliases:
 <h2 id="_raw_output_format"><a class="anchor" href="#_raw_output_format"></a>Raw output format</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The raw output format from <code>git-diff-index</code>, <code>git-diff-tree</code>,
-<code>git-diff-files</code> and <code>git diff --raw</code> are very similar.</p>
+<p>The raw output format from <span class='synopsis'><code>git-diff-index</code></span>, <span class='synopsis'><code>git-diff-tree</code></span>,
+<span class='synopsis'><code>git-diff-files</code></span> and <span class='synopsis'><code>git</code> <code>diff</code> <code>--raw</code></span> are very similar.</p>
 </div>
 <div class="paragraph">
 <p>These commands all compare two sets of things; what is
@@ -24,26 +24,26 @@ compared differs:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/diff-format.txt-codegit-diff-indexlttree-ishgtcode"><a id="Documentation/diff-format.txt-git-diff-indextree-ish" class="anchor" href="#Documentation/diff-format.txt-git-diff-indextree-ish"></a><code>git-diff-index &lt;tree-ish&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-format.txt-spanclasssynopsiscodegit-diff-indexcodeemlttree-ishgtemspan"><a id="Documentation/diff-format.txt-git-diff-indextree-ish" class="anchor" href="#Documentation/diff-format.txt-git-diff-indextree-ish"></a><span class='synopsis'><code>git-diff-index</code> <em>&lt;tree-ish&gt;</em></span> </dt>
 <dd>
 <p>compares the <em>&lt;tree-ish&gt;</em> and the files on the filesystem.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-format.txt-codegit-diff-index--cachedlttree-ishgtcode"><a id="Documentation/diff-format.txt-git-diff-index--cachedtree-ish" class="anchor" href="#Documentation/diff-format.txt-git-diff-index--cachedtree-ish"></a><code>git-diff-index --cached &lt;tree-ish&gt;</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-format.txt-spanclasssynopsiscodegit-diff-indexcodecode--cachedcodeemlttree-ishgtemspan"><a id="Documentation/diff-format.txt-git-diff-index--cachedtree-ish" class="anchor" href="#Documentation/diff-format.txt-git-diff-index--cachedtree-ish"></a><span class='synopsis'><code>git-diff-index</code> <code>--cached</code> <em>&lt;tree-ish&gt;</em></span> </dt>
 <dd>
 <p>compares the <em>&lt;tree-ish&gt;</em> and the index.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-format.txt-codegit-diff-tree-rlttree-ish-1gtlttree-ish-2gtltpatterngtcode"><a id="Documentation/diff-format.txt-git-diff-tree-rtree-ish-1tree-ish-2pattern" class="anchor" href="#Documentation/diff-format.txt-git-diff-tree-rtree-ish-1tree-ish-2pattern"></a><code>git-diff-tree [-r] &lt;tree-ish-1&gt; &lt;tree-ish-2&gt; [&lt;pattern&gt;...]</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-format.txt-spanclasssynopsiscodegit-diff-treecodecode-rcodeemlttree-ish-1gtememlttree-ish-2gtememltpatterngtemspan"><a id="Documentation/diff-format.txt-git-diff-tree-rtree-ish-1tree-ish-2pattern" class="anchor" href="#Documentation/diff-format.txt-git-diff-tree-rtree-ish-1tree-ish-2pattern"></a><span class='synopsis'><code>git-diff-tree</code> [<code>-r</code>] <em>&lt;tree-ish-1&gt;</em> <em>&lt;tree-ish-2&gt;</em> [<em>&lt;pattern&gt;</em>...]</span> </dt>
 <dd>
 <p>compares the trees named by the two arguments.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/diff-format.txt-codegit-diff-filesltpatterngtcode"><a id="Documentation/diff-format.txt-git-diff-filespattern" class="anchor" href="#Documentation/diff-format.txt-git-diff-filespattern"></a><code>git-diff-files [&lt;pattern&gt;...]</code> </dt>
+<dt class="hdlist1" id="Documentation/diff-format.txt-spanclasssynopsiscodegit-diff-filescodeemltpatterngtemspan"><a id="Documentation/diff-format.txt-git-diff-filespattern" class="anchor" href="#Documentation/diff-format.txt-git-diff-filespattern"></a><span class='synopsis'><code>git-diff-files</code> [<em>&lt;pattern&gt;</em>...]</span> </dt>
 <dd>
 <p>compares the index and the files on the filesystem.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>The <code>git-diff-tree</code> command begins its output by printing the hash of
+<p>The <span class='synopsis'><code>git-diff-tree</code></span> command begins its output by printing the hash of
 what is being compared. After that, all the commands print one output
 line per changed file.</p>
 </div>
@@ -96,19 +96,19 @@ unmerged       :000000 000000 0000000 0000000 U file6</pre>
 <p>status, followed by optional "score" number.</p>
 </li>
 <li>
-<p>a tab or a NUL when <code>-z</code> option is used.</p>
+<p>a tab or a NUL when <span class='synopsis'><code>-z</code></span> option is used.</p>
 </li>
 <li>
 <p>path for "src"</p>
 </li>
 <li>
-<p>a tab or a NUL when <code>-z</code> option is used; only exists for C or R.</p>
+<p>a tab or a NUL when <span class='synopsis'><code>-z</code></span> option is used; only exists for C or R.</p>
 </li>
 <li>
 <p>path for "dst"; only exists for C or R.</p>
 </li>
 <li>
-<p>an LF or a NUL when <code>-z</code> option is used, to terminate the record.</p>
+<p>an LF or a NUL when <span class='synopsis'><code>-z</code></span> option is used, to terminate the record.</p>
 </li>
 </ol>
 </div>
@@ -118,36 +118,36 @@ unmerged       :000000 000000 0000000 0000000 U file6</pre>
 <div class="ulist">
 <ul>
 <li>
-<p><code>A</code>: addition of a file</p>
+<p><span class='synopsis'><code>A</code></span>: addition of a file</p>
 </li>
 <li>
-<p><code>C</code>: copy of a file into a new one</p>
+<p><span class='synopsis'><code>C</code></span>: copy of a file into a new one</p>
 </li>
 <li>
-<p><code>D</code>: deletion of a file</p>
+<p><span class='synopsis'><code>D</code></span>: deletion of a file</p>
 </li>
 <li>
-<p><code>M</code>: modification of the contents or mode of a file</p>
+<p><span class='synopsis'><code>M</code></span>: modification of the contents or mode of a file</p>
 </li>
 <li>
-<p><code>R</code>: renaming of a file</p>
+<p><span class='synopsis'><code>R</code></span>: renaming of a file</p>
 </li>
 <li>
-<p><code>T</code>: change in the type of the file (regular file, symbolic link or submodule)</p>
+<p><span class='synopsis'><code>T</code></span>: change in the type of the file (regular file, symbolic link or submodule)</p>
 </li>
 <li>
-<p><code>U</code>: file is unmerged (you must complete the merge before it can
+<p><span class='synopsis'><code>U</code></span>: file is unmerged (you must complete the merge before it can
 be committed)</p>
 </li>
 <li>
-<p><code>X</code>: "unknown" change type (most probably a bug, please report it)</p>
+<p><span class='synopsis'><code>X</code></span>: "unknown" change type (most probably a bug, please report it)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Status letters <code>C</code> and <code>R</code> are always followed by a score (denoting the
+<p>Status letters <span class='synopsis'><code>C</code></span> and <span class='synopsis'><code>R</code></span> are always followed by a score (denoting the
 percentage of similarity between the source and target of the move or
-copy).  Status letter <code>M</code> may be followed by a score (denoting the
+copy).  Status letter <span class='synopsis'><code>M</code></span> may be followed by a score (denoting the
 percentage of dissimilarity) for file rewrites.</p>
 </div>
 <div class="paragraph">
@@ -163,9 +163,9 @@ is out of sync with the index.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Without the <code>-z</code> option, pathnames with "unusual" characters are
-quoted as explained for the configuration variable <code>core.quotePath</code>
-(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  Using <code>-z</code> the filename is output
+<p>Without the <span class='synopsis'><code>-z</code></span> option, pathnames with "unusual" characters are
+quoted as explained for the configuration variable <span class='synopsis'><code>core.quotePath</code></span>
+(see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  Using <span class='synopsis'><code>-z</code></span> the filename is output
 verbatim and the line is terminated by a NUL byte.</p>
 </div>
 </div>
@@ -174,8 +174,8 @@ verbatim and the line is terminated by a NUL byte.</p>
 <h2 id="_diff_format_for_merges"><a class="anchor" href="#_diff_format_for_merges"></a>diff format for merges</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><code>git-diff-tree</code>, <code>git-diff-files</code> and <code>git-diff --raw</code>
-can take <code>-c</code> or <code>--cc</code> option
+<p><span class='synopsis'><code>git-diff-tree</code></span>, <span class='synopsis'><code>git-diff-files</code></span> and <span class='synopsis'><code>git-diff</code> <code>--raw</code></span>
+can take <span class='synopsis'><code>-c</code></span> or <span class='synopsis'><code>--cc</code></span> option
 to generate diff output also for merge commits.  The output differs
 from the format described above in the following way:</p>
 </div>
@@ -199,13 +199,13 @@ from the format described above in the following way:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>For <code>-c</code> and <code>--cc</code>, only the destination or final path is shown even
+<p>For <span class='synopsis'><code>-c</code></span> and <span class='synopsis'><code>--cc</code></span>, only the destination or final path is shown even
 if the file was renamed on any side of history.  With
-<code>--combined-all-paths</code>, the name of the path in each parent is shown
+<span class='synopsis'><code>--combined-all-paths</code></span>, the name of the path in each parent is shown
 followed by the name of the path in the merge commit.</p>
 </div>
 <div class="paragraph">
-<p>Examples for <code>-c</code> and <code>--cc</code> without <code>--combined-all-paths</code>:</p>
+<p>Examples for <span class='synopsis'><code>-c</code></span> and <span class='synopsis'><code>--cc</code></span> without <span class='synopsis'><code>--combined-all-paths</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -215,7 +215,7 @@ followed by the name of the path in the merge commit.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples when <code>--combined-all-paths</code> added to either <code>-c</code> or <code>--cc</code>:</p>
+<p>Examples when <span class='synopsis'><code>--combined-all-paths</code></span> added to either <span class='synopsis'><code>-c</code></span> or <span class='synopsis'><code>--cc</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -241,13 +241,13 @@ all parents.</p>
 <a href='{{< relurl "docs/git-diff-index" >}}'>git-diff-index[1]</a>,
 <a href='{{< relurl "docs/git-diff-tree" >}}'>git-diff-tree[1]</a>, or
 <a href='{{< relurl "docs/git-diff-files" >}}'>git-diff-files[1]</a>
-with the <code>-p</code> option produces patch text.
+with the <span class='synopsis'><code>-p</code></span> option produces patch text.
 You can customize the creation of patch text via the
-<code>GIT_EXTERNAL_DIFF</code> and the <code>GIT_DIFF_OPTS</code> environment variables
-(see <a href='{{< relurl "docs/git" >}}'>git[1]</a>), and the <code>diff</code> attribute (see <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>).</p>
+<span class='synopsis'><code>GIT_EXTERNAL_DIFF</code></span> and the <span class='synopsis'><code>GIT_DIFF_OPTS</code></span> environment variables
+(see <a href='{{< relurl "docs/git" >}}'>git[1]</a>), and the <span class='synopsis'><code>diff</code></span> attribute (see <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a>).</p>
 </div>
 <div class="paragraph">
-<p>What the <code>-p</code> option produces is slightly different from the traditional
+<p>What the <span class='synopsis'><code>-p</code></span> option produces is slightly different from the traditional
 diff format:</p>
 </div>
 <div class="olist arabic">
@@ -260,37 +260,37 @@ diff format:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>a/</code> and <code>b/</code> filenames are the same unless rename/copy is
+<p>The <span class='synopsis'><code>a/</code></span> and <span class='synopsis'><code>b/</code></span> filenames are the same unless rename/copy is
 involved.  Especially, even for a creation or a deletion,
-<code>/dev/null</code> is <em>not</em> used in place of the <code>a/</code> or <code>b/</code> filenames.</p>
+<span class='synopsis'><code>/dev/null</code></span> is <em>not</em> used in place of the <span class='synopsis'><code>a/</code></span> or <span class='synopsis'><code>b/</code></span> filenames.</p>
 </div>
 <div class="paragraph">
-<p>When a rename/copy is involved, <code>file1</code> and <code>file2</code> show the
+<p>When a rename/copy is involved, <span class='synopsis'><code>file1</code></span> and <span class='synopsis'><code>file2</code></span> show the
 name of the source file of the rename/copy and the name of
 the file that the rename/copy produces, respectively.</p>
 </div>
 </li>
 <li>
 <p>It is followed by one or more extended header lines:</p>
-<div class="paragraph">
-<p>old mode &lt;mode&gt;
-new mode &lt;mode&gt;
-deleted file mode &lt;mode&gt;
-new file mode &lt;mode&gt;
-copy from &lt;path&gt;
-copy to &lt;path&gt;
-rename from &lt;path&gt;
-rename to &lt;path&gt;
-similarity index &lt;number&gt;
-dissimilarity index &lt;number&gt;
-index &lt;hash&gt;..&lt;hash&gt; &lt;mode&gt;</p>
+<div class="verseblock">
+<pre class="content"><span class='synopsis'><code>old</code></span> <span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em>
+<span class='synopsis'><code>new</code></span> <span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em>
+<span class='synopsis'><code>deleted</code></span> <span class='synopsis'><code>file</code></span> <span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em>
+<span class='synopsis'><code>new</code></span> <span class='synopsis'><code>file</code></span> <span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em>
+<span class='synopsis'><code>copy</code></span> <span class='synopsis'><code>from</code></span> <em>&lt;path&gt;</em>
+<span class='synopsis'><code>copy</code></span> <span class='synopsis'><code>to</code></span> <em>&lt;path&gt;</em>
+<span class='synopsis'><code>rename</code></span> <span class='synopsis'><code>from</code></span> <em>&lt;path&gt;</em>
+<span class='synopsis'><code>rename</code></span> <span class='synopsis'><code>to</code></span> <em>&lt;path&gt;</em>
+<span class='synopsis'><code>similarity</code></span> <span class='synopsis'><code>index</code></span> <em>&lt;number&gt;</em>
+<span class='synopsis'><code>dissimilarity</code></span> <span class='synopsis'><code>index</code></span> <em>&lt;number&gt;</em>
+<span class='synopsis'><code>index</code></span> <em>&lt;hash&gt;</em><span class='synopsis'><code>..</code></span><em>&lt;hash&gt;</em> <em>&lt;mode&gt;</em></pre>
 </div>
 <div class="paragraph">
 <p>File modes <em>&lt;mode&gt;</em> are printed as 6-digit octal numbers including the file type
 and file permission bits.</p>
 </div>
 <div class="paragraph">
-<p>Path names in extended headers do not include the <code>a/</code> and <code>b/</code> prefixes.</p>
+<p>Path names in extended headers do not include the <span class='synopsis'><code>a/</code></span> and <span class='synopsis'><code>b/</code></span> prefixes.</p>
 </div>
 <div class="paragraph">
 <p>The similarity index is the percentage of unchanged lines, and
@@ -308,12 +308,12 @@ separate lines indicate the old and the new mode.</p>
 </li>
 <li>
 <p>Pathnames with "unusual" characters are quoted as explained for
-the configuration variable <code>core.quotePath</code> (see
+the configuration variable <span class='synopsis'><code>core.quotePath</code></span> (see
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </li>
 <li>
-<p>All the <code>file1</code> files in the output refer to files before the
-commit, and all the <code>file2</code> files refer to files after the commit.
+<p>All the <span class='synopsis'><code>file1</code></span> files in the output refer to files before the
+commit, and all the <span class='synopsis'><code>file2</code></span> files refer to files after the commit.
 It is incorrect to apply each change to each file sequentially.  For
 example, this patch will swap a and b:</p>
 <div class="literalblock">
@@ -341,11 +341,11 @@ specific languages.</p>
 <h2 id="_combined_diff_format"><a class="anchor" href="#_combined_diff_format"></a>Combined diff format</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Any diff-generating command can take the <code>-c</code> or <code>--cc</code> option to
+<p>Any diff-generating command can take the <span class='synopsis'><code>-c</code></span> or <span class='synopsis'><code>--cc</code></span> option to
 produce a <em>combined diff</em> when showing a merge. This is the default
 format when showing merges with <a href='{{< relurl "docs/git-diff" >}}'>git-diff[1]</a> or
 <a href='{{< relurl "docs/git-show" >}}'>git-show[1]</a>. Note also that you can give suitable
-<code>--diff-merges</code> option to any of these commands to force generation of
+<span class='synopsis'><code>--diff-merges</code></span> option to any of these commands to force generation of
 diffs in a specific format.</p>
 </div>
 <div class="paragraph">
@@ -386,14 +386,14 @@ index fabadb8,cc95eb0..4866510
 <ol class="arabic">
 <li>
 <p>It is preceded by a "git diff" header, that looks like
-this (when the <code>-c</code> option is used):</p>
+this (when the <span class='synopsis'><code>-c</code></span> option is used):</p>
 <div class="literalblock">
 <div class="content">
 <pre>diff --combined file</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>or like this (when the <code>--cc</code> option is used):</p>
+<p>or like this (when the <span class='synopsis'><code>--cc</code></span> option is used):</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -404,14 +404,14 @@ this (when the <code>-c</code> option is used):</p>
 <li>
 <p>It is followed by one or more extended header lines
 (this example shows a merge with two parents):</p>
-<div class="paragraph">
-<p>index &lt;hash&gt;,&lt;hash&gt;..&lt;hash&gt;
-mode &lt;mode&gt;,&lt;mode&gt;<code>..</code>&lt;mode&gt;
-new file mode &lt;mode&gt;
-deleted file mode &lt;mode&gt;,&lt;mode&gt;</p>
+<div class="verseblock">
+<pre class="content"><span class='synopsis'><code>index</code></span> <em>&lt;hash&gt;</em><span class='synopsis'><code>,</code></span><em>&lt;hash&gt;</em><span class='synopsis'><code>..</code></span><em>&lt;hash&gt;</em>
+<span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em><span class='synopsis'><code>,</code></span><em>&lt;mode&gt;</em><span class='synopsis'><code>..</code></span><em>&lt;mode&gt;</em>
+<span class='synopsis'><code>new</code></span> <span class='synopsis'><code>file</code></span> <span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em>
+<span class='synopsis'><code>deleted</code></span> <span class='synopsis'><code>file</code></span> <span class='synopsis'><code>mode</code></span> <em>&lt;mode&gt;</em><span class='synopsis'><code>,</code></span><em>&lt;mode&gt;</em></pre>
 </div>
 <div class="paragraph">
-<p>The <code>mode &lt;mode&gt;,&lt;mode&gt;..&lt;mode&gt;</code> line appears only if at least one of
+<p>The <span class='synopsis'><code>mode</code> <em>&lt;mode&gt;</em><code>,</code><em>&lt;mode&gt;</em><code>..</code><em>&lt;mode&gt;</em></span> line appears only if at least one of
 the &lt;mode&gt; is different from the rest. Extended headers with
 information about detected content movement (renames and
 copying detection) are designed to work with the diff of two
@@ -428,7 +428,7 @@ copying detection) are designed to work with the diff of two
 </div>
 <div class="paragraph">
 <p>Similar to the two-line header for the traditional <em>unified</em> diff
-format, <code>/dev/null</code> is used to signal created or deleted
+format, <span class='synopsis'><code>/dev/null</code></span> is used to signal created or deleted
 files.</p>
 </div>
 <div class="paragraph">
@@ -452,7 +452,7 @@ parents.</p>
 </li>
 <li>
 <p>Chunk header format is modified to prevent people from
-accidentally feeding it to <code>patch -p1</code>. Combined diff format
+accidentally feeding it to <span class='synopsis'><code>patch</code> <code>-p1</code></span>. Combined diff format
 was created for review of merge commit changes, and was not
 meant to be applied. The change is similar to the change in the
 extended <em>index</em> header:</p>
@@ -462,7 +462,7 @@ extended <em>index</em> header:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>There are (number of parents + 1) <code>@</code> characters in the chunk
+<p>There are (number of parents + 1) <span class='synopsis'><code>@</code></span> characters in the chunk
 header for combined diff format.</p>
 </div>
 </li>
@@ -470,31 +470,31 @@ header for combined diff format.</p>
 </div>
 <div class="paragraph">
 <p>Unlike the traditional <em>unified</em> diff format, which shows two
-files A and B with a single column that has <code>-</code> (minus&#8201;&#8212;&#8201;appears in A but removed in B), <code>+</code> (plus&#8201;&#8212;&#8201;missing in A but
-added to B), or <code>" "</code> (space&#8201;&#8212;&#8201;unchanged) prefix, this format
+files A and B with a single column that has <span class='synopsis'><code>-</code></span> (minus&#8201;&#8212;&#8201;appears in A but removed in B), <span class='synopsis'><code>+</code></span> (plus&#8201;&#8212;&#8201;missing in A but
+added to B), or <span class='synopsis'><code>"</code> <code>"</code></span> (space&#8201;&#8212;&#8201;unchanged) prefix, this format
 compares two or more files file1, file2,&#8230;&#8203; with one file X, and
 shows how X differs from each of fileN.  One column for each of
 fileN is prepended to the output line to note how X&#8217;s line is
 different from it.</p>
 </div>
 <div class="paragraph">
-<p>A <code>-</code> character in the column N means that the line appears in
-fileN but it does not appear in the result.  A <code>+</code> character
+<p>A <span class='synopsis'><code>-</code></span> character in the column N means that the line appears in
+fileN but it does not appear in the result.  A <span class='synopsis'><code>+</code></span> character
 in the column N means that the line appears in the result,
 and fileN does not have that line (in other words, the line was
 added, from the point of view of that parent).</p>
 </div>
 <div class="paragraph">
 <p>In the above example output, the function signature was changed
-from both files (hence two <code>-</code> removals from both file1 and
-file2, plus <code>++</code> to mean one line that was added does not appear
+from both files (hence two <span class='synopsis'><code>-</code></span> removals from both file1 and
+file2, plus <span class='synopsis'><code>++</code></span> to mean one line that was added does not appear
 in either file1 or file2).  Also, eight other lines are the same
-from file1 but do not appear in file2 (hence prefixed with <code>+</code>).</p>
+from file1 but do not appear in file2 (hence prefixed with <span class='synopsis'><code>+</code></span>).</p>
 </div>
 <div class="paragraph">
-<p>When shown by <code>git diff-tree -c</code>, it compares the parents of a
+<p>When shown by <span class='synopsis'><code>git</code> <code>diff-tree</code> <code>-c</code></span>, it compares the parents of a
 merge commit with the merge result (i.e. file1..fileN are the
-parents).  When shown by <code>git diff-files -c</code>, it compares the
+parents).  When shown by <span class='synopsis'><code>git</code> <code>diff-files</code> <code>-c</code></span>, it compares the
 two unresolved merge parents with the working tree file
 (i.e. file1 is stage 2 aka "our version", file2 is stage 3 aka
 "their version").</p>
@@ -505,16 +505,16 @@ two unresolved merge parents with the working tree file
 <h2 id="_other_diff_formats"><a class="anchor" href="#_other_diff_formats"></a>other diff formats</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <code>--summary</code> option describes newly added, deleted, renamed and
-copied files.  The <code>--stat</code> option adds <code>diffstat</code>(1) graph to the
+<p>The <span class='synopsis'><code>--summary</code></span> option describes newly added, deleted, renamed and
+copied files.  The <span class='synopsis'><code>--stat</code></span> option adds <span class='synopsis'><code>diffstat</code></span>(1) graph to the
 output.  These options can be combined with other options, such as
-<code>-p</code>, and are meant for human consumption.</p>
+<span class='synopsis'><code>-p</code></span>, and are meant for human consumption.</p>
 </div>
 <div class="paragraph">
-<p>When showing a change that involves a rename or a copy, <code>--stat</code> output
+<p>When showing a change that involves a rename or a copy, <span class='synopsis'><code>--stat</code></span> output
 formats the pathnames compactly by combining common prefix and suffix of
-the pathnames.  For example, a change that moves <code>arch/i386/Makefile</code> to
-<code>arch/x86/Makefile</code> while modifying 4 lines will be shown like this:</p>
+the pathnames.  For example, a change that moves <span class='synopsis'><code>arch/i386/Makefile</code></span> to
+<span class='synopsis'><code>arch/x86/Makefile</code></span> while modifying 4 lines will be shown like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -522,8 +522,8 @@ the pathnames.  For example, a change that moves <code>arch/i386/Makefile</code>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>--numstat</code> option gives the diffstat(1) information but is designed
-for easier machine consumption.  An entry in <code>--numstat</code> output looks
+<p>The <span class='synopsis'><code>--numstat</code></span> option gives the diffstat(1) information but is designed
+for easier machine consumption.  An entry in <span class='synopsis'><code>--numstat</code></span> output looks
 like this:</p>
 </div>
 <div class="listingblock">
@@ -558,7 +558,7 @@ like this:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>When <code>-z</code> output option is in effect, the output is formatted this way:</p>
+<p>When <span class='synopsis'><code>-z</code></span> output option is in effect, the output is formatted this way:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -601,11 +601,11 @@ like this:</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>The extra <code>NUL</code> before the preimage path in renamed case is to allow
+<p>The extra <span class='synopsis'><code>NUL</code></span> before the preimage path in renamed case is to allow
 scripts that read the output to tell if the current record being read is
 a single-path record or a rename/copy record without reading ahead.
-After reading added and deleted lines, reading up to <code>NUL</code> would yield
-the pathname, but if that is <code>NUL</code>, the record will show two paths.</p>
+After reading added and deleted lines, reading up to <span class='synopsis'><code>NUL</code></span> would yield
+the pathname, but if that is <span class='synopsis'><code>NUL</code></span>, the record will show two paths.</p>
 </div>
 </div>
 </div>

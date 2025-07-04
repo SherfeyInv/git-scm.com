@@ -37,11 +37,11 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A <code>gitattributes</code> file is a simple text file that gives
-<code>attributes</code> to pathnames.</p>
+<p>A <span class='synopsis'><code>gitattributes</code></span> file is a simple text file that gives
+<span class='synopsis'><code>attributes</code></span> to pathnames.</p>
 </div>
 <div class="paragraph">
-<p>Each line in <code>gitattributes</code> file is of form:</p>
+<p>Each line in <span class='synopsis'><code>gitattributes</code></span> file is of form:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -71,13 +71,13 @@ attribute in the attribute list.</p>
 <dd>
 <p>The path has the attribute with special value "false";
 this is specified by listing the name of the attribute
-prefixed with a dash <code>-</code> in the attribute list.</p>
+prefixed with a dash <span class='synopsis'><code>-</code></span> in the attribute list.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Settoavalue"><a class="anchor" href="#Documentation/gitattributes.txt-Settoavalue"></a>Set to a value </dt>
 <dd>
 <p>The path has the attribute with specified string value;
 this is specified by listing the name of the attribute
-followed by an equal sign <code>=</code> and its value in the
+followed by an equal sign <span class='synopsis'><code>=</code></span> and its value in the
 attribute list.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified"></a>Unspecified </dt>
@@ -95,7 +95,7 @@ attribute.</p>
 </div>
 <div class="paragraph">
 <p>The rules by which the pattern matches paths are the same as in
-<code>.gitignore</code> files (see <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a>), with a few exceptions:</p>
+<span class='synopsis'><code>.gitignore</code></span> files (see <a href='{{< relurl "docs/gitignore" >}}'>gitignore[5]</a>), with a few exceptions:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -104,46 +104,46 @@ attribute.</p>
 </li>
 <li>
 <p>patterns that match a directory do not recursively match paths
-inside that directory (so using the trailing-slash <code>path/</code> syntax is
-pointless in an attributes file; use <code>path/**</code> instead)</p>
+inside that directory (so using the trailing-slash <span class='synopsis'><code>path/</code></span> syntax is
+pointless in an attributes file; use <span class='synopsis'><code>path/**</code></span> instead)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>When deciding what attributes are assigned to a path, Git
-consults <code>$GIT_DIR/info/attributes</code> file (which has the highest
-precedence), <code>.gitattributes</code> file in the same directory as the
+consults <span class='synopsis'><code>$GIT_DIR/info/attributes</code></span> file (which has the highest
+precedence), <span class='synopsis'><code>.gitattributes</code></span> file in the same directory as the
 path in question, and its parent directories up to the toplevel of the
-work tree (the further the directory that contains <code>.gitattributes</code>
+work tree (the further the directory that contains <span class='synopsis'><code>.gitattributes</code></span>
 is from the path in question, the lower its precedence). Finally
 global and system-wide files are considered (they have the lowest
 precedence).</p>
 </div>
 <div class="paragraph">
-<p>When the <code>.gitattributes</code> file is missing from the work tree, the
+<p>When the <span class='synopsis'><code>.gitattributes</code></span> file is missing from the work tree, the
 path in the index is used as a fall-back.  During checkout process,
-<code>.gitattributes</code> in the index is used and then the file in the
+<span class='synopsis'><code>.gitattributes</code></span> in the index is used and then the file in the
 working tree is used as a fall-back.</p>
 </div>
 <div class="paragraph">
 <p>If you wish to affect only a single repository (i.e., to assign
 attributes to files that are particular to
 one user&#8217;s workflow for that repository), then
-attributes should be placed in the <code>$GIT_DIR/info/attributes</code> file.
+attributes should be placed in the <span class='synopsis'><code>$GIT_DIR/info/attributes</code></span> file.
 Attributes which should be version-controlled and distributed to other
 repositories (i.e., attributes of interest to all users) should go into
-<code>.gitattributes</code> files. Attributes that should affect all repositories
+<span class='synopsis'><code>.gitattributes</code></span> files. Attributes that should affect all repositories
 for a single user should be placed in a file specified by the
-<code>core.attributesFile</code> configuration option (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).
+<span class='synopsis'><code>core.attributesFile</code></span> configuration option (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).
 Its default value is $XDG_CONFIG_HOME/git/attributes. If $XDG_CONFIG_HOME
 is either not set or empty, $HOME/.config/git/attributes is used instead.
 Attributes for all users on a system should be placed in the
-<code>$(prefix)/etc/gitattributes</code> file.</p>
+<span class='synopsis'><code>$</code>(<code>prefix</code>)<code>/etc/gitattributes</code></span> file.</p>
 </div>
 <div class="paragraph">
 <p>Sometimes you would need to override a setting of an attribute
-for a path to <code>Unspecified</code> state.  This can be done by listing
-the name of the attribute prefixed with an exclamation point <code>!</code>.</p>
+for a path to <span class='synopsis'><code>Unspecified</code></span> state.  This can be done by listing
+the name of the attribute prefixed with an exclamation point <span class='synopsis'><code>!</code></span>.</p>
 </div>
 </div>
 </div>
@@ -166,56 +166,56 @@ Git stores the contents you prepare in the working tree in the
 repository upon <em>git add</em> and <em>git commit</em>.</p>
 </div>
 <div class="sect3">
-<h4 id="_text"><a class="anchor" href="#_text"></a><code>text</code></h4>
+<h4 id="_text"><a class="anchor" href="#_text"></a><span class='synopsis'><code>text</code></span></h4>
 <div class="paragraph">
 <p>This attribute enables and controls end-of-line normalization.  When a
 text file is normalized, its line endings are converted to LF in the
 repository.  To control what line ending style is used in the working
-directory, use the <code>eol</code> attribute for a single file and the
-<code>core.eol</code> configuration variable for all text files.
-Note that setting <code>core.autocrlf</code> to <code>true</code> or <code>input</code> overrides
-<code>core.eol</code> (see the definitions of those options in
+directory, use the <span class='synopsis'><code>eol</code></span> attribute for a single file and the
+<span class='synopsis'><code>core.eol</code></span> configuration variable for all text files.
+Note that setting <span class='synopsis'><code>core.autocrlf</code></span> to <span class='synopsis'><code>true</code></span> or <span class='synopsis'><code>input</code></span> overrides
+<span class='synopsis'><code>core.eol</code></span> (see the definitions of those options in
 <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1"></a>Set </dt>
 <dd>
-<p>Setting the <code>text</code> attribute on a path enables end-of-line
+<p>Setting the <span class='synopsis'><code>text</code></span> attribute on a path enables end-of-line
 normalization and marks the path as a text file.  End-of-line
 conversion takes place without guessing the content type.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1"></a>Unset </dt>
 <dd>
-<p>Unsetting the <code>text</code> attribute on a path tells Git not to
+<p>Unsetting the <span class='synopsis'><code>text</code></span> attribute on a path tells Git not to
 attempt any end-of-line conversion upon checkin or checkout.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Settostringvalueauto"><a class="anchor" href="#Documentation/gitattributes.txt-Settostringvalueauto"></a>Set to string value "auto" </dt>
 <dd>
-<p>When <code>text</code> is set to "auto", the path is marked for automatic
+<p>When <span class='synopsis'><code>text</code></span> is set to "auto", the path is marked for automatic
 end-of-line conversion.  If Git decides that the content is
 text, its line endings are converted to LF on checkin.
 When the file has been committed with CRLF, no conversion is done.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1"></a>Unspecified </dt>
 <dd>
-<p>If the <code>text</code> attribute is unspecified, Git uses the
-<code>core.autocrlf</code> configuration variable to determine if the
+<p>If the <span class='synopsis'><code>text</code></span> attribute is unspecified, Git uses the
+<span class='synopsis'><code>core.autocrlf</code></span> configuration variable to determine if the
 file should be converted.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>Any other value causes Git to act as if <code>text</code> has been left
+<p>Any other value causes Git to act as if <span class='synopsis'><code>text</code></span> has been left
 unspecified.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_eol"><a class="anchor" href="#_eol"></a><code>eol</code></h4>
+<h4 id="_eol"><a class="anchor" href="#_eol"></a><span class='synopsis'><code>eol</code></span></h4>
 <div class="paragraph">
 <p>This attribute sets a specific line-ending style to be used in the
 working directory.  It enables end-of-line conversion without any
-content checks, effectively setting the <code>text</code> attribute.  Note that
+content checks, effectively setting the <span class='synopsis'><code>text</code></span> attribute.  Note that
 setting this attribute on paths which are in the index with CRLF line
 endings may make the paths to be considered dirty.  Adding the path to
 the index again will normalize the line endings in the index.</p>
@@ -238,9 +238,9 @@ checked out.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_backwards_compatibility_with_crlf_attribute"><a class="anchor" href="#_backwards_compatibility_with_crlf_attribute"></a>Backwards compatibility with <code>crlf</code> attribute</h4>
+<h4 id="_backwards_compatibility_with_crlf_attribute"><a class="anchor" href="#_backwards_compatibility_with_crlf_attribute"></a>Backwards compatibility with <span class='synopsis'><code>crlf</code></span> attribute</h4>
 <div class="paragraph">
-<p>For backwards compatibility, the <code>crlf</code> attribute is interpreted as
+<p>For backwards compatibility, the <span class='synopsis'><code>crlf</code></span> attribute is interpreted as
 follows:</p>
 </div>
 <div class="listingblock">
@@ -278,7 +278,7 @@ already normalized in the repository stay normalized.</p>
 <div class="paragraph">
 <p>If you want to ensure that text files that any contributor introduces to
 the repository have their line endings normalized, you can set the
-<code>text</code> attribute to "auto" for <em>all</em> files.</p>
+<span class='synopsis'><code>text</code></span> attribute to "auto" for <em>all</em> files.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -309,7 +309,7 @@ regardless of their content.</p>
 <div class="title">Note</div>
 </td>
 <td class="content">
-When <code>text=auto</code> conversion is enabled in a cross-platform
+When <span class='synopsis'><code>text=auto</code></span> conversion is enabled in a cross-platform
 project using push and pull to a central repository the text files
 containing CRLFs should be normalized.
 </td>
@@ -329,7 +329,7 @@ $ git commit -m "Introduce end-of-line normalization"</pre>
 </div>
 <div class="paragraph">
 <p>If any files that should not be normalized show up in <em>git status</em>,
-unset their <code>text</code> attribute before running <em>git add -u</em>.</p>
+unset their <span class='synopsis'><code>text</code></span> attribute before running <em>git add -u</em>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -346,9 +346,9 @@ enabled manually.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If <code>core.safecrlf</code> is set to "true" or "warn", Git verifies if
+<p>If <span class='synopsis'><code>core.safecrlf</code></span> is set to "true" or "warn", Git verifies if
 the conversion is reversible for the current setting of
-<code>core.autocrlf</code>.  For "true", Git rejects irreversible
+<span class='synopsis'><code>core.autocrlf</code></span>.  For "true", Git rejects irreversible
 conversions; for "warn", Git only prints a warning but accepts
 an irreversible conversion.  The safety triggers to prevent such
 a conversion done to the files in the work tree, but there are a
@@ -375,7 +375,7 @@ catch potential problems early, safety triggers.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_working_tree_encoding"><a class="anchor" href="#_working_tree_encoding"></a><code>working-tree-encoding</code></h4>
+<h4 id="_working_tree_encoding"><a class="anchor" href="#_working_tree_encoding"></a><span class='synopsis'><code>working-tree-encoding</code></span></h4>
 <div class="paragraph">
 <p>Git recognizes files encoded in ASCII or one of its supersets (e.g.
 UTF-8, ISO-8859-1, &#8230;&#8203;) as text files. Files encoded in certain other
@@ -385,38 +385,38 @@ web front ends do not visualize the contents of these files by default.</p>
 </div>
 <div class="paragraph">
 <p>In these cases you can tell Git the encoding of a file in the working
-directory with the <code>working-tree-encoding</code> attribute. If a file with this
+directory with the <span class='synopsis'><code>working-tree-encoding</code></span> attribute. If a file with this
 attribute is added to Git, then Git re-encodes the content from the
 specified encoding to UTF-8. Finally, Git stores the UTF-8 encoded
 content in its internal data structure (called "the index"). On checkout
 the content is re-encoded back to the specified encoding.</p>
 </div>
 <div class="paragraph">
-<p>Please note that using the <code>working-tree-encoding</code> attribute may have a
+<p>Please note that using the <span class='synopsis'><code>working-tree-encoding</code></span> attribute may have a
 number of pitfalls:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>Alternative Git implementations (e.g. JGit or libgit2) and older Git
-versions (as of March 2018) do not support the <code>working-tree-encoding</code>
-attribute. If you decide to use the <code>working-tree-encoding</code> attribute
+versions (as of March 2018) do not support the <span class='synopsis'><code>working-tree-encoding</code></span>
+attribute. If you decide to use the <span class='synopsis'><code>working-tree-encoding</code></span> attribute
 in your repository, then it is strongly recommended to ensure that all
 clients working with the repository support it.</p>
 <div class="paragraph">
-<p>For example, Microsoft Visual Studio resources files (<code>*.rc</code>) or
-PowerShell script files (<code>*.ps1</code>) are sometimes encoded in UTF-16.
-If you declare <code>*.ps1</code> as files as UTF-16 and you add <code>foo.ps1</code> with
-a <code>working-tree-encoding</code> enabled Git client, then <code>foo.ps1</code> will be
-stored as UTF-8 internally. A client without <code>working-tree-encoding</code>
-support will checkout <code>foo.ps1</code> as UTF-8 encoded file. This will
+<p>For example, Microsoft Visual Studio resources files (<span class='synopsis'><code>*.rc</code></span>) or
+PowerShell script files (<span class='synopsis'><code>*.ps1</code></span>) are sometimes encoded in UTF-16.
+If you declare <span class='synopsis'><code>*.ps1</code></span> as files as UTF-16 and you add <span class='synopsis'><code>foo.ps1</code></span> with
+a <span class='synopsis'><code>working-tree-encoding</code></span> enabled Git client, then <span class='synopsis'><code>foo.ps1</code></span> will be
+stored as UTF-8 internally. A client without <span class='synopsis'><code>working-tree-encoding</code></span>
+support will checkout <span class='synopsis'><code>foo.ps1</code></span> as UTF-8 encoded file. This will
 typically cause trouble for the users of this file.</p>
 </div>
 <div class="paragraph">
-<p>If a Git client that does not support the <code>working-tree-encoding</code>
-attribute adds a new file <code>bar.ps1</code>, then <code>bar.ps1</code> will be
+<p>If a Git client that does not support the <span class='synopsis'><code>working-tree-encoding</code></span>
+attribute adds a new file <span class='synopsis'><code>bar.ps1</code></span>, then <span class='synopsis'><code>bar.ps1</code></span> will be
 stored "as-is" internally (in this example probably as UTF-16).
-A client with <code>working-tree-encoding</code> support will interpret the
+A client with <span class='synopsis'><code>working-tree-encoding</code></span> support will interpret the
 internal contents as UTF-8 and try to convert it to UTF-16 on checkout.
 That operation will fail and cause an error.</p>
 </div>
@@ -425,7 +425,7 @@ That operation will fail and cause an error.</p>
 <p>Reencoding content to non-UTF encodings can cause errors as the
 conversion might not be UTF-8 round trip safe. If you suspect your
 encoding to not be round trip safe, then add it to
-<code>core.checkRoundtripEncoding</code> to make Git check the round trip
+<span class='synopsis'><code>core.checkRoundtripEncoding</code></span> to make Git check the round trip
 encoding (see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>). SHIFT-JIS (Japanese character
 set) is known to have round trip issues with UTF-8 and is checked by
 default.</p>
@@ -437,7 +437,7 @@ Git operations (e.g <em>git checkout</em> or <em>git add</em>).</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Use the <code>working-tree-encoding</code> attribute only if you cannot store a file
+<p>Use the <span class='synopsis'><code>working-tree-encoding</code></span> attribute only if you cannot store a file
 in UTF-8 encoding and if you want Git to be able to process the content
 as text.</p>
 </div>
@@ -454,10 +454,10 @@ automatic line ending conversion based on your platform.</p>
 <div class="paragraph">
 <p>Use the following attributes if your <em>*.ps1</em> files are UTF-16 little
 endian encoded without BOM and you want Git to use Windows line endings
-in the working directory (use <code>UTF-16LE-BOM</code> instead of <code>UTF-16LE</code> if
+in the working directory (use <span class='synopsis'><code>UTF-16LE-BOM</code></span> instead of <span class='synopsis'><code>UTF-16LE</code></span> if
 you want UTF-16 little endian with BOM).
 Please note, it is highly recommended to
-explicitly define the line endings with <code>eol</code> if the <code>working-tree-encoding</code>
+explicitly define the line endings with <span class='synopsis'><code>eol</code></span> if the <span class='synopsis'><code>working-tree-encoding</code></span>
 attribute is used to avoid ambiguity.</p>
 </div>
 <div class="listingblock">
@@ -475,7 +475,7 @@ following command:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If you do not know the encoding of a file, then you can use the <code>file</code>
+<p>If you do not know the encoding of a file, then you can use the <span class='synopsis'><code>file</code></span>
 command to guess the encoding:</p>
 </div>
 <div class="listingblock">
@@ -485,38 +485,38 @@ command to guess the encoding:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ident"><a class="anchor" href="#_ident"></a><code>ident</code></h4>
+<h4 id="_ident"><a class="anchor" href="#_ident"></a><span class='synopsis'><code>ident</code></span></h4>
 <div class="paragraph">
-<p>When the attribute <code>ident</code> is set for a path, Git replaces
-<code>$Id$</code> in the blob object with <code>$Id:</code>, followed by the
+<p>When the attribute <span class='synopsis'><code>ident</code></span> is set for a path, Git replaces
+<span class='synopsis'><code>$Id$</code></span> in the blob object with <span class='synopsis'><code>$Id:</code></span>, followed by the
 40-character hexadecimal blob object name, followed by a dollar
-sign <code>$</code> upon checkout.  Any byte sequence that begins with
-<code>$Id:</code> and ends with <code>$</code> in the worktree file is replaced
-with <code>$Id$</code> upon check-in.</p>
+sign <span class='synopsis'><code>$</code></span> upon checkout.  Any byte sequence that begins with
+<span class='synopsis'><code>$Id:</code></span> and ends with <span class='synopsis'><code>$</code></span> in the worktree file is replaced
+with <span class='synopsis'><code>$Id$</code></span> upon check-in.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_filter"><a class="anchor" href="#_filter"></a><code>filter</code></h4>
+<h4 id="_filter"><a class="anchor" href="#_filter"></a><span class='synopsis'><code>filter</code></span></h4>
 <div class="paragraph">
-<p>A <code>filter</code> attribute can be set to a string value that names a
+<p>A <span class='synopsis'><code>filter</code></span> attribute can be set to a string value that names a
 filter driver specified in the configuration.</p>
 </div>
 <div class="paragraph">
-<p>A filter driver consists of a <code>clean</code> command and a <code>smudge</code>
+<p>A filter driver consists of a <span class='synopsis'><code>clean</code></span> command and a <span class='synopsis'><code>smudge</code></span>
 command, either of which can be left unspecified.  Upon
-checkout, when the <code>smudge</code> command is specified, the command is
+checkout, when the <span class='synopsis'><code>smudge</code></span> command is specified, the command is
 fed the blob object from its standard input, and its standard
 output is used to update the worktree file.  Similarly, the
-<code>clean</code> command is used to convert the contents of worktree file
+<span class='synopsis'><code>clean</code></span> command is used to convert the contents of worktree file
 upon checkin. By default these commands process only a single
-blob and terminate. If a long running <code>process</code> filter is used
-in place of <code>clean</code> and/or <code>smudge</code> filters, then Git can process
+blob and terminate. If a long running <span class='synopsis'><code>process</code></span> filter is used
+in place of <span class='synopsis'><code>clean</code></span> and/or <span class='synopsis'><code>smudge</code></span> filters, then Git can process
 all blobs with a single filter command invocation for the entire
-life of a single Git command, for example <code>git add --all</code>. If a
-long running <code>process</code> filter is configured then it always takes
+life of a single Git command, for example <span class='synopsis'><code>git</code> <code>add</code> <code>--all</code></span>. If a
+long running <span class='synopsis'><code>process</code></span> filter is configured then it always takes
 precedence over a configured single blob filter. See section
 below for the description of the protocol used to communicate with
-a <code>process</code> filter.</p>
+a <span class='synopsis'><code>process</code></span> filter.</p>
 </div>
 <div class="paragraph">
 <p>One use of the content filtering is to massage the content into a shape
@@ -542,14 +542,14 @@ a non-zero status, is not an error but makes the filter a no-op passthru.</p>
 <div class="paragraph">
 <p>You can declare that a filter turns a content that by itself is unusable
 into a usable content by setting the filter.&lt;driver&gt;.required configuration
-variable to <code>true</code>.</p>
+variable to <span class='synopsis'><code>true</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>Note: Whenever the clean filter is changed, the repo should be renormalized:
 $ git add --renormalize .</p>
 </div>
 <div class="paragraph">
-<p>For example, in .gitattributes, you would assign the <code>filter</code>
+<p>For example, in .gitattributes, you would assign the <span class='synopsis'><code>filter</code></span>
 attribute for paths.</p>
 </div>
 <div class="listingblock">
@@ -572,9 +572,9 @@ command is "cat").</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For best results, <code>clean</code> should not alter its output further if it is
+<p>For best results, <span class='synopsis'><code>clean</code></span> should not alter its output further if it is
 run twice ("clean&#8594;clean" should be equivalent to "clean"), and
-multiple <code>smudge</code> commands should not alter <code>clean</code>'s output
+multiple <span class='synopsis'><code>smudge</code></span> commands should not alter <span class='synopsis'><code>clean</code></span>'s output
 ("smudge&#8594;smudge&#8594;clean" should be equivalent to "clean").  See the
 section on merging below.</p>
 </div>
@@ -586,7 +586,7 @@ without modifying it.</p>
 </div>
 <div class="paragraph">
 <p>If a filter <em>must</em> succeed in order to make the stored contents usable,
-you can declare that the filter is <code>required</code>, in the configuration:</p>
+you can declare that the filter is <span class='synopsis'><code>required</code></span>, in the configuration:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -620,7 +620,7 @@ content provided to them on standard input.</p>
 <h4 id="_long_running_filter_process"><a class="anchor" href="#_long_running_filter_process"></a>Long Running Filter Process</h4>
 <div class="paragraph">
 <p>If the filter command (a string value) is defined via
-<code>filter.&lt;driver&gt;.process</code> then Git can process all blobs with a
+<span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.process</code></span> then Git can process all blobs with a
 single filter invocation for the entire life of a single Git
 command. This is achieved by using the long-running process protocol
 (described in technical/long-running-process-protocol.txt).</p>
@@ -725,15 +725,15 @@ packet:          git&lt; 0000</pre>
 <div class="paragraph">
 <p>Git neither stops nor restarts the filter process in case the
 "error"/"abort" status is set. However, Git sets its exit code
-according to the <code>filter.&lt;driver&gt;.required</code> flag, mimicking the
-behavior of the <code>filter.&lt;driver&gt;.clean</code> / <code>filter.&lt;driver&gt;.smudge</code>
+according to the <span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.required</code></span> flag, mimicking the
+behavior of the <span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.clean</code></span> / <span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.smudge</code></span>
 mechanism.</p>
 </div>
 <div class="paragraph">
 <p>If the filter dies during the communication or does not adhere to
 the protocol then Git will stop the filter process and restart it
 with the next file that needs to be processed. Depending on the
-<code>filter.&lt;driver&gt;.required</code> flag Git will interpret that as error.</p>
+<span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.required</code></span> flag Git will interpret that as error.</p>
 </div>
 </div>
 <div class="sect3">
@@ -806,14 +806,14 @@ packet:          git&lt; 0000  # empty list, keep "status=success" unchanged!</p
 <h4 id="_example"><a class="anchor" href="#_example"></a>Example</h4>
 <div class="paragraph">
 <p>A long running filter demo implementation can be found in
-<code>contrib/long-running-filter/example.pl</code> located in the Git
+<span class='synopsis'><code>contrib/long-running-filter/example.pl</code></span> located in the Git
 core repository. If you develop your own long running filter
-process then the <code>GIT_TRACE_PACKET</code> environment variables can be
+process then the <span class='synopsis'><code>GIT_TRACE_PACKET</code></span> environment variables can be
 very helpful for debugging (see <a href='{{< relurl "docs/git" >}}'>git[1]</a>).</p>
 </div>
 <div class="paragraph">
-<p>Please note that you cannot use an existing <code>filter.&lt;driver&gt;.clean</code>
-or <code>filter.&lt;driver&gt;.smudge</code> command with <code>filter.&lt;driver&gt;.process</code>
+<p>Please note that you cannot use an existing <span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.clean</code></span>
+or <span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.smudge</code></span> command with <span class='synopsis'><code>filter.</code><em>&lt;driver&gt;</em><code>.process</code></span>
 because the former two use a different inter process communication
 protocol than the latter one.</p>
 </div>
@@ -822,14 +822,14 @@ protocol than the latter one.</p>
 <h4 id="_interaction_between_checkincheckout_attributes"><a class="anchor" href="#_interaction_between_checkincheckout_attributes"></a>Interaction between checkin/checkout attributes</h4>
 <div class="paragraph">
 <p>In the check-in codepath, the worktree file is first converted
-with <code>filter</code> driver (if specified and corresponding driver
-defined), then the result is processed with <code>ident</code> (if
-specified), and then finally with <code>text</code> (again, if specified
+with <span class='synopsis'><code>filter</code></span> driver (if specified and corresponding driver
+defined), then the result is processed with <span class='synopsis'><code>ident</code></span> (if
+specified), and then finally with <span class='synopsis'><code>text</code></span> (again, if specified
 and applicable).</p>
 </div>
 <div class="paragraph">
 <p>In the check-out codepath, the blob content is first converted
-with <code>text</code>, and then <code>ident</code> and fed to <code>filter</code>.</p>
+with <span class='synopsis'><code>text</code></span>, and then <span class='synopsis'><code>ident</code></span> and fed to <span class='synopsis'><code>filter</code></span>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -844,7 +844,7 @@ conflicts.</p>
 <div class="paragraph">
 <p>To prevent these unnecessary merge conflicts, Git can be told to run a
 virtual check-out and check-in of all three stages of a file when
-resolving a three-way merge by setting the <code>merge.renormalize</code>
+resolving a three-way merge by setting the <span class='synopsis'><code>merge.renormalize</code></span>
 configuration variable.  This prevents changes caused by check-in
 conversion from causing spurious merge conflicts when a converted file
 is merged with an unconverted file.</p>
@@ -861,12 +861,12 @@ resolved manually.</p>
 <div class="sect2">
 <h3 id="_generating_diff_text"><a class="anchor" href="#_generating_diff_text"></a>Generating diff text</h3>
 <div class="sect3">
-<h4 id="_diff"><a class="anchor" href="#_diff"></a><code>diff</code></h4>
+<h4 id="_diff"><a class="anchor" href="#_diff"></a><span class='synopsis'><code>diff</code></span></h4>
 <div class="paragraph">
-<p>The attribute <code>diff</code> affects how Git generates diffs for particular
+<p>The attribute <span class='synopsis'><code>diff</code></span> affects how Git generates diffs for particular
 files. It can tell Git whether to generate a textual patch for the path
 or to treat the path as a binary file.  It can also affect what line is
-shown on the hunk header <code>@@ -k,l +n,m @@</code> line, tell Git to use an
+shown on the hunk header <span class='synopsis'><code>@@</code> <code>-k,l</code> <code>+n,m</code> <code>@@</code></span> line, tell Git to use an
 external command to generate the diff, or ask Git to convert binary
 files to a text format before generating the diff.</p>
 </div>
@@ -874,22 +874,22 @@ files to a text format before generating the diff.</p>
 <dl>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1"></a>Set </dt>
 <dd>
-<p>A path to which the <code>diff</code> attribute is set is treated
+<p>A path to which the <span class='synopsis'><code>diff</code></span> attribute is set is treated
 as text, even when they contain byte values that
 normally never appear in text files, such as NUL.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1"></a>Unset </dt>
 <dd>
-<p>A path to which the <code>diff</code> attribute is unset will
-generate <code>Binary files differ</code> (or a binary patch, if
+<p>A path to which the <span class='synopsis'><code>diff</code></span> attribute is unset will
+generate <span class='synopsis'><code>Binary</code> <code>files</code> <code>differ</code></span> (or a binary patch, if
 binary patches are enabled).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1"></a>Unspecified </dt>
 <dd>
-<p>A path to which the <code>diff</code> attribute is unspecified
+<p>A path to which the <span class='synopsis'><code>diff</code></span> attribute is unspecified
 first gets its contents inspected, and if it looks like
 text and is smaller than core.bigFileThreshold, it is treated
-as text. Otherwise it would generate <code>Binary files differ</code>.</p>
+as text. Otherwise it would generate <span class='synopsis'><code>Binary</code> <code>files</code> <code>differ</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-String"><a class="anchor" href="#Documentation/gitattributes.txt-String"></a>String </dt>
 <dd>
@@ -905,13 +905,13 @@ Git config file.</p>
 <div class="sect3">
 <h4 id="_defining_an_external_diff_driver"><a class="anchor" href="#_defining_an_external_diff_driver"></a>Defining an external diff driver</h4>
 <div class="paragraph">
-<p>The definition of a diff driver is done in <code>gitconfig</code>, not
-<code>gitattributes</code> file, so strictly speaking this manual page is a
+<p>The definition of a diff driver is done in <span class='synopsis'><code>gitconfig</code></span>, not
+<span class='synopsis'><code>gitattributes</code></span> file, so strictly speaking this manual page is a
 wrong place to talk about it.  However&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>To define an external diff driver <code>jcdiff</code>, add a section to your
-<code>$GIT_DIR/config</code> file (or <code>$HOME/.gitconfig</code> file) like this:</p>
+<p>To define an external diff driver <span class='synopsis'><code>jcdiff</code></span>, add a section to your
+<span class='synopsis'><code>$GIT_DIR/config</code></span> file (or <span class='synopsis'><code>$HOME/.gitconfig</code></span> file) like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -920,10 +920,10 @@ wrong place to talk about it.  However&#8230;&#8203;</p>
 </div>
 </div>
 <div class="paragraph">
-<p>When Git needs to show you a diff for the path with <code>diff</code>
-attribute set to <code>jcdiff</code>, it calls the command you specified
-with the above configuration, i.e. <code>j-c-diff</code>, with 7
-parameters, just like <code>GIT_EXTERNAL_DIFF</code> program is called.
+<p>When Git needs to show you a diff for the path with <span class='synopsis'><code>diff</code></span>
+attribute set to <span class='synopsis'><code>jcdiff</code></span>, it calls the command you specified
+with the above configuration, i.e. <span class='synopsis'><code>j-c-diff</code></span>, with 7
+parameters, just like <span class='synopsis'><code>GIT_EXTERNAL_DIFF</code></span> program is called.
 See <a href='{{< relurl "docs/git" >}}'>git[1]</a> for details.</p>
 </div>
 </div>
@@ -946,7 +946,7 @@ is not suited for some contents, and you can use a customized pattern
 to make a selection.</p>
 </div>
 <div class="paragraph">
-<p>First, in .gitattributes, you would assign the <code>diff</code> attribute
+<p>First, in .gitattributes, you would assign the <span class='synopsis'><code>diff</code></span> attribute
 for paths.</p>
 </div>
 <div class="listingblock">
@@ -958,7 +958,7 @@ for paths.</p>
 <p>Then, you would define a "diff.tex.xfuncname" configuration to
 specify a regular expression that matches a line that you would
 want to appear as the hunk header "TEXT". Add a section to your
-<code>$GIT_DIR/config</code> file (or <code>$HOME/.gitconfig</code> file) like this:</p>
+<span class='synopsis'><code>$GIT_DIR/config</code></span> file (or <span class='synopsis'><code>$HOME/.gitconfig</code></span> file) like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -970,83 +970,83 @@ want to appear as the hunk header "TEXT". Add a section to your
 <p>Note.  A single level of backslashes are eaten by the
 configuration file parser, so you would need to double the
 backslashes; the pattern above picks a line that begins with a
-backslash, and zero or more occurrences of <code>sub</code> followed by
-<code>section</code> followed by open brace, to the end of line.</p>
+backslash, and zero or more occurrences of <span class='synopsis'><code>sub</code></span> followed by
+<span class='synopsis'><code>section</code></span> followed by open brace, to the end of line.</p>
 </div>
 <div class="paragraph">
-<p>There are a few built-in patterns to make this easier, and <code>tex</code>
+<p>There are a few built-in patterns to make this easier, and <span class='synopsis'><code>tex</code></span>
 is one of them, so you do not have to write the above in your
 configuration file (you still need to enable this with the
-attribute mechanism, via <code>.gitattributes</code>).  The following built in
+attribute mechanism, via <span class='synopsis'><code>.gitattributes</code></span>).  The following built in
 patterns are available:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ada</code> suitable for source code in the Ada language.</p>
+<p><span class='synopsis'><code>ada</code></span> suitable for source code in the Ada language.</p>
 </li>
 <li>
-<p><code>bibtex</code> suitable for files with BibTeX coded references.</p>
+<p><span class='synopsis'><code>bibtex</code></span> suitable for files with BibTeX coded references.</p>
 </li>
 <li>
-<p><code>cpp</code> suitable for source code in the C and C++ languages.</p>
+<p><span class='synopsis'><code>cpp</code></span> suitable for source code in the C and C++ languages.</p>
 </li>
 <li>
-<p><code>csharp</code> suitable for source code in the C# language.</p>
+<p><span class='synopsis'><code>csharp</code></span> suitable for source code in the C# language.</p>
 </li>
 <li>
-<p><code>css</code> suitable for cascading style sheets.</p>
+<p><span class='synopsis'><code>css</code></span> suitable for cascading style sheets.</p>
 </li>
 <li>
-<p><code>dts</code> suitable for devicetree (DTS) files.</p>
+<p><span class='synopsis'><code>dts</code></span> suitable for devicetree (DTS) files.</p>
 </li>
 <li>
-<p><code>elixir</code> suitable for source code in the Elixir language.</p>
+<p><span class='synopsis'><code>elixir</code></span> suitable for source code in the Elixir language.</p>
 </li>
 <li>
-<p><code>fortran</code> suitable for source code in the Fortran language.</p>
+<p><span class='synopsis'><code>fortran</code></span> suitable for source code in the Fortran language.</p>
 </li>
 <li>
-<p><code>fountain</code> suitable for Fountain documents.</p>
+<p><span class='synopsis'><code>fountain</code></span> suitable for Fountain documents.</p>
 </li>
 <li>
-<p><code>golang</code> suitable for source code in the Go language.</p>
+<p><span class='synopsis'><code>golang</code></span> suitable for source code in the Go language.</p>
 </li>
 <li>
-<p><code>html</code> suitable for HTML/XHTML documents.</p>
+<p><span class='synopsis'><code>html</code></span> suitable for HTML/XHTML documents.</p>
 </li>
 <li>
-<p><code>java</code> suitable for source code in the Java language.</p>
+<p><span class='synopsis'><code>java</code></span> suitable for source code in the Java language.</p>
 </li>
 <li>
-<p><code>markdown</code> suitable for Markdown documents.</p>
+<p><span class='synopsis'><code>markdown</code></span> suitable for Markdown documents.</p>
 </li>
 <li>
-<p><code>matlab</code> suitable for source code in the MATLAB and Octave languages.</p>
+<p><span class='synopsis'><code>matlab</code></span> suitable for source code in the MATLAB and Octave languages.</p>
 </li>
 <li>
-<p><code>objc</code> suitable for source code in the Objective-C language.</p>
+<p><span class='synopsis'><code>objc</code></span> suitable for source code in the Objective-C language.</p>
 </li>
 <li>
-<p><code>pascal</code> suitable for source code in the Pascal/Delphi language.</p>
+<p><span class='synopsis'><code>pascal</code></span> suitable for source code in the Pascal/Delphi language.</p>
 </li>
 <li>
-<p><code>perl</code> suitable for source code in the Perl language.</p>
+<p><span class='synopsis'><code>perl</code></span> suitable for source code in the Perl language.</p>
 </li>
 <li>
-<p><code>php</code> suitable for source code in the PHP language.</p>
+<p><span class='synopsis'><code>php</code></span> suitable for source code in the PHP language.</p>
 </li>
 <li>
-<p><code>python</code> suitable for source code in the Python language.</p>
+<p><span class='synopsis'><code>python</code></span> suitable for source code in the Python language.</p>
 </li>
 <li>
-<p><code>ruby</code> suitable for source code in the Ruby language.</p>
+<p><span class='synopsis'><code>ruby</code></span> suitable for source code in the Ruby language.</p>
 </li>
 <li>
-<p><code>rust</code> suitable for source code in the Rust language.</p>
+<p><span class='synopsis'><code>rust</code></span> suitable for source code in the Rust language.</p>
 </li>
 <li>
-<p><code>tex</code> suitable for source code for LaTeX documents.</p>
+<p><span class='synopsis'><code>tex</code></span> suitable for source code for LaTeX documents.</p>
 </li>
 </ul>
 </div>
@@ -1054,13 +1054,13 @@ patterns are available:</p>
 <div class="sect3">
 <h4 id="_customizing_word_diff"><a class="anchor" href="#_customizing_word_diff"></a>Customizing word diff</h4>
 <div class="paragraph">
-<p>You can customize the rules that <code>git diff --word-diff</code> uses to
+<p>You can customize the rules that <span class='synopsis'><code>git</code> <code>diff</code> <code>--word-diff</code></span> uses to
 split words in a line, by specifying an appropriate regular expression
 in the "diff.*.wordRegex" configuration variable.  For example, in TeX
 a backslash followed by a sequence of letters forms a command, but
 several such commands can be run together without intervening
 whitespace.  To separate them, use a regular expression in your
-<code>$GIT_DIR/config</code> file (or <code>$HOME/.gitconfig</code> file) like this:</p>
+<span class='synopsis'><code>$GIT_DIR/config</code></span> file (or <span class='synopsis'><code>$HOME/.gitconfig</code></span> file) like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1084,7 +1084,7 @@ some information, the resulting diff is useful for human
 viewing (but cannot be applied directly).</p>
 </div>
 <div class="paragraph">
-<p>The <code>textconv</code> config option is used to define a program for
+<p>The <span class='synopsis'><code>textconv</code></span> config option is used to define a program for
 performing such a conversion. The program should take a single
 argument, the name of a file to convert, and produce the
 resulting text on stdout.</p>
@@ -1093,7 +1093,7 @@ resulting text on stdout.</p>
 <p>For example, to show the diff of the exif information of a
 file instead of the binary information (assuming you have the
 exif tool installed), add the following section to your
-<code>$GIT_DIR/config</code> file (or <code>$HOME/.gitconfig</code> file):</p>
+<span class='synopsis'><code>$GIT_DIR/config</code></span> file (or <span class='synopsis'><code>$HOME/.gitconfig</code></span> file):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1112,9 +1112,10 @@ The text conversion is generally a one-way conversion;
 in this example, we lose the actual image contents and focus
 just on the text data. This means that diffs generated by
 textconv are <em>not</em> suitable for applying. For this reason,
-only <code>git diff</code> and the <code>git log</code> family of commands (i.e.,
-log, whatchanged, show) will perform text conversion. <code>git
-format-patch</code> will never generate this output. If you want to
+only <span class='synopsis'><code>git</code> <code>diff</code></span> and the <span class='synopsis'><code>git</code> <code>log</code></span> family of commands (i.e.,
+log, whatchanged, show) will perform text conversion. <span class='synopsis'><code>git</code>
+
+<code>format-patch</code></span> will never generate this output. If you want to
 send somebody a text-converted diff of a binary file (e.g.,
 because it quickly conveys the changes you have made), you
 should generate it separately and send it as a comment <em>in
@@ -1125,7 +1126,7 @@ addition to</em> the usual binary diff that you might send.
 </div>
 <div class="paragraph">
 <p>Because text conversion can be slow, especially when doing a
-large number of them with <code>git log -p</code>, Git provides a mechanism
+large number of them with <span class='synopsis'><code>git</code> <code>log</code> <code>-p</code></span>, Git provides a mechanism
 to cache the output and use it in future diffs.  To enable
 caching, set the "cachetextconv" variable in your diff driver&#8217;s
 config. For example:</p>
@@ -1144,7 +1145,7 @@ diff driver, Git will automatically invalidate the cache entries
 and re-run the textconv filter. If you want to invalidate the
 cache manually (e.g., because your version of "exif" was updated
 and now produces better output), you can remove the cache
-manually with <code>git update-ref -d refs/notes/textconv/jpg</code> (where
+manually with <span class='synopsis'><code>git</code> <code>update-ref</code> <code>-d</code> <code>refs/notes/textconv/jpg</code></span> (where
 "jpg" is the name of the diff driver, as in the example above).</p>
 </div>
 </div>
@@ -1183,7 +1184,7 @@ including colorization, word-diff, and combined diffs for merges.</p>
 </li>
 <li>
 <p>Caching. Textconv caching can speed up repeated diffs, such as those
-you might trigger by running <code>git log -p</code>.</p>
+you might trigger by running <span class='synopsis'><code>git</code> <code>log</code> <code>-p</code></span>.</p>
 </li>
 </ol>
 </div>
@@ -1201,7 +1202,7 @@ and meaningless diffs.</p>
 </div>
 <div class="paragraph">
 <p>The simplest way to mark a file as binary is to unset the diff
-attribute in the <code>.gitattributes</code> file:</p>
+attribute in the <span class='synopsis'><code>.gitattributes</code></span> file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1209,15 +1210,15 @@ attribute in the <code>.gitattributes</code> file:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>This will cause Git to generate <code>Binary files differ</code> (or a binary
+<p>This will cause Git to generate <span class='synopsis'><code>Binary</code> <code>files</code> <code>differ</code></span> (or a binary
 patch, if binary patches are enabled) instead of a regular diff.</p>
 </div>
 <div class="paragraph">
 <p>However, one may also want to specify other diff driver attributes. For
-example, you might want to use <code>textconv</code> to convert postscript files to
+example, you might want to use <span class='synopsis'><code>textconv</code></span> to convert postscript files to
 an ASCII representation for human viewing, but otherwise treat them as
-binary files. You cannot specify both <code>-diff</code> and <code>diff=ps</code> attributes.
-The solution is to use the <code>diff.*.binary</code> config option:</p>
+binary files. You cannot specify both <span class='synopsis'><code>-diff</code></span> and <span class='synopsis'><code>diff=ps</code></span> attributes.
+The solution is to use the <span class='synopsis'><code>diff.*.binary</code></span> config option:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1231,18 +1232,18 @@ The solution is to use the <code>diff.*.binary</code> config option:</p>
 <div class="sect2">
 <h3 id="_performing_a_three_way_merge"><a class="anchor" href="#_performing_a_three_way_merge"></a>Performing a three-way merge</h3>
 <div class="sect3">
-<h4 id="_merge"><a class="anchor" href="#_merge"></a><code>merge</code></h4>
+<h4 id="_merge"><a class="anchor" href="#_merge"></a><span class='synopsis'><code>merge</code></span></h4>
 <div class="paragraph">
-<p>The attribute <code>merge</code> affects how three versions of a file are
-merged when a file-level merge is necessary during <code>git merge</code>,
-and other commands such as <code>git revert</code> and <code>git cherry-pick</code>.</p>
+<p>The attribute <span class='synopsis'><code>merge</code></span> affects how three versions of a file are
+merged when a file-level merge is necessary during <span class='synopsis'><code>git</code> <code>merge</code></span>,
+and other commands such as <span class='synopsis'><code>git</code> <code>revert</code></span> and <span class='synopsis'><code>git</code> <code>cherry-pick</code></span>.</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1-1"></a>Set </dt>
 <dd>
 <p>Built-in 3-way merge driver is used to merge the
-contents in a way similar to <em>merge</em> command of <code>RCS</code>
+contents in a way similar to <em>merge</em> command of <span class='synopsis'><code>RCS</code></span>
 suite.  This is suitable for ordinary text files.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1-1"></a>Unset </dt>
@@ -1255,10 +1256,10 @@ not have a well-defined merge semantics.</p>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1"></a>Unspecified </dt>
 <dd>
 <p>By default, this uses the same built-in 3-way merge
-driver as is the case when the <code>merge</code> attribute is set.
-However, the <code>merge.default</code> configuration variable can name
+driver as is the case when the <span class='synopsis'><code>merge</code></span> attribute is set.
+However, the <span class='synopsis'><code>merge.default</code></span> configuration variable can name
 different merge driver to be used with paths for which the
-<code>merge</code> attribute is unspecified.</p>
+<span class='synopsis'><code>merge</code></span> attribute is unspecified.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-String-1"><a class="anchor" href="#Documentation/gitattributes.txt-String-1"></a>String </dt>
 <dd>
@@ -1275,17 +1276,17 @@ requested with "binary".</p>
 <h4 id="_built_in_merge_drivers"><a class="anchor" href="#_built_in_merge_drivers"></a>Built-in merge drivers</h4>
 <div class="paragraph">
 <p>There are a few built-in low-level merge drivers defined that
-can be asked for via the <code>merge</code> attribute.</p>
+can be asked for via the <span class='synopsis'><code>merge</code></span> attribute.</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-text"><a class="anchor" href="#Documentation/gitattributes.txt-text"></a>text </dt>
 <dd>
 <p>Usual 3-way file level merge for text files.  Conflicted
-regions are marked with conflict markers <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>,
-<code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.  The version from your branch
-appears before the <code>=======</code> marker, and the version
-from the merged branch appears after the <code>=======</code>
+regions are marked with conflict markers <span class='synopsis'><em>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</em></span>,
+<span class='synopsis'><code>=======</code></span> and <span class='synopsis'><em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</em></span>.  The version from your branch
+appears before the <span class='synopsis'><code>=======</code></span> marker, and the version
+from the merged branch appears after the <span class='synopsis'><code>=======</code></span>
 marker.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-binary"><a class="anchor" href="#Documentation/gitattributes.txt-binary"></a>binary </dt>
@@ -1309,13 +1310,13 @@ understand the implications.</p>
 <div class="sect3">
 <h4 id="_defining_a_custom_merge_driver"><a class="anchor" href="#_defining_a_custom_merge_driver"></a>Defining a custom merge driver</h4>
 <div class="paragraph">
-<p>The definition of a merge driver is done in the <code>.git/config</code>
-file, not in the <code>gitattributes</code> file, so strictly speaking this
+<p>The definition of a merge driver is done in the <span class='synopsis'><code>.git/config</code></span>
+file, not in the <span class='synopsis'><code>gitattributes</code></span> file, so strictly speaking this
 manual page is a wrong place to talk about it.  However&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>To define a custom merge driver <code>filfre</code>, add a section to your
-<code>$GIT_DIR/config</code> file (or <code>$HOME/.gitconfig</code> file) like this:</p>
+<p>To define a custom merge driver <span class='synopsis'><code>filfre</code></span>, add a section to your
+<span class='synopsis'><code>$GIT_DIR/config</code></span> file (or <span class='synopsis'><code>$HOME/.gitconfig</code></span> file) like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1326,13 +1327,13 @@ manual page is a wrong place to talk about it.  However&#8230;&#8203;</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The <code>merge.*.name</code> variable gives the driver a human-readable
+<p>The <span class='synopsis'><code>merge.*.name</code></span> variable gives the driver a human-readable
 name.</p>
 </div>
 <div class="paragraph">
-<p>The <code>merge.*.driver</code> variable&#8217;s value is used to construct a
-command to run to merge ancestor&#8217;s version (<code>%O</code>), current
-version (<code>%A</code>) and the other branches' version (<code>%B</code>).  These
+<p>The <span class='synopsis'><code>merge.*.driver</code></span> variable&#8217;s value is used to construct a
+command to run to merge ancestor&#8217;s version (<span class='synopsis'><code>%O</code></span>), current
+version (<span class='synopsis'><code>%A</code></span>) and the other branches' version (<span class='synopsis'><code>%B</code></span>).  These
 three tokens are replaced with the names of temporary files that
 hold the contents of these versions when the command line is
 built. Additionally, %L will be replaced with the conflict marker
@@ -1340,12 +1341,12 @@ size (see below).</p>
 </div>
 <div class="paragraph">
 <p>The merge driver is expected to leave the result of the merge in
-the file named with <code>%A</code> by overwriting it, and exit with zero
+the file named with <span class='synopsis'><code>%A</code></span> by overwriting it, and exit with zero
 status if it managed to merge them cleanly, or non-zero if there
 were conflicts.</p>
 </div>
 <div class="paragraph">
-<p>The <code>merge.*.recursive</code> variable specifies what other merge
+<p>The <span class='synopsis'><code>merge.*.recursive</code></span> variable specifies what other merge
 driver to use when the merge driver is called for an internal
 merge between common ancestors, when there are more than one.
 When left unspecified, the driver itself is used for both
@@ -1353,20 +1354,20 @@ internal merge and the final merge.</p>
 </div>
 <div class="paragraph">
 <p>The merge driver can learn the pathname in which the merged result
-will be stored via placeholder <code>%P</code>.</p>
+will be stored via placeholder <span class='synopsis'><code>%P</code></span>.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_conflict_marker_size"><a class="anchor" href="#_conflict_marker_size"></a><code>conflict-marker-size</code></h4>
+<h4 id="_conflict_marker_size"><a class="anchor" href="#_conflict_marker_size"></a><span class='synopsis'><code>conflict-marker-size</code></span></h4>
 <div class="paragraph">
 <p>This attribute controls the length of conflict markers left in
 the work tree file during a conflicted merge.  Only setting to
 the value to a positive integer has any meaningful effect.</p>
 </div>
 <div class="paragraph">
-<p>For example, this line in <code>.gitattributes</code> can be used to tell the merge
+<p>For example, this line in <span class='synopsis'><code>.gitattributes</code></span> can be used to tell the merge
 machinery to leave much longer (instead of the usual 7-character-long)
-conflict markers when merging the file <code>Documentation/git-merge.txt</code>
+conflict markers when merging the file <span class='synopsis'><code>Documentation/git-merge.txt</code></span>
 results in a conflict.</p>
 </div>
 <div class="listingblock">
@@ -1379,9 +1380,9 @@ results in a conflict.</p>
 <div class="sect2">
 <h3 id="_checking_whitespace_errors"><a class="anchor" href="#_checking_whitespace_errors"></a>Checking whitespace errors</h3>
 <div class="sect3">
-<h4 id="_whitespace"><a class="anchor" href="#_whitespace"></a><code>whitespace</code></h4>
+<h4 id="_whitespace"><a class="anchor" href="#_whitespace"></a><span class='synopsis'><code>whitespace</code></span></h4>
 <div class="paragraph">
-<p>The <code>core.whitespace</code> configuration variable allows you to define what
+<p>The <span class='synopsis'><code>core.whitespace</code></span> configuration variable allows you to define what
 <em>diff</em> and <em>apply</em> should consider whitespace errors for all paths in
 the project (See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).  This attribute gives you finer
 control per path.</p>
@@ -1391,7 +1392,7 @@ control per path.</p>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Set-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Set-1-1-1-1"></a>Set </dt>
 <dd>
 <p>Notice all types of potential whitespace errors known to Git.
-The tab width is taken from the value of the <code>core.whitespace</code>
+The tab width is taken from the value of the <span class='synopsis'><code>core.whitespace</code></span>
 configuration variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unset-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unset-1-1-1-1"></a>Unset </dt>
@@ -1400,13 +1401,13 @@ configuration variable.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-Unspecified-1-1-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-Unspecified-1-1-1-1"></a>Unspecified </dt>
 <dd>
-<p>Use the value of the <code>core.whitespace</code> configuration variable to
+<p>Use the value of the <span class='synopsis'><code>core.whitespace</code></span> configuration variable to
 decide what to notice as error.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/gitattributes.txt-String-1-1"><a class="anchor" href="#Documentation/gitattributes.txt-String-1-1"></a>String </dt>
 <dd>
 <p>Specify a comma separate list of common whitespace problems to
-notice in the same format as the <code>core.whitespace</code> configuration
+notice in the same format as the <span class='synopsis'><code>core.whitespace</code></span> configuration
 variable.</p>
 </dd>
 </dl>
@@ -1416,23 +1417,23 @@ variable.</p>
 <div class="sect2">
 <h3 id="_creating_an_archive"><a class="anchor" href="#_creating_an_archive"></a>Creating an archive</h3>
 <div class="sect3">
-<h4 id="_export_ignore"><a class="anchor" href="#_export_ignore"></a><code>export-ignore</code></h4>
+<h4 id="_export_ignore"><a class="anchor" href="#_export_ignore"></a><span class='synopsis'><code>export-ignore</code></span></h4>
 <div class="paragraph">
-<p>Files and directories with the attribute <code>export-ignore</code> won&#8217;t be added to
+<p>Files and directories with the attribute <span class='synopsis'><code>export-ignore</code></span> won&#8217;t be added to
 archive files.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_export_subst"><a class="anchor" href="#_export_subst"></a><code>export-subst</code></h4>
+<h4 id="_export_subst"><a class="anchor" href="#_export_subst"></a><span class='synopsis'><code>export-subst</code></span></h4>
 <div class="paragraph">
-<p>If the attribute <code>export-subst</code> is set for a file then Git will expand
+<p>If the attribute <span class='synopsis'><code>export-subst</code></span> is set for a file then Git will expand
 several placeholders when adding this file to an archive.  The
 expansion depends on the availability of a commit ID, i.e., if
 <a href='{{< relurl "docs/git-archive" >}}'>git-archive[1]</a> has been given a tree instead of a commit or a
 tag then no replacement will be done.  The placeholders are the same
-as those for the option <code>--pretty=format:</code> of <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>,
-except that they need to be wrapped like this: <code>$Format:PLACEHOLDERS$</code>
-in the file.  E.g. the string <code>$Format:%H$</code> will be replaced by the
+as those for the option <span class='synopsis'><code>--pretty=format:</code></span> of <a href='{{< relurl "docs/git-log" >}}'>git-log[1]</a>,
+except that they need to be wrapped like this: <span class='synopsis'><code>$Format:PLACEHOLDERS$</code></span>
+in the file.  E.g. the string <span class='synopsis'><code>$Format:%H$</code></span> will be replaced by the
 commit hash.</p>
 </div>
 </div>
@@ -1440,17 +1441,17 @@ commit hash.</p>
 <div class="sect2">
 <h3 id="_packing_objects"><a class="anchor" href="#_packing_objects"></a>Packing objects</h3>
 <div class="sect3">
-<h4 id="_delta"><a class="anchor" href="#_delta"></a><code>delta</code></h4>
+<h4 id="_delta"><a class="anchor" href="#_delta"></a><span class='synopsis'><code>delta</code></span></h4>
 <div class="paragraph">
 <p>Delta compression will not be attempted for blobs for paths with the
-attribute <code>delta</code> set to false.</p>
+attribute <span class='synopsis'><code>delta</code></span> set to false.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_viewing_files_in_gui_tools"><a class="anchor" href="#_viewing_files_in_gui_tools"></a>Viewing files in GUI tools</h3>
 <div class="sect3">
-<h4 id="_encoding"><a class="anchor" href="#_encoding"></a><code>encoding</code></h4>
+<h4 id="_encoding"><a class="anchor" href="#_encoding"></a><span class='synopsis'><code>encoding</code></span></h4>
 <div class="paragraph">
 <p>The value of this attribute specifies the character encoding that should
 be used by GUI tools (e.g. <a href='{{< relurl "docs/gitk" >}}'>gitk[1]</a> and <a href='{{< relurl "docs/git-gui" >}}'>git-gui[1]</a>) to
@@ -1460,7 +1461,7 @@ manually enable per-file encodings in its options.</p>
 </div>
 <div class="paragraph">
 <p>If this attribute is not set or has an invalid value, the value of the
-<code>gui.encoding</code> configuration variable is used instead
+<span class='synopsis'><code>gui.encoding</code></span> configuration variable is used instead
 (See <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).</p>
 </div>
 </div>
@@ -1483,7 +1484,7 @@ produced for, any binary file you track.  You would need to specify e.g.</p>
 <p>but that may become cumbersome, when you have many attributes.  Using
 macro attributes, you can define an attribute that, when set, also
 sets or unsets a number of other attributes at the same time.  The
-system knows a built-in macro attribute, <code>binary</code>:</p>
+system knows a built-in macro attribute, <span class='synopsis'><code>binary</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1504,9 +1505,9 @@ state.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Custom macro attributes can be defined only in top-level gitattributes
-files (<code>$GIT_DIR/info/attributes</code>, the <code>.gitattributes</code> file at the
+files (<span class='synopsis'><code>$GIT_DIR/info/attributes</code></span>, the <span class='synopsis'><code>.gitattributes</code></span> file at the
 top level of the working tree, or the global or system-wide
-gitattributes files), not in <code>.gitattributes</code> files in working tree
+gitattributes files), not in <span class='synopsis'><code>.gitattributes</code></span> files in working tree
 subdirectories.  The built-in macro attribute "binary" is equivalent
 to:</p>
 </div>
@@ -1521,7 +1522,7 @@ to:</p>
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>EXAMPLES</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you have these three <code>gitattributes</code> file:</p>
+<p>If you have these three <span class='synopsis'><code>gitattributes</code></span> file:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1539,34 +1540,34 @@ abc	-foo -bar
 </div>
 </div>
 <div class="paragraph">
-<p>the attributes given to path <code>t/abc</code> are computed as follows:</p>
+<p>the attributes given to path <span class='synopsis'><code>t/abc</code></span> are computed as follows:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>By examining <code>t/.gitattributes</code> (which is in the same
+<p>By examining <span class='synopsis'><code>t/.gitattributes</code></span> (which is in the same
 directory as the path in question), Git finds that the first
-line matches.  <code>merge</code> attribute is set.  It also finds that
-the second line matches, and attributes <code>foo</code> and <code>bar</code>
+line matches.  <span class='synopsis'><code>merge</code></span> attribute is set.  It also finds that
+the second line matches, and attributes <span class='synopsis'><code>foo</code></span> and <span class='synopsis'><code>bar</code></span>
 are unset.</p>
 </li>
 <li>
-<p>Then it examines <code>.gitattributes</code> (which is in the parent
+<p>Then it examines <span class='synopsis'><code>.gitattributes</code></span> (which is in the parent
 directory), and finds that the first line matches, but
-<code>t/.gitattributes</code> file already decided how <code>merge</code>, <code>foo</code>
-and <code>bar</code> attributes should be given to this path, so it
-leaves <code>foo</code> and <code>bar</code> unset.  Attribute <code>baz</code> is set.</p>
+<span class='synopsis'><code>t/.gitattributes</code></span> file already decided how <span class='synopsis'><code>merge</code></span>, <span class='synopsis'><code>foo</code></span>
+and <span class='synopsis'><code>bar</code></span> attributes should be given to this path, so it
+leaves <span class='synopsis'><code>foo</code></span> and <span class='synopsis'><code>bar</code></span> unset.  Attribute <span class='synopsis'><code>baz</code></span> is set.</p>
 </li>
 <li>
-<p>Finally it examines <code>$GIT_DIR/info/attributes</code>.  This file
+<p>Finally it examines <span class='synopsis'><code>$GIT_DIR/info/attributes</code></span>.  This file
 is used to override the in-tree settings.  The first line is
-a match, and <code>foo</code> is set, <code>bar</code> is reverted to unspecified
-state, and <code>baz</code> is unset.</p>
+a match, and <span class='synopsis'><code>foo</code></span> is set, <span class='synopsis'><code>bar</code></span> is reverted to unspecified
+state, and <span class='synopsis'><code>baz</code></span> is unset.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>As the result, the attributes assignment to <code>t/abc</code> becomes:</p>
+<p>As the result, the attributes assignment to <span class='synopsis'><code>t/abc</code></span> becomes:</p>
 </div>
 <div class="listingblock">
 <div class="content">

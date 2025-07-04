@@ -68,20 +68,20 @@ rationale behind this decision.</p>
 <h2 id="_choosing_a_test_harness"><a class="anchor" href="#_choosing_a_test_harness"></a>Choosing a test harness</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>During upstream discussion, it was occasionally noted that <code>prove</code> provides many
+<p>During upstream discussion, it was occasionally noted that <span class='synopsis'><code>prove</code></span> provides many
 convenient features, such as scheduling slower tests first, or re-running
 previously failed tests.</p>
 </div>
 <div class="paragraph">
-<p>While we already support the use of <code>prove</code> as a test harness for the shell
+<p>While we already support the use of <span class='synopsis'><code>prove</code></span> as a test harness for the shell
 tests, it is not strictly required. The t/Makefile allows running shell tests
 directly (though with interleaved output if parallelism is enabled). Git
-developers who wish to use <code>prove</code> as a more advanced harness can do so by
+developers who wish to use <span class='synopsis'><code>prove</code></span> as a more advanced harness can do so by
 setting DEFAULT_TEST_TARGET=prove in their config.mak.</p>
 </div>
 <div class="paragraph">
 <p>We will follow a similar approach for unit tests: by default the test
-executables will be run directly from the t/Makefile, but <code>prove</code> can be
+executables will be run directly from the t/Makefile, but <span class='synopsis'><code>prove</code></span> can be
 configured with DEFAULT_UNIT_TEST_TARGET=prove.</p>
 </div>
 </div>
@@ -487,7 +487,7 @@ GitHub / GitLab stars to estimate this.</p>
 work</a></p>
 </li>
 <li>
-<p>Run alongside regular <code>make test</code> target</p>
+<p>Run alongside regular <span class='synopsis'><code>make</code> <code>test</code></span> target</p>
 </li>
 </ul>
 </div>

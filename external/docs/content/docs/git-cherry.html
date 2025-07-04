@@ -31,8 +31,8 @@ aliases:
 <h2 id="_description"><a class="anchor" href="#_description"></a>DESCRIPTION</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Determine whether there are commits in <code>&lt;head&gt;..&lt;upstream&gt;</code> that are
-equivalent to those in the range <code>&lt;limit&gt;..&lt;head&gt;</code>.</p>
+<p>Determine whether there are commits in <span class='synopsis'><em>&lt;head&gt;</em><code>..</code><em>&lt;upstream&gt;</em></span> that are
+equivalent to those in the range <span class='synopsis'><em>&lt;limit&gt;</em><code>..</code><em>&lt;head&gt;</em></span>.</p>
 </div>
 <div class="paragraph">
 <p>The equivalence test is based on the diff, after removing whitespace
@@ -41,8 +41,8 @@ and line numbers.  git-cherry therefore detects when commits have been
 <a href='{{< relurl "docs/git-rebase" >}}'>git-rebase[1]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Outputs the SHA1 of every commit in <code>&lt;limit&gt;..&lt;head&gt;</code>, prefixed with
-<code>-</code> for commits that have an equivalent in &lt;upstream&gt;, and <code>+</code> for
+<p>Outputs the SHA1 of every commit in <span class='synopsis'><em>&lt;limit&gt;</em><code>..</code><em>&lt;head&gt;</em></span>, prefixed with
+<span class='synopsis'><code>-</code></span> for commits that have an equivalent in &lt;upstream&gt;, and <span class='synopsis'><code>+</code></span> for
 commits that do not.</p>
 </div>
 </div>
@@ -94,7 +94,7 @@ $ git send-email ... 00*</pre>
 </div>
 <div class="paragraph">
 <p>Later, you can see whether your changes have been applied by saying
-(still on <code>topic</code>):</p>
+(still on <span class='synopsis'><code>topic</code></span>):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -137,10 +137,10 @@ be applied:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Here, we see that the commits A and C (marked with <code>-</code>) can be
-dropped from your <code>topic</code> branch when you rebase it on top of
-<code>origin/master</code>, while the commit B (marked with <code>+</code>) still needs to
-be kept so that it will be sent to be applied to <code>origin/master</code>.</p>
+<p>Here, we see that the commits A and C (marked with <span class='synopsis'><code>-</code></span>) can be
+dropped from your <span class='synopsis'><code>topic</code></span> branch when you rebase it on top of
+<span class='synopsis'><code>origin/master</code></span>, while the commit B (marked with <span class='synopsis'><code>+</code></span>) still needs to
+be kept so that it will be sent to be applied to <span class='synopsis'><code>origin/master</code></span>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -169,8 +169,8 @@ o 1234567 merge-base between upstream and topic</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>By specifying <code>base</code> as the limit, you can avoid listing commits
-between <code>base</code> and <code>topic</code>:</p>
+<p>By specifying <span class='synopsis'><code>base</code></span> as the limit, you can avoid listing commits
+between <span class='synopsis'><code>base</code></span> and <span class='synopsis'><code>topic</code></span>:</p>
 </div>
 <div class="listingblock">
 <div class="content">

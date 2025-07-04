@@ -142,11 +142,11 @@ CommitDate: &lt;committer-date&gt;</pre>
 </div>
 <div class="paragraph">
 <p>This format is used to refer to another commit in a commit message and
-is the same as <code>--pretty='format:%C(auto)%h (%s, %ad)'</code>.  By default,
-the date is formatted with <code>--date=short</code> unless another <code>--date</code> option
-is explicitly specified.  As with any <code>format:</code> with format
+is the same as <span class='synopsis'><code>--pretty='format:%C</code>(<code>auto</code>)<code>%h</code> (<code>%s,</code> <code>%ad</code>)</span>.  By default,
+the date is formatted with <span class='synopsis'><code>--date=short</code></span> unless another <span class='synopsis'><code>--date</code></span> option
+is explicitly specified.  As with any <span class='synopsis'><code>format:</code></span> with format
 placeholders, its output is not affected by other options like
-<code>--decorate</code> and <code>--walk-reflogs</code>.</p>
+<span class='synopsis'><code>--decorate</code></span> and <span class='synopsis'><code>--walk-reflogs</code></span>.</p>
 </div>
 </li>
 <li>
@@ -183,8 +183,8 @@ displayed in full, regardless of whether --abbrev or
 true parent commits, without taking grafts or history
 simplification into account. Note that this format affects the way
 commits are displayed, but not the way the diff is shown e.g. with
-<code>git log --raw</code>. To get full object names in a raw diff format,
-use <code>--no-abbrev</code>.</p>
+<span class='synopsis'><code>git</code> <code>log</code> <code>--raw</code></span>. To get full object names in a raw diff format,
+use <span class='synopsis'><code>--no-abbrev</code></span>.</p>
 </div>
 </li>
 <li>
@@ -256,21 +256,21 @@ byte with the hexadecimal digits' value (we will call this
 <p>color specification, as described under Values in the
 "CONFIGURATION FILE" section of <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>.  By
 default, colors are shown only when enabled for log output
-(by <code>color.diff</code>, <code>color.ui</code>, or <code>--color</code>, and respecting
-the <code>auto</code> settings of the former if we are going to a
-terminal). <code>%C(auto,...)</code> is accepted as a historical
-synonym for the default (e.g., <code>%C(auto,red)</code>). Specifying
-<code>%C(always,...)</code> will show the colors even when color is
+(by <span class='synopsis'><code>color.diff</code></span>, <span class='synopsis'><code>color.ui</code></span>, or <span class='synopsis'><code>--color</code></span>, and respecting
+the <span class='synopsis'><code>auto</code></span> settings of the former if we are going to a
+terminal). <span class='synopsis'><code>%C</code>(<code>auto,...</code>)</span> is accepted as a historical
+synonym for the default (e.g., <span class='synopsis'><code>%C</code>(<code>auto,red</code>)</span>). Specifying
+<span class='synopsis'><code>%C</code>(<code>always,...</code>)</span> will show the colors even when color is
 not otherwise enabled (though consider just using
-<code>--color=always</code> to enable color for the whole output,
+<span class='synopsis'><code>--color=always</code></span> to enable color for the whole output,
 including this format and anything else git might color).
-<code>auto</code> alone (i.e. <code>%C(auto)</code>) will turn on auto coloring
+<span class='synopsis'><code>auto</code></span> alone (i.e. <span class='synopsis'><code>%C</code>(<code>auto</code>)</span>) will turn on auto coloring
 on the next placeholders until the color is switched
 again.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emmem"><a id="Documentation/pretty-formats.txt-m" class="anchor" href="#Documentation/pretty-formats.txt-m"></a><em>%m</em> </dt>
 <dd>
-<p>left (<code>&lt;</code>), right (<code>&gt;</code>) or boundary (<code>-</code>) mark</p>
+<p>left (<span class='synopsis'><em>&lt;</em></span>), right (<span class='synopsis'><em>&gt;</em></span>) or boundary (<span class='synopsis'><code>-</code></span>) mark</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emwltwgtlti1gtlti2gtem"><a id="Documentation/pretty-formats.txt-wwi1i2" class="anchor" href="#Documentation/pretty-formats.txt-wwi1i2"></a><em>%w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])</em> </dt>
 <dd>
@@ -282,9 +282,9 @@ again.</p>
 <p>make the next placeholder take at
 least N column widths, padding spaces on
 the right if necessary.  Optionally
-truncate (with ellipsis <em>..</em>) at the left (ltrunc) <code>..ft</code>,
-the middle (mtrunc) <code>mi..le</code>, or the end
-(trunc) <code>rig..</code>, if the output is longer than
+truncate (with ellipsis <em>..</em>) at the left (ltrunc) <span class='synopsis'><code>..ft</code></span>,
+the middle (mtrunc) <span class='synopsis'><code>mi..le</code></span>, or the end
+(trunc) <span class='synopsis'><code>rig..</code></span>, if the output is longer than
 N columns.
 Note 1: that truncating
 only works correctly with N &gt;= 2.
@@ -406,11 +406,11 @@ or <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emasem"><a id="Documentation/pretty-formats.txt-as" class="anchor" href="#Documentation/pretty-formats.txt-as"></a><em>%as</em> </dt>
 <dd>
-<p>author date, short format (<code>YYYY-MM-DD</code>)</p>
+<p>author date, short format (<span class='synopsis'><code>YYYY-MM-DD</code></span>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emahem"><a id="Documentation/pretty-formats.txt-ah" class="anchor" href="#Documentation/pretty-formats.txt-ah"></a><em>%ah</em> </dt>
 <dd>
-<p>author date, human style (like the <code>--date=human</code> option of
+<p>author date, human style (like the <span class='synopsis'><code>--date=human</code></span> option of
 <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emcnem"><a id="Documentation/pretty-formats.txt-cn" class="anchor" href="#Documentation/pretty-formats.txt-cn"></a><em>%cn</em> </dt>
@@ -466,11 +466,11 @@ or <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emcsem"><a id="Documentation/pretty-formats.txt-cs" class="anchor" href="#Documentation/pretty-formats.txt-cs"></a><em>%cs</em> </dt>
 <dd>
-<p>committer date, short format (<code>YYYY-MM-DD</code>)</p>
+<p>committer date, short format (<span class='synopsis'><code>YYYY-MM-DD</code></span>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emchem"><a id="Documentation/pretty-formats.txt-ch" class="anchor" href="#Documentation/pretty-formats.txt-ch"></a><em>%ch</em> </dt>
 <dd>
-<p>committer date, human style (like the <code>--date=human</code> option of
+<p>committer date, human style (like the <span class='synopsis'><code>--date=human</code></span> option of
 <a href='{{< relurl "docs/git-rev-list" >}}'>git-rev-list[1]</a>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emdem"><a id="Documentation/pretty-formats.txt-d" class="anchor" href="#Documentation/pretty-formats.txt-d"></a><em>%d</em> </dt>
@@ -483,27 +483,27 @@ or <a href='{{< relurl "docs/git-blame" >}}'>git-blame[1]</a>)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emdecorateltoptionsgtem"><a id="Documentation/pretty-formats.txt-decorateoptions" class="anchor" href="#Documentation/pretty-formats.txt-decorateoptions"></a><em>%(decorate[:&lt;options&gt;])</em> </dt>
 <dd>
-<p>ref names with custom decorations. The <code>decorate</code> string may be followed by a
+<p>ref names with custom decorations. The <span class='synopsis'><code>decorate</code></span> string may be followed by a
 colon and zero or more comma-separated options. Option values may contain
-literal formatting codes. These must be used for commas (<code>%x2C</code>) and closing
-parentheses (<code>%x29</code>), due to their role in the option syntax.</p>
+literal formatting codes. These must be used for commas (<span class='synopsis'><code>%x2C</code></span>) and closing
+parentheses (<span class='synopsis'><code>%x29</code></span>), due to their role in the option syntax.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><em>prefix=&lt;value&gt;</em>: Shown before the list of ref names.  Defaults to "&#160;<code>(</code>".</p>
+<p><em>prefix=&lt;value&gt;</em>: Shown before the list of ref names.  Defaults to "&#160;<span class='synopsis'>(</span>".</p>
 </li>
 <li>
-<p><em>suffix=&lt;value&gt;</em>: Shown after the list of ref names.  Defaults to "<code>)</code>".</p>
+<p><em>suffix=&lt;value&gt;</em>: Shown after the list of ref names.  Defaults to "<span class='synopsis'>)</span>".</p>
 </li>
 <li>
-<p><em>separator=&lt;value&gt;</em>: Shown between ref names.  Defaults to "<code>,</code>&#160;".</p>
+<p><em>separator=&lt;value&gt;</em>: Shown between ref names.  Defaults to "<span class='synopsis'><code>,</code></span>&#160;".</p>
 </li>
 <li>
 <p><em>pointer=&lt;value&gt;</em>: Shown between HEAD and the branch it points to, if any.
-Defaults to "&#160;<code>-&gt;</code>&#160;".</p>
+Defaults to "&#160;<span class='synopsis'><em>-&gt;</em></span>&#160;".</p>
 </li>
 <li>
-<p><em>tag=&lt;value&gt;</em>: Shown before tag names. Defaults to "<code>tag:</code>&#160;".</p>
+<p><em>tag=&lt;value&gt;</em>: Shown before tag names. Defaults to "<span class='synopsis'><code>tag:</code></span>&#160;".</p>
 </li>
 </ul>
 </div>
@@ -519,14 +519,14 @@ or tag annotations, and spaces as separators:</p>
 </div>
 <div class="paragraph">
 <p>+
-<code>%(decorate:prefix=,suffix=,tag=,separator= )</code></p>
+<span class='synopsis'><code>%</code>(<code>decorate:prefix=,suffix=,tag=,separator=</code> )</span></p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emdescribeltoptionsgtem"><a id="Documentation/pretty-formats.txt-describeoptions" class="anchor" href="#Documentation/pretty-formats.txt-describeoptions"></a><em>%(describe[:&lt;options&gt;])</em> </dt>
 <dd>
 <p>human-readable name, like <a href='{{< relurl "docs/git-describe" >}}'>git-describe[1]</a>; empty string for
-undescribable commits.  The <code>describe</code> string may be followed by a colon and
+undescribable commits.  The <span class='synopsis'><code>describe</code></span> string may be followed by a colon and
 zero or more comma-separated options.  Descriptions can be inconsistent when
 tags are added or removed at the same time.</p>
 <div class="ulist">
@@ -543,11 +543,11 @@ digits as needed to form a unique object name.</p>
 </li>
 <li>
 <p><em>match=&lt;pattern&gt;</em>: Only consider tags matching the given
-<code>glob(7)</code> pattern, excluding the "refs/tags/" prefix.</p>
+<span class='synopsis'><code>glob</code>(<code>7</code>)</span> pattern, excluding the "refs/tags/" prefix.</p>
 </li>
 <li>
 <p><em>exclude=&lt;pattern&gt;</em>: Do not consider tags matching the given
-<code>glob(7)</code> pattern, excluding the "refs/tags/" prefix.</p>
+<span class='synopsis'><code>glob</code>(<code>7</code>)</span> pattern, excluding the "refs/tags/" prefix.</p>
 </li>
 </ul>
 </div>
@@ -555,7 +555,7 @@ digits as needed to form a unique object name.</p>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emSem"><a id="Documentation/pretty-formats.txt-S" class="anchor" href="#Documentation/pretty-formats.txt-S"></a><em>%S</em> </dt>
 <dd>
 <p>ref name given on the command line by which the commit was reached
-(like <code>git log --source</code>), only works with <code>git log</code></p>
+(like <span class='synopsis'><code>git</code> <code>log</code> <code>--source</code></span>), only works with <span class='synopsis'><code>git</code> <code>log</code></span></p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emeem"><a id="Documentation/pretty-formats.txt-e" class="anchor" href="#Documentation/pretty-formats.txt-e"></a><em>%e</em> </dt>
 <dd>
@@ -619,17 +619,18 @@ to sign a signed commit</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emgDem"><a id="Documentation/pretty-formats.txt-gD" class="anchor" href="#Documentation/pretty-formats.txt-gD"></a><em>%gD</em> </dt>
 <dd>
-<p>reflog selector, e.g., <code>refs/stash@{1}</code> or <code>refs/stash@{2
-minutes ago}</code>; the format follows the rules described for the
-<code>-g</code> option. The portion before the <code>@</code> is the refname as
-given on the command line (so <code>git log -g refs/heads/master</code>
-would yield <code>refs/heads/master@{0}</code>).</p>
+<p>reflog selector, e.g., <span class='synopsis'><code>refs/stash@{1}</code></span> or <span class='synopsis'><code>refs/stash@{2</code>
+
+<code>minutes</code> <code>ago}</code></span>; the format follows the rules described for the
+<span class='synopsis'><code>-g</code></span> option. The portion before the <span class='synopsis'><code>@</code></span> is the refname as
+given on the command line (so <span class='synopsis'><code>git</code> <code>log</code> <code>-g</code> <code>refs/heads/master</code></span>
+would yield <span class='synopsis'><code>refs/heads/master@{0}</code></span>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emgdem"><a id="Documentation/pretty-formats.txt-gd" class="anchor" href="#Documentation/pretty-formats.txt-gd"></a><em>%gd</em> </dt>
 <dd>
-<p>shortened reflog selector; same as <code>%gD</code>, but the refname
+<p>shortened reflog selector; same as <span class='synopsis'><code>%gD</code></span>, but the refname
 portion is shortened for human readability (so
-<code>refs/heads/master</code> becomes just <code>master</code>).</p>
+<span class='synopsis'><code>refs/heads/master</code></span> becomes just <span class='synopsis'><code>master</code></span>).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emgnem"><a id="Documentation/pretty-formats.txt-gn" class="anchor" href="#Documentation/pretty-formats.txt-gn"></a><em>%gn</em> </dt>
 <dd>
@@ -656,7 +657,7 @@ portion is shortened for human readability (so
 <dt class="hdlist1" id="Documentation/pretty-formats.txt-emtrailersltoptionsgtem"><a id="Documentation/pretty-formats.txt-trailersoptions" class="anchor" href="#Documentation/pretty-formats.txt-trailersoptions"></a><em>%(trailers[:&lt;options&gt;])</em> </dt>
 <dd>
 <p>display the trailers of the body as interpreted by
-<a href='{{< relurl "docs/git-interpret-trailers" >}}'>git-interpret-trailers[1]</a>. The <code>trailers</code> string may be followed by
+<a href='{{< relurl "docs/git-interpret-trailers" >}}'>git-interpret-trailers[1]</a>. The <span class='synopsis'><code>trailers</code></span> string may be followed by
 a colon and zero or more comma-separated options. If any option is provided
 multiple times, the last occurrence wins.</p>
 <div class="ulist">
@@ -665,11 +666,11 @@ multiple times, the last occurrence wins.</p>
 <p><em>key=&lt;key&gt;</em>: only show trailers with specified &lt;key&gt;. Matching is done
 case-insensitively and trailing colon is optional. If option is
 given multiple times trailer lines matching any of the keys are
-shown. This option automatically enables the <code>only</code> option so that
+shown. This option automatically enables the <span class='synopsis'><code>only</code></span> option so that
 non-trailer lines in the trailer block are hidden. If that is not
-desired it can be disabled with <code>only=false</code>.  E.g.,
-<code>%(trailers:key=Reviewed-by)</code> shows trailer lines with key
-<code>Reviewed-by</code>.</p>
+desired it can be disabled with <span class='synopsis'><code>only=false</code></span>.  E.g.,
+<span class='synopsis'><code>%</code>(<code>trailers:key=Reviewed-by</code>)</span> shows trailer lines with key
+<span class='synopsis'><code>Reviewed-by</code></span>.</p>
 </li>
 <li>
 <p><em>only[=&lt;bool&gt;]</em>: select whether non-trailer lines from the trailer
@@ -679,15 +680,15 @@ block should be included.</p>
 <p><em>separator=&lt;sep&gt;</em>: specify the separator inserted between trailer
 lines. Defaults to a line feed character. The string &lt;sep&gt; may contain
 the literal formatting codes described above. To use comma as
-separator one must use <code>%x2C</code> as it would otherwise be parsed as
-next option. E.g., <code>%(trailers:key=Ticket,separator=%x2C )</code>
+separator one must use <span class='synopsis'><code>%x2C</code></span> as it would otherwise be parsed as
+next option. E.g., <span class='synopsis'><code>%</code>(<code>trailers:key=Ticket,separator=%x2C</code> )</span>
 shows all trailer lines whose key is "Ticket" separated by a comma
 and a space.</p>
 </li>
 <li>
-<p><em>unfold[=&lt;bool&gt;]</em>: make it behave as if interpret-trailer&#8217;s <code>--unfold</code>
+<p><em>unfold[=&lt;bool&gt;]</em>: make it behave as if interpret-trailer&#8217;s <span class='synopsis'><code>--unfold</code></span>
 option was given. E.g.,
-<code>%(trailers:only,unfold=true)</code> unfolds and shows all trailer lines.</p>
+<span class='synopsis'><code>%</code>(<code>trailers:only,unfold=true</code>)</span> unfolds and shows all trailer lines.</p>
 </li>
 <li>
 <p><em>keyonly[=&lt;bool&gt;]</em>: only show the key part of the trailer.</p>
@@ -716,28 +717,28 @@ shares the same semantics as <em>separator=&lt;sep&gt;</em> above.</p>
 </td>
 <td class="content">
 Some placeholders may depend on other options given to the
-revision traversal engine. For example, the <code>%g*</code> reflog options will
+revision traversal engine. For example, the <span class='synopsis'><code>%g*</code></span> reflog options will
 insert an empty string unless we are traversing reflog entries (e.g., by
-<code>git log -g</code>). The <code>%d</code> and <code>%D</code> placeholders will use the "short"
-decoration format if <code>--decorate</code> was not already provided on the command
+<span class='synopsis'><code>git</code> <code>log</code> <code>-g</code></span>). The <span class='synopsis'><code>%d</code></span> and <span class='synopsis'><code>%D</code></span> placeholders will use the "short"
+decoration format if <span class='synopsis'><code>--decorate</code></span> was not already provided on the command
 line.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The boolean options accept an optional value <code>[=&lt;bool-value&gt;]</code>. The values
-<code>true</code>, <code>false</code>, <code>on</code>, <code>off</code> etc. are all accepted. See the "boolean"
+<p>The boolean options accept an optional value <span class='synopsis'>[<code>=</code><em>&lt;bool-value&gt;</em>]</span>. The values
+<span class='synopsis'><code>true</code></span>, <span class='synopsis'><code>false</code></span>, <span class='synopsis'><code>on</code></span>, <span class='synopsis'><code>off</code></span> etc. are all accepted. See the "boolean"
 sub-section in "EXAMPLES" in <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>. If a boolean
 option is given with no value, it&#8217;s enabled.</p>
 </div>
 <div class="paragraph">
-<p>If you add a <code>+</code> (plus sign) after <em>%</em> of a placeholder, a line-feed
+<p>If you add a <span class='synopsis'><code>+</code></span> (plus sign) after <em>%</em> of a placeholder, a line-feed
 is inserted immediately before the expansion if and only if the
 placeholder expands to a non-empty string.</p>
 </div>
 <div class="paragraph">
-<p>If you add a <code>-</code> (minus sign) after <em>%</em> of a placeholder, all consecutive
+<p>If you add a <span class='synopsis'><code>-</code></span> (minus sign) after <em>%</em> of a placeholder, all consecutive
 line-feeds immediately preceding the expansion are deleted if and only if the
 placeholder expands to an empty string.</p>
 </div>
@@ -773,8 +774,8 @@ $ git log -2 --pretty=tformat:%h 4da45bef \
 </div>
 </div>
 <div class="paragraph">
-<p>In addition, any unrecognized string that has a <code>%</code> in it is interpreted
-as if it has <code>tformat:</code> in front of it.  For example, these two are
+<p>In addition, any unrecognized string that has a <span class='synopsis'><code>%</code></span> in it is interpreted
+as if it has <span class='synopsis'><code>tformat:</code></span> in front of it.  For example, these two are
 equivalent:</p>
 </div>
 <div class="listingblock">

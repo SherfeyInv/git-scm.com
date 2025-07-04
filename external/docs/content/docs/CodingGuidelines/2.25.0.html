@@ -668,10 +668,11 @@ declarations should not use "extern", as that is already the default.</p>
 </li>
 <li>
 <p>You can launch gdb around your program using the shorthand GIT_DEBUGGER.
-Run <code>GIT_DEBUGGER=1 ./bin-wrappers/git foo</code> to simply use gdb as is, or
-run <code>GIT_DEBUGGER="&lt;debugger&gt; &lt;debugger-args&gt;" ./bin-wrappers/git foo</code> to
-use your own debugger and arguments. Example: <code>GIT_DEBUGGER="ddd --gdb"
-./bin-wrappers/git log</code> (See <code>wrap-for-bin.sh</code>.)</p>
+Run <span class='synopsis'><code>GIT_DEBUGGER=1</code> <code>./bin-wrappers/git</code> <code>foo</code></span> to simply use gdb as is, or
+run <span class='synopsis'><code>GIT_DEBUGGER="</code><em>&lt;debugger&gt;</em> <em>&lt;debugger-args&gt;</em><code>"</code> <code>./bin-wrappers/git</code> <code>foo</code></span> to
+use your own debugger and arguments. Example: <span class='synopsis'><code>GIT_DEBUGGER="ddd</code> <code>--gdb"</code>
+
+<code>./bin-wrappers/git</code> <code>log</code></span> (See <span class='synopsis'><code>wrap-for-bin.sh</code></span>.)</p>
 </li>
 </ul>
 </div>

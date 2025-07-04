@@ -135,11 +135,11 @@ $ git log v2.43.. curses/ <b class="conum">(12)</b></pre>
 <p>create a new topic branch.</p>
 </li>
 <li>
-<p>revert your botched changes in <code>curses/ux_audio_oss.c</code>.</p>
+<p>revert your botched changes in <span class='synopsis'><code>curses/ux_audio_oss.c</code></span>.</p>
 </li>
 <li>
 <p>you need to tell Git if you added a new file; removal and
-modification will be caught if you do <code>git commit -a</code> later.</p>
+modification will be caught if you do <span class='synopsis'><code>git</code> <code>commit</code> <code>-a</code></span> later.</p>
 </li>
 <li>
 <p>to see what changes you are committing.</p>
@@ -165,12 +165,12 @@ you originally wrote.</p>
 </li>
 <li>
 <p>review commit logs; other forms to limit output can be
-combined and include <code>--max-count=10</code> (show 10 commits),
-<code>--until=2005-12-10</code>, etc.</p>
+combined and include <span class='synopsis'><code>--max-count=10</code></span> (show 10 commits),
+<span class='synopsis'><code>--until=2005-12-10</code></span>, etc.</p>
 </li>
 <li>
-<p>view only the changes that touch what&#8217;s in <code>curses/</code>
-directory, since <code>v2.43</code> tag.</p>
+<p>view only the changes that touch what&#8217;s in <span class='synopsis'><code>curses/</code></span>
+directory, since <span class='synopsis'><code>v2.43</code></span> tag.</p>
 </li>
 </ol>
 </div>
@@ -237,7 +237,7 @@ $ git fetch --tags <b class="conum">(8)</b></pre>
 <p>extract patches from your branch for e-mail submission.</p>
 </li>
 <li>
-<p><code>git pull</code> fetches from <code>origin</code> by default and merges into the
+<p><span class='synopsis'><code>git</code> <code>pull</code></span> fetches from <span class='synopsis'><code>origin</code></span> by default and merges into the
 current branch.</p>
 </li>
 <li>
@@ -255,8 +255,8 @@ area we are interested in.</p>
 <p>garbage collect leftover objects from reverted pull.</p>
 </li>
 <li>
-<p>from time to time, obtain official tags from the <code>origin</code>
-and store them under <code>.git/refs/tags/</code>.</p>
+<p>from time to time, obtain official tags from the <span class='synopsis'><code>origin</code></span>
+and store them under <span class='synopsis'><code>.git/refs/tags/</code></span>.</p>
 </li>
 </ol>
 </div>
@@ -291,15 +291,15 @@ machine.</p>
 </li>
 <li>
 <p>clone sets these configuration variables by default.
-It arranges <code>git pull</code> to fetch and store the branches of mothership
-machine to local <code>remotes/origin/*</code> remote-tracking branches.</p>
+It arranges <span class='synopsis'><code>git</code> <code>pull</code></span> to fetch and store the branches of mothership
+machine to local <span class='synopsis'><code>remotes/origin/*</code></span> remote-tracking branches.</p>
 </li>
 <li>
-<p>arrange <code>git push</code> to push local <code>master</code> branch to
-<code>remotes/satellite/master</code> branch of the mothership machine.</p>
+<p>arrange <span class='synopsis'><code>git</code> <code>push</code></span> to push local <span class='synopsis'><code>master</code></span> branch to
+<span class='synopsis'><code>remotes/satellite/master</code></span> branch of the mothership machine.</p>
 </li>
 <li>
-<p>push will stash our work away on <code>remotes/satellite/master</code>
+<p>push will stash our work away on <span class='synopsis'><code>remotes/satellite/master</code></span>
 remote-tracking branch on the mothership machine.  You could use this
 as a back-up method.</p>
 </li>
@@ -328,7 +328,7 @@ $ git format-patch -k -m --stdout v2.6.14..private2.6.14 |
 tag.</p>
 </li>
 <li>
-<p>forward port all changes in <code>private2.6.14</code> branch to <code>master</code> branch
+<p>forward port all changes in <span class='synopsis'><code>private2.6.14</code></span> branch to <span class='synopsis'><code>master</code></span> branch
 without a formal "merging".</p>
 </li>
 </ol>
@@ -424,7 +424,7 @@ sign-offs.</p>
 master or exposed as a part of a stable branch.</p>
 </li>
 <li>
-<p>restart <code>pu</code> every time from the next.</p>
+<p>restart <span class='synopsis'><code>pu</code></span> every time from the next.</p>
 </li>
 <li>
 <p>and bundle topic branches still cooking.</p>
@@ -437,7 +437,7 @@ master or exposed as a part of a stable branch.</p>
 </li>
 <li>
 <p>make sure I did not accidentally rewind master beyond what I
-already pushed out.  <code>ko</code> shorthand points at the repository I have
+already pushed out.  <span class='synopsis'><code>ko</code></span> shorthand points at the repository I have
 at kernel.org, and looks like this:</p>
 <div class="listingblock">
 <div class="content">
@@ -453,9 +453,9 @@ Push: maint</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>In the output from <code>git show-branch</code>, <code>master</code> should have
-everything <code>ko-master</code> has, and <code>next</code> should have
-everything <code>ko-next</code> has.</p>
+<p>In the output from <span class='synopsis'><code>git</code> <code>show-branch</code></span>, <span class='synopsis'><code>master</code></span> should have
+everything <span class='synopsis'><code>ko-master</code></span> has, and <span class='synopsis'><code>next</code></span> should have
+everything <span class='synopsis'><code>ko-next</code></span> has.</p>
 </div>
 </li>
 </ol>
@@ -568,7 +568,7 @@ $ grep git /etc/shells <b class="conum">(2)</b>
 <ol>
 <li>
 <p>log-in shell is set to /usr/bin/git-shell, which does not
-allow anything but <code>git push</code> and <code>git pull</code>.  The users should
+allow anything but <span class='synopsis'><code>git</code> <code>push</code></span> and <span class='synopsis'><code>git</code> <code>pull</code></span>.  The users should
 get an ssh access to the machine.</p>
 </li>
 <li>

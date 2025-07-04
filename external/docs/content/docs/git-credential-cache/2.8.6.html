@@ -44,7 +44,7 @@ domain socket, restricted to the current user by filesystem permissions.</p>
 <div class="paragraph">
 <p>You probably don&#8217;t want to invoke this command directly; it is meant to
 be used as a credential helper by other parts of Git. See
-<a href='{{< relurl "docs/gitcredentials" >}}'>gitcredentials[7]</a> or <code>EXAMPLES</code> below.</p>
+<a href='{{< relurl "docs/gitcredentials" >}}'>gitcredentials[7]</a> or <span class='synopsis'><code>EXAMPLES</code></span> below.</p>
 </div>
 </div>
 </div>
@@ -59,9 +59,9 @@ be used as a credential helper by other parts of Git. See
 </dd>
 <dt class="hdlist1" id="Documentation/git-credential-cache.txt---socketltpathgt"><a id="Documentation/git-credential-cache.txt---socketpath" class="anchor" href="#Documentation/git-credential-cache.txt---socketpath"></a>--socket &lt;path&gt; </dt>
 <dd>
-<p>Use <code>&lt;path&gt;</code> to contact a running cache daemon (or start a new
+<p>Use <span class='synopsis'><em>&lt;path&gt;</em></span> to contact a running cache daemon (or start a new
 cache daemon if one is not started). Defaults to
-<code>~/.git-credential-cache/socket</code>. If your home directory is on a
+<span class='synopsis'><code>~/.git-credential-cache/socket</code></span>. If your home directory is on a
 network-mounted filesystem, you may need to change this to a
 local filesystem. You must specify an absolute path.</p>
 </dd>
@@ -74,7 +74,7 @@ local filesystem. You must specify an absolute path.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you would like the daemon to exit early, forgetting all cached
-credentials before their timeout, you can issue an <code>exit</code> action:</p>
+credentials before their timeout, you can issue an <span class='synopsis'><code>exit</code></span> action:</p>
 </div>
 <div class="listingblock">
 <div class="content">

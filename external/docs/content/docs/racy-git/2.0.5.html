@@ -28,9 +28,10 @@ often does not, match the files in the working tree.</p>
 <div class="paragraph">
 <p>There are cases Git needs to examine the differences between the
 virtual working tree state in the index and the files in the
-working tree.  The most obvious case is when the user asks <code>git
-diff</code> (or its low level implementation, <code>git diff-files</code>) or
-<code>git-ls-files --modified</code>.  In addition, Git internally checks
+working tree.  The most obvious case is when the user asks <span class='synopsis'><code>git</code>
+
+<code>diff</code></span> (or its low level implementation, <span class='synopsis'><code>git</code> <code>diff-files</code></span>) or
+<span class='synopsis'><code>git-ls-files</code> <code>--modified</code></span>.  In addition, Git internally checks
 if the files in the working tree are different from what are
 recorded in the index to avoid stomping on local changes in them
 during patch application, switching branches, and merging.</p>
@@ -38,26 +39,26 @@ during patch application, switching branches, and merging.</p>
 <div class="paragraph">
 <p>In order to speed up this comparison between the files in the
 working tree and the index entries, the index entries record the
-information obtained from the filesystem via <code>lstat(2)</code> system
+information obtained from the filesystem via <span class='synopsis'><code>lstat</code>(<code>2</code>)</span> system
 call when they were last updated.  When checking if they differ,
-Git first runs <code>lstat(2)</code> on the files and compares the result
+Git first runs <span class='synopsis'><code>lstat</code>(<code>2</code>)</span> on the files and compares the result
 with this information (this is what was originally done by the
-<code>ce_match_stat()</code> function, but the current code does it in
-<code>ce_match_stat_basic()</code> function).  If some of these "cached
+<span class='synopsis'><code>ce_match_stat</code>()</span> function, but the current code does it in
+<span class='synopsis'><code>ce_match_stat_basic</code>()</span> function).  If some of these "cached
 stat information" fields do not match, Git can tell that the
 files are modified without even looking at their contents.</p>
 </div>
 <div class="paragraph">
-<p>Note: not all members in <code>struct stat</code> obtained via <code>lstat(2)</code>
-are used for this comparison.  For example, <code>st_atime</code> obviously
+<p>Note: not all members in <span class='synopsis'><code>struct</code> <code>stat</code></span> obtained via <span class='synopsis'><code>lstat</code>(<code>2</code>)</span>
+are used for this comparison.  For example, <span class='synopsis'><code>st_atime</code></span> obviously
 is not useful.  Currently, Git compares the file type (regular
 files vs symbolic links) and executable bits (only for regular
-files) from <code>st_mode</code> member, <code>st_mtime</code> and <code>st_ctime</code>
-timestamps, <code>st_uid</code>, <code>st_gid</code>, <code>st_ino</code>, and <code>st_size</code> members.
-With a <code>USE_STDEV</code> compile-time option, <code>st_dev</code> is also
+files) from <span class='synopsis'><code>st_mode</code></span> member, <span class='synopsis'><code>st_mtime</code></span> and <span class='synopsis'><code>st_ctime</code></span>
+timestamps, <span class='synopsis'><code>st_uid</code></span>, <span class='synopsis'><code>st_gid</code></span>, <span class='synopsis'><code>st_ino</code></span>, and <span class='synopsis'><code>st_size</code></span> members.
+With a <span class='synopsis'><code>USE_STDEV</code></span> compile-time option, <span class='synopsis'><code>st_dev</code></span> is also
 compared, but this is not enabled by default because this member
-is not stable on network filesystems.  With <code>USE_NSEC</code>
-compile-time option, <code>st_mtim.tv_nsec</code> and <code>st_ctim.tv_nsec</code>
+is not stable on network filesystems.  With <span class='synopsis'><code>USE_NSEC</code></span>
+compile-time option, <span class='synopsis'><code>st_mtim.tv_nsec</code></span> and <span class='synopsis'><code>st_ctim.tv_nsec</code></span>
 members are also compared, but this is not enabled by default
 because in-core timestamps can have finer granularity than
 on-disk timestamps, resulting in meaningless changes when an
@@ -83,13 +84,13 @@ $ git update-index 'foo'
 </div>
 </div>
 <div class="paragraph">
-<p>The first <code>update-index</code> computes the object name of the
-contents of file <code>foo</code> and updates the index entry for <code>foo</code>
-along with the <code>struct stat</code> information.  If the modification
-that follows it happens very fast so that the file&#8217;s <code>st_mtime</code>
+<p>The first <span class='synopsis'><code>update-index</code></span> computes the object name of the
+contents of file <span class='synopsis'><code>foo</code></span> and updates the index entry for <span class='synopsis'><code>foo</code></span>
+along with the <span class='synopsis'><code>struct</code> <code>stat</code></span> information.  If the modification
+that follows it happens very fast so that the file&#8217;s <span class='synopsis'><code>st_mtime</code></span>
 timestamp does not change, after this sequence, the cached stat
 information the index entry records still exactly match what you
-would see in the filesystem, even though the file <code>foo</code> is now
+would see in the filesystem, even though the file <span class='synopsis'><code>foo</code></span> is now
 different.
 This way, Git can incorrectly think files in the working tree
 are unmodified even though they actually are.  This is called
@@ -104,26 +105,27 @@ are called "racily clean".</p>
 <ol class="arabic">
 <li>
 <p>When the cached stat information says the file has not been
-modified, and the <code>st_mtime</code> is the same as (or newer than)
-the timestamp of the index file itself (which is the time <code>git
-update-index foo</code> finished running in the above example), it
+modified, and the <span class='synopsis'><code>st_mtime</code></span> is the same as (or newer than)
+the timestamp of the index file itself (which is the time <span class='synopsis'><code>git</code>
+
+<code>update-index</code> <code>foo</code></span> finished running in the above example), it
 also compares the contents with the object registered in the
 index entry to make sure they match.</p>
 </li>
 <li>
 <p>When the index file is updated that contains racily clean
-entries, cached <code>st_size</code> information is truncated to zero
+entries, cached <span class='synopsis'><code>st_size</code></span> information is truncated to zero
 before writing a new version of the index file.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
 <p>Because the index file itself is written after collecting all
-the stat information from updated paths, <code>st_mtime</code> timestamp of
+the stat information from updated paths, <span class='synopsis'><code>st_mtime</code></span> timestamp of
 it is usually the same as or newer than any of the paths the
 index contains.  And no matter how quick the modification that
-follows <code>git update-index foo</code> finishes, the resulting
-<code>st_mtime</code> timestamp on <code>foo</code> cannot get a value earlier
+follows <span class='synopsis'><code>git</code> <code>update-index</code> <code>foo</code></span> finishes, the resulting
+<span class='synopsis'><code>st_mtime</code></span> timestamp on <span class='synopsis'><code>foo</code></span> cannot get a value earlier
 than the index file.  Therefore, index entries that can be
 racily clean are limited to the ones that have the same
 timestamp as the index file itself.</p>
@@ -131,10 +133,10 @@ timestamp as the index file itself.</p>
 <div class="paragraph">
 <p>The callers that want to check if an index entry matches the
 corresponding file in the working tree continue to call
-<code>ce_match_stat()</code>, but with this change, <code>ce_match_stat()</code> uses
-<code>ce_modified_check_fs()</code> to see if racily clean ones are
+<span class='synopsis'><code>ce_match_stat</code>()</span>, but with this change, <span class='synopsis'><code>ce_match_stat</code>()</span> uses
+<span class='synopsis'><code>ce_modified_check_fs</code>()</span> to see if racily clean ones are
 actually clean after comparing the cached stat information using
-<code>ce_match_stat_basic()</code>.</p>
+<span class='synopsis'><code>ce_match_stat_basic</code>()</span>.</p>
 </div>
 <div class="paragraph">
 <p>The problem the latter solves is this sequence:</p>
@@ -149,13 +151,13 @@ $ git update-index 'bar'</pre>
 </div>
 <div class="paragraph">
 <p>Without the latter, the timestamp of the index file gets a newer
-value, and falsely clean entry <code>foo</code> would not be caught by the
+value, and falsely clean entry <span class='synopsis'><code>foo</code></span> would not be caught by the
 timestamp comparison check done with the former logic anymore.
-The latter makes sure that the cached stat information for <code>foo</code>
+The latter makes sure that the cached stat information for <span class='synopsis'><code>foo</code></span>
 would never match with the file in the working tree, so later
-checks by <code>ce_match_stat_basic()</code> would report that the index entry
+checks by <span class='synopsis'><code>ce_match_stat_basic</code>()</span> would report that the index entry
 does not match the file and Git does not have to fall back on more
-expensive <code>ce_modified_check_fs()</code>.</p>
+expensive <span class='synopsis'><code>ce_modified_check_fs</code>()</span>.</p>
 </div>
 </div>
 </div>
@@ -163,11 +165,11 @@ expensive <code>ce_modified_check_fs()</code>.</p>
 <h2 id="_runtime_penalty"><a class="anchor" href="#_runtime_penalty"></a>Runtime penalty</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The runtime penalty of falling back to <code>ce_modified_check_fs()</code>
-from <code>ce_match_stat()</code> can be very expensive when there are many
+<p>The runtime penalty of falling back to <span class='synopsis'><code>ce_modified_check_fs</code>()</span>
+from <span class='synopsis'><code>ce_match_stat</code>()</span> can be very expensive when there are many
 racily clean entries.  An obvious way to artificially create
 this situation is to give the same timestamp to all the files in
-the working tree in a large project, run <code>git update-index</code> on
+the working tree in a large project, run <span class='synopsis'><code>git</code> <code>update-index</code></span> on
 them, and give the same timestamp to the index file:</p>
 </div>
 <div class="literalblock">
@@ -195,12 +197,12 @@ $ /usr/bin/time git diff-files
 </div>
 </div>
 <div class="paragraph">
-<p>Running <code>git update-index</code> in the middle checked the racily
-clean entries, and left the cached <code>st_mtime</code> for all the paths
+<p>Running <span class='synopsis'><code>git</code> <code>update-index</code></span> in the middle checked the racily
+clean entries, and left the cached <span class='synopsis'><code>st_mtime</code></span> for all the paths
 intact because they were actually clean (so this step took about
-the same amount of time as the first <code>git diff-files</code>).  After
+the same amount of time as the first <span class='synopsis'><code>git</code> <code>diff-files</code></span>).  After
 that, they are not racily clean anymore but are truly clean, so
-the second invocation of <code>git diff-files</code> fully took advantage
+the second invocation of <span class='synopsis'><code>git</code> <code>diff-files</code></span> fully took advantage
 of the cached stat information.</p>
 </div>
 </div>
@@ -224,16 +226,16 @@ that can record recent timestamp for large number of paths are:</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Initial <code>git add .</code> of a large project.</p>
+<p>Initial <span class='synopsis'><code>git</code> <code>add</code> <code>.</code></span> of a large project.</p>
 </li>
 <li>
-<p><code>git checkout</code> of a large project from an empty index into an
+<p><span class='synopsis'><code>git</code> <code>checkout</code></span> of a large project from an empty index into an
 unpopulated working tree.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>Note: switching branches with <code>git checkout</code> keeps the cached
+<p>Note: switching branches with <span class='synopsis'><code>git</code> <code>checkout</code></span> keeps the cached
 stat information of existing working tree files that are the
 same between the current branch and the new branch, which are
 all older than the resulting index file, and they will not

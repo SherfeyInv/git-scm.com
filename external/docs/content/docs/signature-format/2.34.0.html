@@ -49,13 +49,13 @@ aliases:
 <p>Git uses cryptographic signatures in various places, currently objects (tags,
 commits, mergetags) and transactions (pushes). In every case, the command which
 is about to create an object or transaction determines a payload from that,
-calls gpg to obtain a detached signature for the payload (<code>gpg -bsa</code>) and
+calls gpg to obtain a detached signature for the payload (<span class='synopsis'><code>gpg</code> <code>-bsa</code></span>) and
 embeds the signature into the object or transaction.</p>
 </div>
 <div class="paragraph">
-<p>Signatures always begin with <code>-----BEGIN PGP SIGNATURE-----</code>
-and end with <code>-----END PGP SIGNATURE-----</code>, unless gpg is told to
-produce RFC1991 signatures which use <code>MESSAGE</code> instead of <code>SIGNATURE</code>.</p>
+<p>Signatures always begin with <span class='synopsis'><code>-----BEGIN</code> <code>PGP</code> <code>SIGNATURE-----</code></span>
+and end with <span class='synopsis'><code>-----END</code> <code>PGP</code> <code>SIGNATURE-----</code></span>, unless gpg is told to
+produce RFC1991 signatures which use <span class='synopsis'><code>MESSAGE</code></span> instead of <span class='synopsis'><code>SIGNATURE</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>Signatures sometimes appear as a part of the normal payload
@@ -71,7 +71,7 @@ line.</p>
 <div class="paragraph">
 <p>This is even true for an originally empty line.  In the following
 examples, the end of line that ends with a whitespace letter is
-highlighted with a <code>$</code> sign; if you are trying to recreate these
+highlighted with a <span class='synopsis'><code>$</code></span> sign; if you are trying to recreate these
 example by hand, do not cut and paste them---they are there
 primarily to highlight extra whitespace at the end of some lines.</p>
 </div>
@@ -87,7 +87,7 @@ on the type of the object resp. transaction.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>created by: <code>git tag -s</code></p>
+<p>created by: <span class='synopsis'><code>git</code> <code>tag</code> <code>-s</code></span></p>
 </li>
 <li>
 <p>payload: annotated tag object</p>
@@ -96,7 +96,7 @@ on the type of the object resp. transaction.</p>
 <p>embedding: append the signature to the unsigned tag object</p>
 </li>
 <li>
-<p>example: tag <code>signedtag</code> with subject <code>signed tag</code></p>
+<p>example: tag <span class='synopsis'><code>signedtag</code></span> with subject <span class='synopsis'><code>signed</code> <code>tag</code></span></p>
 </li>
 </ul>
 </div>
@@ -126,7 +126,7 @@ lZyI6HWixKJkWw8lE9aAOD9TmTW9sFJwcVAzmAuFX2kUreDUKMZduGcoRYGpD7E=
 <div class="ulist">
 <ul>
 <li>
-<p>verify with: <code>git verify-tag [-v]</code> or <code>git tag -v</code></p>
+<p>verify with: <span class='synopsis'><code>git</code> <code>verify-tag</code> [<code>-v</code>]</span> or <span class='synopsis'><code>git</code> <code>tag</code> <code>-v</code></span></p>
 </li>
 </ul>
 </div>
@@ -155,17 +155,17 @@ signed tag message body</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>created by: <code>git commit -S</code></p>
+<p>created by: <span class='synopsis'><code>git</code> <code>commit</code> <code>-S</code></span></p>
 </li>
 <li>
 <p>payload: commit object</p>
 </li>
 <li>
-<p>embedding: header entry <code>gpgsig</code>
+<p>embedding: header entry <span class='synopsis'><code>gpgsig</code></span>
 (content is preceded by a space)</p>
 </li>
 <li>
-<p>example: commit with subject <code>signed commit</code></p>
+<p>example: commit with subject <span class='synopsis'><code>signed</code> <code>commit</code></span></p>
 </li>
 </ul>
 </div>
@@ -195,7 +195,7 @@ signed commit message body</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>verify with: <code>git verify-commit [-v]</code> (or <code>git show --show-signature</code>)</p>
+<p>verify with: <span class='synopsis'><code>git</code> <code>verify-commit</code> [<code>-v</code>]</span> (or <span class='synopsis'><code>git</code> <code>show</code> <code>--show-signature</code></span>)</p>
 </li>
 </ul>
 </div>
@@ -224,14 +224,14 @@ signed commit message body</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>created by: <code>git merge</code> on signed tag</p>
+<p>created by: <span class='synopsis'><code>git</code> <code>merge</code></span> on signed tag</p>
 </li>
 <li>
 <p>payload/embedding: the whole signed tag object is embedded into
-the (merge) commit object as header entry <code>mergetag</code></p>
+the (merge) commit object as header entry <span class='synopsis'><code>mergetag</code></span></p>
 </li>
 <li>
-<p>example: merge of the signed tag <code>signedtag</code> as above</p>
+<p>example: merge of the signed tag <span class='synopsis'><code>signedtag</code></span> as above</p>
 </li>
 </ul>
 </div>
@@ -279,7 +279,7 @@ signed tag message body
 <ul>
 <li>
 <p>verify with: verification is embedded in merge commit message by default,
-alternatively with <code>git show --show-signature</code>:</p>
+alternatively with <span class='synopsis'><code>git</code> <code>show</code> <code>--show-signature</code></span>:</p>
 </li>
 </ul>
 </div>

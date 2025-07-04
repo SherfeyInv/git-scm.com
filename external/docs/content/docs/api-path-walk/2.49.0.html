@@ -20,7 +20,7 @@ in batches based on a common path they appear in, or by type.</p>
 <div class="paragraph">
 <p>For example, all reachable commits are visited in a group. All tags are
 visited in a group. Then, all root trees are visited. At some point, all
-blobs reachable via a path <code>my/dir/to/A</code> are visited. When there are
+blobs reachable via a path <span class='synopsis'><code>my/dir/to/A</code></span> are visited. When there are
 multiple paths possible to reach the same object, then only one of those
 paths is used to visit the object.</p>
 </div>
@@ -30,58 +30,58 @@ paths is used to visit the object.</p>
 <h2 id="_basics"><a class="anchor" href="#_basics"></a>Basics</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To use the path-walk API, include <code>path-walk.h</code> and call
-<code>walk_objects_by_path()</code> with a customized <code>path_walk_info</code> struct. The
+<p>To use the path-walk API, include <span class='synopsis'><code>path-walk.h</code></span> and call
+<span class='synopsis'><code>walk_objects_by_path</code>()</span> with a customized <span class='synopsis'><code>path_walk_info</code></span> struct. The
 struct is used to set all of the options for how the walk should proceed.
 Let&#8217;s dig into the different options and their use.</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-codepathfncodeandcodepathfndatacode"><a id="Documentation/technical/api-path-walk.txt-pathfnandpathfndata" class="anchor" href="#Documentation/technical/api-path-walk.txt-pathfnandpathfndata"></a><code>path_fn</code> and <code>path_fn_data</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-spanclasssynopsiscodepathfncodespanandspanclasssynopsiscodepathfndatacodespan"><a id="Documentation/technical/api-path-walk.txt-pathfnandpathfndata" class="anchor" href="#Documentation/technical/api-path-walk.txt-pathfnandpathfndata"></a><span class='synopsis'><code>path_fn</code></span> and <span class='synopsis'><code>path_fn_data</code></span> </dt>
 <dd>
-<p>The most important option is the <code>path_fn</code> option, which is a
+<p>The most important option is the <span class='synopsis'><code>path_fn</code></span> option, which is a
 function pointer to the callback that can execute logic on the
 object IDs for objects grouped by type and path. This function
-also receives a <code>data</code> value that corresponds to the
-<code>path_fn_data</code> member, for providing custom data structures to
+also receives a <span class='synopsis'><code>data</code></span> value that corresponds to the
+<span class='synopsis'><code>path_fn_data</code></span> member, for providing custom data structures to
 this callback function.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-coderevscode"><a id="Documentation/technical/api-path-walk.txt-revs" class="anchor" href="#Documentation/technical/api-path-walk.txt-revs"></a><code>revs</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-spanclasssynopsiscoderevscodespan"><a id="Documentation/technical/api-path-walk.txt-revs" class="anchor" href="#Documentation/technical/api-path-walk.txt-revs"></a><span class='synopsis'><code>revs</code></span> </dt>
 <dd>
 <p>To configure the exact details of the reachable set of objects,
-use the <code>revs</code> member and initialize it using the revision
-machinery in <code>revision.h</code>. Initialize <code>revs</code> using calls such as
-<code>setup_revisions()</code> or <code>parse_revision_opt()</code>. Do not call
-<code>prepare_revision_walk()</code>, as that will be called within
-<code>walk_objects_by_path()</code>.</p>
+use the <span class='synopsis'><code>revs</code></span> member and initialize it using the revision
+machinery in <span class='synopsis'><code>revision.h</code></span>. Initialize <span class='synopsis'><code>revs</code></span> using calls such as
+<span class='synopsis'><code>setup_revisions</code>()</span> or <span class='synopsis'><code>parse_revision_opt</code>()</span>. Do not call
+<span class='synopsis'><code>prepare_revision_walk</code>()</span>, as that will be called within
+<span class='synopsis'><code>walk_objects_by_path</code>()</span>.</p>
 <div class="paragraph">
-<p>It is also important that you do not specify the <code>--objects</code> flag for the
-<code>revs</code> struct. The revision walk should only be used to walk commits, and
+<p>It is also important that you do not specify the <span class='synopsis'><code>--objects</code></span> flag for the
+<span class='synopsis'><code>revs</code></span> struct. The revision walk should only be used to walk commits, and
 the objects will be walked in a separate way based on those starting
 commits.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-codecommitscodecodeblobscodecodetreescodecodetagscode"><a id="Documentation/technical/api-path-walk.txt-commitsblobstreestags" class="anchor" href="#Documentation/technical/api-path-walk.txt-commitsblobstreestags"></a><code>commits</code>, <code>blobs</code>, <code>trees</code>, <code>tags</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-spanclasssynopsiscodecommitscodespanspanclasssynopsiscodeblobscodespanspanclasssynopsiscodetreescodespanspanclasssynopsiscodetagscodespan"><a id="Documentation/technical/api-path-walk.txt-commitsblobstreestags" class="anchor" href="#Documentation/technical/api-path-walk.txt-commitsblobstreestags"></a><span class='synopsis'><code>commits</code></span>, <span class='synopsis'><code>blobs</code></span>, <span class='synopsis'><code>trees</code></span>, <span class='synopsis'><code>tags</code></span> </dt>
 <dd>
 <p>By default, these members are enabled and signal that the path-walk
-API should call the <code>path_fn</code> on objects of these types. Specialized
+API should call the <span class='synopsis'><code>path_fn</code></span> on objects of these types. Specialized
 applications could disable some options to make it simpler to walk
-the objects or to have fewer calls to <code>path_fn</code>.</p>
+the objects or to have fewer calls to <span class='synopsis'><code>path_fn</code></span>.</p>
 <div class="paragraph">
 <p>While it is possible to walk only commits in this way, consumers would be
 better off using the revision walk API instead.</p>
 </div>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-codeprunealluninterestingcode"><a id="Documentation/technical/api-path-walk.txt-prunealluninteresting" class="anchor" href="#Documentation/technical/api-path-walk.txt-prunealluninteresting"></a><code>prune_all_uninteresting</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-spanclasssynopsiscodeprunealluninterestingcodespan"><a id="Documentation/technical/api-path-walk.txt-prunealluninteresting" class="anchor" href="#Documentation/technical/api-path-walk.txt-prunealluninteresting"></a><span class='synopsis'><code>prune_all_uninteresting</code></span> </dt>
 <dd>
 <p>By default, all reachable paths are emitted by the path-walk API.
 This option allows consumers to declare that they are not
 interested in paths where all included objects are marked with the
-<code>UNINTERESTING</code> flag. This requires using the <code>boundary</code> option in
+<span class='synopsis'><code>UNINTERESTING</code></span> flag. This requires using the <span class='synopsis'><code>boundary</code></span> option in
 the revision walk so that the walk emits commits marked with the
-<code>UNINTERESTING</code> flag.</p>
+<span class='synopsis'><code>UNINTERESTING</code></span> flag.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-codeplcode"><a id="Documentation/technical/api-path-walk.txt-pl" class="anchor" href="#Documentation/technical/api-path-walk.txt-pl"></a><code>pl</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-path-walk.txt-spanclasssynopsiscodeplcodespan"><a id="Documentation/technical/api-path-walk.txt-pl" class="anchor" href="#Documentation/technical/api-path-walk.txt-pl"></a><span class='synopsis'><code>pl</code></span> </dt>
 <dd>
 <p>This pattern list pointer allows focusing the path-walk search to
 a set of patterns, only emitting paths that match the given
@@ -99,8 +99,8 @@ API can prune the set of paths it walks to improve performance.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>See example usages in:
-	<code>t/helper/test-path-walk.c</code>,
-	<code>builtin/backfill.c</code></p>
+	<span class='synopsis'><code>t/helper/test-path-walk.c</code></span>,
+	<span class='synopsis'><code>builtin/backfill.c</code></span></p>
 </div>
 </div>
 </div>

@@ -90,7 +90,7 @@ closely as possible.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt---export-all"><a class="anchor" href="#Documentation/git-cvsserver.txt---export-all"></a>--export-all </dt>
 <dd>
-<p>Don&#8217;t check for <code>gitcvs.enabled</code> in config. You also have to specify a list
+<p>Don&#8217;t check for <span class='synopsis'><code>gitcvs.enabled</code></span> in config. You also have to specify a list
 of allowed directories (see below) if you want to use this option.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt--V"><a class="anchor" href="#Documentation/git-cvsserver.txt--V"></a>-V </dt>
@@ -108,7 +108,7 @@ of allowed directories (see below) if you want to use this option.</p>
 <dd>
 <p>The remaining arguments provide a list of directories. If no directories
 are given, then all are allowed. Repositories within these directories
-still require the <code>gitcvs.enabled</code> config option, unless <code>--export-all</code>
+still require the <span class='synopsis'><code>gitcvs.enabled</code></span> config option, unless <span class='synopsis'><code>--export-all</code></span>
 is specified.</p>
 </dd>
 </dl>
@@ -197,7 +197,7 @@ pwhash in NetBSD) and paste it in the right location.</p>
 <div class="paragraph">
 <p>No special setup is needed for SSH access, other than having Git tools
 in the PATH. If you have clients that do not accept the CVS_SERVER
-environment variable, you can rename <em>git-cvsserver</em> to <code>cvs</code>.</p>
+environment variable, you can rename <em>git-cvsserver</em> to <span class='synopsis'><code>cvs</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>Note: Newer CVS versions (&gt;= 1.12.11) also support specifying
@@ -212,7 +212,7 @@ CVS_SERVER directly in CVSROOT like</p>
 <p>This has the advantage that it will be saved in your <em>CVS/Root</em> files and
 you don&#8217;t need to worry about always setting the correct environment
 variable.  SSH users restricted to <em>git-shell</em> don&#8217;t need to override the default
-with CVS_SERVER (and shouldn&#8217;t) as <em>git-shell</em> understands <code>cvs</code> to mean
+with CVS_SERVER (and shouldn&#8217;t) as <em>git-shell</em> understands <span class='synopsis'><code>cvs</code></span> to mean
 <em>git-cvsserver</em> and pretends that the other end runs the real <em>cvs</em> better.</p>
 </div>
 </div>
@@ -239,7 +239,7 @@ SSH, the users of course also need write access to the Git repository itself.</p
 </div>
 <div class="paragraph">
 <p>You also need to ensure that each repository is "bare" (without a Git index
-file) for <code>cvs commit</code> to work. See <a href='{{< relurl "docs/gitcvs-migration" >}}'>gitcvs-migration[7]</a>.</p>
+file) for <span class='synopsis'><code>cvs</code> <code>commit</code></span> to work. See <a href='{{< relurl "docs/gitcvs-migration" >}}'>gitcvs-migration[7]</a>.</p>
 </div>
 <div id="configaccessmethod" class="paragraph">
 <p>All configuration variables can also be overridden for a specific method of
@@ -287,8 +287,8 @@ shell is bash, .bashrc may be a reasonable alternative.</p>
 <p>Clients should now be able to check out the project. Use the CVS <em>module</em>
 name to indicate what Git <em>head</em> you want to check out.  This also sets the
 name of your newly checked-out directory, unless you tell it otherwise with
-<code>-d &lt;dir_name&gt;</code>.  For example, this checks out <em>master</em> branch to the
-<code>project-master</code> directory:</p>
+<span class='synopsis'><code>-d</code> <em>&lt;dir_name&gt;</em></span>.  For example, this checks out <em>master</em> branch to the
+<span class='synopsis'><code>project-master</code></span> directory:</p>
 <div class="listingblock">
 <div class="content">
 <pre>   cvs co -d project-master master</pre>
@@ -309,7 +309,7 @@ CVS revision numbers. The database needs to be
 updated (i.e. written to) after every commit.</p>
 </div>
 <div class="paragraph">
-<p>If the commit is done directly by using <code>git</code> (as opposed to
+<p>If the commit is done directly by using <span class='synopsis'><code>git</code></span> (as opposed to
 using <em>git-cvsserver</em>) the update will need to happen on the
 next repository access by <em>git-cvsserver</em>, independent of
 access method and requested operation.</p>
@@ -322,7 +322,7 @@ that the database is up to date any time <em>git-cvsserver</em> is executed).</p
 </div>
 <div class="paragraph">
 <p>By default it uses SQLite databases in the Git directory, named
-<code>gitcvs.&lt;module_name&gt;.sqlite</code>. Note that the SQLite backend creates
+<span class='synopsis'><code>gitcvs.</code><em>&lt;module_name&gt;</em><code>.sqlite</code></span>. Note that the SQLite backend creates
 temporary files in the same directory as the database file on
 write so it might not be enough to grant the users using
 <em>git-cvsserver</em> write access to the database file without granting
@@ -335,7 +335,7 @@ Example: For merged branches, <em>git-cvsserver</em> only tracks
 one branch of development, and after a <em>git merge</em> an
 incrementally updated database may track a different branch
 than a database regenerated from scratch, causing inconsistent
-CVS revision numbers. <code>git-cvsserver</code> has no way of knowing which
+CVS revision numbers. <span class='synopsis'><code>git-cvsserver</code></span> has no way of knowing which
 branch it would have picked if it had been run incrementally
 pre-merge. So if you have to fully or partially (from old
 backup) regenerate the database, you should be suspicious
@@ -350,7 +350,7 @@ configuration variables:</p>
 <div class="paragraph">
 <p><em>git-cvsserver</em> uses the Perl DBI module. Please also read
 its documentation if changing these variables, especially
-about <code>DBI-&gt;connect()</code>.</p>
+about <span class='synopsis'><em>DBI-&gt;connect()</em></span>.</p>
 </div>
 <div class="dlist">
 <dl>
@@ -359,7 +359,7 @@ about <code>DBI-&gt;connect()</code>.</p>
 <p>Database name. The exact meaning depends on the
 selected database driver, for SQLite this is a filename.
 Supports variable substitution (see below). May
-not contain semicolons (<code>;</code>).
+not contain semicolons (<span class='synopsis'><em>;</em></span>).
 Default: <em>%Ggitcvs.%m.sqlite</em></p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbDriver"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbDriver"></a>gitcvs.dbDriver </dt>
@@ -369,18 +369,18 @@ for this here, but it might not work. cvsserver is tested
 with <em>DBD::SQLite</em>, reported to work with
 <em>DBD::Pg</em>, and reported <strong>not</strong> to work with <em>DBD::mysql</em>.
 Please regard this as an experimental feature. May not
-contain colons (<code>:</code>).
+contain colons (<span class='synopsis'><code>:</code></span>).
 Default: <em>SQLite</em></p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbuser"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbuser"></a>gitcvs.dbuser </dt>
 <dd>
-<p>Database user. Only useful if setting <code>dbDriver</code>, since
+<p>Database user. Only useful if setting <span class='synopsis'><code>dbDriver</code></span>, since
 SQLite has no concept of database users. Supports variable
 substitution (see below).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbPass"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbPass"></a>gitcvs.dbPass </dt>
 <dd>
-<p>Database password.  Only useful if setting <code>dbDriver</code>, since
+<p>Database password.  Only useful if setting <span class='synopsis'><code>dbDriver</code></span>, since
 SQLite has no concept of database passwords.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-gitcvsdbTableNamePrefix"><a class="anchor" href="#Documentation/git-cvsserver.txt-gitcvsdbTableNamePrefix"></a>gitcvs.dbTableNamePrefix </dt>
@@ -397,7 +397,7 @@ with underscores.</p>
 <div class="sect3">
 <h4 id="_variable_substitution"><a class="anchor" href="#_variable_substitution"></a>Variable substitution</h4>
 <div class="paragraph">
-<p>In <code>dbDriver</code> and <code>dbUser</code> you can use the following variables:</p>
+<p>In <span class='synopsis'><code>dbDriver</code></span> and <span class='synopsis'><code>dbUser</code></span> you can use the following variables:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -408,8 +408,8 @@ with underscores.</p>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-g"><a class="anchor" href="#Documentation/git-cvsserver.txt-g"></a>%g </dt>
 <dd>
 <p>Git directory name, where all characters except for
-alphanumeric ones, <code>.</code>, and <code>-</code> are replaced with
-<code>_</code> (this should make it easier to use the directory
+alphanumeric ones, <span class='synopsis'><code>.</code></span>, and <span class='synopsis'><code>-</code></span> are replaced with
+<span class='synopsis'><code>_</code></span> (this should make it easier to use the directory
 name in a filename if wanted)</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-m"><a class="anchor" href="#Documentation/git-cvsserver.txt-m"></a>%m </dt>
@@ -448,8 +448,8 @@ circumstances, allowing easier restricted usage through git-shell.</p>
 <dt class="hdlist1" id="Documentation/git-cvsserver.txt-GITCVSSERVERROOT"><a class="anchor" href="#Documentation/git-cvsserver.txt-GITCVSSERVERROOT"></a>GIT_CVSSERVER_ROOT </dt>
 <dd>
 <p>This variable specifies a single directory, replacing the
-<code>&lt;directory&gt;...</code> argument list. The repository still requires the
-<code>gitcvs.enabled</code> config option, unless <code>--export-all</code> is specified.</p>
+<span class='synopsis'><em>&lt;directory&gt;</em>...</span> argument list. The repository still requires the
+<span class='synopsis'><code>gitcvs.enabled</code></span> config option, unless <span class='synopsis'><code>--export-all</code></span> is specified.</p>
 </dd>
 </dl>
 </div>
@@ -480,7 +480,7 @@ the repository. You will not be able to browse the tree from there. Only
 the heads.</p>
 </li>
 <li>
-<p>Pick <code>HEAD</code> when it asks what branch/tag to check out. Untick the
+<p>Pick <span class='synopsis'><code>HEAD</code></span> when it asks what branch/tag to check out. Untick the
 "launch commit wizard" to avoid committing the .project file.</p>
 </li>
 </ol>
@@ -489,13 +489,13 @@ the heads.</p>
 <p>Protocol notes: If you are using anonymous access via pserver, just select that.
 Those using SSH access should choose the <em>ext</em> protocol, and configure <em>ext</em>
 access on the Preferences&#8594;Team&#8594;CVS&#8594;ExtConnection pane. Set CVS_SERVER to
-"<code>git cvsserver</code>". Note that password support is not good when using <em>ext</em>,
+"<span class='synopsis'><code>git</code> <code>cvsserver</code></span>". Note that password support is not good when using <em>ext</em>,
 you will definitely want to have SSH keys setup.</p>
 </div>
 <div class="paragraph">
 <p>Alternatively, you can just use the non-standard extssh protocol that Eclipse
 offer. In that case CVS_SERVER is ignored, and you will have to replace
-the cvs utility on the server with <em>git-cvsserver</em> or manipulate your <code>.bashrc</code>
+the cvs utility on the server with <em>git-cvsserver</em> or manipulate your <span class='synopsis'><code>.bashrc</code></span>
 so that calling <em>cvs</em> effectively calls <em>git-cvsserver</em>.</p>
 </div>
 </div>
@@ -560,10 +560,10 @@ to supply the git refspec directly to the appropriate CVS -r argument;
 some CVS clients don&#8217;t seem to do much sanity checking of the argument.
 Second, if that fails, you can use a special character escape mechanism
 that only uses characters that are valid in CVS tags.  A sequence
-of 4 or 5 characters of the form (underscore (<code>"_"</code>), dash (<code>"-"</code>),
-one or two characters, and dash (<code>"-"</code>)) can encode various characters based
-on the one or two letters: <code>"s"</code> for slash (<code>"/"</code>), <code>"p"</code> for
-period (<code>"."</code>), <code>"u"</code> for underscore (<code>"_"</code>), or two hexadecimal digits
+of 4 or 5 characters of the form (underscore (<span class='synopsis'><code>"_"</code></span>), dash (<span class='synopsis'><code>"-"</code></span>),
+one or two characters, and dash (<span class='synopsis'><code>"-"</code></span>)) can encode various characters based
+on the one or two letters: <span class='synopsis'><code>"s"</code></span> for slash (<span class='synopsis'><code>"/"</code></span>), <span class='synopsis'><code>"p"</code></span> for
+period (<span class='synopsis'><code>"."</code></span>), <span class='synopsis'><code>"u"</code></span> for underscore (<span class='synopsis'><code>"_"</code></span>), or two hexadecimal digits
 for any byte value at all (typically an ASCII number, or perhaps a part
 of a UTF-8 encoded character).</p>
 </div>
@@ -574,30 +574,30 @@ Exports and tagging (tags and branches) are not supported at this stage.</p>
 <div class="sect2">
 <h3 id="_crlf_line_ending_conversions"><a class="anchor" href="#_crlf_line_ending_conversions"></a>CRLF Line Ending Conversions</h3>
 <div class="paragraph">
-<p>By default the server leaves the <code>-k</code> mode blank for all files,
+<p>By default the server leaves the <span class='synopsis'><code>-k</code></span> mode blank for all files,
 which causes the CVS client to treat them as a text files, subject
 to end-of-line conversion on some platforms.</p>
 </div>
 <div class="paragraph">
 <p>You can make the server use the end-of-line conversion attributes to
-set the <code>-k</code> modes for files by setting the <code>gitcvs.usecrlfattr</code>
+set the <span class='synopsis'><code>-k</code></span> modes for files by setting the <span class='synopsis'><code>gitcvs.usecrlfattr</code></span>
 config variable.  See <a href='{{< relurl "docs/gitattributes" >}}'>gitattributes[5]</a> for more information
 about end-of-line conversion.</p>
 </div>
 <div class="paragraph">
-<p>Alternatively, if <code>gitcvs.usecrlfattr</code> config is not enabled
+<p>Alternatively, if <span class='synopsis'><code>gitcvs.usecrlfattr</code></span> config is not enabled
 or the attributes do not allow automatic detection for a filename, then
-the server uses the <code>gitcvs.allBinary</code> config for the default setting.
-If <code>gitcvs.allBinary</code> is set, then file not otherwise
-specified will default to <em>-kb</em> mode. Otherwise the <code>-k</code> mode
-is left blank. But if <code>gitcvs.allBinary</code> is set to "guess", then
-the correct <code>-k</code> mode will be guessed based on the contents of
+the server uses the <span class='synopsis'><code>gitcvs.allBinary</code></span> config for the default setting.
+If <span class='synopsis'><code>gitcvs.allBinary</code></span> is set, then file not otherwise
+specified will default to <em>-kb</em> mode. Otherwise the <span class='synopsis'><code>-k</code></span> mode
+is left blank. But if <span class='synopsis'><code>gitcvs.allBinary</code></span> is set to "guess", then
+the correct <span class='synopsis'><code>-k</code></span> mode will be guessed based on the contents of
 the file.</p>
 </div>
 <div class="paragraph">
 <p>For best consistency with <em>cvs</em>, it is probably best to override the
-defaults by setting <code>gitcvs.usecrlfattr</code> to true,
-and <code>gitcvs.allBinary</code> to "guess".</p>
+defaults by setting <span class='synopsis'><code>gitcvs.usecrlfattr</code></span> to true,
+and <span class='synopsis'><code>gitcvs.allBinary</code></span> to "guess".</p>
 </div>
 </div>
 </div>

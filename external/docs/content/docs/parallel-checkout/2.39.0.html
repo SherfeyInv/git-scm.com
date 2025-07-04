@@ -36,7 +36,7 @@ aliases:
 parallelize the work of uncompressing the blobs, applying in-core
 filters, and writing the resulting contents to the working tree during a
 checkout operation. It can be used by all checkout-related commands,
-such as <code>clone</code>, <code>checkout</code>, <code>reset</code>, <code>sparse-checkout</code>, and others.</p>
+such as <span class='synopsis'><code>clone</code></span>, <span class='synopsis'><code>checkout</code></span>, <span class='synopsis'><code>reset</code></span>, <span class='synopsis'><code>sparse-checkout</code></span>, and others.</p>
 </div>
 <div class="paragraph">
 <p>These commands share the following basic structure:</p>
@@ -77,22 +77,22 @@ its own function:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Step 3a: <code>unpack-trees.c:check_updates()</code> contains a series of
-sequential loops iterating over the <code>cache_entry</code>'s array. The main
+<p>Step 3a: <span class='synopsis'><code>unpack-trees.c:check_updates</code>()</span> contains a series of
+sequential loops iterating over the <span class='synopsis'><code>cache_entry</code></span>'s array. The main
 loop in this function calls the Step 3b function for each of the
 to-be-updated entries.</p>
 </li>
 <li>
-<p>Step 3b: <code>entry.c:checkout_entry()</code> examines the existing working tree
+<p>Step 3b: <span class='synopsis'><code>entry.c:checkout_entry</code>()</span> examines the existing working tree
 for file conflicts, collisions, and unsaved changes. It removes files
 and creates leading directories as necessary. It calls the Step 3c
 function for each entry to be written.</p>
 </li>
 <li>
-<p>Step 3c: <code>entry.c:write_entry()</code> loads the blob into memory, smudges
+<p>Step 3c: <span class='synopsis'><code>entry.c:write_entry</code>()</span> loads the blob into memory, smudges
 it if necessary, creates the file in the working tree, writes the
-smudged contents, calls <code>fstat()</code> or <code>lstat()</code>, and updates the
-associated <code>cache_entry</code> struct with the stat information gathered.</p>
+smudged contents, calls <span class='synopsis'><code>fstat</code>()</span> or <span class='synopsis'><code>lstat</code>()</span>, and updates the
+associated <span class='synopsis'><code>cache_entry</code></span> struct with the stat information gathered.</p>
 </li>
 </ul>
 </div>
@@ -101,7 +101,7 @@ associated <code>cache_entry</code> struct with the stat information gathered.</
 race conditions between file creations and removals. Instead, the
 parallel checkout framework lets the sequential code handle Step 3b,
 and uses parallel workers to replace the sequential
-<code>entry.c:write_entry()</code> calls from Step 3c.</p>
+<span class='synopsis'><code>entry.c:write_entry</code>()</span> calls from Step 3c.</p>
 </div>
 </div>
 </div>
@@ -115,7 +115,7 @@ thread-unsafe functions in the object database code, we would have to use locks 
 coordinate the parallel operation. An early prototype of this solution
 showed that the multi-threaded checkout would bring performance
 improvements over the sequential code, but there was still too much lock
-contention. A <code>perf</code> profiling indicated that around 20% of the runtime
+contention. A <span class='synopsis'><code>perf</code></span> profiling indicated that around 20% of the runtime
 during a local Linux clone (on an SSD) was spent in locking functions.
 For this reason this approach was rejected in favor of using multiple
 child processes, which led to a better performance.</p>
@@ -127,7 +127,7 @@ child processes, which led to a better performance.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Parallel checkout alters the aforementioned Step 3 to use multiple
-<code>checkout--worker</code> background processes to distribute the work. The
+<span class='synopsis'><code>checkout--worker</code></span> background processes to distribute the work. The
 long-running worker processes are controlled by the foreground Git
 command using the existing run-command API.</p>
 </div>
@@ -185,7 +185,7 @@ contention in the kernel.</p>
 <li>
 <p>W1: Checks if there is any non-directory file in the leading part of
 the entry&#8217;s path or if there already exists a file at the entry' path.
-If so, mark the entry with <code>PC_ITEM_COLLIDED</code> and skip it (more on
+If so, mark the entry with <span class='synopsis'><code>PC_ITEM_COLLIDED</code></span> and skip it (more on
 this later).</p>
 </li>
 <li>
@@ -203,7 +203,7 @@ conversion and re-encoding.</p>
 <p>W5: Writes the result to the file descriptor opened at W2.</p>
 </li>
 <li>
-<p>W6: Calls <code>fstat()</code> or lstat()` on the just-written path, and sends
+<p>W6: Calls <span class='synopsis'><code>fstat</code>()</span> or lstat()` on the just-written path, and sends
 the result back to the main process, together with the end status of
 the operation and the item&#8217;s identification number.</p>
 </li>
@@ -221,7 +221,7 @@ the <strong>only</strong> time a worker is allowed to remove a file.</p>
 <div class="paragraph">
 <p>As mentioned earlier, it is the responsibility of the main process to
 remove any file that blocks the checkout operation (or abort if the
-removal(s) would cause data loss and the user didn&#8217;t ask to <code>--force</code>).
+removal(s) would cause data loss and the user didn&#8217;t ask to <span class='synopsis'><code>--force</code></span>).
 This is crucial to avoid race conditions and also to properly detect
 path collisions at Step W1.</p>
 </div>
@@ -232,13 +232,13 @@ information, the main process handles the results in two steps:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>First, it updates the in-memory index with the <code>lstat()</code> information
+<p>First, it updates the in-memory index with the <span class='synopsis'><code>lstat</code>()</span> information
 sent by the workers. (This must be done first as this information
 might me required in the following step.)</p>
 </li>
 <li>
 <p>Then it writes the items which collided on disk (i.e. items marked
-with <code>PC_ITEM_COLLIDED</code>). More on this below.</p>
+with <span class='synopsis'><code>PC_ITEM_COLLIDED</code></span>). More on this below.</p>
 </li>
 </ul>
 </div>
@@ -267,9 +267,9 @@ one of them but only the last will actually survive on disk.</p>
 <p>Parallel checkout aims to reproduce the same behavior. However, we
 cannot let the workers racily write to the same file on disk. Instead,
 the workers detect when the entry that they want to check out would
-collide with an existing file, and mark it with <code>PC_ITEM_COLLIDED</code>.
+collide with an existing file, and mark it with <span class='synopsis'><code>PC_ITEM_COLLIDED</code></span>.
 Later, the main process can sequentially feed these entries back to
-<code>checkout_entry()</code> without the risk of race conditions. On clone, this
+<span class='synopsis'><code>checkout_entry</code>()</span> without the risk of race conditions. On clone, this
 also has the effect of marking the colliding entries to later emit a
 warning for the user, like the classic sequential checkout does.</p>
 </div>
@@ -289,12 +289,12 @@ worker knows that there was a path collision.</p>
 <p>Because parallel checkout can distinguish path collisions from the case
 where the file was already present in the working tree before checkout,
 we could alternatively choose to skip the checkout of colliding entries.
-However, each entry that doesn&#8217;t get written would have NULL <code>lstat()</code>
+However, each entry that doesn&#8217;t get written would have NULL <span class='synopsis'><code>lstat</code>()</span>
 fields on the index. This could cause performance penalties for
 subsequent commands that need to refresh the index, as they would have
 to go to the file system to see if the entry is dirty. Thus, if we have
-N entries in a colliding group and we decide to write and <code>lstat()</code> only
-one of them, every subsequent <code>git-status</code> will have to read, convert,
+N entries in a colliding group and we decide to write and <span class='synopsis'><code>lstat</code>()</span> only
+one of them, every subsequent <span class='synopsis'><code>git-status</code></span> will have to read, convert,
 and hash the written file N - 1 times. By checking out all colliding
 entries (like the sequential code does), we only pay the overhead once,
 during checkout.</p>
@@ -305,7 +305,7 @@ during checkout.</p>
 <h2 id="_eligible_entries_for_parallel_checkout"><a class="anchor" href="#_eligible_entries_for_parallel_checkout"></a>Eligible Entries for Parallel Checkout</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As previously mentioned, not all entries passed to <code>checkout_entry()</code>
+<p>As previously mentioned, not all entries passed to <span class='synopsis'><code>checkout_entry</code>()</span>
 will be considered eligible for parallel checkout. More specifically, we
 exclude:</p>
 </div>
@@ -357,7 +357,7 @@ the same parallel checkout process or queue.</p>
 <p>The parallel checkout API was designed with the goal of minimizing
 changes to the current users of the checkout machinery. This means that
 they don&#8217;t have to call a different function for sequential or parallel
-checkout. As already mentioned, <code>checkout_entry()</code> will automatically
+checkout. As already mentioned, <span class='synopsis'><code>checkout_entry</code>()</span> will automatically
 insert the given entry in the parallel checkout queue when this feature
 is enabled and the entry is eligible; otherwise, it will just write the
 entry right away, using the sequential code. In general, callers of the

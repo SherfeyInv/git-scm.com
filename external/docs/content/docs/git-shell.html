@@ -24,8 +24,8 @@ aliases:
 <div class="sectionbody">
 <div class="verseblock">
 <pre class="content"><em>chsh</em> -s $(command -v git-shell) &lt;user&gt;
-<em>git clone</em> &lt;user&gt;<code>@localhost:/path/to/repo.git</code>
-<em>ssh</em> &lt;user&gt;<code>@localhost</code></pre>
+<em>git clone</em> &lt;user&gt;<span class='synopsis'><code>@localhost:/path/to/repo.git</code></span>
+<em>ssh</em> &lt;user&gt;<span class='synopsis'><code>@localhost</code></span></pre>
 </div>
 </div>
 </div>
@@ -36,7 +36,7 @@ aliases:
 <p>This is a login shell for SSH accounts to provide restricted Git access.
 It permits execution only of server-side Git commands implementing the
 pull/push functionality, plus custom commands present in a subdirectory
-named <code>git-shell-commands</code> in the user&#8217;s home directory.</p>
+named <span class='synopsis'><code>git-shell-commands</code></span> in the user&#8217;s home directory.</p>
 </div>
 </div>
 </div>
@@ -44,7 +44,7 @@ named <code>git-shell-commands</code> in the user&#8217;s home directory.</p>
 <h2 id="_commands"><a class="anchor" href="#_commands"></a>COMMANDS</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>git shell</em> accepts the following commands after the <code>-c</code> option:</p>
+<p><em>git shell</em> accepts the following commands after the <span class='synopsis'><code>-c</code></span> option:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -63,9 +63,9 @@ request.</p>
 </dl>
 </div>
 <div class="paragraph">
-<p>If a <code>~/git-shell-commands</code> directory is present, <em>git shell</em> will
+<p>If a <span class='synopsis'><code>~/git-shell-commands</code></span> directory is present, <em>git shell</em> will
 also handle other, custom commands by running
-"<code>git-shell-commands/&lt;command&gt; &lt;arguments&gt;</code>" from the user&#8217;s home
+"<span class='synopsis'><code>git-shell-commands/</code><em>&lt;command&gt;</em> <em>&lt;arguments&gt;</em></span>" from the user&#8217;s home
 directory.</p>
 </div>
 </div>
@@ -74,16 +74,16 @@ directory.</p>
 <h2 id="_interactive_use"><a class="anchor" href="#_interactive_use"></a>INTERACTIVE USE</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>By default, the commands above can be executed only with the <code>-c</code>
+<p>By default, the commands above can be executed only with the <span class='synopsis'><code>-c</code></span>
 option; the shell is not interactive.</p>
 </div>
 <div class="paragraph">
-<p>If a <code>~/git-shell-commands</code> directory is present, <em>git shell</em>
-can also be run interactively (with no arguments).  If a <code>help</code>
-command is present in the <code>git-shell-commands</code> directory, it is
+<p>If a <span class='synopsis'><code>~/git-shell-commands</code></span> directory is present, <em>git shell</em>
+can also be run interactively (with no arguments).  If a <span class='synopsis'><code>help</code></span>
+command is present in the <span class='synopsis'><code>git-shell-commands</code></span> directory, it is
 run to provide the user with an overview of allowed actions.  Then a
 "git&gt; " prompt is presented at which one can enter any of the
-commands from the <code>git-shell-commands</code> directory, or <code>exit</code> to close
+commands from the <span class='synopsis'><code>git-shell-commands</code></span> directory, or <span class='synopsis'><code>exit</code></span> to close
 the connection.</p>
 </div>
 <div class="paragraph">
@@ -93,7 +93,7 @@ rename repositories, or change repository descriptions and
 permissions.</p>
 </div>
 <div class="paragraph">
-<p>If a <code>no-interactive-login</code> command exists, then it is run and the
+<p>If a <span class='synopsis'><code>no-interactive-login</code></span> command exists, then it is run and the
 interactive shell is aborted.</p>
 </div>
 </div>
@@ -119,7 +119,7 @@ $ chmod +x $HOME/git-shell-commands/no-interactive-login</pre>
 </div>
 <div class="paragraph">
 <p>To enable git-cvsserver access (which should generally have the
-<code>no-interactive-login</code> example above as a prerequisite, as creating
+<span class='synopsis'><code>no-interactive-login</code></span> example above as a prerequisite, as creating
 the git-shell-commands directory allows interactive logins):</p>
 </div>
 <div class="listingblock">

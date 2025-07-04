@@ -21,19 +21,19 @@ aliases:
 <dd>
 <p>Specify the style in which conflicted hunks are written out to
 working tree files upon merge.  The default is "merge", which
-shows a <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> conflict marker, changes made by one side,
-a <code>=======</code> marker, changes made by the other side, and then
-a <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> marker.  An alternate style, "diff3", adds a <code>|||||||</code>
-marker and the original text before the <code>=======</code> marker.</p>
+shows a <span class='synopsis'><em>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</em></span> conflict marker, changes made by one side,
+a <span class='synopsis'><code>=======</code></span> marker, changes made by the other side, and then
+a <span class='synopsis'><em>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</em></span> marker.  An alternate style, "diff3", adds a <span class='synopsis'>|||||||</span>
+marker and the original text before the <span class='synopsis'><code>=======</code></span> marker.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-config.txt-mergedefaultToUpstream"><a class="anchor" href="#Documentation/merge-config.txt-mergedefaultToUpstream"></a>merge.defaultToUpstream </dt>
 <dd>
 <p>If merge is called without any commit argument, merge the upstream
 branches configured for the current branch by using their last
 observed values stored in their remote-tracking branches.
-The values of the <code>branch.&lt;current branch&gt;.merge</code> that name the
-branches at the remote named by <code>branch.&lt;current branch&gt;.remote</code>
-are consulted, and then they are mapped via <code>remote.&lt;remote&gt;.fetch</code>
+The values of the <span class='synopsis'><em>branch.&lt;current branch&gt;.merge</em></span> that name the
+branches at the remote named by <span class='synopsis'><em>branch.&lt;current branch&gt;.remote</em></span>
+are consulted, and then they are mapped via <span class='synopsis'><code>remote.</code><em>&lt;remote&gt;</em><code>.fetch</code></span>
 to their corresponding remote-tracking branches, and the tips of
 these tracking branches are merged.</p>
 </dd>
@@ -41,11 +41,11 @@ these tracking branches are merged.</p>
 <dd>
 <p>By default, Git does not create an extra merge commit when merging
 a commit that is a descendant of the current commit. Instead, the
-tip of the current branch is fast-forwarded. When set to <code>false</code>,
+tip of the current branch is fast-forwarded. When set to <span class='synopsis'><code>false</code></span>,
 this variable tells Git to create an extra merge commit in such
-a case (equivalent to giving the <code>--no-ff</code> option from the command
-line). When set to <code>only</code>, only such fast-forward merges are
-allowed (equivalent to giving the <code>--ff-only</code> option from the
+a case (equivalent to giving the <span class='synopsis'><code>--no-ff</code></span> option from the command
+line). When set to <span class='synopsis'><code>only</code></span>, only such fast-forward merges are
+allowed (equivalent to giving the <span class='synopsis'><code>--ff-only</code></span> option from the
 command line).</p>
 </dd>
 <dt class="hdlist1" id="Documentation/merge-config.txt-mergebranchdesc"><a class="anchor" href="#Documentation/merge-config.txt-mergebranchdesc"></a>merge.branchdesc </dt>

@@ -53,15 +53,15 @@ Signed-off-by: Bob &lt;bob@example.com&gt;</pre>
 <div class="paragraph">
 <p>This command reads commit messages from either the
 &lt;file&gt; arguments or the standard input if no &lt;file&gt; is specified.
-If <code>--parse</code> is specified, the output consists of the parsed trailers
+If <span class='synopsis'><code>--parse</code></span> is specified, the output consists of the parsed trailers
 coming from the input, without influencing them with any command line
 options or configuration variables.</p>
 </div>
 <div class="paragraph">
-<p>Otherwise, this command applies <code>trailer.*</code> configuration variables
+<p>Otherwise, this command applies <span class='synopsis'><code>trailer.*</code></span> configuration variables
 (which could potentially add new trailers, as well as reposition them),
 as well as any command line arguments that can override configuration
-variables (such as <code>--trailer=...</code> which could also add new trailers),
+variables (such as <span class='synopsis'><code>--trailer=...</code></span> which could also add new trailers),
 to each input file. The result is emitted on the standard output.</p>
 </div>
 <div class="paragraph">
@@ -70,17 +70,17 @@ which is more elaborate than a plain commit message. Namely, such output
 includes a commit message (as above), a "---" divider line, and a patch part.
 For these inputs, the divider and patch parts are not modified by
 this command and are emitted as is on the output, unless
-<code>--no-divider</code> is specified.</p>
+<span class='synopsis'><code>--no-divider</code></span> is specified.</p>
 </div>
 <div class="paragraph">
-<p>Some configuration variables control the way the <code>--trailer</code> arguments
+<p>Some configuration variables control the way the <span class='synopsis'><code>--trailer</code></span> arguments
 are applied to each input and the way any existing trailer in
 the input is changed. They also make it possible to
 automatically add some trailers.</p>
 </div>
 <div class="paragraph">
 <p>By default, a <em>&lt;key&gt;=&lt;value&gt;</em> or <em>&lt;key&gt;:&lt;value&gt;</em> argument given
-using <code>--trailer</code> will be appended after the existing trailers only if
+using <span class='synopsis'><code>--trailer</code></span> will be appended after the existing trailers only if
 the last trailer has a different (&lt;key&gt;, &lt;value&gt;) pair (or if there
 is no existing trailer). The &lt;key&gt; and &lt;value&gt; parts will be trimmed
 to remove starting and trailing whitespace, and the resulting trimmed
@@ -93,10 +93,10 @@ to remove starting and trailing whitespace, and the resulting trimmed
 </div>
 <div class="paragraph">
 <p>This means that the trimmed &lt;key&gt; and &lt;value&gt; will be separated by
-<code>': '</code> (one colon followed by one space).</p>
+<span class='synopsis'><code>:</code> </span> (one colon followed by one space).</p>
 </div>
 <div class="paragraph">
-<p>For convenience, a &lt;key-alias&gt; can be configured to make using <code>--trailer</code>
+<p>For convenience, a &lt;key-alias&gt; can be configured to make using <span class='synopsis'><code>--trailer</code></span>
 shorter to type on the command line. This can be configured using the
 <em>trailer.&lt;key-alias&gt;.key</em> configuration variable. The &lt;keyAlias&gt; must be a prefix
 of the full &lt;key&gt; string, although case sensitivity does not matter. For
@@ -108,8 +108,8 @@ example, if you have</p>
 </div>
 </div>
 <div class="paragraph">
-<p>in your configuration, you only need to specify <code>--trailer="sign: foo"</code>
-on the command line instead of <code>--trailer="Signed-off-by: foo"</code>.</p>
+<p>in your configuration, you only need to specify <span class='synopsis'><code>--trailer="sign:</code> <code>foo"</code></span>
+on the command line instead of <span class='synopsis'><code>--trailer="Signed-off-by:</code> <code>foo"</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>By default the new trailer will appear at the end of all the existing
@@ -172,39 +172,39 @@ command.</p>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-where"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-where"></a>--no-where </dt>
 <dd>
 <p>Specify where all new trailers will be added.  A setting
-provided with <em>--where</em> overrides the <code>trailer.where</code> and any
-applicable <code>trailer.&lt;keyAlias&gt;.where</code> configuration variables
+provided with <em>--where</em> overrides the <span class='synopsis'><code>trailer.where</code></span> and any
+applicable <span class='synopsis'><code>trailer.</code><em>&lt;keyAlias&gt;</em><code>.where</code></span> configuration variables
 and applies to all <em>--trailer</em> options until the next occurrence of
 <em>--where</em> or <em>--no-where</em>. Upon encountering <em>--no-where</em>, clear the
 effect of any previous use of <em>--where</em>, such that the relevant configuration
-variables are no longer overridden. Possible placements are <code>after</code>,
-<code>before</code>, <code>end</code> or <code>start</code>.</p>
+variables are no longer overridden. Possible placements are <span class='synopsis'><code>after</code></span>,
+<span class='synopsis'><code>before</code></span>, <span class='synopsis'><code>end</code></span> or <span class='synopsis'><code>start</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-existsltactiongt"><a id="Documentation/git-interpret-trailers.txt---if-existsaction" class="anchor" href="#Documentation/git-interpret-trailers.txt---if-existsaction"></a>--if-exists &lt;action&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-exists"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-exists"></a>--no-if-exists </dt>
 <dd>
 <p>Specify what action will be performed when there is already at
 least one trailer with the same &lt;key&gt; in the input.  A setting
-provided with <em>--if-exists</em> overrides the <code>trailer.ifExists</code> and any
-applicable <code>trailer.&lt;keyAlias&gt;.ifExists</code> configuration variables
+provided with <em>--if-exists</em> overrides the <span class='synopsis'><code>trailer.ifExists</code></span> and any
+applicable <span class='synopsis'><code>trailer.</code><em>&lt;keyAlias&gt;</em><code>.ifExists</code></span> configuration variables
 and applies to all <em>--trailer</em> options until the next occurrence of
 <em>--if-exists</em> or <em>--no-if-exists</em>. Upon encountering '--no-if-exists, clear the
 effect of any previous use of '--if-exists, such that the relevant configuration
-variables are no longer overridden. Possible actions are <code>addIfDifferent</code>,
-<code>addIfDifferentNeighbor</code>, <code>add</code>, <code>replace</code> and <code>doNothing</code>.</p>
+variables are no longer overridden. Possible actions are <span class='synopsis'><code>addIfDifferent</code></span>,
+<span class='synopsis'><code>addIfDifferentNeighbor</code></span>, <span class='synopsis'><code>add</code></span>, <span class='synopsis'><code>replace</code></span> and <span class='synopsis'><code>doNothing</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---if-missingltactiongt"><a id="Documentation/git-interpret-trailers.txt---if-missingaction" class="anchor" href="#Documentation/git-interpret-trailers.txt---if-missingaction"></a>--if-missing &lt;action&gt; </dt>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-if-missing"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-if-missing"></a>--no-if-missing </dt>
 <dd>
 <p>Specify what action will be performed when there is no other
 trailer with the same &lt;key&gt; in the input.  A setting
-provided with <em>--if-missing</em> overrides the <code>trailer.ifMissing</code> and any
-applicable <code>trailer.&lt;keyAlias&gt;.ifMissing</code> configuration variables
+provided with <em>--if-missing</em> overrides the <span class='synopsis'><code>trailer.ifMissing</code></span> and any
+applicable <span class='synopsis'><code>trailer.</code><em>&lt;keyAlias&gt;</em><code>.ifMissing</code></span> configuration variables
 and applies to all <em>--trailer</em> options until the next occurrence of
 <em>--if-missing</em> or <em>--no-if-missing</em>. Upon encountering '--no-if-missing,
 clear the effect of any previous use of '--if-missing, such that the relevant
-configuration variables are no longer overridden. Possible actions are <code>doNothing</code>
-or <code>add</code>.</p>
+configuration variables are no longer overridden. Possible actions are <span class='synopsis'><code>doNothing</code></span>
+or <span class='synopsis'><code>add</code></span>.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-trailers"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-trailers"></a>--only-trailers </dt>
 <dd>
@@ -213,7 +213,7 @@ or <code>add</code>.</p>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---only-input"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---only-input"></a>--only-input </dt>
 <dd>
 <p>Output only trailers that exist in the input; do not add any
-from the command-line or by applying <code>trailer.*</code> configuration
+from the command-line or by applying <span class='synopsis'><code>trailer.*</code></span> configuration
 variables.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---unfold"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---unfold"></a>--unfold </dt>
@@ -223,17 +223,18 @@ reformat the value into a single line.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---parse"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---parse"></a>--parse </dt>
 <dd>
-<p>A convenience alias for <code>--only-trailers --only-input
---unfold</code>. This makes it easier to only see the trailers coming from the
+<p>A convenience alias for <span class='synopsis'><code>--only-trailers</code> <code>--only-input</code>
+
+<code>--unfold</code></span>. This makes it easier to only see the trailers coming from the
 input without influencing them with any command line options or
 configuration variables, while also making the output machine-friendly with
 --unfold.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt---no-divider"><a class="anchor" href="#Documentation/git-interpret-trailers.txt---no-divider"></a>--no-divider </dt>
 <dd>
-<p>Do not treat <code>---</code> as the end of the commit message. Use this
+<p>Do not treat <span class='synopsis'><code>---</code></span> as the end of the commit message. Use this
 when you know your input contains just the commit message itself
-(and not an email or the output of <code>git format-patch</code>).</p>
+(and not an email or the output of <span class='synopsis'><code>git</code> <code>format-patch</code></span>).</p>
 </dd>
 </dl>
 </div>
@@ -273,22 +274,22 @@ the key and the value).</p>
 <dd>
 <p>This option tells where a new trailer will be added.</p>
 <div class="paragraph">
-<p>This can be <code>end</code>, which is the default, <code>start</code>, <code>after</code> or <code>before</code>.</p>
+<p>This can be <span class='synopsis'><code>end</code></span>, which is the default, <span class='synopsis'><code>start</code></span>, <span class='synopsis'><code>after</code></span> or <span class='synopsis'><code>before</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>end</code>, then each new trailer will appear at the end of the
+<p>If it is <span class='synopsis'><code>end</code></span>, then each new trailer will appear at the end of the
 existing trailers.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>start</code>, then each new trailer will appear at the start,
+<p>If it is <span class='synopsis'><code>start</code></span>, then each new trailer will appear at the start,
 instead of the end, of the existing trailers.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>after</code>, then each new trailer will appear just after the
+<p>If it is <span class='synopsis'><code>after</code></span>, then each new trailer will appear just after the
 last trailer with the same &lt;key&gt;.</p>
 </div>
 <div class="paragraph">
-<p>If it is <code>before</code>, then each new trailer will appear just before the
+<p>If it is <span class='synopsis'><code>before</code></span>, then each new trailer will appear just before the
 first trailer with the same &lt;key&gt;.</p>
 </div>
 </dd>
@@ -298,30 +299,30 @@ first trailer with the same &lt;key&gt;.</p>
 performed when there is already at least one trailer with the
 same &lt;key&gt; in the input.</p>
 <div class="paragraph">
-<p>The valid values for this option are: <code>addIfDifferentNeighbor</code> (this
-is the default), <code>addIfDifferent</code>, <code>add</code>, <code>replace</code> or <code>doNothing</code>.</p>
+<p>The valid values for this option are: <span class='synopsis'><code>addIfDifferentNeighbor</code></span> (this
+is the default), <span class='synopsis'><code>addIfDifferent</code></span>, <span class='synopsis'><code>add</code></span>, <span class='synopsis'><code>replace</code></span> or <span class='synopsis'><code>doNothing</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>With <code>addIfDifferentNeighbor</code>, a new trailer will be added only if no
+<p>With <span class='synopsis'><code>addIfDifferentNeighbor</code></span>, a new trailer will be added only if no
 trailer with the same (&lt;key&gt;, &lt;value&gt;) pair is above or below the line
 where the new trailer will be added.</p>
 </div>
 <div class="paragraph">
-<p>With <code>addIfDifferent</code>, a new trailer will be added only if no trailer
+<p>With <span class='synopsis'><code>addIfDifferent</code></span>, a new trailer will be added only if no trailer
 with the same (&lt;key&gt;, &lt;value&gt;) pair is already in the input.</p>
 </div>
 <div class="paragraph">
-<p>With <code>add</code>, a new trailer will be added, even if some trailers with
+<p>With <span class='synopsis'><code>add</code></span>, a new trailer will be added, even if some trailers with
 the same (&lt;key&gt;, &lt;value&gt;) pair are already in the input.</p>
 </div>
 <div class="paragraph">
-<p>With <code>replace</code>, an existing trailer with the same &lt;key&gt; will be
+<p>With <span class='synopsis'><code>replace</code></span>, an existing trailer with the same &lt;key&gt; will be
 deleted and the new trailer will be added. The deleted trailer will be
 the closest one (with the same &lt;key&gt;) to the place where the new one
 will be added.</p>
 </div>
 <div class="paragraph">
-<p>With <code>doNothing</code>, nothing will be done; that is no new trailer will be
+<p>With <span class='synopsis'><code>doNothing</code></span>, nothing will be done; that is no new trailer will be
 added if there is already one with the same &lt;key&gt; in the input.</p>
 </div>
 </dd>
@@ -331,28 +332,29 @@ added if there is already one with the same &lt;key&gt; in the input.</p>
 performed when there is not yet any trailer with the same
 &lt;key&gt; in the input.</p>
 <div class="paragraph">
-<p>The valid values for this option are: <code>add</code> (this is the default) and
-<code>doNothing</code>.</p>
+<p>The valid values for this option are: <span class='synopsis'><code>add</code></span> (this is the default) and
+<span class='synopsis'><code>doNothing</code></span>.</p>
 </div>
 <div class="paragraph">
-<p>With <code>add</code>, a new trailer will be added.</p>
+<p>With <span class='synopsis'><code>add</code></span>, a new trailer will be added.</p>
 </div>
 <div class="paragraph">
-<p>With <code>doNothing</code>, nothing will be done.</p>
+<p>With <span class='synopsis'><code>doNothing</code></span>, nothing will be done.</p>
 </div>
 </dd>
 <dt class="hdlist1" id="Documentation/git-interpret-trailers.txt-trailerltkeyAliasgtkey"><a id="Documentation/git-interpret-trailers.txt-trailerkeyAliaskey" class="anchor" href="#Documentation/git-interpret-trailers.txt-trailerkeyAliaskey"></a>trailer.&lt;keyAlias&gt;.key </dt>
 <dd>
 <p>Defines a &lt;keyAlias&gt; for the &lt;key&gt;. The &lt;keyAlias&gt; must be a
-prefix (case does not matter) of the &lt;key&gt;. For example, in <code>git
-config trailer.ack.key "Acked-by"</code> the "Acked-by" is the &lt;key&gt; and
+prefix (case does not matter) of the &lt;key&gt;. For example, in <span class='synopsis'><code>git</code>
+
+<code>config</code> <code>trailer.ack.key</code> <code>"Acked-by"</code></span> the "Acked-by" is the &lt;key&gt; and
 the "ack" is the &lt;keyAlias&gt;. This configuration allows the shorter
-<code>--trailer "ack:..."</code> invocation on the command line using the "ack"
-&lt;keyAlias&gt; instead of the longer <code>--trailer "Acked-by:..."</code>.</p>
+<span class='synopsis'><code>--trailer</code> <code>"ack:..."</code></span> invocation on the command line using the "ack"
+&lt;keyAlias&gt; instead of the longer <span class='synopsis'><code>--trailer</code> <code>"Acked-by:..."</code></span>.</p>
 <div class="paragraph">
 <p>At the end of the &lt;key&gt;, a separator can appear and then some
 space characters. By default the only valid separator is <em>:</em>,
-but this can be changed using the <code>trailer.separators</code> config
+but this can be changed using the <span class='synopsis'><code>trailer.separators</code></span> config
 variable.</p>
 </div>
 <div class="paragraph">
@@ -448,7 +450,7 @@ Signed-off-by: Bob &lt;bob@example.com&gt;</pre>
 </div>
 </li>
 <li>
-<p>Use the <code>--in-place</code> option to edit a commit message file in place:</p>
+<p>Use the <span class='synopsis'><code>--in-place</code></span> option to edit a commit message file in place:</p>
 <div class="listingblock">
 <div class="content">
 <pre>$ cat msg.txt
@@ -529,7 +531,7 @@ Fix #42</pre>
 </div>
 </li>
 <li>
-<p>Configure a <em>help</em> trailer with a cmd use a script <code>glog-find-author</code>
+<p>Configure a <em>help</em> trailer with a cmd use a script <span class='synopsis'><code>glog-find-author</code></span>
 which search specified author identity from git log in git repository
 and show how it works:</p>
 <div class="listingblock">
@@ -555,7 +557,7 @@ Helped-by: Christian Couder &lt;christian.couder@gmail.com&gt;</pre>
 </div>
 </li>
 <li>
-<p>Configure a <em>ref</em> trailer with a cmd use a script <code>glog-grep</code>
+<p>Configure a <em>ref</em> trailer with a cmd use a script <span class='synopsis'><code>glog-grep</code></span>
 to grep last relevant commit from git log in the git repository
 and show how it works:</p>
 <div class="listingblock">

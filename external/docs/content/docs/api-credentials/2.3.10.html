@@ -78,7 +78,7 @@ can be erased from any persistent storage).</p>
 <h3 id="_data_structures"><a class="anchor" href="#_data_structures"></a>Data Structures</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codestructcredentialcode"><a id="Documentation/technical/api-credentials.txt-structcredential" class="anchor" href="#Documentation/technical/api-credentials.txt-structcredential"></a><code>struct credential</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodestructcodecodecredentialcodespan"><a id="Documentation/technical/api-credentials.txt-structcredential" class="anchor" href="#Documentation/technical/api-credentials.txt-structcredential"></a><span class='synopsis'><code>struct</code> <code>credential</code></span> </dt>
 <dd>
 <p>This struct represents a single username/password combination
 along with any associated context. All string fields should be
@@ -87,7 +87,7 @@ The meaning of the individual context fields is the same as
 their counterparts in the helper protocol; see the section below
 for a description of each field.</p>
 <div class="paragraph">
-<p>The <code>helpers</code> member of the struct is a <code>string_list</code> of helpers.  Each
+<p>The <span class='synopsis'><code>helpers</code></span> member of the struct is a <span class='synopsis'><code>string_list</code></span> of helpers.  Each
 string specifies an external helper which will be run, in order, to
 either acquire or store credentials. See the section on credential
 helpers below. This list is filled-in by the API functions
@@ -96,8 +96,8 @@ consulting helpers, so there usually is no need for a caller to
 modify the helpers field at all.</p>
 </div>
 <div class="paragraph">
-<p>This struct should always be initialized with <code>CREDENTIAL_INIT</code> or
-<code>credential_init</code>.</p>
+<p>This struct should always be initialized with <span class='synopsis'><code>CREDENTIAL_INIT</code></span> or
+<span class='synopsis'><code>credential_init</code></span>.</p>
 </div>
 </dd>
 </dl>
@@ -107,16 +107,16 @@ modify the helpers field at all.</p>
 <h3 id="_functions"><a class="anchor" href="#_functions"></a>Functions</h3>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codecredentialinitcode"><a id="Documentation/technical/api-credentials.txt-credentialinit" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialinit"></a><code>credential_init</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodecredentialinitcodespan"><a id="Documentation/technical/api-credentials.txt-credentialinit" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialinit"></a><span class='synopsis'><code>credential_init</code></span> </dt>
 <dd>
 <p>Initialize a credential structure, setting all fields to empty.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codecredentialclearcode"><a id="Documentation/technical/api-credentials.txt-credentialclear" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialclear"></a><code>credential_clear</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodecredentialclearcodespan"><a id="Documentation/technical/api-credentials.txt-credentialclear" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialclear"></a><span class='synopsis'><code>credential_clear</code></span> </dt>
 <dd>
 <p>Free any resources associated with the credential structure,
 returning it to a pristine initialized state.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codecredentialfillcode"><a id="Documentation/technical/api-credentials.txt-credentialfill" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialfill"></a><code>credential_fill</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodecredentialfillcodespan"><a id="Documentation/technical/api-credentials.txt-credentialfill" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialfill"></a><span class='synopsis'><code>credential_fill</code></span> </dt>
 <dd>
 <p>Instruct the credential subsystem to fill the username and
 password fields of the passed credential struct by first
@@ -125,7 +125,7 @@ returns, the username and password fields of the credential are
 guaranteed to be non-NULL. If an error occurs, the function will
 die().</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codecredentialrejectcode"><a id="Documentation/technical/api-credentials.txt-credentialreject" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialreject"></a><code>credential_reject</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodecredentialrejectcodespan"><a id="Documentation/technical/api-credentials.txt-credentialreject" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialreject"></a><span class='synopsis'><code>credential_reject</code></span> </dt>
 <dd>
 <p>Inform the credential subsystem that the provided credentials
 have been rejected. This will cause the credential subsystem to
@@ -133,10 +133,10 @@ notify any helpers of the rejection (which allows them, for
 example, to purge the invalid credentials from storage).  It
 will also free() the username and password fields of the
 credential and set them to NULL (readying the credential for
-another call to <code>credential_fill</code>). Any errors from helpers are
+another call to <span class='synopsis'><code>credential_fill</code></span>). Any errors from helpers are
 ignored.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codecredentialapprovecode"><a id="Documentation/technical/api-credentials.txt-credentialapprove" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialapprove"></a><code>credential_approve</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodecredentialapprovecodespan"><a id="Documentation/technical/api-credentials.txt-credentialapprove" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialapprove"></a><span class='synopsis'><code>credential_approve</code></span> </dt>
 <dd>
 <p>Inform the credential subsystem that the provided credentials
 were successfully used for authentication.  This will cause the
@@ -144,7 +144,7 @@ credential subsystem to notify any helpers of the approval, so
 that they may store the result to be used again.  Any errors
 from helpers are ignored.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codecredentialfromurlcode"><a id="Documentation/technical/api-credentials.txt-credentialfromurl" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialfromurl"></a><code>credential_from_url</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodecredentialfromurlcodespan"><a id="Documentation/technical/api-credentials.txt-credentialfromurl" class="anchor" href="#Documentation/technical/api-credentials.txt-credentialfromurl"></a><span class='synopsis'><code>credential_from_url</code></span> </dt>
 <dd>
 <p>Parse a URL into broken-down credential fields.</p>
 </dd>
@@ -221,7 +221,7 @@ in-memory for a few minutes, or indefinitely on disk).</p>
 </div>
 <div class="paragraph">
 <p>Each helper is specified by a single string in the configuration
-variable <code>credential.helper</code> (and others, see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).
+variable <span class='synopsis'><code>credential.helper</code></span> (and others, see <a href='{{< relurl "docs/git-config" >}}'>git-config[1]</a>).
 The string is transformed by Git into a command to be executed using
 these rules:</p>
 </div>
@@ -272,7 +272,7 @@ foo --bar="whitespace arg"
 Authors of credential helpers should make an effort to assist their
 users by naming their program "git-credential-$NAME", and putting it in
 the $PATH or $GIT_EXEC_PATH during installation, which will allow a user
-to enable it with <code>git config credential.helper $NAME</code>.</p>
+to enable it with <span class='synopsis'><code>git</code> <code>config</code> <code>credential.helper</code> <code>$NAME</code></span>.</p>
 </div>
 <div class="paragraph">
 <p>When a helper is executed, it will have one "operation" argument
@@ -280,15 +280,15 @@ appended to its command line, which is one of:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codegetcode"><a id="Documentation/technical/api-credentials.txt-get" class="anchor" href="#Documentation/technical/api-credentials.txt-get"></a><code>get</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodegetcodespan"><a id="Documentation/technical/api-credentials.txt-get" class="anchor" href="#Documentation/technical/api-credentials.txt-get"></a><span class='synopsis'><code>get</code></span> </dt>
 <dd>
 <p>Return a matching credential, if any exists.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codestorecode"><a id="Documentation/technical/api-credentials.txt-store" class="anchor" href="#Documentation/technical/api-credentials.txt-store"></a><code>store</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodestorecodespan"><a id="Documentation/technical/api-credentials.txt-store" class="anchor" href="#Documentation/technical/api-credentials.txt-store"></a><span class='synopsis'><code>store</code></span> </dt>
 <dd>
 <p>Store the credential, if applicable to the helper.</p>
 </dd>
-<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-codeerasecode"><a id="Documentation/technical/api-credentials.txt-erase" class="anchor" href="#Documentation/technical/api-credentials.txt-erase"></a><code>erase</code> </dt>
+<dt class="hdlist1" id="Documentation/technical/api-credentials.txt-spanclasssynopsiscodeerasecodespan"><a id="Documentation/technical/api-credentials.txt-erase" class="anchor" href="#Documentation/technical/api-credentials.txt-erase"></a><span class='synopsis'><code>erase</code></span> </dt>
 <dd>
 <p>Remove a matching credential, if any, from the helper&#8217;s storage.</p>
 </dd>
@@ -297,20 +297,21 @@ appended to its command line, which is one of:</p>
 <div class="paragraph">
 <p>The details of the credential will be provided on the helper&#8217;s stdin
 stream. The exact format is the same as the input/output format of the
-<code>git credential</code> plumbing command (see the section <code>INPUT/OUTPUT
-FORMAT</code> in <a href='{{< relurl "docs/git-credential" >}}'>git-credential[7]</a> for a detailed specification).</p>
+<span class='synopsis'><code>git</code> <code>credential</code></span> plumbing command (see the section <span class='synopsis'><code>INPUT/OUTPUT</code>
+
+<code>FORMAT</code></span> in <a href='{{< relurl "docs/git-credential" >}}'>git-credential[7]</a> for a detailed specification).</p>
 </div>
 <div class="paragraph">
-<p>For a <code>get</code> operation, the helper should produce a list of attributes
+<p>For a <span class='synopsis'><code>get</code></span> operation, the helper should produce a list of attributes
 on stdout in the same format. A helper is free to produce a subset, or
 even no values at all if it has nothing useful to provide. Any provided
 attributes will overwrite those already known about by Git.  If a helper
-outputs a <code>quit</code> attribute with a value of <code>true</code> or <code>1</code>, no further
+outputs a <span class='synopsis'><code>quit</code></span> attribute with a value of <span class='synopsis'><code>true</code></span> or <span class='synopsis'><code>1</code></span>, no further
 helpers will be consulted, nor will the user be prompted (if no
 credential has been provided, the operation will then fail).</p>
 </div>
 <div class="paragraph">
-<p>For a <code>store</code> or <code>erase</code> operation, the helper&#8217;s output is ignored.
+<p>For a <span class='synopsis'><code>store</code></span> or <span class='synopsis'><code>erase</code></span> operation, the helper&#8217;s output is ignored.
 If it fails to perform the requested operation, it may complain to
 stderr to inform the user. If it does not support the requested
 operation (e.g., a read-only store), it should silently ignore the
@@ -330,7 +331,7 @@ helpers will just ignore the new requests).</p>
 <p><a href='{{< relurl "docs/gitcredentials" >}}'>gitcredentials[7]</a></p>
 </div>
 <div class="paragraph">
-<p><a href='{{< relurl "docs/git-config" >}}'>git-config[5]</a> (See configuration variables <code>credential.*</code>)</p>
+<p><a href='{{< relurl "docs/git-config" >}}'>git-config[5]</a> (See configuration variables <span class='synopsis'><code>credential.*</code></span>)</p>
 </div>
 </div>
 </div>

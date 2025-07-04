@@ -44,18 +44,18 @@ Porcelain-ish scripts and/or are writing new ones.</p>
 </div>
 <div class="paragraph">
 <p>The <em>git sh-setup</em> scriptlet is designed to be sourced (using
-<code>.</code>) by other shell scripts to set up some variables pointing at
+<span class='synopsis'><code>.</code></span>) by other shell scripts to set up some variables pointing at
 the normal Git directories and a few helper shell functions.</p>
 </div>
 <div class="paragraph">
 <p>Before sourcing it, your script should set up a few variables;
-<code>USAGE</code> (and <code>LONG_USAGE</code>, if any) is used to define message
-given by <code>usage()</code> shell function.  <code>SUBDIRECTORY_OK</code> can be set
+<span class='synopsis'><code>USAGE</code></span> (and <span class='synopsis'><code>LONG_USAGE</code></span>, if any) is used to define message
+given by <span class='synopsis'><code>usage</code>()</span> shell function.  <span class='synopsis'><code>SUBDIRECTORY_OK</code></span> can be set
 if the script can run from a subdirectory of the working tree
 (some commands do not).</p>
 </div>
 <div class="paragraph">
-<p>The scriptlet sets <code>GIT_DIR</code> and <code>GIT_OBJECT_DIRECTORY</code> shell
+<p>The scriptlet sets <span class='synopsis'><code>GIT_DIR</code></span> and <span class='synopsis'><code>GIT_OBJECT_DIRECTORY</code></span> shell
 variables, but does <strong>not</strong> export them to the environment.</p>
 </div>
 </div>
@@ -78,7 +78,7 @@ standard error stream.</p>
 <dd>
 <p>Set GIT_REFLOG_ACTION environment to a given string (typically
 the name of the program) unless it is already set.  Whenever
-the script runs a <code>git</code> command that updates refs, a reflog
+the script runs a <span class='synopsis'><code>git</code></span> command that updates refs, a reflog
 entry is created using the value of this string to leave the
 record of what command updated the ref.</p>
 </dd>
@@ -90,7 +90,7 @@ and the terminal is dumb.</p>
 </dd>
 <dt class="hdlist1" id="Documentation/git-sh-setup.txt-isbarerepository"><a class="anchor" href="#Documentation/git-sh-setup.txt-isbarerepository"></a>is_bare_repository </dt>
 <dd>
-<p>outputs <code>true</code> or <code>false</code> to the standard output stream
+<p>outputs <span class='synopsis'><code>true</code></span> or <span class='synopsis'><code>false</code></span> to the standard output stream
 to indicate if the repository is a bare repository
 (i.e. without an associated working tree).</p>
 </dd>
@@ -114,8 +114,9 @@ working tree.</p>
 <dd>
 <p>checks that the working tree and index associated with the
 repository have no uncommitted changes to tracked files.
-Otherwise it emits an error message of the form <code>Cannot
-&lt;action&gt;: &lt;reason&gt;. &lt;hint&gt;</code>, and dies.  Example:</p>
+Otherwise it emits an error message of the form <span class='synopsis'><code>Cannot</code>
+
+<em>&lt;action&gt;</em><code>:</code> <em>&lt;reason&gt;</em><code>.</code> <em>&lt;hint&gt;</em></span>, and dies.  Example:</p>
 <div class="listingblock">
 <div class="content">
 <pre>require_clean_work_tree rebase "Please commit or stash them."</pre>
