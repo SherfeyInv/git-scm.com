@@ -265,6 +265,7 @@ code {
 p {
     .synopsis {
 	@include border-radius(3px);
+	font-family: $fixed-width-font-family;
 	border: solid 1px var(--pre-border);
     }
 }
