@@ -2,8 +2,8 @@
 
 source "https://rubygems.org"
 
-gem "octokit"
-gem "faraday-retry" # octokit soft-dependency
+gem "octokit", ">= 10.0.0"
+gem "faraday-retry" , ">= 2.3.0" # octokit soft-dependency
 gem "rss"
 gem "asciidoctor", "~> 2.0.0"
 gem "nokogiri"
